@@ -1,0 +1,186 @@
+.pt-portal-root {
+    --pt-portal-bg-primary: 80, 212, 255;
+    --pt-portal-bg-secondary: 62, 154, 188;
+    --pt-portal-bg-base: #03070b;
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    overflow: hidden;
+    color: #effcff;
+    background:
+        radial-gradient(circle at 48% 42%, rgba(var(--pt-portal-bg-primary), 0.18), transparent 36%),
+        radial-gradient(circle at 62% 58%, rgba(var(--pt-portal-bg-secondary), 0.10), transparent 42%),
+        linear-gradient(135deg, rgba(var(--pt-portal-bg-primary), 0.055), rgba(0, 0, 0, 0) 48%),
+        var(--pt-portal-bg-base);
+    cursor: default;
+    perspective: 1900px;
+    perspective-origin: 50% 46%;
+}
+
+.pt-portal-root::before {
+    content: "";
+    position: absolute;
+    inset: -18%;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 52%, rgba(var(--pt-portal-bg-primary), 0.15), transparent 24%),
+        radial-gradient(circle at 38% 38%, rgba(var(--pt-portal-bg-secondary), 0.09), transparent 32%);
+    opacity: 0.48;
+}
+
+.pt-portal-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 5px rgba(124, 240, 255, 0.2));
+}
+
+.pt-portal-image-picker {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    z-index: 4;
+    pointer-events: auto;
+}
+
+.pt-portal-image-picker__select {
+    box-sizing: border-box;
+    width: min(240px, calc(100vw - 40px));
+    height: 36px;
+    border: 1px solid rgba(170, 242, 255, 0.34);
+    border-radius: 8px;
+    padding: 0 34px 0 12px;
+    color: #effcff;
+    font: 600 14px/1 "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+    letter-spacing: 0;
+    background: linear-gradient(150deg, rgba(12, 28, 38, 0.78), rgba(5, 10, 16, 0.56));
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28), inset 0 0 20px rgba(120, 228, 255, 0.08);
+    outline: none;
+    cursor: default;
+}
+
+.pt-portal-image-picker__select:focus {
+    border-color: rgba(214, 255, 255, 0.72);
+    box-shadow: 0 16px 52px rgba(35, 209, 255, 0.2), inset 0 0 26px rgba(120, 228, 255, 0.12);
+}
+
+.pt-portal-image-picker__select option {
+    color: #061017;
+    background: #effcff;
+}
+
+.pt-portal-ui {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    overflow: visible;
+    pointer-events: none;
+    transform-style: preserve-3d;
+}
+
+.pt-portal-spatial-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform, opacity;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    transition: opacity 180ms linear, filter 220ms;
+}
+
+.pt-portal-brand {
+    max-width: min(248px, 46vw);
+    text-align: center;
+    text-shadow: 0 0 18px rgba(128, 238, 255, 0.46), 0 0 42px rgba(128, 238, 255, 0.2);
+}
+
+.pt-portal-brand h1 {
+    margin: 0;
+    font-size: clamp(28px, 3.4vw, 44px);
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.pt-portal-options {
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+    transform-style: preserve-3d;
+}
+
+.pt-portal-note {
+    box-sizing: border-box;
+    margin: 0;
+    color: rgba(225, 250, 255, 0.72);
+    font: 500 13px/1.5 "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+    letter-spacing: 0;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(128, 238, 255, 0.34);
+    pointer-events: none;
+}
+
+.pt-portal-card {
+    position: absolute;
+    box-sizing: border-box;
+    width: 230px;
+    min-height: 74px;
+    border: 1px solid rgba(171, 242, 255, 0.28);
+    border-radius: 8px;
+    padding: 18px 22px 20px;
+    overflow: hidden;
+    cursor: default;
+    color: inherit;
+    text-align: center;
+    background: linear-gradient(150deg, rgba(14, 31, 42, 0.78), rgba(7, 12, 20, 0.46));
+    box-shadow: 0 18px 62px rgba(0, 0, 0, 0.34), inset 0 0 28px rgba(125, 231, 255, 0.08);
+    transform-style: preserve-3d;
+    pointer-events: none;
+    transition: border-color 180ms, box-shadow 180ms, filter 180ms, background 180ms;
+}
+
+@media (max-width: 620px) {
+    .pt-portal-card {
+        min-height: 62px;
+        padding: 14px 10px 16px;
+    }
+
+    .pt-portal-card h2 {
+        font-size: 22px;
+    }
+}
+
+.pt-portal-card h2 {
+    position: relative;
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.pt-portal-card:hover,
+.pt-portal-card:focus-visible {
+    border-color: rgba(214, 255, 255, 0.56);
+    background: linear-gradient(150deg, rgba(18, 43, 54, 0.84), rgba(8, 16, 25, 0.52));
+    box-shadow: 0 20px 68px rgba(35, 209, 255, 0.16), inset 0 0 36px rgba(125, 231, 255, 0.14);
+    filter: brightness(1.06);
+}
+
+.pt-portal-card__beam {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 12px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--pt-card-accent), transparent);
+    box-shadow: 0 0 20px var(--pt-card-accent);
+    transform-origin: center;
+    transition: transform 180ms;
+}
+
+.pt-portal-card:hover .pt-portal-card__beam,
+.pt-portal-card:focus-visible .pt-portal-card__beam {
+    transform: scaleX(1.08);
+}

@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>帕鲁图鉴侧壁几何原型</title>
+    <style>
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            min-height:100vh;
+            display:grid;
+            place-items:center;
+            padding:24px;
+            background:radial-gradient(circle at 16% 8%,#274b60,#101a24 58%,#070b10);
+            color:#dfe8ee;
+            font-family:"Microsoft YaHei",system-ui,sans-serif;
+        }
+        .panel{
+            width:min(1040px,100%);
+            display:grid;
+            gap:12px;
+        }
+        .note{
+            margin:0;
+            color:#c8d4dd;
+            font-size:14px;
+            line-height:1.7;
+        }
+        .stage{
+            width:100%;
+            aspect-ratio:16 / 10;
+            border:1px solid rgba(255,255,255,.18);
+            border-radius:16px;
+            overflow:hidden;
+            background:rgba(0,0,0,.26);
+            box-shadow:0 18px 50px rgba(0,0,0,.38);
+        }
+        #pd-wall-geometry-prototype{
+            display:block;
+            width:100%;
+            height:100%;
+        }
+        .controls{
+            display:grid;
+            grid-template-columns:110px minmax(0,1fr) 66px;
+            align-items:center;
+            gap:12px;
+            padding:12px 14px;
+            border:1px solid rgba(255,255,255,.12);
+            border-radius:12px;
+            background:rgba(255,255,255,.06);
+        }
+        .controls label{
+            font-size:14px;
+        }
+        .controls input[type="range"]{
+            width:100%;
+        }
+        .controls output{
+            text-align:right;
+            font-variant-numeric:tabular-nums;
+        }
+        .toggle{
+            grid-template-columns:auto 1fr;
+            color:#d8e7ef;
+        }
+    </style>
+</head>
+<body>
+    <main class="panel">
+        <p class="note">这是纯几何原型，不接图鉴数据、不接主题材质。目的只有一个：检查圆角立方体被抽出时，上、右、下、左四个直边侧面，以及四个圆角过渡面，是否像真实几何，而不是一张暗色贴片。</p>
+        <section class="stage">
+            <canvas id="pd-wall-geometry-prototype" width="1040" height="650"></canvas>
+        </section>
+        <div class="controls">
+            <label for="depth">抽出深度</label>
+            <input id="depth" data-role="depth" type="range" min="0" max="132" value="78">
+            <output id="depthValue">78px</output>
+        </div>
+        <div class="controls">
+            <label for="screen-position">屏幕位置</label>
+            <input id="screen-position" data-role="screen-position" type="range" min="0" max="100" value="22">
+            <output id="positionValue">22%</output>
+        </div>
+        <label class="controls toggle">
+            <input data-role="show-corners" type="checkbox" checked>
+            <span>显示四个圆角过渡面</span>
+        </label>
+    </main>
+    <script>
+        (function(){
+            var canvas = document.getElementById('pd-wall-geometry-prototype');
+            var ctx = canvas.getContext('2d');
+            var depthInput = document.querySelector('[data-role="depth"]');
+            var positionInput = document.querySelector('[data-role="screen-position"]');
+            var showCornersInput = document.querySelector('[data-role="show-corners"]');
+            var depthValue = document.getElementById('depthValue');
+            var positionValue = document.getElementById('positionValue');
+
+            function clamp(value, min, max) {
+                return Math.max(min, Math.min(max, value));
+            }
+
+            function drawRoundedRect(pathCtx, x, y, w, h, r) {
+                var rr = Math.min(r, w / 2, h / 2);
+                pathCtx.moveTo(x + rr, y);
+                pathCtx.lineTo(x + w - rr, y);
+                pathCtx.arcTo(x + w, y, x + w, y + rr, rr);
+                pathCtx.lineTo(x + w, y + h - rr);
+                pathCtx.arcTo(x + w, y + h, x + w - rr, y + h, rr);
+                pathCtx.lineTo(x + rr, y + h);
+                pathCtx.arcTo(x, y + h, x, y + h - rr, rr);
+                pathCtx.lineTo(x, y + rr);
+                pathCtx.arcTo(x, y, x + rr, y, rr);
+                pathCtx.closePath();
+            }
+
+            function roundedRectPath(rect) {
+                var path = new Path2D();
+                drawRoundedRect(path, rect.x, rect.y, rect.w, rect.h, rect.r);
+                return path;
+            }
+
+            function getPullDirection(back, width) {
+                var center = back.x + back.w / 2;
+                var ratio = clamp((center - width / 2) / Math.max(1, (width - back.w) / 2), -1, 1);
+                return { x: ratio * .9, y: -1 };
+            }
+
+            function getPullVector(back, width, depth) {
+                var direction = getPullDirection(back, width);
+                return { x: direction.x * depth, y: direction.y * depth };
+            }
+
+            function makePoint(x, y) {
+                return { x: x, y: y };
+            }
+
+            function getCornerCenter(rect, corner) {
+                if (corner === 'topRight') return makePoint(rect.x + rect.w - rect.r, rect.y + rect.r);
+                if (corner === 'bottomRight') return makePoint(rect.x + rect.w - rect.r, rect.y + rect.h - rect.r);
+                if (corner === 'bottomLeft') return makePoint(rect.x + rect.r, rect.y + rect.h - rect.r);
+                return makePoint(rect.x + rect.r, rect.y + rect.r);
+            }
+
+            function arcPoint(rect, corner, angle) {
+                var center = getCornerCenter(rect, corner);
+                return makePoint(
+                    center.x + Math.cos(angle) * rect.r,
+                    center.y + Math.sin(angle) * rect.r
+                );
+            }
+
+            function buildStraightSideFaces(back, front) {
+                var dx = back.x - front.x;
+                var dy = back.y - front.y;
+                var r = Math.max(0, front.r);
+                return [
+                    {
+                        name: 'top',
+                        label: '上面',
+                        color: 'rgba(98,188,255,.62)',
+                        exposure: Math.max(0, -dy),
+                        points: [
+                            makePoint(front.x + r, front.y),
+                            makePoint(front.x + front.w - r, front.y),
+                            makePoint(back.x + back.w - r, back.y),
+                            makePoint(back.x + r, back.y)
+                        ]
+                    },
+                    {
+                        name: 'right',
+                        label: '右面',
+                        color: 'rgba(255,184,86,.62)',
+                        exposure: Math.max(0, dx),
+                        points: [
+                            makePoint(front.x + front.w, front.y + r),
+                            makePoint(front.x + front.w, front.y + front.h - r),
+                            makePoint(back.x + back.w, back.y + back.h - r),
+                            makePoint(back.x + back.w, back.y + r)
+                        ]
+                    },
+                    {
+                        name: 'bottom',
+                        label: '下面',
+                        color: 'rgba(114,226,138,.62)',
+                        exposure: Math.max(0, dy),
+                        points: [
+                            makePoint(front.x + front.w - r, front.y + front.h),
+                            makePoint(front.x + r, front.y + front.h),
+                            makePoint(back.x + r, back.y + back.h),
+                            makePoint(back.x + back.w - r, back.y + back.h)
+                        ]
+                    },
+                    {
+                        name: 'left',
+                        label: '左面',
+                        color: 'rgba(218,126,255,.62)',
+                        exposure: Math.max(0, -dx),
+                        points: [
+                            makePoint(front.x, front.y + front.h - r),
+                            makePoint(front.x, front.y + r),
+                            makePoint(back.x, back.y + r),
+                            makePoint(back.x, back.y + back.h - r)
+                        ]
+                    }
+                ];
+            }
+
+            function buildCornerSweepFaces(back, front) {
+                var arcs = [
+                    { name: 'topRight', label: '右上圆角', color: 'rgba(255,122,122,.58)', from: -Math.PI / 2, to: 0 },
+                    { name: 'bottomRight', label: '右下圆角', color: 'rgba(255,222,102,.58)', from: 0, to: Math.PI / 2 },
+                    { name: 'bottomLeft', label: '左下圆角', color: 'rgba(102,239,214,.58)', from: Math.PI / 2, to: Math.PI },
+                    { name: 'topLeft', label: '左上圆角', color: 'rgba(186,142,255,.58)', from: Math.PI, to: Math.PI * 1.5 }
+                ];
+                var segments = 7;
+                var faces = [];
+                for (var a = 0; a < arcs.length; a++) {
+                    var arc = arcs[a];
+                    var pieces = [];
+                    for (var i = 0; i < segments; i++) {
+                        var t0 = i / segments;
+                        var t1 = (i + 1) / segments;
+                        var angle0 = arc.from + (arc.to - arc.from) * t0;
+                        var angle1 = arc.from + (arc.to - arc.from) * t1;
+                        pieces.push({
+                            points: [
+                                arcPoint(front, arc.name, angle0),
+                                arcPoint(front, arc.name, angle1),
+                                arcPoint(back, arc.name, angle1),
+                                arcPoint(back, arc.name, angle0)
+                            ]
+                        });
+                    }
+                    faces.push({
+                        name: arc.name,
+                        label: arc.label,
+                        color: arc.color,
+                        pieces: pieces
+                    });
+                }
+                return faces;
+            }
+
+            function drawPolygon(points, fill, stroke) {
+                ctx.beginPath();
+                ctx.moveTo(points[0].x, points[0].y);
+                for (var i = 1; i < points.length; i++) ctx.lineTo(points[i].x, points[i].y);
+                ctx.closePath();
+                ctx.fillStyle = fill;
+                ctx.fill();
+                ctx.strokeStyle = stroke || 'rgba(255,255,255,.72)';
+                ctx.lineWidth = 1.2;
+                ctx.stroke();
+            }
+
+            function midpoint(points) {
+                var x = 0;
+                var y = 0;
+                for (var i = 0; i < points.length; i++) {
+                    x += points[i].x;
+                    y += points[i].y;
+                }
+                return makePoint(x / points.length, y / points.length);
+            }
+
+            function drawFaceLabels(straightFaces, cornerFaces) {
+                ctx.save();
+                ctx.font = '13px "Microsoft YaHei", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.lineWidth = 3;
+                for (var i = 0; i < straightFaces.length; i++) {
+                    var face = straightFaces[i];
+                    if (face.exposure <= .5) continue;
+                    var p = midpoint(face.points);
+                    ctx.strokeStyle = 'rgba(0,0,0,.68)';
+                    ctx.fillStyle = '#fff';
+                    ctx.strokeText(face.label, p.x, p.y);
+                    ctx.fillText(face.label, p.x, p.y);
+                }
+                if (showCornersInput.checked) {
+                    for (var c = 0; c < cornerFaces.length; c++) {
+                        var corner = cornerFaces[c];
+                        var piece = corner.pieces[Math.floor(corner.pieces.length / 2)];
+                        var cp = midpoint(piece.points);
+                        ctx.strokeStyle = 'rgba(0,0,0,.68)';
+                        ctx.fillStyle = '#fff';
+                        ctx.strokeText(corner.label, cp.x, cp.y);
+                        ctx.fillText(corner.label, cp.x, cp.y);
+                    }
+                }
+                ctx.restore();
+            }
+
+            function drawWallpaper(width, height) {
+                var g = ctx.createLinearGradient(0, 0, width, height);
+                g.addColorStop(0, '#28475b');
+                g.addColorStop(.52, '#142737');
+                g.addColorStop(1, '#07100c');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, width, height);
+                ctx.save();
+                ctx.globalAlpha = .16;
+                ctx.fillStyle = '#7ee091';
+                for (var i = 0; i < 18; i++) {
+                    ctx.beginPath();
+                    ctx.arc((i * 91) % width, 78 + ((i * 131) % Math.max(1, height - 156)), 34 + (i % 5) * 8, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.restore();
+            }
+
+            function drawPlate(back) {
+                ctx.save();
+                ctx.fillStyle = '#d5dade';
+                ctx.shadowColor = 'rgba(255,255,255,.45)';
+                ctx.shadowBlur = 8;
+                ctx.beginPath();
+                ctx.roundRect(back.x - 58, back.y - 58, back.w + 116, back.h + 116, 22);
+                ctx.fill();
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.fill(roundedRectPath(back));
+                ctx.restore();
+
+                ctx.save();
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = 'rgba(255,255,255,.72)';
+                ctx.stroke(roundedRectPath(back));
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'rgba(0,0,0,.36)';
+                ctx.stroke(roundedRectPath({ x: back.x + 2, y: back.y + 2, w: back.w - 4, h: back.h - 4, r: back.r - 2 }));
+                ctx.restore();
+            }
+
+            function drawBackShadow(back) {
+                ctx.save();
+                ctx.fillStyle = 'rgba(0,0,0,.36)';
+                ctx.filter = 'blur(12px)';
+                ctx.fill(roundedRectPath({ x: back.x + 8, y: back.y + 10, w: back.w, h: back.h, r: back.r }));
+                ctx.restore();
+            }
+
+            function drawStraightFaces(faces) {
+                for (var i = 0; i < faces.length; i++) {
+                    var face = faces[i];
+                    if (face.exposure <= .5) continue;
+                    drawPolygon(face.points, face.color);
+                }
+            }
+
+            function drawCornerFaces(faces) {
+                if (!showCornersInput.checked) return;
+                for (var c = 0; c < faces.length; c++) {
+                    var face = faces[c];
+                    for (var i = 0; i < face.pieces.length; i++) {
+                        drawPolygon(face.pieces[i].points, face.color, 'rgba(255,255,255,.34)');
+                    }
+                }
+            }
+
+            function insetRoundedRect(rect, inset) {
+                return {
+                    x: rect.x + inset,
+                    y: rect.y + inset,
+                    w: rect.w - inset * 2,
+                    h: rect.h - inset * 2,
+                    r: Math.max(4, rect.r - inset * .72)
+                };
+            }
+
+            function buildCurvedScreenTransitionBands(front) {
+                var curveWidth = 28;
+                return {
+                    outer: front,
+                    inner: insetRoundedRect(front, curveWidth),
+                    curveWidth: curveWidth
+                };
+            }
+
+            function curvedScreenRingPath(bands) {
+                var path = roundedRectPath(bands.outer);
+                drawRoundedRect(path, bands.inner.x, bands.inner.y, bands.inner.w, bands.inner.h, bands.inner.r);
+                return path;
+            }
+
+            function drawCurvedScreenTransitionBands(bands) {
+                var outer = bands.outer;
+                var inner = bands.inner;
+                var ring = curvedScreenRingPath(bands);
+
+                ctx.save();
+                ctx.clip(ring, 'evenodd');
+
+                var base = ctx.createLinearGradient(outer.x, outer.y, outer.x + outer.w, outer.y + outer.h);
+                base.addColorStop(0, '#204e32');
+                base.addColorStop(.48, '#143823');
+                base.addColorStop(1, '#061d13');
+                ctx.fillStyle = base;
+                ctx.fillRect(outer.x, outer.y, outer.w, outer.h);
+
+                var outerShade = ctx.createRadialGradient(
+                    outer.x + outer.w * .5,
+                    outer.y + outer.h * .46,
+                    inner.w * .38,
+                    outer.x + outer.w * .5,
+                    outer.y + outer.h * .46,
+                    outer.w * .72
+                );
+                outerShade.addColorStop(0, 'rgba(255,255,255,0)');
+                outerShade.addColorStop(.58, 'rgba(255,255,255,.05)');
+                outerShade.addColorStop(1, 'rgba(0,0,0,.34)');
+                ctx.fillStyle = outerShade;
+                ctx.fillRect(outer.x, outer.y, outer.w, outer.h);
+
+                var rightCurve = ctx.createLinearGradient(inner.x + inner.w - 16, outer.y, outer.x + outer.w, outer.y);
+                rightCurve.addColorStop(0, 'rgba(255,255,255,.04)');
+                rightCurve.addColorStop(.46, 'rgba(0,0,0,.08)');
+                rightCurve.addColorStop(1, 'rgba(0,0,0,.46)');
+                ctx.fillStyle = rightCurve;
+                ctx.fillRect(inner.x + inner.w - 16, outer.y, outer.x + outer.w - inner.x - inner.w + 16, outer.h);
+
+                var bottomCurve = ctx.createLinearGradient(outer.x, inner.y + inner.h - 16, outer.x, outer.y + outer.h);
+                bottomCurve.addColorStop(0, 'rgba(255,255,255,.03)');
+                bottomCurve.addColorStop(.48, 'rgba(0,0,0,.08)');
+                bottomCurve.addColorStop(1, 'rgba(0,0,0,.42)');
+                ctx.fillStyle = bottomCurve;
+                ctx.fillRect(outer.x, inner.y + inner.h - 16, outer.w, outer.y + outer.h - inner.y - inner.h + 16);
+
+                var topCurve = ctx.createLinearGradient(outer.x, outer.y, outer.x, inner.y + 10);
+                topCurve.addColorStop(0, 'rgba(255,255,255,.08)');
+                topCurve.addColorStop(.42, 'rgba(255,255,255,.035)');
+                topCurve.addColorStop(1, 'rgba(255,255,255,0)');
+                ctx.fillStyle = topCurve;
+                ctx.fillRect(outer.x, outer.y, outer.w, inner.y - outer.y + 10);
+
+                var leftCurve = ctx.createLinearGradient(outer.x, outer.y, inner.x + 10, outer.y);
+                leftCurve.addColorStop(0, 'rgba(255,255,255,.06)');
+                leftCurve.addColorStop(.52, 'rgba(255,255,255,.025)');
+                leftCurve.addColorStop(1, 'rgba(255,255,255,0)');
+                ctx.fillStyle = leftCurve;
+                ctx.fillRect(outer.x, outer.y, inner.x - outer.x + 10, outer.h);
+
+                ctx.restore();
+            }
+
+            function drawFrontFlatCore(front) {
+                var bands = buildCurvedScreenTransitionBands(front);
+                var core = bands.inner;
+                var face = roundedRectPath(core);
+
+                ctx.save();
+                ctx.fillStyle = '#143823';
+                ctx.fill(face);
+                ctx.clip(face);
+
+                var highlight = ctx.createLinearGradient(core.x, core.y, core.x + core.w, core.y + core.h);
+                highlight.addColorStop(0, 'rgba(255,255,255,.13)');
+                highlight.addColorStop(.54, 'rgba(255,255,255,.03)');
+                highlight.addColorStop(1, 'rgba(0,0,0,.16)');
+                ctx.fillStyle = highlight;
+                ctx.fillRect(core.x, core.y, core.w, core.h);
+
+                ctx.fillStyle = '#dfe8ee';
+                ctx.font = '700 26px "Microsoft YaHei", sans-serif';
+                ctx.fillText('\u6b63\u9762', front.x + 28, front.y + 56);
+                ctx.font = '15px "Microsoft YaHei", sans-serif';
+                ctx.fillText('\u5e73\u9762\u6838\u5fc3\uff0c\u8fb9\u7f18\u5f2f\u5411\u4fa7\u58c1', front.x + 28, front.y + 88);
+                ctx.restore();
+            }
+
+            function drawFrontFace(front) {
+                drawFrontFlatCore(front);
+            }
+
+            function drawPrototype() {
+                var width = canvas.clientWidth;
+                var height = canvas.clientHeight;
+                var depth = Number(depthInput.value);
+                var position = Number(positionInput.value);
+                var back = {
+                    x: 220 + (width - 520) * position / 100,
+                    y: 210,
+                    w: 250,
+                    h: 250,
+                    r: 34
+                };
+                var pull = getPullVector(back, width, depth);
+                var front = {
+                    x: back.x + pull.x,
+                    y: back.y + pull.y,
+                    w: back.w,
+                    h: back.h,
+                    r: back.r
+                };
+                depthValue.textContent = depth + 'px';
+                positionValue.textContent = position + '%';
+
+                ctx.clearRect(0, 0, width, height);
+                drawWallpaper(width, height);
+                drawPlate(back);
+                drawBackShadow(back);
+
+                var straightFaces = buildStraightSideFaces(back, front);
+                var cornerFaces = buildCornerSweepFaces(back, front);
+                var transitionBands = buildCurvedScreenTransitionBands(front);
+                drawCornerFaces(cornerFaces);
+                drawStraightFaces(straightFaces);
+                drawFaceLabels(straightFaces, cornerFaces);
+                drawCurvedScreenTransitionBands(transitionBands);
+                drawFrontFace(front);
+            }
+
+            function fitCanvas() {
+                var rect = canvas.getBoundingClientRect();
+                var scale = window.devicePixelRatio || 1;
+                canvas.width = Math.round(rect.width * scale);
+                canvas.height = Math.round(rect.height * scale);
+                ctx.setTransform(scale, 0, 0, scale, 0, 0);
+                drawPrototype();
+            }
+
+            depthInput.addEventListener('input', drawPrototype);
+            positionInput.addEventListener('input', drawPrototype);
+            showCornersInput.addEventListener('change', drawPrototype);
+            window.addEventListener('resize', fitCanvas);
+            fitCanvas();
+        })();
+    </script>
+</body>
+</html>

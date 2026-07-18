@@ -1,0 +1,5102 @@
+{
+  "meta": {
+    "generated": "2026-07-06",
+    "statistics": {
+      "shopCount": 38,
+      "specialShopCount": 3,
+      "lotteryCount": 38,
+      "elapsedSeconds": 0.03
+    }
+  },
+  "shops": [
+    {
+      "id": "Village_Shop_1",
+      "nameCN": "起始村落商店",
+      "products": [
+        {
+          "itemID": "Blueprint_Head003_1",
+          "nameCN": "长耳发箍设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head004_1",
+          "nameCN": "女巫帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head011_1",
+          "nameCN": "农夫帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head012_1",
+          "nameCN": "圆顶礼帽的设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head013_1",
+          "nameCN": "炸蛋鸟帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head015_1",
+          "nameCN": "叶泥泥帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head016_1",
+          "nameCN": "企丸王帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_HeadEquip028_1",
+          "nameCN": "姬小兔的发饰设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wood_Fine",
+          "nameCN": "硬木材",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalSphere",
+          "nameCN": "帕鲁球",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FishingBait_1",
+          "nameCN": "简陋钓饵",
+          "type": "Normal",
+          "price": 160,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow",
+          "nameCN": "箭",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Herbs",
+          "nameCN": "低品质药品",
+          "type": "Normal",
+          "price": 780,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Medicines",
+          "nameCN": "药品",
+          "type": "Normal",
+          "price": 1820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LuxuryMedicines",
+          "nameCN": "高品质药品",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "BerrySeeds",
+          "nameCN": "野莓种子",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WheatSeeds",
+          "nameCN": "小麦种子",
+          "type": "Normal",
+          "price": 20,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Egg",
+          "nameCN": "蛋",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Milk",
+          "nameCN": "牛奶",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Berries",
+          "nameCN": "红色野莓",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wheat",
+          "nameCN": "小麦",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_ChickenPal",
+          "nameCN": "皮皮鸡的鸡肉",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_SheepBall",
+          "nameCN": "棉悠悠的羊肉",
+          "type": "Normal",
+          "price": 120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wool",
+          "nameCN": "羊毛",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ElectricOrgan",
+          "nameCN": "发电器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Venom",
+          "nameCN": "毒腺",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FireOrgan",
+          "nameCN": "喷火器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Ruby",
+          "nameCN": "红宝石",
+          "type": "Normal",
+          "price": 20000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Sapphire",
+          "nameCN": "蓝宝石",
+          "type": "Normal",
+          "price": 30000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Eemerald",
+          "nameCN": "绿宝石",
+          "type": "Normal",
+          "price": 40000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Diamond",
+          "nameCN": "钻石",
+          "type": "Normal",
+          "price": 50000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_01",
+          "nameCN": "贵重龙珠",
+          "type": "Normal",
+          "price": 15000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_02",
+          "nameCN": "贵重羽毛",
+          "type": "Normal",
+          "price": 10000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_03",
+          "nameCN": "贵重内脏",
+          "type": "Normal",
+          "price": 12500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_04",
+          "nameCN": "贵重爪子",
+          "type": "Normal",
+          "price": 7500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_05",
+          "nameCN": "贵重兽毛",
+          "type": "Normal",
+          "price": 5000,
+          "count": 1,
+          "stock": -1
+        }
+      ],
+      "productCount": 39
+    },
+    {
+      "id": "Vagrant_Trader_1_1",
+      "nameCN": "流浪商人",
+      "products": [
+        {
+          "itemID": "Wood",
+          "nameCN": "木材",
+          "type": "Normal",
+          "price": 12,
+          "count": 1,
+          "stock": 500
+        },
+        {
+          "itemID": "Wood_Fine",
+          "nameCN": "硬木材",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 50
+        },
+        {
+          "itemID": "Stone",
+          "nameCN": "石头",
+          "type": "Normal",
+          "price": 12,
+          "count": 1,
+          "stock": 500
+        },
+        {
+          "itemID": "CopperOre",
+          "nameCN": "金属矿石",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 20
+        }
+      ],
+      "productCount": 4
+    },
+    {
+      "id": "Vagrant_Trader_1_2",
+      "nameCN": "流浪商人",
+      "products": [
+        {
+          "itemID": "Pan",
+          "nameCN": "面包",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 20
+        }
+      ],
+      "productCount": 1
+    },
+    {
+      "id": "Vagrant_Trader_1_3",
+      "nameCN": "流浪商人",
+      "products": [
+        {
+          "itemID": "PalSphere",
+          "nameCN": "帕鲁球",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 100
+        },
+        {
+          "itemID": "PalSphere_Mega",
+          "nameCN": "高级帕鲁球",
+          "type": "Normal",
+          "price": 460,
+          "count": 1,
+          "stock": 20
+        },
+        {
+          "itemID": "PalSphere_Giga",
+          "nameCN": "优质帕鲁球",
+          "type": "Normal",
+          "price": 890,
+          "count": 1,
+          "stock": 10
+        }
+      ],
+      "productCount": 3
+    },
+    {
+      "id": "Desert_Shop_1",
+      "nameCN": "沙漠小镇商店",
+      "products": [
+        {
+          "itemID": "Wood_Fine",
+          "nameCN": "硬木材",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FishingBait_1",
+          "nameCN": "简陋钓饵",
+          "type": "Normal",
+          "price": 160,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FishingBait_2",
+          "nameCN": "优质钓饵",
+          "type": "Normal",
+          "price": 240,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_SandTornado",
+          "nameCN": "地之技能果实：沙尘旋风",
+          "type": "Normal",
+          "price": 3000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_ThrowRock",
+          "nameCN": "地之技能果实：投石",
+          "type": "Normal",
+          "price": 1000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_SeedMine",
+          "nameCN": "草之技能果实：种子地雷",
+          "type": "Normal",
+          "price": 3000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Herbs",
+          "nameCN": "低品质药品",
+          "type": "Normal",
+          "price": 780,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Medicines",
+          "nameCN": "药品",
+          "type": "Normal",
+          "price": 1820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LuxuryMedicines",
+          "nameCN": "高品质药品",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Tomato",
+          "nameCN": "番茄",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Lettuce",
+          "nameCN": "生菜",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "IceOrgan",
+          "nameCN": "结冰器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalOil",
+          "nameCN": "优质帕鲁油",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "TomatoSeeds",
+          "nameCN": "番茄种子",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LettuceSeeds",
+          "nameCN": "生菜种子",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Ruby",
+          "nameCN": "红宝石",
+          "type": "Normal",
+          "price": 20000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Sapphire",
+          "nameCN": "蓝宝石",
+          "type": "Normal",
+          "price": 30000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Eemerald",
+          "nameCN": "绿宝石",
+          "type": "Normal",
+          "price": 40000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Diamond",
+          "nameCN": "钻石",
+          "type": "Normal",
+          "price": 50000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_01",
+          "nameCN": "贵重龙珠",
+          "type": "Normal",
+          "price": 15000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_02",
+          "nameCN": "贵重羽毛",
+          "type": "Normal",
+          "price": 10000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_03",
+          "nameCN": "贵重内脏",
+          "type": "Normal",
+          "price": 12500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_04",
+          "nameCN": "贵重爪子",
+          "type": "Normal",
+          "price": 7500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_05",
+          "nameCN": "贵重兽毛",
+          "type": "Normal",
+          "price": 5000,
+          "count": 1,
+          "stock": -1
+        }
+      ],
+      "productCount": 27
+    },
+    {
+      "id": "Desert_Shop_2",
+      "nameCN": "沙漠小镇商店",
+      "products": [
+        {
+          "itemID": "Blueprint_Head005_1",
+          "nameCN": "费多拉帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head007_1",
+          "nameCN": "大礼帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head008_1",
+          "nameCN": "三角帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head009_1",
+          "nameCN": "探险帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head014_1",
+          "nameCN": "笑脸炸蛋鸟帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head017_1",
+          "nameCN": "暗巫猫帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_HeadEquip025_1",
+          "nameCN": "朋克蜥的兜帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FurArmorHeat",
+          "nameCN": "耐热毛皮盔甲",
+          "type": "Normal",
+          "price": 7920,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FurArmorCold",
+          "nameCN": "耐寒毛皮盔甲",
+          "type": "Normal",
+          "price": 7920,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Musket",
+          "nameCN": "鸟枪",
+          "type": "Normal",
+          "price": 9940,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HandgunBullet",
+          "nameCN": "手枪子弹",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RifleBullet",
+          "nameCN": "步枪子弹",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ShotgunBullet",
+          "nameCN": "霰弹枪子弹",
+          "type": "Normal",
+          "price": 330,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "AssaultRifleBullet",
+          "nameCN": "突击步枪子弹",
+          "type": "Normal",
+          "price": 90,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Ruby",
+          "nameCN": "红宝石",
+          "type": "Normal",
+          "price": 20000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Sapphire",
+          "nameCN": "蓝宝石",
+          "type": "Normal",
+          "price": 30000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Eemerald",
+          "nameCN": "绿宝石",
+          "type": "Normal",
+          "price": 40000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Diamond",
+          "nameCN": "钻石",
+          "type": "Normal",
+          "price": 50000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_01",
+          "nameCN": "贵重龙珠",
+          "type": "Normal",
+          "price": 15000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_02",
+          "nameCN": "贵重羽毛",
+          "type": "Normal",
+          "price": 10000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_03",
+          "nameCN": "贵重内脏",
+          "type": "Normal",
+          "price": 12500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_04",
+          "nameCN": "贵重爪子",
+          "type": "Normal",
+          "price": 7500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_05",
+          "nameCN": "贵重兽毛",
+          "type": "Normal",
+          "price": 5000,
+          "count": 1,
+          "stock": -1
+        }
+      ],
+      "productCount": 24
+    },
+    {
+      "id": "Volcano_Shop_1",
+      "nameCN": "火山商店",
+      "products": [
+        {
+          "itemID": "Wood_Fine",
+          "nameCN": "硬木材",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FishingBait_1",
+          "nameCN": "简陋钓饵",
+          "type": "Normal",
+          "price": 160,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FishingBait_2",
+          "nameCN": "优质钓饵",
+          "type": "Normal",
+          "price": 240,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_Flamethrower",
+          "nameCN": "炎之技能果实：烈焰放射",
+          "type": "Normal",
+          "price": 3000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_FlareTornado",
+          "nameCN": "炎之技能果实：烈焰风暴",
+          "type": "Normal",
+          "price": 3000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_WaterBall",
+          "nameCN": "水之技能果实：爆裂水球",
+          "type": "Normal",
+          "price": 3000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Herbs",
+          "nameCN": "低品质药品",
+          "type": "Normal",
+          "price": 780,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Medicines",
+          "nameCN": "药品",
+          "type": "Normal",
+          "price": 1820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LuxuryMedicines",
+          "nameCN": "高品质药品",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Tomato",
+          "nameCN": "番茄",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Lettuce",
+          "nameCN": "生菜",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FireOrgan",
+          "nameCN": "喷火器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalOil",
+          "nameCN": "优质帕鲁油",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "TomatoSeeds",
+          "nameCN": "番茄种子",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LettuceSeeds",
+          "nameCN": "生菜种子",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Ruby",
+          "nameCN": "红宝石",
+          "type": "Normal",
+          "price": 20000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Sapphire",
+          "nameCN": "蓝宝石",
+          "type": "Normal",
+          "price": 30000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Eemerald",
+          "nameCN": "绿宝石",
+          "type": "Normal",
+          "price": 40000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Diamond",
+          "nameCN": "钻石",
+          "type": "Normal",
+          "price": 50000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_01",
+          "nameCN": "贵重龙珠",
+          "type": "Normal",
+          "price": 15000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_02",
+          "nameCN": "贵重羽毛",
+          "type": "Normal",
+          "price": 10000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_03",
+          "nameCN": "贵重内脏",
+          "type": "Normal",
+          "price": 12500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_04",
+          "nameCN": "贵重爪子",
+          "type": "Normal",
+          "price": 7500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_05",
+          "nameCN": "贵重兽毛",
+          "type": "Normal",
+          "price": 5000,
+          "count": 1,
+          "stock": -1
+        }
+      ],
+      "productCount": 27
+    },
+    {
+      "id": "Volcano_Shop_2",
+      "nameCN": "火山商店",
+      "products": [
+        {
+          "itemID": "Blueprint_Head001_1",
+          "nameCN": "王冠设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head002_1",
+          "nameCN": "金冠设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head006_1",
+          "nameCN": "安全帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Head010_1",
+          "nameCN": "学士帽设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_HeadEquip026_1",
+          "nameCN": "勾魂鱿帽子设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_HeadEquip031_1",
+          "nameCN": "毛掸儿帽子设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_HeadEquip032_1",
+          "nameCN": "雷鸣童子帽子设计图1",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FurArmorHeat",
+          "nameCN": "耐热毛皮盔甲",
+          "type": "Normal",
+          "price": 7920,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Fire",
+          "nameCN": "火箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MakeshiftHandgun",
+          "nameCN": "劣质手枪",
+          "type": "Normal",
+          "price": 13970,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HandgunBullet",
+          "nameCN": "手枪子弹",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RifleBullet",
+          "nameCN": "步枪子弹",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ShotgunBullet",
+          "nameCN": "霰弹枪子弹",
+          "type": "Normal",
+          "price": 330,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "AssaultRifleBullet",
+          "nameCN": "突击步枪子弹",
+          "type": "Normal",
+          "price": 90,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Ruby",
+          "nameCN": "红宝石",
+          "type": "Normal",
+          "price": 20000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Sapphire",
+          "nameCN": "蓝宝石",
+          "type": "Normal",
+          "price": 30000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Eemerald",
+          "nameCN": "绿宝石",
+          "type": "Normal",
+          "price": 40000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Diamond",
+          "nameCN": "钻石",
+          "type": "Normal",
+          "price": 50000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_01",
+          "nameCN": "贵重龙珠",
+          "type": "Normal",
+          "price": 15000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_02",
+          "nameCN": "贵重羽毛",
+          "type": "Normal",
+          "price": 10000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_03",
+          "nameCN": "贵重内脏",
+          "type": "Normal",
+          "price": 12500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_04",
+          "nameCN": "贵重爪子",
+          "type": "Normal",
+          "price": 7500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_05",
+          "nameCN": "贵重兽毛",
+          "type": "Normal",
+          "price": 5000,
+          "count": 1,
+          "stock": -1
+        }
+      ],
+      "productCount": 24
+    },
+    {
+      "id": "Wander_Shop_1",
+      "nameCN": "游商",
+      "products": [
+        {
+          "itemID": "Pal_crystal_S",
+          "nameCN": "帕鲁矿碎块",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_SelfDestruct",
+          "nameCN": "技能果实：自爆",
+          "type": "Normal",
+          "price": 3000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_AcidRain",
+          "nameCN": "水之技能果实：酸雨",
+          "type": "Normal",
+          "price": 3000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_LockonLaser",
+          "nameCN": "雷之技能果实：锁定雷射",
+          "type": "Normal",
+          "price": 3000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Egg",
+          "nameCN": "蛋",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Milk",
+          "nameCN": "牛奶",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Berries",
+          "nameCN": "红色野莓",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wheat",
+          "nameCN": "小麦",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Herbs",
+          "nameCN": "低品质药品",
+          "type": "Normal",
+          "price": 780,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Medicines",
+          "nameCN": "药品",
+          "type": "Normal",
+          "price": 1820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LuxuryMedicines",
+          "nameCN": "高品质药品",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wool",
+          "nameCN": "羊毛",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalFluid",
+          "nameCN": "水栖帕鲁的黏液",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalOil",
+          "nameCN": "优质帕鲁油",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FishingBait_1",
+          "nameCN": "简陋钓饵",
+          "type": "Normal",
+          "price": 160,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HandgunBullet",
+          "nameCN": "手枪子弹",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RifleBullet",
+          "nameCN": "步枪子弹",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ShotgunBullet",
+          "nameCN": "霰弹枪子弹",
+          "type": "Normal",
+          "price": 330,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "AssaultRifleBullet",
+          "nameCN": "突击步枪子弹",
+          "type": "Normal",
+          "price": 90,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Ruby",
+          "nameCN": "红宝石",
+          "type": "Normal",
+          "price": 20000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Sapphire",
+          "nameCN": "蓝宝石",
+          "type": "Normal",
+          "price": 30000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Eemerald",
+          "nameCN": "绿宝石",
+          "type": "Normal",
+          "price": 40000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "Diamond",
+          "nameCN": "钻石",
+          "type": "Normal",
+          "price": 50000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_01",
+          "nameCN": "贵重龙珠",
+          "type": "Normal",
+          "price": 15000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_02",
+          "nameCN": "贵重羽毛",
+          "type": "Normal",
+          "price": 10000,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_03",
+          "nameCN": "贵重内脏",
+          "type": "Normal",
+          "price": 12500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_04",
+          "nameCN": "贵重爪子",
+          "type": "Normal",
+          "price": 7500,
+          "count": 1,
+          "stock": -1
+        },
+        {
+          "itemID": "PalItem_ToSell_05",
+          "nameCN": "贵重兽毛",
+          "type": "Normal",
+          "price": 5000,
+          "count": 1,
+          "stock": -1
+        }
+      ],
+      "productCount": 32
+    },
+    {
+      "id": "Medal_Shop_1",
+      "nameCN": "徽章商店",
+      "products": [
+        {
+          "itemID": "UnlockEquipmentSlot_Accessory_01",
+          "nameCN": "不可思议的饰品箱",
+          "type": "OnlyPurchaseOne",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "UnlockEquipmentSlot_Accessory_02",
+          "nameCN": "神秘的饰品箱",
+          "type": "OnlyPurchaseOne",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip033",
+          "nameCN": "捣蛋猫帽子",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip029",
+          "nameCN": "棉悠悠头套",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip056",
+          "nameCN": "皮皮鸡帽",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip027",
+          "nameCN": "黑鸦隐士帽子",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip030",
+          "nameCN": "趴趴鲶头套",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip024",
+          "nameCN": "绸笠蛾帽",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip023",
+          "nameCN": "百合女王的发饰",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip052",
+          "nameCN": "墨沫姬帽",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip053",
+          "nameCN": "海月仙帽",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit_hp_01",
+          "nameCN": "生命之果",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit_attack_01",
+          "nameCN": "刚力之果",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit__defense_01",
+          "nameCN": "坚壁之果",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Elixir_hp_02",
+          "nameCN": "命脉灵药",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Elixir_stamina_02",
+          "nameCN": "活力灵药",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Elixir_attack_02",
+          "nameCN": "猛击灵药",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Elixir_workspeed_02",
+          "nameCN": "勤勉灵药",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Elixir_weight_02",
+          "nameCN": "巨人灵药",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Rankup_1",
+          "nameCN": "升段苹果☆1",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Rankup_2",
+          "nameCN": "升段苹果☆2",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Rankup_3",
+          "nameCN": "升段苹果☆3",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Rankup_4",
+          "nameCN": "升段苹果☆4",
+          "type": "Normal",
+          "price": 400,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Spear_ForestBoss_5",
+          "nameCN": "莉莉之矛设计图4",
+          "type": "Normal",
+          "price": 600,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Spear_ForestBoss2_5",
+          "nameCN": "强化莉莉之矛设计图4",
+          "type": "Normal",
+          "price": 840,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_EmitFlame",
+          "nameCN": "应用点火学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_Watering",
+          "nameCN": "应用灌溉学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_Seeding",
+          "nameCN": "应用播种学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_GenerateElectricity",
+          "nameCN": "应用发电学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_Handcraft",
+          "nameCN": "应用手工学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_Collection",
+          "nameCN": "应用采集学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_Deforest",
+          "nameCN": "应用伐木学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_Mining",
+          "nameCN": "应用挖矿学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_ProductMedicine",
+          "nameCN": "应用制药学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_Cool",
+          "nameCN": "应用制冷学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_Transport",
+          "nameCN": "应用运输学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WorkSuitability_AddTicket_MonsterFarm",
+          "nameCN": "应用牧场学Ⅰ",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 37
+    },
+    {
+      "id": "Bounty_Shop_1",
+      "nameCN": "赏金商店",
+      "products": [
+        {
+          "itemID": "Money",
+          "nameCN": "金币",
+          "type": "Normal",
+          "price": 1,
+          "count": 2000,
+          "stock": 0
+        },
+        {
+          "itemID": "TechnologyBook_G1",
+          "nameCN": "高等技术书",
+          "type": "Normal",
+          "price": 5,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalGenderReverse",
+          "nameCN": "帕鲁性转药",
+          "type": "Normal",
+          "price": 7,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip055",
+          "nameCN": "武道蛙帽",
+          "type": "Normal",
+          "price": 5,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip050",
+          "nameCN": "达鼠泥的发饰",
+          "type": "Normal",
+          "price": 5,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip054",
+          "nameCN": "盔盔仔帽",
+          "type": "Normal",
+          "price": 5,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "AffectionFruit_01",
+          "nameCN": "羁绊宝桃",
+          "type": "Normal",
+          "price": 15,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_Noukin",
+          "nameCN": "植入体：脑筋",
+          "type": "OnlyPurchaseOne",
+          "price": 15,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_Deffence_up2",
+          "nameCN": "植入体：顽强肉体",
+          "type": "OnlyPurchaseOne",
+          "price": 15,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_CraftSpeed_up2",
+          "nameCN": "植入体：工匠精神",
+          "type": "OnlyPurchaseOne",
+          "price": 15,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_TrainerATK_UP_1",
+          "nameCN": "植入体：突袭指挥官",
+          "type": "OnlyPurchaseOne",
+          "price": 15,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_TrainerDEF_UP_1",
+          "nameCN": "植入体：铁壁军师",
+          "type": "OnlyPurchaseOne",
+          "price": 15,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_TrainerWorkSpeed_UP_1",
+          "nameCN": "植入体：啦啦队",
+          "type": "OnlyPurchaseOne",
+          "price": 15,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_PlayerSP_DecreaseRate_Passive",
+          "nameCN": "植入体：防过劳帮手",
+          "type": "OnlyPurchaseOne",
+          "price": 15,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit_hp_01",
+          "nameCN": "生命之果",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit_attack_01",
+          "nameCN": "刚力之果",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit__defense_01",
+          "nameCN": "坚壁之果",
+          "type": "Normal",
+          "price": 25,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Rankup_Arbitrary",
+          "nameCN": "成熟的升段苹果",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 18
+    },
+    {
+      "id": "Caravan_Shop_1",
+      "nameCN": "旅行商人1",
+      "products": [
+        {
+          "itemID": "Arrow",
+          "nameCN": "箭",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Poison",
+          "nameCN": "毒箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Fire",
+          "nameCN": "火箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ReinforcedArrow",
+          "nameCN": "强化箭矢",
+          "type": "Normal",
+          "price": 370,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalSphere",
+          "nameCN": "帕鲁球",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalFluid",
+          "nameCN": "水栖帕鲁的黏液",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Venom",
+          "nameCN": "毒腺",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FireOrgan",
+          "nameCN": "喷火器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "BerrySeeds",
+          "nameCN": "野莓种子",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WheatSeeds",
+          "nameCN": "小麦种子",
+          "type": "Normal",
+          "price": 20,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Egg",
+          "nameCN": "蛋",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Milk",
+          "nameCN": "牛奶",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Berries",
+          "nameCN": "红色野莓",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wheat",
+          "nameCN": "小麦",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wool",
+          "nameCN": "羊毛",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 19
+    },
+    {
+      "id": "Caravan_Shop_2",
+      "nameCN": "旅行商人2",
+      "products": [
+        {
+          "itemID": "HandgunBullet",
+          "nameCN": "手枪子弹",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RifleBullet",
+          "nameCN": "步枪子弹",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ShotgunBullet",
+          "nameCN": "霰弹枪子弹",
+          "type": "Normal",
+          "price": 330,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "AssaultRifleBullet",
+          "nameCN": "突击步枪子弹",
+          "type": "Normal",
+          "price": 90,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalOil",
+          "nameCN": "优质帕鲁油",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ElectricOrgan",
+          "nameCN": "发电器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "IceOrgan",
+          "nameCN": "结冰器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "TomatoSeeds",
+          "nameCN": "番茄种子",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LettuceSeeds",
+          "nameCN": "生菜种子",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PotatoSeeds",
+          "nameCN": "土豆种薯",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "CarrotSeeds",
+          "nameCN": "胡萝卜种子",
+          "type": "Normal",
+          "price": 60,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "OnionSeeds",
+          "nameCN": "洋葱种子",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Tomato",
+          "nameCN": "番茄",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Lettuce",
+          "nameCN": "生菜",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Cloth",
+          "nameCN": "布",
+          "type": "Normal",
+          "price": 480,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Medicines",
+          "nameCN": "药品",
+          "type": "Normal",
+          "price": 1820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LuxuryMedicines",
+          "nameCN": "高品质药品",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 17
+    },
+    {
+      "id": "Caravan_Shop_3",
+      "nameCN": "旅行商人3",
+      "products": [
+        {
+          "itemID": "ExplosiveBullet",
+          "nameCN": "火箭弹",
+          "type": "Normal",
+          "price": 2550,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LaserBullet",
+          "nameCN": "能量盒",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FlamethrowerBullet",
+          "nameCN": "火焰喷射器燃料",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "GrenadeBullet",
+          "nameCN": "榴弹",
+          "type": "Normal",
+          "price": 470,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "GatlingBullet",
+          "nameCN": "加特林子弹",
+          "type": "Normal",
+          "price": 60,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MissileBullet",
+          "nameCN": "导弹",
+          "type": "Normal",
+          "price": 3240,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PotatoSeeds",
+          "nameCN": "土豆种薯",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "CarrotSeeds",
+          "nameCN": "胡萝卜种子",
+          "type": "Normal",
+          "price": 60,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "OnionSeeds",
+          "nameCN": "洋葱种子",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Cloth2",
+          "nameCN": "优质的布",
+          "type": "Normal",
+          "price": 2640,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Poppy",
+          "nameCN": "美丽花朵",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 11
+    },
+    {
+      "id": "Arena_Shop_1",
+      "nameCN": "竞技场商店",
+      "products": [
+        {
+          "itemID": "Blueprint_OctaviaRevolver_5",
+          "nameCN": "神射左轮手枪设计图4",
+          "type": "Normal",
+          "price": 1300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_OctaviaShotgun_5",
+          "nameCN": "核心喷射霰弹枪设计图4",
+          "type": "Normal",
+          "price": 1300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Octavia001_Armor_5",
+          "nameCN": "V1盔甲设计图4",
+          "type": "Normal",
+          "price": 1000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_Octavia002_Armor_5",
+          "nameCN": "V2盔甲设计图4",
+          "type": "Normal",
+          "price": 1000,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_EnergyShotgun_5",
+          "nameCN": "能量霰弹枪设计图4",
+          "type": "Normal",
+          "price": 1500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_ChargeLaserRifle_5",
+          "nameCN": "充能步枪设计图4",
+          "type": "Normal",
+          "price": 1500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_OverheatRifle_5",
+          "nameCN": "过热步枪设计图4",
+          "type": "Normal",
+          "price": 1500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_EnergyShotgun_4",
+          "nameCN": "能量霰弹枪设计图3",
+          "type": "Normal",
+          "price": 600,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_ChargeLaserRifle_4",
+          "nameCN": "充能步枪设计图3",
+          "type": "Normal",
+          "price": 600,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Blueprint_OverheatRifle_4",
+          "nameCN": "过热步枪设计图3",
+          "type": "Normal",
+          "price": 600,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip051",
+          "nameCN": "君王美露帕的发饰",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip062",
+          "nameCN": "桃蛛娘帽",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip059",
+          "nameCN": "冥灯鱼的发饰",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip060",
+          "nameCN": "冰姬灵帽",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip058",
+          "nameCN": "菇咚帽",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip061",
+          "nameCN": "幽恋娜帽",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HeadEquip057",
+          "nameCN": "夜蔓爵帽",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_CoolTimeReduction_Up_1",
+          "nameCN": "植入体：沉着冷静",
+          "type": "OnlyPurchaseOne",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_Stamina_Up_1",
+          "nameCN": "植入体：无限精力",
+          "type": "OnlyPurchaseOne",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_MoveSpeed_up_2",
+          "nameCN": "植入体：运动健将",
+          "type": "OnlyPurchaseOne",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_SwimSpeed_up_2",
+          "nameCN": "植入体：游泳健将",
+          "type": "OnlyPurchaseOne",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_SalePrice_Up_1",
+          "nameCN": "植入体：高贵",
+          "type": "OnlyPurchaseOne",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_AutoHPRegeneRate_Passive",
+          "nameCN": "植入体：疗愈教练",
+          "type": "OnlyPurchaseOne",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalPassiveSkillChange_ReloadSpeedUp_Passive",
+          "nameCN": "植入体：装填大师",
+          "type": "OnlyPurchaseOne",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalGenderReverse",
+          "nameCN": "帕鲁性转药",
+          "type": "Normal",
+          "price": 35,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LvUP_01",
+          "nameCN": "修炼结晶",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit_hp_01",
+          "nameCN": "生命之果",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit_attack_01",
+          "nameCN": "刚力之果",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Fruit__defense_01",
+          "nameCN": "坚壁之果",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_HolyBlast",
+          "nameCN": "技能果实：光击阵",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_SelfDestruct",
+          "nameCN": "技能果实：自爆",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_AirBlade",
+          "nameCN": "技能果实：真空刃",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_DarkLegion",
+          "nameCN": "暗之技能果实：黑暗之拥",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_Apocalypse",
+          "nameCN": "暗之技能果实：启示录",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_BubbleShower",
+          "nameCN": "暗之技能果实：毒雨",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_DragonMeteor",
+          "nameCN": "龙之技能果实：龙彗星",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_ChargeCanon",
+          "nameCN": "龙之技能果实：龙息炮",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_BeamSlicer",
+          "nameCN": "龙之技能果实：切割龙息",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_IceAge",
+          "nameCN": "冰之技能果实：冰极冻域",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_IciclePierce",
+          "nameCN": "冰之技能果实：冰霜连弹",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_IceWall",
+          "nameCN": "冰之技能果实：寒冰之壁",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_FireBall",
+          "nameCN": "炎之技能果实：烈焰球",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_Eruption",
+          "nameCN": "炎之技能果实：熔岩爆发",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_FlameFunnel",
+          "nameCN": "炎之技能果实：流火",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_SeaGush",
+          "nameCN": "水之技能果实：潮涌迸发",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_RipTide",
+          "nameCN": "水之技能果实：漩涡新星",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_HydroSlicer",
+          "nameCN": "水之技能果实：水刀切割",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_ThunderStorm",
+          "nameCN": "雷之技能果实：雷霆飓风",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_RangeThunder",
+          "nameCN": "雷之技能果实：雷动八方",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_ThunderRain",
+          "nameCN": "雷之技能果实：广域雷击",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_RockBeat",
+          "nameCN": "地之技能果实：震岩",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_SandTwister",
+          "nameCN": "地之技能果实：沙尘暴",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_Tremor",
+          "nameCN": "地之技能果实：岩爆",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_WindBurst",
+          "nameCN": "草之技能果实：翠耀罡风",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_CrossWind",
+          "nameCN": "草之技能果实：十字风切",
+          "type": "Normal",
+          "price": 45,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkillCard_ReflectiveShuriken",
+          "nameCN": "草之技能果实：连锁叶刃",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 56
+    },
+    {
+      "id": "Caravan_Shop_4",
+      "nameCN": "旅行商人4",
+      "products": [
+        {
+          "itemID": "Meat_ChickenPal",
+          "nameCN": "皮皮鸡的鸡肉",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_SheepBall",
+          "nameCN": "棉悠悠的羊肉",
+          "type": "Normal",
+          "price": 120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "egg",
+          "nameCN": "蛋",
+          "type": "Normal",
+          "price": 0,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Boar",
+          "nameCN": "草莽猪的猪肉",
+          "type": "Normal",
+          "price": 150,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 4
+    },
+    {
+      "id": "Caravan_Shop_5",
+      "nameCN": "旅行商人5",
+      "products": [
+        {
+          "itemID": "Meat_ChickenPal",
+          "nameCN": "皮皮鸡的鸡肉",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_SheepBall",
+          "nameCN": "棉悠悠的羊肉",
+          "type": "Normal",
+          "price": 120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Egg",
+          "nameCN": "蛋",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Boar",
+          "nameCN": "草莽猪的猪肉",
+          "type": "Normal",
+          "price": 150,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Kelpie",
+          "nameCN": "水灵儿的鱼肉",
+          "type": "Normal",
+          "price": 140,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_LazyCatfish",
+          "nameCN": "趴趴鲶的鱼肉",
+          "type": "Normal",
+          "price": 220,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Milk",
+          "nameCN": "牛奶",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 7
+    },
+    {
+      "id": "Caravan_Shop_6",
+      "nameCN": "旅行商人6",
+      "products": [
+        {
+          "itemID": "Meat_ChickenPal",
+          "nameCN": "皮皮鸡的鸡肉",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_SheepBall",
+          "nameCN": "棉悠悠的羊肉",
+          "type": "Normal",
+          "price": 120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Egg",
+          "nameCN": "蛋",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Boar",
+          "nameCN": "草莽猪的猪肉",
+          "type": "Normal",
+          "price": 150,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Kelpie",
+          "nameCN": "水灵儿的鱼肉",
+          "type": "Normal",
+          "price": 140,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_LazyCatfish",
+          "nameCN": "趴趴鲶的鱼肉",
+          "type": "Normal",
+          "price": 220,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Milk",
+          "nameCN": "牛奶",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Deer",
+          "nameCN": "紫霞鹿的鹿肉",
+          "type": "Normal",
+          "price": 180,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_IceDeer",
+          "nameCN": "严冬鹿的鹿肉",
+          "type": "Normal",
+          "price": 350,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Eagle",
+          "nameCN": "天擒鸟的鸟肉",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_BerryGoat",
+          "nameCN": "灌木羊的香草肉",
+          "type": "Normal",
+          "price": 170,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 11
+    },
+    {
+      "id": "Caravan_Shop_7",
+      "nameCN": "旅行商人7",
+      "products": [
+        {
+          "itemID": "Meat_ChickenPal",
+          "nameCN": "皮皮鸡的鸡肉",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_SheepBall",
+          "nameCN": "棉悠悠的羊肉",
+          "type": "Normal",
+          "price": 120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Egg",
+          "nameCN": "蛋",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Boar",
+          "nameCN": "草莽猪的猪肉",
+          "type": "Normal",
+          "price": 150,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Kelpie",
+          "nameCN": "水灵儿的鱼肉",
+          "type": "Normal",
+          "price": 140,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_LazyCatfish",
+          "nameCN": "趴趴鲶的鱼肉",
+          "type": "Normal",
+          "price": 220,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Milk",
+          "nameCN": "牛奶",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Deer",
+          "nameCN": "紫霞鹿的鹿肉",
+          "type": "Normal",
+          "price": 180,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_IceDeer",
+          "nameCN": "严冬鹿的鹿肉",
+          "type": "Normal",
+          "price": 350,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Eagle",
+          "nameCN": "天擒鸟的鸟肉",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_BerryGoat",
+          "nameCN": "灌木羊的香草肉",
+          "type": "Normal",
+          "price": 170,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_SwordCutlassFish",
+          "nameCN": "鞘刀鱼排",
+          "type": "Normal",
+          "price": 600,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_OctopusGirl",
+          "nameCN": "墨沫姬的章鱼足",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_JellyfishFairy",
+          "nameCN": "海月仙的水母伞",
+          "type": "Normal",
+          "price": 250,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_JellyfishGhost",
+          "nameCN": "海月灵的水母伞",
+          "type": "Normal",
+          "price": 250,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_IceCrocodile",
+          "nameCN": "肚肚鳄的鳄鱼肉",
+          "type": "Normal",
+          "price": 250,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_CowPal",
+          "nameCN": "波霸牛的牛肉",
+          "type": "Normal",
+          "price": 190,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_SakuraSaurus",
+          "nameCN": "连理龙的恐龙肉",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_GrassMammoth",
+          "nameCN": "森猛犸的巨兽肉",
+          "type": "Normal",
+          "price": 1000,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 19
+    },
+    {
+      "id": "Caravan_Shop_8",
+      "nameCN": "旅行商人8",
+      "products": [
+        {
+          "itemID": "Arrow",
+          "nameCN": "箭",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Poison",
+          "nameCN": "毒箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Fire",
+          "nameCN": "火箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 4
+    },
+    {
+      "id": "Caravan_Shop_9",
+      "nameCN": "旅行商人9",
+      "products": [
+        {
+          "itemID": "Arrow",
+          "nameCN": "箭",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Poison",
+          "nameCN": "毒箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Fire",
+          "nameCN": "火箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HandgunBullet",
+          "nameCN": "手枪子弹",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RifleBullet",
+          "nameCN": "步枪子弹",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ShotgunBullet",
+          "nameCN": "霰弹枪子弹",
+          "type": "Normal",
+          "price": 330,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 7
+    },
+    {
+      "id": "Caravan_Shop_10",
+      "nameCN": "旅行商人10",
+      "products": [
+        {
+          "itemID": "Arrow",
+          "nameCN": "箭",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Poison",
+          "nameCN": "毒箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Fire",
+          "nameCN": "火箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HandgunBullet",
+          "nameCN": "手枪子弹",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RifleBullet",
+          "nameCN": "步枪子弹",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ShotgunBullet",
+          "nameCN": "霰弹枪子弹",
+          "type": "Normal",
+          "price": 330,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "AssaultRifleBullet",
+          "nameCN": "突击步枪子弹",
+          "type": "Normal",
+          "price": 90,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ExplosiveBullet",
+          "nameCN": "火箭弹",
+          "type": "Normal",
+          "price": 2550,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FlamethrowerBullet",
+          "nameCN": "火焰喷射器燃料",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 10
+    },
+    {
+      "id": "Caravan_Shop_11",
+      "nameCN": "旅行商人11",
+      "products": [
+        {
+          "itemID": "Arrow",
+          "nameCN": "箭",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Poison",
+          "nameCN": "毒箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Fire",
+          "nameCN": "火箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HandgunBullet",
+          "nameCN": "手枪子弹",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RifleBullet",
+          "nameCN": "步枪子弹",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ShotgunBullet",
+          "nameCN": "霰弹枪子弹",
+          "type": "Normal",
+          "price": 330,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "AssaultRifleBullet",
+          "nameCN": "突击步枪子弹",
+          "type": "Normal",
+          "price": 90,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ExplosiveBullet",
+          "nameCN": "火箭弹",
+          "type": "Normal",
+          "price": 2550,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FlamethrowerBullet",
+          "nameCN": "火焰喷射器燃料",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MissileBullet",
+          "nameCN": "导弹",
+          "type": "Normal",
+          "price": 3240,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "GrenadeBullet",
+          "nameCN": "榴弹",
+          "type": "Normal",
+          "price": 470,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "GatlingBullet",
+          "nameCN": "加特林子弹",
+          "type": "Normal",
+          "price": 60,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MeteorBullet",
+          "nameCN": "陨石弹",
+          "type": "Normal",
+          "price": 360,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "EnergyLauncherBullet",
+          "nameCN": "电浆能量盒",
+          "type": "Normal",
+          "price": 2190,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LaserGatlingBullet",
+          "nameCN": "加特林激光能量盒",
+          "type": "Normal",
+          "price": 110,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ChargeLaserRifleBullet",
+          "nameCN": "充能步枪子弹",
+          "type": "Normal",
+          "price": 1740,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "OverheatRifleBullet",
+          "nameCN": "过热步枪子弹",
+          "type": "Normal",
+          "price": 920,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "EnergyShotgunBullet",
+          "nameCN": "能量霰弹枪子弹",
+          "type": "Normal",
+          "price": 990,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalDopingShotBullet",
+          "nameCN": "强化枪子弹",
+          "type": "Normal",
+          "price": 90,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WidePenetrateShotgunBullet",
+          "nameCN": "散射光束枪弹药",
+          "type": "Normal",
+          "price": 7830,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ElectricArcAssaultRifleBullet",
+          "nameCN": "等离子步枪弹药",
+          "type": "Normal",
+          "price": 3910,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "BeamLauncherBullet",
+          "nameCN": "光束炮发射器弹药",
+          "type": "Normal",
+          "price": 13660,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkyBowArrow",
+          "nameCN": "机械弓箭矢",
+          "type": "Normal",
+          "price": 1730,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkySubmachineGunBullet",
+          "nameCN": "战斗冲锋枪子弹",
+          "type": "Normal",
+          "price": 1020,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkyShotgunBullet",
+          "nameCN": "原型霰弹枪子弹",
+          "type": "Normal",
+          "price": 3870,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkyAssaultRifleBullet",
+          "nameCN": "重型突击步枪子弹",
+          "type": "Normal",
+          "price": 1120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SkyGrenadeLauncherBullet",
+          "nameCN": "战术榴弹发射器子弹",
+          "type": "Normal",
+          "price": 3970,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LaserBullet",
+          "nameCN": "能量盒",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ReinforcedArrow",
+          "nameCN": "强化箭矢",
+          "type": "Normal",
+          "price": 370,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "SFArrow",
+          "nameCN": "卓越箭矢",
+          "type": "Normal",
+          "price": 1110,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 31
+    },
+    {
+      "id": "Caravan_Shop_12",
+      "nameCN": "旅行商人12",
+      "products": [
+        {
+          "itemID": "Berries",
+          "nameCN": "红色野莓",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "BerrySeeds",
+          "nameCN": "野莓种子",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WheatSeeds",
+          "nameCN": "小麦种子",
+          "type": "Normal",
+          "price": 20,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wheat",
+          "nameCN": "小麦",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 4
+    },
+    {
+      "id": "Caravan_Shop_13",
+      "nameCN": "旅行商人13",
+      "products": [
+        {
+          "itemID": "Berries",
+          "nameCN": "红色野莓",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "BerrySeeds",
+          "nameCN": "野莓种子",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WheatSeeds",
+          "nameCN": "小麦种子",
+          "type": "Normal",
+          "price": 20,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wheat",
+          "nameCN": "小麦",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "TomatoSeeds",
+          "nameCN": "番茄种子",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Tomato",
+          "nameCN": "番茄",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Lettuce",
+          "nameCN": "生菜",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LettuceSeeds",
+          "nameCN": "生菜种子",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 8
+    },
+    {
+      "id": "Caravan_Shop_14",
+      "nameCN": "旅行商人14",
+      "products": [
+        {
+          "itemID": "Berries",
+          "nameCN": "红色野莓",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "BerrySeeds",
+          "nameCN": "野莓种子",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WheatSeeds",
+          "nameCN": "小麦种子",
+          "type": "Normal",
+          "price": 20,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wheat",
+          "nameCN": "小麦",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "TomatoSeeds",
+          "nameCN": "番茄种子",
+          "type": "Normal",
+          "price": 30,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Tomato",
+          "nameCN": "番茄",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Lettuce",
+          "nameCN": "生菜",
+          "type": "Normal",
+          "price": 80,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LettuceSeeds",
+          "nameCN": "生菜种子",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Mushroom",
+          "nameCN": "蘑菇",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "CaveMushroom",
+          "nameCN": "洞穴蘑菇",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PoisonMushroom",
+          "nameCN": "不可思议的蘑菇",
+          "type": "Normal",
+          "price": 800,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PotatoSeeds",
+          "nameCN": "土豆种薯",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Potato",
+          "nameCN": "土豆",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "CarrotSeeds",
+          "nameCN": "胡萝卜种子",
+          "type": "Normal",
+          "price": 60,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Carrot",
+          "nameCN": "胡萝卜",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "OnionSeeds",
+          "nameCN": "洋葱种子",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Onion",
+          "nameCN": "洋葱",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 17
+    },
+    {
+      "id": "Caravan_Shop_15",
+      "nameCN": "旅行商人15",
+      "products": [
+        {
+          "itemID": "Herbs",
+          "nameCN": "低品质药品",
+          "type": "Normal",
+          "price": 780,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Opium",
+          "nameCN": "可疑果汁",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Potion_Low",
+          "nameCN": "低品质恢复药",
+          "type": "Normal",
+          "price": 2820,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 3
+    },
+    {
+      "id": "Caravan_Shop_16",
+      "nameCN": "旅行商人16",
+      "products": [
+        {
+          "itemID": "Herbs",
+          "nameCN": "低品质药品",
+          "type": "Normal",
+          "price": 780,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Opium",
+          "nameCN": "可疑果汁",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Potion_Low",
+          "nameCN": "低品质恢复药",
+          "type": "Normal",
+          "price": 2820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Narcotic",
+          "nameCN": "怪异果汁",
+          "type": "Normal",
+          "price": 5400,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Medicines",
+          "nameCN": "药品",
+          "type": "Normal",
+          "price": 1820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Potion",
+          "nameCN": "恢复药",
+          "type": "Normal",
+          "price": 6180,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 6
+    },
+    {
+      "id": "Caravan_Shop_17",
+      "nameCN": "旅行商人17",
+      "products": [
+        {
+          "itemID": "Herbs",
+          "nameCN": "低品质药品",
+          "type": "Normal",
+          "price": 780,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Opium",
+          "nameCN": "可疑果汁",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Potion_Low",
+          "nameCN": "低品质恢复药",
+          "type": "Normal",
+          "price": 2820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Narcotic",
+          "nameCN": "怪异果汁",
+          "type": "Normal",
+          "price": 5400,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Medicines",
+          "nameCN": "药品",
+          "type": "Normal",
+          "price": 1820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Potion",
+          "nameCN": "恢复药",
+          "type": "Normal",
+          "price": 6180,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "LuxuryMedicines",
+          "nameCN": "高品质药品",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Potion_High",
+          "nameCN": "高品质恢复药",
+          "type": "Normal",
+          "price": 12600,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 8
+    },
+    {
+      "id": "Caravan_Shop_18",
+      "nameCN": "旅行商人18",
+      "products": [
+        {
+          "itemID": "JamBun",
+          "nameCN": "果酱面包",
+          "type": "Normal",
+          "price": 420,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Omelet",
+          "nameCN": "欧姆蛋",
+          "type": "Normal",
+          "price": 580,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MarinatedMushrooms",
+          "nameCN": "腌蘑菇",
+          "type": "Normal",
+          "price": 480,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 3
+    },
+    {
+      "id": "Caravan_Shop_19",
+      "nameCN": "旅行商人19",
+      "products": [
+        {
+          "itemID": "JamBun",
+          "nameCN": "果酱面包",
+          "type": "Normal",
+          "price": 420,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Omelet",
+          "nameCN": "欧姆蛋",
+          "type": "Normal",
+          "price": 580,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MarinatedMushrooms",
+          "nameCN": "腌蘑菇",
+          "type": "Normal",
+          "price": 480,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MushroomSoup",
+          "nameCN": "蘑菇汤",
+          "type": "Normal",
+          "price": 840,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "JellyfishFairy_jelly",
+          "nameCN": "海月仙的晶仙果冻",
+          "type": "Normal",
+          "price": 1320,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "JellyfishGhost_jelly",
+          "nameCN": "海月灵的水灵果冻",
+          "type": "Normal",
+          "price": 720,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 6
+    },
+    {
+      "id": "Caravan_Shop_20",
+      "nameCN": "旅行商人20",
+      "products": [
+        {
+          "itemID": "JamBun",
+          "nameCN": "果酱面包",
+          "type": "Normal",
+          "price": 420,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Omelet",
+          "nameCN": "欧姆蛋",
+          "type": "Normal",
+          "price": 580,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MarinatedMushrooms",
+          "nameCN": "腌蘑菇",
+          "type": "Normal",
+          "price": 480,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MushroomSoup",
+          "nameCN": "蘑菇汤",
+          "type": "Normal",
+          "price": 840,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "JellyfishFairy_jelly",
+          "nameCN": "海月仙的晶仙果冻",
+          "type": "Normal",
+          "price": 1320,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "JellyfishGhost_jelly",
+          "nameCN": "海月灵的水灵果冻",
+          "type": "Normal",
+          "price": 720,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Seafood_Salada",
+          "nameCN": "海鲜沙拉",
+          "type": "Normal",
+          "price": 1100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "DeerLocoMoco",
+          "nameCN": "夏威夷紫霞鹿汉堡饭",
+          "type": "Normal",
+          "price": 820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "DeerStew",
+          "nameCN": "紫霞鹿肉炖菜",
+          "type": "Normal",
+          "price": 1270,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 9
+    },
+    {
+      "id": "Caravan_Shop_21",
+      "nameCN": "旅行商人21",
+      "products": [
+        {
+          "itemID": "JamBun",
+          "nameCN": "果酱面包",
+          "type": "Normal",
+          "price": 420,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Omelet",
+          "nameCN": "欧姆蛋",
+          "type": "Normal",
+          "price": 580,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MarinatedMushrooms",
+          "nameCN": "腌蘑菇",
+          "type": "Normal",
+          "price": 480,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MushroomSoup",
+          "nameCN": "蘑菇汤",
+          "type": "Normal",
+          "price": 840,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "JellyfishFairy_jelly",
+          "nameCN": "海月仙的晶仙果冻",
+          "type": "Normal",
+          "price": 1320,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "JellyfishGhost_jelly",
+          "nameCN": "海月灵的水灵果冻",
+          "type": "Normal",
+          "price": 720,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Seafood_Salada",
+          "nameCN": "海鲜沙拉",
+          "type": "Normal",
+          "price": 1100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "DeerLocoMoco",
+          "nameCN": "夏威夷紫霞鹿汉堡饭",
+          "type": "Normal",
+          "price": 820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "DeerStew",
+          "nameCN": "紫霞鹿肉炖菜",
+          "type": "Normal",
+          "price": 1270,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Curry",
+          "nameCN": "森猛犸咖喱",
+          "type": "Normal",
+          "price": 2040,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MeatAndPotatoes",
+          "nameCN": "土豆炖天擒鸟肉",
+          "type": "Normal",
+          "price": 960,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 11
+    },
+    {
+      "id": "Caravan_Shop_22",
+      "nameCN": "旅行商人22",
+      "products": [
+        {
+          "itemID": "Wool",
+          "nameCN": "羊毛",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalFluid",
+          "nameCN": "水栖帕鲁的黏液",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 5
+    },
+    {
+      "id": "Caravan_Shop_23",
+      "nameCN": "旅行商人23",
+      "products": [
+        {
+          "itemID": "Wool",
+          "nameCN": "羊毛",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalFluid",
+          "nameCN": "水栖帕鲁的黏液",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FireOrgan",
+          "nameCN": "喷火器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "IceOrgan",
+          "nameCN": "结冰器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ElectricOrgan",
+          "nameCN": "发电器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Venom",
+          "nameCN": "毒腺",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 9
+    },
+    {
+      "id": "Caravan_Shop_24",
+      "nameCN": "旅行商人24",
+      "products": [
+        {
+          "itemID": "Wool",
+          "nameCN": "羊毛",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalFluid",
+          "nameCN": "水栖帕鲁的黏液",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FireOrgan",
+          "nameCN": "喷火器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "IceOrgan",
+          "nameCN": "结冰器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ElectricOrgan",
+          "nameCN": "发电器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Venom",
+          "nameCN": "毒腺",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalOil",
+          "nameCN": "优质帕鲁油",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_CatMage",
+          "nameCN": "暗巫猫的体毛",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_CaptainPenguin",
+          "nameCN": "企丸王的羽饰",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_ColorfulBird",
+          "nameCN": "炸蛋鸟的羽毛",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_PlantSlime",
+          "nameCN": "叶泥泥的叶子",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 14
+    },
+    {
+      "id": "Caravan_Shop_25",
+      "nameCN": "旅行商人25",
+      "products": [
+        {
+          "itemID": "Wool",
+          "nameCN": "羊毛",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalFluid",
+          "nameCN": "水栖帕鲁的黏液",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FireOrgan",
+          "nameCN": "喷火器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "IceOrgan",
+          "nameCN": "结冰器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ElectricOrgan",
+          "nameCN": "发电器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Venom",
+          "nameCN": "毒腺",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalOil",
+          "nameCN": "优质帕鲁油",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_CatMage",
+          "nameCN": "暗巫猫的体毛",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_CaptainPenguin",
+          "nameCN": "企丸王的羽饰",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_ColorfulBird",
+          "nameCN": "炸蛋鸟的羽毛",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_PlantSlime",
+          "nameCN": "叶泥泥的叶子",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_PinkRabbit",
+          "nameCN": "姬小兔的发带",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_MopBaby",
+          "nameCN": "毛掸儿的棉毛",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_NegativeOctopus",
+          "nameCN": "勾魂鱿的触手",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_RaijinDaughter",
+          "nameCN": "雷鸣童子的云朵",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalItem_LizardMan",
+          "nameCN": "朋克蜥的头冠",
+          "type": "Normal",
+          "price": 500,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 19
+    },
+    {
+      "id": "Dungeon_Shop_01",
+      "nameCN": "地下城商店",
+      "products": [
+        {
+          "itemID": "Meat_ChickenPal",
+          "nameCN": "皮皮鸡的鸡肉",
+          "type": "Normal",
+          "price": 100,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_SheepBall",
+          "nameCN": "棉悠悠的羊肉",
+          "type": "Normal",
+          "price": 120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Egg",
+          "nameCN": "蛋",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Boar",
+          "nameCN": "草莽猪的猪肉",
+          "type": "Normal",
+          "price": 150,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_Kelpie",
+          "nameCN": "水灵儿的鱼肉",
+          "type": "Normal",
+          "price": 140,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Meat_LazyCatfish",
+          "nameCN": "趴趴鲶的鱼肉",
+          "type": "Normal",
+          "price": 220,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Milk",
+          "nameCN": "牛奶",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow",
+          "nameCN": "箭",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Poison",
+          "nameCN": "毒箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Arrow_Fire",
+          "nameCN": "火箭",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RoughBullet",
+          "nameCN": "劣质弹药",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "HandgunBullet",
+          "nameCN": "手枪子弹",
+          "type": "Normal",
+          "price": 40,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "RifleBullet",
+          "nameCN": "步枪子弹",
+          "type": "Normal",
+          "price": 280,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ShotgunBullet",
+          "nameCN": "霰弹枪子弹",
+          "type": "Normal",
+          "price": 330,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Berries",
+          "nameCN": "红色野莓",
+          "type": "Normal",
+          "price": 50,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "BerrySeeds",
+          "nameCN": "野莓种子",
+          "type": "Normal",
+          "price": 10,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "WheatSeeds",
+          "nameCN": "小麦种子",
+          "type": "Normal",
+          "price": 20,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wheat",
+          "nameCN": "小麦",
+          "type": "Normal",
+          "price": 70,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Herbs",
+          "nameCN": "低品质药品",
+          "type": "Normal",
+          "price": 780,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Opium",
+          "nameCN": "可疑果汁",
+          "type": "Normal",
+          "price": 3120,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Potion_Low",
+          "nameCN": "低品质恢复药",
+          "type": "Normal",
+          "price": 2820,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "JamBun",
+          "nameCN": "果酱面包",
+          "type": "Normal",
+          "price": 420,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Omelet",
+          "nameCN": "欧姆蛋",
+          "type": "Normal",
+          "price": 580,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "MarinatedMushrooms",
+          "nameCN": "腌蘑菇",
+          "type": "Normal",
+          "price": 480,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Wool",
+          "nameCN": "羊毛",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Leather",
+          "nameCN": "皮革",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Bone",
+          "nameCN": "骨头",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Horn",
+          "nameCN": "角",
+          "type": "Normal",
+          "price": 200,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "PalFluid",
+          "nameCN": "水栖帕鲁的黏液",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "FireOrgan",
+          "nameCN": "喷火器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "IceOrgan",
+          "nameCN": "结冰器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "ElectricOrgan",
+          "nameCN": "发电器官",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        },
+        {
+          "itemID": "Venom",
+          "nameCN": "毒腺",
+          "type": "Normal",
+          "price": 300,
+          "count": 1,
+          "stock": 0
+        }
+      ],
+      "productCount": 33
+    }
+  ],
+  "specialShops": {
+    "Medal_Shop_1": {
+      "currency": "DogCoin"
+    },
+    "Bounty_Shop_1": {
+      "currency": "BountyProof_1"
+    },
+    "Arena_Shop_1": {
+      "currency": "BattleTicket"
+    }
+  },
+  "lotteries": {
+    "TestTable_1": {
+      "groups": "[{'ShopGroupName': 'Vagrant_Trader_1_1', 'Weight': 100}, {'ShopGroupName': 'Vagrant_Trader_1_2', 'Weight': 50}, {'ShopGroupName': 'Vagrant_Trader_1_3', 'Weight': 50}]"
+    },
+    "TestTable_2": {
+      "groups": "[{'ShopGroupName': 'Village_Shop_1', 'Weight': 100}]"
+    },
+    "TestTable_3": {
+      "groups": "[{'ShopGroupName': 'TestShop_2', 'Weight': 25}, {'ShopGroupName': 'TestShop_3', 'Weight': 50}]"
+    },
+    "DesertShopTable": {
+      "groups": "[{'ShopGroupName': 'Desert_Shop_1', 'Weight': 100}]"
+    },
+    "VolcanoShopTable": {
+      "groups": "[{'ShopGroupName': 'Volcano_Shop_1', 'Weight': 100}]"
+    },
+    "WanderShopTable": {
+      "groups": "[{'ShopGroupName': 'Wander_Shop_1', 'Weight': 100}]"
+    },
+    "DesertShopTable2": {
+      "groups": "[{'ShopGroupName': 'Desert_Shop_2', 'Weight': 100}]"
+    },
+    "VolcanoShopTable2": {
+      "groups": "[{'ShopGroupName': 'Volcano_Shop_2', 'Weight': 100}]"
+    },
+    "MedalShop1": {
+      "groups": "[{'ShopGroupName': 'Medal_Shop_1', 'Weight': 100}]"
+    },
+    "SkinShopTest": {
+      "groups": "[{'ShopGroupName': 'Skin_Shop_Test', 'Weight': 100}]"
+    },
+    "BountyShop1": {
+      "groups": "[{'ShopGroupName': 'Bounty_Shop_1', 'Weight': 100}]"
+    },
+    "CaravanShop1": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_1', 'Weight': 100}]"
+    },
+    "CaravanShop2": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_2', 'Weight': 100}]"
+    },
+    "CaravanShop3": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_3', 'Weight': 100}]"
+    },
+    "ArenaShop1": {
+      "groups": "[{'ShopGroupName': 'Arena_Shop_1', 'Weight': 100}]"
+    },
+    "CaravanShop4": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_4', 'Weight': 100}]"
+    },
+    "CaravanShop5": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_5', 'Weight': 100}]"
+    },
+    "CaravanShop6": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_6', 'Weight': 100}]"
+    },
+    "CaravanShop7": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_7', 'Weight': 100}]"
+    },
+    "CaravanShop8": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_8', 'Weight': 100}]"
+    },
+    "CaravanShop9": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_9', 'Weight': 100}]"
+    },
+    "CaravanShop10": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_10', 'Weight': 100}]"
+    },
+    "CaravanShop11": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_11', 'Weight': 100}]"
+    },
+    "CaravanShop12": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_12', 'Weight': 100}]"
+    },
+    "CaravanShop13": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_13', 'Weight': 100}]"
+    },
+    "CaravanShop14": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_14', 'Weight': 100}]"
+    },
+    "CaravanShop15": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_15', 'Weight': 100}]"
+    },
+    "CaravanShop16": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_16', 'Weight': 100}]"
+    },
+    "CaravanShop17": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_17', 'Weight': 100}]"
+    },
+    "CaravanShop18": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_18', 'Weight': 100}]"
+    },
+    "CaravanShop19": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_19', 'Weight': 100}]"
+    },
+    "CaravanShop20": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_20', 'Weight': 100}]"
+    },
+    "CaravanShop21": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_21', 'Weight': 100}]"
+    },
+    "CaravanShop22": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_22', 'Weight': 100}]"
+    },
+    "CaravanShop23": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_23', 'Weight': 100}]"
+    },
+    "CaravanShop24": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_24', 'Weight': 100}]"
+    },
+    "CaravanShop25": {
+      "groups": "[{'ShopGroupName': 'Caravan_Shop_25', 'Weight': 100}]"
+    },
+    "Dungeon_Shop_01": {
+      "groups": "[{'ShopGroupName': 'Dungeon_Shop_01', 'Weight': 100}]"
+    }
+  }
+}

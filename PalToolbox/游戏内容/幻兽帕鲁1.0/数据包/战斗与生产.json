@@ -1,0 +1,4564 @@
+{
+  "meta": {
+    "generated": "2026-07-06",
+    "statistics": {
+      "campLevelCount": 35,
+      "campTaskCount": 35,
+      "eventCount": 11,
+      "cropCount": 18,
+      "npcCount": 216,
+      "fishPalCount": 3,
+      "baitCount": 9,
+      "dungeonAreaCount": 17,
+      "elapsedSeconds": 0.02
+    }
+  },
+  "campLevels": [
+    {
+      "level": 1,
+      "workerMax": 1,
+      "baseCampMax": 1
+    },
+    {
+      "level": 2,
+      "workerMax": 2,
+      "baseCampMax": 1
+    },
+    {
+      "level": 3,
+      "workerMax": 3,
+      "baseCampMax": 1
+    },
+    {
+      "level": 4,
+      "workerMax": 4,
+      "baseCampMax": 1
+    },
+    {
+      "level": 5,
+      "workerMax": 5,
+      "baseCampMax": 1
+    },
+    {
+      "level": 6,
+      "workerMax": 6,
+      "baseCampMax": 1
+    },
+    {
+      "level": 7,
+      "workerMax": 7,
+      "baseCampMax": 1
+    },
+    {
+      "level": 8,
+      "workerMax": 8,
+      "baseCampMax": 2
+    },
+    {
+      "level": 9,
+      "workerMax": 9,
+      "baseCampMax": 2
+    },
+    {
+      "level": 10,
+      "workerMax": 10,
+      "baseCampMax": 2
+    },
+    {
+      "level": 11,
+      "workerMax": 11,
+      "baseCampMax": 2
+    },
+    {
+      "level": 12,
+      "workerMax": 12,
+      "baseCampMax": 2
+    },
+    {
+      "level": 13,
+      "workerMax": 13,
+      "baseCampMax": 2
+    },
+    {
+      "level": 14,
+      "workerMax": 14,
+      "baseCampMax": 2
+    },
+    {
+      "level": 15,
+      "workerMax": 15,
+      "baseCampMax": 3
+    },
+    {
+      "level": 16,
+      "workerMax": 16,
+      "baseCampMax": 3
+    },
+    {
+      "level": 17,
+      "workerMax": 17,
+      "baseCampMax": 3
+    },
+    {
+      "level": 18,
+      "workerMax": 18,
+      "baseCampMax": 3
+    },
+    {
+      "level": 19,
+      "workerMax": 19,
+      "baseCampMax": 3
+    },
+    {
+      "level": 20,
+      "workerMax": 20,
+      "baseCampMax": 3
+    },
+    {
+      "level": 21,
+      "workerMax": 21,
+      "baseCampMax": 3
+    },
+    {
+      "level": 22,
+      "workerMax": 22,
+      "baseCampMax": 3
+    },
+    {
+      "level": 23,
+      "workerMax": 23,
+      "baseCampMax": 3
+    },
+    {
+      "level": 24,
+      "workerMax": 24,
+      "baseCampMax": 3
+    },
+    {
+      "level": 25,
+      "workerMax": 25,
+      "baseCampMax": 4
+    },
+    {
+      "level": 26,
+      "workerMax": 26,
+      "baseCampMax": 4
+    },
+    {
+      "level": 27,
+      "workerMax": 27,
+      "baseCampMax": 4
+    },
+    {
+      "level": 28,
+      "workerMax": 28,
+      "baseCampMax": 4
+    },
+    {
+      "level": 29,
+      "workerMax": 29,
+      "baseCampMax": 4
+    },
+    {
+      "level": 30,
+      "workerMax": 30,
+      "baseCampMax": 4
+    },
+    {
+      "level": 31,
+      "workerMax": 30,
+      "baseCampMax": 4
+    },
+    {
+      "level": 32,
+      "workerMax": 30,
+      "baseCampMax": 4
+    },
+    {
+      "level": 33,
+      "workerMax": 30,
+      "baseCampMax": 4
+    },
+    {
+      "level": 34,
+      "workerMax": 30,
+      "baseCampMax": 4
+    },
+    {
+      "level": 35,
+      "workerMax": 30,
+      "baseCampMax": 4
+    }
+  ],
+  "campTasks": [
+    {
+      "level": 1,
+      "workerNum": 1,
+      "incompleteMsg": "BASECAMP_TASK_TASK_TITLE_WORKER3_INCOMPLETE",
+      "completeMsg": "BASECAMP_TASK_TASK_TITLE_WORKER3_COMPLETE",
+      "builds": [
+        {
+          "object": "木箱",
+          "count": 1
+        },
+        {
+          "object": "原始的作业台",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "篝火",
+          "count": 1
+        },
+        {
+          "object": "劣质的床",
+          "count": 1
+        },
+        {
+          "object": "修理台",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "饲料箱",
+          "count": 1
+        },
+        {
+          "object": "稻草帕鲁床",
+          "count": 3
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "workerNum": 4,
+      "incompleteMsg": "BASECAMP_TASK_TASK_TITLE_WORKER3_INCOMPLETE",
+      "completeMsg": "BASECAMP_TASK_TASK_TITLE_WORKER3_COMPLETE",
+      "builds": [
+        {
+          "object": "帕鲁装备制作台",
+          "count": 1
+        },
+        {
+          "object": "野莓园",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "粉碎机",
+          "count": 1
+        },
+        {
+          "object": "采石场",
+          "count": 1
+        },
+        {
+          "object": "伐木场",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "原始的炉子",
+          "count": 1
+        },
+        {
+          "object": "力量石像",
+          "count": 1
+        },
+        {
+          "object": "温泉",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "优质作业台",
+          "count": 1
+        },
+        {
+          "object": "中世纪制药台",
+          "count": 1
+        },
+        {
+          "object": "野莓园",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "workerNum": 8,
+      "incompleteMsg": "BASECAMP_TASK_TASK_TITLE_WORKER3_INCOMPLETE",
+      "completeMsg": "BASECAMP_TASK_TASK_TITLE_WORKER3_COMPLETE",
+      "builds": [
+        {
+          "object": "金属箱",
+          "count": 1
+        },
+        {
+          "object": "帕鲁球制作台",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "料理锅",
+          "count": 1
+        },
+        {
+          "object": "小麦园",
+          "count": 1
+        },
+        {
+          "object": "磨粉机",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "武器制作台",
+          "count": 1
+        },
+        {
+          "object": "帕鲁工作研究所",
+          "count": 1
+        },
+        {
+          "object": "帕鲁远征所",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "帕鲁球流水线工厂",
+          "count": 1
+        },
+        {
+          "object": "发电机",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 12,
+      "workerNum": 12,
+      "incompleteMsg": "BASECAMP_TASK_TASK_TITLE_WORKER3_INCOMPLETE",
+      "completeMsg": "BASECAMP_TASK_TASK_TITLE_WORKER3_COMPLETE",
+      "builds": [
+        {
+          "object": "武器流水线工厂",
+          "count": 1
+        },
+        {
+          "object": "作业流水线工厂",
+          "count": 1
+        },
+        {
+          "object": "优质温泉",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "level": 13,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "改善后的炉子",
+          "count": 1
+        },
+        {
+          "object": "帕鲁球流水线工厂II",
+          "count": 1
+        },
+        {
+          "object": "召唤的祭坛",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "精炼金属箱",
+          "count": 1
+        },
+        {
+          "object": "冰箱",
+          "count": 1
+        },
+        {
+          "object": "大型帕鲁床",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "公会箱子",
+          "count": 1
+        },
+        {
+          "object": "电气厨房",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 16,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "作业流水线工厂 II",
+          "count": 1
+        },
+        {
+          "object": "电气制药台",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "电气炉",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "武器流水线工厂II",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 19,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "道具存取机",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "原油提炼机",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 21,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "低温保鲜饲料箱",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 22,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "冷冻粉碎机",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 23,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "巨大熔炉",
+          "count": 1
+        },
+        {
+          "object": "高等文明帕鲁球工厂",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 24,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "大型电能帕鲁蛋孵化器",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 25,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "高等文明箱子",
+          "count": 2
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 26,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "高等文明制药台",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 27,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "高等文明作业工厂",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 28,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "高等文明武器工厂",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 29,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "古代文明炉",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "古代文明工作台",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 31,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "大型垂钓池",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 32,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "古代文明厨房",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 33,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "技能果树园",
+          "count": 1
+        },
+        {
+          "object": "古代文明发电机",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 34,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "古代文明物质生成器",
+          "count": 1
+        },
+        {
+          "object": "古代文明栽培器",
+          "count": 1
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "level": 35,
+      "workerNum": 0,
+      "incompleteMsg": "None",
+      "completeMsg": "None",
+      "builds": [
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        },
+        {
+          "object": "None",
+          "count": 0
+        }
+      ]
+    }
+  ],
+  "workerEvents": [
+    {
+      "name": "破坏建筑",
+      "triggerSAN": 50,
+      "valid": false,
+      "interruptRecover": false,
+      "interruptSleep": false,
+      "priority": "Default"
+    },
+    {
+      "name": "偷懒",
+      "triggerSAN": 65,
+      "valid": true,
+      "interruptRecover": true,
+      "interruptSleep": true,
+      "priority": "Default"
+    },
+    {
+      "name": "小歇",
+      "triggerSAN": 85,
+      "valid": true,
+      "interruptRecover": true,
+      "interruptSleep": true,
+      "priority": "Default"
+    },
+    {
+      "name": "偷睡",
+      "triggerSAN": 60,
+      "valid": true,
+      "interruptRecover": false,
+      "interruptSleep": true,
+      "priority": "Default"
+    },
+    {
+      "name": "暴食",
+      "triggerSAN": 50,
+      "valid": true,
+      "interruptRecover": false,
+      "interruptSleep": false,
+      "priority": "Default"
+    },
+    {
+      "name": "打翻食盆",
+      "triggerSAN": 50,
+      "valid": true,
+      "interruptRecover": false,
+      "interruptSleep": false,
+      "priority": "Default"
+    },
+    {
+      "name": "打架",
+      "triggerSAN": 40,
+      "valid": false,
+      "interruptRecover": false,
+      "interruptSleep": false,
+      "priority": "Default"
+    },
+    {
+      "name": "发脾气",
+      "triggerSAN": 0,
+      "valid": true,
+      "interruptRecover": false,
+      "interruptSleep": false,
+      "priority": "Default"
+    },
+    {
+      "name": "逃跑",
+      "triggerSAN": 0,
+      "valid": false,
+      "interruptRecover": false,
+      "interruptSleep": false,
+      "priority": "Top"
+    },
+    {
+      "name": "过劳死",
+      "triggerSAN": 0,
+      "valid": false,
+      "interruptRecover": false,
+      "interruptSleep": false,
+      "priority": "Top"
+    },
+    {
+      "name": "生病",
+      "triggerSAN": 40,
+      "valid": true,
+      "interruptRecover": false,
+      "interruptSleep": false,
+      "priority": "Default"
+    }
+  ],
+  "crops": [
+    {
+      "name": "小麦",
+      "cropCN": "小麦",
+      "growTime_s": 270.0,
+      "cropNum": 10,
+      "seedWork": 7500,
+      "waterWork": 7500,
+      "harvestWork": 7500
+    },
+    {
+      "name": "番茄",
+      "cropCN": "番茄",
+      "growTime_s": 300.0,
+      "cropNum": 10,
+      "seedWork": 11000,
+      "waterWork": 11000,
+      "harvestWork": 11000
+    },
+    {
+      "name": "土豆",
+      "cropCN": "土豆",
+      "growTime_s": 350.0,
+      "cropNum": 10,
+      "seedWork": 17000,
+      "waterWork": 17000,
+      "harvestWork": 17000
+    },
+    {
+      "name": "玉米",
+      "cropCN": "玉米",
+      "growTime_s": 360.0,
+      "cropNum": 10,
+      "seedWork": 3000,
+      "waterWork": 3000,
+      "harvestWork": 1500
+    },
+    {
+      "name": "南瓜",
+      "cropCN": "南瓜",
+      "growTime_s": 360.0,
+      "cropNum": 10,
+      "seedWork": 3000,
+      "waterWork": 3000,
+      "harvestWork": 1500
+    },
+    {
+      "name": "红色野莓",
+      "cropCN": "红色野莓",
+      "growTime_s": 180.0,
+      "cropNum": 10,
+      "seedWork": 4500,
+      "waterWork": 4500,
+      "harvestWork": 4500
+    },
+    {
+      "name": "生菜",
+      "cropCN": "生菜",
+      "growTime_s": 330.0,
+      "cropNum": 10,
+      "seedWork": 15000,
+      "waterWork": 15000,
+      "harvestWork": 15000
+    },
+    {
+      "name": "胡萝卜",
+      "cropCN": "胡萝卜",
+      "growTime_s": 370.0,
+      "cropNum": 10,
+      "seedWork": 19000,
+      "waterWork": 19000,
+      "harvestWork": 19000
+    },
+    {
+      "name": "洋葱",
+      "cropCN": "洋葱",
+      "growTime_s": 390.0,
+      "cropNum": 10,
+      "seedWork": 21000,
+      "waterWork": 21000,
+      "harvestWork": 21000
+    },
+    {
+      "name": "小麦",
+      "cropCN": "小麦",
+      "growTime_s": 270.0,
+      "cropNum": 10,
+      "seedWork": 7500,
+      "waterWork": 7500,
+      "harvestWork": 7500
+    },
+    {
+      "name": "番茄",
+      "cropCN": "番茄",
+      "growTime_s": 300.0,
+      "cropNum": 10,
+      "seedWork": 11000,
+      "waterWork": 11000,
+      "harvestWork": 11000
+    },
+    {
+      "name": "土豆",
+      "cropCN": "土豆",
+      "growTime_s": 350.0,
+      "cropNum": 10,
+      "seedWork": 17000,
+      "waterWork": 17000,
+      "harvestWork": 17000
+    },
+    {
+      "name": "玉米",
+      "cropCN": "玉米",
+      "growTime_s": 360.0,
+      "cropNum": 10,
+      "seedWork": 3000,
+      "waterWork": 3000,
+      "harvestWork": 1500
+    },
+    {
+      "name": "南瓜",
+      "cropCN": "南瓜",
+      "growTime_s": 360.0,
+      "cropNum": 10,
+      "seedWork": 3000,
+      "waterWork": 3000,
+      "harvestWork": 1500
+    },
+    {
+      "name": "红色野莓",
+      "cropCN": "红色野莓",
+      "growTime_s": 180.0,
+      "cropNum": 10,
+      "seedWork": 4500,
+      "waterWork": 4500,
+      "harvestWork": 4500
+    },
+    {
+      "name": "生菜",
+      "cropCN": "生菜",
+      "growTime_s": 330.0,
+      "cropNum": 10,
+      "seedWork": 15000,
+      "waterWork": 15000,
+      "harvestWork": 15000
+    },
+    {
+      "name": "胡萝卜",
+      "cropCN": "胡萝卜",
+      "growTime_s": 370.0,
+      "cropNum": 10,
+      "seedWork": 19000,
+      "waterWork": 19000,
+      "harvestWork": 19000
+    },
+    {
+      "name": "洋葱",
+      "cropCN": "洋葱",
+      "growTime_s": 390.0,
+      "cropNum": 10,
+      "seedWork": 21000,
+      "waterWork": 21000,
+      "harvestWork": 21000
+    }
+  ],
+  "npcs": [
+    {
+      "id": "Johnson",
+      "nameCN": "市民",
+      "characterID": "MobuCitizen",
+      "nameTextID": "NAME_JOHNSON",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Bobby",
+      "nameCN": "市民",
+      "characterID": "MobuCitizen",
+      "nameTextID": "NAME_BOBBY",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "Unique002",
+      "nameCN": "刺客",
+      "characterID": "TestAssassin",
+      "nameTextID": "NAME_UNIQUE002",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "VillageLeader01",
+      "nameCN": "市民",
+      "characterID": "MobuCitizen",
+      "nameTextID": "NAME_VILLAGELEADER01",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "NOVICEPALTIMER",
+      "nameCN": "先遣队的幸存者",
+      "characterID": "Female_Soldier01",
+      "nameTextID": "NAME_NOVICEPALTIMER",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "SKILLED_PALTAMIER",
+      "nameCN": "技艺娴熟的岛民",
+      "characterID": "Male_People02",
+      "nameTextID": "SKILLED_PALTAMIER",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Vigilante_lackey",
+      "nameCN": "自卫队的小兵",
+      "characterID": "MobuCitizen",
+      "nameTextID": "Vigilante_lackey",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "Head_of_Village",
+      "nameCN": "聚落首领",
+      "characterID": "Male_Scholar02",
+      "nameTextID": "Head_of_Village",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Police_dependable",
+      "nameCN": "可靠的自卫队",
+      "characterID": "Guard_Rifle",
+      "nameTextID": "Police_dependable",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "InnkeeperA",
+      "nameCN": "旅店老板",
+      "characterID": "MobuCitizen",
+      "nameTextID": "InnkeeperA",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "Rumor-loving_villagers",
+      "nameCN": "喜欢八卦的村民",
+      "characterID": "Female_People03",
+      "nameTextID": "Rumor-loving_villagers",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Research-oriented_scholar",
+      "nameCN": "热心研究的村民",
+      "characterID": "MobuCitizen_Male",
+      "nameTextID": "Research-oriented_scholar",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "People_cant_leave",
+      "nameCN": "市民",
+      "characterID": "MobuCitizen",
+      "nameTextID": "People_can't_leave",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "Sweaty_paltimer",
+      "nameCN": "满身大汗的兼职人员",
+      "characterID": "MobuCitizen",
+      "nameTextID": "Sweaty_paltimer",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Shabby_looking_merchant",
+      "nameCN": "旅行的商人",
+      "characterID": "MobuCitizen",
+      "nameTextID": "Shabby_looking_merchant",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Unique003_Gift",
+      "nameCN": "市民",
+      "characterID": "MobuCitizen",
+      "nameTextID": "NAME_UNIQUE002",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "DarkTrader",
+      "nameCN": "黑市商人",
+      "characterID": "Male_DarkTrader01",
+      "nameTextID": "NAME_DarkTrader",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "DarkTrader02",
+      "nameCN": "黑市商人",
+      "characterID": "Male_DarkTrader01_02",
+      "nameTextID": "NAME_DarkTrader",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "DarkTrader03",
+      "nameCN": "黑市商人",
+      "characterID": "Male_DarkTrader01_03",
+      "nameTextID": "NAME_DarkTrader",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "DarkTrader04",
+      "nameCN": "黑市商人",
+      "characterID": "Male_DarkTrader01_04",
+      "nameTextID": "NAME_DarkTrader",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "DesertVillage001",
+      "nameCN": "怕冷的沙漠居民",
+      "characterID": "Male_DesertPeople01",
+      "nameTextID": "DesertVillage001",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "DesertVillage002",
+      "nameCN": "温柔的沙漠居民",
+      "characterID": "Female_DesertPeople02",
+      "nameTextID": "DesertVillage002",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "DesertVillage003",
+      "nameCN": "胆小的沙漠居民",
+      "characterID": "Male_DesertPeople01",
+      "nameTextID": "DesertVillage003",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "DesertVillage004",
+      "nameCN": "安静的沙漠居民",
+      "characterID": "Male_DesertPeople01",
+      "nameTextID": "NAME_Male_DesertVillage004",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "DesertPolice001",
+      "nameCN": "自卫队的基层队员",
+      "characterID": "Guard_Rifle",
+      "nameTextID": "DesertPolice001",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "DesertPolice002",
+      "nameCN": "顺从的自卫队队员",
+      "characterID": "Guard_Shotgun",
+      "nameTextID": "DesertPolice002",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "DesertPolice003",
+      "nameCN": "喜欢篝火的自卫队队员",
+      "characterID": "Guard_Rifle",
+      "nameTextID": "DesertPolice003",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "Police001",
+      "nameCN": "异世界大叔",
+      "characterID": "Male_Police_old",
+      "nameTextID": "Police001",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "VolcanoVillage001",
+      "nameCN": "喜欢钓鱼的村民",
+      "characterID": "MobuCitizen_Male",
+      "nameTextID": "VolcanoVillage001",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "VolcanoVillage002",
+      "nameCN": "爱管闲事的村民",
+      "characterID": "Female_People02",
+      "nameTextID": "VolcanoVillage002",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "VolcanoVillage003",
+      "nameCN": "喜欢星星的村民",
+      "characterID": "Male_People02",
+      "nameTextID": "VolcanoVillage003",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "VolcanoVillage004",
+      "nameCN": "信奉火神的村民",
+      "characterID": "MobuCitizen",
+      "nameTextID": "VolcanoVillage004",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "VolcanoPolice001",
+      "nameCN": "不正经的自卫队队员",
+      "characterID": "Guard_Rifle",
+      "nameTextID": "VolcanoPolice001",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "VolcanoPolice002",
+      "nameCN": "嗅觉灵敏的自卫队队员",
+      "characterID": "Guard_Shotgun",
+      "nameTextID": "VolcanoPolice002",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "RandomBattle_PalTamer",
+      "nameCN": "顽强的佣兵",
+      "characterID": "Male_Soldier01",
+      "nameTextID": "RandomBattle_PalTamer",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "RandomBattle_Police",
+      "nameCN": "顽强的自卫队队员",
+      "characterID": "Police_Rifle",
+      "nameTextID": "RandomBattle_Police",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "PvPVillage001",
+      "nameCN": "来自沙漠的逃亡者",
+      "characterID": "Male_DesertPeople01",
+      "nameTextID": "PvPVillage001",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "PvPVillage002",
+      "nameCN": "流浪的挑战者",
+      "characterID": "MobuCitizen_Male",
+      "nameTextID": "PvPVillage002",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "PvPVillage003",
+      "nameCN": "膝盖中箭的前佣兵",
+      "characterID": "MobuCitizen",
+      "nameTextID": "PvPVillage003",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "PvPVillage004",
+      "nameCN": "胆小的遭难者",
+      "characterID": "Male_People02",
+      "nameTextID": "PvPVillage004",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "PvPVillage005",
+      "nameCN": "胆小的岛民",
+      "characterID": "Female_People02",
+      "nameTextID": "PvPVillage005",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "PvPVillage006",
+      "nameCN": "看破红尘的岛民",
+      "characterID": "Female_People03",
+      "nameTextID": "PvPVillage006",
+      "gender": "Female",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "BadPolice001",
+      "nameCN": "Guard_Shotgun",
+      "characterID": "Guard_Shotgun",
+      "nameTextID": "BadPolice001",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "BadPolice002",
+      "nameCN": "Guard_Shotgun",
+      "characterID": "Guard_Shotgun",
+      "nameTextID": "BadPolice002",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "BadPoliceDrugSeller",
+      "nameCN": "Guard_Rifle",
+      "characterID": "Guard_Rifle",
+      "nameTextID": "BadPoliceDrugSeller",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "BattlePaltamer001",
+      "nameCN": "初出茅庐的帕鲁驯养师",
+      "characterID": "Male_Soldier02",
+      "nameTextID": "BattlePaltamer001",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BattlePaltamer002",
+      "nameCN": "锋芒毕露的帕鲁驯养师",
+      "characterID": "Female_Soldier02",
+      "nameTextID": "BattlePaltamer002",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BattlePaltamer003",
+      "nameCN": "冷酷的帕鲁驯养师",
+      "characterID": "Male_Soldier03",
+      "nameTextID": "BattlePaltamer003",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "BattlePaltamer004",
+      "nameCN": "老手帕鲁驯养师",
+      "characterID": "Female_Soldier03",
+      "nameTextID": "BattlePaltamer004",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "BattlePaltamer005",
+      "nameCN": "斗志昂扬的帕鲁驯养师",
+      "characterID": "Male_Soldier04",
+      "nameTextID": "BattlePaltamer005",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BattlePaltamer006",
+      "nameCN": "经验老到的帕鲁驯养师",
+      "characterID": "Female_Soldier04",
+      "nameTextID": "BattlePaltamer006",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "MerchantwithPAL",
+      "nameCN": "眼神凶恶的帕鲁商人",
+      "characterID": "Male_Trader01",
+      "nameTextID": "MerchantwithPAL",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "MedalTrader",
+      "nameCN": "奖章商人",
+      "characterID": "Male_DarkTrader02",
+      "nameTextID": "MedalTrader",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Police_WarningOilrig",
+      "nameCN": "示警的自卫队队员",
+      "characterID": "Guard_Rifle",
+      "nameTextID": "Police_WarningOilrig",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyTrader",
+      "nameCN": "自卫队的通缉专员",
+      "characterID": "BountyTrader",
+      "nameTextID": "BountyTrader",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Doctor",
+      "nameCN": "Doctor",
+      "characterID": "Doctor",
+      "nameTextID": "NAME_Doctor",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_PalPassive_Doctor",
+      "nameCN": "布朗博士",
+      "characterID": "PalPassive_Doctor",
+      "nameTextID": "NAME_PalPassive_Doctor",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Food",
+      "nameCN": "傲慢的美食家",
+      "characterID": "Reward_Food",
+      "nameTextID": "NAME_Reward_Food",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Paldex",
+      "nameCN": "帕鲁生态调查员",
+      "characterID": "Reward_Paldex",
+      "nameTextID": "NAME_Reward_Paldex",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_BossDefeat",
+      "nameCN": "老手帕鲁猎手",
+      "characterID": "Reward_BossDefeat",
+      "nameTextID": "NAME_Reward_BossDefeat",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalCaptureCount",
+      "nameCN": "聪明的猎人",
+      "characterID": "Reward_PalCaptureCount",
+      "nameTextID": "NAME_Reward_PalCaptureCount",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_A_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_A_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_B_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_B_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_C_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_C_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_D_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_D_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_E_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_E_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_F_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_F_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_G_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_G_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_H_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_H_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Emote_I_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Reward_Emote_I_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_A_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_A_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_B_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_B_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_C_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_C_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_D_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_D_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_E_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_E_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_F_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_F_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_G_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_G_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_H_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_H_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalDisplay_I_01",
+      "nameCN": "自大的帕鲁评赏家",
+      "characterID": "Reward_PalDisplay_I_01",
+      "nameTextID": "NAME_Reward_PalDisplay",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_A",
+      "nameCN": "通缉犯情报商",
+      "characterID": "MobuCitizen",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_B",
+      "nameCN": "通缉犯情报商",
+      "characterID": "Male_People02",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_C",
+      "nameCN": "通缉犯情报商",
+      "characterID": "Female_Soldier01",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_D",
+      "nameCN": "通缉犯情报商",
+      "characterID": "Male_Soldier01",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_E",
+      "nameCN": "通缉犯情报商",
+      "characterID": "Male_DesertPeople01",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_F",
+      "nameCN": "通缉犯情报商",
+      "characterID": "MobuCitizen_Male",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_G",
+      "nameCN": "通缉犯情报商",
+      "characterID": "Male_Soldier02",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_H",
+      "nameCN": "通缉犯情报商",
+      "characterID": "Male_People03",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_Yamijima_1",
+      "nameCN": "通缉犯情报商",
+      "characterID": "Female_Soldier03",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "BountyNavigator_Yamijima_2",
+      "nameCN": "通缉犯情报商",
+      "characterID": "Male_Soldier03",
+      "nameTextID": "BountyNavigator",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Presenter001",
+      "nameCN": "亲切的帕鲁驯养师",
+      "characterID": "Female_Presenter01",
+      "nameTextID": "Presenter001",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "U_Yamishima_guide1",
+      "nameCN": "聪明的地质学家",
+      "characterID": "Yamishima_guide1",
+      "nameTextID": "Yamishima_guide1",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "U_Yamishima_guide2",
+      "nameCN": "兴奋的帕鲁学者",
+      "characterID": "Yamishima_guide2",
+      "nameTextID": "Yamishima_guide2",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "U_Yamishima_guide3",
+      "nameCN": "高兴的矿石研究者",
+      "characterID": "Yamishima_guide3",
+      "nameTextID": "Yamishima_guide3",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "U_Yamishima_guide4",
+      "nameCN": "绝望的采购商",
+      "characterID": "Yamishima_guide4",
+      "nameTextID": "Yamishima_guide4",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "U_Yamishima_guide5",
+      "nameCN": "天坠军的逃兵",
+      "characterID": "Yamishima_guide5",
+      "nameTextID": "Yamishima_guide5",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "U_Emote_location_A_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_A_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_A_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_A_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_B_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_B_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_B_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_B_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_C_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_C_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_C_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_C_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_D_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_D_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_D_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_D_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_E_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_E_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_E_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_E_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_F_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_F_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_F_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_F_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_G_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_G_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_G_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_G_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_H_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_H_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_H_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_H_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_I_01",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_I_01",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Emote_location_I_02",
+      "nameCN": "爱的传教者",
+      "characterID": "Emote_location_I_02",
+      "nameTextID": "NAME_Reward_Emote_A_01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "GrassBoss",
+      "nameCN": "佐伊",
+      "characterID": "GrassBoss",
+      "nameTextID": "NAME_GrassBoss",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "ForestBoss",
+      "nameCN": "ForestBoss",
+      "characterID": "ForestBoss",
+      "nameTextID": "NAME_ForestBoss",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "DesertBoss",
+      "nameCN": "DesertBoss",
+      "characterID": "DesertBoss",
+      "nameTextID": "NAME_DesertBoss",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "ElectricBoss",
+      "nameCN": "ElectricBoss",
+      "characterID": "ElectricBoss",
+      "nameTextID": "NAME_ElectricBoss",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "SnowBoss",
+      "nameCN": "SnowBoss",
+      "characterID": "SnowBoss",
+      "nameTextID": "NAME_SnowBoss",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "SakurajimaBoss",
+      "nameCN": "SakurajimaBoss",
+      "characterID": "SakurajimaBoss",
+      "nameTextID": "NAME_SakurajimaBoss",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "VikingBoss",
+      "nameCN": "VikingBoss",
+      "characterID": "VikingBoss",
+      "nameTextID": "NAME_VikingBoss",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "ArenaShop",
+      "nameCN": "竞技场商人",
+      "characterID": "ArenaShop",
+      "nameTextID": "ArenaShop",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "CampPolice001",
+      "nameCN": "站岗的自卫队队员",
+      "characterID": "Police_Vigilance",
+      "nameTextID": "CampPolice001",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice002",
+      "nameCN": "刚下班的自卫队队员",
+      "characterID": "Police_Handgun",
+      "nameTextID": "CampPolice002",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice003",
+      "nameCN": "爱喝酒的自卫队队员",
+      "characterID": "Police_Rifle",
+      "nameTextID": "CampPolice003",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice004",
+      "nameCN": "嘴很毒的自卫队队员",
+      "characterID": "Police_Vigilance",
+      "nameTextID": "CampPolice004",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice005",
+      "nameCN": "正在如厕的自卫队队员",
+      "characterID": "Police_Handgun",
+      "nameTextID": "CampPolice005",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice006",
+      "nameCN": "认真的自卫队队员",
+      "characterID": "Police_Vigilance",
+      "nameTextID": "CampPolice006",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice007",
+      "nameCN": "毫无干劲的署长",
+      "characterID": "Police_Chief",
+      "nameTextID": "CampPolice007",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice008",
+      "nameCN": "胆怯的自卫队队员",
+      "characterID": "Police_Vigilance",
+      "nameTextID": "CampPolice008",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice009",
+      "nameCN": "健谈的自卫队队员",
+      "characterID": "Police_Shotgun",
+      "nameTextID": "CampPolice009",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice010",
+      "nameCN": "冷静的自卫队队员",
+      "characterID": "Police_BowGun",
+      "nameTextID": "CampPolice010",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice011",
+      "nameCN": "守卫财宝的自卫队队员",
+      "characterID": "Police_TreasureGuard_NarrowSite",
+      "nameTextID": "CampPolice011",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice012",
+      "nameCN": "正在休息的自卫队队员",
+      "characterID": "Police_Shotgun",
+      "nameTextID": "CampPolice012",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice013",
+      "nameCN": "自甘堕落的自卫队队员",
+      "characterID": "Police_BowGun",
+      "nameTextID": "CampPolice013",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice014",
+      "nameCN": "打盹的自卫队队员",
+      "characterID": "Police_Rifle",
+      "nameTextID": "CampPolice014",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice015",
+      "nameCN": "喝醉的自卫队队员",
+      "characterID": "Police_Rifle",
+      "nameTextID": "CampPolice015",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice016",
+      "nameCN": "口渴的自卫队队员",
+      "characterID": "Police_BowGun",
+      "nameTextID": "CampPolice016",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "CampPolice017",
+      "nameCN": "狐疑的自卫队队员",
+      "characterID": "Police_Vigilance",
+      "nameTextID": "CampPolice017",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "U_Female_Farmer01_v01",
+      "nameCN": "一筹莫展的农民",
+      "characterID": "Female_Farmer01_v01",
+      "nameTextID": "NAME_QUEST_FARMER01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Farmer01_v02",
+      "nameCN": "爱做饭的农民",
+      "characterID": "Female_Farmer01_v02",
+      "nameTextID": "NAME_QUEST_FARMER02",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Farmer01_v03",
+      "nameCN": "热心肠的农民",
+      "characterID": "Female_Farmer01_v03",
+      "nameTextID": "NAME_QUEST_FARMER03",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Farmer01_v04",
+      "nameCN": "挚爱帕鲁的农民",
+      "characterID": "Female_Farmer01_v04",
+      "nameTextID": "NAME_QUEST_FARMER04",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Scholar01_v01",
+      "nameCN": "追寻传说的研究员",
+      "characterID": "Male_Scholar01_v01",
+      "nameTextID": "NAME_QUEST_SCHOLAR01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Scholar01_v02",
+      "nameCN": "古代文明研究会的研究员",
+      "characterID": "Male_Scholar01_v02",
+      "nameTextID": "NAME_QUEST_SCHOLAR02",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Scholar01_v03",
+      "nameCN": "迷恋冲浪鸭的研究员",
+      "characterID": "Male_Scholar01_v03",
+      "nameTextID": "NAME_QUEST_SCHOLAR03",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Scholar01_v04",
+      "nameCN": "石头控的研究员",
+      "characterID": "Male_Scholar01_v04",
+      "nameTextID": "NAME_QUEST_SCHOLAR04",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Breeder01_v01",
+      "nameCN": "帕鲁培育新手驯养员",
+      "characterID": "Male_Breeder01_v01",
+      "nameTextID": "NAME_QUEST_BREEDER01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Breeder01_v02",
+      "nameCN": "珍视伙伴的驯养员",
+      "characterID": "Male_Breeder01_v02",
+      "nameTextID": "NAME_QUEST_BREEDER02",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Breeder01_v03",
+      "nameCN": "恐高的驯养员",
+      "characterID": "Male_Breeder01_v03",
+      "nameTextID": "NAME_QUEST_BREEDER03",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Breeder01_v04",
+      "nameCN": "热衷繁殖帕鲁的驯养员",
+      "characterID": "Male_Breeder01_v04",
+      "nameTextID": "NAME_QUEST_BREEDER04",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Ranger01_v01",
+      "nameCN": "天天爱打猎的猎人",
+      "characterID": "Female_Ranger01_v01",
+      "nameTextID": "NAME_QUEST_RANGER01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Ranger01_v02",
+      "nameCN": "正义感十足的猎人",
+      "characterID": "Female_Ranger01_v02",
+      "nameTextID": "NAME_QUEST_RANGER02",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Ranger01_v03",
+      "nameCN": "专注大猎物的猎人",
+      "characterID": "Female_Ranger01_v03",
+      "nameTextID": "NAME_QUEST_RANGER03",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Ranger01_v04",
+      "nameCN": "身上很好闻的猎人",
+      "characterID": "Female_Ranger01_v04",
+      "nameTextID": "NAME_QUEST_RANGER04",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Nomad01_v01",
+      "nameCN": "埋头登顶的流浪者",
+      "characterID": "Female_Nomad01_v01",
+      "nameTextID": "NAME_QUEST_NOMAD01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Nomad01_v02",
+      "nameCN": "追寻闪耀的流浪者",
+      "characterID": "Female_Nomad01_v02",
+      "nameTextID": "NAME_QUEST_NOMAD02",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Nomad01_v03",
+      "nameCN": "废寝忘食爱冒险的流浪者",
+      "characterID": "Female_Nomad01_v03",
+      "nameTextID": "NAME_QUEST_NOMAD03",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Nomad01_v04",
+      "nameCN": "随风漂泊的流浪者",
+      "characterID": "Female_Nomad01_v04",
+      "nameTextID": "NAME_QUEST_NOMAD04",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Angler01_v01",
+      "nameCN": "乐享慢生活的钓客",
+      "characterID": "Male_Angler01_v01",
+      "nameTextID": "NAME_QUEST_ANGLER01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Kigurumi01_v01",
+      "nameCN": "想变成瞅什魔的岛民",
+      "characterID": "Male_Kigurumi01_v01",
+      "nameTextID": "NAME_QUEST_KIGURUMI01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Negotiator",
+      "nameCN": "交涉人",
+      "characterID": "Negotiator",
+      "nameTextID": "NAME_Negotiator",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SurveyGirl01",
+      "nameCN": "菲亚",
+      "characterID": "Female_SurveyGirl01",
+      "nameTextID": "NAME_SurveyGirl",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SurveyGirl02",
+      "nameCN": "菲亚",
+      "characterID": "Female_SurveyGirl02",
+      "nameTextID": "NAME_SurveyGirl",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SurveyGirl03",
+      "nameCN": "菲亚",
+      "characterID": "Female_SurveyGirl03",
+      "nameTextID": "NAME_SurveyGirl",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SurveyWoman01",
+      "nameCN": "卡拉",
+      "characterID": "Female_SurveyWoman01",
+      "nameTextID": "NAME_SurveyWoman",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SurveyWoman02",
+      "nameCN": "卡拉",
+      "characterID": "Female_SurveyWoman02",
+      "nameTextID": "NAME_SurveyWoman",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SurveyMan01",
+      "nameCN": "加德尔",
+      "characterID": "Male_SurveyMan01",
+      "nameTextID": "NAME_SurveyMan",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SurveyMan02",
+      "nameCN": "加德尔",
+      "characterID": "Male_SurveyMan02",
+      "nameTextID": "NAME_SurveyMan",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SurveyMan03",
+      "nameCN": "加德尔",
+      "characterID": "Male_SurveyMan03",
+      "nameTextID": "NAME_SurveyMan",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_StrongOldMan01",
+      "nameCN": "哈罗德",
+      "characterID": "Male_StrongOldMan01",
+      "nameTextID": "NAME_StrongOldMan",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_StrongOldMan02",
+      "nameCN": "哈罗德",
+      "characterID": "Male_StrongOldMan02",
+      "nameTextID": "NAME_StrongOldMan",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_Paldex_v02",
+      "nameCN": "Reward_Paldex_v02",
+      "characterID": "Reward_Paldex_v02",
+      "nameTextID": "NAME_Reward_Paldex_v02",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Reward_PalCaptureCount_v02",
+      "nameCN": "Reward_PalCaptureCount_v02",
+      "characterID": "Reward_PalCaptureCount_v02",
+      "nameTextID": "NAME_Reward_PalCaptureCount_v02",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Farmer01_v05",
+      "nameCN": "Female_Farmer01_v05",
+      "characterID": "Female_Farmer01_v05",
+      "nameTextID": "Female_Farmer01_v05",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Scholar01_v05",
+      "nameCN": "Male_Scholar01_v05",
+      "characterID": "Male_Scholar01_v05",
+      "nameTextID": "Male_Scholar01_v05",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_Breeder01_v05",
+      "nameCN": "Male_Breeder01_v05",
+      "characterID": "Male_Breeder01_v05",
+      "nameTextID": "Male_Breeder01_v05",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Ranger01_v05",
+      "nameCN": "Female_Ranger01_v05",
+      "characterID": "Female_Ranger01_v05",
+      "nameTextID": "Female_Ranger01_v05",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Nomad01_v05",
+      "nameCN": "古代文明的研究者",
+      "characterID": "Female_Nomad01_v05",
+      "nameTextID": "NAME_AncientResearcher",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_DTairikuPeople01_v01",
+      "nameCN": "竹林居民",
+      "characterID": "Male_DTairikuPeople01_v01",
+      "nameTextID": "NAME_Male_DTairikuPeople01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_DTairikuPeople01_v01",
+      "nameCN": "竹林居民",
+      "characterID": "Female_DTairikuPeople01_v01",
+      "nameTextID": "NAME_Female_DTairikuPeople01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_TenrakuPeople01",
+      "nameCN": "天坠的研究者",
+      "characterID": "Male_TenrakuPeople01",
+      "nameTextID": "NAME_Male_TenrakuPeople01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_TenrakuPeople01",
+      "nameCN": "天坠的研究者",
+      "characterID": "Female_TenrakuPeople01",
+      "nameTextID": "NAME_Female_TenrakuPeople01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_SnowPeople01",
+      "nameCN": "极寒之民",
+      "characterID": "Male_SnowPeople01",
+      "nameTextID": "NAME_Male_SnowPeople01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_SnowPeople01",
+      "nameCN": "极寒之民",
+      "characterID": "Female_SnowPeople01",
+      "nameTextID": "NAME_Female_SnowPeople01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_SakurajimaPeople01",
+      "nameCN": "樱花岛居民",
+      "characterID": "Male_SakurajimaPeople01",
+      "nameTextID": "NAME_Male_SakurajimaPeople01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_SakurajimaPeople01",
+      "nameCN": "樱花岛居民",
+      "characterID": "Female_SakurajimaPeople01",
+      "nameTextID": "NAME_Female_SakurajimaPeople01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_SorajimaPeople01",
+      "nameCN": "天阳乡居民",
+      "characterID": "Male_SorajimaPeople01",
+      "nameTextID": "NAME_Male_SorajimaPeople01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_SorajimaPeople01",
+      "nameCN": "天阳乡居民",
+      "characterID": "Female_SorajimaPeople01",
+      "nameTextID": "NAME_Female_SorajimaPeople01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Male_WorldTreePeople01",
+      "nameCN": "世界树的守护者",
+      "characterID": "Male_WorldTreePeople01",
+      "nameTextID": "NAME_Male_WorldTreePeople01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_WorldTreePeople01",
+      "nameCN": "世界树的守护者",
+      "characterID": "Female_WorldTreePeople01",
+      "nameTextID": "NAME_Female_WorldTreePeople01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_001",
+      "nameCN": "Regiultima",
+      "characterID": "Arena_Legend_1",
+      "nameTextID": "NAME_ArenaNPC_101",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_002",
+      "nameCN": "Shell Knight",
+      "characterID": "Arena_Legend_2",
+      "nameTextID": "NAME_ArenaNPC_102",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_003",
+      "nameCN": "Koshi Anpan",
+      "characterID": "Arena_Legend_3",
+      "nameTextID": "NAME_ArenaNPC_103",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_004",
+      "nameCN": "Winget",
+      "characterID": "Arena_Legend_4",
+      "nameTextID": "NAME_ArenaNPC_104",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_005",
+      "nameCN": "Nabeau",
+      "characterID": "Arena_Legend_5",
+      "nameTextID": "NAME_ArenaNPC_105",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_006",
+      "nameCN": "Krissy Komiya",
+      "characterID": "Arena_Legend_6",
+      "nameTextID": "NAME_ArenaNPC_106",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_007",
+      "nameCN": "Nozomiso",
+      "characterID": "Arena_Legend_7",
+      "nameTextID": "NAME_ArenaNPC_107",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_008",
+      "nameCN": "Maximum",
+      "characterID": "Arena_Legend_8",
+      "nameTextID": "NAME_ArenaNPC_108",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_009",
+      "nameCN": "The Cheat Phantom",
+      "characterID": "Arena_Legend_9",
+      "nameTextID": "NAME_ArenaNPC_109",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_010",
+      "nameCN": "Prima",
+      "characterID": "Arena_Legend_10",
+      "nameTextID": "NAME_ArenaNPC_110",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_011",
+      "nameCN": "Jam4u2",
+      "characterID": "Arena_Legend_11",
+      "nameTextID": "NAME_ArenaNPC_111",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_012",
+      "nameCN": "Certified Cynic",
+      "characterID": "Arena_Legend_12",
+      "nameTextID": "NAME_ArenaNPC_112",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_013",
+      "nameCN": "Jeevis",
+      "characterID": "Arena_Legend_13",
+      "nameTextID": "NAME_ArenaNPC_113",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_014",
+      "nameCN": "RabbitXV",
+      "characterID": "Arena_Legend_14",
+      "nameTextID": "NAME_ArenaNPC_114",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_015",
+      "nameCN": "Ashee",
+      "characterID": "Arena_Legend_15",
+      "nameTextID": "NAME_ArenaNPC_115",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_016",
+      "nameCN": "Okaetsu",
+      "characterID": "Arena_Legend_16",
+      "nameTextID": "NAME_ArenaNPC_116",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_017",
+      "nameCN": "RedMage",
+      "characterID": "Arena_Legend_17",
+      "nameTextID": "NAME_ArenaNPC_117",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_018",
+      "nameCN": "Ent",
+      "characterID": "Arena_Legend_18",
+      "nameTextID": "NAME_ArenaNPC_118",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_019",
+      "nameCN": "Pylar",
+      "characterID": "Arena_Legend_19",
+      "nameTextID": "NAME_ArenaNPC_119",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Arena_Legend_020",
+      "nameCN": "iori",
+      "characterID": "Arena_Legend_20",
+      "nameTextID": "NAME_ArenaNPC_120",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_Female_Kunoichi01",
+      "nameCN": "Female_Kunoichi01",
+      "characterID": "Female_Kunoichi01",
+      "nameTextID": "NAME_Female_Kunoichi01",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "VolcanoPorter001",
+      "nameCN": "火山的运货人",
+      "characterID": "SalesPerson_Volcano",
+      "nameTextID": "NAME_Male_VolcanoPorter",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Brown"
+    },
+    {
+      "id": "U_SurveyGirl04",
+      "nameCN": "菲亚",
+      "characterID": "Female_SurveyGirl04",
+      "nameTextID": "NAME_SurveyGirl",
+      "gender": "Female",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "Police_dependable_Lonewolf",
+      "nameCN": "可靠的自卫队",
+      "characterID": "Guard_Rifle",
+      "nameTextID": "Police_dependable",
+      "gender": "Male",
+      "talkCount": false,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_SorajimaTowerGuide",
+      "nameCN": "天阳乡居民",
+      "characterID": "SorajimaTowerGuide",
+      "nameTextID": "NAME_Male_SorajimaPeople01",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    },
+    {
+      "id": "U_WildlifeSanctuary_guide",
+      "nameCN": "初出茅庐的帕鲁驯养师",
+      "characterID": "WildlifeSanctuary_guide",
+      "nameTextID": "BattlePaltamer001",
+      "gender": "Male",
+      "talkCount": true,
+      "skinColor": "EPalNPCSkinColor::Light"
+    }
+  ],
+  "fishPals": [
+    {
+      "id": "Pal_1",
+      "palID": "TentacleTurtle",
+      "palCN": "盔盔仔",
+      "lvMin": 4,
+      "lvMax": 8
+    },
+    {
+      "id": "Pal_2",
+      "palID": "Penguin",
+      "palCN": "企丸丸",
+      "lvMin": 4,
+      "lvMax": 8
+    },
+    {
+      "id": "Pal_3",
+      "palID": "BluePlatypus",
+      "palCN": "冲浪鸭",
+      "lvMin": 4,
+      "lvMax": 8
+    }
+  ],
+  "baits": [
+    {
+      "id": "FishingBait_1",
+      "nameCN": "简陋钓饵",
+      "hitBarRate": 1.0,
+      "missRate": 1.0,
+      "successRate": 1.0,
+      "searchRate": 1.0,
+      "startProgress": 0.0,
+      "enemyDrop": 0.0,
+      "itemDrop": 0.0
+    },
+    {
+      "id": "FishingBait_2",
+      "nameCN": "优质钓饵",
+      "hitBarRate": 1.0,
+      "missRate": 1.0,
+      "successRate": 1.0,
+      "searchRate": 1.5,
+      "startProgress": 0.0,
+      "enemyDrop": 0.0,
+      "itemDrop": 0.0
+    },
+    {
+      "id": "FishingBait_3",
+      "nameCN": "奢华钓饵",
+      "hitBarRate": 1.15,
+      "missRate": 1.0,
+      "successRate": 1.0,
+      "searchRate": 1.0,
+      "startProgress": 0.0,
+      "enemyDrop": 0.0,
+      "itemDrop": 0.0
+    },
+    {
+      "id": "FishingBait_1_A",
+      "nameCN": "新手钓饵",
+      "hitBarRate": 1.0,
+      "missRate": 0.68,
+      "successRate": 1.0,
+      "searchRate": 1.0,
+      "startProgress": 0.0,
+      "enemyDrop": 0.0,
+      "itemDrop": 0.0
+    },
+    {
+      "id": "FishingBait_1_B",
+      "nameCN": "甜味钓饵",
+      "hitBarRate": 1.0,
+      "missRate": 1.0,
+      "successRate": 1.0,
+      "searchRate": 1.5,
+      "startProgress": 0.0,
+      "enemyDrop": 0.0,
+      "itemDrop": 0.0
+    },
+    {
+      "id": "FishingBait_2_A",
+      "nameCN": "幸运钓饵",
+      "hitBarRate": 1.25,
+      "missRate": 1.0,
+      "successRate": 1.0,
+      "searchRate": 1.0,
+      "startProgress": 0.0,
+      "enemyDrop": 40.0,
+      "itemDrop": 40.0
+    },
+    {
+      "id": "FishingBait_2_B",
+      "nameCN": "快钩钓饵",
+      "hitBarRate": 1.25,
+      "missRate": 1.0,
+      "successRate": 1.0,
+      "searchRate": 1.5,
+      "startProgress": 0.0,
+      "enemyDrop": 0.0,
+      "itemDrop": 0.0
+    },
+    {
+      "id": "FishingBait_3_A",
+      "nameCN": "魅惑钓饵",
+      "hitBarRate": 1.3,
+      "missRate": 1.0,
+      "successRate": 1.0,
+      "searchRate": 1.0,
+      "startProgress": 0.0,
+      "enemyDrop": 40.0,
+      "itemDrop": 40.0
+    },
+    {
+      "id": "FishingBait_3_B",
+      "nameCN": "高风险钓饵",
+      "hitBarRate": 1.3,
+      "missRate": 1.0,
+      "successRate": 1.0,
+      "searchRate": 1.0,
+      "startProgress": 0.0,
+      "enemyDrop": 80.0,
+      "itemDrop": 80.0
+    }
+  ],
+  "dungeons": {
+    "测试地下城": {
+      "spawns": [
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_1_dungeon_grass"
+        },
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_2_dungeon_grass_boss"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "TestDebug01",
+          "weight": 1.0,
+          "bonusExp": 1.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        }
+      ]
+    },
+    "草地地下城": {
+      "spawns": [
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_1_dungeon_grass"
+        },
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_2_dungeon_grass_boss"
+        }
+      ],
+      "levels": [],
+      "lotteries": []
+    },
+    "草原地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_2_dungeon_grass_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_1_dungeon_grass"
+        },
+        {
+          "rank": "FishPal",
+          "weight": 1.0,
+          "spawnerName": "50_16_dungeon_grass"
+        },
+        {
+          "rank": "NPCHuman",
+          "weight": 1.0,
+          "spawnerName": "50_17_dungeon_grass"
+        },
+        {
+          "rank": "MidBoss",
+          "weight": 1.0,
+          "spawnerName": "50_2_dungeon_grass_boss"
+        },
+        {
+          "rank": "Monster",
+          "weight": 1.0,
+          "spawnerName": "50_1_dungeon_grass_monsteronly"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Grass001_01",
+          "weight": 1.0,
+          "bonusExp": 3.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "草原地下城2": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_4_dungeon_grass2_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_3_dungeon_grass2"
+        },
+        {
+          "rank": "NPCHuman",
+          "weight": 1.0,
+          "spawnerName": "50_22_dungeon_grass2"
+        },
+        {
+          "rank": "FishPal",
+          "weight": 1.0,
+          "spawnerName": "50_16_dungeon_grass"
+        },
+        {
+          "rank": "MidBoss",
+          "weight": 1.0,
+          "spawnerName": "50_4_dungeon_grass2_boss"
+        },
+        {
+          "rank": "Monster",
+          "weight": 1.0,
+          "spawnerName": "50_3_dungeon_grass2_monsteronly"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Grass002_01",
+          "weight": 1.0,
+          "bonusExp": 3.5
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "森林地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_6_dungeon_forest_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_5_dungeon_forest"
+        },
+        {
+          "rank": "NPCHuman",
+          "weight": 1.0,
+          "spawnerName": "50_23_dungeon_forest"
+        },
+        {
+          "rank": "FishPal",
+          "weight": 1.0,
+          "spawnerName": "50_16_dungeon_grass2"
+        },
+        {
+          "rank": "MidBoss",
+          "weight": 1.0,
+          "spawnerName": "50_6_dungeon_forest_boss"
+        },
+        {
+          "rank": "Monster",
+          "weight": 1.0,
+          "spawnerName": "50_5_dungeon_forest_monsteronly"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Forest001_01",
+          "weight": 1.0,
+          "bonusExp": 4.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "森林地下城2": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_6_dungeon_forest_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_5_dungeon_forest"
+        },
+        {
+          "rank": "NPCHuman",
+          "weight": 1.0,
+          "spawnerName": "50_23_dungeon_forest"
+        },
+        {
+          "rank": "FishPal",
+          "weight": 1.0,
+          "spawnerName": "50_16_dungeon_grass2"
+        },
+        {
+          "rank": "MidBoss",
+          "weight": 1.0,
+          "spawnerName": "50_6_dungeon_forest_boss"
+        },
+        {
+          "rank": "Monster",
+          "weight": 1.0,
+          "spawnerName": "50_5_dungeon_forest_monsteronly"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Forest002_01",
+          "weight": 1.0,
+          "bonusExp": 4.5
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "沙漠地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_10_dungeon_dessert_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_9_dungeon_dessert"
+        },
+        {
+          "rank": "FishPal",
+          "weight": 1.0,
+          "spawnerName": "50_24_dungeon_dessert"
+        },
+        {
+          "rank": "MidBoss",
+          "weight": 1.0,
+          "spawnerName": "50_10_dungeon_dessert_boss"
+        },
+        {
+          "rank": "Monster",
+          "weight": 1.0,
+          "spawnerName": "50_9_dungeon_dessert_monsteronly"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Dessert001_01",
+          "weight": 1.0,
+          "bonusExp": 5.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "火山地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_8_dungeon_volcano_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_7_dungeon_volcano"
+        },
+        {
+          "rank": "FishPal",
+          "weight": 1.0,
+          "spawnerName": "50_25_dungeon_volcano"
+        },
+        {
+          "rank": "Monster",
+          "weight": 1.0,
+          "spawnerName": "50_7_dungeon_volcano_monsteronly"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Volcano001_01",
+          "weight": 1.0,
+          "bonusExp": 5.5
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "雪山地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_12_dungeon_snow_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_11_dungeon_snow"
+        },
+        {
+          "rank": "FishPal",
+          "weight": 1.0,
+          "spawnerName": "50_26_dungeon_snow"
+        },
+        {
+          "rank": "Monster",
+          "weight": 1.0,
+          "spawnerName": "50_11_dungeon_snow_monsteronly"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Snow001_01",
+          "weight": 1.0,
+          "bonusExp": 6.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Easy01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Medium01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.5,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 0.0,
+          "content": "EPalDungeonRewardSpawnerContentType::PalSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard01",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::Cage"
+        },
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "小岛地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_2_dungeon_grass_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_1_dungeon_grass"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Island001_01",
+          "weight": 1.0,
+          "bonusExp": 3.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "小岛地下城2": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_2_dungeon_grass_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_1_dungeon_grass"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Island002_01",
+          "weight": 1.0,
+          "bonusExp": 3.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "小岛地下城3": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_2_dungeon_grass_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_1_dungeon_grass"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Island003_01",
+          "weight": 1.0,
+          "bonusExp": 3.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "樱花岛地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_13_dungeon_Sakurajima_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_12_dungeon_Sakurajima"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Sakura001_01",
+          "weight": 1.0,
+          "bonusExp": 6.5
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "天坠岛地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_15_dungeon_Yamijima_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_14_dungeon_Yamijima"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Viking001_01",
+          "weight": 1.0,
+          "bonusExp": 7.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "药神岛地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_22_dungeon_yakushima_boss"
+        },
+        {
+          "rank": "Normal",
+          "weight": 1.0,
+          "spawnerName": "50_18_dungeon_yakushima_forest"
+        },
+        {
+          "rank": "Normal02",
+          "weight": 1.0,
+          "spawnerName": "50_19_dungeon_yakushima_cavern"
+        },
+        {
+          "rank": "Normal03",
+          "weight": 1.0,
+          "spawnerName": "50_20_dungeon_yakushima_mushroom"
+        },
+        {
+          "rank": "Normal04",
+          "weight": 1.0,
+          "spawnerName": "50_21_dungeon_yakushima_hallow"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Yakushima001_01",
+          "weight": 1.0,
+          "bonusExp": 7.5
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "天鸟岛地下城": {
+      "spawns": [
+        {
+          "rank": "Boss",
+          "weight": 1.0,
+          "spawnerName": "50_29_dungeon_Skyisland_boss"
+        },
+        {
+          "rank": "Monster",
+          "weight": 1.0,
+          "spawnerName": "50_27_dungeon_Skyisland"
+        },
+        {
+          "rank": "NPCHuman",
+          "weight": 1.0,
+          "spawnerName": "50_28_dungeon_Skyisland"
+        }
+      ],
+      "levels": [
+        {
+          "levelName": "Skyland001_01",
+          "weight": 1.0,
+          "bonusExp": 8.0
+        }
+      ],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::Hard03",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    },
+    "基础保障地下城": {
+      "spawns": [],
+      "levels": [],
+      "lotteries": [
+        {
+          "type": "EPalDungeonRewardSpawnerType::BaseInsurance",
+          "weight": 1.0,
+          "content": "EPalDungeonRewardSpawnerContentType::MapObjectSpawner"
+        }
+      ]
+    }
+  },
+  "dungeonNameText": {
+    "NAME_FixedDungeon_grass_1": "冰鸟密域",
+    "NAME_FixedDungeon_grass_2": "灼热密域",
+    "NAME_FixedDungeon_grass_3": "百焰密域",
+    "NAME_FixedDungeon_grass_4": "剑豪密域",
+    "NAME_FixedDungeon_grass_5": "冰纷密域",
+    "NAME_FixedDungeon_grass_6": "冰狐密域",
+    "NAME_FixedDungeon_grass_7": "苍郁密域",
+    "NAME_FixedDungeon_forest_1": "魔导士密域",
+    "NAME_FixedDungeon_forest_2": "守护者密域",
+    "NAME_FixedDungeon_forest_3": "神速密域",
+    "NAME_FixedDungeon_forest_4": "神秘密域",
+    "NAME_FixedDungeon_forest_5": "纯白密域",
+    "NAME_RandomDungeon_grass01": "丘陵洞窟",
+    "NAME_RandomDungeon_grass02": "溪谷洞窟",
+    "NAME_RandomDungeon_forest01": "溪流洞窟",
+    "NAME_RandomDungeon_volcano01": "火山洞窟",
+    "NAME_RandomDungeon_dessert01": "沙丘洞窟",
+    "NAME_RandomDungeon_snow01": "灵峰洞窟",
+    "NAME_RandomDungeon_PvP": "离岛洞窟",
+    "NAME_RandomDungeon_Sakura01": "樱花洞窟",
+    "NAME_RandomDungeon_Viking01": "天坠洞窟",
+    "NAME_FixedDungeon_DarkIsland_1": "守护岩密域",
+    "NAME_FixedDungeon_DarkIsland_2": "小勇者密域",
+    "NAME_FixedDungeon_DarkIsland_3": "靛青密域",
+    "NAME_FixedDungeon_DarkIsland_4": "猎魂密域",
+    "NAME_FixedDungeon_SmallIsland03": "冰封密域",
+    "NAME_RandomDungeon_Yakushima01": "？？？",
+    "NAME_FixedDungeon_SkyIsland_01": "星愿密域",
+    "NAME_RandomDungeon_Skyland01": "天阳乡空域"
+  }
+}

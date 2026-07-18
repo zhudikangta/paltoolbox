@@ -1,0 +1,2614 @@
+{
+  "meta": {
+    "generated": "2026-07-05",
+    "sources": [],
+    "statistics": {
+      "missionCount": 18,
+      "questCount": 120,
+      "shopCount": 8,
+      "questNameCN": 116,
+      "questWithObjectives": 91,
+      "totalObjectiveSteps": 154,
+      "elapsedSeconds": 0.02
+    }
+  },
+  "missions": [
+    {
+      "id": "Dungeon_Grass",
+      "titleTextId": "DUNGEON_GRASS",
+      "nameCN": "草原的洞穴",
+      "nameStatus": "ok",
+      "difficulty": "Easy",
+      "requiredSeconds": 1800,
+      "recommendedStrength": 25000,
+      "requiredElementType": "None",
+      "requiredElementNum": 0,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Grass",
+      "itemFieldLotteryName": "Expedition_Grass",
+      "challengeCondition": "DefeatGrassBoss"
+    },
+    {
+      "id": "Dungeon_Forest",
+      "titleTextId": "DUNGEON_FOREST",
+      "nameCN": "森林的秘境",
+      "nameStatus": "ok",
+      "difficulty": "Easy",
+      "requiredSeconds": 1800,
+      "recommendedStrength": 56000,
+      "requiredElementType": "Leaf",
+      "requiredElementNum": 15,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Forest",
+      "itemFieldLotteryName": "Expedition_Forest",
+      "challengeCondition": "DefeatForestBoss"
+    },
+    {
+      "id": "Dungeon_Volcano",
+      "titleTextId": "DUNGEON_VOLCANO",
+      "nameCN": "火山的灼热洞穴",
+      "nameStatus": "ok",
+      "difficulty": "Normal",
+      "requiredSeconds": 2700,
+      "recommendedStrength": 144000,
+      "requiredElementType": "Fire",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Volcano",
+      "itemFieldLotteryName": "Expedition_Volcano",
+      "challengeCondition": "DefeatVolcanoBoss"
+    },
+    {
+      "id": "Dungeon_Desert",
+      "titleTextId": "DUNGEON_DESERT",
+      "nameCN": "沙漠的隐秘遗迹",
+      "nameStatus": "ok",
+      "difficulty": "Normal",
+      "requiredSeconds": 2700,
+      "recommendedStrength": 209000,
+      "requiredElementType": "Earth",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Desert",
+      "itemFieldLotteryName": "Expedition_Desert",
+      "challengeCondition": "DefeatDesertBoss"
+    },
+    {
+      "id": "Dungeon_Snow",
+      "titleTextId": "DUNGEON_SNOW",
+      "nameCN": "雪山的冻结洞穴",
+      "nameStatus": "ok",
+      "difficulty": "Hard",
+      "requiredSeconds": 3600,
+      "recommendedStrength": 286000,
+      "requiredElementType": "Ice",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Snow",
+      "itemFieldLotteryName": "Expedition_Snow",
+      "challengeCondition": "DefeatSnowBoss"
+    },
+    {
+      "id": "Dungeon_Sakurajima",
+      "titleTextId": "DUNGEON_SAKURAJIMA",
+      "nameCN": "樱花岛的灵花洞穴",
+      "nameStatus": "ok",
+      "difficulty": "Hard",
+      "requiredSeconds": 3600,
+      "recommendedStrength": 375000,
+      "requiredElementType": "Water",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Sakurajima",
+      "itemFieldLotteryName": "Expedition_Sakurajima",
+      "challengeCondition": "DefeatSakurajimaBoss"
+    },
+    {
+      "id": "Dungeon_DarkIsland",
+      "titleTextId": "DUNGEON_DARKISLAND",
+      "nameCN": "天坠魔窟",
+      "nameStatus": "ok",
+      "difficulty": "Hard",
+      "requiredSeconds": 3600,
+      "recommendedStrength": 476000,
+      "requiredElementType": "Dark",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::DarkIsland",
+      "itemFieldLotteryName": "Expedition_DarkIsland",
+      "challengeCondition": "DefeatDarkIslandBoss"
+    },
+    {
+      "id": "Dungeon_SkyIsland",
+      "titleTextId": "DUNGEON_SKYISLAND",
+      "nameCN": "天阳乡浮岛",
+      "nameStatus": "ok",
+      "difficulty": "Hard",
+      "requiredSeconds": 3600,
+      "recommendedStrength": 589000,
+      "requiredElementType": "Dragon",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::SkyIsland",
+      "itemFieldLotteryName": "Expedition_SkyIsland",
+      "challengeCondition": "DefeatSkyIslandBoss"
+    },
+    {
+      "id": "Dungeon_WorldTree",
+      "titleTextId": "DUNGEON_WORLDTREE",
+      "nameCN": "世界树地下都市遗址",
+      "nameStatus": "ok",
+      "difficulty": "Hard",
+      "requiredSeconds": 3600,
+      "recommendedStrength": 851000,
+      "requiredElementType": "None",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::WorldTree",
+      "itemFieldLotteryName": "Expedition_WorldTree",
+      "challengeCondition": "DefeatWorldTreeBoss"
+    },
+    {
+      "id": "Dungeon_GrassHard",
+      "titleTextId": "DUNGEON_GRASSHARD",
+      "nameCN": "雷恩盗猎团的走私仓库",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 1600000,
+      "requiredElementType": "Normal",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Grass",
+      "itemFieldLotteryName": "Expedition_Grass_Hard",
+      "challengeCondition": "DefeatGrassBossHard"
+    },
+    {
+      "id": "Dungeon_ForestHard",
+      "titleTextId": "DUNGEON_FORESTHARD",
+      "nameCN": "帕鲁保护团体的地下交易所",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 1600000,
+      "requiredElementType": "Leaf",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Forest",
+      "itemFieldLotteryName": "Expedition_Forest_Hard",
+      "challengeCondition": "DefeatForestBossHard"
+    },
+    {
+      "id": "Dungeon_VolcanoHard",
+      "titleTextId": "DUNGEON_VOLCANOHARD",
+      "nameCN": "永炎同心会的黑市",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 1600000,
+      "requiredElementType": "Fire",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Volcano",
+      "itemFieldLotteryName": "Expedition_Volcano_Hard",
+      "challengeCondition": "DefeatVolcanoBossHard"
+    },
+    {
+      "id": "Dungeon_DesertHard",
+      "titleTextId": "DUNGEON_DESERTHARD",
+      "nameCN": "自卫队的非法工场",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 1600000,
+      "requiredElementType": "Earth",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Desert",
+      "itemFieldLotteryName": "Expedition_Desert_Hard",
+      "challengeCondition": "DefeatDesertBossHard"
+    },
+    {
+      "id": "Dungeon_SnowHard",
+      "titleTextId": "DUNGEON_SNOWHARD",
+      "nameCN": "基因研究部队的研究所",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 1600000,
+      "requiredElementType": "Ice",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Snow",
+      "itemFieldLotteryName": "Expedition_Snow_Hard",
+      "challengeCondition": "DefeatSnowBossHard"
+    },
+    {
+      "id": "Dungeon_SakurajimaHard",
+      "titleTextId": "DUNGEON_SAKURAJIMAHARD",
+      "nameCN": "月花众的秘密基地",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 1600000,
+      "requiredElementType": "Water",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::Sakurajima",
+      "itemFieldLotteryName": "Expedition_Sakurajima_Hard",
+      "challengeCondition": "DefeatSakurajimaBossHard"
+    },
+    {
+      "id": "Dungeon_DarkIslandHard",
+      "titleTextId": "DUNGEON_DARKISLANDHARD",
+      "nameCN": "天坠古代遗迹",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 1600000,
+      "requiredElementType": "Dark",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::DarkIsland",
+      "itemFieldLotteryName": "Expedition_DarkIsland_Hard",
+      "challengeCondition": "DefeatDarkIslandBossHard"
+    },
+    {
+      "id": "Dungeon_SkyIslandHard",
+      "titleTextId": "DUNGEON_SKYISLANDHARD",
+      "nameCN": "天阳乡龙骸洞",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 1600000,
+      "requiredElementType": "Dragon",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::SkyIsland",
+      "itemFieldLotteryName": "Expedition_SkyIsland_Hard",
+      "challengeCondition": "DefeatSkyIslandBossHard"
+    },
+    {
+      "id": "Dungeon_WorldTreeHard",
+      "titleTextId": "DUNGEON_WORLDTREEHARD",
+      "nameCN": "世界树禁域",
+      "nameStatus": "ok",
+      "difficulty": "VeryHard",
+      "requiredSeconds": 7200,
+      "recommendedStrength": 2100000,
+      "requiredElementType": "None",
+      "requiredElementNum": 20,
+      "maxCharacterNum": 100,
+      "textureType": "EPalMapObjectCharacterTeamMissionIconTextureType::WorldTree",
+      "itemFieldLotteryName": "Expedition_WorldTree_Hard",
+      "challengeCondition": "DefeatWorldTreeBossHard"
+    }
+  ],
+  "quests": [
+    {
+      "id": "Main_UnlockFastTravel",
+      "questType": "Main",
+      "nameCN": "解锁快速传送",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_OpenSurvivalGuide",
+      "questType": "Main",
+      "nameCN": "传承至今的生存知识",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 6,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "打开生存指南"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_PickupWood",
+      "questType": "Main",
+      "nameCN": "获取木材",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_BuildWorkBench_Old",
+      "questType": "Main",
+      "nameCN": "设置工作台(旧版)",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_UnlockPalSphere",
+      "questType": "Main",
+      "nameCN": "解锁科技",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 8,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "解锁<itemName id=|PalSphere|/>的科技"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CollectCrystal",
+      "questType": "Main",
+      "nameCN": "收集帕鲁矿碎块",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_CraftPalSphere",
+      "questType": "Main",
+      "nameCN": "捕捉器具",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 12,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "制造<itemName id=|PalSphere|/>"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CapturePal",
+      "questType": "Main",
+      "nameCN": "捕获帕鲁",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_UnlockPalBox",
+      "questType": "Main",
+      "nameCN": "解锁帕鲁终端",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 15,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "解锁<mapObjectName id=|PalBoxV2|/>的科技"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_BuildPalBox",
+      "questType": "Main",
+      "nameCN": "建造帕鲁终端",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_WorkerPal",
+      "questType": "Main",
+      "nameCN": "配置帕鲁",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_Meal",
+      "questType": "Main",
+      "nameCN": "填饱肚子",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 20,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "进食任意食物"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_EquipClothArmor",
+      "questType": "Main",
+      "nameCN": "装备布甲",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_GainStatus",
+      "questType": "Main",
+      "nameCN": "强化属性",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_CaptureSheepBall_Old",
+      "questType": "Main",
+      "nameCN": "最弱小的帕鲁",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 35,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "捕获5只<characterName id=|SheepBall|/>"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CraftShield",
+      "questType": "Main",
+      "nameCN": "帕鲁矿的庇护",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 50,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "装备<itemName id=|Shield_01|/>"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_UseGlider",
+      "questType": "Main",
+      "nameCN": "使用滑翔伞",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_Capture30Pal",
+      "questType": "Main",
+      "nameCN": "捕获30只帕鲁",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_Craft_PalGear",
+      "questType": "Main",
+      "nameCN": "伙伴技能",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 45,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "制作<itemName id=|SkillUnlock_Carbunclo|/>"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_DefeatWildBoss",
+      "questType": "Main",
+      "nameCN": "首次讨伐头目",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 500,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败或捕获{targetpal}"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CraftMealPouch",
+      "questType": "Main",
+      "nameCN": "饥饿是最危险的敌人",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 0,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "制作<itemName id=|AutoMealPouch_Tier1|/>"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_DefeatDungeonBoss",
+      "questType": "Main",
+      "nameCN": "击败地下城Boss",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_BuildHatchingMachine",
+      "questType": "Main",
+      "nameCN": "建造孵蛋器",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_BaseCampLevel",
+      "questType": "Main",
+      "nameCN": "提升据点等级",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_DefeatGrassBoss",
+      "questType": "Main",
+      "nameCN": "少女与高塔",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 1200,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败雷恩盗猎集团的高塔中的佐伊"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CaptureDeerGround",
+      "questType": "Main",
+      "nameCN": "禁猎区",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 1500,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "前往第一禁猎区捕获{targetpal}"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_DefeatForestBoss",
+      "questType": "Main",
+      "nameCN": "劝君莫要伤帕鲁",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 1155,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败帕鲁保护团体的高塔中的莉莉",
+        "寻找与下一座高塔相关的线索",
+        "调查出现伤者的地点",
+        "向委托人报告",
+        "调查莉莉的藏身处",
+        "向委托人报告",
+        "击败莉莉",
+        "向委托人报告"
+      ],
+      "objectiveCount": 8
+    },
+    {
+      "id": "Main_DefeatVolcanoBoss",
+      "questType": "Main",
+      "nameCN": "一心胜尽天下人",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 3345,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败永炎同心会的高塔中的阿克塞尔",
+        "寻找与下一座高塔相关的线索",
+        "向村民打听情况",
+        "向火山地带的运货人打听情况",
+        "向委托人报告",
+        "击败阿克塞尔",
+        "向委托人报告"
+      ],
+      "objectiveCount": 7
+    },
+    {
+      "id": "Main_DefeatDesertBoss",
+      "questType": "Main",
+      "nameCN": "沙域统治者",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 7302,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败自卫队的高塔中的马库斯",
+        "寻找与下一座高塔相关的线索",
+        "向沙漠之镇的居民打听情况",
+        "向委托人报告",
+        "调查坑道",
+        "调查自卫队的驻地",
+        "向委托人报告",
+        "击败马库斯",
+        "向委托人报告"
+      ],
+      "objectiveCount": 9
+    },
+    {
+      "id": "Main_DefeatSnowyMountainBoss",
+      "questType": "Main",
+      "nameCN": "帕鲁结合实验",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 15210,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败基因研究部队的高塔中的维克托",
+        "寻找与下一座高塔相关的线索",
+        "击败基因研究部队",
+        "寻找苍焰狼的帕鲁球",
+        "回到委托人那里，\r\n交付装有苍焰狼的帕鲁球",
+        "在废弃遗迹寻找线索",
+        "向委托人报告",
+        "寻找逃亡的研究员",
+        "向委托人报告",
+        "击败维克托",
+        "向委托人报告"
+      ],
+      "objectiveCount": 11
+    },
+    {
+      "id": "Main_DefeatSakurajimaBoss",
+      "questType": "Main",
+      "nameCN": "今宵美酒惹人醉",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 21294,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败月花众的高塔中的纱夜",
+        "寻找与下一座高塔相关的线索",
+        "击败月花众",
+        "寻找委托人的刀",
+        "把刀还给委托人",
+        "在舞樱神社寻找线索",
+        "向委托人报告",
+        "击败纱夜",
+        "向委托人报告"
+      ],
+      "objectiveCount": 9
+    },
+    {
+      "id": "Main_DefeatVikingBoss",
+      "questType": "Main",
+      "nameCN": "责任尽归此身",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 28899,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败天坠之塔中的比约恩",
+        "寻找与下一座高塔相关的线索",
+        "在指定地点寻找与灾厄相关的线索",
+        "向委托人报告",
+        "在指定地点寻找与灾厄相关的线索",
+        "向委托人报告",
+        "击败比约恩",
+        "向委托人报告"
+      ],
+      "objectiveCount": 8
+    },
+    {
+      "id": "Sub_Farmer01",
+      "questType": "Sub",
+      "nameCN": "帕鲁的恩惠",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 240,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "帕鲁的恩惠"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Farmer02",
+      "questType": "Sub",
+      "nameCN": "招募吃货！",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 330,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "招募吃货！"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Farmer03",
+      "questType": "Sub",
+      "nameCN": "特制料理",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 280,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "特制料理"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Farmer04",
+      "questType": "Sub",
+      "nameCN": "天价医疗费",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 530,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "天价医疗费"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Scholar01",
+      "questType": "Sub",
+      "nameCN": "证明传说！",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 25350,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "证明传说！"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Scholar02",
+      "questType": "Sub",
+      "nameCN": "干劲开关",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 12170,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "干劲开关"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Scholar03",
+      "questType": "Sub",
+      "nameCN": "冲浪鸭研究",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 940,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "冲浪鸭研究"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Scholar04",
+      "questType": "Sub",
+      "nameCN": "探测金属",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 25350,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "探测金属"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Breeder01",
+      "questType": "Sub",
+      "nameCN": "配种的第一步",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 1925,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "配种的第一步"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Breeder02",
+      "questType": "Sub",
+      "nameCN": "最后一次赏花",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 25350,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "最后一次赏花"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Breeder03",
+      "questType": "Sub",
+      "nameCN": "教训帕鲁强盗！",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 12170,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "教训帕鲁强盗！"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Breeder04",
+      "questType": "Sub",
+      "nameCN": "幽恋娜繁育计划",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 35490,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "幽恋娜繁育计划"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Ranger01",
+      "questType": "Sub",
+      "nameCN": "狩猎所需之物",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 17745,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "狩猎所需之物"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Ranger02",
+      "questType": "Sub",
+      "nameCN": "逃犯",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 12170,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "逃犯"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Ranger03",
+      "questType": "Sub",
+      "nameCN": "巨大伊西斯",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 35490,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "巨大伊西斯"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Ranger04",
+      "questType": "Sub",
+      "nameCN": "花田采蜜",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 3550,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "花田采蜜"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Nomad01",
+      "questType": "Sub",
+      "nameCN": "上山容易下山难",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 17745,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "上山容易下山难"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Nomad02",
+      "questType": "Sub",
+      "nameCN": "闪亮之砂",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 25350,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "闪亮之砂"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Nomad03",
+      "questType": "Sub",
+      "nameCN": "探寻地下城",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 940,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "探寻地下城"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Nomad04",
+      "questType": "Sub",
+      "nameCN": "悠闲之旅",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 25350,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "悠闲之旅"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Zoe01",
+      "questType": "Sub",
+      "nameCN": "别以为赢了就了不起了",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 940,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "别以为赢了就了不起了"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Zoe02",
+      "questType": "Sub",
+      "nameCN": "我才不信任你",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 1015,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "我才不信任你"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Zoe03",
+      "questType": "Sub",
+      "nameCN": "温暖的回忆",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 1090,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "温暖的回忆"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Angler01",
+      "questType": "Sub",
+      "nameCN": "绝佳钓鱼日",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 940,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "绝佳钓鱼日"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_PalDisplay_A_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜A",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalDisplay_B_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜B",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalDisplay_C_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜C",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalDisplay_D_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜D",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalDisplay_E_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜E",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalDisplay_F_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜F",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalDisplay_G_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜G",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalDisplay_H_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜H",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalDisplay_I_01",
+      "questType": "Sub",
+      "nameCN": "帕鲁展示柜I",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_PalCaptureCountReward",
+      "questType": "Sub",
+      "nameCN": "捕获计数奖励",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [
+        "聪明的猎人的委托"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_BossDefeatReward",
+      "questType": "Sub",
+      "nameCN": "Boss击败奖励",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [
+        "老手帕鲁猎手的委托"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_PaldexReward",
+      "questType": "Sub",
+      "nameCN": "帕鲁图鉴奖励",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [
+        "帕鲁生态调查员的委托"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_FoodReward",
+      "questType": "Sub",
+      "nameCN": "食物奖励任务",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_Kigurumi01",
+      "questType": "Sub",
+      "nameCN": "装扮任务",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 1031,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "你也来变成瞅什魔吧！"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Zoe04",
+      "questType": "Sub",
+      "nameCN": "佐伊的帕鲁球",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [
+        "佐伊的帕鲁球"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Zoe_Halloween",
+      "questType": "Sub",
+      "nameCN": "万圣节快乐！",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 1031,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "万圣节快乐！"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_Kigurumi01_Replay",
+      "questType": "Sub",
+      "nameCN": "装扮任务(重复)",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 0,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "你也来变成瞅什魔吧！"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Hidden_ChangeWeaponBulletTutorialTrigger",
+      "questType": "Hidden",
+      "nameCN": "",
+      "nameStatus": "missing",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Sub_StrongOldMan01",
+      "questType": "Sub",
+      "nameCN": "被囚禁的冒险家",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 330,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "被囚禁的冒险家"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_StrongOldMan02",
+      "questType": "Sub",
+      "nameCN": "打倒通缉犯",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 17745,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "打倒通缉犯"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_StrongOldMan03",
+      "questType": "Sub",
+      "nameCN": "代行者",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 48165,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "代行者"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_StrongOldMan04",
+      "questType": "Sub",
+      "nameCN": "过往",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 48165,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "过往"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_StrongOldMan05",
+      "questType": "Sub",
+      "nameCN": "骑士的终焉",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 65910,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "骑士的终焉"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_TutorialStart",
+      "questType": "Main",
+      "nameCN": "第一岛民",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 6,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "与巨鹫之像旁的人物对话"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_BuildWorkbench",
+      "questType": "Main",
+      "nameCN": "设置工作台",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 6,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "设置工作台"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_StatusUp",
+      "questType": "Main",
+      "nameCN": "强化属性",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 15,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "按下<keyGuideIcon id=|OpenCharacterMenu| iconScale=|0.7|/>开启物品栏，\r\n强化任意能力值。"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CatchPal",
+      "questType": "Main",
+      "nameCN": "捕获帕鲁",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 15,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "捕获帕鲁"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_WorkPal",
+      "questType": "Main",
+      "nameCN": "安排帕鲁工作",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 15,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "安排帕鲁工作"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_EatFood",
+      "questType": "Main",
+      "nameCN": "填饱肚子",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 15,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "按下<keyGuideIcon id=|OpenCharacterMenu| iconScale=|0.7|/>键打开物品栏，\r\n再按<keyGuideIcon id=|ItemList_UseItem_ForDisplay| iconScale=|0.7|/>键使用任意食物填饱肚子"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CaptureSheepBall",
+      "questType": "Main",
+      "nameCN": "最弱小的帕鲁",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_PrepareEquipment",
+      "questType": "Main",
+      "nameCN": "整理装备",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 45,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "整理装备"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_BeginAdventure",
+      "questType": "Main",
+      "nameCN": "冒险的开始",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 45,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "向先遣队队员报告"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_SmallVillage",
+      "questType": "Main",
+      "nameCN": "小型聚落",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 66,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "寻找小型聚落，并与村长对话"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CraftPalGear",
+      "questType": "Main",
+      "nameCN": "制作帕鲁装备",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 99,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "解锁<itemName id=|SkillUnlock_Kitsunebi|/>的科技，\r\n并在<mapObjectName id=|WorkBench_SkillUnlock|/>制作"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_RayneSyndicate",
+      "questType": "Main",
+      "nameCN": "雷恩盗猎集团",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 198,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "雷恩盗猎集团"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_ReturnSmallVillage",
+      "questType": "Main",
+      "nameCN": "密钥球",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 288,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "返回小型聚落，向村长报告"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_TalkGrassBoss",
+      "questType": "Main",
+      "nameCN": "佐伊·雷恩",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 288,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "去见见佐伊"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_CollectKeySpheres",
+      "questType": "Main",
+      "nameCN": "收集密钥球",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 39546,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "集齐所有密钥球"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_TalkSkyBoss",
+      "questType": "Main",
+      "nameCN": "知晓天空之人",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 39546,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "与苍璃对话"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_TalkSkyBossAgain",
+      "questType": "Main",
+      "nameCN": "灾厄",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 39546,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "再次与苍璃对话"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_DefeatKingWhale",
+      "questType": "Main",
+      "nameCN": "奥沧鲸",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 63882,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "向<characterName id=|KingWhale|/>证明实力"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_ReachWorldTree",
+      "questType": "Main",
+      "nameCN": "前往世界树",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 63882,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "借助<characterName id=|KingWhale|/>之力，进入世界树"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_TalkWorldTreeNPC",
+      "questType": "Main",
+      "nameCN": "罪孽",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 102669,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "与世界树内部的神秘人物对话"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_WorldTreeAbyss",
+      "questType": "Main",
+      "nameCN": "被封印的灾厄",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 102669,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "被封印的灾厄"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_DefeatWorldTreeDragon",
+      "questType": "Main",
+      "nameCN": "苏醒",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 143736,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "为噩梦般的灾厄画上休止符"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Hidden_WhaleWhistlePickUpTrigger",
+      "questType": "Hidden",
+      "nameCN": "",
+      "nameStatus": "missing",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Hidden_WhaleWhistleTrigger",
+      "questType": "Hidden",
+      "nameCN": "",
+      "nameStatus": "missing",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Test_UnlockAreaBarriers",
+      "questType": "Main",
+      "nameCN": "",
+      "nameStatus": "missing",
+      "description": "",
+      "reward": {},
+      "objectives": [],
+      "objectiveCount": 0
+    },
+    {
+      "id": "Main_CraftTools",
+      "questType": "Main",
+      "nameCN": "制作斧头和十字镐",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 15,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "制作斧头和十字镐"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Main_DefeatSkyIslandBoss",
+      "questType": "Main",
+      "nameCN": "望穿秋水，盼得春来",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 39546,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "寻找与下一座高塔相关的线索",
+        "斩断所有结界之源",
+        "向委托人报告",
+        "击败在盟约之塔里的苍璃",
+        "向委托人报告"
+      ],
+      "objectiveCount": 5
+    },
+    {
+      "id": "Main_DefeatWorldTreeMiddleBoss",
+      "questType": "Main",
+      "nameCN": "通往深渊之路",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 102669,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "通往深渊之路"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_RookieExpeditionTeam01",
+      "questType": "Sub",
+      "nameCN": "初出茅庐的调查队",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 330,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击退来袭的帕鲁",
+        "与少女对话",
+        "找到并击败袭击调查队的帕鲁",
+        "寻找卡拉",
+        "与菲亚对话",
+        "交付猛击秘药",
+        "击败菲亚"
+      ],
+      "objectiveCount": 7
+    },
+    {
+      "id": "Sub_RookieExpeditionTeam02",
+      "questType": "Sub",
+      "nameCN": "萌芽",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 5575,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "找到并击败袭击调查队的帕鲁"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_RookieExpeditionTeam03",
+      "questType": "Sub",
+      "nameCN": "生长",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 12170,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "交付猛击秘药"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_RookieExpeditionTeam04",
+      "questType": "Sub",
+      "nameCN": "无果之花",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 35490,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "击败菲亚"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_LoneWolf01",
+      "questType": "Sub",
+      "nameCN": "黑色独狼",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 25350,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "黑色独狼"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_LoneWolf02",
+      "questType": "Sub",
+      "nameCN": "在追忆中彷徨",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 35490,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "在追忆中彷徨"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_LoneWolf03",
+      "questType": "Sub",
+      "nameCN": "无鞘之刀",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 35490,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "无鞘之刀"
+      ],
+      "objectiveCount": 1
+    },
+    {
+      "id": "Sub_DeliverySulfur",
+      "questType": "Sub",
+      "nameCN": "收集Sulfur",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 3550,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "获取<itemName id=|Sulfur|/>",
+        "把<itemName id=|Sulfur|/>交给委托人"
+      ],
+      "objectiveCount": 2
+    },
+    {
+      "id": "Sub_DeliveryWood_Fine",
+      "questType": "Sub",
+      "nameCN": "收集Wood_Fine",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 3550,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "获取<itemName id=|Wood_Fine|/>",
+        "把<itemName id=|Wood_Fine|/>交给委托人"
+      ],
+      "objectiveCount": 2
+    },
+    {
+      "id": "Sub_DeliveryQuartz",
+      "questType": "Sub",
+      "nameCN": "收集Quartz",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 12170,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "获取<itemName id=|Quartz|/>",
+        "把<itemName id=|Quartz|/>交给委托人"
+      ],
+      "objectiveCount": 2
+    },
+    {
+      "id": "Sub_DeliveryRainbowCrystal",
+      "questType": "Sub",
+      "nameCN": "收集RainbowCrystal",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 25350,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "获取<itemName id=|RainbowCrystal|/>",
+        "把<itemName id=|RainbowCrystal|/>交给委托人"
+      ],
+      "objectiveCount": 2
+    },
+    {
+      "id": "Sub_DeliverySkyIslandOre",
+      "questType": "Sub",
+      "nameCN": "收集SkyIslandOre",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 48165,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "获取<itemName id=|SkyIslandOre|/>",
+        "把<itemName id=|SkyIslandOre|/>交给委托人"
+      ],
+      "objectiveCount": 2
+    },
+    {
+      "id": "Sub_HowSurviveWorldTree",
+      "questType": "Sub",
+      "nameCN": "世界树中的生存之道",
+      "nameStatus": "ok",
+      "description": "",
+      "reward": {
+        "exp": 106470,
+        "rewardItems": ""
+      },
+      "objectives": [
+        "获取<itemName id=|Wood_WorldTree|/>",
+        "获取<itemName id=|WorldTreeOre|/>",
+        "向委托人报告"
+      ],
+      "objectiveCount": 3
+    }
+  ],
+  "shops": [
+    {
+      "id": "Test_00",
+      "maxLostPalNum": 5,
+      "characterNum": 5,
+      "minLevel": 10,
+      "maxLevel": 15,
+      "characters": [
+        {
+          "characterID": "ChickenPal",
+          "nameCN": "皮皮鸡",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "PinkCat",
+          "nameCN": "捣蛋猫",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "SheepBall",
+          "nameCN": "棉悠悠",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Kitsunebi",
+          "nameCN": "火绒狐",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Penguin",
+          "nameCN": "企丸丸",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Carbunclo",
+          "nameCN": "翠叶鼠",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LeafMomonga",
+          "nameCN": "达鼠泥",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "HawkBird",
+          "nameCN": "疾风隼",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Garm",
+          "nameCN": "猎狼",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Deer",
+          "nameCN": "紫霞鹿",
+          "nameStatus": "ok"
+        }
+      ]
+    },
+    {
+      "id": "Test_01",
+      "maxLostPalNum": 5,
+      "characterNum": 5,
+      "minLevel": 5,
+      "maxLevel": 10,
+      "characters": [
+        {
+          "characterID": "FlowerRabbit",
+          "nameCN": "波娜兔",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "SweetsSheep",
+          "nameCN": "棉花糖",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Hedgehog_Ice",
+          "nameCN": "冰刺鼠",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Bastet",
+          "nameCN": "喵丝特",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Eagle",
+          "nameCN": "天擒鸟",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "PinkRabbit",
+          "nameCN": "姬小兔",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "MopKing",
+          "nameCN": "毛老爹",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "ColorfulBird",
+          "nameCN": "炸蛋鸟",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LizardMan",
+          "nameCN": "朋克蜥",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Serpent",
+          "nameCN": "滑水蛇",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Alpaca",
+          "nameCN": "美露帕",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "MopBaby",
+          "nameCN": "毛掸儿",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "NegativeOctopus",
+          "nameCN": "勾魂鱿",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "NightFox",
+          "nameCN": "露娜蒂",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "RobinHood",
+          "nameCN": "羽箭射手",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CatBat",
+          "nameCN": "猫蝠怪",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LazyCatfish",
+          "nameCN": "趴趴鲶",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LittleBriarRose",
+          "nameCN": "荊棘魔仙",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CatMage",
+          "nameCN": "暗巫猫",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CatVampire",
+          "nameCN": "夜幕魔蝠",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Werewolf",
+          "nameCN": "月镰魔",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "GhostBeast",
+          "nameCN": "噬魂兽",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Bastet_Ice",
+          "nameCN": "冰丝特",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "WhiteTiger",
+          "nameCN": "冰棘兽",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "WeaselDragon",
+          "nameCN": "疾旋鼬",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "HawkBird",
+          "nameCN": "疾风隼",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "VioletFairy",
+          "nameCN": "薇莉塔",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Baphomet",
+          "nameCN": "炎魔羊",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "FairyDragon",
+          "nameCN": "精灵龙",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Baphomet_Dark",
+          "nameCN": "暗魔羊",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "FlowerDinosaur",
+          "nameCN": "花冠龙",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LavaGirl",
+          "nameCN": "融焰娘",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "WoolFox",
+          "nameCN": "米露菲",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "RaijinDaughter",
+          "nameCN": "雷鸣童子",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "HerculesBeetle",
+          "nameCN": "铠格力斯",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "FlowerDoll",
+          "nameCN": "花丽娜",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LazyDragon",
+          "nameCN": "佩克龙",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Mutant",
+          "nameCN": "秘斯媞雅",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "SoldierBee",
+          "nameCN": "骑士蜂",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Eagle",
+          "nameCN": "天擒鸟",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CuteFox",
+          "nameCN": "玉藻狐",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CuteMole",
+          "nameCN": "遁地鼠",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "WindChimes",
+          "nameCN": "",
+          "nameStatus": "missing"
+        },
+        {
+          "characterID": "DarkCrow",
+          "nameCN": "黑鸦隐士",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "KingAlpaca",
+          "nameCN": "君王美露帕",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CaptainPenguin",
+          "nameCN": "企丸王",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Kitsunebi_Ice",
+          "nameCN": "雪绒狐",
+          "nameStatus": "ok"
+        }
+      ]
+    },
+    {
+      "id": "Desert_00",
+      "maxLostPalNum": 5,
+      "characterNum": 5,
+      "minLevel": 40,
+      "maxLevel": 45,
+      "characters": [
+        {
+          "characterID": "RaijinDaughter",
+          "nameCN": "雷鸣童子",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CactusDoll",
+          "nameCN": "球抱苞",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "DarkCrow",
+          "nameCN": "黑鸦隐士",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "DrillGame",
+          "nameCN": "碎岩龟",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "FlowerDinosaur_Electric",
+          "nameCN": "雷冠龙",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Gorilla_Ground",
+          "nameCN": "石掌猿",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "FeatherOstrich",
+          "nameCN": "战冠雀",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Serpent_Ground",
+          "nameCN": "流沙蛇",
+          "nameStatus": "ok"
+        }
+      ]
+    },
+    {
+      "id": "Volcano_00",
+      "maxLostPalNum": 5,
+      "characterNum": 5,
+      "minLevel": 30,
+      "maxLevel": 35,
+      "characters": [
+        {
+          "characterID": "LavaGirl",
+          "nameCN": "融焰娘",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LizardMan",
+          "nameCN": "朋克蜥",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "BluePlatypus_Fire",
+          "nameCN": "热浪鸭",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Kelpie_Fire",
+          "nameCN": "火灵儿",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "TentacleTurtle",
+          "nameCN": "盔盔仔",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "SharkKid_Fire",
+          "nameCN": "红小鲨",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "FlameBuffalo",
+          "nameCN": "炽焰牛",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "BirdDragon",
+          "nameCN": "烽歌龙",
+          "nameStatus": "ok"
+        }
+      ]
+    },
+    {
+      "id": "Dark_01",
+      "maxLostPalNum": 5,
+      "characterNum": 5,
+      "minLevel": 20,
+      "maxLevel": 30,
+      "characters": [
+        {
+          "characterID": "GhostBlackCat",
+          "nameCN": "念影喵",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LazyCatfish",
+          "nameCN": "趴趴鲶",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CatBat",
+          "nameCN": "猫蝠怪",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "SoldierBee",
+          "nameCN": "骑士蜂",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "GrassPanda",
+          "nameCN": "叶胖达",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "GrassMinotaur",
+          "nameCN": "密林陶洛斯",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "CatMage",
+          "nameCN": "暗巫猫",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "RobinHood",
+          "nameCN": "羽箭射手",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "HadesBird",
+          "nameCN": "雷冥鸟",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "GrassMammoth",
+          "nameCN": "森猛犸",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "HerculesBeetle",
+          "nameCN": "铠格力斯",
+          "nameStatus": "ok"
+        }
+      ]
+    },
+    {
+      "id": "Dark_02",
+      "maxLostPalNum": 5,
+      "characterNum": 5,
+      "minLevel": 35,
+      "maxLevel": 40,
+      "characters": [
+        {
+          "characterID": "LizardMan_Fire",
+          "nameCN": "热血蜥",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "FoxMage",
+          "nameCN": "焰巫狐",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Baphomet",
+          "nameCN": "炎魔羊",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Ronin",
+          "nameCN": "浪刃武士",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Manticore",
+          "nameCN": "狱焰王",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "RedArmorBird",
+          "nameCN": "燧火鸟",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "VolcanoDragon",
+          "nameCN": "流焰龙",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "FireKirin",
+          "nameCN": "火麒麟",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LazyDragon",
+          "nameCN": "佩克龙",
+          "nameStatus": "ok"
+        }
+      ]
+    },
+    {
+      "id": "Dark_03",
+      "maxLostPalNum": 5,
+      "characterNum": 5,
+      "minLevel": 42,
+      "maxLevel": 48,
+      "characters": [
+        {
+          "characterID": "Gorilla_Ground",
+          "nameCN": "石掌猿",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "MummyPal",
+          "nameCN": "缚乃伊",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "DarkScorpion",
+          "nameCN": "冥铠蝎",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "LazyDragon_Electric",
+          "nameCN": "派克龙",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "ThunderBird",
+          "nameCN": "迅雷鸟",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "TropicalOstrich",
+          "nameCN": "咕咕桑葩",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Sekhmet",
+          "nameCN": "塞赫麦特",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "PinkLizard",
+          "nameCN": "博爱蜥",
+          "nameStatus": "ok"
+        }
+      ]
+    },
+    {
+      "id": "Dark_04",
+      "maxLostPalNum": 5,
+      "characterNum": 5,
+      "minLevel": 50,
+      "maxLevel": 55,
+      "characters": [
+        {
+          "characterID": "IceFox",
+          "nameCN": "吹雪狐",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "WhiteTiger",
+          "nameCN": "冰棘兽",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Mutant",
+          "nameCN": "秘斯媞雅",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "SkyDragon",
+          "nameCN": "天羽龙",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "Yeti",
+          "nameCN": "白绒雪怪",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "GrassMammoth_Ice",
+          "nameCN": "雪猛犸",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "IceWitch",
+          "nameCN": "冰姬灵",
+          "nameStatus": "ok"
+        },
+        {
+          "characterID": "GrassGolem",
+          "nameCN": "双心岩傀",
+          "nameStatus": "ok"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+.pt-web-tool-page.pt-web-filter-page.ms-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 0;
+    min-height: 0;
+}
+.pt-web-tool-page.pt-web-filter-page.ms-page > .ms-filter-bar {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-height: 34px;
+    position: relative;
+    top: auto;
+    z-index: 2;
+    padding: 0 0 8px;
+}
+.ms-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+.pt-web-tool-page.pt-web-filter-page.ms-page > .ms-content-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-right: 8px;
+    scrollbar-width: none;
+}
+.pt-web-tool-page.pt-web-filter-page.ms-page > .ms-content-section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.ms-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.ms-table th,
+.ms-table td {
+    padding: 6px 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--pt-text-main);
+    vertical-align: top;
+}
+.ms-table th {
+    color: var(--pt-text-sub);
+    font-weight: 700;
+}
+.ms-row {
+    cursor: pointer;
+}
+.ms-row:hover {
+    background: rgba(40, 230, 255, 0.08);
+}
+.ms-empty,
+.ms-muted {
+    color: var(--pt-text-sub);
+}
+.ms-back {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 14px;
+    border: 1px solid rgba(40, 230, 255, 0.4);
+    border-radius: 6px;
+    background: rgba(40, 230, 255, 0.08);
+    color: var(--pt-text-main);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+.ms-back:hover {
+    background: rgba(40, 230, 255, 0.18);
+}
+.ms-detail {
+    border: 1px solid rgba(40, 230, 255, 0.25);
+    background: rgba(0, 72, 86, 0.35);
+    padding: 16px;
+}
+.ms-dname {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: var(--pt-text-main);
+}
+.ms-drow {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--pt-text-main);
+}
+.ms-dlbl {
+    color: var(--pt-text-sub);
+}
+.ms-nested {
+    display: grid;
+    gap: 5px;
+}
+.ms-nested__item {
+    color: var(--pt-text-main);
+    line-height: 1.45;
+}

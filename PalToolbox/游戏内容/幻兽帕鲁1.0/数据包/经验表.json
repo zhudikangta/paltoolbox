@@ -1,0 +1,6945 @@
+{
+  "meta": {
+    "generated": "2026-07-06",
+    "statistics": {
+      "playerLevels": 80,
+      "palLevels": 80,
+      "captureBonusEntries": 4999,
+      "areaFindEntries": 198,
+      "expRatioEntries": 753,
+      "elapsedSeconds": 0.02
+    }
+  },
+  "playerExp": [
+    {
+      "level": 1,
+      "nextEXP": 0,
+      "totalEXP": 0
+    },
+    {
+      "level": 2,
+      "nextEXP": 50,
+      "totalEXP": 50
+    },
+    {
+      "level": 3,
+      "nextEXP": 150,
+      "totalEXP": 200
+    },
+    {
+      "level": 4,
+      "nextEXP": 200,
+      "totalEXP": 400
+    },
+    {
+      "level": 5,
+      "nextEXP": 340,
+      "totalEXP": 740
+    },
+    {
+      "level": 6,
+      "nextEXP": 520,
+      "totalEXP": 1260
+    },
+    {
+      "level": 7,
+      "nextEXP": 700,
+      "totalEXP": 1960
+    },
+    {
+      "level": 8,
+      "nextEXP": 900,
+      "totalEXP": 2860
+    },
+    {
+      "level": 9,
+      "nextEXP": 1150,
+      "totalEXP": 4010
+    },
+    {
+      "level": 10,
+      "nextEXP": 1500,
+      "totalEXP": 5510
+    },
+    {
+      "level": 11,
+      "nextEXP": 1900,
+      "totalEXP": 7410
+    },
+    {
+      "level": 12,
+      "nextEXP": 2400,
+      "totalEXP": 9810
+    },
+    {
+      "level": 13,
+      "nextEXP": 3000,
+      "totalEXP": 12810
+    },
+    {
+      "level": 14,
+      "nextEXP": 3800,
+      "totalEXP": 16610
+    },
+    {
+      "level": 15,
+      "nextEXP": 4677,
+      "totalEXP": 21287
+    },
+    {
+      "level": 16,
+      "nextEXP": 5353,
+      "totalEXP": 26640
+    },
+    {
+      "level": 17,
+      "nextEXP": 5860,
+      "totalEXP": 32500
+    },
+    {
+      "level": 18,
+      "nextEXP": 6367,
+      "totalEXP": 38867
+    },
+    {
+      "level": 19,
+      "nextEXP": 8564,
+      "totalEXP": 47431
+    },
+    {
+      "level": 20,
+      "nextEXP": 9409,
+      "totalEXP": 56840
+    },
+    {
+      "level": 21,
+      "nextEXP": 11944,
+      "totalEXP": 68784
+    },
+    {
+      "level": 22,
+      "nextEXP": 12789,
+      "totalEXP": 81573
+    },
+    {
+      "level": 23,
+      "nextEXP": 15831,
+      "totalEXP": 97404
+    },
+    {
+      "level": 24,
+      "nextEXP": 17690,
+      "totalEXP": 115094
+    },
+    {
+      "level": 25,
+      "nextEXP": 21070,
+      "totalEXP": 136164
+    },
+    {
+      "level": 26,
+      "nextEXP": 22760,
+      "totalEXP": 158924
+    },
+    {
+      "level": 27,
+      "nextEXP": 26140,
+      "totalEXP": 185064
+    },
+    {
+      "level": 28,
+      "nextEXP": 27830,
+      "totalEXP": 212894
+    },
+    {
+      "level": 29,
+      "nextEXP": 29520,
+      "totalEXP": 242414
+    },
+    {
+      "level": 30,
+      "nextEXP": 31210,
+      "totalEXP": 273624
+    },
+    {
+      "level": 31,
+      "nextEXP": 34546,
+      "totalEXP": 308170
+    },
+    {
+      "level": 32,
+      "nextEXP": 38229,
+      "totalEXP": 346399
+    },
+    {
+      "level": 33,
+      "nextEXP": 42295,
+      "totalEXP": 388694
+    },
+    {
+      "level": 34,
+      "nextEXP": 46783,
+      "totalEXP": 435477
+    },
+    {
+      "level": 35,
+      "nextEXP": 51738,
+      "totalEXP": 487215
+    },
+    {
+      "level": 36,
+      "nextEXP": 57207,
+      "totalEXP": 544422
+    },
+    {
+      "level": 37,
+      "nextEXP": 63245,
+      "totalEXP": 607667
+    },
+    {
+      "level": 38,
+      "nextEXP": 69910,
+      "totalEXP": 677577
+    },
+    {
+      "level": 39,
+      "nextEXP": 77267,
+      "totalEXP": 754844
+    },
+    {
+      "level": 40,
+      "nextEXP": 85389,
+      "totalEXP": 840233
+    },
+    {
+      "level": 41,
+      "nextEXP": 94355,
+      "totalEXP": 934588
+    },
+    {
+      "level": 42,
+      "nextEXP": 104254,
+      "totalEXP": 1038842
+    },
+    {
+      "level": 43,
+      "nextEXP": 115182,
+      "totalEXP": 1154024
+    },
+    {
+      "level": 44,
+      "nextEXP": 127245,
+      "totalEXP": 1281269
+    },
+    {
+      "level": 45,
+      "nextEXP": 140561,
+      "totalEXP": 1421830
+    },
+    {
+      "level": 46,
+      "nextEXP": 155260,
+      "totalEXP": 1577090
+    },
+    {
+      "level": 47,
+      "nextEXP": 171487,
+      "totalEXP": 1748577
+    },
+    {
+      "level": 48,
+      "nextEXP": 189400,
+      "totalEXP": 1937977
+    },
+    {
+      "level": 49,
+      "nextEXP": 209174,
+      "totalEXP": 2147151
+    },
+    {
+      "level": 50,
+      "nextEXP": 230983,
+      "totalEXP": 2378134
+    },
+    {
+      "level": 51,
+      "nextEXP": 255059,
+      "totalEXP": 2633193
+    },
+    {
+      "level": 52,
+      "nextEXP": 281635,
+      "totalEXP": 2914828
+    },
+    {
+      "level": 53,
+      "nextEXP": 310972,
+      "totalEXP": 3225800
+    },
+    {
+      "level": 54,
+      "nextEXP": 343356,
+      "totalEXP": 3569156
+    },
+    {
+      "level": 55,
+      "nextEXP": 378104,
+      "totalEXP": 3947260
+    },
+    {
+      "level": 56,
+      "nextEXP": 417573,
+      "totalEXP": 4364833
+    },
+    {
+      "level": 57,
+      "nextEXP": 460143,
+      "totalEXP": 4824976
+    },
+    {
+      "level": 58,
+      "nextEXP": 506239,
+      "totalEXP": 5331215
+    },
+    {
+      "level": 59,
+      "nextEXP": 556335,
+      "totalEXP": 5887550
+    },
+    {
+      "level": 60,
+      "nextEXP": 610983,
+      "totalEXP": 6498533
+    },
+    {
+      "level": 61,
+      "nextEXP": 670817,
+      "totalEXP": 7169350
+    },
+    {
+      "level": 62,
+      "nextEXP": 736563,
+      "totalEXP": 7905913
+    },
+    {
+      "level": 63,
+      "nextEXP": 809074,
+      "totalEXP": 8714987
+    },
+    {
+      "level": 64,
+      "nextEXP": 889276,
+      "totalEXP": 9604263
+    },
+    {
+      "level": 65,
+      "nextEXP": 977950,
+      "totalEXP": 10582213
+    },
+    {
+      "level": 66,
+      "nextEXP": 1075818,
+      "totalEXP": 11658031
+    },
+    {
+      "level": 67,
+      "nextEXP": 1187703,
+      "totalEXP": 12845734
+    },
+    {
+      "level": 68,
+      "nextEXP": 1311213,
+      "totalEXP": 14156947
+    },
+    {
+      "level": 69,
+      "nextEXP": 1447560,
+      "totalEXP": 15604507
+    },
+    {
+      "level": 70,
+      "nextEXP": 1598080,
+      "totalEXP": 17202587
+    },
+    {
+      "level": 71,
+      "nextEXP": 1764244,
+      "totalEXP": 18966831
+    },
+    {
+      "level": 72,
+      "nextEXP": 1947679,
+      "totalEXP": 20914510
+    },
+    {
+      "level": 73,
+      "nextEXP": 2150182,
+      "totalEXP": 23064692
+    },
+    {
+      "level": 74,
+      "nextEXP": 2373734,
+      "totalEXP": 25438426
+    },
+    {
+      "level": 75,
+      "nextEXP": 2620524,
+      "totalEXP": 28058950
+    },
+    {
+      "level": 76,
+      "nextEXP": 2892960,
+      "totalEXP": 30951910
+    },
+    {
+      "level": 77,
+      "nextEXP": 3193698,
+      "totalEXP": 34145608
+    },
+    {
+      "level": 78,
+      "nextEXP": 3525662,
+      "totalEXP": 37671270
+    },
+    {
+      "level": 79,
+      "nextEXP": 3892088,
+      "totalEXP": 41563358
+    },
+    {
+      "level": 80,
+      "nextEXP": 4296550,
+      "totalEXP": 45859908
+    }
+  ],
+  "palExp": [
+    {
+      "level": 1,
+      "nextEXP": 0,
+      "totalEXP": 0
+    },
+    {
+      "level": 2,
+      "nextEXP": 25,
+      "totalEXP": 25
+    },
+    {
+      "level": 3,
+      "nextEXP": 31,
+      "totalEXP": 56
+    },
+    {
+      "level": 4,
+      "nextEXP": 37,
+      "totalEXP": 93
+    },
+    {
+      "level": 5,
+      "nextEXP": 45,
+      "totalEXP": 138
+    },
+    {
+      "level": 6,
+      "nextEXP": 69,
+      "totalEXP": 207
+    },
+    {
+      "level": 7,
+      "nextEXP": 99,
+      "totalEXP": 306
+    },
+    {
+      "level": 8,
+      "nextEXP": 134,
+      "totalEXP": 440
+    },
+    {
+      "level": 9,
+      "nextEXP": 176,
+      "totalEXP": 616
+    },
+    {
+      "level": 10,
+      "nextEXP": 227,
+      "totalEXP": 843
+    },
+    {
+      "level": 11,
+      "nextEXP": 288,
+      "totalEXP": 1131
+    },
+    {
+      "level": 12,
+      "nextEXP": 361,
+      "totalEXP": 1492
+    },
+    {
+      "level": 13,
+      "nextEXP": 449,
+      "totalEXP": 1941
+    },
+    {
+      "level": 14,
+      "nextEXP": 554,
+      "totalEXP": 2495
+    },
+    {
+      "level": 15,
+      "nextEXP": 680,
+      "totalEXP": 3175
+    },
+    {
+      "level": 16,
+      "nextEXP": 832,
+      "totalEXP": 4007
+    },
+    {
+      "level": 17,
+      "nextEXP": 1014,
+      "totalEXP": 5021
+    },
+    {
+      "level": 18,
+      "nextEXP": 1232,
+      "totalEXP": 6253
+    },
+    {
+      "level": 19,
+      "nextEXP": 1494,
+      "totalEXP": 7747
+    },
+    {
+      "level": 20,
+      "nextEXP": 1808,
+      "totalEXP": 9555
+    },
+    {
+      "level": 21,
+      "nextEXP": 2185,
+      "totalEXP": 11740
+    },
+    {
+      "level": 22,
+      "nextEXP": 2638,
+      "totalEXP": 14378
+    },
+    {
+      "level": 23,
+      "nextEXP": 3181,
+      "totalEXP": 17559
+    },
+    {
+      "level": 24,
+      "nextEXP": 3833,
+      "totalEXP": 21392
+    },
+    {
+      "level": 25,
+      "nextEXP": 4615,
+      "totalEXP": 26007
+    },
+    {
+      "level": 26,
+      "nextEXP": 5554,
+      "totalEXP": 31561
+    },
+    {
+      "level": 27,
+      "nextEXP": 6680,
+      "totalEXP": 38241
+    },
+    {
+      "level": 28,
+      "nextEXP": 8031,
+      "totalEXP": 46272
+    },
+    {
+      "level": 29,
+      "nextEXP": 9653,
+      "totalEXP": 55925
+    },
+    {
+      "level": 30,
+      "nextEXP": 11599,
+      "totalEXP": 67524
+    },
+    {
+      "level": 31,
+      "nextEXP": 13934,
+      "totalEXP": 81458
+    },
+    {
+      "level": 32,
+      "nextEXP": 16737,
+      "totalEXP": 98195
+    },
+    {
+      "level": 33,
+      "nextEXP": 20099,
+      "totalEXP": 118294
+    },
+    {
+      "level": 34,
+      "nextEXP": 24135,
+      "totalEXP": 142429
+    },
+    {
+      "level": 35,
+      "nextEXP": 28977,
+      "totalEXP": 171406
+    },
+    {
+      "level": 36,
+      "nextEXP": 34788,
+      "totalEXP": 206194
+    },
+    {
+      "level": 37,
+      "nextEXP": 41761,
+      "totalEXP": 247955
+    },
+    {
+      "level": 38,
+      "nextEXP": 50129,
+      "totalEXP": 298084
+    },
+    {
+      "level": 39,
+      "nextEXP": 60171,
+      "totalEXP": 358255
+    },
+    {
+      "level": 40,
+      "nextEXP": 72220,
+      "totalEXP": 430475
+    },
+    {
+      "level": 41,
+      "nextEXP": 86680,
+      "totalEXP": 517155
+    },
+    {
+      "level": 42,
+      "nextEXP": 104031,
+      "totalEXP": 621186
+    },
+    {
+      "level": 43,
+      "nextEXP": 124853,
+      "totalEXP": 746039
+    },
+    {
+      "level": 44,
+      "nextEXP": 149839,
+      "totalEXP": 895878
+    },
+    {
+      "level": 45,
+      "nextEXP": 179823,
+      "totalEXP": 1075701
+    },
+    {
+      "level": 46,
+      "nextEXP": 215803,
+      "totalEXP": 1291504
+    },
+    {
+      "level": 47,
+      "nextEXP": 258979,
+      "totalEXP": 1550483
+    },
+    {
+      "level": 48,
+      "nextEXP": 310790,
+      "totalEXP": 1861273
+    },
+    {
+      "level": 49,
+      "nextEXP": 372963,
+      "totalEXP": 2234236
+    },
+    {
+      "level": 50,
+      "nextEXP": 447571,
+      "totalEXP": 2681807
+    },
+    {
+      "level": 51,
+      "nextEXP": 537101,
+      "totalEXP": 3218908
+    },
+    {
+      "level": 52,
+      "nextEXP": 644537,
+      "totalEXP": 3863445
+    },
+    {
+      "level": 53,
+      "nextEXP": 773460,
+      "totalEXP": 4636905
+    },
+    {
+      "level": 54,
+      "nextEXP": 928167,
+      "totalEXP": 5565072
+    },
+    {
+      "level": 55,
+      "nextEXP": 1113816,
+      "totalEXP": 6678888
+    },
+    {
+      "level": 56,
+      "nextEXP": 1336595,
+      "totalEXP": 8015483
+    },
+    {
+      "level": 57,
+      "nextEXP": 1603929,
+      "totalEXP": 9619412
+    },
+    {
+      "level": 58,
+      "nextEXP": 1924731,
+      "totalEXP": 11544143
+    },
+    {
+      "level": 59,
+      "nextEXP": 2309692,
+      "totalEXP": 13853835
+    },
+    {
+      "level": 60,
+      "nextEXP": 2771646,
+      "totalEXP": 16625481
+    },
+    {
+      "level": 61,
+      "nextEXP": 3325991,
+      "totalEXP": 19951472
+    },
+    {
+      "level": 62,
+      "nextEXP": 3991205,
+      "totalEXP": 23942677
+    },
+    {
+      "level": 63,
+      "nextEXP": 4789461,
+      "totalEXP": 28732138
+    },
+    {
+      "level": 64,
+      "nextEXP": 5747369,
+      "totalEXP": 34479507
+    },
+    {
+      "level": 65,
+      "nextEXP": 6896858,
+      "totalEXP": 41376365
+    },
+    {
+      "level": 66,
+      "nextEXP": 6896858,
+      "totalEXP": 48273223
+    },
+    {
+      "level": 67,
+      "nextEXP": 6896858,
+      "totalEXP": 55170081
+    },
+    {
+      "level": 68,
+      "nextEXP": 6896858,
+      "totalEXP": 62066939
+    },
+    {
+      "level": 69,
+      "nextEXP": 6896858,
+      "totalEXP": 68963797
+    },
+    {
+      "level": 70,
+      "nextEXP": 6896858,
+      "totalEXP": 75860655
+    },
+    {
+      "level": 71,
+      "nextEXP": 6896858,
+      "totalEXP": 82757513
+    },
+    {
+      "level": 72,
+      "nextEXP": 6896858,
+      "totalEXP": 89654371
+    },
+    {
+      "level": 73,
+      "nextEXP": 6896858,
+      "totalEXP": 96551229
+    },
+    {
+      "level": 74,
+      "nextEXP": 6896858,
+      "totalEXP": 103448087
+    },
+    {
+      "level": 75,
+      "nextEXP": 6896858,
+      "totalEXP": 110344945
+    },
+    {
+      "level": 76,
+      "nextEXP": 6896858,
+      "totalEXP": 117241803
+    },
+    {
+      "level": 77,
+      "nextEXP": 6896858,
+      "totalEXP": 124138661
+    },
+    {
+      "level": 78,
+      "nextEXP": 6896858,
+      "totalEXP": 131035519
+    },
+    {
+      "level": 79,
+      "nextEXP": 6896858,
+      "totalEXP": 137932377
+    },
+    {
+      "level": 80,
+      "nextEXP": 6896858,
+      "totalEXP": 144829235
+    }
+  ],
+  "dropBuildExp": [
+    {
+      "level": 1,
+      "dropEXP": 10,
+      "buildEXP": 5
+    },
+    {
+      "level": 2,
+      "dropEXP": 11,
+      "buildEXP": 5
+    },
+    {
+      "level": 3,
+      "dropEXP": 12,
+      "buildEXP": 5
+    },
+    {
+      "level": 4,
+      "dropEXP": 14,
+      "buildEXP": 5
+    },
+    {
+      "level": 5,
+      "dropEXP": 15,
+      "buildEXP": 5
+    },
+    {
+      "level": 6,
+      "dropEXP": 22,
+      "buildEXP": 5
+    },
+    {
+      "level": 7,
+      "dropEXP": 29,
+      "buildEXP": 5
+    },
+    {
+      "level": 8,
+      "dropEXP": 36,
+      "buildEXP": 5
+    },
+    {
+      "level": 9,
+      "dropEXP": 45,
+      "buildEXP": 5
+    },
+    {
+      "level": 10,
+      "dropEXP": 56,
+      "buildEXP": 5
+    },
+    {
+      "level": 11,
+      "dropEXP": 69,
+      "buildEXP": 5
+    },
+    {
+      "level": 12,
+      "dropEXP": 85,
+      "buildEXP": 5
+    },
+    {
+      "level": 13,
+      "dropEXP": 103,
+      "buildEXP": 5
+    },
+    {
+      "level": 14,
+      "dropEXP": 126,
+      "buildEXP": 5
+    },
+    {
+      "level": 15,
+      "dropEXP": 150,
+      "buildEXP": 6
+    },
+    {
+      "level": 16,
+      "dropEXP": 167,
+      "buildEXP": 6
+    },
+    {
+      "level": 17,
+      "dropEXP": 177,
+      "buildEXP": 6
+    },
+    {
+      "level": 18,
+      "dropEXP": 186,
+      "buildEXP": 6
+    },
+    {
+      "level": 19,
+      "dropEXP": 243,
+      "buildEXP": 7
+    },
+    {
+      "level": 20,
+      "dropEXP": 259,
+      "buildEXP": 7
+    },
+    {
+      "level": 21,
+      "dropEXP": 318,
+      "buildEXP": 8
+    },
+    {
+      "level": 22,
+      "dropEXP": 330,
+      "buildEXP": 8
+    },
+    {
+      "level": 23,
+      "dropEXP": 396,
+      "buildEXP": 9
+    },
+    {
+      "level": 24,
+      "dropEXP": 429,
+      "buildEXP": 9
+    },
+    {
+      "level": 25,
+      "dropEXP": 495,
+      "buildEXP": 10
+    },
+    {
+      "level": 26,
+      "dropEXP": 518,
+      "buildEXP": 10
+    },
+    {
+      "level": 27,
+      "dropEXP": 576,
+      "buildEXP": 10
+    },
+    {
+      "level": 28,
+      "dropEXP": 595,
+      "buildEXP": 10
+    },
+    {
+      "level": 29,
+      "dropEXP": 611,
+      "buildEXP": 10
+    },
+    {
+      "level": 30,
+      "dropEXP": 626,
+      "buildEXP": 10
+    },
+    {
+      "level": 31,
+      "dropEXP": 672,
+      "buildEXP": 10
+    },
+    {
+      "level": 32,
+      "dropEXP": 720,
+      "buildEXP": 10
+    },
+    {
+      "level": 33,
+      "dropEXP": 772,
+      "buildEXP": 10
+    },
+    {
+      "level": 34,
+      "dropEXP": 827,
+      "buildEXP": 10
+    },
+    {
+      "level": 35,
+      "dropEXP": 887,
+      "buildEXP": 10
+    },
+    {
+      "level": 36,
+      "dropEXP": 950,
+      "buildEXP": 10
+    },
+    {
+      "level": 37,
+      "dropEXP": 1018,
+      "buildEXP": 10
+    },
+    {
+      "level": 38,
+      "dropEXP": 1090,
+      "buildEXP": 10
+    },
+    {
+      "level": 39,
+      "dropEXP": 1168,
+      "buildEXP": 11
+    },
+    {
+      "level": 40,
+      "dropEXP": 1250,
+      "buildEXP": 11
+    },
+    {
+      "level": 41,
+      "dropEXP": 1339,
+      "buildEXP": 11
+    },
+    {
+      "level": 42,
+      "dropEXP": 1433,
+      "buildEXP": 11
+    },
+    {
+      "level": 43,
+      "dropEXP": 1534,
+      "buildEXP": 11
+    },
+    {
+      "level": 44,
+      "dropEXP": 1643,
+      "buildEXP": 11
+    },
+    {
+      "level": 45,
+      "dropEXP": 1758,
+      "buildEXP": 11
+    },
+    {
+      "level": 46,
+      "dropEXP": 1882,
+      "buildEXP": 11
+    },
+    {
+      "level": 47,
+      "dropEXP": 2014,
+      "buildEXP": 12
+    },
+    {
+      "level": 48,
+      "dropEXP": 2156,
+      "buildEXP": 12
+    },
+    {
+      "level": 49,
+      "dropEXP": 2307,
+      "buildEXP": 12
+    },
+    {
+      "level": 50,
+      "dropEXP": 2468,
+      "buildEXP": 12
+    },
+    {
+      "level": 51,
+      "dropEXP": 2641,
+      "buildEXP": 12
+    },
+    {
+      "level": 52,
+      "dropEXP": 2826,
+      "buildEXP": 12
+    },
+    {
+      "level": 53,
+      "dropEXP": 3024,
+      "buildEXP": 12
+    },
+    {
+      "level": 54,
+      "dropEXP": 3235,
+      "buildEXP": 12
+    },
+    {
+      "level": 55,
+      "dropEXP": 3452,
+      "buildEXP": 12
+    },
+    {
+      "level": 56,
+      "dropEXP": 3694,
+      "buildEXP": 13
+    },
+    {
+      "level": 57,
+      "dropEXP": 3945,
+      "buildEXP": 13
+    },
+    {
+      "level": 58,
+      "dropEXP": 4205,
+      "buildEXP": 13
+    },
+    {
+      "level": 59,
+      "dropEXP": 4478,
+      "buildEXP": 13
+    },
+    {
+      "level": 60,
+      "dropEXP": 4765,
+      "buildEXP": 13
+    },
+    {
+      "level": 61,
+      "dropEXP": 5070,
+      "buildEXP": 13
+    },
+    {
+      "level": 62,
+      "dropEXP": 5394,
+      "buildEXP": 13
+    },
+    {
+      "level": 63,
+      "dropEXP": 5742,
+      "buildEXP": 13
+    },
+    {
+      "level": 64,
+      "dropEXP": 6115,
+      "buildEXP": 13
+    },
+    {
+      "level": 65,
+      "dropEXP": 6516,
+      "buildEXP": 13
+    },
+    {
+      "level": 66,
+      "dropEXP": 6946,
+      "buildEXP": 13
+    },
+    {
+      "level": 67,
+      "dropEXP": 7431,
+      "buildEXP": 13
+    },
+    {
+      "level": 68,
+      "dropEXP": 7949,
+      "buildEXP": 14
+    },
+    {
+      "level": 69,
+      "dropEXP": 8504,
+      "buildEXP": 14
+    },
+    {
+      "level": 70,
+      "dropEXP": 9097,
+      "buildEXP": 14
+    },
+    {
+      "level": 71,
+      "dropEXP": 9732,
+      "buildEXP": 14
+    },
+    {
+      "level": 72,
+      "dropEXP": 10411,
+      "buildEXP": 14
+    },
+    {
+      "level": 73,
+      "dropEXP": 11137,
+      "buildEXP": 14
+    },
+    {
+      "level": 74,
+      "dropEXP": 11913,
+      "buildEXP": 14
+    },
+    {
+      "level": 75,
+      "dropEXP": 12744,
+      "buildEXP": 14
+    },
+    {
+      "level": 76,
+      "dropEXP": 13633,
+      "buildEXP": 15
+    },
+    {
+      "level": 77,
+      "dropEXP": 14584,
+      "buildEXP": 15
+    },
+    {
+      "level": 78,
+      "dropEXP": 15601,
+      "buildEXP": 15
+    },
+    {
+      "level": 79,
+      "dropEXP": 16688,
+      "buildEXP": 15
+    },
+    {
+      "level": 80,
+      "dropEXP": 17851,
+      "buildEXP": 15
+    }
+  ],
+  "captureBonus": [
+    {
+      "captureCount": 0,
+      "bonusEXP": 3
+    },
+    {
+      "captureCount": 1,
+      "bonusEXP": 22
+    },
+    {
+      "captureCount": 2,
+      "bonusEXP": 24
+    },
+    {
+      "captureCount": 3,
+      "bonusEXP": 27
+    },
+    {
+      "captureCount": 4,
+      "bonusEXP": 29
+    },
+    {
+      "captureCount": 5,
+      "bonusEXP": 31
+    },
+    {
+      "captureCount": 6,
+      "bonusEXP": 33
+    },
+    {
+      "captureCount": 7,
+      "bonusEXP": 36
+    },
+    {
+      "captureCount": 8,
+      "bonusEXP": 38
+    },
+    {
+      "captureCount": 9,
+      "bonusEXP": 40
+    },
+    {
+      "captureCount": 10,
+      "bonusEXP": 42
+    },
+    {
+      "captureCount": 11,
+      "bonusEXP": 45
+    },
+    {
+      "captureCount": 12,
+      "bonusEXP": 47
+    },
+    {
+      "captureCount": 13,
+      "bonusEXP": 49
+    },
+    {
+      "captureCount": 14,
+      "bonusEXP": 51
+    },
+    {
+      "captureCount": 15,
+      "bonusEXP": 54
+    },
+    {
+      "captureCount": 16,
+      "bonusEXP": 56
+    },
+    {
+      "captureCount": 17,
+      "bonusEXP": 58
+    },
+    {
+      "captureCount": 18,
+      "bonusEXP": 60
+    },
+    {
+      "captureCount": 19,
+      "bonusEXP": 63
+    },
+    {
+      "captureCount": 20,
+      "bonusEXP": 65
+    },
+    {
+      "captureCount": 21,
+      "bonusEXP": 67
+    },
+    {
+      "captureCount": 22,
+      "bonusEXP": 69
+    },
+    {
+      "captureCount": 23,
+      "bonusEXP": 72
+    },
+    {
+      "captureCount": 24,
+      "bonusEXP": 74
+    },
+    {
+      "captureCount": 25,
+      "bonusEXP": 76
+    },
+    {
+      "captureCount": 26,
+      "bonusEXP": 78
+    },
+    {
+      "captureCount": 27,
+      "bonusEXP": 81
+    },
+    {
+      "captureCount": 28,
+      "bonusEXP": 83
+    },
+    {
+      "captureCount": 29,
+      "bonusEXP": 85
+    },
+    {
+      "captureCount": 30,
+      "bonusEXP": 90
+    },
+    {
+      "captureCount": 31,
+      "bonusEXP": 94
+    },
+    {
+      "captureCount": 32,
+      "bonusEXP": 99
+    },
+    {
+      "captureCount": 33,
+      "bonusEXP": 103
+    },
+    {
+      "captureCount": 34,
+      "bonusEXP": 108
+    },
+    {
+      "captureCount": 35,
+      "bonusEXP": 112
+    },
+    {
+      "captureCount": 36,
+      "bonusEXP": 117
+    },
+    {
+      "captureCount": 37,
+      "bonusEXP": 121
+    },
+    {
+      "captureCount": 38,
+      "bonusEXP": 126
+    },
+    {
+      "captureCount": 39,
+      "bonusEXP": 130
+    },
+    {
+      "captureCount": 40,
+      "bonusEXP": 135
+    },
+    {
+      "captureCount": 41,
+      "bonusEXP": 139
+    },
+    {
+      "captureCount": 42,
+      "bonusEXP": 144
+    },
+    {
+      "captureCount": 43,
+      "bonusEXP": 148
+    },
+    {
+      "captureCount": 44,
+      "bonusEXP": 153
+    },
+    {
+      "captureCount": 45,
+      "bonusEXP": 157
+    },
+    {
+      "captureCount": 46,
+      "bonusEXP": 162
+    },
+    {
+      "captureCount": 47,
+      "bonusEXP": 166
+    },
+    {
+      "captureCount": 48,
+      "bonusEXP": 171
+    },
+    {
+      "captureCount": 49,
+      "bonusEXP": 175
+    },
+    {
+      "captureCount": 50,
+      "bonusEXP": 180
+    },
+    {
+      "captureCount": 51,
+      "bonusEXP": 184
+    },
+    {
+      "captureCount": 52,
+      "bonusEXP": 189
+    },
+    {
+      "captureCount": 53,
+      "bonusEXP": 193
+    },
+    {
+      "captureCount": 54,
+      "bonusEXP": 198
+    },
+    {
+      "captureCount": 55,
+      "bonusEXP": 202
+    },
+    {
+      "captureCount": 56,
+      "bonusEXP": 207
+    },
+    {
+      "captureCount": 57,
+      "bonusEXP": 211
+    },
+    {
+      "captureCount": 58,
+      "bonusEXP": 216
+    },
+    {
+      "captureCount": 59,
+      "bonusEXP": 220
+    },
+    {
+      "captureCount": 60,
+      "bonusEXP": 225
+    },
+    {
+      "captureCount": 61,
+      "bonusEXP": 229
+    },
+    {
+      "captureCount": 62,
+      "bonusEXP": 234
+    },
+    {
+      "captureCount": 63,
+      "bonusEXP": 238
+    },
+    {
+      "captureCount": 64,
+      "bonusEXP": 243
+    },
+    {
+      "captureCount": 65,
+      "bonusEXP": 247
+    },
+    {
+      "captureCount": 66,
+      "bonusEXP": 252
+    },
+    {
+      "captureCount": 67,
+      "bonusEXP": 256
+    },
+    {
+      "captureCount": 68,
+      "bonusEXP": 261
+    },
+    {
+      "captureCount": 69,
+      "bonusEXP": 265
+    },
+    {
+      "captureCount": 70,
+      "bonusEXP": 270
+    },
+    {
+      "captureCount": 71,
+      "bonusEXP": 274
+    },
+    {
+      "captureCount": 72,
+      "bonusEXP": 279
+    },
+    {
+      "captureCount": 73,
+      "bonusEXP": 283
+    },
+    {
+      "captureCount": 74,
+      "bonusEXP": 288
+    },
+    {
+      "captureCount": 75,
+      "bonusEXP": 292
+    },
+    {
+      "captureCount": 76,
+      "bonusEXP": 297
+    },
+    {
+      "captureCount": 77,
+      "bonusEXP": 301
+    },
+    {
+      "captureCount": 78,
+      "bonusEXP": 306
+    },
+    {
+      "captureCount": 79,
+      "bonusEXP": 310
+    },
+    {
+      "captureCount": 80,
+      "bonusEXP": 315
+    },
+    {
+      "captureCount": 81,
+      "bonusEXP": 319
+    },
+    {
+      "captureCount": 82,
+      "bonusEXP": 324
+    },
+    {
+      "captureCount": 83,
+      "bonusEXP": 328
+    },
+    {
+      "captureCount": 84,
+      "bonusEXP": 333
+    },
+    {
+      "captureCount": 85,
+      "bonusEXP": 337
+    },
+    {
+      "captureCount": 86,
+      "bonusEXP": 342
+    },
+    {
+      "captureCount": 87,
+      "bonusEXP": 346
+    },
+    {
+      "captureCount": 88,
+      "bonusEXP": 351
+    },
+    {
+      "captureCount": 89,
+      "bonusEXP": 355
+    },
+    {
+      "captureCount": 90,
+      "bonusEXP": 360
+    },
+    {
+      "captureCount": 91,
+      "bonusEXP": 364
+    },
+    {
+      "captureCount": 92,
+      "bonusEXP": 369
+    },
+    {
+      "captureCount": 93,
+      "bonusEXP": 373
+    },
+    {
+      "captureCount": 94,
+      "bonusEXP": 378
+    },
+    {
+      "captureCount": 95,
+      "bonusEXP": 382
+    },
+    {
+      "captureCount": 96,
+      "bonusEXP": 387
+    },
+    {
+      "captureCount": 97,
+      "bonusEXP": 391
+    },
+    {
+      "captureCount": 98,
+      "bonusEXP": 396
+    },
+    {
+      "captureCount": 99,
+      "bonusEXP": 400
+    },
+    {
+      "captureCount": 100,
+      "bonusEXP": 405
+    },
+    {
+      "captureCount": 101,
+      "bonusEXP": 409
+    },
+    {
+      "captureCount": 102,
+      "bonusEXP": 414
+    },
+    {
+      "captureCount": 103,
+      "bonusEXP": 418
+    },
+    {
+      "captureCount": 104,
+      "bonusEXP": 423
+    },
+    {
+      "captureCount": 105,
+      "bonusEXP": 427
+    },
+    {
+      "captureCount": 106,
+      "bonusEXP": 432
+    },
+    {
+      "captureCount": 107,
+      "bonusEXP": 436
+    },
+    {
+      "captureCount": 108,
+      "bonusEXP": 441
+    },
+    {
+      "captureCount": 109,
+      "bonusEXP": 445
+    },
+    {
+      "captureCount": 110,
+      "bonusEXP": 450
+    },
+    {
+      "captureCount": 111,
+      "bonusEXP": 454
+    },
+    {
+      "captureCount": 112,
+      "bonusEXP": 459
+    },
+    {
+      "captureCount": 113,
+      "bonusEXP": 463
+    },
+    {
+      "captureCount": 114,
+      "bonusEXP": 468
+    },
+    {
+      "captureCount": 115,
+      "bonusEXP": 472
+    },
+    {
+      "captureCount": 116,
+      "bonusEXP": 477
+    },
+    {
+      "captureCount": 117,
+      "bonusEXP": 481
+    },
+    {
+      "captureCount": 118,
+      "bonusEXP": 486
+    },
+    {
+      "captureCount": 119,
+      "bonusEXP": 490
+    },
+    {
+      "captureCount": 120,
+      "bonusEXP": 495
+    },
+    {
+      "captureCount": 121,
+      "bonusEXP": 499
+    },
+    {
+      "captureCount": 122,
+      "bonusEXP": 504
+    },
+    {
+      "captureCount": 123,
+      "bonusEXP": 508
+    },
+    {
+      "captureCount": 124,
+      "bonusEXP": 513
+    },
+    {
+      "captureCount": 125,
+      "bonusEXP": 517
+    },
+    {
+      "captureCount": 126,
+      "bonusEXP": 522
+    },
+    {
+      "captureCount": 127,
+      "bonusEXP": 526
+    },
+    {
+      "captureCount": 128,
+      "bonusEXP": 531
+    },
+    {
+      "captureCount": 129,
+      "bonusEXP": 535
+    },
+    {
+      "captureCount": 130,
+      "bonusEXP": 542
+    },
+    {
+      "captureCount": 131,
+      "bonusEXP": 549
+    },
+    {
+      "captureCount": 132,
+      "bonusEXP": 555
+    },
+    {
+      "captureCount": 133,
+      "bonusEXP": 562
+    },
+    {
+      "captureCount": 134,
+      "bonusEXP": 569
+    },
+    {
+      "captureCount": 135,
+      "bonusEXP": 576
+    },
+    {
+      "captureCount": 136,
+      "bonusEXP": 582
+    },
+    {
+      "captureCount": 137,
+      "bonusEXP": 589
+    },
+    {
+      "captureCount": 138,
+      "bonusEXP": 596
+    },
+    {
+      "captureCount": 139,
+      "bonusEXP": 603
+    },
+    {
+      "captureCount": 140,
+      "bonusEXP": 609
+    },
+    {
+      "captureCount": 141,
+      "bonusEXP": 616
+    },
+    {
+      "captureCount": 142,
+      "bonusEXP": 623
+    },
+    {
+      "captureCount": 143,
+      "bonusEXP": 630
+    },
+    {
+      "captureCount": 144,
+      "bonusEXP": 636
+    },
+    {
+      "captureCount": 145,
+      "bonusEXP": 643
+    },
+    {
+      "captureCount": 146,
+      "bonusEXP": 650
+    },
+    {
+      "captureCount": 147,
+      "bonusEXP": 657
+    },
+    {
+      "captureCount": 148,
+      "bonusEXP": 663
+    },
+    {
+      "captureCount": 149,
+      "bonusEXP": 670
+    },
+    {
+      "captureCount": 150,
+      "bonusEXP": 677
+    },
+    {
+      "captureCount": 151,
+      "bonusEXP": 684
+    },
+    {
+      "captureCount": 152,
+      "bonusEXP": 690
+    },
+    {
+      "captureCount": 153,
+      "bonusEXP": 697
+    },
+    {
+      "captureCount": 154,
+      "bonusEXP": 704
+    },
+    {
+      "captureCount": 155,
+      "bonusEXP": 711
+    },
+    {
+      "captureCount": 156,
+      "bonusEXP": 717
+    },
+    {
+      "captureCount": 157,
+      "bonusEXP": 724
+    },
+    {
+      "captureCount": 158,
+      "bonusEXP": 731
+    },
+    {
+      "captureCount": 159,
+      "bonusEXP": 738
+    },
+    {
+      "captureCount": 160,
+      "bonusEXP": 744
+    },
+    {
+      "captureCount": 161,
+      "bonusEXP": 751
+    },
+    {
+      "captureCount": 162,
+      "bonusEXP": 758
+    },
+    {
+      "captureCount": 163,
+      "bonusEXP": 765
+    },
+    {
+      "captureCount": 164,
+      "bonusEXP": 771
+    },
+    {
+      "captureCount": 165,
+      "bonusEXP": 778
+    },
+    {
+      "captureCount": 166,
+      "bonusEXP": 785
+    },
+    {
+      "captureCount": 167,
+      "bonusEXP": 792
+    },
+    {
+      "captureCount": 168,
+      "bonusEXP": 798
+    },
+    {
+      "captureCount": 169,
+      "bonusEXP": 805
+    },
+    {
+      "captureCount": 170,
+      "bonusEXP": 812
+    },
+    {
+      "captureCount": 171,
+      "bonusEXP": 819
+    },
+    {
+      "captureCount": 172,
+      "bonusEXP": 825
+    },
+    {
+      "captureCount": 173,
+      "bonusEXP": 832
+    },
+    {
+      "captureCount": 174,
+      "bonusEXP": 839
+    },
+    {
+      "captureCount": 175,
+      "bonusEXP": 846
+    },
+    {
+      "captureCount": 176,
+      "bonusEXP": 852
+    },
+    {
+      "captureCount": 177,
+      "bonusEXP": 859
+    },
+    {
+      "captureCount": 178,
+      "bonusEXP": 866
+    },
+    {
+      "captureCount": 179,
+      "bonusEXP": 873
+    },
+    {
+      "captureCount": 180,
+      "bonusEXP": 879
+    },
+    {
+      "captureCount": 181,
+      "bonusEXP": 886
+    },
+    {
+      "captureCount": 182,
+      "bonusEXP": 893
+    },
+    {
+      "captureCount": 183,
+      "bonusEXP": 900
+    },
+    {
+      "captureCount": 184,
+      "bonusEXP": 906
+    },
+    {
+      "captureCount": 185,
+      "bonusEXP": 913
+    },
+    {
+      "captureCount": 186,
+      "bonusEXP": 920
+    },
+    {
+      "captureCount": 187,
+      "bonusEXP": 927
+    },
+    {
+      "captureCount": 188,
+      "bonusEXP": 933
+    },
+    {
+      "captureCount": 189,
+      "bonusEXP": 940
+    },
+    {
+      "captureCount": 190,
+      "bonusEXP": 947
+    },
+    {
+      "captureCount": 191,
+      "bonusEXP": 954
+    },
+    {
+      "captureCount": 192,
+      "bonusEXP": 960
+    },
+    {
+      "captureCount": 193,
+      "bonusEXP": 967
+    },
+    {
+      "captureCount": 194,
+      "bonusEXP": 974
+    },
+    {
+      "captureCount": 195,
+      "bonusEXP": 981
+    },
+    {
+      "captureCount": 196,
+      "bonusEXP": 987
+    },
+    {
+      "captureCount": 197,
+      "bonusEXP": 994
+    },
+    {
+      "captureCount": 198,
+      "bonusEXP": 1001
+    },
+    {
+      "captureCount": 199,
+      "bonusEXP": 1008
+    },
+    {
+      "captureCount": "...",
+      "bonusEXP": 0
+    },
+    {
+      "captureCount": 4949,
+      "bonusEXP": 289030
+    },
+    {
+      "captureCount": 4950,
+      "bonusEXP": 289145
+    },
+    {
+      "captureCount": 4951,
+      "bonusEXP": 289260
+    },
+    {
+      "captureCount": 4952,
+      "bonusEXP": 289374
+    },
+    {
+      "captureCount": 4953,
+      "bonusEXP": 289489
+    },
+    {
+      "captureCount": 4954,
+      "bonusEXP": 289604
+    },
+    {
+      "captureCount": 4955,
+      "bonusEXP": 289719
+    },
+    {
+      "captureCount": 4956,
+      "bonusEXP": 289833
+    },
+    {
+      "captureCount": 4957,
+      "bonusEXP": 289948
+    },
+    {
+      "captureCount": 4958,
+      "bonusEXP": 290063
+    },
+    {
+      "captureCount": 4959,
+      "bonusEXP": 290178
+    },
+    {
+      "captureCount": 4960,
+      "bonusEXP": 290292
+    },
+    {
+      "captureCount": 4961,
+      "bonusEXP": 290407
+    },
+    {
+      "captureCount": 4962,
+      "bonusEXP": 290522
+    },
+    {
+      "captureCount": 4963,
+      "bonusEXP": 290637
+    },
+    {
+      "captureCount": 4964,
+      "bonusEXP": 290751
+    },
+    {
+      "captureCount": 4965,
+      "bonusEXP": 290866
+    },
+    {
+      "captureCount": 4966,
+      "bonusEXP": 290981
+    },
+    {
+      "captureCount": 4967,
+      "bonusEXP": 291096
+    },
+    {
+      "captureCount": 4968,
+      "bonusEXP": 291210
+    },
+    {
+      "captureCount": 4969,
+      "bonusEXP": 291325
+    },
+    {
+      "captureCount": 4970,
+      "bonusEXP": 291440
+    },
+    {
+      "captureCount": 4971,
+      "bonusEXP": 291555
+    },
+    {
+      "captureCount": 4972,
+      "bonusEXP": 291669
+    },
+    {
+      "captureCount": 4973,
+      "bonusEXP": 291784
+    },
+    {
+      "captureCount": 4974,
+      "bonusEXP": 291899
+    },
+    {
+      "captureCount": 4975,
+      "bonusEXP": 292014
+    },
+    {
+      "captureCount": 4976,
+      "bonusEXP": 292128
+    },
+    {
+      "captureCount": 4977,
+      "bonusEXP": 292243
+    },
+    {
+      "captureCount": 4978,
+      "bonusEXP": 292358
+    },
+    {
+      "captureCount": 4979,
+      "bonusEXP": 292473
+    },
+    {
+      "captureCount": 4980,
+      "bonusEXP": 292587
+    },
+    {
+      "captureCount": 4981,
+      "bonusEXP": 292702
+    },
+    {
+      "captureCount": 4982,
+      "bonusEXP": 292817
+    },
+    {
+      "captureCount": 4983,
+      "bonusEXP": 292932
+    },
+    {
+      "captureCount": 4984,
+      "bonusEXP": 293046
+    },
+    {
+      "captureCount": 4985,
+      "bonusEXP": 293161
+    },
+    {
+      "captureCount": 4986,
+      "bonusEXP": 293276
+    },
+    {
+      "captureCount": 4987,
+      "bonusEXP": 293391
+    },
+    {
+      "captureCount": 4988,
+      "bonusEXP": 293505
+    },
+    {
+      "captureCount": 4989,
+      "bonusEXP": 293620
+    },
+    {
+      "captureCount": 4990,
+      "bonusEXP": 293735
+    },
+    {
+      "captureCount": 4991,
+      "bonusEXP": 293850
+    },
+    {
+      "captureCount": 4992,
+      "bonusEXP": 293964
+    },
+    {
+      "captureCount": 4993,
+      "bonusEXP": 294079
+    },
+    {
+      "captureCount": 4994,
+      "bonusEXP": 294194
+    },
+    {
+      "captureCount": 4995,
+      "bonusEXP": 294309
+    },
+    {
+      "captureCount": 4996,
+      "bonusEXP": 294423
+    },
+    {
+      "captureCount": 4997,
+      "bonusEXP": 294538
+    },
+    {
+      "captureCount": 4998,
+      "bonusEXP": 294653
+    }
+  ],
+  "areaFind": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1,
+    "10": 1,
+    "11": 1,
+    "12": 1,
+    "13": 1,
+    "14": 1,
+    "15": 1,
+    "16": 1,
+    "17": 1,
+    "18": 1,
+    "19": 1,
+    "20": 1,
+    "21": 2,
+    "22": 2,
+    "23": 2,
+    "24": 2,
+    "25": 2,
+    "26": 2,
+    "27": 2,
+    "28": 2,
+    "29": 2,
+    "30": 2,
+    "31": 2,
+    "32": 2,
+    "33": 2,
+    "34": 2,
+    "35": 2,
+    "36": 2,
+    "37": 2,
+    "38": 2,
+    "39": 2,
+    "40": 2,
+    "41": 2,
+    "42": 2,
+    "43": 2,
+    "44": 2,
+    "45": 2,
+    "46": 2,
+    "47": 2,
+    "48": 2,
+    "49": 2,
+    "50": 2,
+    "51": 2,
+    "52": 2,
+    "53": 2,
+    "54": 2,
+    "55": 2,
+    "56": 2,
+    "57": 2,
+    "58": 2,
+    "59": 2,
+    "60": 2,
+    "61": 3,
+    "62": 3,
+    "63": 3,
+    "64": 3,
+    "65": 3,
+    "66": 3,
+    "67": 3,
+    "68": 3,
+    "69": 3,
+    "70": 3,
+    "71": 3,
+    "72": 3,
+    "73": 3,
+    "74": 3,
+    "75": 3,
+    "76": 3,
+    "77": 3,
+    "78": 3,
+    "79": 3,
+    "80": 3,
+    "81": 3,
+    "82": 3,
+    "83": 3,
+    "84": 3,
+    "85": 3,
+    "86": 3,
+    "87": 3,
+    "88": 3,
+    "89": 3,
+    "90": 3,
+    "91": 3,
+    "92": 3,
+    "93": 3,
+    "94": 3,
+    "95": 3,
+    "96": 3,
+    "97": 3,
+    "98": 3,
+    "99": 3,
+    "100": 4,
+    "101": 4,
+    "102": 4,
+    "103": 4,
+    "104": 4,
+    "105": 4,
+    "106": 4,
+    "107": 4,
+    "108": 4,
+    "109": 4,
+    "110": 4,
+    "111": 4,
+    "112": 4,
+    "113": 4,
+    "114": 4,
+    "115": 4,
+    "116": 4,
+    "117": 4,
+    "118": 4,
+    "119": 4,
+    "120": 4,
+    "121": 4,
+    "122": 4,
+    "123": 4,
+    "124": 4,
+    "125": 4,
+    "126": 4,
+    "127": 4,
+    "128": 4,
+    "129": 4,
+    "130": 4,
+    "131": 4,
+    "132": 4,
+    "133": 4,
+    "134": 4,
+    "135": 4,
+    "136": 4,
+    "137": 4,
+    "138": 4,
+    "139": 4,
+    "140": 4,
+    "141": 4,
+    "142": 4,
+    "143": 4,
+    "144": 4,
+    "145": 4,
+    "146": 4,
+    "147": 4,
+    "148": 4,
+    "149": 4,
+    "150": 4,
+    "151": 4,
+    "152": 4,
+    "153": 4,
+    "154": 4,
+    "155": 4,
+    "156": 4,
+    "157": 4,
+    "158": 4,
+    "159": 4,
+    "160": 4,
+    "161": 4,
+    "162": 4,
+    "163": 4,
+    "164": 4,
+    "165": 4,
+    "166": 4,
+    "167": 4,
+    "168": 4,
+    "169": 4,
+    "170": 4,
+    "171": 4,
+    "172": 4,
+    "173": 4,
+    "174": 4,
+    "175": 4,
+    "176": 4,
+    "177": 4,
+    "178": 4,
+    "179": 4,
+    "180": 4,
+    "181": 4,
+    "182": 4,
+    "183": 4,
+    "184": 4,
+    "185": 4,
+    "186": 4,
+    "187": 4,
+    "188": 4,
+    "189": 4,
+    "190": 4,
+    "191": 4,
+    "192": 4,
+    "193": 4,
+    "194": 4,
+    "195": 4,
+    "196": 4,
+    "197": 4,
+    "198": 4
+  },
+  "expRatios": [
+    {
+      "id": "PREDATOR_FairyDragon",
+      "nameCN": "精灵龙(狂暴)",
+      "ratio": 40.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_GrimGirl",
+      "nameCN": "幽恋娜(狂暴)",
+      "ratio": 40.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_MushroomDragon",
+      "nameCN": "菇咚(狂暴)",
+      "ratio": 40.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_HadesBird_Electric",
+      "nameCN": "雷鸣鸟(狂暴)",
+      "ratio": 40.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Ronin_Dark",
+      "nameCN": "鬼刃武士(狂暴)",
+      "ratio": 40.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_CandleGhost",
+      "nameCN": "恐炬灵(狂暴)",
+      "ratio": 40.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Baphomet_Dark",
+      "nameCN": "暗魔羊(狂暴)",
+      "ratio": 40.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_MummyPal",
+      "nameCN": "缚乃伊(狂暴)",
+      "ratio": 40.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_MoonQueen_2",
+      "nameCN": "纱夜 & 辉月伊(塔主)",
+      "ratio": 35.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_BlackGriffon_2",
+      "nameCN": "维克托 & 异构格里芬(塔主)",
+      "ratio": 34.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_BlackGriffon_2_Avatar",
+      "nameCN": "维克托 & 异构格里芬(化身)",
+      "ratio": 34.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_Horus_2",
+      "nameCN": "马库斯 & 荷鲁斯(塔主)",
+      "ratio": 33.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_ThunderDragonMan_2",
+      "nameCN": "阿克塞尔 & 波鲁杰克斯(塔主)",
+      "ratio": 32.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_LilyQueen_2",
+      "nameCN": "莉莉 & 百合女王(塔主)",
+      "ratio": 31.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_NightLady",
+      "nameCN": "贝菈诺娃(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_NightLady_Dark",
+      "nameCN": "贝菈露洁(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_NightLady_Dark_2",
+      "nameCN": "贝菈露洁(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_KingBahamut_Dragon",
+      "nameCN": "殁殃(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_KingBahamut_Dragon_2",
+      "nameCN": "殁殃(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_WorldTreeDragon",
+      "nameCN": "泽娜拉 & 枯星龙(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_WorldTreeDragon_2",
+      "nameCN": "泽娜拉 & 枯星龙(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_BlackGriffon",
+      "nameCN": "维克托 & 异构格里芬(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_ElecPanda",
+      "nameCN": "佐伊 & 暴电熊(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_Horus",
+      "nameCN": "马库斯 & 荷鲁斯(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_LilyQueen",
+      "nameCN": "莉莉 & 百合女王(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_ThunderDragonMan",
+      "nameCN": "阿克塞尔 & 波鲁杰克斯(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_MoonQueen",
+      "nameCN": "纱夜 & 辉月伊(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_SnowTigerBeastman",
+      "nameCN": "比约恩 & 霜牙王(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_BlueSkyDragon",
+      "nameCN": "苍璃 & 霄龙(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_ElecPanda_2",
+      "nameCN": "佐伊 & 暴电熊(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_SnowTigerBeastman_2",
+      "nameCN": "比约恩 & 霜牙王(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_BlueSkyDragon_2",
+      "nameCN": "苍璃 & 霄龙(塔主)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MimicDog",
+      "nameCN": "旺财(Boss)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_AmaterasuWolf",
+      "nameCN": "苍焰狼(狂暴)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Horus_Water",
+      "nameCN": "伊西斯(狂暴)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Werewolf_Ice",
+      "nameCN": "霜镰魔(狂暴)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Yeti",
+      "nameCN": "白绒雪怪(狂暴)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_DarkMechaDragon",
+      "nameCN": "杰诺多兰(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_DarkMechaDragon_2",
+      "nameCN": "杰诺多兰(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss002",
+      "nameCN": "月亮领主(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss002_Hand_Left",
+      "nameCN": "月亮领主(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss002_Hand_Right",
+      "nameCN": "月亮领主(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss002_Head",
+      "nameCN": "月亮领主(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss002_2",
+      "nameCN": "月亮领主(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss002_Hand_Left_2",
+      "nameCN": "月亮领主(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss002_Hand_Right_2",
+      "nameCN": "月亮领主(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss002_Head_2",
+      "nameCN": "月亮领主(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_LegendDeer",
+      "nameCN": "默世鹿(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_LegendDeer_2",
+      "nameCN": "默世鹿(突袭)",
+      "ratio": 30.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_FeatherOstrich",
+      "nameCN": "战冠雀(狂暴)",
+      "ratio": 27.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_DrillGame",
+      "nameCN": "碎岩龟(狂暴)",
+      "ratio": 25.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_GoldenHorse",
+      "nameCN": "金驰兽(狂暴)",
+      "ratio": 25.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_ScorpionMan",
+      "nameCN": "蛊刺妖(狂暴)",
+      "ratio": 25.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Umihebi_Fire",
+      "nameCN": "腾炎龙(狂暴)",
+      "ratio": 25.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_WhiteTiger_Ground",
+      "nameCN": "金棘兽(狂暴)",
+      "ratio": 25.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Umihebi_Fire_Quest",
+      "nameCN": "腾炎龙(狂暴)",
+      "ratio": 25.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_BirdDragon",
+      "nameCN": "烽歌龙(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Garm",
+      "nameCN": "猎狼(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_GhostBeast",
+      "nameCN": "噬魂兽(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Gorilla",
+      "nameCN": "铁拳猿(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_GrassPanda",
+      "nameCN": "叶胖达(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_LazyDragon",
+      "nameCN": "佩克龙(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Manticore_Dark",
+      "nameCN": "狱阎王(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_PinkLizard",
+      "nameCN": "博爱蜥(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_PurpleSpider",
+      "nameCN": "桃蛛娘(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_VolcanicMonster_Ice",
+      "nameCN": "寒霜兽(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_VolcanoDragon",
+      "nameCN": "流焰龙(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Garm_Quest",
+      "nameCN": "猎狼(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_PinkLizard_Quest",
+      "nameCN": "博爱蜥(狂暴)",
+      "ratio": 22.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_FlowerDinosaur",
+      "nameCN": "花冠龙(狂暴)",
+      "ratio": 20.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_MysteryMask",
+      "nameCN": "面惧(狂暴)",
+      "ratio": 20.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_NightBlueHorse",
+      "nameCN": "夜冥驹(狂暴)",
+      "ratio": 20.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_RedArmorBird",
+      "nameCN": "燧火鸟(狂暴)",
+      "ratio": 20.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_SifuDog",
+      "nameCN": "汪宗师(狂暴)",
+      "ratio": 20.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_ThunderDog",
+      "nameCN": "霹雳犬(狂暴)",
+      "ratio": 20.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_MoonQueen_2_Servant",
+      "nameCN": "辉月伊(仆从)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Alpaca",
+      "nameCN": "美露帕(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_AmaterasuWolf",
+      "nameCN": "苍焰狼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Boss_Anubis",
+      "nameCN": "阿努比斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BadCatgirl",
+      "nameCN": "妮瞅莎(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Baphomet",
+      "nameCN": "炎魔羊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Baphomet_Dark",
+      "nameCN": "暗魔羊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Bastet",
+      "nameCN": "喵丝特(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Bastet_Ice",
+      "nameCN": "冰丝特(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BeardedDragon",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BerryGoat",
+      "nameCN": "灌木羊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BirdDragon",
+      "nameCN": "烽歌龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BirdDragon_Ice",
+      "nameCN": "霜歌龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlackCentaur",
+      "nameCN": "混沌骑士(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlackFurDragon",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlackGriffon",
+      "nameCN": "异构格里芬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlackMetalDragon",
+      "nameCN": "魔渊龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlueberryFairy",
+      "nameCN": "梅莉姆(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlueDragon",
+      "nameCN": "碧海龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BluePlatypus",
+      "nameCN": "冲浪鸭(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Boar",
+      "nameCN": "草莽猪(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BrownRabbit",
+      "nameCN": "詹兔曼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CaptainPenguin",
+      "nameCN": "企丸王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Carbunclo",
+      "nameCN": "翠叶鼠(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CatBat",
+      "nameCN": "猫蝠怪(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CatMage",
+      "nameCN": "暗巫猫(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CatMage_Fire",
+      "nameCN": "炽巫猫(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CatVampire",
+      "nameCN": "夜幕魔蝠(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ChickenPal",
+      "nameCN": "皮皮鸡(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ColorfulBird",
+      "nameCN": "炸蛋鸟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CowPal",
+      "nameCN": "波霸牛(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CuteButterfly",
+      "nameCN": "幻悦蝶(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CuteFox",
+      "nameCN": "玉藻狐(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CuteMole",
+      "nameCN": "遁地鼠(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DarkCrow",
+      "nameCN": "黑鸦隐士(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DarkMutant",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DarkScorpion",
+      "nameCN": "冥铠蝎(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DarkScorpion_Ground",
+      "nameCN": "金铠蝎(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Deer",
+      "nameCN": "紫霞鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Deer_Ground",
+      "nameCN": "祇岳鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DreamDemon",
+      "nameCN": "寐魔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DrillGame",
+      "nameCN": "碎岩龟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Eagle",
+      "nameCN": "天擒鸟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ElecCat",
+      "nameCN": "伏特喵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ElecLion",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ElecPanda",
+      "nameCN": "暴电熊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FairyDragon",
+      "nameCN": "精灵龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FairyDragon_Water",
+      "nameCN": "水灵龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FengyunDeeper",
+      "nameCN": "云海鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FireKirin",
+      "nameCN": "火麒麟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FireKirin_Dark",
+      "nameCN": "邪麒麟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlameBambi",
+      "nameCN": "燎火鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlameBuffalo",
+      "nameCN": "炽焰牛(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlowerDinosaur",
+      "nameCN": "花冠龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlowerDinosaur_Electric",
+      "nameCN": "雷冠龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlowerDoll",
+      "nameCN": "花丽娜(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlowerDoll_Fire",
+      "nameCN": "樱丽娜(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlowerRabbit",
+      "nameCN": "波娜兔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlyingManta",
+      "nameCN": "鲁米儿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FoxMage",
+      "nameCN": "焰巫狐(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FoxMage_Dark",
+      "nameCN": "幽巫狐(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Ganesha",
+      "nameCN": "壶小象(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Garm",
+      "nameCN": "猎狼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GhostBeast",
+      "nameCN": "噬魂兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GoldenHorse",
+      "nameCN": "金驰兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Gorilla",
+      "nameCN": "铁拳猿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Gorilla_Ground",
+      "nameCN": "石掌猿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassDragon",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassMammoth",
+      "nameCN": "森猛犸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassMammoth_Ice",
+      "nameCN": "雪猛犸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassPanda",
+      "nameCN": "叶胖达(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassPanda_Electric",
+      "nameCN": "雷胖达(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassRabbitMan",
+      "nameCN": "踏春兔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_HadesBird",
+      "nameCN": "雷冥鸟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_HadesBird_Electric",
+      "nameCN": "雷鸣鸟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_HawkBird",
+      "nameCN": "疾风隼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Hedgehog",
+      "nameCN": "电棘鼠(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Hedgehog_Ice",
+      "nameCN": "冰刺鼠(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_HerculesBeetle",
+      "nameCN": "铠格力斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_HerculesBeetle_Ground",
+      "nameCN": "格鲁力斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Horus",
+      "nameCN": "荷鲁斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceDeer",
+      "nameCN": "严冬鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceFox",
+      "nameCN": "吹雪狐(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceHorse",
+      "nameCN": "唤冬兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceHorse_Dark",
+      "nameCN": "唤夜兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_JetDragon",
+      "nameCN": "空涡龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Kelpie",
+      "nameCN": "水灵儿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Kelpie_Fire",
+      "nameCN": "火灵儿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingAlpaca",
+      "nameCN": "君王美露帕(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingAlpaca_Ice",
+      "nameCN": "冰帝美露帕(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingBahamut",
+      "nameCN": "焰煌(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingBahamut_Dragon",
+      "nameCN": "殁殃(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Kirin",
+      "nameCN": "雷角马(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Kirin_Ice",
+      "nameCN": "凌角马(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Kitsunebi",
+      "nameCN": "火绒狐(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LavaGirl",
+      "nameCN": "融焰娘(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LazyCatfish",
+      "nameCN": "趴趴鲶(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LazyDragon",
+      "nameCN": "佩克龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LazyDragon_Electric",
+      "nameCN": "派克龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LilyQueen",
+      "nameCN": "百合女王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LilyQueen_Dark",
+      "nameCN": "黑月女王 (Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LittleBriarRose",
+      "nameCN": "荊棘魔仙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LizardMan",
+      "nameCN": "朋克蜥(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LizardMan_Fire",
+      "nameCN": "热血蜥(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Manticore",
+      "nameCN": "狱焰王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Manticore_Dark",
+      "nameCN": "狱阎王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Monkey",
+      "nameCN": "新叶猿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Monkey_Ice",
+      "nameCN": "BOSS_Monkey_Ice",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_Monkey_Fire",
+      "nameCN": "秋叶猿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MopBaby",
+      "nameCN": "毛掸儿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MopKing",
+      "nameCN": "毛老爹(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Mutant",
+      "nameCN": "秘斯媞雅(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NaughtyCat",
+      "nameCN": "笑魇猫(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NegativeKoala",
+      "nameCN": "瞅什魔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NegativeOctopus",
+      "nameCN": "勾魂鱿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NightFox",
+      "nameCN": "露娜蒂(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Penguin",
+      "nameCN": "企丸丸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PinkCat",
+      "nameCN": "捣蛋猫(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PinkKangaroo",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PinkLizard",
+      "nameCN": "博爱蜥(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PinkRabbit",
+      "nameCN": "姬小兔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PlantSlime",
+      "nameCN": "叶泥泥(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PlantSlime_Flower",
+      "nameCN": "叶泥泥(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_QueenBee",
+      "nameCN": "女皇蜂(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_RaijinDaughter",
+      "nameCN": "雷鸣童子(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_RedArmorBird",
+      "nameCN": "燧火鸟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_RobinHood",
+      "nameCN": "羽箭射手(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_RobinHood_Ground",
+      "nameCN": "山岳射手(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Ronin",
+      "nameCN": "浪刃武士(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Ronin_Dark",
+      "nameCN": "鬼刃武士(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SaintCentaur",
+      "nameCN": "圣光骑士(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SakuraSaurus",
+      "nameCN": "连理龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SakuraSaurus_Water",
+      "nameCN": "海誓龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Serpent",
+      "nameCN": "滑水蛇(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Serpent_Ground",
+      "nameCN": "流沙蛇(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SharkKid",
+      "nameCN": "鲨小子(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SharkKid_Fire",
+      "nameCN": "红小鲨(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SheepBall",
+      "nameCN": "棉悠悠(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SkyDragon",
+      "nameCN": "天羽龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SkyDragon_Grass",
+      "nameCN": "翠羽龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SoldierBee",
+      "nameCN": "骑士蜂(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Suzaku",
+      "nameCN": "朱雀(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Suzaku_Water",
+      "nameCN": "清雀(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SweetsSheep",
+      "nameCN": "棉花糖(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SweetsSheep_Ground",
+      "nameCN": "可可棉花糖(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_TentacleTurtle",
+      "nameCN": "盔盔仔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ThunderBird",
+      "nameCN": "迅雷鸟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ThunderBird_Ice",
+      "nameCN": "疾霜鸟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ThunderDog",
+      "nameCN": "霹雳犬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ThunderDog_Ice",
+      "nameCN": "凛光犬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ThunderDragonMan",
+      "nameCN": "波鲁杰克斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Umihebi",
+      "nameCN": "覆海龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Umihebi_Fire",
+      "nameCN": "腾炎龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_VioletFairy",
+      "nameCN": "薇莉塔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_VolcanicMonster",
+      "nameCN": "熔岩兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_VolcanicMonster_Ice",
+      "nameCN": "寒霜兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WaterLizard",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WeaselDragon",
+      "nameCN": "疾旋鼬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WeaselDragon_Fire",
+      "nameCN": "桃旋鼬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Werewolf",
+      "nameCN": "月镰魔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WhiteMoth",
+      "nameCN": "绸笠蛾(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WhiteMoth_Neutral",
+      "nameCN": "绢笠蛾(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WhiteTiger",
+      "nameCN": "冰棘兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WindChimes",
+      "nameCN": "吊缚灵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WindChimes_Ice",
+      "nameCN": "冰缚灵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WizardOwl",
+      "nameCN": "啼卡尔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WoolFox",
+      "nameCN": "米露菲(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Yeti",
+      "nameCN": "白绒雪怪(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Yeti_Grass",
+      "nameCN": "绿苔绒怪(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NightLady",
+      "nameCN": "贝菈诺娃(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NightLady_Dark",
+      "nameCN": "贝菈露洁(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MoonQueen",
+      "nameCN": "辉月伊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KendoFrog",
+      "nameCN": "武道蛙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LeafPrincess",
+      "nameCN": "春彩娘(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MushroomDragon",
+      "nameCN": "菇咚(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MushroomDragon_Dark",
+      "nameCN": "菇波(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SmallArmadillo",
+      "nameCN": "球犰(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FeatherOstrich",
+      "nameCN": "战冠雀(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ScorpionMan",
+      "nameCN": "蛊刺妖(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ScorpionMan_Electric",
+      "nameCN": "电针妖(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WingGolem",
+      "nameCN": "泰锋(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WingGolem_Fire",
+      "nameCN": "丹烽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CandleGhost",
+      "nameCN": "恐炬灵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GuardianDog",
+      "nameCN": "八云犬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SifuDog",
+      "nameCN": "汪宗师(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DarkAlien",
+      "nameCN": "杰诺贝达(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WhiteAlienDragon",
+      "nameCN": "杰诺路达(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_VolcanoDragon",
+      "nameCN": "流焰龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_VolcanoDragon_Ice",
+      "nameCN": "川霜龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DarkMechaDragon",
+      "nameCN": "杰诺多兰(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GhostRabbit",
+      "nameCN": "魅爱莉(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GhostRabbit_Grass",
+      "nameCN": "碧艾莉(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NightBlueHorse",
+      "nameCN": "夜冥驹(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NightBlueHorse_Neutral",
+      "nameCN": "日耀驹(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WhiteShieldDragon",
+      "nameCN": "艾基鲁迦(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlackPuppy",
+      "nameCN": "墨丸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlackPuppy_Ice",
+      "nameCN": "冬丸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WhiteDeer",
+      "nameCN": "净世鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WhiteDeer_Dark",
+      "nameCN": "织夜鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingWhale",
+      "nameCN": "奥沧鲸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MysteryMask",
+      "nameCN": "面惧(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_HoodGhost",
+      "nameCN": "兜兜灵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Sekhmet",
+      "nameCN": "塞赫麦特(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ElecLizard",
+      "nameCN": "电懒懒(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrimGirl",
+      "nameCN": "幽恋娜(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PurpleSpider",
+      "nameCN": "桃蛛娘(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlueThunderHorse",
+      "nameCN": "驭雷马(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_RockBeast",
+      "nameCN": "磐峰兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_RockBeast_Ice",
+      "nameCN": "寒峰兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_OctopusGirl",
+      "nameCN": "墨沫姬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_OctopusGirl_Neutral",
+      "nameCN": "梦沫姬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceNarwhal",
+      "nameCN": "凉晶鲸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_JellyfishFairy",
+      "nameCN": "海月仙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BerryGoat_Dark",
+      "nameCN": "郁木羊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Kitsunebi_Ice",
+      "nameCN": "雪绒狐(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_RaijinDaughter_Water",
+      "nameCN": "天阴童子(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SnowTigerBeastman",
+      "nameCN": "霜牙王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Werewolf_Ice",
+      "nameCN": "霜镰魔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WhiteTiger_Ground",
+      "nameCN": "金棘兽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Horus_Water",
+      "nameCN": "伊西斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FengyunDeeper_Electric",
+      "nameCN": "雷隐鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_AmaterasuWolf_Dark",
+      "nameCN": "幽焰狼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PinkRabbit_Grass",
+      "nameCN": "艾小兔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SnakeGirl",
+      "nameCN": "梅杜娜(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GhostAnglerfish",
+      "nameCN": "冥灯鱼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceWitch",
+      "nameCN": "冰姬灵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ClownRabbit",
+      "nameCN": "拉比耶尔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LegendDeer",
+      "nameCN": "默世鹿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LeafMomonga",
+      "nameCN": "达鼠泥(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SmallYeti",
+      "nameCN": "雪墩墩(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceCrocodile",
+      "nameCN": "肚肚鳄(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CactusDoll",
+      "nameCN": "球抱苞(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CactusDoll_Dark",
+      "nameCN": "妖抱苞(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MushroomLady",
+      "nameCN": "红菇娘(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_StuffedShark",
+      "nameCN": "布偶鲨(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FoxExorcist",
+      "nameCN": "昭炎狐(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceSeal",
+      "nameCN": "香草豹冰(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceSeal_Ground",
+      "nameCN": "巧克力豹冰(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CloverFairy",
+      "nameCN": "幸叶茸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ElecPomeranian",
+      "nameCN": "电汪汪(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GhostBlackCat",
+      "nameCN": "念影喵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ThiefBird",
+      "nameCN": "盗影鸦(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_OniGhostGirl",
+      "nameCN": "吓丝妮(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingCrab",
+      "nameCN": "BOSS_KingCrab",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_Plesiosaur",
+      "nameCN": "梁叶龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_TropicalOstrich",
+      "nameCN": "咕咕桑葩(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassGolem",
+      "nameCN": "双心岩傀(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassGolem_Dark",
+      "nameCN": "咒心岩傀(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SnowPeafowl",
+      "nameCN": "白真雪雀(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CubeTurtle",
+      "nameCN": "重岩龟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CubeTurtle_Neutral",
+      "nameCN": "净岩龟(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LongCat",
+      "nameCN": "喵璐璐(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_JellyfishGhost",
+      "nameCN": "海月灵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ThunderFluffyBird",
+      "nameCN": "雷云鹫(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MoonChild",
+      "nameCN": "缀夜星(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SamuraiDog",
+      "nameCN": "宗铭丸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_PoseidonOrca",
+      "nameCN": "海皇鲸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SwordCutlassfish",
+      "nameCN": "鞘刀鱼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SwordCutlassfish_Fire",
+      "nameCN": "炼刃鱼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_NegativeOctopus_Neutral",
+      "nameCN": "蚀魂鱿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Penguin_Electric",
+      "nameCN": "闪丸丸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CaptainPenguin_Black",
+      "nameCN": "闪丸王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlyingManta_Thunder",
+      "nameCN": "雷米儿(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BluePlatypus_Fire",
+      "nameCN": "热浪鸭(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LazyCatfish_Gold",
+      "nameCN": "梆梆鲶(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_TentacleTurtle_Ground",
+      "nameCN": "金盔仔(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KendoFrog_Dark",
+      "nameCN": "极道蛙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlueDragon_Ice",
+      "nameCN": "碧月龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceNarwhal_Fire",
+      "nameCN": "桃晶鲸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GhostAnglerfish_Fire",
+      "nameCN": "炙灯鱼(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_StuffedShark_Fire",
+      "nameCN": "粉粉布偶鲨(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MummyPal",
+      "nameCN": "缚乃伊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingSunfish",
+      "nameCN": "曼波王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingSunfish_Thunder",
+      "nameCN": "曼波皇(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MonochromeQueen",
+      "nameCN": "墨罗娜(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ElecSnail",
+      "nameCN": "电涡蜗(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ElecSnail_Fire",
+      "nameCN": "BOSS_ElecSnail_Fire",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_ElecSnail_Ground",
+      "nameCN": "金涡蜗(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LanternButler",
+      "nameCN": "妖焰灯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SumoDog",
+      "nameCN": "力士獒(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_VenusFlytrap",
+      "nameCN": "颚莉丝(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_StrawHatCat",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_CandleWitch",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FluffyBird",
+      "nameCN": "雪绵啾(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FrozenBear",
+      "nameCN": "BOSS_FrozenBear",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_DandelionGirl",
+      "nameCN": "蒲蒲飞芽(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_VolcanicTurtle",
+      "nameCN": "zh_Hans_Text(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ClioneTwins",
+      "nameCN": "莉欧·莉涅(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DarkFlameFox",
+      "nameCN": "紫狐娇(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_IceVeilDragon",
+      "nameCN": "BOSS_IceVeilDragon",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_RedFlowerBird",
+      "nameCN": "大红呱(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LotusDragon",
+      "nameCN": "沁莲龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlueSkyDragon",
+      "nameCN": "霄龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlueWoolRabbit",
+      "nameCN": "BOSS_BlueWoolRabbit",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_PandaGirl",
+      "nameCN": "莉芳(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassMinotaur",
+      "nameCN": "密林陶洛斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GrassMinotaur_Ice",
+      "nameCN": "冰峰陶洛斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MonochromeMushroom",
+      "nameCN": "BOSS_MonochromeMushroom",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_SleeveRabbit",
+      "nameCN": "兔绣袖(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MedjedBird",
+      "nameCN": "BOSS_MedjedBird",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_Mothman",
+      "nameCN": "暮尘蛾(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GhostDragon",
+      "nameCN": "灵曦龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_GhostDragon_Fire",
+      "nameCN": "狱熙龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_FlowerPrince",
+      "nameCN": "夜蔓爵(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_WorldTreeDragon",
+      "nameCN": "枯星龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KabukiMan",
+      "nameCN": "燎火舞伶(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_DomeArmorDragon",
+      "nameCN": "磐甲龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_RockCheetah",
+      "nameCN": "BOSS_RockCheetah",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_ArmorWoodlouse",
+      "nameCN": "BOSS_ArmorWoodlouse",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_MexicanSalamander",
+      "nameCN": "BOSS_MexicanSalamander",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_LeafBird",
+      "nameCN": "BOSS_LeafBird",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_CuteOrca",
+      "nameCN": "BOSS_CuteOrca",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "BOSS_SnakeQueen",
+      "nameCN": "BOSS_SnakeQueen",
+      "ratio": 10.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "MimicDog",
+      "nameCN": "旺财",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_Suzaku",
+      "nameCN": "朱雀(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_GrassMammoth_Ice",
+      "nameCN": "雪猛犸(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_RedFlowerBird",
+      "nameCN": "大红呱(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_GrassMinotaur_Ice",
+      "nameCN": "冰峰陶洛斯(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_PandaGirl",
+      "nameCN": "莉芳(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_DarkScorpion",
+      "nameCN": "冥铠蝎(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_SnakeGirl",
+      "nameCN": "梅杜娜(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_MonochromeQueen",
+      "nameCN": "墨罗娜(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_KingWhale_otomo",
+      "nameCN": "奥沧鲸(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PREDATOR_WhiteShieldDragon_Quest",
+      "nameCN": "艾基鲁迦(狂暴)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ElecPanda_BossRush",
+      "nameCN": "暴电熊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_LilyQueen_BossRush",
+      "nameCN": "百合女王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_ThunderDragonMan_BossRush",
+      "nameCN": "波鲁杰克斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_Horus_BossRush",
+      "nameCN": "荷鲁斯(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlackGriffon_BossRush",
+      "nameCN": "异构格里芬(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_MoonQueen_BossRush",
+      "nameCN": "辉月伊(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_SnowTigerBeastman_BossRush",
+      "nameCN": "霜牙王(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_BlueSkyDragon_BossRush",
+      "nameCN": "霄龙(Boss)",
+      "ratio": 10.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BadCatgirl",
+      "nameCN": "妮瞅莎",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlueberryFairy",
+      "nameCN": "梅莉姆",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BrownRabbit",
+      "nameCN": "詹兔曼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ElecLion",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GoldenHorse",
+      "nameCN": "金驰兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PinkKangaroo",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "TentacleTurtle",
+      "nameCN": "盔盔仔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "TentacleTurtle_Ground",
+      "nameCN": "金盔仔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BeardedDragon",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WaterLizard",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassDragon",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Anubis",
+      "nameCN": "阿努比斯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Baphomet",
+      "nameCN": "炎魔羊",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Baphomet_Dark",
+      "nameCN": "暗魔羊",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Bastet",
+      "nameCN": "喵丝特",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Bastet_Ice",
+      "nameCN": "冰丝特",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Boar",
+      "nameCN": "草莽猪",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Carbunclo",
+      "nameCN": "翠叶鼠",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ColorfulBird",
+      "nameCN": "炸蛋鸟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Deer",
+      "nameCN": "紫霞鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Deer_Ground",
+      "nameCN": "祇岳鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DrillGame",
+      "nameCN": "碎岩龟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Eagle",
+      "nameCN": "天擒鸟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ElecPanda",
+      "nameCN": "暴电熊",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Ganesha",
+      "nameCN": "壶小象",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Garm",
+      "nameCN": "猎狼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Gorilla",
+      "nameCN": "铁拳猿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Gorilla_Ground",
+      "nameCN": "石掌猿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Hedgehog",
+      "nameCN": "电棘鼠",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Hedgehog_Ice",
+      "nameCN": "冰刺鼠",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Kirin",
+      "nameCN": "雷角马",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Kirin_Ice",
+      "nameCN": "凌角马",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Kitsunebi",
+      "nameCN": "火绒狐",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LittleBriarRose",
+      "nameCN": "荊棘魔仙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Mutant",
+      "nameCN": "秘斯媞雅",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Penguin",
+      "nameCN": "企丸丸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Penguin_Electric",
+      "nameCN": "闪丸丸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RaijinDaughter",
+      "nameCN": "雷鸣童子",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SharkKid",
+      "nameCN": "鲨小子",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SharkKid_Fire",
+      "nameCN": "红小鲨",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SheepBall",
+      "nameCN": "棉悠悠",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Umihebi",
+      "nameCN": "覆海龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Umihebi_Fire",
+      "nameCN": "腾炎龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Werewolf",
+      "nameCN": "月镰魔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WindChimes",
+      "nameCN": "吊缚灵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WindChimes_Ice",
+      "nameCN": "冰缚灵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Suzaku",
+      "nameCN": "朱雀",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Suzaku_Water",
+      "nameCN": "清雀",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FireKirin",
+      "nameCN": "火麒麟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FireKirin_Dark",
+      "nameCN": "邪麒麟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FairyDragon",
+      "nameCN": "精灵龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FairyDragon_Water",
+      "nameCN": "水灵龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SweetsSheep",
+      "nameCN": "棉花糖",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SweetsSheep_Ground",
+      "nameCN": "可可棉花糖",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WhiteTiger",
+      "nameCN": "冰棘兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Alpaca",
+      "nameCN": "美露帕",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Serpent",
+      "nameCN": "滑水蛇",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Serpent_Ground",
+      "nameCN": "流沙蛇",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DarkCrow",
+      "nameCN": "黑鸦隐士",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlueDragon",
+      "nameCN": "碧海龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlueDragon_Ice",
+      "nameCN": "碧月龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PinkCat",
+      "nameCN": "捣蛋猫",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NegativeKoala",
+      "nameCN": "瞅什魔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FengyunDeeper",
+      "nameCN": "云海鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "VolcanicMonster",
+      "nameCN": "熔岩兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "VolcanicMonster_Ice",
+      "nameCN": "寒霜兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GhostBeast",
+      "nameCN": "噬魂兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RobinHood",
+      "nameCN": "羽箭射手",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RobinHood_Ground",
+      "nameCN": "山岳射手",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LazyDragon",
+      "nameCN": "佩克龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LazyDragon_Electric",
+      "nameCN": "派克龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "AmaterasuWolf",
+      "nameCN": "苍焰狼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LizardMan",
+      "nameCN": "朋克蜥",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LizardMan_Fire",
+      "nameCN": "热血蜥",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BluePlatypus",
+      "nameCN": "冲浪鸭",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BluePlatypus_Fire",
+      "nameCN": "热浪鸭",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlackFurDragon",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BirdDragon",
+      "nameCN": "烽歌龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BirdDragon_Ice",
+      "nameCN": "霜歌龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ChickenPal",
+      "nameCN": "皮皮鸡",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlowerDinosaur",
+      "nameCN": "花冠龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlowerDinosaur_Electric",
+      "nameCN": "雷冠龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ElecCat",
+      "nameCN": "伏特喵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceHorse",
+      "nameCN": "唤冬兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceHorse_Dark",
+      "nameCN": "唤夜兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassMammoth",
+      "nameCN": "森猛犸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassMammoth_Ice",
+      "nameCN": "雪猛犸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CatVampire",
+      "nameCN": "夜幕魔蝠",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SakuraSaurus",
+      "nameCN": "连理龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SakuraSaurus_Water",
+      "nameCN": "海誓龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Horus",
+      "nameCN": "荷鲁斯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KingBahamut",
+      "nameCN": "焰煌",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KingBahamut_Dragon",
+      "nameCN": "殁殃",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BerryGoat",
+      "nameCN": "灌木羊",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceDeer",
+      "nameCN": "严冬鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlackGriffon",
+      "nameCN": "异构格里芬",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WhiteMoth",
+      "nameCN": "绸笠蛾",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WhiteMoth_Neutral",
+      "nameCN": "绢笠蛾",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CuteFox",
+      "nameCN": "玉藻狐",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FoxMage",
+      "nameCN": "焰巫狐",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FoxMage_Dark",
+      "nameCN": "幽巫狐",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PinkLizard",
+      "nameCN": "博爱蜥",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WizardOwl",
+      "nameCN": "啼卡尔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Kelpie",
+      "nameCN": "水灵儿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Kelpie_Fire",
+      "nameCN": "火灵儿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NegativeOctopus",
+      "nameCN": "勾魂鱿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NegativeOctopus_Neutral",
+      "nameCN": "蚀魂鱿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CowPal",
+      "nameCN": "波霸牛",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Yeti",
+      "nameCN": "白绒雪怪",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Yeti_Grass",
+      "nameCN": "绿苔绒怪",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "VioletFairy",
+      "nameCN": "薇莉塔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "HawkBird",
+      "nameCN": "疾风隼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlowerRabbit",
+      "nameCN": "波娜兔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LilyQueen",
+      "nameCN": "百合女王",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LilyQueen_Dark",
+      "nameCN": "黑月女王 ",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "QueenBee",
+      "nameCN": "女皇蜂",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SoldierBee",
+      "nameCN": "骑士蜂",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CatBat",
+      "nameCN": "猫蝠怪",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassPanda",
+      "nameCN": "叶胖达",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassPanda_Electric",
+      "nameCN": "雷胖达",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlameBuffalo",
+      "nameCN": "炽焰牛",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ThunderDog",
+      "nameCN": "霹雳犬",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ThunderDog_Ice",
+      "nameCN": "凛光犬",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CuteMole",
+      "nameCN": "遁地鼠",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlackMetalDragon",
+      "nameCN": "魔渊龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassRabbitMan",
+      "nameCN": "踏春兔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceFox",
+      "nameCN": "吹雪狐",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "JetDragon",
+      "nameCN": "空涡龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DreamDemon",
+      "nameCN": "寐魔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Monkey",
+      "nameCN": "新叶猿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Monkey_Ice",
+      "nameCN": "Monkey_Ice",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "Monkey_Fire",
+      "nameCN": "秋叶猿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Manticore",
+      "nameCN": "狱焰王",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Manticore_Dark",
+      "nameCN": "狱阎王",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KingAlpaca",
+      "nameCN": "君王美露帕",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KingAlpaca_Ice",
+      "nameCN": "冰帝美露帕",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PlantSlime",
+      "nameCN": "叶泥泥",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PlantSlime_Flower",
+      "nameCN": "叶泥泥(Flower)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DarkMutant",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MopBaby",
+      "nameCN": "毛掸儿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MopKing",
+      "nameCN": "毛老爹",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CatMage",
+      "nameCN": "暗巫猫",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CatMage_Fire",
+      "nameCN": "炽巫猫",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PinkRabbit",
+      "nameCN": "姬小兔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ThunderBird",
+      "nameCN": "迅雷鸟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ThunderBird_Ice",
+      "nameCN": "疾霜鸟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "HerculesBeetle",
+      "nameCN": "铠格力斯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "HerculesBeetle_Ground",
+      "nameCN": "格鲁力斯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SaintCentaur",
+      "nameCN": "圣光骑士",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NightFox",
+      "nameCN": "露娜蒂",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CaptainPenguin",
+      "nameCN": "企丸王",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CaptainPenguin_Black",
+      "nameCN": "闪丸王",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WeaselDragon",
+      "nameCN": "疾旋鼬",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WeaselDragon_Fire",
+      "nameCN": "桃旋鼬",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SkyDragon",
+      "nameCN": "天羽龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SkyDragon_Grass",
+      "nameCN": "翠羽龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "HadesBird",
+      "nameCN": "雷冥鸟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "HadesBird_Electric",
+      "nameCN": "雷鸣鸟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RedArmorBird",
+      "nameCN": "燧火鸟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Ronin",
+      "nameCN": "浪刃武士",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Ronin_Dark",
+      "nameCN": "鬼刃武士",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlyingManta",
+      "nameCN": "鲁米儿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlyingManta_Thunder",
+      "nameCN": "雷米儿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlackCentaur",
+      "nameCN": "混沌骑士",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlowerDoll",
+      "nameCN": "花丽娜",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlowerDoll_Fire",
+      "nameCN": "樱丽娜",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NaughtyCat",
+      "nameCN": "笑魇猫",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CuteButterfly",
+      "nameCN": "幻悦蝶",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DarkScorpion",
+      "nameCN": "冥铠蝎",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DarkScorpion_Ground",
+      "nameCN": "金铠蝎",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ThunderDragonMan",
+      "nameCN": "波鲁杰克斯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WoolFox",
+      "nameCN": "米露菲",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LazyCatfish",
+      "nameCN": "趴趴鲶",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LazyCatfish_Gold",
+      "nameCN": "梆梆鲶",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LavaGirl",
+      "nameCN": "融焰娘",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlameBambi",
+      "nameCN": "燎火鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NightLady",
+      "nameCN": "贝菈诺娃",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NightLady_Dark",
+      "nameCN": "贝菈露洁",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MoonQueen",
+      "nameCN": "辉月伊",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KendoFrog",
+      "nameCN": "武道蛙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KendoFrog_Dark",
+      "nameCN": "极道蛙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LeafPrincess",
+      "nameCN": "春彩娘",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MushroomDragon",
+      "nameCN": "菇咚",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MushroomDragon_Dark",
+      "nameCN": "菇波",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SmallArmadillo",
+      "nameCN": "球犰",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CandleGhost",
+      "nameCN": "恐炬灵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ScorpionMan",
+      "nameCN": "蛊刺妖",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ScorpionMan_Electric",
+      "nameCN": "电针妖",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WingGolem",
+      "nameCN": "泰锋",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WingGolem_Fire",
+      "nameCN": "丹烽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GuardianDog",
+      "nameCN": "八云犬",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SifuDog",
+      "nameCN": "汪宗师",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FeatherOstrich",
+      "nameCN": "战冠雀",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DarkAlien",
+      "nameCN": "杰诺贝达",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WhiteAlienDragon",
+      "nameCN": "杰诺路达",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "VolcanoDragon",
+      "nameCN": "流焰龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "VolcanoDragon_Ice",
+      "nameCN": "川霜龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DarkMechaDragon",
+      "nameCN": "杰诺多兰",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GhostRabbit",
+      "nameCN": "魅爱莉",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GhostRabbit_Grass",
+      "nameCN": "碧艾莉",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NightBlueHorse",
+      "nameCN": "夜冥驹",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "NightBlueHorse_Neutral",
+      "nameCN": "日耀驹",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WhiteShieldDragon",
+      "nameCN": "艾基鲁迦",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlackPuppy",
+      "nameCN": "墨丸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlackPuppy_Ice",
+      "nameCN": "冬丸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WhiteDeer",
+      "nameCN": "净世鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WhiteDeer_Dark",
+      "nameCN": "织夜鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KingWhale",
+      "nameCN": "奥沧鲸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MysteryMask",
+      "nameCN": "面惧",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "HoodGhost",
+      "nameCN": "兜兜灵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Sekhmet",
+      "nameCN": "塞赫麦特",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ElecLizard",
+      "nameCN": "电懒懒",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrimGirl",
+      "nameCN": "幽恋娜",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PurpleSpider",
+      "nameCN": "桃蛛娘",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlueThunderHorse",
+      "nameCN": "驭雷马",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RockBeast",
+      "nameCN": "磐峰兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RockBeast_Ice",
+      "nameCN": "寒峰兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "OctopusGirl",
+      "nameCN": "墨沫姬",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "OctopusGirl_Neutral",
+      "nameCN": "梦沫姬",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceNarwhal",
+      "nameCN": "凉晶鲸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceNarwhal_Fire",
+      "nameCN": "桃晶鲸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "JellyfishFairy",
+      "nameCN": "海月仙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SUMMON_DarkAlien",
+      "nameCN": "杰诺贝达(召唤)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SUMMON_DarkAlien_MAX",
+      "nameCN": "杰诺贝达(召唤)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SUMMON_WhiteAlienDragon",
+      "nameCN": "杰诺路达(召唤)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SUMMON_WhiteAlienDragon_MAX",
+      "nameCN": "杰诺路达(召唤)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Kitsunebi_Ice",
+      "nameCN": "雪绒狐",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BerryGoat_Dark",
+      "nameCN": "郁木羊",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PinkRabbit_Grass",
+      "nameCN": "艾小兔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Werewolf_Ice",
+      "nameCN": "霜镰魔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "AmaterasuWolf_Dark",
+      "nameCN": "幽焰狼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RaijinDaughter_Water",
+      "nameCN": "天阴童子",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WhiteTiger_Ground",
+      "nameCN": "金棘兽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FengyunDeeper_Electric",
+      "nameCN": "雷隐鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Horus_Water",
+      "nameCN": "伊西斯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SnowTigerBeastman",
+      "nameCN": "霜牙王",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WingGolem_Oilrig",
+      "nameCN": "泰锋(油田)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DarkAlien_Oilrig",
+      "nameCN": "杰诺贝达(油田)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Horus_Oilrig",
+      "nameCN": "荷鲁斯(油田)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Baphomet_Dark_Oilrig",
+      "nameCN": "暗魔羊(油田)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "HadesBird_Oilrig",
+      "nameCN": "雷冥鸟(油田)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LizardMan_Oilrig",
+      "nameCN": "朋克蜥(油田)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SnakeGirl",
+      "nameCN": "梅杜娜",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GhostAnglerfish",
+      "nameCN": "冥灯鱼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GhostAnglerfish_Fire",
+      "nameCN": "炙灯鱼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceWitch",
+      "nameCN": "冰姬灵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ClownRabbit",
+      "nameCN": "拉比耶尔",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LegendDeer",
+      "nameCN": "默世鹿",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LeafMomonga",
+      "nameCN": "达鼠泥",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SmallYeti",
+      "nameCN": "雪墩墩",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceCrocodile",
+      "nameCN": "肚肚鳄",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CactusDoll",
+      "nameCN": "球抱苞",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CactusDoll_Dark",
+      "nameCN": "妖抱苞",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MushroomLady",
+      "nameCN": "红菇娘",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "StuffedShark",
+      "nameCN": "布偶鲨",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "StuffedShark_Fire",
+      "nameCN": "粉粉布偶鲨",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FoxExorcist",
+      "nameCN": "昭炎狐",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceSeal",
+      "nameCN": "香草豹冰",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceSeal_Ground",
+      "nameCN": "巧克力豹冰",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CloverFairy",
+      "nameCN": "幸叶茸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ElecPomeranian",
+      "nameCN": "电汪汪",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GhostBlackCat",
+      "nameCN": "念影喵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ThiefBird",
+      "nameCN": "盗影鸦",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "OniGhostGirl",
+      "nameCN": "吓丝妮",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KingCrab",
+      "nameCN": "KingCrab",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "Plesiosaur",
+      "nameCN": "梁叶龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "TropicalOstrich",
+      "nameCN": "咕咕桑葩",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassGolem",
+      "nameCN": "双心岩傀",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassGolem_Dark",
+      "nameCN": "咒心岩傀",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SnowPeafowl",
+      "nameCN": "白真雪雀",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CubeTurtle",
+      "nameCN": "重岩龟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CubeTurtle_Neutral",
+      "nameCN": "净岩龟",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LongCat",
+      "nameCN": "喵璐璐",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "JellyfishGhost",
+      "nameCN": "海月灵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ThunderFluffyBird",
+      "nameCN": "雷云鹫",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MoonChild",
+      "nameCN": "缀夜星",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SamuraiDog",
+      "nameCN": "宗铭丸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "PoseidonOrca",
+      "nameCN": "海皇鲸",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SwordCutlassfish",
+      "nameCN": "鞘刀鱼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SwordCutlassfish_Fire",
+      "nameCN": "炼刃鱼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster001",
+      "nameCN": "绿史莱姆",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster001_Blue",
+      "nameCN": "蓝史莱姆",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster001_Red",
+      "nameCN": "红史莱姆",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster001_Purple",
+      "nameCN": "紫史莱姆",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster001_Pink",
+      "nameCN": "夜明史莱姆",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster001_Rainbow",
+      "nameCN": "彩虹史莱姆",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster002",
+      "nameCN": "附魔剑",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster003",
+      "nameCN": "洞穴蝙蝠",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaMonster003_Purple",
+      "nameCN": "夜明蝙蝠",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaBoss001",
+      "nameCN": "克苏鲁之眼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BOSS_YakushimaBoss001",
+      "nameCN": "克苏鲁之眼(Boss)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "YakushimaBoss001_Small",
+      "nameCN": "恶魔眼",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss001_Green",
+      "nameCN": "克苏鲁真眼(突袭)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Quest_Farmer03_SheepBall",
+      "nameCN": "棉悠悠(任务)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "Quest_Farmer03_PinkCat",
+      "nameCN": "捣蛋猫(任务)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GYM_ElecPanda_Otomo",
+      "nameCN": "佐伊 & 暴电熊(跟随)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RAID_YakushimaBoss001_Green_2",
+      "nameCN": "克苏鲁真眼(突袭)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MummyPal",
+      "nameCN": "缚乃伊",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KingSunfish",
+      "nameCN": "曼波王",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KingSunfish_Thunder",
+      "nameCN": "曼波皇",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MonochromeQueen",
+      "nameCN": "墨罗娜",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ElecSnail",
+      "nameCN": "电涡蜗",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ElecSnail_Fire",
+      "nameCN": "ElecSnail_Fire",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "ElecSnail_Ground",
+      "nameCN": "金涡蜗",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LanternButler",
+      "nameCN": "妖焰灯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SumoDog",
+      "nameCN": "力士獒",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "VenusFlytrap",
+      "nameCN": "颚莉丝",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "StrawHatCat",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "CandleWitch",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FluffyBird",
+      "nameCN": "雪绵啾",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FrozenBear",
+      "nameCN": "FrozenBear",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "DandelionGirl",
+      "nameCN": "蒲蒲飞芽",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "VolcanicTurtle",
+      "nameCN": "zh_Hans_Text",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "ClioneTwins",
+      "nameCN": "莉欧·莉涅",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DarkFlameFox",
+      "nameCN": "紫狐娇",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "IceVeilDragon",
+      "nameCN": "IceVeilDragon",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "RedFlowerBird",
+      "nameCN": "大红呱",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "SleeveRabbit",
+      "nameCN": "兔绣袖",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LotusDragon",
+      "nameCN": "沁莲龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlueSkyDragon",
+      "nameCN": "霄龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "BlueWoolRabbit",
+      "nameCN": "BlueWoolRabbit",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "PandaGirl",
+      "nameCN": "莉芳",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassMinotaur",
+      "nameCN": "密林陶洛斯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassMinotaur_Ice",
+      "nameCN": "冰峰陶洛斯",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "MonochromeMushroom",
+      "nameCN": "MonochromeMushroom",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "MedjedBird",
+      "nameCN": "MedjedBird",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "Mothman",
+      "nameCN": "暮尘蛾",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GhostDragon",
+      "nameCN": "灵曦龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GhostDragon_Fire",
+      "nameCN": "狱熙龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "FlowerPrince",
+      "nameCN": "夜蔓爵",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "WorldTreeDragon",
+      "nameCN": "枯星龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "KabukiMan",
+      "nameCN": "燎火舞伶",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "DomeArmorDragon",
+      "nameCN": "磐甲龙",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "RockCheetah",
+      "nameCN": "RockCheetah",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "ArmorWoodlouse",
+      "nameCN": "ArmorWoodlouse",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "MexicanSalamander",
+      "nameCN": "MexicanSalamander",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "LeafBird",
+      "nameCN": "LeafBird",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "CuteOrca",
+      "nameCN": "CuteOrca",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "SnakeQueen",
+      "nameCN": "SnakeQueen",
+      "ratio": 1.0,
+      "nameStatus": "missing"
+    },
+    {
+      "id": "PREDATOR_FlowerRabbit_Quest",
+      "nameCN": "波娜兔(狂暴)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "POLICE_ThunderDog",
+      "nameCN": "自卫队 骑士(警察)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "POLICE_HawkBird",
+      "nameCN": "自卫队 骑士(警察)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "GrassPanda_Electric_Tower",
+      "nameCN": "雷胖达(塔楼)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "LazyDragon_Electric_Tower",
+      "nameCN": "派克龙(塔楼)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "AmaterasuWolf_Dark_Quest_Friend",
+      "nameCN": "幽焰狼(任务)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    },
+    {
+      "id": "AmaterasuWolf_Dark_Quest_Enemy",
+      "nameCN": "幽焰狼(任务)",
+      "ratio": 1.0,
+      "nameStatus": "ok"
+    }
+  ]
+}

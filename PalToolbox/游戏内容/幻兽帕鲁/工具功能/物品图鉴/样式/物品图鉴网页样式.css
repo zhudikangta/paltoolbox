@@ -1,0 +1,31 @@
+.pt-web-item-page{height:100%;display:flex;flex-direction:column;overflow:hidden}
+.pt-web-item-detail-page>.pt-web-section{flex:1 1 auto;min-height:0;overflow-y:auto;padding-right:8px}
+.it-data-state{padding:22px;color:var(--pt-text-sub);text-align:center}
+.it-grid-section{flex:1 1 auto;min-height:0;overflow-y:auto}
+.it-count{font-size:12px;color:var(--pt-text-sub);margin-bottom:8px}
+.it-empty{padding:40px 0;text-align:center;color:var(--pt-text-sub);font-size:14px}
+.it-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px}
+.it-card{display:flex;gap:10px;padding:10px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.035);cursor:default}
+.it-card:hover{background:rgba(255,255,255,.06)}
+.it-card-img{width:36px;height:36px;object-fit:contain;border-radius:4px;flex-shrink:0}
+.it-card-body{min-width:0;flex:1}
+.it-card-name{font-size:13px;color:var(--pt-text-main);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.it-rarity{font-size:10px;color:var(--pt-text-sub)}
+.it-card-desc{font-size:10px;color:var(--pt-text-sub);margin-top:2px;line-height:1.4}
+.it-card-meta{font-size:10px;color:var(--pt-text-sub);margin-top:2px}
+.it-back{padding:6px 14px;border:1px solid rgba(255,255,255,.12);border-radius:6px;background:transparent;color:var(--pt-text-sub);font:inherit;font-size:12px;cursor:default;margin-bottom:12px}
+.it-back:hover{color:var(--pt-text-main);border-color:rgba(255,255,255,.25)}
+.it-detail{max-width:800px}
+.it-detail-head{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.it-detail-img{width:64px;height:64px;object-fit:contain;border-radius:6px}
+.it-detail-title h2{font-size:20px;color:var(--pt-text-main);margin:0}
+.it-detail-id{font-size:11px;color:var(--pt-text-sub);margin-top:2px}
+.it-detail-meta{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--pt-text-sub);padding:8px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:10px}
+.it-detail-desc{font-size:13px;line-height:1.6;color:var(--pt-text-sub);margin-bottom:14px}
+.it-detail-section{margin-bottom:14px}
+.it-detail-section h3{font-size:15px;font-weight:600;color:var(--pt-text-main);padding:8px 0 6px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+.it-detail-recipe{padding:6px 10px;background:rgba(255,200,100,.06);border-radius:4px;margin-bottom:4px;font-size:12px;color:var(--pt-text-sub)}
+.it-recipe-label{color:var(--pt-text-main)}
+.it-category-chips{max-height:170px;flex-wrap:wrap}
+.it-sub-divider{width:100%;height:1px;background:rgba(255,255,255,.12);margin:8px 0}
+.it-sub-chips{padding-top:2px}

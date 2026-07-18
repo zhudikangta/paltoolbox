@@ -1,0 +1,2631 @@
+{
+  "main": [
+    {
+      "id": "BP_MainQuest_PalQuestData_UnlockFasttTavel",
+      "中文标题": "启动巨鹫之像",
+      "描述": "触碰巨鹫之像，解锁快速传送",
+      "奖励": {
+        "经验": 6,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialUnlockFastTravel.BP_PalQuestBlock_TutorialUnlockFastTravel_C",
+          "name": "TutorialUnlockFastTravel"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_OpenSurvivalGuide",
+      "中文标题": "传承至今的生存知识",
+      "描述": "打开生存指南",
+      "奖励": {
+        "经验": 6,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialOpenSurvivalGuide.BP_PalQuestBlock_TutorialOpenSurvivalGuide_C",
+          "name": "TutorialOpenSurvivalGuide"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_PickupItem",
+      "中文标题": "首次收集素材",
+      "描述": "获取木材",
+      "奖励": {
+        "经验": 5,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_PickupWood.BP_PalQuestBlock_PickupWood_C",
+          "name": "PickupWood"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_WorkBench",
+      "中文标题": "工作的起点",
+      "描述": "设置原始的作业台",
+      "奖励": {
+        "经验": 8,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialBuildWorkBench.BP_PalQuestBlock_TutorialBuildWorkBench_C",
+          "name": "TutorialBuildWorkBench"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_UnlockPalSphere",
+      "中文标题": "解锁科技",
+      "描述": "解锁的科技",
+      "奖励": {
+        "经验": 8,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialUnlockPalSphere.BP_PalQuestBlock_TutorialUnlockPalSphere_C",
+          "name": "TutorialUnlockPalSphere"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CollectPalCrystal",
+      "中文标题": "帕鲁矿",
+      "描述": "获取",
+      "奖励": {
+        "经验": 10,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_PickupPalCrystal.BP_PalQuestBlock_PickupPalCrystal_C",
+          "name": "PickupPalCrystal"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CraftPalSphere",
+      "中文标题": "捕捉器具",
+      "描述": "制造",
+      "奖励": {
+        "经验": 12,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCraftPalSphere.BP_PalQuestBlock_TutorialCraftPalSphere_C",
+          "name": "TutorialCraftPalSphere"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CaptureAnyPal",
+      "中文标题": "第一只帕鲁",
+      "描述": "捕获任意帕鲁",
+      "奖励": {
+        "经验": 15,
+        "物品": [
+          {
+            "id": "PalSphere",
+            "数量": 3,
+            "中文名": "帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCapturePal.BP_PalQuestBlock_TutorialCapturePal_C",
+          "name": "TutorialCapturePal"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_UnlockPalBox",
+      "中文标题": "帕鲁终端",
+      "描述": "解锁帕鲁终端的科技",
+      "奖励": {
+        "经验": 15,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialUnlockPalBox.BP_PalQuestBlock_TutorialUnlockPalBox_C",
+          "name": "TutorialUnlockPalBox"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_TutorialBaseCamp",
+      "中文标题": "初始据点",
+      "描述": "在任意场所设置帕鲁终端",
+      "奖励": {
+        "经验": 20,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCountBaseCamp.BP_PalQuestBlock_TutorialCountBaseCamp_C",
+          "name": "TutorialCountBaseCamp"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_Worker",
+      "中文标题": "派帕鲁去工作吧",
+      "描述": "从帕鲁终端为据点配置帕鲁",
+      "奖励": {
+        "经验": 20,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCountWorker.BP_PalQuestBlock_TutorialCountWorker_C",
+          "name": "TutorialCountWorker"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_Meal",
+      "中文标题": "填饱肚子",
+      "描述": "进食任意食物",
+      "奖励": {
+        "经验": 20,
+        "物品": [
+          {
+            "id": "Berries",
+            "数量": 5,
+            "中文名": "红色野莓"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialMeal.BP_PalQuestBlock_TutorialMeal_C",
+          "name": "TutorialMeal"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_EquipArmor",
+      "中文标题": "保护自身",
+      "描述": "装备",
+      "奖励": {
+        "经验": 1460,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_EquipArmor.BP_PalQuestBlock_EquipArmor_C",
+          "name": "EquipArmor"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_UseStatusPoint",
+      "中文标题": "强化能力值",
+      "描述": "强化任意能力值",
+      "奖励": {
+        "经验": 5,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialUseStatusPoint.BP_PalQuestBlock_TutorialUseStatusPoint_C",
+          "name": "TutorialUseStatusPoint"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CaptureSheepBall_Old",
+      "中文标题": "最弱小的帕鲁",
+      "描述": "捕获5只棉悠悠",
+      "奖励": {
+        "经验": 35,
+        "物品": [
+          {
+            "id": "Wool",
+            "数量": 10,
+            "中文名": "羊毛"
+          },
+          {
+            "id": "Meat_SheepBall",
+            "数量": 5,
+            "中文名": "棉悠悠的羊肉"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCapturePal_SheepBall.BP_PalQuestBlock_TutorialCapturePal_SheepBall_C",
+          "name": "TutorialCapturePal SheepBall"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CraftShield",
+      "中文标题": "帕鲁矿的庇护",
+      "描述": "装备",
+      "奖励": {
+        "经验": 50,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_CraftShield.BP_PalQuestBlock_CraftShield_C",
+          "name": "BP PalQuestBlockraftShield"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_Glider",
+      "中文标题": "安全对策",
+      "描述": "使用",
+      "奖励": {
+        "经验": 100,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialGlider.BP_PalQuestBlock_TutorialGlider_C",
+          "name": "TutorialGlider"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_Capture30Pals",
+      "中文标题": "捕获30只任意帕鲁",
+      "描述": "",
+      "奖励": {
+        "经验": 400,
+        "物品": [
+          {
+            "id": "PalSphere",
+            "数量": 10,
+            "中文名": "帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCapturePal_Anyone.BP_PalQuestBlock_TutorialCapturePal_Anyone_C",
+          "name": "TutorialCapturePal Anyone"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_Craft_PalGear",
+      "中文标题": "伙伴技能",
+      "描述": "制作",
+      "奖励": {
+        "经验": 45,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCraft_PalGear.BP_PalQuestBlock_TutorialCraft_PalGear_C",
+          "name": "TutorialCraft PalGear"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatWildBoss",
+      "中文标题": "首次讨伐头目",
+      "描述": "击败或捕获{targetpal}",
+      "奖励": {
+        "经验": 500,
+        "物品": [
+          {
+            "id": "Fiber",
+            "数量": 20,
+            "中文名": "纤维"
+          },
+          {
+            "id": "Pal_crystal_S",
+            "数量": 20,
+            "中文名": "帕鲁矿碎块"
+          },
+          {
+            "id": "Leather",
+            "数量": 10,
+            "中文名": "皮革"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatWildBoss.BP_PalQuestBlock_TutorialDefeatWildBoss_C",
+          "name": "TutorialDefeatWildBoss"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CraftMealPouch",
+      "中文标题": "饥饿是最危险的敌人",
+      "描述": "制作",
+      "奖励": {
+        "经验": 0,
+        "物品": [
+          {
+            "id": "GenghisKhan",
+            "数量": 10,
+            "中文名": "棉悠悠成吉思汗烤肉"
+          },
+          {
+            "id": "ChickenSaute",
+            "数量": 10,
+            "中文名": "嫩煎皮皮鸡"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCraftMealPouch.BP_PalQuestBlock_TutorialCraftMealPouch_C",
+          "name": "TutorialCraftMealPouch"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatImprisonmentBoss",
+      "中文标题": "被封印的帕鲁",
+      "描述": "击败或捕获{targetpal}",
+      "奖励": {
+        "经验": 1000,
+        "物品": [
+          {
+            "id": "PalSphere_Mega",
+            "数量": 3,
+            "中文名": "高级帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatImprisonmentBoss.BP_PalQuestBlock_TutorialDefeatImprisonmentBoss_C",
+          "name": "TutorialDefeatImprisonmentBoss"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_TutorialBuildHatchingMachine",
+      "中文标题": "帕鲁蛋",
+      "描述": "在据点内设置帕鲁蛋孵化器",
+      "奖励": {
+        "经验": 550,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialBuildHatchingMachine.BP_PalQuestBlock_TutorialBuildHatchingMachine_C",
+          "name": "TutorialBuildHatchingMachine"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_TutorialBaseCampLevel",
+      "中文标题": "舒适的据点",
+      "描述": "将据点提升至7级",
+      "奖励": {
+        "经验": 1000,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialBaseCampLevel.BP_PalQuestBlock_TutorialBaseCampLevel_C",
+          "name": "TutorialBaseCampLevel"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatGrassBoss",
+      "中文标题": "少女与高塔",
+      "描述": "击败雷恩盗猎集团的高塔中的佐伊",
+      "奖励": {
+        "经验": 1200,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatGrassBoss.BP_PalQuestBlock_TutorialDefeatGrassBoss_C",
+          "name": "TutorialDefeatGrassBoss"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CaptureDeerGround",
+      "中文标题": "禁猎区",
+      "描述": "前往第一禁猎区捕获{targetpal}",
+      "奖励": {
+        "经验": 1500,
+        "物品": [
+          {
+            "id": "Rankup_1",
+            "数量": 1,
+            "中文名": "升段苹果☆1"
+          },
+          {
+            "id": "PalSphere_Giga",
+            "数量": 3,
+            "中文名": "优质帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_CaptureDeerGround.BP_PalQuestBlock_CaptureDeerGround_C",
+          "name": "BP PalQuestBlockaptureDeerGround"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatForestBoss",
+      "中文标题": "劝君莫要伤帕鲁",
+      "描述": "击败帕鲁保护团体的高塔中的莉莉",
+      "奖励": {
+        "经验": 1155,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_ForestBoss_Order.BP_MainQuestBlock_ForestBoss_Order_C",
+          "name": "ForestBoss Order"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_ForestBoss_Investigate.BP_MainQuestBlock_ForestBoss_Investigate_C",
+          "name": "ForestBoss Investigate"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_ForestBoss_Report.BP_MainQuestBlock_ForestBoss_Report_C",
+          "name": "ForestBoss Report"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_ForestBoss_Investigate_LilyHouse.BP_MainQuestBlock_ForestBoss_Investigate_LilyHouse_C",
+          "name": "ForestBoss Investigate LilyHouse"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_ForestBoss_Report_2.BP_MainQuestBlock_ForestBoss_Report_2_C",
+          "name": "ForestBoss Report 2"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatForestBoss.BP_PalQuestBlock_TutorialDefeatForestBoss_C",
+          "name": "TutorialDefeatForestBoss"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_ForestBoss_Complete.BP_MainQuestBlock_ForestBoss_Complete_C",
+          "name": "ForestBossomplete"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatVolcanoBoss",
+      "中文标题": "一心胜尽天下人",
+      "描述": "击败永炎同心会的高塔中的阿克塞尔",
+      "奖励": {
+        "经验": 3345,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VolcanoBoss_Order.BP_MainQuestBlock_VolcanoBoss_Order_C",
+          "name": "VolcanoBoss Order"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VolcanoBoss_TalkVillager.BP_MainQuestBlock_VolcanoBoss_TalkVillager_C",
+          "name": "VolcanoBoss TalkVillager"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VolcanoBoss_TalkCarrier.BP_MainQuestBlock_VolcanoBoss_TalkCarrier_C",
+          "name": "VolcanoBoss TalkCarrier"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VolcanoBoss_Report.BP_MainQuestBlock_VolcanoBoss_Report_C",
+          "name": "VolcanoBoss Report"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatVolcanoBoss.BP_PalQuestBlock_TutorialDefeatVolcanoBoss_C",
+          "name": "TutorialDefeatVolcanoBoss"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VolcanoBoss_Report_2.BP_MainQuestBlock_VolcanoBoss_Report_2_C",
+          "name": "VolcanoBoss Report 2"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatDesertBoss",
+      "中文标题": "沙域统治者",
+      "描述": "击败自卫队的高塔中的马库斯",
+      "奖励": {
+        "经验": 7302,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_Order.BP_MainQuestBlock_DesertBoss_Order_C",
+          "name": "DesertBoss Order"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_TalkResidents.BP_MainQuestBlock_DesertBoss_TalkResidents_C",
+          "name": "DesertBoss TalkResidents"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_Report.BP_MainQuestBlock_DesertBoss_Report_C",
+          "name": "DesertBoss Report"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_Investigate_Enter.BP_MainQuestBlock_DesertBoss_Investigate_Enter_C",
+          "name": "DesertBoss Investigate Enter"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_Investigate.BP_MainQuestBlock_DesertBoss_Investigate_C",
+          "name": "DesertBoss Investigate"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_Investigate_Police.BP_MainQuestBlock_DesertBoss_Investigate_Police_C",
+          "name": "DesertBoss Investigate Police"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_Investigate2.BP_MainQuestBlock_DesertBoss_Investigate2_C",
+          "name": "DesertBoss Investigate2"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_Report2.BP_MainQuestBlock_DesertBoss_Report2_C",
+          "name": "DesertBoss Report2"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatDesertBoss.BP_PalQuestBlock_TutorialDefeatDesertBoss_C",
+          "name": "TutorialDefeatDesertBoss"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DesertBoss_Report3.BP_MainQuestBlock_DesertBoss_Report3_C",
+          "name": "DesertBoss Report3"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatSnowyMountainBoss",
+      "中文标题": "帕鲁结合实验",
+      "描述": "击败基因研究部队的高塔中的维克托",
+      "奖励": {
+        "经验": 15210,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_Order.BP_MainQuestBlock_SnowBoss_Order_C",
+          "name": "SnowBoss Order"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_KillEnemy.BP_MainQuestBlock_SnowBoss_KillEnemy_C",
+          "name": "SnowBoss KillEnemy"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_SearchSphere.BP_MainQuestBlock_SnowBoss_SearchSphere_C",
+          "name": "SnowBoss SearchSphere"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_ReturnSphere.BP_MainQuestBlock_SnowBoss_ReturnSphere_C",
+          "name": "SnowBoss ReturnSphere"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_Investigate.BP_MainQuestBlock_SnowBoss_Investigate_C",
+          "name": "SnowBoss Investigate"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_Report.BP_MainQuestBlock_SnowBoss_Report_C",
+          "name": "SnowBoss Report"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_SearchResearcher.BP_MainQuestBlock_SnowBoss_SearchResearcher_C",
+          "name": "SnowBoss SearchResearcher"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_Report2.BP_MainQuestBlock_SnowBoss_Report2_C",
+          "name": "SnowBoss Report2"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatSnowyMountainBoss.BP_PalQuestBlock_TutorialDefeatSnowyMountainBoss_C",
+          "name": "TutorialDefeatSnowyMountainBoss"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SnowBoss_Report3.BP_MainQuestBlock_SnowBoss_Report3_C",
+          "name": "SnowBoss Report3"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatSakurajimaBoss",
+      "中文标题": "今宵美酒惹人醉",
+      "描述": "击败月花众的高塔中的纱夜",
+      "奖励": {
+        "经验": 21294,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SakurajimaBoss_Order.BP_MainQuestBlock_SakurajimaBoss_Order_C",
+          "name": "SakurajimaBoss Order"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SakurajimaBoss_KillEnemy.BP_MainQuestBlock_SakurajimaBoss_KillEnemy_C",
+          "name": "SakurajimaBoss KillEnemy"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SakurajimaBoss_SearchKatana.BP_MainQuestBlock_SakurajimaBoss_SearchKatana_C",
+          "name": "SakurajimaBoss SearchKatana"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SakurajimaBoss_ReturnKatana.BP_MainQuestBlock_SakurajimaBoss_ReturnKatana_C",
+          "name": "SakurajimaBoss ReturnKatana"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SakurajimaBoss_Investigate.BP_MainQuestBlock_SakurajimaBoss_Investigate_C",
+          "name": "SakurajimaBoss Investigate"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SakurajimaBoss_Report.BP_MainQuestBlock_SakurajimaBoss_Report_C",
+          "name": "SakurajimaBoss Report"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatSakurajimaBoss.BP_PalQuestBlock_TutorialDefeatSakurajimaBoss_C",
+          "name": "TutorialDefeatSakurajimaBoss"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SakurajimaBoss_Report2.BP_MainQuestBlock_SakurajimaBoss_Report2_C",
+          "name": "SakurajimaBoss Report2"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatVikingBoss",
+      "中文标题": "责任尽归此身",
+      "描述": "击败天坠之塔中的比约恩",
+      "奖励": {
+        "经验": 28899,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VikingBoss_Order.BP_MainQuestBlock_VikingBoss_Order_C",
+          "name": "VikingBoss Order"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VikingBoss_Investigate.BP_MainQuestBlock_VikingBoss_Investigate_C",
+          "name": "VikingBoss Investigate"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VikingBoss_Report.BP_MainQuestBlock_VikingBoss_Report_C",
+          "name": "VikingBoss Report"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VikingBoss_Investigate2.BP_MainQuestBlock_VikingBoss_Investigate2_C",
+          "name": "VikingBoss Investigate2"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VikingBoss_Report2.BP_MainQuestBlock_VikingBoss_Report2_C",
+          "name": "VikingBoss Report2"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialDefeatVikingBoss.BP_PalQuestBlock_TutorialDefeatVikingBoss_C",
+          "name": "TutorialDefeatVikingBoss"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_VikingBoss_Report3.BP_MainQuestBlock_VikingBoss_Report3_C",
+          "name": "VikingBoss Report3"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_TutorialStart",
+      "中文标题": "第一岛民",
+      "描述": "与巨鹫之像旁的人物对话",
+      "奖励": {
+        "经验": 6,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_TutorialStart.BP_MainQuestBlock_TutorialStart_C",
+          "name": "TutorialStart"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_BuildWorkbench",
+      "中文标题": "设置工作台",
+      "描述": "",
+      "奖励": {
+        "经验": 6,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_BuildWorkbench_Wood.BP_MainQuestBlock_BuildWorkbench_Wood_C",
+          "name": "BuildWorkbench Wood"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_BuildWorkbench_Build.BP_PalQuestBlock_BuildWorkbench_Build_C",
+          "name": "BuildWorkbench Build"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_StatusUp",
+      "中文标题": "强化属性",
+      "描述": "按下开启物品栏，\r\n强化任意能力值。",
+      "奖励": {
+        "经验": 15,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialUseStatusPoint.BP_PalQuestBlock_TutorialUseStatusPoint_C",
+          "name": "TutorialUseStatusPoint"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CatchPal",
+      "中文标题": "捕获帕鲁",
+      "描述": "",
+      "奖励": {
+        "经验": 15,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialUnlockPalSphere.BP_PalQuestBlock_TutorialUnlockPalSphere_C",
+          "name": "TutorialUnlockPalSphere"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_PickupPalCrystal.BP_PalQuestBlock_PickupPalCrystal_C",
+          "name": "PickupPalCrystal"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCraftPalSphere.BP_PalQuestBlock_TutorialCraftPalSphere_C",
+          "name": "TutorialCraftPalSphere"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCapturePal.BP_PalQuestBlock_TutorialCapturePal_C",
+          "name": "TutorialCapturePal"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_WorkPal",
+      "中文标题": "安排帕鲁工作",
+      "描述": "",
+      "奖励": {
+        "经验": 15,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialUnlockPalBox.BP_PalQuestBlock_TutorialUnlockPalBox_C",
+          "name": "TutorialUnlockPalBox"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCountBaseCamp.BP_PalQuestBlock_TutorialCountBaseCamp_C",
+          "name": "TutorialCountBaseCamp"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCountWorker.BP_PalQuestBlock_TutorialCountWorker_C",
+          "name": "TutorialCountWorker"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_EatFood",
+      "中文标题": "填饱肚子",
+      "描述": "按下键打开物品栏，\r\n再按键使用任意食物填饱肚子",
+      "奖励": {
+        "经验": 15,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialMeal.BP_PalQuestBlock_TutorialMeal_C",
+          "name": "TutorialMeal"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CaptureSheepBall_New",
+      "中文标题": "最弱小的帕鲁",
+      "描述": "捕获棉悠悠",
+      "奖励": {
+        "经验": 45,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCapturePal_SheepBall.BP_PalQuestBlock_TutorialCapturePal_SheepBall_C",
+          "name": "TutorialCapturePal SheepBall"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_PrepareEquipment",
+      "中文标题": "整理装备",
+      "描述": "",
+      "奖励": {
+        "经验": 45,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_EquipArmor.BP_PalQuestBlock_EquipArmor_C",
+          "name": "EquipArmor"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_CraftShield.BP_PalQuestBlock_CraftShield_C",
+          "name": "BP PalQuestBlockraftShield"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialGlider.BP_PalQuestBlock_TutorialGlider_C",
+          "name": "TutorialGlider"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_BeginAdventure",
+      "中文标题": "冒险的开始",
+      "描述": "向先遣队队员报告",
+      "奖励": {
+        "经验": 45,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_BeginAdventure.BP_MainQuestBlock_BeginAdventure_C",
+          "name": "BeginAdventure"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_SmallVillage",
+      "中文标题": "小型聚落",
+      "描述": "寻找小型聚落，并与村长对话",
+      "奖励": {
+        "经验": 66,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SmallVillage.BP_MainQuestBlock_SmallVillage_C",
+          "name": "SmallVillage"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CraftPalGear",
+      "中文标题": "制作帕鲁装备",
+      "描述": "解锁的科技，\r\n并在帕鲁装备制作台制作",
+      "奖励": {
+        "经验": 99,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCraftPalGear_Capture.BP_PalQuestBlock_TutorialCraftPalGear_Capture_C",
+          "name": "TutorialCraftPalGearapture"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_PalQuestBlock_TutorialCraft_PalGear.BP_PalQuestBlock_TutorialCraft_PalGear_C",
+          "name": "TutorialCraft PalGear"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_CraftPalGear_Return.BP_MainQuestBlock_CraftPalGear_Return_C",
+          "name": "BP MainQuestBlockraftPalGear Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_RayneSyndicate",
+      "中文标题": "雷恩盗猎集团",
+      "描述": "",
+      "奖励": {
+        "经验": 198,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_RayneSyndicate_Enter.BP_MainQuestBlock_RayneSyndicate_Enter_C",
+          "name": "RayneSyndicate Enter"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_RayneSyndicate_DefeatBoss.BP_MainQuestBlock_RayneSyndicate_DefeatBoss_C",
+          "name": "RayneSyndicate DefeatBoss"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_ReturnSmallVillage",
+      "中文标题": "密钥球",
+      "描述": "返回小型聚落，向村长报告",
+      "奖励": {
+        "经验": 288,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_ReturnSmallVillage.BP_MainQuestBlock_ReturnSmallVillage_C",
+          "name": "ReturnSmallVillage"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_TalkGrassBoss",
+      "中文标题": "佐伊·雷恩",
+      "描述": "去见见佐伊",
+      "奖励": {
+        "经验": 288,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_TalkGrassBoss.BP_MainQuestBlock_TalkGrassBoss_C",
+          "name": "TalkGrassBoss"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CollectKeySpheres",
+      "中文标题": "收集密钥球",
+      "描述": "集齐所有密钥球",
+      "奖励": {
+        "经验": 39546,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_CollectKeySpheres_HasItem_test.BP_MainQuestBlock_CollectKeySpheres_HasItem_test_C",
+          "name": "BP MainQuestBlockollectKeySpheres HasItem test"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_TalkSkyBoss",
+      "中文标题": "知晓天空之人",
+      "描述": "与苍璃对话",
+      "奖励": {
+        "经验": 39546,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_TalkSkyBoss.BP_MainQuestBlock_TalkSkyBoss_C",
+          "name": "TalkSkyBoss"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_TalkSkyBossAgain",
+      "中文标题": "灾厄",
+      "描述": "再次与苍璃对话",
+      "奖励": {
+        "经验": 39546,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_TalkSkyBossAgain.BP_MainQuestBlock_TalkSkyBossAgain_C",
+          "name": "TalkSkyBossAgain"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatKingWhale",
+      "中文标题": "奥沧鲸",
+      "描述": "向奥沧鲸证明实力",
+      "奖励": {
+        "经验": 63882,
+        "物品": [
+          {
+            "id": "WorkSuitability_AddTicket_Watering",
+            "数量": 1,
+            "中文名": "应用灌溉学Ⅰ"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatKingWhale_Order.BP_MainQuestBlock_DefeatKingWhale_Order_C",
+          "name": "DefeatKingWhale Order"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatKingWhale_Talk.BP_MainQuestBlock_DefeatKingWhale_Talk_C",
+          "name": "DefeatKingWhale Talk"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatKingWhale_CollectBones.BP_MainQuestBlock_DefeatKingWhale_CollectBones_C",
+          "name": "DefeatKingWhaleollectBones"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatKingWhale_CraftWhistle.BP_MainQuestBlock_DefeatKingWhale_CraftWhistle_C",
+          "name": "DefeatKingWhaleraftWhistle"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatKingWhale_Report.BP_MainQuestBlock_DefeatKingWhale_Report_C",
+          "name": "DefeatKingWhale Report"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatKingWhale_Investigate.BP_MainQuestBlock_DefeatKingWhale_Investigate_C",
+          "name": "DefeatKingWhale Investigate"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatKingWhale_Defeat.BP_MainQuestBlock_DefeatKingWhale_Defeat_C",
+          "name": "DefeatKingWhale Defeat"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatKingWhale_Report2.BP_MainQuestBlock_DefeatKingWhale_Report2_C",
+          "name": "DefeatKingWhale Report2"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_ReachWorldTree",
+      "中文标题": "前往世界树",
+      "描述": "借助奥沧鲸之力，进入世界树",
+      "奖励": {
+        "经验": 63882,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_ReachWorldTree.BP_MainQuestBlock_ReachWorldTree_C",
+          "name": "ReachWorldTree"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_TalkWorldTreeNPC",
+      "中文标题": "罪孽",
+      "描述": "与世界树内部的神秘人物对话",
+      "奖励": {
+        "经验": 102669,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_TalkWorldTreeNPC.BP_MainQuestBlock_TalkWorldTreeNPC_C",
+          "name": "TalkWorldTreeNPC"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_WorldTreeAbyss",
+      "中文标题": "被封印的灾厄",
+      "描述": "",
+      "奖励": {
+        "经验": 102669,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_WorldTreeAbyss_Reach.BP_MainQuestBlock_WorldTreeAbyss_Reach_C",
+          "name": "WorldTreeAbyss Reach"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Note.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Note_C",
+          "name": "DefeatWorldTreeMiddleBoss Note"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat_C",
+          "name": "DefeatWorldTreeMiddleBoss Defeat"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Marker_FlowerPrince.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Marker_FlowerPrince_C",
+          "name": "DefeatWorldTreeMiddleBoss Marker FlowerPrince"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Marker_BossRush.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Marker_BossRush_C",
+          "name": "DefeatWorldTreeMiddleBoss Marker BossRush"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat_FlowerPrince.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat_FlowerPrince_C",
+          "name": "DefeatWorldTreeMiddleBoss Defeat FlowerPrince"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat_Mothman.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat_Mothman_C",
+          "name": "DefeatWorldTreeMiddleBoss Defeat Mothman"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat_BossRush.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat_BossRush_C",
+          "name": "DefeatWorldTreeMiddleBoss Defeat BossRush"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Return.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Return_C",
+          "name": "DefeatWorldTreeMiddleBoss Return"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_WorldTreeAbyss_Reach_2.BP_MainQuestBlock_WorldTreeAbyss_Reach_2_C",
+          "name": "WorldTreeAbyss Reach 2"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_WorldTreeAbyss_Unseal.BP_MainQuestBlock_WorldTreeAbyss_Unseal_C",
+          "name": "WorldTreeAbyss Unseal"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatWorldTreeDragon",
+      "中文标题": "苏醒",
+      "描述": "为噩梦般的灾厄画上休止符",
+      "奖励": {
+        "经验": 143736,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeDragon.BP_MainQuestBlock_DefeatWorldTreeDragon_C",
+          "name": "DefeatWorldTreeDragon"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_CraftTools",
+      "中文标题": "制作斧头和十字镐",
+      "描述": "",
+      "奖励": {
+        "经验": 15,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_CraftTools_PickupStone.BP_MainQuestBlock_CraftTools_PickupStone_C",
+          "name": "BP MainQuestBlockraftTools PickupStone"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_CraftTools_CraftAxe.BP_MainQuestBlock_CraftTools_CraftAxe_C",
+          "name": "BP MainQuestBlockraftToolsraftAxe"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_CraftTools_CraftPickaxe.BP_MainQuestBlock_CraftTools_CraftPickaxe_C",
+          "name": "BP MainQuestBlockraftToolsraftPickaxe"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatSkyIslandBoss",
+      "中文标题": "望穿秋水，盼得春来",
+      "描述": "",
+      "奖励": {
+        "经验": 39546,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SkyIslandBoss_Order.BP_MainQuestBlock_SkyIslandBoss_Order_C",
+          "name": "SkyIslandBoss Order"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_QuestBlock_UnlockAreaBarriers.BP_QuestBlock_UnlockAreaBarriers_C",
+          "name": "BP QuestBlock UnlockAreaBarriers"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_QuestBlock_UnlockAreaBarrier_1.BP_QuestBlock_UnlockAreaBarrier_1_C",
+          "name": "BP QuestBlock UnlockAreaBarrier 1"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_QuestBlock_UnlockAreaBarrier_2.BP_QuestBlock_UnlockAreaBarrier_2_C",
+          "name": "BP QuestBlock UnlockAreaBarrier 2"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_QuestBlock_UnlockAreaBarrier_3.BP_QuestBlock_UnlockAreaBarrier_3_C",
+          "name": "BP QuestBlock UnlockAreaBarrier 3"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_QuestBlock_UnlockAreaBarrier_4.BP_QuestBlock_UnlockAreaBarrier_4_C",
+          "name": "BP QuestBlock UnlockAreaBarrier 4"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_QuestBlock_UnlockAreaBarrier_5.BP_QuestBlock_UnlockAreaBarrier_5_C",
+          "name": "BP QuestBlock UnlockAreaBarrier 5"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_QuestBlock_UnlockAreaBarrier_6.BP_QuestBlock_UnlockAreaBarrier_6_C",
+          "name": "BP QuestBlock UnlockAreaBarrier 6"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SkyIslandBoss_Report.BP_MainQuestBlock_SkyIslandBoss_Report_C",
+          "name": "SkyIslandBoss Report"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SkyIslandBoss_DefeatBoss.BP_MainQuestBlock_SkyIslandBoss_DefeatBoss_C",
+          "name": "SkyIslandBoss DefeatBoss"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_SkyIslandBoss_Report2.BP_MainQuestBlock_SkyIslandBoss_Report2_C",
+          "name": "SkyIslandBoss Report2"
+        }
+      ]
+    },
+    {
+      "id": "BP_MainQuest_DefeatWorldTreeMiddleBoss",
+      "中文标题": "通往深渊之路",
+      "描述": "",
+      "奖励": {
+        "经验": 102669,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Note.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Note_C",
+          "name": "DefeatWorldTreeMiddleBoss Note"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Defeat_C",
+          "name": "DefeatWorldTreeMiddleBoss Defeat"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/MainQuest/Block/BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Return.BP_MainQuestBlock_DefeatWorldTreeMiddleBoss_Return_C",
+          "name": "DefeatWorldTreeMiddleBoss Return"
+        }
+      ]
+    }
+  ],
+  "sub": [
+    {
+      "id": "BP_SubQuest_Farmer01",
+      "中文标题": "帕鲁的恩惠",
+      "描述": "",
+      "奖励": {
+        "经验": 240,
+        "物品": [
+          {
+            "id": "Fruit__defense_01",
+            "数量": 1,
+            "中文名": "坚壁之果"
+          },
+          {
+            "id": "PalSphere_Mega",
+            "数量": 5,
+            "中文名": "高级帕鲁球"
+          },
+          {
+            "id": "Money",
+            "数量": 2000,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Farmer01_DeliveryPal.BP_SubQuestBlock_Farmer01_DeliveryPal_C",
+          "name": "Farmer01 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Farmer02",
+      "中文标题": "招募吃货！",
+      "描述": "",
+      "奖励": {
+        "经验": 330,
+        "物品": [
+          {
+            "id": "Cake",
+            "数量": 3,
+            "中文名": "蛋糕"
+          },
+          {
+            "id": "Fruit_attack_01",
+            "数量": 1,
+            "中文名": "刚力之果"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Farmer02_DisplayPal.BP_SubQuestBlock_Farmer02_DisplayPal_C",
+          "name": "Farmer02 DisplayPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Farmer03",
+      "中文标题": "特制料理",
+      "描述": "",
+      "奖励": {
+        "经验": 280,
+        "物品": [
+          {
+            "id": "Cheeseburger_2",
+            "数量": 5,
+            "中文名": "波霸牛芝士汉堡"
+          },
+          {
+            "id": "Money",
+            "数量": 2500,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Farmer03_DeliveryItem.BP_SubQuestBlock_Farmer03_DeliveryItem_C",
+          "name": "Farmer03 DeliveryItem"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Farmer03_Return.BP_SubQuestBlock_Farmer03_Return_C",
+          "name": "Farmer03 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Farmer04",
+      "中文标题": "天价医疗费",
+      "描述": "",
+      "奖励": {
+        "经验": 530,
+        "物品": [
+          {
+            "id": "Fruit_hp_01",
+            "数量": 1,
+            "中文名": "生命之果"
+          },
+          {
+            "id": "PalSphere_Mega",
+            "数量": 5,
+            "中文名": "高级帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Farmer04_DeliveryItem.BP_SubQuestBlock_Farmer04_DeliveryItem_C",
+          "name": "Farmer04 DeliveryItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Scholar01",
+      "中文标题": "证明传说！",
+      "描述": "",
+      "奖励": {
+        "经验": 25350,
+        "物品": [
+          {
+            "id": "WorkSuitability_AddTicket_Handcraft",
+            "数量": 1,
+            "中文名": "应用手工学Ⅰ"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Scholar01_DisplayPal.BP_SubQuestBlock_Scholar01_DisplayPal_C",
+          "name": "Scholar01 DisplayPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Scholar02",
+      "中文标题": "干劲开关",
+      "描述": "",
+      "奖励": {
+        "经验": 12170,
+        "物品": [
+          {
+            "id": "WorkSuitability_AddTicket_Cool",
+            "数量": 1,
+            "中文名": "应用制冷学Ⅰ"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Scholar02_DeliveryPal.BP_SubQuestBlock_Scholar02_DeliveryPal_C",
+          "name": "Scholar02 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Scholar03",
+      "中文标题": "冲浪鸭研究",
+      "描述": "",
+      "奖励": {
+        "经验": 940,
+        "物品": [
+          {
+            "id": "WorkSuitability_AddTicket_Collection",
+            "数量": 1,
+            "中文名": "应用采集学Ⅰ"
+          },
+          {
+            "id": "Homeward",
+            "数量": 3,
+            "中文名": "归途雷云"
+          },
+          {
+            "id": "Money",
+            "数量": 3500,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Scholar03_DeliveryPal.BP_SubQuestBlock_Scholar03_DeliveryPal_C",
+          "name": "Scholar03 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Scholar04",
+      "中文标题": "探测金属",
+      "描述": "",
+      "奖励": {
+        "经验": 25350,
+        "物品": [
+          {
+            "id": "WorkSuitability_AddTicket_Mining",
+            "数量": 1,
+            "中文名": "应用挖矿学Ⅰ"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Scholar04_DeliveryItem.BP_SubQuestBlock_Scholar04_DeliveryItem_C",
+          "name": "Scholar04 DeliveryItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Breeder01",
+      "中文标题": "配种的第一步",
+      "描述": "",
+      "奖励": {
+        "经验": 1925,
+        "物品": [
+          {
+            "id": "Rankup_1",
+            "数量": 1,
+            "中文名": "升段苹果☆1"
+          },
+          {
+            "id": "Medicines",
+            "数量": 5,
+            "中文名": "药品"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Breeder01_DeliveryItem.BP_SubQuestBlock_Breeder01_DeliveryItem_C",
+          "name": "Breeder01 DeliveryItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Breeder02",
+      "中文标题": "最后一次赏花",
+      "描述": "",
+      "奖励": {
+        "经验": 25350,
+        "物品": [
+          {
+            "id": "Rankup_3",
+            "数量": 1,
+            "中文名": "升段苹果☆3"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Breeder02_DeliveryItem.BP_SubQuestBlock_Breeder02_DeliveryItem_C",
+          "name": "Breeder02 DeliveryItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Breeder03",
+      "中文标题": "教训帕鲁强盗！",
+      "描述": "",
+      "奖励": {
+        "经验": 12170,
+        "物品": [
+          {
+            "id": "Rankup_2",
+            "数量": 1,
+            "中文名": "升段苹果☆2"
+          },
+          {
+            "id": "Potion_High",
+            "数量": 10,
+            "中文名": "高品质恢复药"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Breeder03_FindQuestItem.BP_SubQuestBlock_Breeder03_FindQuestItem_C",
+          "name": "Breeder03 FindQuestItem"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Breeder03_DeliveryItem.BP_SubQuestBlock_Breeder03_DeliveryItem_C",
+          "name": "Breeder03 DeliveryItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Breeder04",
+      "中文标题": "幽恋娜繁育计划",
+      "描述": "",
+      "奖励": {
+        "经验": 35490,
+        "物品": [
+          {
+            "id": "Cake04",
+            "数量": 10,
+            "中文名": "豪华蔬菜蛋糕"
+          },
+          {
+            "id": "Cake05",
+            "数量": 5,
+            "中文名": "特制蛋糕"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Breeder04_DeliveryPal.BP_SubQuestBlock_Breeder04_DeliveryPal_C",
+          "name": "Breeder04 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Ranger01",
+      "中文标题": "狩猎所需之物",
+      "描述": "",
+      "奖励": {
+        "经验": 17745,
+        "物品": [
+          {
+            "id": "Elixir_workspeed_02",
+            "数量": 1,
+            "中文名": "勤勉灵药"
+          },
+          {
+            "id": "PalSphere_Legend",
+            "数量": 5,
+            "中文名": "传奇帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Ranger01_DeliveryPal.BP_SubQuestBlock_Ranger01_DeliveryPal_C",
+          "name": "Ranger01 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Ranger02",
+      "中文标题": "逃犯",
+      "描述": "",
+      "奖励": {
+        "经验": 12170,
+        "物品": [
+          {
+            "id": "Elixir_hp_02",
+            "数量": 1,
+            "中文名": "命脉灵药"
+          },
+          {
+            "id": "PalSphere_Legend",
+            "数量": 5,
+            "中文名": "传奇帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Ranger02_KillEnemy.BP_SubQuestBlock_Ranger02_KillEnemy_C",
+          "name": "Ranger02 KillEnemy"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Ranger02_Return.BP_SubQuestBlock_Ranger02_Return_C",
+          "name": "Ranger02 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Ranger03",
+      "中文标题": "巨大伊西斯",
+      "描述": "",
+      "奖励": {
+        "经验": 35490,
+        "物品": [
+          {
+            "id": "Elixir_attack_02",
+            "数量": 1,
+            "中文名": "猛击灵药"
+          },
+          {
+            "id": "PalSphere_Ultimate",
+            "数量": 5,
+            "中文名": "究极帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Ranger03_KillEnemy.BP_SubQuestBlock_Ranger03_KillEnemy_C",
+          "name": "Ranger03 KillEnemy"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Ranger03_Return.BP_SubQuestBlock_Ranger03_Return_C",
+          "name": "Ranger03 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Ranger04",
+      "中文标题": "花田采蜜",
+      "描述": "",
+      "奖励": {
+        "经验": 3550,
+        "物品": [
+          {
+            "id": "Elixir_stamina_02",
+            "数量": 1,
+            "中文名": "活力灵药"
+          },
+          {
+            "id": "PalSphere_Giga",
+            "数量": 5,
+            "中文名": "优质帕鲁球"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Ranger04_DeliveryPal.BP_SubQuestBlock_Ranger04_DeliveryPal_C",
+          "name": "Ranger04 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Nomad01",
+      "中文标题": "上山容易下山难",
+      "描述": "",
+      "奖励": {
+        "经验": 17745,
+        "物品": [
+          {
+            "id": "Blueprint_GrenadeLauncher_3",
+            "数量": 1,
+            "中文名": "榴弹发射器设计图2"
+          },
+          {
+            "id": "Blueprint_PlasticHelmet_3",
+            "数量": 1,
+            "中文名": "塑钢头盔设计图2"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_NOmad01_DeliveryPal.BP_SubQuestBlock_NOmad01_DeliveryPal_C",
+          "name": "NOmad01 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Nomad02",
+      "中文标题": "闪亮之砂",
+      "描述": "",
+      "奖励": {
+        "经验": 25350,
+        "物品": [
+          {
+            "id": "Blueprint_FlameThrower_3",
+            "数量": 1,
+            "中文名": "火焰喷射器设计图2"
+          },
+          {
+            "id": "Blueprint_StealHelmet_3",
+            "数量": 1,
+            "中文名": "帕鲁金属头盔设计图2"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Nomad02_DeliveryItem.BP_SubQuestBlock_Nomad02_DeliveryItem_C",
+          "name": "Nomad02 DeliveryItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Nomad03",
+      "中文标题": "探寻地下城",
+      "描述": "",
+      "奖励": {
+        "经验": 940,
+        "物品": [
+          {
+            "id": "PalSphere_Mega",
+            "数量": 5,
+            "中文名": "高级帕鲁球"
+          },
+          {
+            "id": "Blueprint_FurArmor_3",
+            "数量": 1,
+            "中文名": "毛皮盔甲设计图2"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Nomad03_DeliveryPal.BP_SubQuestBlock_Nomad03_DeliveryPal_C",
+          "name": "Nomad03 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Nomad04",
+      "中文标题": "悠闲之旅",
+      "描述": "",
+      "奖励": {
+        "经验": 25350,
+        "物品": [
+          {
+            "id": "Blueprint_SemiAutoShotgun_3",
+            "数量": 1,
+            "中文名": "半自动霰弹枪设计图2"
+          },
+          {
+            "id": "Blueprint_Launcher_Default_3",
+            "数量": 1,
+            "中文名": "火箭发射器设计图2"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Nomad04_DeliveryPal.BP_SubQuestBlock_Nomad04_DeliveryPal_C",
+          "name": "Nomad04 DeliveryPal"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Zoe01",
+      "中文标题": "别以为赢了就了不起了",
+      "描述": "",
+      "奖励": {
+        "经验": 940,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Zoe01_DisplayElecpanda.BP_SubQuestBlock_Zoe01_DisplayElecpanda_C",
+          "name": "Zoe01 DisplayElecpanda"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Zoe02",
+      "中文标题": "我才不信任你",
+      "描述": "",
+      "奖励": {
+        "经验": 1015,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Zoe02_KillFPA.BP_SubQuestBlock_Zoe02_KillFPA_C",
+          "name": "Zoe02 KillFPA"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Zoe02_Return.BP_SubQuestBlock_Zoe02_Return_C",
+          "name": "Zoe02 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Zoe03",
+      "中文标题": "温暖的回忆",
+      "描述": "",
+      "奖励": {
+        "经验": 1090,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Zoe03_FindQuestItem.BP_SubQuestBlock_Zoe03_FindQuestItem_C",
+          "name": "Zoe03 FindQuestItem"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Zoe03_DeliveryQuestItem.BP_SubQuestBlock_Zoe03_DeliveryQuestItem_C",
+          "name": "Zoe03 DeliveryQuestItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Angler01",
+      "中文标题": "绝佳钓鱼日",
+      "描述": "",
+      "奖励": {
+        "经验": 940,
+        "物品": [
+          {
+            "id": "FishingBait_1",
+            "数量": 15,
+            "中文名": "简陋钓饵"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Angler01_DeliveryItem.BP_SubQuestBlock_Angler01_DeliveryItem_C",
+          "name": "Angler01 DeliveryItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_A_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_A_01.BP_SubQuestBlock_PalDisplay_A_01_C",
+          "name": "PalDisplay A 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_B_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_B_01.BP_SubQuestBlock_PalDisplay_B_01_C",
+          "name": "PalDisplay B 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_C_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_C_01.BP_SubQuestBlock_PalDisplay_C_01_C",
+          "name": "PalDisplay 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_D_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_D_01.BP_SubQuestBlock_PalDisplay_D_01_C",
+          "name": "PalDisplay D 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_E_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_E_01.BP_SubQuestBlock_PalDisplay_E_01_C",
+          "name": "PalDisplay E 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_F_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_F_01.BP_SubQuestBlock_PalDisplay_F_01_C",
+          "name": "PalDisplay F 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_G_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_G_01.BP_SubQuestBlock_PalDisplay_G_01_C",
+          "name": "PalDisplay G 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_H_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_H_01.BP_SubQuestBlock_PalDisplay_H_01_C",
+          "name": "PalDisplay H 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplay_I_01",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalDisplay_I_01.BP_SubQuestBlock_PalDisplay_I_01_C",
+          "name": "PalDisplay I 01"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalCaptureCountReward",
+      "中文标题": "聪明的猎人的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PalCaptureCountReward.BP_SubQuestBlock_PalCaptureCountReward_C",
+          "name": "PalCaptureCountReward"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_BossDefeatReward",
+      "中文标题": "老手帕鲁猎手的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_BossDefeatReward.BP_SubQuestBlock_BossDefeatReward_C",
+          "name": "BossDefeatReward"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PaldexReward",
+      "中文标题": "帕鲁生态调查员的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_PaldexReward.BP_SubQuestBlock_PaldexReward_C",
+          "name": "PaldexReward"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_RewardFood",
+      "中文标题": "傲慢的美食家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_FoodReward.BP_SubQuestBlock_FoodReward_C",
+          "name": "FoodReward"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Kigurumi01",
+      "中文标题": "你也来变成瞅什魔吧！",
+      "描述": "",
+      "奖励": {
+        "经验": 1031,
+        "物品": [
+          {
+            "id": "HeadEquip045",
+            "数量": 1,
+            "中文名": "瞅什魔头套"
+          },
+          {
+            "id": "Player_Outfit_Kigurumi001",
+            "数量": 1,
+            "中文名": "瞅什魔玩偶装"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Kigurumi01_DeliveryItem1.BP_SubQuestBlock_Kigurumi01_DeliveryItem1_C",
+          "name": "Kigurumi01 DeliveryItem1"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Zoe04",
+      "中文标题": "佐伊的帕鲁球",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Zoe04_KillFPA.BP_SubQuestBlock_Zoe04_KillFPA_C",
+          "name": "Zoe04 KillFPA"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Zoe04_Return.BP_SubQuestBlock_Zoe04_Return_C",
+          "name": "Zoe04 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Zoe_Halloween",
+      "中文标题": "万圣节快乐！",
+      "描述": "",
+      "奖励": {
+        "经验": 1031,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Zoe_Halloween_DeliveryQuestItem.BP_SubQuestBlock_Zoe_Halloween_DeliveryQuestItem_C",
+          "name": "Zoe Halloween DeliveryQuestItem"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_Kigurumi01_Replay",
+      "中文标题": "你也来变成瞅什魔吧！",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": [
+          {
+            "id": "HeadEquip045",
+            "数量": 1,
+            "中文名": "瞅什魔头套"
+          },
+          {
+            "id": "Player_Outfit_Kigurumi001",
+            "数量": 1,
+            "中文名": "瞅什魔玩偶装"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Kigurumi01_DeliveryItem1.BP_SubQuestBlock_Kigurumi01_DeliveryItem1_C",
+          "name": "Kigurumi01 DeliveryItem1"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_StrongOldMan01",
+      "中文标题": "被囚禁的冒险家",
+      "描述": "",
+      "奖励": {
+        "经验": 330,
+        "物品": [
+          {
+            "id": "Rankup_1",
+            "数量": 1,
+            "中文名": "升段苹果☆1"
+          },
+          {
+            "id": "Medicines",
+            "数量": 5,
+            "中文名": "药品"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan01_Captured.BP_SubQuestBlock_StrongOldMan01_Captured_C",
+          "name": "StrongOldMan01aptured"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan01_Release.BP_SubQuestBlock_StrongOldMan01_Release_C",
+          "name": "StrongOldMan01 Release"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan01_KillEnemy.BP_SubQuestBlock_StrongOldMan01_KillEnemy_C",
+          "name": "StrongOldMan01 KillEnemy"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan01_Return.BP_SubQuestBlock_StrongOldMan01_Return_C",
+          "name": "StrongOldMan01 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_StrongOldMan02",
+      "中文标题": "打倒通缉犯",
+      "描述": "",
+      "奖励": {
+        "经验": 17745,
+        "物品": [
+          {
+            "id": "Money",
+            "数量": 80000,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan02_KillEnemy.BP_SubQuestBlock_StrongOldMan02_KillEnemy_C",
+          "name": "StrongOldMan02 KillEnemy"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan02_Return.BP_SubQuestBlock_StrongOldMan02_Return_C",
+          "name": "StrongOldMan02 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_StrongOldMan03",
+      "中文标题": "代行者",
+      "描述": "",
+      "奖励": {
+        "经验": 48165,
+        "物品": [
+          {
+            "id": "Money",
+            "数量": 30000,
+            "中文名": "金币"
+          },
+          {
+            "id": "Elixir_attack_02",
+            "数量": 1,
+            "中文名": "猛击灵药"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan03_KillEnemy.BP_SubQuestBlock_StrongOldMan03_KillEnemy_C",
+          "name": "StrongOldMan03 KillEnemy"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan03_Return.BP_SubQuestBlock_StrongOldMan03_Return_C",
+          "name": "StrongOldMan03 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_StrongOldMan04",
+      "中文标题": "过往",
+      "描述": "",
+      "奖励": {
+        "经验": 48165,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan04_Talk.BP_SubQuestBlock_StrongOldMan04_Talk_C",
+          "name": "StrongOldMan04 Talk"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_StrongOldMan05",
+      "中文标题": "骑士的终焉",
+      "描述": "",
+      "奖励": {
+        "经验": 65910,
+        "物品": [
+          {
+            "id": "AffectionFruit_01",
+            "数量": 1,
+            "中文名": "羁绊宝桃"
+          },
+          {
+            "id": "Fruit_attack_01",
+            "数量": 3,
+            "中文名": "刚力之果"
+          },
+          {
+            "id": "Rankup_Arbitrary",
+            "数量": 1,
+            "中文名": "成熟的升段苹果"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan05_KillEnemy.BP_SubQuestBlock_StrongOldMan05_KillEnemy_C",
+          "name": "StrongOldMan05 KillEnemy"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_StrongOldMan05_Return.BP_SubQuestBlock_StrongOldMan05_Return_C",
+          "name": "StrongOldMan05 Return"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_RookieExpeditionTeam01",
+      "中文标题": "初出茅庐的调查队",
+      "描述": "",
+      "奖励": {
+        "经验": 330,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RookieExpeditionTeam01_DefeatPal.BP_SubQuestBlock_RookieExpeditionTeam01_DefeatPal_C",
+          "name": "RookieExpeditionTeam01 DefeatPal"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RookieExpeditionTeam01_Talk.BP_SubQuestBlock_RookieExpeditionTeam01_Talk_C",
+          "name": "RookieExpeditionTeam01 Talk"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_RookieExpeditionTeam02",
+      "中文标题": "萌芽",
+      "描述": "找到并击败袭击调查队的帕鲁",
+      "奖励": {
+        "经验": 5575,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RookieExpeditionTeam02_DefeatPal.BP_SubQuestBlock_RookieExpeditionTeam02_DefeatPal_C",
+          "name": "RookieExpeditionTeam02 DefeatPal"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RookieExpeditionTeam02_Search.BP_SubQuestBlock_RookieExpeditionTeam02_Search_C",
+          "name": "RookieExpeditionTeam02 Search"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RookieExpeditionTeam02_Talk.BP_SubQuestBlock_RookieExpeditionTeam02_Talk_C",
+          "name": "RookieExpeditionTeam02 Talk"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_RookieExpeditionTeam03",
+      "中文标题": "生长",
+      "描述": "交付猛击秘药",
+      "奖励": {
+        "经验": 12170,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RookieExpeditionTeam03_Medicine.BP_SubQuestBlock_RookieExpeditionTeam03_Medicine_C",
+          "name": "RookieExpeditionTeam03 Medicine"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_RookieExpeditionTeam04",
+      "中文标题": "无果之花",
+      "描述": "击败菲亚",
+      "奖励": {
+        "经验": 35490,
+        "物品": [
+          {
+            "id": "AffectionFruit_01",
+            "数量": 1,
+            "中文名": "羁绊宝桃"
+          },
+          {
+            "id": "Fruit_hp_01",
+            "数量": 3,
+            "中文名": "生命之果"
+          },
+          {
+            "id": "Rankup_Arbitrary",
+            "数量": 1,
+            "中文名": "成熟的升段苹果"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RookieExpeditionTeam04_Defeat.BP_SubQuestBlock_RookieExpeditionTeam04_Defeat_C",
+          "name": "RookieExpeditionTeam04 Defeat"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_LoneWolf01",
+      "中文标题": "黑色独狼",
+      "描述": "",
+      "奖励": {
+        "经验": 25350,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf01_Cure.BP_SubQuestBlock_LoneWolf01_Cure_C",
+          "name": "LoneWolf01ure"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf01_Feed.BP_SubQuestBlock_LoneWolf01_Feed_C",
+          "name": "LoneWolf01 Feed"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf01_CheckBag.BP_SubQuestBlock_LoneWolf01_CheckBag_C",
+          "name": "LoneWolf01heckBag"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_LoneWolf02",
+      "中文标题": "在追忆中彷徨",
+      "描述": "",
+      "奖励": {
+        "经验": 35490,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf02_Investigate.BP_SubQuestBlock_LoneWolf02_Investigate_C",
+          "name": "LoneWolf02 Investigate"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf02_Defeat.BP_SubQuestBlock_LoneWolf02_Defeat_C",
+          "name": "LoneWolf02 Defeat"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf02_CheckWolf.BP_SubQuestBlock_LoneWolf02_CheckWolf_C",
+          "name": "LoneWolf02heckWolf"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_LoneWolf03",
+      "中文标题": "无鞘之刀",
+      "描述": "",
+      "奖励": {
+        "经验": 35490,
+        "物品": [
+          {
+            "id": "AffectionFruit_01",
+            "数量": 1,
+            "中文名": "羁绊宝桃"
+          },
+          {
+            "id": "Fruit__defense_01",
+            "数量": 3,
+            "中文名": "坚壁之果"
+          },
+          {
+            "id": "Rankup_Arbitrary",
+            "数量": 1,
+            "中文名": "成熟的升段苹果"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf03_Investigate.BP_SubQuestBlock_LoneWolf03_Investigate_C",
+          "name": "LoneWolf03 Investigate"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf03_Defeat.BP_SubQuestBlock_LoneWolf03_Defeat_C",
+          "name": "LoneWolf03 Defeat"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_LoneWolf03_Report.BP_SubQuestBlock_LoneWolf03_Report_C",
+          "name": "LoneWolf03 Report"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_DeliverySulfur",
+      "中文标题": "收集",
+      "描述": "",
+      "奖励": {
+        "经验": 3550,
+        "物品": [
+          {
+            "id": "Money",
+            "数量": 3000,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Sulfur_Collect.BP_SubQuestBlock_Sulfur_Collect_C",
+          "name": "Sulfurollect"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Sulfur_Deliver.BP_SubQuestBlock_Sulfur_Deliver_C",
+          "name": "Sulfur Deliver"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_DeliveryWood_Fine",
+      "中文标题": "收集",
+      "描述": "",
+      "奖励": {
+        "经验": 3550,
+        "物品": [
+          {
+            "id": "Money",
+            "数量": 3000,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Wood_Fine_Collect.BP_SubQuestBlock_Wood_Fine_Collect_C",
+          "name": "Wood Fineollect"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Wood_Fine_Deliver.BP_SubQuestBlock_Wood_Fine_Deliver_C",
+          "name": "Wood Fine Deliver"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_DeliveryQuartz",
+      "中文标题": "收集",
+      "描述": "",
+      "奖励": {
+        "经验": 12170,
+        "物品": [
+          {
+            "id": "Money",
+            "数量": 5000,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Quartz_Collect.BP_SubQuestBlock_Quartz_Collect_C",
+          "name": "Quartzollect"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_Quartz_Deliver.BP_SubQuestBlock_Quartz_Deliver_C",
+          "name": "Quartz Deliver"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_DeliveryRainbowCrystal",
+      "中文标题": "收集",
+      "描述": "",
+      "奖励": {
+        "经验": 25350,
+        "物品": [
+          {
+            "id": "Money",
+            "数量": 10000,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RainbowCrystal_Collect.BP_SubQuestBlock_RainbowCrystal_Collect_C",
+          "name": "RainbowCrystalollect"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_RainbowCrystal_Deliver.BP_SubQuestBlock_RainbowCrystal_Deliver_C",
+          "name": "RainbowCrystal Deliver"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_DeliverySkyIslandOre",
+      "中文标题": "收集",
+      "描述": "",
+      "奖励": {
+        "经验": 48165,
+        "物品": [
+          {
+            "id": "Money",
+            "数量": 20000,
+            "中文名": "金币"
+          }
+        ]
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_SkyIslandOre_Collect.BP_SubQuestBlock_SkyIslandOre_Collect_C",
+          "name": "SkyIslandOreollect"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_SkyIslandOre_Deliver.BP_SubQuestBlock_SkyIslandOre_Deliver_C",
+          "name": "SkyIslandOre Deliver"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_HowSurviveWorldTree",
+      "中文标题": "世界树中的生存之道",
+      "描述": "",
+      "奖励": {
+        "经验": 106470,
+        "物品": []
+      },
+      "任务阶段": [
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_HowSurviveWorldTree_Wood.BP_SubQuestBlock_HowSurviveWorldTree_Wood_C",
+          "name": "HowSurviveWorldTree Wood"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_HowSurviveWorldTree_Ore.BP_SubQuestBlock_HowSurviveWorldTree_Ore_C",
+          "name": "HowSurviveWorldTree Ore"
+        },
+        {
+          "path": "/Game/Pal/Blueprint/Quest/SubQuest/Block/BP_SubQuestBlock_HowSurviveWorldTree_Report.BP_SubQuestBlock_HowSurviveWorldTree_Report_C",
+          "name": "HowSurviveWorldTree Report"
+        }
+      ]
+    },
+    {
+      "id": "BP_SubQuest_PalDisplayBase",
+      "中文标题": "帕鲁评赏家的委托",
+      "描述": "",
+      "奖励": {
+        "经验": 0,
+        "物品": []
+      },
+      "任务阶段": []
+    }
+  ]
+}

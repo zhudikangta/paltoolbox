@@ -1,0 +1,53 @@
+/* ═══════════════ 工作速度计算器布局 ═══════════════ */
+.pt-calc-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.92fr); gap: 12px; height: 100%; }
+.pt-calc-main { display: grid; gap: 12px; }
+.pt-calc-results { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+
+.pt-card--results { flex: none; min-height: 0; }
+.pt-card--ceiling { flex: none; }
+
+.pt-ceiling-fields { display: grid; gap: 8px; }
+
+.pt-form-grid { display: grid; gap: 8px; }
+.pt-form-grid--calc { grid-template-columns: 1fr; }
+.pt-input-hint { font-size: 12px; color: var(--pt-text-sub); }
+span.pt-workload-lock { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; color: var(--pt-text-sub); }
+.pt-workload-lock--locked { color: #f6d38b; }
+.pt-workload-lock--editable { color: #9dd8ff; }
+
+/* ═══════════════ 计算结果卡片 ═══════════════ */
+.pt-result-stack { display: grid; gap: 6px; }
+.pt-calc-results .pt-btn--block { margin-top: 6px; }
+
+.pt-formula-page__content h4 {
+    margin: 16px 0 8px; font-size: 15px; color: var(--pt-text-main);
+}
+
+.pt-formula-page__content h4:first-child { margin-top: 0; }
+
+.pt-formula-block {
+    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.pt-formula-block h5 {
+    margin: 0 0 4px; font-size: 13px; color: var(--pt-text-main);
+}
+
+.pt-formula-block p {
+    margin: 0; font-size: 12px; color: var(--pt-text-sub); line-height: 1.6;
+}
+
+.pt-formula-table {
+    width: 100%; font-size: 11px; border-collapse: collapse; margin-bottom: 8px;
+}
+
+.pt-formula-table td, .pt-formula-table th {
+    padding: 4px 6px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--pt-text-sub); text-align: left;
+}
+
+.pt-formula-table td:first-child, .pt-formula-table th:first-child { color: var(--pt-text-main); }
+.pt-formula-table th { color: var(--pt-text-sub); font-weight: 700; }
+
+@media (max-width: 960px) {
+    .pt-calc-layout { grid-template-columns: 1fr; }
+}

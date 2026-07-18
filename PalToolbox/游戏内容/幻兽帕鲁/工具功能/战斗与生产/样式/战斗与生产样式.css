@@ -1,0 +1,111 @@
+.pt-web-tool-page.pt-web-filter-page.cb-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 0;
+    min-height: 0;
+}
+.pt-web-tool-page.pt-web-filter-page.cb-page > .cb-filter-bar {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-height: 34px;
+    position: relative;
+    top: auto;
+    z-index: 2;
+    padding: 0 0 8px;
+}
+.cb-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+.pt-web-tool-page.pt-web-filter-page.cb-page > .cb-content-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-right: 8px;
+    scrollbar-width: none;
+}
+.pt-web-tool-page.pt-web-filter-page.cb-page > .cb-content-section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.cb-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.cb-table th,
+.cb-table td {
+    padding: 6px 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--pt-text-main);
+    vertical-align: top;
+}
+.cb-table th {
+    color: var(--pt-text-sub);
+    font-weight: 700;
+}
+.cb-row {
+    cursor: pointer;
+}
+.cb-row:hover {
+    background: rgba(40, 230, 255, 0.08);
+}
+.cb-empty,
+.cb-muted {
+    color: var(--pt-text-sub);
+}
+.cb-back {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 14px;
+    border: 1px solid rgba(40, 230, 255, 0.4);
+    border-radius: 6px;
+    background: rgba(40, 230, 255, 0.08);
+    color: var(--pt-text-main);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+.cb-back:hover {
+    background: rgba(40, 230, 255, 0.18);
+}
+.cb-detail {
+    border: 1px solid rgba(40, 230, 255, 0.25);
+    background: rgba(0, 72, 86, 0.35);
+    padding: 16px;
+}
+.cb-dname {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: var(--pt-text-main);
+}
+.cb-drow {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--pt-text-main);
+}
+.cb-dlbl {
+    color: var(--pt-text-sub);
+}
+.cb-nested-list {
+    display: grid;
+    gap: 5px;
+}
+.cb-nested-item {
+    color: var(--pt-text-main);
+    line-height: 1.45;
+}

@@ -1,0 +1,12 @@
+.pt-web-capture-page { --pt-web-page-max-width:900px; display:grid; gap:20px; max-width:900px; min-height:100%; margin:0 auto; padding:24px 28px 30px; box-sizing:border-box; }
+.cp-form { display:grid; gap:14px; padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,0.08); }
+.cp-field { display:grid; grid-template-columns:140px minmax(0,1fr); align-items:center; gap:12px; font-size:13px; color:var(--pt-text-sub); }
+.cp-range { width:100%; accent-color:rgba(var(--pt-input-accent),0.8); }
+.cp-number { width:80px; }
+.cp-result { display:flex; align-items:baseline; gap:14px; padding:16px 0; }
+.cp-result-label { font-size:14px; color:var(--pt-text-sub); }
+.cp-result-value { font-size:42px; color:var(--pt-result-value-color); line-height:1; }
+.cp-tips { display:grid; gap:12px; margin-top:8px; }
+.cp-tip { padding:14px 16px; border-bottom:1px solid rgba(255,255,255,0.06); }
+.cp-tip strong { display:block; margin-bottom:6px; font-size:13px; color:var(--pt-text-main); }
+.cp-tip p { font-size:12px; color:var(--pt-text-sub); margin:0; line-height:1.6; }

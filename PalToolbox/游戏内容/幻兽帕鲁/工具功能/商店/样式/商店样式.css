@@ -1,0 +1,135 @@
+.pt-web-tool-page.pt-web-filter-page.sh-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 0;
+    min-height: 0;
+}
+.pt-web-tool-page.pt-web-filter-page.sh-page > .sh-filter-bar {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-height: 34px;
+    position: relative;
+    top: auto;
+    z-index: 2;
+    padding: 0 0 8px;
+}
+.sh-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+.sh-search {
+    width: min(360px, 100%);
+    min-width: 220px;
+}
+.pt-web-tool-page.pt-web-filter-page.sh-page > .sh-content-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-right: 8px;
+    scrollbar-width: none;
+}
+.pt-web-tool-page.pt-web-filter-page.sh-page > .sh-content-section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.sh-subfilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 10px;
+}
+.sh-section-title {
+    margin: 0 0 8px;
+    color: var(--pt-text-main);
+    font-size: 14px;
+    font-weight: 700;
+}
+.sh-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.sh-table th,
+.sh-table td {
+    padding: 6px 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--pt-text-main);
+    vertical-align: top;
+}
+.sh-table th {
+    color: var(--pt-text-sub);
+    font-weight: 700;
+}
+.sh-row {
+    cursor: pointer;
+}
+.sh-row:hover {
+    background: rgba(40, 230, 255, 0.08);
+}
+.sh-preline {
+    white-space: normal;
+    word-break: break-word;
+}
+.sh-table--inner {
+    margin: 0;
+    background: rgba(255, 255, 255, 0.03);
+}
+.sh-table--inner th,
+.sh-table--inner td {
+    padding: 4px 6px;
+}
+.sh-muted {
+    color: var(--pt-text-sub);
+}
+.sh-empty,
+.sh-hint {
+    color: var(--pt-text-sub);
+    font-size: 13px;
+}
+.sh-back {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 14px;
+    border: 1px solid rgba(40, 230, 255, 0.4);
+    border-radius: 6px;
+    background: rgba(40, 230, 255, 0.08);
+    color: var(--pt-text-main);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+.sh-back:hover {
+    background: rgba(40, 230, 255, 0.18);
+}
+.sh-detail {
+    border: 1px solid rgba(40, 230, 255, 0.25);
+    background: rgba(0, 72, 86, 0.35);
+    padding: 16px;
+}
+.sh-dname {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: var(--pt-text-main);
+}
+.sh-drow {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--pt-text-main);
+}
+.sh-dlbl {
+    color: var(--pt-text-sub);
+}

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>帕鲁图鉴侧壁原型</title>
+    <style>
+        :root{
+            --proto-bg:#152634;
+            --proto-plate:#d9dde0;
+            --proto-plate-dark:#8e979e;
+            --proto-cube:#173b29;
+            --proto-cube-side:#092013;
+            --proto-line:#1e5e38;
+            --proto-text:#dfe8ee;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            min-height:100vh;
+            display:grid;
+            place-items:center;
+            gap:16px;
+            padding:24px;
+            background:radial-gradient(circle at 20% 10%,#31536a,#101b24 58%,#070b10);
+            color:var(--proto-text);
+            font-family:"Microsoft YaHei",system-ui,sans-serif;
+        }
+        .panel{
+            width:min(920px,100%);
+            display:grid;
+            gap:12px;
+        }
+        .note{
+            margin:0;
+            color:#c9d4da;
+            font-size:14px;
+            line-height:1.7;
+        }
+        .stage{
+            position:relative;
+            width:100%;
+            aspect-ratio:16 / 10;
+            border:1px solid rgba(255,255,255,.18);
+            border-radius:16px;
+            overflow:hidden;
+            background:rgba(0,0,0,.24);
+            box-shadow:0 18px 50px rgba(0,0,0,.38);
+        }
+        #pd-wall-prototype{
+            display:block;
+            width:100%;
+            height:100%;
+        }
+        .controls{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            padding:12px 14px;
+            border:1px solid rgba(255,255,255,.12);
+            border-radius:12px;
+            background:rgba(255,255,255,.06);
+        }
+        .controls label{
+            min-width:84px;
+            font-size:14px;
+        }
+        .controls input{
+            flex:1;
+        }
+        .controls output{
+            width:56px;
+            text-align:right;
+            font-variant-numeric:tabular-nums;
+        }
+    </style>
+</head>
+<body>
+    <main class="panel">
+        <p class="note">这是隔离原型，不接入正式图鉴。拖动画布里的正面或调整滑块，检查“多层空心圆角卡片切片”堆出的侧壁有没有黑洞、黑板、脏块。</p>
+        <section class="stage">
+            <canvas id="pd-wall-prototype" width="920" height="575"></canvas>
+        </section>
+        <div class="controls">
+            <label for="depth">抽出深度</label>
+            <input id="depth" data-role="depth" type="range" min="0" max="96" value="38">
+            <output id="depthValue">38px</output>
+        </div>
+        <div class="controls">
+            <label for="screen-position">屏幕位置</label>
+            <input id="screen-position" data-role="screen-position" type="range" min="0" max="100" value="50">
+            <output id="positionValue">50%</output>
+        </div>
+    </main>
+    <script>
+        (function(){
+            var canvas = document.getElementById('pd-wall-prototype');
+            var ctx = canvas.getContext('2d');
+            var depthInput = document.querySelector('[data-role="depth"]');
+            var positionInput = document.querySelector('[data-role="screen-position"]');
+            var depthValue = document.getElementById('depthValue');
+            var positionValue = document.getElementById('positionValue');
+            var dragging = false;
+            var startX = 0;
+            var startY = 0;
+            var startDepth = 0;
+            var startPullDirection = { x: 0, y: -1 };
+            var base = { y: 170, w: 260, h: 260, r: 24 };
+
+            function fitCanvas() {
+                var rect = canvas.getBoundingClientRect();
+                var scale = window.devicePixelRatio || 1;
+                canvas.width = Math.round(rect.width * scale);
+                canvas.height = Math.round(rect.height * scale);
+                ctx.setTransform(scale, 0, 0, scale, 0, 0);
+                drawPrototype(Number(depthInput.value));
+            }
+
+            function drawRoundedRect(pathCtx, x, y, w, h, r) {
+                var rr = Math.min(r, w / 2, h / 2);
+                pathCtx.moveTo(x + rr, y);
+                pathCtx.lineTo(x + w - rr, y);
+                pathCtx.arcTo(x + w, y, x + w, y + rr, rr);
+                pathCtx.lineTo(x + w, y + h - rr);
+                pathCtx.arcTo(x + w, y + h, x + w - rr, y + h, rr);
+                pathCtx.lineTo(x + rr, y + h);
+                pathCtx.arcTo(x, y + h, x, y + h - rr, rr);
+                pathCtx.lineTo(x, y + rr);
+                pathCtx.arcTo(x, y, x + rr, y, rr);
+                pathCtx.closePath();
+            }
+
+            function makeRoundedRectPath(x, y, w, h, r) {
+                var path = new Path2D();
+                drawRoundedRect(path, x, y, w, h, r);
+                return path;
+            }
+
+            function drawWallpaper(width, height) {
+                var g = ctx.createLinearGradient(0, 0, width, height);
+                g.addColorStop(0, '#27495d');
+                g.addColorStop(.55, '#152936');
+                g.addColorStop(1, '#07100c');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, width, height);
+                ctx.globalAlpha = .22;
+                ctx.fillStyle = '#6ebf7b';
+                for (var i = 0; i < 18; i++) {
+                    ctx.beginPath();
+                    ctx.arc((i * 83) % width, 80 + ((i * 137) % Math.max(1, height - 160)), 38 + (i % 4) * 12, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.globalAlpha = 1;
+            }
+
+            function drawPlate(back) {
+                ctx.save();
+                ctx.fillStyle = '#cfd5d9';
+                ctx.shadowColor = 'rgba(255,255,255,.45)';
+                ctx.shadowBlur = 10;
+                ctx.beginPath();
+                ctx.roundRect(back.x - 54, back.y - 54, back.w + 108, back.h + 108, 22);
+                ctx.fill();
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.beginPath();
+                drawRoundedRect(ctx, back.x, back.y, back.w, back.h, back.r);
+                ctx.fill();
+                ctx.restore();
+
+                ctx.save();
+                ctx.strokeStyle = 'rgba(255,255,255,.72)';
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                drawRoundedRect(ctx, back.x, back.y, back.w, back.h, back.r);
+                ctx.stroke();
+                ctx.strokeStyle = 'rgba(0,0,0,.35)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                drawRoundedRect(ctx, back.x + 2, back.y + 2, back.w - 4, back.h - 4, back.r - 2);
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            function drawHollowRoundedRect(target, rect, thickness, fill, alpha) {
+                target.save();
+                target.globalAlpha = alpha;
+                target.fillStyle = fill;
+                target.beginPath();
+                drawRoundedRect(target, rect.x, rect.y, rect.w, rect.h, rect.r);
+                drawRoundedRect(
+                    target,
+                    rect.x + thickness,
+                    rect.y + thickness,
+                    rect.w - thickness * 2,
+                    rect.h - thickness * 2,
+                    Math.max(0, rect.r - thickness)
+                );
+                target.fill('evenodd');
+                target.restore();
+            }
+
+            function drawStackedSideWall(back, front) {
+                var dx = back.x - front.x;
+                var dy = back.y - front.y;
+                var depth = Math.max(Math.abs(dx), Math.abs(dy));
+                var sliceCount = Math.max(1, Math.min(72, Math.ceil(depth / 1.15)));
+                var thickness = Math.max(2.4, Math.min(4.6, depth / sliceCount + 2.4));
+
+                ctx.save();
+                for (var i = sliceCount; i >= 1; i--) {
+                    var t = i / sliceCount;
+                    var rect = {
+                        x: front.x + dx * t,
+                        y: front.y + dy * t,
+                        w: front.w,
+                        h: front.h,
+                        r: front.r
+                    };
+                    var light = 1 - t;
+                    var green = Math.round(22 + light * 26);
+                    var alpha = .18 + light * .22;
+                    drawHollowRoundedRect(
+                        ctx,
+                        rect,
+                        thickness,
+                        'rgba(4,' + green + ',16,' + alpha.toFixed(3) + ')',
+                        1
+                    );
+                }
+                ctx.restore();
+            }
+
+            function drawSideWall(back, front) {
+                drawStackedSideWall(back, front);
+            }
+
+            function drawFaceCurvedEdges(face, front) {
+                var curve = 28;
+                ctx.save();
+                ctx.clip(face);
+
+                var leftShade = ctx.createLinearGradient(front.x, 0, front.x + curve, 0);
+                leftShade.addColorStop(0, 'rgba(0,0,0,.16)');
+                leftShade.addColorStop(.42, 'rgba(0,0,0,.06)');
+                leftShade.addColorStop(1, 'rgba(0,0,0,0)');
+                ctx.fillStyle = leftShade;
+                ctx.fillRect(front.x, front.y, curve, front.h);
+
+                var rightShade = ctx.createLinearGradient(front.x + front.w, 0, front.x + front.w - curve, 0);
+                rightShade.addColorStop(0, 'rgba(0,0,0,.20)');
+                rightShade.addColorStop(.45, 'rgba(0,0,0,.08)');
+                rightShade.addColorStop(1, 'rgba(0,0,0,0)');
+                ctx.fillStyle = rightShade;
+                ctx.fillRect(front.x + front.w - curve, front.y, curve, front.h);
+
+                var topShade = ctx.createLinearGradient(0, front.y, 0, front.y + curve);
+                topShade.addColorStop(0, 'rgba(0,0,0,.08)');
+                topShade.addColorStop(.48, 'rgba(0,0,0,.03)');
+                topShade.addColorStop(1, 'rgba(0,0,0,0)');
+                ctx.fillStyle = topShade;
+                ctx.fillRect(front.x, front.y, front.w, curve);
+
+                var bottomShade = ctx.createLinearGradient(0, front.y + front.h, 0, front.y + front.h - curve);
+                bottomShade.addColorStop(0, 'rgba(0,0,0,.22)');
+                bottomShade.addColorStop(.48, 'rgba(0,0,0,.08)');
+                bottomShade.addColorStop(1, 'rgba(0,0,0,0)');
+                ctx.fillStyle = bottomShade;
+                ctx.fillRect(front.x, front.y + front.h - curve, front.w, curve);
+
+                var softCenter = ctx.createRadialGradient(
+                    front.x + front.w * .45,
+                    front.y + front.h * .36,
+                    front.w * .16,
+                    front.x + front.w * .5,
+                    front.y + front.h * .48,
+                    front.w * .72
+                );
+                softCenter.addColorStop(0, 'rgba(255,255,255,.028)');
+                softCenter.addColorStop(.55, 'rgba(255,255,255,.010)');
+                softCenter.addColorStop(1, 'rgba(255,255,255,0)');
+                ctx.fillStyle = softCenter;
+                ctx.fillRect(front.x, front.y, front.w, front.h);
+
+                ctx.restore();
+            }
+
+            function drawFrontFace(front) {
+                ctx.save();
+                var face = makeRoundedRectPath(front.x, front.y, front.w, front.h, front.r);
+                var grad = ctx.createLinearGradient(front.x, front.y, front.x + front.w, front.y + front.h);
+                grad.addColorStop(0, '#244b34');
+                grad.addColorStop(.52, '#183826');
+                grad.addColorStop(1, '#0b2114');
+                ctx.fillStyle = grad;
+                ctx.fill(face);
+                drawFaceCurvedEdges(face, front);
+                ctx.fillStyle = '#dfe8ee';
+                ctx.font = '700 28px Microsoft YaHei, sans-serif';
+                ctx.fillText('圆角立方体', front.x + 30, front.y + 74);
+                ctx.font = '18px Microsoft YaHei, sans-serif';
+                ctx.globalAlpha = .82;
+                ctx.fillText('前方面最后绘制，盖住侧壁', front.x + 30, front.y + 108);
+                ctx.globalAlpha = 1;
+                ctx.restore();
+            }
+
+            function drawReference(back, front) {
+                ctx.save();
+                ctx.setLineDash([7, 7]);
+                ctx.strokeStyle = 'rgba(255,255,255,.36)';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                drawRoundedRect(ctx, back.x, back.y, back.w, back.h, back.r);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                ctx.strokeStyle = 'rgba(130,220,150,.28)';
+                ctx.beginPath();
+                ctx.moveTo(front.x + front.w, front.y + front.r);
+                ctx.lineTo(back.x + back.w, back.y + back.r);
+                ctx.moveTo(front.x + front.r, front.y + front.h);
+                ctx.lineTo(back.x + back.r, back.y + back.h);
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            function getBackRect(width) {
+                var position = Number(positionInput.value) / 100;
+                var safeGap = 150;
+                var trackWidth = Math.max(1, width - base.w - safeGap * 2);
+                return {
+                    x: safeGap + trackWidth * position,
+                    y: base.y,
+                    w: base.w,
+                    h: base.h,
+                    r: base.r
+                };
+            }
+
+            function getPullDirection(back, width) {
+                var center = back.x + back.w / 2;
+                var screenCenter = width / 2;
+                var halfTrack = Math.max(1, (width - back.w) / 2);
+                var horizontalRatio = Math.max(-1, Math.min(1, (center - screenCenter) / halfTrack));
+                return {
+                    x: horizontalRatio * .9,
+                    y: -1
+                };
+            }
+
+            function getPullVector(back, width, depth) {
+                var direction = getPullDirection(back, width);
+                return {
+                    x: depth * direction.x,
+                    y: depth * direction.y
+                };
+            }
+
+            function getDragDepthDelta(deltaX, deltaY, direction) {
+                var strength = Math.max(.0001, direction.x * direction.x + direction.y * direction.y);
+                return (deltaX * direction.x + deltaY * direction.y) / strength;
+            }
+
+            function drawPrototype(depth) {
+                var width = canvas.clientWidth;
+                var height = canvas.clientHeight;
+                var back = getBackRect(width);
+                var pull = getPullVector(back, width, depth);
+                var front = {
+                    x: back.x + pull.x,
+                    y: back.y + pull.y,
+                    w: back.w,
+                    h: back.h,
+                    r: back.r
+                };
+                depthValue.textContent = depth + 'px';
+                positionValue.textContent = positionInput.value + '%';
+                ctx.clearRect(0, 0, width, height);
+                drawWallpaper(width, height);
+                drawPlate(back);
+                drawSideWall(back, front);
+                drawFrontFace(front);
+            }
+
+            depthInput.addEventListener('input', function(){
+                drawPrototype(Number(depthInput.value));
+            });
+
+            positionInput.addEventListener('input', function(){
+                drawPrototype(Number(depthInput.value));
+            });
+
+            canvas.addEventListener('pointerdown', function(event){
+                dragging = true;
+                startX = event.clientX;
+                startY = event.clientY;
+                startDepth = Number(depthInput.value);
+                var back = getBackRect(canvas.clientWidth);
+                startPullDirection = getPullDirection(back, canvas.clientWidth);
+                canvas.setPointerCapture(event.pointerId);
+            });
+
+            canvas.addEventListener('pointermove', function(event){
+                if (!dragging) return;
+                var delta = getDragDepthDelta(event.clientX - startX, event.clientY - startY, startPullDirection);
+                var next = Math.max(0, Math.min(96, Math.round(startDepth + delta)));
+                depthInput.value = String(next);
+                drawPrototype(next);
+            });
+
+            canvas.addEventListener('pointerup', function(event){
+                dragging = false;
+                canvas.releasePointerCapture(event.pointerId);
+            });
+
+            window.addEventListener('resize', fitCanvas);
+            fitCanvas();
+        })();
+    </script>
+</body>
+</html>

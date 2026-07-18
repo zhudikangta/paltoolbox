@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PalToolbox</title>
+<link rel="stylesheet" href="../共享/视觉系统/基础样式.css">
+<link rel="stylesheet" href="../共享/视觉系统/主题样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/工作速度计算器/样式/计算器样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/工作速度计算器/样式/网页模式工作速度计算器样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/配种查询/样式/配种查询网页样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/捕获概率/样式/捕获概率网页样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/帕鲁图鉴/样式/帕鲁图鉴网页样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/物品图鉴/样式/物品图鉴网页样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/装备图鉴/样式/装备图鉴网页样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/外部库/leaflet/leaflet.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/建筑图鉴/样式/建筑图鉴网页样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/科技树/样式/科技树网页样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/经验表/样式/经验表样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/战斗与生产/样式/战斗与生产样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/商店/样式/商店样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/任务与人物/样式/任务与人物样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/事件/样式/事件样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/工作模拟/样式/工作模拟样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/掉落/样式/掉落样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/技能/样式/技能网页样式.css">
+<link rel="stylesheet" href="../游戏内容/幻兽帕鲁/工具功能/地图指南/样式/地图指南网页样式.css">
+<link rel="stylesheet" href="../运行模式/网页模式/网页样式.css">
+<link rel="stylesheet" href="./开屏门面/门面样式.css">
+<link rel="stylesheet" href="../运行模式/沉浸模式/沉浸模式样式.css">
+<link rel="stylesheet" href="../运行模式/空间模式/空间样式.css">
+<link rel="stylesheet" href="../运行模式/星图模式/星图样式.css">
+</head>
+<body>
+<main id="app">
+    <div id="dock-mode-root"></div>
+</main>
+<script src="../游戏内容/幻兽帕鲁/外部库/leaflet/leaflet.js"></script>
+<script src="../共享/视觉系统/外观/主题/主题预设表.js"></script>
+<script src="../共享/视觉系统/外观/材质/材质预设表.js"></script>
+<script src="../共享/视觉系统/外观/主题/颜色计算.js"></script>
+<script src="../共享/视觉系统/外观/主题/取色器引擎.js"></script>
+<script src="../共享/视觉系统/外观/主题/取色器面板.js"></script>
+<script src="../共享/视觉系统/外观/材质/质感引擎.js"></script>
+<script src="../共享/视觉系统/外观/材质/视觉总调度.js"></script>
+<script src="../共享/视觉系统/壁纸管理.js"></script>
+<script src="../共享/视觉系统/模式切换动画.js"></script>
+<script src="../共享/认证系统/认证管理.js"></script>
+<script src="../共享/设置系统/设置存储.js"></script>
+<script src="../共享/设置系统/视觉设置卡片.js"></script>
+<script src="../共享/设置系统/网页模式设置页.js"></script>
+<script src="../运行模式/Dock模式/工具注册表.js"></script>
+<script src="../共享/核心框架/应用状态.js"></script>
+<script src="../共享/核心框架/数据加载.js"></script>
+<script src="../共享/核心框架/跨工具索引.js"></script>
+<script>if(window.PT_CROSS_REF)PT_CROSS_REF.loadAll();</script>
+<script src="../游戏内容/幻兽帕鲁/数据包/工作速度计算器数据.js"></script>
+<script src="../游戏内容/幻兽帕鲁/数据包/物品数据.js"></script>
+<script src="../游戏内容/幻兽帕鲁/数据包/装备数据.js"></script>
+<script src="../游戏内容/幻兽帕鲁/数据包/建筑数据.js"></script>
+<script src="../游戏内容/幻兽帕鲁1.0/数据包/地图数据.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/工作速度计算器/核心/工作速度计算核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/技能/核心/技能核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/配种查询/核心/配种查询核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/捕获概率/核心/捕获概率核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/帕鲁图鉴/核心/帕鲁图鉴核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/帕鲁图鉴/通用逻辑/帕鲁图鉴通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/物品图鉴/核心/物品图鉴核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/物品图鉴/通用逻辑/物品图鉴通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/装备图鉴/核心/装备图鉴核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/装备图鉴/通用逻辑/装备图鉴通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/建筑图鉴/核心/建筑图鉴核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/建筑图鉴/通用逻辑/建筑图鉴通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/科技树/核心/科技树核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/经验表/核心/经验表核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/经验表/通用逻辑/经验表通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/经验表/网页模式适配/经验表网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/战斗与生产/核心/战斗与生产核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/战斗与生产/通用逻辑/战斗与生产通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/战斗与生产/网页模式适配/战斗与生产网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/商店/核心/商店核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/商店/通用逻辑/商店通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/商店/网页模式适配/商店网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/任务与人物/核心/任务与人物核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/任务与人物/通用逻辑/任务与人物通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/任务与人物/网页模式适配/任务与人物网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/事件/核心/事件核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/事件/通用逻辑/事件通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/事件/网页模式适配/事件网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/工作模拟/核心/工作模拟核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/工作模拟/通用逻辑/工作模拟通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/工作模拟/网页模式适配/工作模拟网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/掉落/核心/掉落核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/掉落/通用逻辑/掉落通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/掉落/网页模式适配/掉落网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/地图指南/核心/地图指南核心.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/技能/通用逻辑/技能通用.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/工作速度计算器/通用逻辑/工作速度通用逻辑.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/工作速度计算器/Dock模式适配/工作速度计算器卡片.js"></script>
+<script src="../共享/核心框架/卡片系统.js"></script>
+<script src="../共享/核心框架/自定义下拉.js"></script>
+<script src="../共享/核心框架/自绘滚动条.js"></script>
+<script src="../共享/核心框架/窗口管理.js"></script>
+<script src="../运行模式/Dock模式/模式入口.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/工作速度计算器/网页模式适配/网页模式工作速度计算器.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/配种查询/网页模式适配/配种查询网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/捕获概率/网页模式适配/捕获概率网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/帕鲁图鉴/网页模式适配/帕鲁图鉴网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/物品图鉴/网页模式适配/物品图鉴网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/装备图鉴/网页模式适配/装备图鉴网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/建筑图鉴/网页模式适配/建筑图鉴网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/科技树/网页模式适配/科技树网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/地图指南/网页模式适配/地图指南网页.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/技能/网页模式适配/技能网页.js"></script>
+<script src="../运行模式/网页模式/模式入口.js"></script>
+<script src="../游戏内容/幻兽帕鲁/工具功能/工作速度计算器/沉浸模式适配/工作速度计算器沉浸.js"></script>
+<script src="../运行模式/沉浸模式/外部库/three/three.min.js"></script>
+<script src="../运行模式/沉浸模式/沉浸配置.js"></script>
+<script src="../运行模式/沉浸模式/粒子幕墙.js"></script>
+<script src="../运行模式/沉浸模式/星图工具节点.js"></script>
+<script src="../运行模式/沉浸模式/镜头导演.js"></script>
+<script src="../运行模式/沉浸模式/后期特效.js"></script>
+<script src="../运行模式/沉浸模式/沉浸舞台.js"></script>
+<script src="../运行模式/沉浸模式/沉浸设置面板.js"></script>
+<script src="../运行模式/沉浸模式/模式入口.js"></script>
+<!-- 空间模式 -->
+<script src="../运行模式/空间模式/空间配置.js"></script>
+<script src="../运行模式/空间模式/粒子舞台.js"></script>
+<script src="../运行模式/空间模式/工具架.js"></script>
+<script src="../运行模式/空间模式/空间设置面板.js"></script>
+<script src="../运行模式/空间模式/模式入口.js"></script>
+<!-- 星图模式 -->
+<script src="../运行模式/星图模式/星图配置.js"></script>
+<script src="../运行模式/星图模式/天体系统.js"></script>
+<script src="../运行模式/星图模式/星图相机.js"></script>
+<script src="../运行模式/星图模式/星图舞台.js"></script>
+<script src="../运行模式/星图模式/星图设置面板.js"></script>
+<script src="../运行模式/星图模式/模式入口.js"></script>
+<script src="./开屏门面/门面入口.js"></script>
+</body>
+</html>
