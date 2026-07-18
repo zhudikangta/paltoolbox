@@ -127,6 +127,7 @@ var PT_MAP_WEB = (function() {
         clusterEnabled: true,
         clusterStage: 0,
         clusterUpdateToken: 0,
+        clusterResults: {},
         layersRendered: false,
         viewportOnly: false,
         deckMode: 'collapsed',
@@ -1234,25 +1235,46 @@ var PT_MAP_WEB = (function() {
         if (viewportBtn) viewportBtn.classList.toggle('command-bar__btn--active', state.viewportOnly);
     }
 
-    function getPointsInViewport() {
-        if (!state.map) return state.markers;
+    function getPaddedViewportBounds() {
+        if (!state.map) return null;
         var bounds = state.map.getBounds();
         var pad = 0.3;
         var sw = bounds.getSouthWest();
         var ne = bounds.getNorthEast();
         var latPad = (ne.lat - sw.lat) * pad;
         var lngPad = (ne.lng - sw.lng) * pad;
-        var padded = L.latLngBounds(
+        return L.latLngBounds(
             L.latLng(sw.lat - latPad, sw.lng - lngPad),
             L.latLng(ne.lat + latPad, ne.lng + lngPad)
         );
-        var visible = [];
-        for (var i = 0; i < state.markers.length; i++) {
-            if (padded.contains(state.markers[i].getLatLng())) {
-                visible.push(state.markers[i]);
-            }
+    }
+
+    function isMarkerInViewport(marker, viewportBounds) {
+        return !viewportBounds || (marker && typeof marker.getLatLng === 'function' && viewportBounds.contains(marker.getLatLng()));
+    }
+
+    function isClusterResultInViewport(cluster, viewportBounds) {
+        if (!viewportBounds || !state.map || !cluster) return true;
+        return viewportBounds.contains(state.map.unproject([cluster.px, cluster.py], NATIVE_ZOOM));
+    }
+
+    function getCachedStageClusters(type, models, mapCore) {
+        var key = getActiveMapId() + '|' + type + '|' + state.clusterStage;
+        if (Object.prototype.hasOwnProperty.call(state.clusterResults, key)) {
+            return state.clusterResults[key];
         }
-        return visible;
+        var clusters = mapCore && typeof mapCore.buildStageClusters === 'function'
+            ? mapCore.buildStageClusters(models, {
+                stage: state.clusterStage,
+                minZoom: state.map.getMinZoom(),
+                maxZoom: state.map.getMaxZoom(),
+                nativeZoom: NATIVE_ZOOM,
+                stageBreaks: CLUSTER_STAGE_BREAKS,
+                stageRadii: getClusterStageRadii(type)
+            })
+            : models.map(function(model) { return { px: model.px, py: model.py, count: 1, points: [model] }; });
+        state.clusterResults[key] = clusters;
+        return clusters;
     }
 
     function captureLayerOrigins(filter) {
@@ -1421,7 +1443,8 @@ var PT_MAP_WEB = (function() {
         var exits = opts.animate === false ? [] : captureLayerExits(shouldUpdateType);
         clearLayerGroups(shouldUpdateType);
         state.clusterStage = opts.stage == null ? getCurrentClusterStage() : opts.stage;
-        var markers = state.viewportOnly ? getPointsInViewport() : state.markers;
+        var markers = state.markers;
+        var viewportBounds = state.viewportOnly ? getPaddedViewportBounds() : null;
         var buckets = {};
         for (var i = 0; i < markers.length; i++) {
             var marker = markers[i];
@@ -1431,11 +1454,15 @@ var PT_MAP_WEB = (function() {
                 state.layerGroups[marker._ptType] = createLayerGroup();
             }
             if (isRegionLabelType(marker._ptType)) {
-                state.layerGroups[marker._ptType].addLayer(marker);
+                if (isMarkerInViewport(marker, viewportBounds)) {
+                    state.layerGroups[marker._ptType].addLayer(marker);
+                }
                 continue;
             }
             if (!shouldClusterType(marker._ptType, marker._ptCategory)) {
-                state.layerGroups[marker._ptType].addLayer(marker);
+                if (isMarkerInViewport(marker, viewportBounds)) {
+                    state.layerGroups[marker._ptType].addLayer(marker);
+                }
                 continue;
             }
             if (!buckets[marker._ptType]) buckets[marker._ptType] = [];
@@ -1444,18 +1471,10 @@ var PT_MAP_WEB = (function() {
         Object.keys(buckets).forEach(function(type) {
             var list = buckets[type];
             var models = list.map(function(marker) { return marker._ptModel; });
-            var clusters = mapCore && typeof mapCore.buildStageClusters === 'function'
-                ? mapCore.buildStageClusters(models, {
-                    stage: state.clusterStage,
-                    minZoom: state.map.getMinZoom(),
-                    maxZoom: state.map.getMaxZoom(),
-                    nativeZoom: NATIVE_ZOOM,
-                    stageBreaks: CLUSTER_STAGE_BREAKS,
-                    stageRadii: getClusterStageRadii(type)
-                })
-                : models.map(function(model) { return { px: model.px, py: model.py, count: 1, points: [model] }; });
+            var clusters = getCachedStageClusters(type, models, mapCore);
             for (var j = 0; j < clusters.length; j++) {
                 var cluster = clusters[j];
+                if (!isClusterResultInViewport(cluster, viewportBounds)) continue;
                 if (cluster.count > 1) {
                     state.layerGroups[type].addLayer(createClusterMarker(cluster, type, list[0]._ptCategory, prepared));
                 } else if (cluster.points[0] && cluster.points[0]._ptMarker) {
@@ -1787,6 +1806,7 @@ var PT_MAP_WEB = (function() {
         state.bounds = null;
         state.layersRendered = false;
         state.clusterStage = 0;
+        state.clusterResults = {};
         if (state.customWheelZoom) {
             state.customWheelZoom();
             state.customWheelZoom = null;
@@ -1862,6 +1882,7 @@ var PT_MAP_WEB = (function() {
                     case 'cluster':
                         state.clusterEnabled = !state.clusterEnabled;
                         writeClusterEnabled(state.clusterEnabled);
+                        state.clusterResults = {};
                         updateLayers();
                         updateCommandBarButtons();
                         break;
@@ -2015,6 +2036,7 @@ var PT_MAP_WEB = (function() {
 
         state.map = map;
         state.customWheelZoom = installCustomWheelZoom(map);
+        state.clusterResults = {};
         state.markers = prepared.markerModels.map(function(model) {
             return createMarker(model, map);
         });
@@ -2125,6 +2147,7 @@ var PT_MAP_WEB = (function() {
         state.map = null;
         state.layerGroups = {};
         state.markers = [];
+        state.clusterResults = {};
         state.bounds = null;
         state.hud = null;
         state.hudZoomText = null;

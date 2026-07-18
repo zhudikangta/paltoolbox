@@ -64,7 +64,9 @@ function buildStageClusters(points, options) {
 
 `buildSpatialStageClusters` 必须沿用原来的阶段半径和比例换算，只读取周围九格，按聚集团编号从小到大检查，并在中心跨格后移动编号。
 
-- [ ] **Step 2: 导出空间入口并运行核心检验**
+- [ ] **Step 2: 接回原公开入口并运行核心检验**
+
+首轮失败确认可以临时检查内部空间入口；完成红绿循环后移除只为检验添加的公开导出，最终仍只保留原有 `buildStageClusters` 公开入口，由它调用内部空间实现。
 
 Run:
 
@@ -194,4 +196,3 @@ git status --short
 ```
 
 Expected: 只有核心、核心检验、网页适配、网页调度检验和本计划发生变化，没有空白错误或无关文件。
-
