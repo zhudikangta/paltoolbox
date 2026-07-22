@@ -71,4 +71,17 @@ assert.strictEqual(missing.name, 'BOSS_SheepBall');
 assert.strictEqual(missing.icon, '');
 assert.strictEqual(missing.nameStatus, '缺中文名');
 
+core.setPartnerSkillData({
+    partnerSkills: {
+        BOSS_SheepBall: {
+            id: 'BOSS_SheepBall',
+            skillName: 'Boss茸茸盾牌',
+            description: 'Boss完整说明'
+        }
+    },
+    catalog: []
+});
+assert.strictEqual(core.getPartnerSkillDetail('BOSS_SheepBall').skillName, 'Boss茸茸盾牌', '图鉴应该按 Boss 自己的 id 读取全量事实');
+assert.strictEqual(core.getPartnerSkillDetail('BOSS_SheepBall').description, 'Boss完整说明');
+
 console.log('帕鲁图鉴核心测试通过');

@@ -297,10 +297,10 @@ var PT_PALDEX_WEB = (function() {
         var raw = p.raw || {};
         var detail = core.getPartnerSkillDetail ? core.getPartnerSkillDetail(p.id) : null;
         var rows = [];
-        rows.push(['名称', p.partnerSkill || '--']);
-        if (p.partnerSkillDescription) rows.push(['帕鲁说明', p.partnerSkillDescription]);
+        rows.push(['名称', detail && detail.skillName || p.partnerSkill || '--']);
         if (detail && detail.typeLabel) rows.push(['类型', detail.typeLabel]);
-        if (detail && detail.description) rows.push(['效果', String(detail.description).replace(/\s*\|\s*/g, '<br>')]);
+        if (detail && detail.description) rows.push(['效果', String(detail.description).replace(/\n/g, '<br>')]);
+        if (detail && detail.descriptionStatus) rows.push(['资料状态', detail.descriptionStatus]);
         if (detail && detail.values && detail.values.length) {
             rows.push(['星级数值', detail.values.map(function(value, index) {
                 return (index + 1) + '星=' + detailValue(value);
@@ -340,6 +340,8 @@ var PT_PALDEX_WEB = (function() {
             return '<img class="pd-el-img" src="' + core.getElementIconUrl(e) + '" alt="' + e.replace('属性', '') + '" title="' + e + '">';
         }).join('');
         var raw = p.raw || {};
+        var partnerDetail = core.getPartnerSkillDetail ? core.getPartnerSkillDetail(p.id) : null;
+        var partnerSkillName = partnerDetail && partnerDetail.skillName || p.partnerSkill || '--';
         var st = p.stats || {};
         var titleIdHtml = p.displayId ? ' <span style="font-size:14px;color:var(--pt-text-sub)">#' + p.displayId + '</span>' : '';
         var baseRows = [
@@ -377,7 +379,7 @@ var PT_PALDEX_WEB = (function() {
             '<div class="pd-detail-head"><img src="' + src + '" class="pd-detail-img" onerror="this.style.opacity=.3">' +
             '<div><h2>' + p.name + titleIdHtml + '</h2>' +
             '<div>' + els + '</div>' +
-            '<div class="pd-detail-partner"><strong>伙伴技能</strong> ' + p.partnerSkill + '</div></div></div>' +
+            '<div class="pd-detail-partner"><strong>伙伴技能</strong> ' + partnerSkillName + '</div></div></div>' +
             '<div class="pd-detail-desc"><strong>帕鲁背景故事</strong><p>' + detailValue(p.description) + '</p></div>' +
             '<div class="pd-habitat-bar">' + habitatHtml + '</div>' +
             '<div class="pd-detail-panels">' +

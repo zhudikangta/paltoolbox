@@ -4,12 +4,11 @@ var PT_SKILL_WEB = (function() {
     var searchComposing = false;
 
     var partnerData = null;
+    var partnerCatalogIds = [];
     var partnerLoading = false;
     var partnerLoadError = '';
     var partnerSearchQ = '';
-    var partnerPalNumber = {};
     var PARTNER_DATA_URL = '../游戏内容/幻兽帕鲁1.0/数据包/伙伴技能.json';
-    var PAL_DATA_URL = '../游戏内容/幻兽帕鲁1.0/数据包/帕鲁.json';
 
     var activeSort = 'default';
     var fruitOnly = false;
@@ -75,15 +74,21 @@ var PT_SKILL_WEB = (function() {
         var loader = (typeof window !== 'undefined' && window.PT_DATA_LOADER) ? window.PT_DATA_LOADER : null;
         if (!loader) { partnerLoadError = '加载器不可用'; return false; }
         partnerLoading = true;
-        Promise.all([
-            loader.loadJson(PARTNER_DATA_URL),
-            loader.loadJson(PAL_DATA_URL)
-        ]).then(function(results) {
-            partnerData = (results[0] && results[0].partnerSkills) ? results[0].partnerSkills : {};
-            var pals = results[1] || [];
-            partnerPalNumber = {};
-            pals.forEach(function(p) {
-                if (p.id) partnerPalNumber[p.id] = p.图鉴编号 || 9999;
+        loader.loadJson(PARTNER_DATA_URL).then(function(rawPartnerData) {
+            rawPartnerData = rawPartnerData || {};
+            var partnerFacts = rawPartnerData.partnerSkills || {};
+            var internalParameters = rawPartnerData.internalParameters || {};
+            var catalog = Array.isArray(rawPartnerData.catalog) ? rawPartnerData.catalog : Object.keys(partnerFacts).map(function(id) { return { palId: id }; });
+            partnerData = {};
+            partnerCatalogIds = [];
+            catalog.forEach(function(catalogItem) {
+                var id = typeof catalogItem === 'string' ? catalogItem : catalogItem.palId;
+                if (!id || !partnerFacts[id]) return;
+                partnerCatalogIds.push(id);
+                partnerData[id] = Object.assign({}, internalParameters[id] || {}, partnerFacts[id], {
+                    catalogCategory: catalogItem.category || partnerFacts[id].category || '',
+                    catalogReason: catalogItem.reason || ''
+                });
             });
             partnerLoading = false;
             rerender();
@@ -331,21 +336,21 @@ var PT_SKILL_WEB = (function() {
     function renderPartner() {
         if (!ensurePartnerData()) return renderLoading();
         if (!partnerData) return renderLoading();
-        var ids = Object.keys(partnerData).sort(function(a, b) {
-            var na = partnerPalNumber[a] || 99999;
-            var nb = partnerPalNumber[b] || 99999;
-            return na - nb || a.localeCompare(b);
-        });
+        var ids = partnerCatalogIds.slice();
         if (partnerSearchQ) {
             var q = partnerSearchQ.toLowerCase();
             ids = ids.filter(function(id) {
                 var p = partnerData[id];
-                return (p.nameCN || '').toLowerCase().indexOf(q) > -1 || id.toLowerCase().indexOf(q) > -1;
+                return (p.palName || p.nameCN || '').toLowerCase().indexOf(q) > -1 ||
+                    (p.skillName || '').toLowerCase().indexOf(q) > -1 ||
+                    (p.description || '').toLowerCase().indexOf(q) > -1 ||
+                    id.toLowerCase().indexOf(q) > -1;
             });
         }
         var cards = ids.map(function(id) {
             var p = partnerData[id];
-            var name = p.nameCN || id;
+            var palName = p.palName || p.nameCN || id;
+            var name = p.skillName || '--';
             var desc = p.description || '';
             var trigger = p.trigger || '';
             var cooldown = p.coolDown;
@@ -354,7 +359,7 @@ var PT_SKILL_WEB = (function() {
                 return '<span class="sk-partner-star">' + (i + 1) + '★:' + v + '</span>';
             }).join(' ') + '</div>' : '';
             return '<article class="sk-card sk-card--passive" style="border-left:4px solid #8b5cf6">' +
-                '<div class="sk-card-head"><strong>' + name + '</strong><span class="sk-id">' + id + '</span></div>' +
+                '<div class="sk-card-head"><strong>' + name + '</strong><span class="sk-id">' + palName + ' / ' + id + '</span></div>' +
                 '<div class="sk-meta">' +
                 (trigger ? '<span class="sk-tag sk-tag--trigger">' + trigger + '</span>' : '') +
                 (cooldown ? '<span class="sk-tag">冷却 ' + cooldown + 's</span>' : '') +

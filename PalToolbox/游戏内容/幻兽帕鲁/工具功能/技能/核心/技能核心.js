@@ -59,19 +59,24 @@ var PT_SKILL_CORE = (function() {
 
     function setPartnerSkillData(raw) {
         var source = raw && raw.partnerSkills ? raw.partnerSkills : {};
-        partnerSkills = Object.keys(source).map(function(id) {
+        var internal = raw && raw.internalParameters ? raw.internalParameters : {};
+        var catalog = raw && Array.isArray(raw.catalog) ? raw.catalog : Object.keys(source).map(function(id) { return { palId: id }; });
+        partnerSkills = catalog.map(function(catalogItem) {
+            var id = typeof catalogItem === 'string' ? catalogItem : catalogItem.palId;
             var item = source[id] || {};
+            var parameters = internal[id] || item;
             return {
                 id: item.id || id,
-                name: item.nameCN || item.id || id,
-                type: item.typeLabel || item.skillType || '',
-                trigger: item.trigger || '',
-                cooldown: item.coolDown,
+                name: item.skillName || item.nameCN || item.id || id,
+                palName: item.palName || item.nameCN || id,
+                category: catalogItem.category || item.category || '',
+                reason: catalogItem.reason || '',
+                type: parameters.typeLabel || parameters.skillType || '',
+                trigger: parameters.trigger || '',
+                cooldown: parameters.coolDown,
                 description: item.description || '',
-                values: item.values || []
+                values: parameters.values || []
             };
-        }).sort(function(a, b) {
-            return String(a.name).localeCompare(String(b.name));
         });
     }
 
@@ -90,6 +95,7 @@ var PT_SKILL_CORE = (function() {
         return list.filter(function(item) {
             return String(item.name || '').toLowerCase().indexOf(q) > -1 ||
                 String(item.id || '').toLowerCase().indexOf(q) > -1 ||
+                String(item.palName || '').toLowerCase().indexOf(q) > -1 ||
                 String(item.element || '').toLowerCase().indexOf(q) > -1 ||
                 String(item.type || '').toLowerCase().indexOf(q) > -1 ||
                 String(item.description || '').toLowerCase().indexOf(q) > -1;

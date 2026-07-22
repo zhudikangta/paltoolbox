@@ -1,0 +1,123 @@
+{
+  "source": "PalDB 简体中文站",
+  "retrievedAt": "2026-07-22",
+  "gameVersion": "v1.0.0",
+  "transformVersion": "1.0.0",
+  "ordinary": {
+    "url": "https://paldb.cc/cn/Partner_Skill",
+    "file": "paldb-partner-skill.html",
+    "records": 299
+  },
+  "localUnpackedParameters": {
+    "file": "本地解包伙伴技能-2026-07-06.json",
+    "retrievedAt": "2026-07-06"
+  },
+  "details": {
+    "Quest_Farmer03_PinkCat": {
+      "url": "https://paldb.cc/cn/Cattiva",
+      "file": "详情/Quest_Farmer03_PinkCat.html"
+    },
+    "GYM_Horus": {
+      "url": "https://paldb.cc/cn/PIDF_Commander_Marcus_%26_Faleris",
+      "file": "详情/GYM_Horus.html"
+    },
+    "BOSS_Sekhmet": {
+      "url": "https://paldb.cc/cn/Cutthroat_Sun_Snuffer_Sekhmet",
+      "file": "详情/BOSS_Sekhmet.html"
+    },
+    "PREDATOR_AmaterasuWolf": {
+      "url": "https://paldb.cc/cn/Rampaging_Kitsun",
+      "file": "详情/PREDATOR_AmaterasuWolf.html"
+    },
+    "PREDATOR_GhostBeast": {
+      "url": "https://paldb.cc/cn/Rampaging_Maraith",
+      "file": "详情/PREDATOR_GhostBeast.html"
+    },
+    "PREDATOR_Horus_Water": {
+      "url": "https://paldb.cc/cn/Rampaging_Faleris_Aqua",
+      "file": "详情/PREDATOR_Horus_Water.html"
+    },
+    "PREDATOR_Manticore_Dark": {
+      "url": "https://paldb.cc/cn/Rampaging_Blazehowl_Noct",
+      "file": "详情/PREDATOR_Manticore_Dark.html"
+    },
+    "PREDATOR_MushroomDragon": {
+      "url": "https://paldb.cc/cn/Rampaging_Shroomer",
+      "file": "详情/PREDATOR_MushroomDragon.html"
+    },
+    "PREDATOR_MysteryMask": {
+      "url": "https://paldb.cc/cn/Rampaging_Omascul",
+      "file": "详情/PREDATOR_MysteryMask.html"
+    },
+    "PREDATOR_ScorpionMan": {
+      "url": "https://paldb.cc/cn/Rampaging_Prixter",
+      "file": "详情/PREDATOR_ScorpionMan.html"
+    },
+    "PREDATOR_ThunderDog": {
+      "url": "https://paldb.cc/cn/Rampaging_Rayhound",
+      "file": "详情/PREDATOR_ThunderDog.html"
+    },
+    "PREDATOR_Umihebi_Fire": {
+      "url": "https://paldb.cc/cn/Rampaging_Jormuntide_Ignis",
+      "file": "详情/PREDATOR_Umihebi_Fire.html"
+    },
+    "PREDATOR_Werewolf_Ice": {
+      "url": "https://paldb.cc/cn/Rampaging_Loupmoon_Cryst",
+      "file": "详情/PREDATOR_Werewolf_Ice.html"
+    },
+    "PREDATOR_WhiteTiger_Ground": {
+      "url": "https://paldb.cc/cn/Rampaging_Cryolinx_Terra",
+      "file": "详情/PREDATOR_WhiteTiger_Ground.html"
+    },
+    "PREDATOR_Yeti": {
+      "url": "https://paldb.cc/cn/Rampaging_Wumpo",
+      "file": "详情/PREDATOR_Yeti.html"
+    },
+    "PREDATOR_HadesBird_Electric": {
+      "url": "https://paldb.cc/cn/Rampaging_Helzephyr_Lux",
+      "file": "详情/PREDATOR_HadesBird_Electric.html"
+    },
+    "PREDATOR_CandleGhost": {
+      "url": "https://paldb.cc/cn/Rampaging_Sootseer",
+      "file": "详情/PREDATOR_CandleGhost.html"
+    },
+    "RAID_DarkMechaDragon": {
+      "url": "https://paldb.cc/cn/Invader_from_Space_Xenolord",
+      "file": "详情/RAID_DarkMechaDragon.html"
+    },
+    "RAID_YakushimaBoss001_Green": {
+      "url": "https://paldb.cc/cn/True_Eye_of_Cthulhu",
+      "file": "详情/RAID_YakushimaBoss001_Green.html"
+    },
+    "RAID_YakushimaBoss002": {
+      "url": "https://paldb.cc/cn/Moon_Lord",
+      "file": "详情/RAID_YakushimaBoss002.html"
+    },
+    "RAID_YakushimaBoss002_Hand_Left": {
+      "url": "https://paldb.cc/cn/Moon_Lord",
+      "file": "详情/RAID_YakushimaBoss002_Hand_Left.html"
+    },
+    "RAID_YakushimaBoss002_Hand_Right": {
+      "url": "https://paldb.cc/cn/Moon_Lord",
+      "file": "详情/RAID_YakushimaBoss002_Hand_Right.html"
+    },
+    "RAID_YakushimaBoss002_Head": {
+      "url": "https://paldb.cc/cn/Moon_Lord",
+      "file": "详情/RAID_YakushimaBoss002_Head.html"
+    }
+  },
+  "missingSpecialRecords": [
+    "BOSS_BlackFurDragon",
+    "BOSS_DarkMutant",
+    "BOSS_ElecLion",
+    "BOSS_ElecSnail_Fire",
+    "ElecLion",
+    "PinkKangaroo",
+    "BeardedDragon",
+    "WaterLizard",
+    "GrassDragon",
+    "BlackFurDragon",
+    "DarkMutant",
+    "ElecSnail_Fire"
+  ]
+}

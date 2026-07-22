@@ -6,6 +6,7 @@ $ProgramRoot = Join-Path $SiteRoot '游戏内容\幻兽帕鲁'
 $VersionRoot = Join-Path $SiteRoot '游戏内容\幻兽帕鲁1.0'
 $DataRoot = Join-Path $VersionRoot '数据包'
 $ResourceRoot = Join-Path $VersionRoot '资源包'
+$PartnerSkillSourceRoot = Join-Path $VersionRoot '原始来源\伙伴技能'
 
 function Assert-True {
     param([bool]$Condition, [string]$Message)
@@ -105,11 +106,29 @@ foreach ($Fragment in $MapResourceFragments) {
 }
 
 $PalData = @(Get-Content -Raw -Encoding UTF8 (Join-Path $DataRoot '帕鲁.json') | ConvertFrom-Json)
+$PalRecords = @($PalData[0])
+$PartnerSkillData = Get-Content -Raw -Encoding UTF8 (Join-Path $DataRoot '伙伴技能.json') | ConvertFrom-Json
 $ItemData = @(Get-Content -Raw -Encoding UTF8 (Join-Path $DataRoot '物品.json') | ConvertFrom-Json)
 $BuildingData = @(Get-Content -Raw -Encoding UTF8 (Join-Path $DataRoot '建筑.json') | ConvertFrom-Json)
 $PalNames = Get-LowerNameSet @($PalData | ForEach-Object { $_.头像文件 })
 $ItemNames = Get-LowerNameSet @($ItemData | ForEach-Object { $_.图标文件 })
 $BuildingNames = Get-LowerNameSet @($BuildingData | ForEach-Object { $_.图标文件 })
+
+Assert-True (Test-Path -LiteralPath (Join-Path $PartnerSkillSourceRoot '来源.json') -PathType Leaf) '伙伴技能缺少原始来源清单'
+Assert-True (Test-Path -LiteralPath (Join-Path $PartnerSkillSourceRoot 'paldb-partner-skill.html') -PathType Leaf) '伙伴技能缺少 PalDB 原始列表'
+Assert-True ($PartnerSkillData.meta.source.url -eq 'https://paldb.cc/cn/Partner_Skill') '伙伴技能正式数据缺少来源 URL'
+Assert-True ($PartnerSkillData.meta.source.retrievedAt -eq '2026-07-22') '伙伴技能正式数据缺少获取日期'
+Assert-True ($PartnerSkillData.meta.source.gameVersion -eq 'v1.0.0') '伙伴技能正式数据游戏版本错误'
+Assert-True ([bool]$PartnerSkillData.meta.source.transformVersion) '伙伴技能正式数据缺少转换版本'
+Assert-True (@($PartnerSkillData.partnerSkills.PSObject.Properties).Count -eq $PalRecords.Count) '图鉴伙伴技能事实未覆盖全部帕鲁'
+Assert-True (@($PartnerSkillData.internalParameters.PSObject.Properties).Count -gt 0) '伙伴技能缺少独立解包参数区块'
+Assert-True ($PartnerSkillData.catalog.Count -gt 0) '伙伴技能缺少生成目录'
+Assert-True ($null -ne $PartnerSkillData.conflicts) '伙伴技能缺少冲突记录区块'
+$OrdinaryCatalogCount = @($PartnerSkillData.catalog | Where-Object { $_.category -eq '普通帕鲁' }).Count
+$OrdinaryPalCount = @($PalRecords | Where-Object { $_.分类 -in @('基础', '亚种', '泰拉瑞亚') }).Count
+Assert-True ($OrdinaryCatalogCount -eq $OrdinaryPalCount) '伙伴技能目录没有写全普通帕鲁'
+$DuplicateCatalog = @($PartnerSkillData.catalog | Where-Object { $_.palId -match '_2$' })
+Assert-True ($DuplicateCatalog.Count -eq 0) "伙伴技能目录混入重复 `_2 记录: $($DuplicateCatalog.palId -join ', ')"
 
 $PalCount = Assert-ExactResourceSet '帕鲁头像' (Join-Path $ResourceRoot '帕鲁头像') $PalNames
 $ItemCount = Assert-ExactResourceSet '物品图标' (Join-Path $ResourceRoot '物品图标') $ItemNames

@@ -239,7 +239,12 @@ var PT_PALDEX_CORE = (function() {
     }
 
     function setPartnerSkillData(data) {
-        partnerSkillByPalId = data && data.partnerSkills ? data.partnerSkills : {};
+        var facts = data && data.partnerSkills ? data.partnerSkills : {};
+        var internal = data && data.internalParameters ? data.internalParameters : {};
+        partnerSkillByPalId = {};
+        Object.keys(facts).forEach(function(id) {
+            partnerSkillByPalId[id] = Object.assign({}, internal[id] || {}, facts[id] || {});
+        });
     }
 
     function getSkillDetail(skillId) {
