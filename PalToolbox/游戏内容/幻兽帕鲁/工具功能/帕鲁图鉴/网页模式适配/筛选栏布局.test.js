@@ -29,18 +29,16 @@ function renderWithMainCategory(mainCategory) {
             PT_PALDEX_COMMON: {
                 MAIN_CATEGORIES: [
                     { id: 'normal', label: '普通帕鲁' },
-                    { id: 'bossVariant', label: 'Boss' }
-                ],
-                ORDINARY_SUB_CATEGORIES: [
-                    { id: 'baseVariant', label: '基础+亚种' },
-                    { id: 'terraria', label: '泰拉瑞亚' },
-                    { id: 'variant', label: '其他' }
+                    { id: 'raidBoss', label: '石板Boss' },
+                    { id: 'towerBoss', label: '塔主Boss' },
+                    { id: 'bossVariant', label: 'Boss' },
+                    { id: 'berserk', label: '狂暴化' },
+                    { id: 'other', label: '其他' }
                 ],
                 DISPLAY_FIELDS: [],
                 getState: function() {
                     return {
                         mainCategory: mainCategory,
-                        subCategory: 'baseVariant',
                         showUnreleased: false,
                         newOnly: false,
                         selEls: [],
@@ -68,9 +66,12 @@ const bossHtml = renderWithMainCategory('bossVariant');
 const css = fs.readFileSync(path.resolve(__dirname, '../样式/帕鲁图鉴网页样式.css'), 'utf8') +
     fs.readFileSync(path.resolve(__dirname, '../../../../../共享/视觉系统/主题样式.css'), 'utf8');
 
-assert.ok(normalHtml.includes('pt-web-filter-category-chips--sub'), '普通帕鲁状态应该显示子分类列');
-assert.ok(bossHtml.includes('pt-web-filter-category-chips--sub'), '非普通帕鲁状态也应该保留子分类占位列，避免右侧筛选整体位移');
-assert.ok(bossHtml.includes('pt-web-filter-category-chips--sub-empty'), '非普通帕鲁状态的子分类列应该是空占位');
+assert.strictEqual((normalHtml.match(/data-pd-main-category=/g) || []).length, 6, '帕鲁图鉴应该渲染六个主分类按钮');
+['普通帕鲁', '石板Boss', '塔主Boss', 'Boss', '狂暴化', '其他'].forEach(function(label) {
+    assert.ok(normalHtml.includes(label), '帕鲁图鉴应该显示分类：' + label);
+});
+assert.ok(!normalHtml.includes('data-pd-sub-category='), '普通帕鲁不应该再显示子分类按钮');
+assert.ok(!bossHtml.includes('pt-web-filter-category-chips--sub'), '非普通帕鲁也不应该保留废弃的子分类占位列');
 assert.ok(!/\.pt-web-filter-groups\s*\{[^}]*width:\s*max-content/.test(css), '筛选栏外层不能按内容最大宽度撑开，否则窄窗口会越界');
 assert.ok(/\.pt-web-filter-groups\s*\{[^}]*width:\s*min\(1580px,\s*100%\)/.test(css), '筛选栏外层应该限制在可视容器内');
 assert.ok(/\.pt-web-filter-cluster--primary\s*\{[^}]*max-width:\s*100%/.test(css), '属性和工作筛选组应该允许在容器内收缩换行');

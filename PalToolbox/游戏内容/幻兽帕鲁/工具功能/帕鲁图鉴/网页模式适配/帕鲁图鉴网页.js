@@ -144,7 +144,7 @@ var PT_PALDEX_WEB = (function() {
         if (!core) return '<div class="pt-web-tool-page pt-web-page--bounded"><p>帕鲁数据未加载</p></div>';
         if (!hasData(core)) return renderLoading();
 
-        var state = common ? common.getState() : { mainCategory: 'normal', subCategory: 'baseVariant', showUnreleased: false, newOnly: false, selEls: [], selWorks: [], displayFields: [], sortMode: 'default', selPal: null, searchQ: '' };
+        var state = common ? common.getState() : { mainCategory: 'normal', showUnreleased: false, newOnly: false, selEls: [], selWorks: [], displayFields: [], sortMode: 'default', selPal: null, searchQ: '' };
         var selectedElements = state.selEls || (state.selEl ? [state.selEl] : []);
         var selectedWorks = state.selWorks || (state.selWork ? [state.selWork] : []);
         var displayFields = state.displayFields || [];
@@ -166,20 +166,12 @@ var PT_PALDEX_WEB = (function() {
             { id: 'raidBoss', label: '石板Boss' },
             { id: 'towerBoss', label: '塔主Boss' },
             { id: 'bossVariant', label: 'Boss' },
-            { id: 'berserk', label: '狂暴化' }
-        ];
-        var ordinarySubCategories = common && common.ORDINARY_SUB_CATEGORIES ? common.ORDINARY_SUB_CATEGORIES : [
-            { id: 'baseVariant', label: '基础+亚种' },
-            { id: 'terraria', label: '泰拉瑞亚' },
-            { id: 'variant', label: '其他' }
+            { id: 'berserk', label: '狂暴化' },
+            { id: 'other', label: '其他' }
         ];
         var mainCategoryChips = mainCategories.map(function(category) {
             return '<button type="button" class="pd-chip pd-category-chip pt-filter-chip pt-filter-chip--sm' + (category.id === state.mainCategory ? ' pd-chip--active pt-filter-chip--active' : '') + '" data-pd-main-category="' + category.id + '"><span class="pt-filter-chip__label">' + category.label + '</span></button>';
         }).join('');
-        var subCategoryChips = state.mainCategory === 'normal' ? ordinarySubCategories.map(function(category) {
-            return '<button type="button" class="pd-chip pd-category-chip pt-filter-chip pt-filter-chip--sm' + (category.id === state.subCategory ? ' pd-chip--active pt-filter-chip--active' : '') + '" data-pd-sub-category="' + category.id + '"><span class="pt-filter-chip__label">' + category.label + '</span></button>';
-        }).join('') : '';
-        var subCategoryColumn = '<div class="pt-web-filter-chips pt-web-filter-category-chips pt-web-filter-category-chips--sub' + (subCategoryChips ? '' : ' pt-web-filter-category-chips--sub-empty') + '">' + subCategoryChips + '</div>';
         var unreleasedToggle = '<label class="pt-web-filter-toggle"><input type="checkbox" data-pd-show-unreleased' + (state.showUnreleased ? ' checked' : '') + '><span>显示未实装</span></label>';
 
         var elChips = core.ELEMENTS.map(function(e) {
@@ -265,9 +257,7 @@ var PT_PALDEX_WEB = (function() {
             '<header class="pt-web-tool-heading"><div><span class="pt-web-tool-kicker">图鉴 / 帕鲁</span><h1>帕鲁图鉴</h1></div></header>' +
             '<section class="pt-web-section pt-web-filter-section"><div class="pt-web-filter-shell"><div class="pt-web-filter-groups">' +
             '<div class="pt-web-filter-cluster pt-web-filter-cluster--category">' +
-            '<div class="pt-web-filter-category-layout"><div class="pt-web-filter-chips pt-web-filter-category-chips pt-web-filter-category-chips--main">' + mainCategoryChips + '</div>' +
-            subCategoryColumn +
-            '</div>' + unreleasedToggle +
+            '<div class="pt-web-filter-category-layout"><div class="pt-web-filter-chips pt-web-filter-category-chips pt-web-filter-category-chips--main">' + mainCategoryChips + '</div></div>' + unreleasedToggle +
             '</div>' +
             '<div class="pt-web-filter-divider" aria-hidden="true"></div>' +
             '<div class="pt-web-filter-cluster pt-web-filter-cluster--primary"><input type="text" class="pt-web-search" data-pd-search placeholder="搜索编号、名字..." value="' + state.searchQ + '">' +
@@ -1428,9 +1418,6 @@ var PT_PALDEX_WEB = (function() {
 
             var mainCategory = e.target.closest('[data-pd-main-category]');
             if (mainCategory) { common.setFilter('mainCategory', mainCategory.getAttribute('data-pd-main-category')); return; }
-
-            var subCategory = e.target.closest('[data-pd-sub-category]');
-            if (subCategory) { common.setFilter('subCategory', subCategory.getAttribute('data-pd-sub-category')); return; }
 
             var showUnreleased = e.target.closest('[data-pd-show-unreleased]');
             if (showUnreleased) { common.setFilter('showUnreleased', showUnreleased.checked); return; }

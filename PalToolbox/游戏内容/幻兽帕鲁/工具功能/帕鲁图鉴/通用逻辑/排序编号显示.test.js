@@ -49,12 +49,11 @@ const webContext = {
             getWorkIcon: function() { return ''; }
         },
         PT_PALDEX_COMMON: {
-            getState: function() { return { mainCategory: 'normal', subCategory: 'baseVariant', showUnreleased: false, selEl: '', selWork: '', selPal: null, searchQ: '' }; },
+            getState: function() { return { mainCategory: 'normal', showUnreleased: false, selEl: '', selWork: '', selPal: null, searchQ: '' }; },
             getFilteredPals: function() {
                 return [{ slug: 'YakushimaMonster001', displayId: '', name: '绿史莱姆', partnerSkill: '', elements: [], works: [], stats: {}, icon: '' }];
             },
-            MAIN_CATEGORIES: [],
-            ORDINARY_SUB_CATEGORIES: []
+            MAIN_CATEGORIES: []
         }
     }
 };

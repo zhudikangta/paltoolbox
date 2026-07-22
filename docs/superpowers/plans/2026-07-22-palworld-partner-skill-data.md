@@ -2,9 +2,9 @@
 
 > **For Codex:** REQUIRED SUB-SKILL: Use executing-plans to implement this plan task-by-task. Subagents are unavailable in this environment, so execute inline.
 
-**Goal:** 将 PalDB 中文伙伴技能整理为本站标准事实，让帕鲁图鉴按帕鲁记录完整展示，让伙伴技能工具仅遍历去重目录。
+**Goal:** 将 PalDB 中文伙伴技能整理为本站标准事实，让帕鲁图鉴按帕鲁记录完整展示，让伙伴技能工具仅遍历去重目录，并让两个入口都提供六项并列分类筛选。
 
-**Architecture:** 原始 HTML 和现有解包记录作为转换输入；Node.js 转换核心输出一个带 `partnerSkills`、`internalParameters`、`catalog` 和 `conflicts` 的正式 JSON。图鉴核心按 id 读取全量事实，伙伴技能网页适配层按 catalog 取数。
+**Architecture:** 原始 HTML 和现有解包记录作为转换输入；Node.js 转换核心输出一个带 `partnerSkills`、`internalParameters`、`catalog` 和 `conflicts` 的正式 JSON。图鉴核心按 id 读取全量事实并按原始分类映射六项筛选，伙伴技能网页适配层按 catalog 取数和筛选。
 
 **Tech Stack:** Node.js 内置 `fs`、`path`、`https/fetch`，原生 JavaScript，PowerShell 迁移检查。
 
@@ -52,7 +52,7 @@
 3. Run: `node 迁移验证/伙伴技能/更新伙伴技能数据.js --check`
 4. 确认 299 个普通帕鲁一一对应、全量事实覆盖本站帕鲁 id、目录无错误重复。
 
-### Task 4: 让两个现有入口各自读取正确数据
+### Task 4: 让两个现有入口各自读取正确数据并提供六项筛选
 
 **Files:**
 - Modify: `PalToolbox/游戏内容/幻兽帕鲁/工具功能/帕鲁图鉴/核心/帕鲁图鉴核心.test.js`
@@ -65,7 +65,9 @@
 2. 先扩展技能核心测试，证明传入 catalog 后不会遍历被排除的重复 Boss。
 3. Run 两个核心测试，确认新断言先失败。
 4. 最小修改核心和网页适配层：图鉴用 `partnerSkills[id]`，伙伴技能工具用 `catalog`。
-5. Run 两个核心测试，确认通过。
+5. 增加筛选测试：两个页面都显示普通帕鲁、石板Boss、塔主Boss、Boss、狂暴化、其他；图鉴普通类合并基础、亚种和泰拉瑞亚并把泰拉瑞亚排在末尾，不再显示子分类。
+6. 实现两个页面的六项筛选，伙伴技能特殊类继续服从 catalog 的差异去重结果。
+7. Run 两个核心测试和两个筛选测试，确认通过。
 
 ### Task 5: 同步结构地图和全量验证
 
@@ -81,7 +83,7 @@
    - `powershell -ExecutionPolicy Bypass -File 迁移验证/1.0数据资源结构.test.ps1`
    - `powershell -ExecutionPolicy Bypass -File 迁移验证/迁移完整性.test.ps1`
    - `git diff --check`
-4. 本地打开 `PalToolbox/入口页面/index.html`，肉眼检查棉悠悠、塞赫麦特、塔主荷鲁斯、月亮领主手部，以及伙伴技能页的去重结果。
+4. 本地打开 `PalToolbox/入口页面/index.html`，逐项点击两个页面的六类筛选，并肉眼检查棉悠悠、塞赫麦特、塔主荷鲁斯、月亮领主手部，以及伙伴技能页的去重结果。
 
 ### Task 6: 复核与收尾
 

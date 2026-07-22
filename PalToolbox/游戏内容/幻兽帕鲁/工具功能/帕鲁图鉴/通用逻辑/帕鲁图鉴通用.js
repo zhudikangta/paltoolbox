@@ -1,7 +1,6 @@
 var PT_PALDEX_COMMON = (function() {
     var state = {
         mainCategory: 'normal',
-        subCategory: 'baseVariant',
         showUnreleased: false,
         newOnly: false,
         selEls: [],
@@ -14,18 +13,13 @@ var PT_PALDEX_COMMON = (function() {
 
     var listeners = [];
     var MAIN_CATEGORIES = [
-        { id: 'normal', label: '普通帕鲁', raw: '' },
-        { id: 'raidBoss', label: '石板Boss', raw: '石板Boss' },
-        { id: 'towerBoss', label: '塔主Boss', raw: '塔主Boss' },
-        { id: 'bossVariant', label: 'Boss', raw: 'Boss变体' },
-        { id: 'berserk', label: '狂暴化', raw: '狂暴化' }
+        { id: 'normal', label: '普通帕鲁', rawCategories: ['基础', '亚种', '泰拉瑞亚'] },
+        { id: 'raidBoss', label: '石板Boss', rawCategories: ['石板Boss'] },
+        { id: 'towerBoss', label: '塔主Boss', rawCategories: ['塔主Boss'] },
+        { id: 'bossVariant', label: 'Boss', rawCategories: ['Boss变体'] },
+        { id: 'berserk', label: '狂暴化', rawCategories: ['狂暴化'] },
+        { id: 'other', label: '其他', rawCategories: ['变体', '未归类'] }
     ];
-    var ORDINARY_SUB_CATEGORIES = [
-        { id: 'baseVariant', label: '基础+亚种', raw: '基础+亚种' },
-        { id: 'terraria', label: '泰拉瑞亚', raw: '泰拉瑞亚' },
-        { id: 'variant', label: '其他', raw: '变体' }
-    ];
-    var ORDINARY_CATEGORIES = ['基础', '亚种', '变体', '泰拉瑞亚'];
     var DISPLAY_FIELDS = [
         { id: 'hp', label: '生命值', stat: 'HP' },
         { id: 'defense', label: '防御力', stat: '防御' },
@@ -63,7 +57,6 @@ var PT_PALDEX_COMMON = (function() {
         var selWorks = state.selWorks.slice();
         return {
             mainCategory: state.mainCategory,
-            subCategory: state.subCategory,
             showUnreleased: state.showUnreleased,
             newOnly: state.newOnly,
             selEls: selEls,
@@ -243,11 +236,6 @@ var PT_PALDEX_COMMON = (function() {
         switch (type) {
             case 'mainCategory':
                 state.mainCategory = value || 'normal';
-                state.subCategory = 'baseVariant';
-                state.selPal = null;
-                break;
-            case 'subCategory':
-                state.subCategory = value || 'baseVariant';
                 state.selPal = null;
                 break;
             case 'showUnreleased':
@@ -302,35 +290,16 @@ var PT_PALDEX_COMMON = (function() {
             });
         }
 
-        if (state.mainCategory === 'normal') {
-            list = list.filter(function(p) {
-                return ORDINARY_CATEGORIES.indexOf(p.category) > -1;
-            });
-            if (state.subCategory === 'baseVariant') {
-                list = list.filter(function(p) {
-                    return p.category === '基础' || p.category === '亚种';
-                });
-            } else if (state.subCategory === 'terraria') {
-                list = list.filter(function(p) {
-                    return p.category === '泰拉瑞亚';
-                });
-            } else if (state.subCategory === 'variant') {
-                list = list.filter(function(p) {
-                    return p.category === '变体';
-                });
-            } else {
-                list = list.filter(function(p) {
-                    return p.category === state.subCategory;
-                });
-            }
-        } else {
-            var selected = MAIN_CATEGORIES.find(function(category) {
-                return category.id === state.mainCategory;
-            });
-            var rawCategory = selected ? selected.raw : state.mainCategory;
-            list = list.filter(function(p) {
-                return p.category === rawCategory;
-            });
+        var selected = MAIN_CATEGORIES.find(function(category) {
+            return category.id === state.mainCategory;
+        }) || MAIN_CATEGORIES[0];
+        list = list.filter(function(p) {
+            return selected.rawCategories.indexOf(p.category) > -1;
+        });
+
+        if (state.mainCategory === 'normal' && state.sortMode === 'default') {
+            list = list.filter(function(p) { return p.category !== '泰拉瑞亚'; })
+                .concat(list.filter(function(p) { return p.category === '泰拉瑞亚'; }));
         }
 
         if (state.newOnly) {
@@ -379,7 +348,6 @@ var PT_PALDEX_COMMON = (function() {
     function destroy() {
         listeners = [];
         state.mainCategory = 'normal';
-        state.subCategory = 'baseVariant';
         state.showUnreleased = false;
         state.newOnly = false;
         state.selEls = [];
@@ -392,7 +360,6 @@ var PT_PALDEX_COMMON = (function() {
 
     return {
         MAIN_CATEGORIES: MAIN_CATEGORIES,
-        ORDINARY_SUB_CATEGORIES: ORDINARY_SUB_CATEGORIES,
         DISPLAY_FIELDS: DISPLAY_FIELDS,
         getState: getState,
         setFilter: setFilter,

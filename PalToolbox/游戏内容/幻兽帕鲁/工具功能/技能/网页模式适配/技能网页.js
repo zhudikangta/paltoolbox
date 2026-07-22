@@ -8,6 +8,8 @@ var PT_SKILL_WEB = (function() {
     var partnerLoading = false;
     var partnerLoadError = '';
     var partnerSearchQ = '';
+    var partnerCategory = '普通帕鲁';
+    var PARTNER_CATEGORIES = ['普通帕鲁', '石板Boss', '塔主Boss', 'Boss', '狂暴化', '其他'];
     var PARTNER_DATA_URL = '../游戏内容/幻兽帕鲁1.0/数据包/伙伴技能.json';
 
     var activeSort = 'default';
@@ -337,6 +339,10 @@ var PT_SKILL_WEB = (function() {
         if (!ensurePartnerData()) return renderLoading();
         if (!partnerData) return renderLoading();
         var ids = partnerCatalogIds.slice();
+        ids = ids.filter(function(id) {
+            var p = partnerData[id];
+            return p.catalogCategory === partnerCategory;
+        });
         if (partnerSearchQ) {
             var q = partnerSearchQ.toLowerCase();
             ids = ids.filter(function(id) {
@@ -367,11 +373,18 @@ var PT_SKILL_WEB = (function() {
                 (desc ? '<p class="sk-desc">' + desc + '</p>' : '') +
                 valuesHtml + '</article>';
         }).join('');
+        var categoryChips = PARTNER_CATEGORIES.map(function(category) {
+            return '<button type="button" class="pt-filter-chip pt-filter-chip--sm' + (category === partnerCategory ? ' pt-filter-chip--active' : '') + '" data-sk-partner-category="' + category + '"><span class="pt-filter-chip__label">' + category + '</span></button>';
+        }).join('');
 
         return '<div class="pt-web-tool-page pt-web-page--grid-fluid pt-web-skill-page pt-web-filter-page">' +
             '<header class="pt-web-tool-heading"><div><span class="pt-web-tool-kicker">资料 / 伙伴技能</span><h1>伙伴技能</h1></div></header>' +
             '<section class="pt-web-section pt-web-filter-section">' +
             '<div class="pt-web-filter-shell"><div class="pt-web-filter-groups">' +
+            '<div class="pt-web-filter-cluster pt-web-filter-cluster--category">' +
+            '<div class="pt-web-filter-category-layout"><div class="pt-web-filter-chips pt-web-filter-category-chips pt-web-filter-category-chips--main">' + categoryChips + '</div></div>' +
+            '</div>' +
+            '<div class="pt-web-filter-divider" aria-hidden="true"></div>' +
             '<div class="pt-web-filter-cluster pt-web-filter-cluster--primary">' +
             '<input type="text" class="pt-input" data-sk-partner-search placeholder="搜索伙伴技能名称…" value="' + partnerSearchQ + '">' +
             '</div>' +
@@ -418,6 +431,12 @@ var PT_SKILL_WEB = (function() {
         root.dataset.skBd = '1';
 
         root.addEventListener('click', function(e) {
+            var partnerChip = e.target.closest('[data-sk-partner-category]');
+            if (partnerChip) {
+                partnerCategory = partnerChip.getAttribute('data-sk-partner-category') || '普通帕鲁';
+                rerender();
+                return;
+            }
             var chip = e.target.closest('[data-sk-cat]');
             if (chip) {
                 var common = getCommon();
@@ -509,7 +528,13 @@ var PT_SKILL_WEB = (function() {
     return {
         render: render,
         bind: bind,
-        destroy: function() { dataReady = false; partnerData = null; }
+        destroy: function() {
+            dataReady = false;
+            partnerData = null;
+            partnerCatalogIds = [];
+            partnerCategory = '普通帕鲁';
+            partnerSearchQ = '';
+        }
     };
 })();
 
