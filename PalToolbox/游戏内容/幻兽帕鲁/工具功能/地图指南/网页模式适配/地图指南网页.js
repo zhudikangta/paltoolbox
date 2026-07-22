@@ -296,13 +296,6 @@ var PT_MAP_WEB = (function() {
             .replace(/'/g, '&#39;');
     }
 
-    function fixResourcePath(path) {
-        if (!path || typeof path.replace !== 'function') return '';
-        return path
-            .replace(/^资源包\/图标资源包\/\d+_/, '资源包/图标资源包/')
-            .replace(/^资源包\//, '../游戏内容/幻兽帕鲁/资源包/');
-    }
-
     function showDuplicateTooltip(x, y, label) {
         var tooltip = document.createElement('div');
         tooltip.className = 'map-duplicate-tooltip';
@@ -618,7 +611,7 @@ var PT_MAP_WEB = (function() {
             }
             if (!coord || !isFinite(coord.px) || !isFinite(coord.py)) return;
 
-            var icon = fixResourcePath(resolveIcon(point, type, lookup, point.item));
+            var icon = resolveIcon(point, type, lookup, point.item);
             var metric = getIconMetric(type, lookup);
             var gameCoords = core.getPointGameCoords ? core.getPointGameCoords(point) : null;
             markerModels.push({
@@ -655,7 +648,7 @@ var PT_MAP_WEB = (function() {
 
         types.forEach(function(type) {
             labels[type] = getTypeLabel(type, lookup);
-            icons[type] = fixResourcePath(resolveIcon(null, type, lookup, ''));
+            icons[type] = resolveIcon(null, type, lookup, '');
             metrics[type] = getIconMetric(type, lookup);
             typeCategories[type] = typeCategories[type] || 'Other';
             defaultChecked[type] = core.isDefaultChecked ? core.isDefaultChecked(type) : ['Alpha Pal', 'Tower', 'Fast Travel', 'Region'].indexOf(type) > -1;

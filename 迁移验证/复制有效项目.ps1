@@ -35,7 +35,7 @@ Copy-Tree (Join-Path $SourceRoot '入口页面') (Join-Path $TargetRoot '入口�
 Copy-Tree (Join-Path $SourceRoot '共享') (Join-Path $TargetRoot '共享')
 Copy-Tree (Join-Path $SourceRoot '运行模式') (Join-Path $TargetRoot '运行模式')
 Copy-Tree (Join-Path $SourceRoot '游戏内容\幻兽帕鲁\外部库') (Join-Path $TargetRoot '游戏内容\幻兽帕鲁\外部库')
-Copy-Tree (Join-Path $SourceRoot '游戏内容\幻兽帕鲁\资源包') (Join-Path $TargetRoot '游戏内容\幻兽帕鲁\资源包') @('_copy.js')
+Copy-Tree (Join-Path $SourceRoot '游戏内容\幻兽帕鲁\界面资源') (Join-Path $TargetRoot '游戏内容\幻兽帕鲁\界面资源')
 Copy-Tree (Join-Path $SourceRoot '游戏内容\幻兽帕鲁1.0\资源包') (Join-Path $TargetRoot '游戏内容\幻兽帕鲁1.0\资源包')
 
 $EntryText = Get-Content -Raw -Encoding UTF8 $EntryPath
@@ -45,12 +45,8 @@ foreach ($ToolName in $ActiveTools) {
     Copy-Tree (Join-Path $SourceRoot "游戏内容\幻兽帕鲁\工具功能\$ToolName") (Join-Path $TargetRoot "游戏内容\幻兽帕鲁\工具功能\$ToolName")
 }
 
-$LegacyDataFiles = @('工作速度计算器数据.js', '物品数据.js', '装备数据.js', '建筑数据.js')
-foreach ($FileName in $LegacyDataFiles) {
-    Copy-OneFile (Join-Path $SourceRoot "游戏内容\幻兽帕鲁\数据包\$FileName") (Join-Path $TargetRoot "游戏内容\幻兽帕鲁\数据包\$FileName")
-}
-
 $CurrentDataFiles = @(
+    '工作速度计算器数据.js',
     '习得技能.json', '事件.json', '任务.json', '任务与人物.json', '伙伴技能.json', '商店.json',
     '地图数据.js', '帕鲁.json', '建筑.json', '战斗与生产.json', '技能.json', '掉落.json',
     '物品.json', '科技.json', '经验表.json', '配方.json', '配种.json'

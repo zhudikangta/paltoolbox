@@ -1,7 +1,7 @@
 var PT_WORK_SPEED_CORE = (function() {
 var PT_WORK_SPEED_DATA = (typeof window !== 'undefined' && window.PT_WORK_SPEED_DATA)
     ? window.PT_WORK_SPEED_DATA
-    : require('../../../数据包/工作速度计算器数据.js').PT_WORK_SPEED_DATA;
+    : require('../../../../幻兽帕鲁1.0/数据包/工作速度计算器数据.js').PT_WORK_SPEED_DATA;
 
 function round10(value) {
     return Math.round(value * 1e10) / 1e10;

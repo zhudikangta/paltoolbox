@@ -3,7 +3,7 @@
     var ENTER_FADE_MS = 560;
     var STORAGE_KEY = 'PT_MODE_SWITCH_TRANSITION';
     var STYLE_ID = 'pt-mode-transition-style';
-    var LOGO_SRC = '../游戏内容/幻兽帕鲁/资源包/壁纸/T_Palworld_Logo_Small_White.png';
+    var LOGO_SRC = '../游戏内容/幻兽帕鲁/界面资源/壁纸/T_Palworld_Logo_Small_White.png';
     var running = false;
     var activeOverlay = null;
     var finishTimer = null;

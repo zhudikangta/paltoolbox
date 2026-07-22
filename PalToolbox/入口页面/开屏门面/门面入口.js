@@ -9,295 +9,295 @@
     var PAL_AVATAR_IMAGES = [
             {
                     "name": "宗铭丸",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_SamuraiDog_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_SamuraiDog_icon_normal.png"
             },
             {
                     "name": "幸叶茸",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_CloverFairy_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_CloverFairy_icon_normal.png"
             },
             {
                     "name": "莉欧·莉涅",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ClioneTwins_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ClioneTwins_icon_normal.png"
             },
             {
                     "name": "念影喵",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_GhostBlackCat_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_GhostBlackCat_icon_normal.png"
             },
             {
                     "name": "雪绵啾",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_FluffyBird_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_FluffyBird_icon_normal.png"
             },
             {
                     "name": "电汪汪",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ElecPomeranian_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ElecPomeranian_icon_normal.png"
             },
             {
                     "name": "密林陶洛斯",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_GrassMinotaur_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_GrassMinotaur_icon_normal.png"
             },
             {
                     "name": "莉芳",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_PandaGirl_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_PandaGirl_icon_normal.png"
             },
             {
                     "name": "球抱苞",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_CactusDoll_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_CactusDoll_icon_normal.png"
             },
             {
                     "name": "流焰龙",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_VolcanoDragon_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_VolcanoDragon_icon_normal.png"
             },
             {
                     "name": "紫狐娇",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_DarkFlameFox_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_DarkFlameFox_icon_normal.png"
             },
             {
                     "name": "缚乃伊",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_MummyPal_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_MummyPal_icon_normal.png"
             },
             {
                     "name": "鞘刀鱼",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_SwordCutlassfish_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_SwordCutlassfish_icon_normal.png"
             },
             {
                     "name": "磐峰兽",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_RockBeast_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_RockBeast_icon_normal.png"
             },
             {
                     "name": "雪墩墩",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_SmallYeti_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_SmallYeti_icon_normal.png"
             },
             {
                     "name": "颚莉丝",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_VenusFlytrap_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_VenusFlytrap_icon_normal.png"
             },
             {
                     "name": "双心岩傀",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_GrassGolem_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_GrassGolem_icon_normal.png"
             },
             {
                     "name": "塞赫麦特",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_Sekhmet_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_Sekhmet_icon_normal.png"
             },
             {
                     "name": "重岩龟",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_CubeTurtle_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_CubeTurtle_icon_normal.png"
             },
             {
                     "name": "力士獒",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_SumoDog_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_SumoDog_icon_normal.png"
             },
             {
                     "name": "喵璐璐",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_LongCat_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_LongCat_icon_normal.png"
             },
             {
                     "name": "电涡蜗",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ElecSnail_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ElecSnail_icon_normal.png"
             },
             {
                     "name": "蒲蒲飞芽",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_DandelionGirl_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_DandelionGirl_icon_normal.png"
             },
             {
                     "name": "詹兔曼",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_BrownRabbit_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_BrownRabbit_icon_normal.png"
             },
             {
                     "name": "兜兜灵",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_HoodGhost_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_HoodGhost_icon_normal.png"
             },
             {
                     "name": "电懒懒",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ElecLizard_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ElecLizard_icon_normal.png"
             },
             {
                     "name": "吓丝妮",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_OniGhostGirl_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_OniGhostGirl_icon_normal.png"
             },
             {
                     "name": "曼波王",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_KingSunfish_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_KingSunfish_icon_normal.png"
             },
             {
                     "name": "兔绣袖",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_SleeveRabbit_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_SleeveRabbit_icon_normal.png"
             },
             {
                     "name": "灵曦龙",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_GhostDragon_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_GhostDragon_icon_normal.png"
             },
             {
                     "name": "雷云鹫",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ThunderFluffyBird_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ThunderFluffyBird_icon_normal.png"
             },
             {
                     "name": "大红呱",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_RedFlowerBird_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_RedFlowerBird_icon_normal.png"
             },
             {
                     "name": "昭炎狐",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_FoxExorcist_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_FoxExorcist_icon_normal.png"
             },
             {
                     "name": "沁莲龙",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_LotusDragon_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_LotusDragon_icon_normal.png"
             },
             {
                     "name": "拉比耶尔",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ClownRabbit_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ClownRabbit_icon_normal.png"
             },
             {
                     "name": "盗影鸦",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ThiefBird_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ThiefBird_icon_normal.png"
             },
             {
                     "name": "梅杜娜",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_SnakeGirl_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_SnakeGirl_icon_normal.png"
             },
             {
                     "name": "红菇娘",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_MushroomLady_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_MushroomLady_icon_normal.png"
             },
             {
                     "name": "妖焰灯",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_LanternButler_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_LanternButler_icon_normal.png"
             },
             {
                     "name": "缀夜星",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_MoonChild_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_MoonChild_icon_normal.png"
             },
             {
                     "name": "墨罗娜",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_MonochromeQueen_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_MonochromeQueen_icon_normal.png"
             },
             {
                     "name": "燎火舞伶",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_KabukiMan_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_KabukiMan_icon_normal.png"
             },
             {
                     "name": "磐甲龙",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_DomeArmorDragon_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_DomeArmorDragon_icon_normal.png"
             },
             {
                     "name": "霄龙",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_BlueSkyDragon_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_BlueSkyDragon_icon_normal.png"
             },
             {
                     "name": "暮尘蛾",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_Mothman_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_Mothman_icon_normal.png"
             },
             {
                     "name": "夜蔓爵",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_FlowerPrince_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_FlowerPrince_icon_normal.png"
             },
             {
                     "name": "奥沧鲸",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_KingWhale_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_KingWhale_icon_normal.png"
             },
             {
                     "name": "枯星龙",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_WorldTreeDragon_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_WorldTreeDragon_icon_normal.png"
             },
             {
                     "name": "秋叶猿",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_Monkey_Fire_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_Monkey_Fire_icon_normal.png"
             },
             {
                     "name": "可可棉花糖",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_SweetsSheep_Ground_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_SweetsSheep_Ground_icon_normal.png"
             },
             {
                     "name": "梦沫姬",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_OctopusGirl_Neutral_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_OctopusGirl_Neutral_icon_normal.png"
             },
             {
                     "name": "凌角马",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_Kirin_Ice_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_Kirin_Ice_icon_normal.png"
             },
             {
                     "name": "巧克力豹冰",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_IceSeal_Ground_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_IceSeal_Ground_icon_normal.png"
             },
             {
                     "name": "冰峰陶洛斯",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_GrassMinotaur_Ice_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_GrassMinotaur_Ice_icon_normal.png"
             },
             {
                     "name": "樱丽娜",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_FlowerDoll_Fire_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_FlowerDoll_Fire_icon_normal.png"
             },
             {
                     "name": "疾霜鸟",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ThunderBird_Ice_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ThunderBird_Ice_icon_normal.png"
             },
             {
                     "name": "凛光犬",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ThunderDog_Ice_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ThunderDog_Ice_icon_normal.png"
             },
             {
                     "name": "妖抱苞",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_CactusDoll_Dark_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_CactusDoll_Dark_icon_normal.png"
             },
             {
                     "name": "川霜龙",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_VolcanoDragon_Ice_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_VolcanoDragon_Ice_icon_normal.png"
             },
             {
                     "name": "绢笠蛾",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_WhiteMoth_Neutral_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_WhiteMoth_Neutral_icon_normal.png"
             },
             {
                     "name": "炼刃鱼",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_SwordCutlassfish_Fire_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_SwordCutlassfish_Fire_icon_normal.png"
             },
             {
                     "name": "日耀驹",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_NightBlueHorse_Neutral_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_NightBlueHorse_Neutral_icon_normal.png"
             },
             {
                     "name": "寒峰兽",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_RockBeast_Ice_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_RockBeast_Ice_icon_normal.png"
             },
             {
                     "name": "咒心岩傀",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_GrassGolem_Dark_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_GrassGolem_Dark_icon_normal.png"
             },
             {
                     "name": "电针妖",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ScorpionMan_Electric_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ScorpionMan_Electric_icon_normal.png"
             },
             {
                     "name": "净岩龟",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_CubeTurtle_Neutral_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_CubeTurtle_Neutral_icon_normal.png"
             },
             {
                     "name": "碧艾莉",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_GhostRabbit_Grass_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_GhostRabbit_Grass_icon_normal.png"
             },
             {
                     "name": "冬丸",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_BlackPuppy_Ice_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_BlackPuppy_Ice_icon_normal.png"
             },
             {
                     "name": "织夜鹿",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_WhiteDeer_Dark_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_WhiteDeer_Dark_icon_normal.png"
             },
             {
                     "name": "丹烽",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_WingGolem_Fire_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_WingGolem_Fire_icon_normal.png"
             },
             {
                     "name": "金涡蜗",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_ElecSnail_Ground_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_ElecSnail_Ground_icon_normal.png"
             },
             {
                     "name": "曼波皇",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_KingSunfish_Thunder_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_KingSunfish_Thunder_icon_normal.png"
             },
             {
                     "name": "狱熙龙",
-                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/新帕鲁/T_GhostDragon_Fire_icon_normal.png"
+                    "src": "../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/T_GhostDragon_Fire_icon_normal.png"
             }
     ];
     var TARGET_MODES = ['default', 'web', 'dock', 'immersive'];

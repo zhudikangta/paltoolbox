@@ -312,12 +312,12 @@ var PT_PALDEX_CORE = (function() {
 
     function getElementIconUrl(element) {
         var code = EL_ICON_MAP[element];
-        return code ? '../游戏内容/幻兽帕鲁/资源包/图标资源包/属性图标/T_Icon_element_s_' + code + '.webp' : '';
+        return code ? '../游戏内容/幻兽帕鲁1.0/资源包/属性图标/T_Icon_element_s_' + code + '.webp' : '';
     }
 
     function getWorkIconUrl(work) {
         var code = WORK_ICON_MAP[work];
-        return code ? '../游戏内容/幻兽帕鲁/资源包/图标资源包/工作图标/T_icon_palwork_' + code + '.webp' : '';
+        return code ? '../游戏内容/幻兽帕鲁1.0/资源包/工作图标/T_icon_palwork_' + code + '.webp' : '';
     }
 
     function getPalHabitat(palId) {

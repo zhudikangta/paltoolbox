@@ -23,7 +23,7 @@ function getInitialState() {
 function getWorkSpeedData() {
     if (typeof window !== 'undefined' && window.PT_WORK_SPEED_DATA) return window.PT_WORK_SPEED_DATA;
     if (typeof module !== 'undefined' && module.exports) {
-        return require('../../../数据包/工作速度计算器数据.js').PT_WORK_SPEED_DATA;
+        return require('../../../../幻兽帕鲁1.0/数据包/工作速度计算器数据.js').PT_WORK_SPEED_DATA;
     }
     return null;
 }

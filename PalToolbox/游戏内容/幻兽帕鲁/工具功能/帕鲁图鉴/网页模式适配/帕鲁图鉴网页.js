@@ -253,7 +253,6 @@ var PT_PALDEX_WEB = (function() {
                 return '<span>' + field.label + ' ' + value + '</span>';
             }).join('');
             var src = p.icon;
-            if (src) src = src.replace(/^资源包\//, '../游戏内容/幻兽帕鲁/资源包/');
             return '<div class="pd-cell"><div class="pd-card" data-pd-id="' + p.slug + '">' +
                 '<div class="pd-card-top">' + displayIdHtml + '<span class="pd-card-els">' + els + '</span></div>' +
                 '<div class="pd-card-main"><img class="pd-card-img" src="' + src + '" alt="' + p.name + '" loading="lazy" onerror="this.style.opacity=.3">' +
@@ -337,7 +336,6 @@ var PT_PALDEX_WEB = (function() {
 
     function renderDetail(core, p) {
         var src = p.icon;
-        if (src) src = src.replace(/^资源包\//, '../游戏内容/幻兽帕鲁/资源包/');
         var els = (p.elements || []).map(function(e) {
             return '<img class="pd-el-img" src="' + core.getElementIconUrl(e) + '" alt="' + e.replace('属性', '') + '" title="' + e + '">';
         }).join('');
@@ -470,7 +468,7 @@ var PT_PALDEX_WEB = (function() {
                     var iconSrc = '';
                     try {
                         var palData = core && core.getBySlug ? core.getBySlug(palId) : null;
-                        if (palData && palData.icon) iconSrc = palData.icon.replace(/^资源包\//, '../游戏内容/幻兽帕鲁/资源包/');
+                        if (palData && palData.icon) iconSrc = palData.icon;
                     } catch(e) {}
                     var bossHtml = '<div style="width:32px;height:32px;border-radius:50%;overflow:hidden;border:2px solid #ff4444;box-shadow:0 0 8px rgba(255,68,68,0.5);background:rgba(0,0,0,0.3)">';
                     if (iconSrc) bossHtml += '<img src="' + iconSrc + '" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display=\'none\'">';
