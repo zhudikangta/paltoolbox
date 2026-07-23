@@ -11,12 +11,15 @@ var PT_SKILL_WEB = (function() {
     var partnerCategory = '普通帕鲁';
     var partnerFacetSelections = {};
     var partnerFilterSearchQ = '';
-    var partnerExpandedGroups = { move: true };
+    var partnerExpandedGroups = {};
     var partnerShowDetails = false;
     var partnerTaxonomy = { groups: [], facets: [], detailTags: [] };
-    var partnerSheetMaskFrame = 0;
+    var partnerFrameMaskFrame = 0;
+    var partnerFrameMaskScrollFrame = 0;
+    var partnerFrameMaskLayout = null;
+    var partnerFrameMaskNeedsLayout = false;
     var partnerFilterAnimationFrame = 0;
-    var PARTNER_CATEGORIES = ['普通帕鲁', '石板Boss', '塔主Boss', 'Boss', '狂暴化', '其他'];
+    var PARTNER_CATEGORY_ORDER = ['普通帕鲁', '石板Boss', '塔主Boss', 'Boss', '狂暴化', '其他'];
     var PARTNER_DATA_URL = '../游戏内容/幻兽帕鲁1.0/数据包/伙伴技能.json';
 
     var activeSort = 'default';
@@ -41,10 +44,6 @@ var PT_SKILL_WEB = (function() {
         return (typeof window !== 'undefined' && window.PT_SKILL_COMMON) ? window.PT_SKILL_COMMON : null;
     }
 
-    function getPaldexCommon() {
-        return (typeof window !== 'undefined' && window.PT_PALDEX_COMMON) ? window.PT_PALDEX_COMMON : null;
-    }
-
     function getWebSettings() {
         try {
             return typeof window.readPTSettings === 'function' ? window.readPTSettings('web') : {};
@@ -54,13 +53,12 @@ var PT_SKILL_WEB = (function() {
     }
 
     function getPartnerAppearanceVars() {
-        var common = getPaldexCommon();
-        if (!common || typeof common.getAppearanceSettings !== 'function') return {};
         if (typeof window === 'undefined' || typeof window.PT_buildCardVisualVars !== 'function') return {};
-        var appearance = common.getAppearanceSettings();
         var webSettings = getWebSettings();
         var themes = window.PT_THEME_PRESETS || {};
         var fallbackTheme = themes[webSettings.theme || 'oceanic'] || themes.oceanic || {};
+        if (typeof window.PT_getLayeredCardAppearanceSettings !== 'function') return {};
+        var appearance = window.PT_getLayeredCardAppearanceSettings(webSettings);
         var frame = window.PT_buildCardVisualVars(webSettings, appearance.frameTheme, appearance.frameMaterial, fallbackTheme);
         var cube = window.PT_buildCardVisualVars(webSettings, appearance.cubeTheme, appearance.cubeMaterial, fallbackTheme);
         return {
@@ -76,6 +74,7 @@ var PT_SKILL_WEB = (function() {
             '--pd-frame-hue-rotate': frame.hueRotate || '0deg',
             '--pd-frame-before-background': frame.beforeBackground || 'none',
             '--pd-frame-before-opacity': frame.beforeOpacity || '0',
+            '--pd-frame-glass-glow': frame.glassGlowShadow || 'none',
             '--pd-frame-metal-shadow': frame.metalShadow || 'none',
             '--pd-cube-bg': cube.bg || 'rgba(20,38,58,.42)',
             '--pd-cube-border': cube.border || 'rgba(255,255,255,.14)',
@@ -94,8 +93,8 @@ var PT_SKILL_WEB = (function() {
             '--pd-cube-before-opacity': cube.beforeOpacity || '0',
             '--pd-cube-glass-glow': cube.glassGlowShadow || 'none',
             '--pd-cube-metal-shadow': cube.metalShadow || 'none',
-            '--pd-active-cube-material-id': appearance.cubeMaterial || 'gradient',
-            '--pd-cube-material-id': appearance.cubeMaterial || 'gradient'
+            '--pd-active-cube-material-id': appearance.cubeMaterial,
+            '--pd-cube-material-id': appearance.cubeMaterial
         };
     }
 
@@ -108,76 +107,151 @@ var PT_SKILL_WEB = (function() {
         });
     }
 
-    function getPartnerOffsetWithin(element, sheet) {
+    function getPartnerOffsetWithin(element, frame) {
         var left = 0;
         var top = 0;
         var node = element;
-        while (node && node !== sheet) {
+        while (node && node !== frame) {
             left += node.offsetLeft;
             top += node.offsetTop;
             node = node.offsetParent;
         }
-        if (node !== sheet) return null;
+        if (node !== frame) return null;
         return { left: left, top: top };
     }
 
-    function applyPartnerSheetMask(sheet, selector, variableName) {
-        if (!sheet || !sheet.clientWidth || !sheet.clientHeight) return;
-        var holes = Array.prototype.map.call(sheet.querySelectorAll(selector), function(element) {
-            var offset = getPartnerOffsetWithin(element, sheet);
-            if (!offset || !element.clientWidth || !element.clientHeight) return '';
-            return '<rect x="' + offset.left + '" y="' + offset.top +
-                '" width="' + element.clientWidth + '" height="' + element.clientHeight +
+    function buildPartnerFrameMaskRegionLayout(frame, scroller, selector, clipId, key) {
+        if (!frame || !scroller) return null;
+        var scrollerOffset = getPartnerOffsetWithin(scroller, frame);
+        if (!scrollerOffset) return null;
+        var holes = Array.prototype.map.call(scroller.querySelectorAll(selector), function(element) {
+            var offset = getPartnerOffsetWithin(element, frame);
+            if (!offset || !element.clientWidth || !element.clientHeight) return null;
+            return {
+                left: offset.left,
+                top: offset.top,
+                width: element.clientWidth,
+                height: element.clientHeight
+            };
+        }).filter(Boolean);
+        return {
+            scroller: scroller,
+            clipId: clipId,
+            key: key,
+            clipX: scrollerOffset.left + scroller.clientLeft,
+            clipY: scrollerOffset.top + scroller.clientTop,
+            clipWidth: scroller.clientWidth,
+            clipHeight: scroller.clientHeight,
+            holes: holes
+        };
+    }
+
+    function buildPartnerFrameMaskLayout(targetRoot) {
+        if (!targetRoot) return null;
+        var frame = targetRoot.querySelector('.sk-partner-browser');
+        if (!frame || !frame.clientWidth || !frame.clientHeight) return null;
+        var sidebar = frame.querySelector('.sk-partner-filter-sidebar');
+        var results = frame.querySelector('.sk-partner-results');
+        return {
+            frame: frame,
+            width: frame.clientWidth,
+            height: frame.clientHeight,
+            regions: [
+                buildPartnerFrameMaskRegionLayout(
+                    frame,
+                    sidebar,
+                    '.sk-partner-sidebar-block, .sk-partner-filter-group, .sk-partner-filter-empty',
+                    'partner-sidebar-clip',
+                    'sidebar'
+                ),
+                buildPartnerFrameMaskRegionLayout(
+                    frame,
+                    results,
+                    '.sk-partner-results-meta, .sk-partner-card-cell, .sk-partner-no-results',
+                    'partner-results-clip',
+                    'results'
+                )
+            ].filter(Boolean)
+        };
+    }
+
+    function renderPartnerFrameMaskRegion(region) {
+        var holes = region.holes.map(function(hole) {
+            return '<rect x="' + hole.left + '" y="' + hole.top +
+                '" width="' + hole.width + '" height="' + hole.height +
                 '" rx="7" ry="7"/>';
         }).join('');
-        var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + sheet.clientWidth + '" height="' + sheet.clientHeight + '" viewBox="0 0 ' + sheet.clientWidth + ' ' + sheet.clientHeight + '">' +
-            '<mask id="holes" maskUnits="userSpaceOnUse"><rect width="100%" height="100%" fill="white"/><g fill="black">' + holes + '</g></mask>' +
-            '<rect width="100%" height="100%" fill="white" mask="url(#holes)"/></svg>';
-        sheet.style.setProperty(variableName, 'url("data:image/svg+xml,' + encodeURIComponent(svg) + '")');
+        return {
+            clip: '<clipPath id="' + region.clipId + '"><rect x="' + region.clipX + '" y="' + region.clipY +
+                '" width="' + region.clipWidth + '" height="' + region.clipHeight + '"/></clipPath>',
+            holes: '<g clip-path="url(#' + region.clipId + ')"><g fill="black" data-sk-partner-mask-scroll-group="' +
+                region.key + '" transform="translate(' + (-region.scroller.scrollLeft) + ' ' + (-region.scroller.scrollTop) + ')">' +
+                holes + '</g></g>'
+        };
     }
 
-    function applyPartnerSheetMasks(targetRoot) {
-        if (!targetRoot) return;
-        var sidebarSheet = targetRoot.querySelector('.sk-partner-filter-stack');
-        var resultsSheet = targetRoot.querySelector('.sk-partner-results-stack');
-        applyPartnerSheetMask(
-            sidebarSheet,
-            '.sk-partner-sidebar-block, .sk-partner-filter-group, .sk-partner-filter-empty',
-            '--sk-partner-sidebar-mask'
-        );
-        applyPartnerSheetMask(
-            resultsSheet,
-            '.sk-partner-results-meta, .sk-partner-card-cell, .sk-partner-no-results',
-            '--sk-partner-results-mask'
-        );
+    function updatePartnerFrameMaskScroll(targetRoot) {
+        var frame = targetRoot ? targetRoot.querySelector('.sk-partner-browser') : null;
+        if (!frame || !partnerFrameMaskLayout || partnerFrameMaskLayout.frame !== frame) return;
+        partnerFrameMaskLayout.regions.forEach(function(region) {
+            var group = frame.querySelector('[data-sk-partner-mask-scroll-group="' + region.key + '"]');
+            if (!group) return;
+            group.setAttribute('transform', 'translate(' + (-region.scroller.scrollLeft) + ' ' + (-region.scroller.scrollTop) + ')');
+        });
     }
 
-    function schedulePartnerSheetMasks(targetRoot) {
+    function applyPartnerFrameMask(targetRoot, rebuildLayout) {
+        var frame = targetRoot ? targetRoot.querySelector('.sk-partner-browser') : null;
+        if (rebuildLayout || !partnerFrameMaskLayout || partnerFrameMaskLayout.frame !== frame) {
+            partnerFrameMaskLayout = buildPartnerFrameMaskLayout(targetRoot);
+        }
+        if (!partnerFrameMaskLayout) return;
+        var frameLayout = partnerFrameMaskLayout;
+        var defs = frame.querySelector('.sk-partner-frame-mask-svg defs');
+        if (!defs) return;
+        var regions = frameLayout.regions.map(renderPartnerFrameMaskRegion);
+        defs.innerHTML = regions.map(function(region) { return region.clip; }).join('') +
+            '<mask id="sk-partner-frame-holes" maskUnits="userSpaceOnUse" x="0" y="0" width="' + frameLayout.width + '" height="' + frameLayout.height + '">' +
+            '<rect x="0" y="0" width="' + frameLayout.width + '" height="' + frameLayout.height + '" fill="white"/>' +
+            regions.map(function(region) { return region.holes; }).join('') + '</mask>';
+    }
+
+    function schedulePartnerFrameMask(targetRoot, rebuildLayout) {
+        partnerFrameMaskNeedsLayout = partnerFrameMaskNeedsLayout || rebuildLayout === true;
         if (typeof window === 'undefined' || typeof window.requestAnimationFrame !== 'function') {
-            applyPartnerSheetMasks(targetRoot);
+            applyPartnerFrameMask(targetRoot, partnerFrameMaskNeedsLayout);
+            partnerFrameMaskNeedsLayout = false;
             return;
         }
-        if (partnerSheetMaskFrame) window.cancelAnimationFrame(partnerSheetMaskFrame);
-        partnerSheetMaskFrame = window.requestAnimationFrame(function() {
-            partnerSheetMaskFrame = 0;
-            applyPartnerSheetMasks(targetRoot);
+        if (partnerFrameMaskFrame) window.cancelAnimationFrame(partnerFrameMaskFrame);
+        partnerFrameMaskFrame = window.requestAnimationFrame(function() {
+            partnerFrameMaskFrame = 0;
+            applyPartnerFrameMask(targetRoot, partnerFrameMaskNeedsLayout);
+            partnerFrameMaskNeedsLayout = false;
+        });
+    }
+
+    function schedulePartnerFrameMaskScroll(targetRoot) {
+        if (typeof window === 'undefined' || typeof window.requestAnimationFrame !== 'function') {
+            updatePartnerFrameMaskScroll(targetRoot);
+            return;
+        }
+        if (partnerFrameMaskScrollFrame) return;
+        partnerFrameMaskScrollFrame = window.requestAnimationFrame(function() {
+            partnerFrameMaskScrollFrame = 0;
+            updatePartnerFrameMaskScroll(targetRoot);
         });
     }
 
     function animatePartnerFilterGroup(targetRoot) {
         if (!targetRoot || typeof window === 'undefined' || typeof window.requestAnimationFrame !== 'function') {
-            applyPartnerSheetMasks(targetRoot);
+            applyPartnerFrameMask(targetRoot, true);
             return;
         }
         if (partnerFilterAnimationFrame) window.cancelAnimationFrame(partnerFilterAnimationFrame);
-        var sidebarSheet = targetRoot.querySelector('.sk-partner-filter-stack');
         var startedAt = typeof performance !== 'undefined' && performance.now ? performance.now() : Date.now();
         function updateMask(now) {
-            applyPartnerSheetMask(
-                sidebarSheet,
-                '.sk-partner-sidebar-block, .sk-partner-filter-group, .sk-partner-filter-empty',
-                '--sk-partner-sidebar-mask'
-            );
+            applyPartnerFrameMask(targetRoot, true);
             if ((now || Date.now()) - startedAt < 180) {
                 partnerFilterAnimationFrame = window.requestAnimationFrame(updateMask);
                 return;
@@ -187,19 +261,46 @@ var PT_SKILL_WEB = (function() {
         partnerFilterAnimationFrame = window.requestAnimationFrame(updateMask);
     }
 
+    function initPartnerFrameMaskScroll(targetRoot) {
+        if (!targetRoot) return;
+        ['.sk-partner-filter-sidebar', '.sk-partner-results'].forEach(function(selector) {
+            var scroller = targetRoot.querySelector(selector);
+            if (!scroller || scroller.dataset.skPartnerMaskScrollBound === '1') return;
+            scroller.dataset.skPartnerMaskScrollBound = '1';
+            scroller.addEventListener('scroll', function() {
+                schedulePartnerFrameMaskScroll(targetRoot);
+            }, { passive: true });
+        });
+    }
+
     function initPartnerScrollbars(targetRoot) {
         if (!targetRoot || typeof window === 'undefined' || typeof window.PT_initCustomScrollbars !== 'function') return;
         var sidebar = targetRoot.querySelector('.sk-partner-filter-sidebar');
         var results = targetRoot.querySelector('.sk-partner-results');
-        if (sidebar) window.PT_initCustomScrollbars(sidebar);
+        if (sidebar) {
+            window.PT_initCustomScrollbars(sidebar);
+            if (sidebar._ptCustomScrollbarState && sidebar._ptCustomScrollbarState.bar) {
+                sidebar._ptCustomScrollbarState.bar.classList.add('sk-partner-filter-scrollbar');
+            }
+        }
         if (results) window.PT_initCustomScrollbars(results);
     }
 
-    function renderPartnerDescription(description) {
-        return String(description || '').split(/\n+/).map(function(paragraph) {
-            return paragraph.trim();
-        }).filter(Boolean).map(function(paragraph) {
-            return '<p class="sk-desc sk-partner-desc">' + paragraph + '</p>';
+    function renderPartnerEffectBlocks(item, skillCore) {
+        var blocks = skillCore && skillCore.getPartnerEffectBlockModels
+            ? skillCore.getPartnerEffectBlockModels(item, partnerFacetSelections)
+            : [];
+        return blocks.map(function(block) {
+            var tags = block.labels.length
+                ? '<div class="sk-tags sk-partner-effect-tags">' + block.labels.map(function(label) {
+                    return '<span class="sk-tag sk-tag--partner-usage' +
+                        (label.selected ? ' sk-tag--partner-selected' : '') +
+                        '">' + label.label + '</span>';
+                }).join('') + '</div>'
+                : '';
+            return '<section class="sk-partner-effect-block' +
+                (block.highlighted ? ' sk-partner-effect-block--highlighted' : '') +
+                '">' + tags + '<p class="sk-desc sk-partner-desc">' + block.text + '</p></section>';
         }).join('');
     }
 
@@ -266,6 +367,7 @@ var PT_SKILL_WEB = (function() {
                 partnerData[id] = Object.assign({}, internalParameters[id] || {}, partnerFacts[id], {
                     catalogCategory: catalogItem.category || partnerFacts[id].category || '',
                     catalogReason: catalogItem.reason || '',
+                    displayId: catalogItem.displayId || '',
                     iconFile: catalogItem.iconFile || '',
                     usageCategoryIds: (catalogItem.usageCategoryIds || []).slice(),
                     usageSubcategoryIds: (catalogItem.usageSubcategoryIds || []).slice(),
@@ -520,6 +622,12 @@ var PT_SKILL_WEB = (function() {
         if (!ensurePartnerData()) return renderLoading();
         if (!partnerData) return renderLoading();
         var skillCore = getSkillCore();
+        var availableCategories = skillCore && skillCore.getPartnerSourceCategories
+            ? skillCore.getPartnerSourceCategories(PARTNER_CATEGORY_ORDER)
+            : PARTNER_CATEGORY_ORDER.slice();
+        if (availableCategories.indexOf(partnerCategory) < 0) {
+            partnerCategory = availableCategories[0] || '普通帕鲁';
+        }
         var filteredModels = skillCore && skillCore.filterPartnerSkills ? skillCore.filterPartnerSkills({
             sourceCategory: partnerCategory,
             query: partnerSearchQ,
@@ -533,17 +641,13 @@ var PT_SKILL_WEB = (function() {
             });
         var taxonomy = skillCore && skillCore.getPartnerTaxonomy ? skillCore.getPartnerTaxonomy() : partnerTaxonomy;
         var groups = taxonomy.groups || [];
-        var detailTags = taxonomy.detailTags || [];
-        var subcategoryById = {};
-        var detailTagById = {};
-        groups.forEach(function(group) {
-            (group.children || []).forEach(function(child) {
-                subcategoryById[child.id] = Object.assign({ groupId: group.id }, child);
-            });
-        });
-        detailTags.forEach(function(tag) { detailTagById[tag.id] = tag; });
         var facetGroups = skillCore && skillCore.getPartnerFacetGroups ? skillCore.getPartnerFacetGroups() : [];
         var facetCounts = skillCore && skillCore.getPartnerFacetCounts ? skillCore.getPartnerFacetCounts({
+            sourceCategory: partnerCategory,
+            query: partnerSearchQ,
+            facetSelections: partnerFacetSelections
+        }) : {};
+        var facetGroupCounts = skillCore && skillCore.getPartnerFacetGroupCounts ? skillCore.getPartnerFacetGroupCounts({
             sourceCategory: partnerCategory,
             query: partnerSearchQ,
             facetSelections: partnerFacetSelections
@@ -552,39 +656,28 @@ var PT_SKILL_WEB = (function() {
         var cards = ids.map(function(id) {
             var p = partnerData[id];
             var palName = p.palName || p.nameCN || id;
+            var displayIdHtml = p.displayId ? '<span class="sk-partner-card-id">#' + p.displayId + '</span>' : '<span class="sk-partner-card-id"></span>';
             var name = p.hasPartnerSkill === false ? '无伙伴技能' : (p.skillName || '--');
-            var desc = p.description || '';
             var common = getCommon();
+            var effectBlocksHtml = renderPartnerEffectBlocks(p, skillCore);
             var fixedParameterHtml = partnerShowDetails && common && common.renderPartnerFixedParameters ? common.renderPartnerFixedParameters(p) : '';
             var rankTableHtml = partnerShowDetails && common && common.renderPartnerRankTables ? common.renderPartnerRankTables(p.rankTables, p.rankTable) : '';
             var avatar = p.iconFile
                 ? '<img class="sk-partner-avatar" src="../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/' + p.iconFile + '" loading="lazy" alt="' + palName + '">'
                 : '<span class="sk-partner-avatar sk-partner-avatar--missing" aria-hidden="true">?</span>';
-            var usageLabels = (p.usageSubcategoryIds || []).map(function(tagId) {
-                return subcategoryById[tagId] && subcategoryById[tagId].label || '';
-            }).filter(Boolean);
-            var preciseLabels = (p.usageTagIds || []).map(function(tagId) {
-                var tag = detailTagById[tagId];
-                return tag && tag.kind === 'precise' ? tag.label : '';
-            }).filter(Boolean);
-            var visibleLabels = usageLabels.concat(preciseLabels).filter(function(label, index, all) { return all.indexOf(label) === index; });
-            var classificationTags = visibleLabels.length
-                ? '<div class="sk-tags sk-partner-usage-tags">' + visibleLabels.map(function(label) { return '<span class="sk-tag sk-tag--partner-usage">' + label + '</span>'; }).join('') + '</div>'
-                : (p.classificationStatus === 'insufficient-facts' ? '<div class="sk-tags"><span class="sk-tag sk-tag--unreleased">现有事实不足</span></div>' : '');
             return '<div class="sk-partner-card-cell"><article class="sk-card sk-card--passive sk-partner-card">' +
+                '<div class="sk-partner-card-top">' + displayIdHtml + '</div>' +
                 '<div class="sk-partner-pal">' + avatar + '<div class="sk-partner-identity">' +
-                '<div class="sk-partner-pal-row"><strong class="sk-partner-pal-name">' + palName + '</strong><span class="sk-id">' + id + '</span></div>' +
+                '<div class="sk-partner-pal-row"><strong class="sk-partner-pal-name">' + palName + '</strong></div>' +
                 '<div class="sk-partner-skill-name">伙伴技能：' + name + '</div></div></div>' +
-                classificationTags +
-                renderPartnerDescription(desc) +
+                effectBlocksHtml +
                 fixedParameterHtml + rankTableHtml + '</article></div>';
         }).join('');
-        var categoryChips = PARTNER_CATEGORIES.map(function(category) {
+        var categoryChips = availableCategories.map(function(category) {
             return '<button type="button" class="pt-filter-chip pt-filter-chip--sm' + (category === partnerCategory ? ' pt-filter-chip--active' : '') + '" data-sk-partner-category="' + category + '"><span class="pt-filter-chip__label">' + category + '</span></button>';
         }).join('');
         var filterNeedle = String(partnerFilterSearchQ || '').trim().toLowerCase();
         var selectedFilters = skillCore && skillCore.getPartnerSelectedFilters ? skillCore.getPartnerSelectedFilters(partnerFacetSelections) : [];
-        var selectedLabels = selectedFilters.map(function(item) { return item.label; });
         var filterGroupsHtml = facetGroups.map(function(group) {
             var groupMatches = String(group.label || '').toLowerCase().indexOf(filterNeedle) > -1;
             var hasSelection = false;
@@ -604,16 +697,14 @@ var PT_SKILL_WEB = (function() {
             }).join('');
             if (!facetHtml) return '';
             var expanded = !!filterNeedle || hasSelection || partnerExpandedGroups[group.id] === true;
+            var groupCount = facetGroupCounts[group.id] || 0;
             return '<section class="sk-partner-filter-group' + (expanded ? ' sk-partner-filter-group--open' : '') + '">' +
-                '<button type="button" class="sk-partner-filter-group-toggle" data-sk-partner-filter-group="' + group.id + '" aria-expanded="' + (expanded ? 'true' : 'false') + '"><span>' + group.label + '</span><span class="sk-partner-filter-group-icon">' + (expanded ? '−' : '+') + '</span></button>' +
+                '<button type="button" class="sk-partner-filter-group-toggle" data-sk-partner-filter-group="' + group.id + '" aria-expanded="' + (expanded ? 'true' : 'false') + '"><span class="sk-partner-filter-group-heading"><span>' + group.label + '</span><span class="sk-partner-filter-group-count">' + groupCount + '</span></span><span class="sk-partner-filter-group-icon">' + (expanded ? '−' : '+') + '</span></button>' +
                 '<div class="sk-partner-filter-group-collapse" aria-hidden="' + (expanded ? 'false' : 'true') + '"' + (expanded ? '' : ' inert') + '><div class="sk-partner-filter-group-collapse-inner"><div class="sk-partner-filter-group-body">' + facetHtml + '</div></div></div></section>';
         }).join('');
         var appliedHtml = selectedFilters.length ? '<div class="sk-partner-applied"><span class="sk-partner-applied-label">已选条件</span>' + selectedFilters.map(function(item) {
             return '<button type="button" data-sk-partner-remove-filter="' + item.optionId + '" data-sk-partner-facet-id="' + item.facetId + '">' + item.label + '<span aria-hidden="true">×</span></button>';
         }).join('') + '<button type="button" class="sk-partner-clear" data-sk-partner-clear-filters>全部清空</button></div>' : '';
-        var summaryHtml = selectedFilters.length
-            ? '<div class="sk-partner-filter-summary">当前查找：' + selectedLabels.join('、') + '。所选条件必须全部满足。</div>'
-            : '<div class="sk-partner-filter-summary">选择多个条件时，所选条件必须全部满足。</div>';
         var detailsToggleHtml = '<div class="sk-partner-results-actions"><button type="button" class="pt-filter-chip pt-filter-chip--sm sk-partner-details-toggle' + (partnerShowDetails ? ' pt-filter-chip--active' : '') + '" data-sk-partner-toggle-details aria-pressed="' + (partnerShowDetails ? 'true' : 'false') + '">' + (partnerShowDetails ? '隐藏详情' : '展示详情') + '</button></div>';
         var emptyFilterHtml = filterGroupsHtml ? '' : '<div class="sk-partner-filter-empty">没有匹配的筛选项</div>';
         var resultWallClass = ids.length === 1
@@ -621,11 +712,12 @@ var PT_SKILL_WEB = (function() {
             : (ids.length === 2 ? ' sk-partner-card-wall--double' : '');
         var resultsHtml = cards
             ? '<div class="sk-partner-card-wall' + resultWallClass + '"><div class="sk-partner-card-grid">' + cards + '</div></div>'
-            : '<div class="sk-partner-card-wall sk-partner-card-wall--empty"><div class="sk-partner-card-grid sk-partner-card-grid--empty"><div class="sk-partner-no-results"><strong>没有符合全部条件的帕鲁</strong><span>可以移除一个已选条件，或全部清空后重新筛选。</span>' + (selectedFilters.length ? '<button type="button" data-sk-partner-clear-filters>清空筛选</button>' : '') + '</div></div></div>';
+            : '<div class="sk-partner-card-wall sk-partner-card-wall--empty"><div class="sk-partner-card-grid sk-partner-card-grid--empty"><div class="sk-partner-card sk-partner-no-results"><strong>没有符合全部条件的帕鲁</strong><span>可以移除一个已选条件，或全部清空后重新筛选。</span>' + (selectedFilters.length ? '<button type="button" data-sk-partner-clear-filters>清空筛选</button>' : '') + '</div></div></div>';
 
         return '<div class="pt-web-tool-page pt-web-page--grid-fluid pt-web-skill-page pt-web-filter-page">' +
             '<header class="pt-web-tool-heading"><div><span class="pt-web-tool-kicker">资料 / 伙伴技能</span><h1>伙伴技能</h1></div></header>' +
             '<div class="sk-partner-browser">' +
+            '<svg class="sk-partner-frame-mask-svg" aria-hidden="true" focusable="false"><defs></defs></svg>' +
             '<aside class="sk-partner-filter-sidebar" aria-label="伙伴技能筛选">' +
             '<div class="sk-partner-filter-stack">' +
             '<div class="sk-partner-sidebar-block"><label class="sk-partner-sidebar-label">搜索帕鲁或技能</label><input type="text" class="pt-input" data-sk-partner-search placeholder="帕鲁名、技能名或用途…" value="' + partnerSearchQ + '"></div>' +
@@ -633,7 +725,8 @@ var PT_SKILL_WEB = (function() {
             '<div class="sk-partner-sidebar-block"><label class="sk-partner-sidebar-label">查找筛选项</label><input type="text" class="pt-input" data-sk-partner-filter-search placeholder="例如：放牧、骑乘、玩家伤害…" value="' + partnerFilterSearchQ + '"></div>' +
             '<div class="sk-partner-filter-groups">' + filterGroupsHtml + emptyFilterHtml + '</div>' +
             '</div></aside>' +
-            '<section class="sk-partner-results sk-grid-section"><div class="sk-partner-results-stack"><div class="sk-partner-results-meta">' + detailsToggleHtml + appliedHtml + summaryHtml + '<div class="sk-count">共 ' + ids.length + ' 条</div></div>' + resultsHtml + '</div></section>' +
+            '<div class="sk-partner-browser-divider" aria-hidden="true"></div>' +
+            '<section class="sk-partner-results sk-grid-section"><div class="sk-partner-results-stack"><div class="sk-partner-results-meta">' + detailsToggleHtml + appliedHtml + '<div class="sk-count">共 ' + ids.length + ' 条</div></div>' + resultsHtml + '</div></section>' +
             '</div></div>';
     }
 
@@ -665,7 +758,11 @@ var PT_SKILL_WEB = (function() {
         if (!content) return;
         var scroll = content.querySelector('.pt-web-tool-scroll');
         if (!scroll) return;
+        var currentSidebar = scroll.querySelector('.sk-partner-filter-sidebar');
+        var sidebarScrollTop = currentSidebar ? currentSidebar.scrollTop : 0;
         scroll.innerHTML = render();
+        var nextSidebar = scroll.querySelector('.sk-partner-filter-sidebar');
+        if (nextSidebar) nextSidebar.scrollTop = sidebarScrollTop;
         bind(content);
     }
 
@@ -673,12 +770,13 @@ var PT_SKILL_WEB = (function() {
         if (!root) return;
         applyPartnerAppearanceVars(root);
         initPartnerScrollbars(root);
-        schedulePartnerSheetMasks(root);
+        initPartnerFrameMaskScroll(root);
+        schedulePartnerFrameMask(root);
         if (root.dataset.skBd === '1') return;
         root.dataset.skBd = '1';
         if (typeof window !== 'undefined') {
             window.addEventListener('resize', function() {
-                schedulePartnerSheetMasks(root);
+                schedulePartnerFrameMask(root, true);
             });
         }
 
@@ -852,7 +950,7 @@ var PT_SKILL_WEB = (function() {
             partnerSearchQ = '';
             partnerFacetSelections = {};
             partnerFilterSearchQ = '';
-            partnerExpandedGroups = { move: true };
+            partnerExpandedGroups = {};
             partnerShowDetails = false;
             partnerTaxonomy = { groups: [], facets: [], detailTags: [] };
         }
