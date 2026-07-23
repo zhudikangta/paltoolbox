@@ -47,16 +47,19 @@ function taxonomyIdSets(taxonomy) {
     return { subcategoryIds: subcategoryIds, tagIds: tagIds };
 }
 
-function definitionBlocks(definition) {
-    if (Array.isArray(definition)) return definition;
-    return definition && Array.isArray(definition.blocks) ? definition.blocks : [];
+function isPlainObject(value) {
+    if (!value || Object.prototype.toString.call(value) !== '[object Object]') return false;
+    const prototype = Object.getPrototypeOf(value);
+    return prototype === Object.prototype || prototype === null;
 }
 
 function applyEffectBlocks(options) {
     const source = options || {};
     const sourceFacts = source.partnerSkills && typeof source.partnerSkills === 'object' ? source.partnerSkills : {};
     const sourceCatalog = Array.isArray(source.catalog) ? source.catalog : [];
-    const definitions = source.definitions && typeof source.definitions === 'object' ? source.definitions : {};
+    const definitions = source.definitions && source.definitions.partnerSkills && typeof source.definitions.partnerSkills === 'object'
+        ? source.definitions.partnerSkills
+        : {};
     const partnerSkills = deepClone(sourceFacts);
     const catalog = deepClone(sourceCatalog);
     const allowedIds = taxonomyIdSets(source.taxonomy);
@@ -77,7 +80,11 @@ function applyEffectBlocks(options) {
             return;
         }
 
-        const blocks = definitionBlocks(definitions[palId]);
+        const blocks = definitions[palId];
+        if (!Array.isArray(blocks)) {
+            errors.push(palId + ' 的效果块必须是数组');
+            return;
+        }
         if (!blocks.length) {
             errors.push(palId + ' 的效果块不能为空');
             return;
@@ -86,19 +93,26 @@ function applyEffectBlocks(options) {
         const blockSubcategoryIds = [];
         const blockTagIds = [];
         blocks.forEach(function(block, index) {
+            const blockName = palId + ' 的第 ' + (index + 1) + ' 个效果块';
+            if (!isPlainObject(block)) {
+                errors.push(blockName + '必须是普通对象');
+                return;
+            }
             if (!block || typeof block.text !== 'string' || !block.text.trim()) {
-                errors.push(palId + ' 的第 ' + (index + 1) + ' 个效果块文本不能为空');
+                errors.push(blockName + '文本不能为空');
             }
 
-            const subcategoryIds = Array.isArray(block && block.subcategoryIds) ? block.subcategoryIds : [];
-            const tagIds = Array.isArray(block && block.tagIds) ? block.tagIds : [];
-            subcategoryIds.forEach(function(id) {
+            if (!Array.isArray(block.subcategoryIds)) {
+                errors.push(blockName + '的下级分类必须是数组');
+            } else block.subcategoryIds.forEach(function(id) {
                 blockSubcategoryIds.push(id);
                 if (!allowedIds.subcategoryIds.has(id)) {
                     errors.push(palId + ' 的效果块引用未知下级分类: ' + id);
                 }
             });
-            tagIds.forEach(function(id) {
+            if (!Array.isArray(block.tagIds)) {
+                errors.push(blockName + '的精确标签必须是数组');
+            } else block.tagIds.forEach(function(id) {
                 blockTagIds.push(id);
                 if (!allowedIds.tagIds.has(id)) {
                     errors.push(palId + ' 的效果块引用未知精确标签: ' + id);
