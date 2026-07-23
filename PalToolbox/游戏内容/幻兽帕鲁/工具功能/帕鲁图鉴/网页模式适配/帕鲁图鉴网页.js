@@ -287,17 +287,18 @@ var PT_PALDEX_WEB = (function() {
         var raw = p.raw || {};
         var detail = core.getPartnerSkillDetail ? core.getPartnerSkillDetail(p.id) : null;
         var rows = [];
-        rows.push(['名称', detail && detail.skillName || p.partnerSkill || '--']);
-        if (detail && detail.typeLabel) rows.push(['类型', detail.typeLabel]);
-        if (detail && detail.description) rows.push(['效果', String(detail.description).replace(/\n/g, '<br>')]);
-        if (detail && detail.descriptionStatus) rows.push(['资料状态', detail.descriptionStatus]);
-        if (detail && detail.values && detail.values.length) {
-            rows.push(['星级数值', detail.values.map(function(value, index) {
-                return (index + 1) + '星=' + detailValue(value);
-            }).join('　')]);
+        if (detail && detail.hasPartnerSkill === false) {
+            rows.push(['名称', '无伙伴技能']);
+        } else {
+            rows.push(['名称', detail && detail.skillName || p.partnerSkill || '--']);
+            if (detail && detail.typeLabel) rows.push(['类型', detail.typeLabel]);
+            if (detail && detail.description) rows.push(['效果', String(detail.description).replace(/\n/g, '<br>')]);
         }
         if (!rows.length && raw.伙伴技能) rows.push(['名称', raw.伙伴技能]);
-        return rows.length ? '<div class="pd-detail-panel"><h3>伙伴技能</h3>' + renderDetailTable(rows) + '</div>' : '';
+        var skillCommon = typeof window !== 'undefined' ? window.PT_SKILL_COMMON : null;
+        var fixedParameterHtml = skillCommon && skillCommon.renderPartnerFixedParameters && detail ? skillCommon.renderPartnerFixedParameters(detail) : '';
+        var rankTableHtml = skillCommon && skillCommon.renderPartnerRankTables && detail ? skillCommon.renderPartnerRankTables(detail.rankTables, detail.rankTable) : '';
+        return rows.length ? '<div class="pd-detail-panel pd-detail-panel--partner"><h3>伙伴技能</h3>' + renderDetailTable(rows) + fixedParameterHtml + rankTableHtml + '</div>' : '';
     }
 
     function renderWorkTable(p) {
@@ -331,7 +332,8 @@ var PT_PALDEX_WEB = (function() {
         }).join('');
         var raw = p.raw || {};
         var partnerDetail = core.getPartnerSkillDetail ? core.getPartnerSkillDetail(p.id) : null;
-        var partnerSkillName = partnerDetail && partnerDetail.skillName || p.partnerSkill || '--';
+        var partnerSkillName = partnerDetail && partnerDetail.hasPartnerSkill === false ? '无伙伴技能' :
+            (partnerDetail && partnerDetail.skillName || p.partnerSkill || '--');
         var st = p.stats || {};
         var titleIdHtml = p.displayId ? ' <span style="font-size:14px;color:var(--pt-text-sub)">#' + p.displayId + '</span>' : '';
         var baseRows = [

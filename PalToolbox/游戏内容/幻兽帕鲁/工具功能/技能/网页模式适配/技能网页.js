@@ -9,6 +9,13 @@ var PT_SKILL_WEB = (function() {
     var partnerLoadError = '';
     var partnerSearchQ = '';
     var partnerCategory = '普通帕鲁';
+    var partnerFacetSelections = {};
+    var partnerFilterSearchQ = '';
+    var partnerExpandedGroups = { move: true };
+    var partnerShowDetails = false;
+    var partnerTaxonomy = { groups: [], facets: [], detailTags: [] };
+    var partnerSheetMaskFrame = 0;
+    var partnerFilterAnimationFrame = 0;
     var PARTNER_CATEGORIES = ['普通帕鲁', '石板Boss', '塔主Boss', 'Boss', '狂暴化', '其他'];
     var PARTNER_DATA_URL = '../游戏内容/幻兽帕鲁1.0/数据包/伙伴技能.json';
 
@@ -32,6 +39,172 @@ var PT_SKILL_WEB = (function() {
 
     function getCommon() {
         return (typeof window !== 'undefined' && window.PT_SKILL_COMMON) ? window.PT_SKILL_COMMON : null;
+    }
+
+    function getPaldexCommon() {
+        return (typeof window !== 'undefined' && window.PT_PALDEX_COMMON) ? window.PT_PALDEX_COMMON : null;
+    }
+
+    function getWebSettings() {
+        try {
+            return typeof window.readPTSettings === 'function' ? window.readPTSettings('web') : {};
+        } catch (error) {
+            return {};
+        }
+    }
+
+    function getPartnerAppearanceVars() {
+        var common = getPaldexCommon();
+        if (!common || typeof common.getAppearanceSettings !== 'function') return {};
+        if (typeof window === 'undefined' || typeof window.PT_buildCardVisualVars !== 'function') return {};
+        var appearance = common.getAppearanceSettings();
+        var webSettings = getWebSettings();
+        var themes = window.PT_THEME_PRESETS || {};
+        var fallbackTheme = themes[webSettings.theme || 'oceanic'] || themes.oceanic || {};
+        var frame = window.PT_buildCardVisualVars(webSettings, appearance.frameTheme, appearance.frameMaterial, fallbackTheme);
+        var cube = window.PT_buildCardVisualVars(webSettings, appearance.cubeTheme, appearance.cubeMaterial, fallbackTheme);
+        return {
+            '--pd-frame-bg': frame.bg || 'rgba(12,24,38,.42)',
+            '--pd-frame-border': frame.border || 'rgba(255,255,255,.16)',
+            '--pd-frame-glow': frame.glow || frame.beamGlow || 'rgba(120,210,255,.24)',
+            '--pd-frame-metal-texture': frame.metalTexture || 'none',
+            '--pd-frame-wood-texture': frame.woodTexture || 'none',
+            '--pd-frame-blur': frame.blur || '18px',
+            '--pd-frame-saturate': frame.saturate || '1.22',
+            '--pd-frame-brightness': frame.brightness || '1',
+            '--pd-frame-contrast': frame.contrast || '1',
+            '--pd-frame-hue-rotate': frame.hueRotate || '0deg',
+            '--pd-frame-before-background': frame.beforeBackground || 'none',
+            '--pd-frame-before-opacity': frame.beforeOpacity || '0',
+            '--pd-frame-metal-shadow': frame.metalShadow || 'none',
+            '--pd-cube-bg': cube.bg || 'rgba(20,38,58,.42)',
+            '--pd-cube-border': cube.border || 'rgba(255,255,255,.14)',
+            '--pd-cube-glow': cube.glow || cube.beamGlow || 'rgba(120,210,255,.26)',
+            '--pd-cube-beam': cube.beam || 'linear-gradient(90deg,transparent,rgba(255,255,255,.48),transparent)',
+            '--pd-cube-metal-texture': cube.metalTexture || 'none',
+            '--pd-cube-wood-texture': cube.woodTexture || 'none',
+            '--pd-cube-blur': cube.blur || '14px',
+            '--pd-cube-saturate': cube.saturate || '1.22',
+            '--pd-cube-brightness': cube.brightness || '1',
+            '--pd-cube-contrast': cube.contrast || '1',
+            '--pd-cube-hue-rotate': cube.hueRotate || '0deg',
+            '--pd-cube-sheen-opacity': cube.sheenOpacity || '0',
+            '--pd-cube-sheen-angle': cube.sheenAngle || '135deg',
+            '--pd-cube-before-background': cube.beforeBackground || 'none',
+            '--pd-cube-before-opacity': cube.beforeOpacity || '0',
+            '--pd-cube-glass-glow': cube.glassGlowShadow || 'none',
+            '--pd-cube-metal-shadow': cube.metalShadow || 'none',
+            '--pd-active-cube-material-id': appearance.cubeMaterial || 'gradient',
+            '--pd-cube-material-id': appearance.cubeMaterial || 'gradient'
+        };
+    }
+
+    function applyPartnerAppearanceVars(targetRoot) {
+        if (!targetRoot) return;
+        var page = targetRoot.querySelector('.pt-web-skill-page') || targetRoot;
+        var vars = getPartnerAppearanceVars();
+        Object.keys(vars).forEach(function(name) {
+            page.style.setProperty(name, vars[name]);
+        });
+    }
+
+    function getPartnerOffsetWithin(element, sheet) {
+        var left = 0;
+        var top = 0;
+        var node = element;
+        while (node && node !== sheet) {
+            left += node.offsetLeft;
+            top += node.offsetTop;
+            node = node.offsetParent;
+        }
+        if (node !== sheet) return null;
+        return { left: left, top: top };
+    }
+
+    function applyPartnerSheetMask(sheet, selector, variableName) {
+        if (!sheet || !sheet.clientWidth || !sheet.clientHeight) return;
+        var holes = Array.prototype.map.call(sheet.querySelectorAll(selector), function(element) {
+            var offset = getPartnerOffsetWithin(element, sheet);
+            if (!offset || !element.clientWidth || !element.clientHeight) return '';
+            return '<rect x="' + offset.left + '" y="' + offset.top +
+                '" width="' + element.clientWidth + '" height="' + element.clientHeight +
+                '" rx="7" ry="7"/>';
+        }).join('');
+        var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + sheet.clientWidth + '" height="' + sheet.clientHeight + '" viewBox="0 0 ' + sheet.clientWidth + ' ' + sheet.clientHeight + '">' +
+            '<mask id="holes" maskUnits="userSpaceOnUse"><rect width="100%" height="100%" fill="white"/><g fill="black">' + holes + '</g></mask>' +
+            '<rect width="100%" height="100%" fill="white" mask="url(#holes)"/></svg>';
+        sheet.style.setProperty(variableName, 'url("data:image/svg+xml,' + encodeURIComponent(svg) + '")');
+    }
+
+    function applyPartnerSheetMasks(targetRoot) {
+        if (!targetRoot) return;
+        var sidebarSheet = targetRoot.querySelector('.sk-partner-filter-stack');
+        var resultsSheet = targetRoot.querySelector('.sk-partner-results-stack');
+        applyPartnerSheetMask(
+            sidebarSheet,
+            '.sk-partner-sidebar-block, .sk-partner-filter-group, .sk-partner-filter-empty',
+            '--sk-partner-sidebar-mask'
+        );
+        applyPartnerSheetMask(
+            resultsSheet,
+            '.sk-partner-results-meta, .sk-partner-card-cell, .sk-partner-no-results',
+            '--sk-partner-results-mask'
+        );
+    }
+
+    function schedulePartnerSheetMasks(targetRoot) {
+        if (typeof window === 'undefined' || typeof window.requestAnimationFrame !== 'function') {
+            applyPartnerSheetMasks(targetRoot);
+            return;
+        }
+        if (partnerSheetMaskFrame) window.cancelAnimationFrame(partnerSheetMaskFrame);
+        partnerSheetMaskFrame = window.requestAnimationFrame(function() {
+            partnerSheetMaskFrame = 0;
+            applyPartnerSheetMasks(targetRoot);
+        });
+    }
+
+    function animatePartnerFilterGroup(targetRoot) {
+        if (!targetRoot || typeof window === 'undefined' || typeof window.requestAnimationFrame !== 'function') {
+            applyPartnerSheetMasks(targetRoot);
+            return;
+        }
+        if (partnerFilterAnimationFrame) window.cancelAnimationFrame(partnerFilterAnimationFrame);
+        var sidebarSheet = targetRoot.querySelector('.sk-partner-filter-stack');
+        var startedAt = typeof performance !== 'undefined' && performance.now ? performance.now() : Date.now();
+        function updateMask(now) {
+            applyPartnerSheetMask(
+                sidebarSheet,
+                '.sk-partner-sidebar-block, .sk-partner-filter-group, .sk-partner-filter-empty',
+                '--sk-partner-sidebar-mask'
+            );
+            if ((now || Date.now()) - startedAt < 180) {
+                partnerFilterAnimationFrame = window.requestAnimationFrame(updateMask);
+                return;
+            }
+            partnerFilterAnimationFrame = 0;
+        }
+        partnerFilterAnimationFrame = window.requestAnimationFrame(updateMask);
+    }
+
+    function initPartnerScrollbars(targetRoot) {
+        if (!targetRoot || typeof window === 'undefined' || typeof window.PT_initCustomScrollbars !== 'function') return;
+        var sidebar = targetRoot.querySelector('.sk-partner-filter-sidebar');
+        var results = targetRoot.querySelector('.sk-partner-results');
+        if (sidebar) window.PT_initCustomScrollbars(sidebar);
+        if (results) window.PT_initCustomScrollbars(results);
+    }
+
+    function renderPartnerDescription(description) {
+        return String(description || '').split(/\n+/).map(function(paragraph) {
+            return paragraph.trim();
+        }).filter(Boolean).map(function(paragraph) {
+            return '<p class="sk-desc sk-partner-desc">' + paragraph + '</p>';
+        }).join('');
+    }
+
+    function getSkillCore() {
+        return (typeof window !== 'undefined' && window.PT_SKILL_CORE) ? window.PT_SKILL_CORE : null;
     }
 
     function getCrossref() {
@@ -81,6 +254,9 @@ var PT_SKILL_WEB = (function() {
             var partnerFacts = rawPartnerData.partnerSkills || {};
             var internalParameters = rawPartnerData.internalParameters || {};
             var catalog = Array.isArray(rawPartnerData.catalog) ? rawPartnerData.catalog : Object.keys(partnerFacts).map(function(id) { return { palId: id }; });
+            partnerTaxonomy = rawPartnerData.taxonomy || { groups: [], facets: [], detailTags: [] };
+            var skillCore = getSkillCore();
+            if (skillCore && skillCore.setPartnerSkillData) skillCore.setPartnerSkillData(rawPartnerData);
             partnerData = {};
             partnerCatalogIds = [];
             catalog.forEach(function(catalogItem) {
@@ -89,7 +265,12 @@ var PT_SKILL_WEB = (function() {
                 partnerCatalogIds.push(id);
                 partnerData[id] = Object.assign({}, internalParameters[id] || {}, partnerFacts[id], {
                     catalogCategory: catalogItem.category || partnerFacts[id].category || '',
-                    catalogReason: catalogItem.reason || ''
+                    catalogReason: catalogItem.reason || '',
+                    iconFile: catalogItem.iconFile || '',
+                    usageCategoryIds: (catalogItem.usageCategoryIds || []).slice(),
+                    usageSubcategoryIds: (catalogItem.usageSubcategoryIds || []).slice(),
+                    usageTagIds: (catalogItem.usageTagIds || []).slice(),
+                    classificationStatus: catalogItem.classificationStatus || ''
                 });
             });
             partnerLoading = false;
@@ -338,60 +519,122 @@ var PT_SKILL_WEB = (function() {
     function renderPartner() {
         if (!ensurePartnerData()) return renderLoading();
         if (!partnerData) return renderLoading();
-        var ids = partnerCatalogIds.slice();
-        ids = ids.filter(function(id) {
-            var p = partnerData[id];
-            return p.catalogCategory === partnerCategory;
-        });
-        if (partnerSearchQ) {
-            var q = partnerSearchQ.toLowerCase();
-            ids = ids.filter(function(id) {
+        var skillCore = getSkillCore();
+        var filteredModels = skillCore && skillCore.filterPartnerSkills ? skillCore.filterPartnerSkills({
+            sourceCategory: partnerCategory,
+            query: partnerSearchQ,
+            facetSelections: partnerFacetSelections
+        }) : [];
+        var ids = skillCore && skillCore.filterPartnerSkills
+            ? filteredModels.map(function(item) { return item.id; })
+            : partnerCatalogIds.slice().filter(function(id) {
                 var p = partnerData[id];
-                return (p.palName || p.nameCN || '').toLowerCase().indexOf(q) > -1 ||
-                    (p.skillName || '').toLowerCase().indexOf(q) > -1 ||
-                    (p.description || '').toLowerCase().indexOf(q) > -1 ||
-                    id.toLowerCase().indexOf(q) > -1;
+                return p.catalogCategory === partnerCategory;
             });
-        }
+        var taxonomy = skillCore && skillCore.getPartnerTaxonomy ? skillCore.getPartnerTaxonomy() : partnerTaxonomy;
+        var groups = taxonomy.groups || [];
+        var detailTags = taxonomy.detailTags || [];
+        var subcategoryById = {};
+        var detailTagById = {};
+        groups.forEach(function(group) {
+            (group.children || []).forEach(function(child) {
+                subcategoryById[child.id] = Object.assign({ groupId: group.id }, child);
+            });
+        });
+        detailTags.forEach(function(tag) { detailTagById[tag.id] = tag; });
+        var facetGroups = skillCore && skillCore.getPartnerFacetGroups ? skillCore.getPartnerFacetGroups() : [];
+        var facetCounts = skillCore && skillCore.getPartnerFacetCounts ? skillCore.getPartnerFacetCounts({
+            sourceCategory: partnerCategory,
+            query: partnerSearchQ,
+            facetSelections: partnerFacetSelections
+        }) : {};
+
         var cards = ids.map(function(id) {
             var p = partnerData[id];
             var palName = p.palName || p.nameCN || id;
-            var name = p.skillName || '--';
+            var name = p.hasPartnerSkill === false ? '无伙伴技能' : (p.skillName || '--');
             var desc = p.description || '';
-            var trigger = p.trigger || '';
-            var cooldown = p.coolDown;
-            var values = p.values || [];
-            var valuesHtml = values.length ? '<div class="sk-partner-values">' + values.map(function(v, i) {
-                return '<span class="sk-partner-star">' + (i + 1) + '★:' + v + '</span>';
-            }).join(' ') + '</div>' : '';
-            return '<article class="sk-card sk-card--passive" style="border-left:4px solid #8b5cf6">' +
-                '<div class="sk-card-head"><strong>' + name + '</strong><span class="sk-id">' + palName + ' / ' + id + '</span></div>' +
-                '<div class="sk-meta">' +
-                (trigger ? '<span class="sk-tag sk-tag--trigger">' + trigger + '</span>' : '') +
-                (cooldown ? '<span class="sk-tag">冷却 ' + cooldown + 's</span>' : '') +
-                '</div>' +
-                (desc ? '<p class="sk-desc">' + desc + '</p>' : '') +
-                valuesHtml + '</article>';
+            var common = getCommon();
+            var fixedParameterHtml = partnerShowDetails && common && common.renderPartnerFixedParameters ? common.renderPartnerFixedParameters(p) : '';
+            var rankTableHtml = partnerShowDetails && common && common.renderPartnerRankTables ? common.renderPartnerRankTables(p.rankTables, p.rankTable) : '';
+            var avatar = p.iconFile
+                ? '<img class="sk-partner-avatar" src="../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/' + p.iconFile + '" loading="lazy" alt="' + palName + '">'
+                : '<span class="sk-partner-avatar sk-partner-avatar--missing" aria-hidden="true">?</span>';
+            var usageLabels = (p.usageSubcategoryIds || []).map(function(tagId) {
+                return subcategoryById[tagId] && subcategoryById[tagId].label || '';
+            }).filter(Boolean);
+            var preciseLabels = (p.usageTagIds || []).map(function(tagId) {
+                var tag = detailTagById[tagId];
+                return tag && tag.kind === 'precise' ? tag.label : '';
+            }).filter(Boolean);
+            var visibleLabels = usageLabels.concat(preciseLabels).filter(function(label, index, all) { return all.indexOf(label) === index; });
+            var classificationTags = visibleLabels.length
+                ? '<div class="sk-tags sk-partner-usage-tags">' + visibleLabels.map(function(label) { return '<span class="sk-tag sk-tag--partner-usage">' + label + '</span>'; }).join('') + '</div>'
+                : (p.classificationStatus === 'insufficient-facts' ? '<div class="sk-tags"><span class="sk-tag sk-tag--unreleased">现有事实不足</span></div>' : '');
+            return '<div class="sk-partner-card-cell"><article class="sk-card sk-card--passive sk-partner-card">' +
+                '<div class="sk-partner-pal">' + avatar + '<div class="sk-partner-identity">' +
+                '<div class="sk-partner-pal-row"><strong class="sk-partner-pal-name">' + palName + '</strong><span class="sk-id">' + id + '</span></div>' +
+                '<div class="sk-partner-skill-name">伙伴技能：' + name + '</div></div></div>' +
+                classificationTags +
+                renderPartnerDescription(desc) +
+                fixedParameterHtml + rankTableHtml + '</article></div>';
         }).join('');
         var categoryChips = PARTNER_CATEGORIES.map(function(category) {
             return '<button type="button" class="pt-filter-chip pt-filter-chip--sm' + (category === partnerCategory ? ' pt-filter-chip--active' : '') + '" data-sk-partner-category="' + category + '"><span class="pt-filter-chip__label">' + category + '</span></button>';
         }).join('');
+        var filterNeedle = String(partnerFilterSearchQ || '').trim().toLowerCase();
+        var selectedFilters = skillCore && skillCore.getPartnerSelectedFilters ? skillCore.getPartnerSelectedFilters(partnerFacetSelections) : [];
+        var selectedLabels = selectedFilters.map(function(item) { return item.label; });
+        var filterGroupsHtml = facetGroups.map(function(group) {
+            var groupMatches = String(group.label || '').toLowerCase().indexOf(filterNeedle) > -1;
+            var hasSelection = false;
+            var facetHtml = group.facets.map(function(facet) {
+                var selectedIds = partnerFacetSelections[facet.id] || [];
+                if (selectedIds.length) hasSelection = true;
+                var visibleOptions = facet.options.filter(function(option) {
+                    return !filterNeedle || groupMatches || String(facet.label + ' ' + option.label).toLowerCase().indexOf(filterNeedle) > -1;
+                });
+                if (!visibleOptions.length) return '';
+                var optionsHtml = visibleOptions.map(function(option) {
+                    var active = selectedIds.indexOf(option.id) > -1;
+                    var count = facetCounts[facet.id] && facetCounts[facet.id][option.id];
+                    return '<button type="button" class="sk-partner-facet-option' + (active ? ' sk-partner-facet-option--active' : '') + (count === 0 ? ' sk-partner-facet-option--empty' : '') + '" data-sk-partner-facet-option="' + option.id + '" data-sk-partner-facet-id="' + facet.id + '" aria-pressed="' + (active ? 'true' : 'false') + '"><span>' + option.label + '</span><span class="sk-partner-facet-count">' + (count || 0) + '</span></button>';
+                }).join('');
+                return '<div class="sk-partner-facet"><div class="sk-partner-facet-title">' + facet.label + '</div><div class="sk-partner-facet-options">' + optionsHtml + '</div></div>';
+            }).join('');
+            if (!facetHtml) return '';
+            var expanded = !!filterNeedle || hasSelection || partnerExpandedGroups[group.id] === true;
+            return '<section class="sk-partner-filter-group' + (expanded ? ' sk-partner-filter-group--open' : '') + '">' +
+                '<button type="button" class="sk-partner-filter-group-toggle" data-sk-partner-filter-group="' + group.id + '" aria-expanded="' + (expanded ? 'true' : 'false') + '"><span>' + group.label + '</span><span class="sk-partner-filter-group-icon">' + (expanded ? '−' : '+') + '</span></button>' +
+                '<div class="sk-partner-filter-group-collapse" aria-hidden="' + (expanded ? 'false' : 'true') + '"' + (expanded ? '' : ' inert') + '><div class="sk-partner-filter-group-collapse-inner"><div class="sk-partner-filter-group-body">' + facetHtml + '</div></div></div></section>';
+        }).join('');
+        var appliedHtml = selectedFilters.length ? '<div class="sk-partner-applied"><span class="sk-partner-applied-label">已选条件</span>' + selectedFilters.map(function(item) {
+            return '<button type="button" data-sk-partner-remove-filter="' + item.optionId + '" data-sk-partner-facet-id="' + item.facetId + '">' + item.label + '<span aria-hidden="true">×</span></button>';
+        }).join('') + '<button type="button" class="sk-partner-clear" data-sk-partner-clear-filters>全部清空</button></div>' : '';
+        var summaryHtml = selectedFilters.length
+            ? '<div class="sk-partner-filter-summary">当前查找：' + selectedLabels.join('、') + '。所选条件必须全部满足。</div>'
+            : '<div class="sk-partner-filter-summary">选择多个条件时，所选条件必须全部满足。</div>';
+        var detailsToggleHtml = '<div class="sk-partner-results-actions"><button type="button" class="pt-filter-chip pt-filter-chip--sm sk-partner-details-toggle' + (partnerShowDetails ? ' pt-filter-chip--active' : '') + '" data-sk-partner-toggle-details aria-pressed="' + (partnerShowDetails ? 'true' : 'false') + '">' + (partnerShowDetails ? '隐藏详情' : '展示详情') + '</button></div>';
+        var emptyFilterHtml = filterGroupsHtml ? '' : '<div class="sk-partner-filter-empty">没有匹配的筛选项</div>';
+        var resultWallClass = ids.length === 1
+            ? ' sk-partner-card-wall--single'
+            : (ids.length === 2 ? ' sk-partner-card-wall--double' : '');
+        var resultsHtml = cards
+            ? '<div class="sk-partner-card-wall' + resultWallClass + '"><div class="sk-partner-card-grid">' + cards + '</div></div>'
+            : '<div class="sk-partner-card-wall sk-partner-card-wall--empty"><div class="sk-partner-card-grid sk-partner-card-grid--empty"><div class="sk-partner-no-results"><strong>没有符合全部条件的帕鲁</strong><span>可以移除一个已选条件，或全部清空后重新筛选。</span>' + (selectedFilters.length ? '<button type="button" data-sk-partner-clear-filters>清空筛选</button>' : '') + '</div></div></div>';
 
         return '<div class="pt-web-tool-page pt-web-page--grid-fluid pt-web-skill-page pt-web-filter-page">' +
             '<header class="pt-web-tool-heading"><div><span class="pt-web-tool-kicker">资料 / 伙伴技能</span><h1>伙伴技能</h1></div></header>' +
-            '<section class="pt-web-section pt-web-filter-section">' +
-            '<div class="pt-web-filter-shell"><div class="pt-web-filter-groups">' +
-            '<div class="pt-web-filter-cluster pt-web-filter-cluster--category">' +
-            '<div class="pt-web-filter-category-layout"><div class="pt-web-filter-chips pt-web-filter-category-chips pt-web-filter-category-chips--main">' + categoryChips + '</div></div>' +
-            '</div>' +
-            '<div class="pt-web-filter-divider" aria-hidden="true"></div>' +
-            '<div class="pt-web-filter-cluster pt-web-filter-cluster--primary">' +
-            '<input type="text" class="pt-input" data-sk-partner-search placeholder="搜索伙伴技能名称…" value="' + partnerSearchQ + '">' +
-            '</div>' +
-            '</div></div>' +
-            '</section>' +
-            '<section class="pt-web-section sk-grid-section"><div class="sk-count">共 ' + ids.length + ' 条</div>' +
-            '<div class="sk-grid">' + cards + '</div></section></div>';
+            '<div class="sk-partner-browser">' +
+            '<aside class="sk-partner-filter-sidebar" aria-label="伙伴技能筛选">' +
+            '<div class="sk-partner-filter-stack">' +
+            '<div class="sk-partner-sidebar-block"><label class="sk-partner-sidebar-label">搜索帕鲁或技能</label><input type="text" class="pt-input" data-sk-partner-search placeholder="帕鲁名、技能名或用途…" value="' + partnerSearchQ + '"></div>' +
+            '<div class="sk-partner-sidebar-block"><span class="sk-partner-sidebar-label">帕鲁来源</span><div class="sk-partner-source-options">' + categoryChips + '</div></div>' +
+            '<div class="sk-partner-sidebar-block"><label class="sk-partner-sidebar-label">查找筛选项</label><input type="text" class="pt-input" data-sk-partner-filter-search placeholder="例如：放牧、骑乘、玩家伤害…" value="' + partnerFilterSearchQ + '"></div>' +
+            '<div class="sk-partner-filter-groups">' + filterGroupsHtml + emptyFilterHtml + '</div>' +
+            '</div></aside>' +
+            '<section class="sk-partner-results sk-grid-section"><div class="sk-partner-results-stack"><div class="sk-partner-results-meta">' + detailsToggleHtml + appliedHtml + summaryHtml + '<div class="sk-count">共 ' + ids.length + ' 条</div></div>' + resultsHtml + '</div></section>' +
+            '</div></div>';
     }
 
     function openEquipDetail(equipId) {
@@ -427,13 +670,75 @@ var PT_SKILL_WEB = (function() {
     }
 
     function bind(root) {
-        if (!root || root.dataset.skBd === '1') return;
+        if (!root) return;
+        applyPartnerAppearanceVars(root);
+        initPartnerScrollbars(root);
+        schedulePartnerSheetMasks(root);
+        if (root.dataset.skBd === '1') return;
         root.dataset.skBd = '1';
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', function() {
+                schedulePartnerSheetMasks(root);
+            });
+        }
 
         root.addEventListener('click', function(e) {
             var partnerChip = e.target.closest('[data-sk-partner-category]');
             if (partnerChip) {
                 partnerCategory = partnerChip.getAttribute('data-sk-partner-category') || '普通帕鲁';
+                rerender();
+                return;
+            }
+            var partnerGroupToggle = e.target.closest('[data-sk-partner-filter-group]');
+            if (partnerGroupToggle) {
+                var partnerGroupId = partnerGroupToggle.getAttribute('data-sk-partner-filter-group');
+                var partnerGroup = partnerGroupToggle.closest('.sk-partner-filter-group');
+                var partnerGroupOpen = !partnerGroup.classList.contains('sk-partner-filter-group--open');
+                partnerExpandedGroups[partnerGroupId] = partnerGroupOpen;
+                partnerGroup.classList.toggle('sk-partner-filter-group--open', partnerGroupOpen);
+                partnerGroupToggle.setAttribute('aria-expanded', partnerGroupOpen ? 'true' : 'false');
+                var partnerGroupCollapse = partnerGroup.querySelector('.sk-partner-filter-group-collapse');
+                if (partnerGroupCollapse) {
+                    partnerGroupCollapse.setAttribute('aria-hidden', partnerGroupOpen ? 'false' : 'true');
+                    partnerGroupCollapse.toggleAttribute('inert', !partnerGroupOpen);
+                }
+                var partnerGroupIcon = partnerGroupToggle.querySelector('.sk-partner-filter-group-icon');
+                if (partnerGroupIcon) partnerGroupIcon.textContent = partnerGroupOpen ? '−' : '+';
+                animatePartnerFilterGroup(root);
+                return;
+            }
+            var partnerDetailsToggle = e.target.closest('[data-sk-partner-toggle-details]');
+            if (partnerDetailsToggle) {
+                partnerShowDetails = !partnerShowDetails;
+                rerender();
+                return;
+            }
+            var partnerFacetOption = e.target.closest('[data-sk-partner-facet-option]');
+            if (partnerFacetOption) {
+                var partnerFacetId = partnerFacetOption.getAttribute('data-sk-partner-facet-id');
+                var partnerOptionId = partnerFacetOption.getAttribute('data-sk-partner-facet-option');
+                var selectedFacetOptions = (partnerFacetSelections[partnerFacetId] || []).slice();
+                var selectedFacetOptionIndex = selectedFacetOptions.indexOf(partnerOptionId);
+                if (selectedFacetOptionIndex > -1) selectedFacetOptions.splice(selectedFacetOptionIndex, 1);
+                else selectedFacetOptions.push(partnerOptionId);
+                if (selectedFacetOptions.length) partnerFacetSelections[partnerFacetId] = selectedFacetOptions;
+                else delete partnerFacetSelections[partnerFacetId];
+                rerender();
+                return;
+            }
+            var partnerRemoveFilter = e.target.closest('[data-sk-partner-remove-filter]');
+            if (partnerRemoveFilter) {
+                var removeFacetId = partnerRemoveFilter.getAttribute('data-sk-partner-facet-id');
+                var removeOptionId = partnerRemoveFilter.getAttribute('data-sk-partner-remove-filter');
+                var remainingFacetOptions = (partnerFacetSelections[removeFacetId] || []).filter(function(id) { return id !== removeOptionId; });
+                if (remainingFacetOptions.length) partnerFacetSelections[removeFacetId] = remainingFacetOptions;
+                else delete partnerFacetSelections[removeFacetId];
+                rerender();
+                return;
+            }
+            var partnerClearFilters = e.target.closest('[data-sk-partner-clear-filters]');
+            if (partnerClearFilters) {
+                partnerFacetSelections = {};
                 rerender();
                 return;
             }
@@ -485,24 +790,35 @@ var PT_SKILL_WEB = (function() {
             var newInput = root.querySelector('[data-sk-partner-search]');
             if (newInput) { newInput.focus(); newInput.selectionStart = newInput.selectionEnd = input.selectionStart; }
         });
+        root.addEventListener('input', function(e) {
+            var input = e.target.closest('[data-sk-partner-filter-search]');
+            if (!input || searchComposing || e.isComposing) return;
+            partnerFilterSearchQ = input.value;
+            rerender();
+            var newInput = root.querySelector('[data-sk-partner-filter-search]');
+            if (newInput) { newInput.focus(); newInput.selectionStart = newInput.selectionEnd = input.selectionStart; }
+        });
         root.addEventListener('compositionstart', function(e) {
-            if (!e.target.closest('[data-sk-search]') && !e.target.closest('[data-sk-partner-search]')) return;
+            if (!e.target.closest('[data-sk-search]') && !e.target.closest('[data-sk-partner-search]') && !e.target.closest('[data-sk-partner-filter-search]')) return;
             searchComposing = true;
         });
         root.addEventListener('compositionend', function(e) {
-            var input = e.target.closest('[data-sk-search]') || e.target.closest('[data-sk-partner-search]');
+            var input = e.target.closest('[data-sk-search]') || e.target.closest('[data-sk-partner-search]') || e.target.closest('[data-sk-partner-filter-search]');
             if (!input) return;
             searchComposing = false;
             var selStart = input.selectionStart;
             var isPartner = input.getAttribute('data-sk-partner-search') !== null;
-            if (isPartner) {
+            var isPartnerFilter = input.getAttribute('data-sk-partner-filter-search') !== null;
+            if (isPartnerFilter) {
+                partnerFilterSearchQ = input.value;
+            } else if (isPartner) {
                 partnerSearchQ = input.value;
             } else {
                 var common = getCommon();
                 if (common) { common.setSearch(input.value); }
             }
             rerender();
-            var sel = isPartner ? '[data-sk-partner-search]' : '[data-sk-search]';
+            var sel = isPartnerFilter ? '[data-sk-partner-filter-search]' : (isPartner ? '[data-sk-partner-search]' : '[data-sk-search]');
             var newInput = root.querySelector(sel);
             if (newInput) { newInput.focus(); newInput.selectionStart = newInput.selectionEnd = selStart; }
         });
@@ -534,6 +850,11 @@ var PT_SKILL_WEB = (function() {
             partnerCatalogIds = [];
             partnerCategory = '普通帕鲁';
             partnerSearchQ = '';
+            partnerFacetSelections = {};
+            partnerFilterSearchQ = '';
+            partnerExpandedGroups = { move: true };
+            partnerShowDetails = false;
+            partnerTaxonomy = { groups: [], facets: [], detailTags: [] };
         }
     };
 })();

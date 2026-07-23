@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "dataRole": "research-correction",
+    "verifiedAt": "2026-07-23",
+    "gameVersion": "v1.0.0",
+    "transformVersion": "1.5.0"
+  },
+  "partnerSkills": {
+    "Gorilla_Ground": {
+      "description": "发动后会解放野性之力，并在一定时间内石掌猿的攻击力将提升(75~300)%。\n若它在队伍中，玩家的攀爬速度提升(50~100)%。（不可叠加）",
+      "correction": {
+        "id": "gorilla-ground-missing-active-attack",
+        "status": "verified-from-source-values",
+        "sourceUrl": "https://paldb.cc/cn/Gorirat_Terra",
+        "evidence": "PalDB 中文正文仅列攀爬速度；同页伙伴技能等级表明确列出 ToSelf 攻击 +75%、+115%、+165%、+225%、+300%。"
+      }
+    }
+  }
+}

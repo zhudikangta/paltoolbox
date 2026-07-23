@@ -1,6 +1,9 @@
 var PT_SKILL_CORE = (function() {
     var activeSkills = [];
     var partnerSkills = [];
+    var partnerTaxonomy = { groups: [], facets: [], detailTags: [] };
+    var partnerFacetGroups = [];
+    var partnerFacetOptionById = {};
 
     var ELEMENT_NAME = {
         Normal: '无属性',
@@ -61,6 +64,14 @@ var PT_SKILL_CORE = (function() {
         var source = raw && raw.partnerSkills ? raw.partnerSkills : {};
         var internal = raw && raw.internalParameters ? raw.internalParameters : {};
         var catalog = raw && Array.isArray(raw.catalog) ? raw.catalog : Object.keys(source).map(function(id) { return { palId: id }; });
+        partnerTaxonomy = raw && raw.taxonomy ? raw.taxonomy : { groups: [], facets: [], detailTags: [] };
+        var taxonomyLabels = {};
+        (partnerTaxonomy.groups || []).forEach(function(group) {
+            taxonomyLabels[group.id] = group.label || group.id;
+            (group.children || []).forEach(function(child) { taxonomyLabels[child.id] = child.label || child.id; });
+        });
+        (partnerTaxonomy.detailTags || []).forEach(function(tag) { taxonomyLabels[tag.id] = tag.label || tag.id; });
+        buildPartnerFacetGroups();
         partnerSkills = catalog.map(function(catalogItem) {
             var id = typeof catalogItem === 'string' ? catalogItem : catalogItem.palId;
             var item = source[id] || {};
@@ -71,6 +82,14 @@ var PT_SKILL_CORE = (function() {
                 palName: item.palName || item.nameCN || id,
                 category: catalogItem.category || item.category || '',
                 reason: catalogItem.reason || '',
+                iconFile: catalogItem.iconFile || '',
+                usageCategoryIds: (catalogItem.usageCategoryIds || []).slice(),
+                usageSubcategoryIds: (catalogItem.usageSubcategoryIds || []).slice(),
+                usageTagIds: (catalogItem.usageTagIds || []).slice(),
+                classificationStatus: catalogItem.classificationStatus || '',
+                usageSearchText: (catalogItem.usageCategoryIds || []).concat(catalogItem.usageSubcategoryIds || [], catalogItem.usageTagIds || []).map(function(value) {
+                    return taxonomyLabels[value] || value;
+                }).join(' '),
                 type: parameters.typeLabel || parameters.skillType || '',
                 trigger: parameters.trigger || '',
                 cooldown: parameters.coolDown,
@@ -86,6 +105,144 @@ var PT_SKILL_CORE = (function() {
 
     function getPartnerSkills() {
         return partnerSkills.slice();
+    }
+
+    function getPartnerTaxonomy() {
+        return JSON.parse(JSON.stringify(partnerTaxonomy || { groups: [], facets: [], detailTags: [] }));
+    }
+
+    function buildPartnerFacetGroups() {
+        var definitions = partnerTaxonomy.facets || [];
+        var detailTags = partnerTaxonomy.detailTags || [];
+        partnerFacetOptionById = {};
+        partnerFacetGroups = (partnerTaxonomy.groups || []).map(function(group) {
+            var explicitFacets = definitions.filter(function(facet) { return facet.groupId === group.id; });
+            var facets = explicitFacets.length ? explicitFacets.slice() : [{
+                id: group.id,
+                groupId: group.id,
+                label: group.label,
+                order: group.order || 0,
+                isDefault: true
+            }];
+            facets.sort(function(a, b) { return (Number(a.order) || 0) - (Number(b.order) || 0); });
+            facets = facets.map(function(facet) {
+                var options = [];
+                (group.children || []).forEach(function(child) {
+                    if (child.filterable === false) return;
+                    var childFacetId = child.facetId || (facet.isDefault ? group.id : '');
+                    if (childFacetId !== facet.id) return;
+                    options.push({
+                        id: child.id,
+                        label: child.label || child.id,
+                        order: child.facetOrder !== undefined ? child.facetOrder : (child.order || 0),
+                        capabilityIds: (child.capabilityIds || [child.id]).slice()
+                    });
+                });
+                detailTags.forEach(function(tag) {
+                    if (tag.filterable === false) return;
+                    var tagFacetId = tag.facetId || (facet.isDefault ? group.id : '');
+                    if (tagFacetId !== facet.id) return;
+                    options.push({
+                        id: tag.id,
+                        label: tag.label || tag.id,
+                        order: tag.facetOrder !== undefined ? tag.facetOrder : (tag.order || 0),
+                        capabilityIds: (tag.capabilityIds || [tag.id]).slice()
+                    });
+                });
+                options.sort(function(a, b) { return (Number(a.order) || 0) - (Number(b.order) || 0); });
+                options.forEach(function(option) { partnerFacetOptionById[option.id] = option; });
+                return {
+                    id: facet.id,
+                    label: facet.label || group.label,
+                    order: facet.order || 0,
+                    options: options
+                };
+            }).filter(function(facet) { return facet.options.length; });
+            return {
+                id: group.id,
+                label: group.label || group.id,
+                order: group.order || 0,
+                facets: facets
+            };
+        }).filter(function(group) { return group.facets.length; });
+    }
+
+    function getPartnerFacetGroups() {
+        return JSON.parse(JSON.stringify(partnerFacetGroups));
+    }
+
+    function getPartnerSelectedFilters(facetSelections) {
+        var selected = [];
+        partnerFacetGroups.forEach(function(group) {
+            group.facets.forEach(function(facet) {
+                var selectedIds = Array.isArray(facetSelections && facetSelections[facet.id]) ? facetSelections[facet.id] : [];
+                facet.options.forEach(function(option) {
+                    if (selectedIds.indexOf(option.id) < 0) return;
+                    selected.push({
+                        facetId: facet.id,
+                        facetLabel: facet.label,
+                        optionId: option.id,
+                        label: option.label
+                    });
+                });
+            });
+        });
+        return selected;
+    }
+
+    function matchesPartnerFacetSelections(item, facetSelections) {
+        var capabilityIds = item.usageSubcategoryIds.concat(item.usageTagIds);
+        return Object.keys(facetSelections || {}).every(function(facetId) {
+            var selectedOptionIds = Array.isArray(facetSelections[facetId]) ? facetSelections[facetId] : [];
+            if (!selectedOptionIds.length) return true;
+            return selectedOptionIds.every(function(optionId) {
+                var option = partnerFacetOptionById[optionId];
+                var requiredIds = option ? option.capabilityIds : [optionId];
+                return requiredIds.some(function(id) { return capabilityIds.indexOf(id) > -1; });
+            });
+        });
+    }
+
+    function filterPartnerSkills(filters) {
+        filters = filters || {};
+        var query = String(filters.query || '').trim().toLowerCase();
+        var facetSelections = filters.facetSelections && typeof filters.facetSelections === 'object' ? filters.facetSelections : {};
+        return partnerSkills.filter(function(item) {
+            if (filters.sourceCategory && filters.sourceCategory !== '全部' && item.category !== filters.sourceCategory) return false;
+            if (!matchesPartnerFacetSelections(item, facetSelections)) return false;
+            if (!query) return true;
+            return [item.name, item.id, item.palName, item.description, item.usageSearchText].some(function(value) {
+                return String(value || '').toLowerCase().indexOf(query) > -1;
+            });
+        });
+    }
+
+    function getPartnerFacetCounts(filters) {
+        filters = filters || {};
+        var currentSelections = filters.facetSelections && typeof filters.facetSelections === 'object' ? filters.facetSelections : {};
+        var counts = {};
+        partnerFacetGroups.forEach(function(group) {
+            group.facets.forEach(function(facet) {
+                counts[facet.id] = {};
+                facet.options.forEach(function(option) {
+                    var nextSelections = {};
+                    Object.keys(currentSelections).forEach(function(facetId) {
+                        if (Array.isArray(currentSelections[facetId]) && currentSelections[facetId].length) {
+                            nextSelections[facetId] = currentSelections[facetId].slice();
+                        }
+                    });
+                    var nextFacetSelections = nextSelections[facet.id] || [];
+                    if (nextFacetSelections.indexOf(option.id) < 0) nextFacetSelections.push(option.id);
+                    nextSelections[facet.id] = nextFacetSelections;
+                    counts[facet.id][option.id] = filterPartnerSkills({
+                        sourceCategory: filters.sourceCategory,
+                        query: filters.query,
+                        facetSelections: nextSelections
+                    }).length;
+                });
+            });
+        });
+        return counts;
     }
 
     function search(kind, query) {
@@ -107,6 +264,11 @@ var PT_SKILL_CORE = (function() {
         setPartnerSkillData: setPartnerSkillData,
         getActiveSkills: getActiveSkills,
         getPartnerSkills: getPartnerSkills,
+        getPartnerTaxonomy: getPartnerTaxonomy,
+        getPartnerFacetGroups: getPartnerFacetGroups,
+        getPartnerSelectedFilters: getPartnerSelectedFilters,
+        getPartnerFacetCounts: getPartnerFacetCounts,
+        filterPartnerSkills: filterPartnerSkills,
         search: search
     };
 })();

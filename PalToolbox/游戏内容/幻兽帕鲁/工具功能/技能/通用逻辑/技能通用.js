@@ -313,6 +313,68 @@ var PT_SKILL_COMMON = (function() {
         return sources;
     }
 
+    function partnerTableText(value, showEmptyPlaceholder) {
+        var normalized = value;
+        if (normalized === undefined || normalized === null || (showEmptyPlaceholder && normalized === '')) normalized = '--';
+        return String(normalized)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
+
+    function renderPartnerRankTable(rankTable) {
+        if (!rankTable || !Array.isArray(rankTable.columns) || !rankTable.columns.length ||
+            !Array.isArray(rankTable.rows) || !rankTable.rows.length) return '';
+        var columns = rankTable.columns;
+        var heading = '<th>' + partnerTableText(rankTable.rankLabel || (rankTable.type === 'stars' ? '星级' : '等级'), false) + '</th>' +
+            columns.map(function(column) {
+                var unit = column.unit ? '（' + column.unit + '）' : '';
+                return '<th>' + partnerTableText(column.label, false) + partnerTableText(unit, false) + '</th>';
+            }).join('');
+        var body = rankTable.rows.map(function(row) {
+            var rank = partnerTableText(row.rank, false) + (rankTable.type === 'stars' ? '★' : '级');
+            return '<tr><th>' + rank + '</th>' + columns.map(function(column, index) {
+                var value = row.values && row.values[index];
+                return '<td>' + partnerTableText(value, true) + '</td>';
+            }).join('') + '</tr>';
+        }).join('');
+        return '<div class="pt-partner-rank-wrap"><table class="pt-partner-rank-table"><thead><tr>' + heading +
+            '</tr></thead><tbody>' + body + '</tbody></table></div>';
+    }
+
+    function renderPartnerRankTables(rankTables, fallbackTable) {
+        var tables = Array.isArray(rankTables) && rankTables.length ? rankTables : (fallbackTable ? [fallbackTable] : []);
+        return tables.map(renderPartnerRankTable).join('');
+    }
+
+    function renderPartnerFixedParameters(detail) {
+        if (!detail || detail.hasPartnerSkill === false) return '';
+        var tables = Array.isArray(detail.rankTables) && detail.rankTables.length ? detail.rankTables : (detail.rankTable ? [detail.rankTable] : []);
+        var labels = [];
+        tables.forEach(function(table) {
+            (table.columns || []).forEach(function(column) { labels.push(column.label); });
+        });
+        var parameters = [];
+        var coolDown = Number(detail.coolDown);
+        var duration = Number(detail.duration);
+        if (coolDown > 0 && labels.indexOf('冷却时间') < 0) {
+            parameters.push({ label: '冷却时间', unit: '秒', value: coolDown });
+        }
+        if (duration > 0 && labels.indexOf('持续时间') < 0) {
+            parameters.push({ label: '持续时间', unit: '秒', value: duration });
+        }
+        if (!parameters.length) return '';
+        var heading = parameters.map(function(parameter) {
+            return '<th>' + partnerTableText(parameter.label + '（' + parameter.unit + '）', false) + '</th>';
+        }).join('');
+        var values = parameters.map(function(parameter) {
+            return '<td>' + partnerTableText(parameter.value, true) + '</td>';
+        }).join('');
+        return '<div class="pt-partner-rank-wrap pt-partner-fixed-wrap"><table class="pt-partner-rank-table">' +
+            '<thead><tr>' + heading + '</tr></thead><tbody><tr>' + values + '</tr></tbody></table></div>';
+    }
+
     return {
         onChange: onChange, setCategory: setCategory, setSource: setSource,
         setSearch: setSearch, toggleUnreleased: toggleUnreleased,
@@ -323,6 +385,9 @@ var PT_SKILL_COMMON = (function() {
         getFiltered: getFiltered, getCategorizedFiltered: getCategorizedFiltered,
         getActiveFiltered: getActiveFiltered, getState: getState,
         getSourcesForCategory: getSourcesForCategory,
+        renderPartnerRankTable: renderPartnerRankTable,
+        renderPartnerRankTables: renderPartnerRankTables,
+        renderPartnerFixedParameters: renderPartnerFixedParameters,
         CATEGORY_LABEL: CATEGORY_LABEL, CATEGORY_ORDER: CATEGORY_ORDER,
         CATEGORY_MAP: CATEGORY_MAP,
         SUB_CAT_LABEL: SUB_CAT_LABEL, SUB_CAT_ORDER: SUB_CAT_ORDER

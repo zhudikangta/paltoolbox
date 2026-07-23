@@ -1,0 +1,3236 @@
+{
+  "meta": {
+    "source": "本站逐条人工用途分类，依据伙伴技能标准事实整理",
+    "classifiedAt": "2026-07-22",
+    "gameVersion": "v1.0.0",
+    "classificationVersion": "2.0.0",
+    "transformVersion": "1.4.0",
+    "classificationMethod": "manual-entry-by-entry-review",
+    "reviewedCatalogCount": 335
+  },
+  "groups": [
+    {
+      "id": "move",
+      "label": "移动与骑乘",
+      "order": 1,
+      "children": [
+        {
+          "id": "move.mount",
+          "label": "骑乘",
+          "order": 1,
+          "filterable": false
+        },
+        {
+          "id": "move.glider",
+          "label": "滑翔",
+          "order": 2,
+          "facetId": "move.mode",
+          "facetOrder": 4
+        },
+        {
+          "id": "move.riding_jump",
+          "label": "骑乘跳跃",
+          "order": 3,
+          "filterable": false
+        },
+        {
+          "id": "move.conditional_speed",
+          "label": "地形或时段加速",
+          "order": 4,
+          "facetId": "move.other",
+          "facetOrder": 2
+        },
+        {
+          "id": "move.special",
+          "label": "特殊机动",
+          "order": 5,
+          "facetId": "move.other",
+          "facetOrder": 3
+        },
+        {
+          "id": "move.teleport",
+          "label": "传送与快速返回",
+          "order": 6,
+          "facetId": "move.other",
+          "facetOrder": 4
+        },
+        {
+          "id": "move.player_mobility",
+          "label": "玩家机动",
+          "order": 7,
+          "facetId": "move.other",
+          "facetOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "label": "战斗方式",
+      "order": 2,
+      "children": [
+        {
+          "id": "combat.active_attack",
+          "label": "指令发动攻击",
+          "order": 1
+        },
+        {
+          "id": "combat.follow_attack",
+          "label": "自动随行追击",
+          "order": 2
+        },
+        {
+          "id": "combat.weapon_form",
+          "label": "帕鲁化身武器",
+          "order": 3
+        },
+        {
+          "id": "combat.projectile_form",
+          "label": "投掷或炮弹化",
+          "order": 4
+        },
+        {
+          "id": "combat.mounted_weapon",
+          "label": "骑乘武装",
+          "order": 5
+        },
+        {
+          "id": "combat.reaction_summon",
+          "label": "动作联动或召唤协战",
+          "order": 6
+        },
+        {
+          "id": "combat.enemy_debuff",
+          "label": "敌人减益",
+          "order": 7
+        }
+      ]
+    },
+    {
+      "id": "player_damage",
+      "label": "玩家伤害强化",
+      "order": 3,
+      "children": [
+        {
+          "id": "player.attack",
+          "label": "玩家整体攻击力",
+          "order": 1
+        },
+        {
+          "id": "player.weapon_damage",
+          "label": "指定武器伤害",
+          "order": 2
+        },
+        {
+          "id": "player.weapon_operation",
+          "label": "攻速、蓄力与装填",
+          "order": 3
+        },
+        {
+          "id": "player.weakspot",
+          "label": "弱点部位伤害",
+          "order": 4
+        },
+        {
+          "id": "player.element_convert",
+          "label": "攻击属性转换",
+          "order": 5
+        },
+        {
+          "id": "player.conditional_damage",
+          "label": "状态或条件增伤",
+          "order": 6
+        },
+        {
+          "id": "player.extra_damage",
+          "label": "追加伤害或爆炸",
+          "order": 7
+        },
+        {
+          "id": "player.status_buildup",
+          "label": "异常状态积蓄",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "id": "pal_combat",
+      "label": "帕鲁战斗强化",
+      "order": 4,
+      "children": [
+        {
+          "id": "pal.element_stats",
+          "label": "属性帕鲁攻防",
+          "order": 1
+        },
+        {
+          "id": "pal.active_stats",
+          "label": "当前出战帕鲁攻防",
+          "order": 2
+        },
+        {
+          "id": "pal.self_burst",
+          "label": "自身爆发强化",
+          "order": 3
+        },
+        {
+          "id": "pal.named_synergy",
+          "label": "指定帕鲁联动",
+          "order": 4
+        },
+        {
+          "id": "pal.party_scaling",
+          "label": "队伍构成叠加",
+          "order": 5
+        },
+        {
+          "id": "pal.partner_damage",
+          "label": "伙伴技能伤害",
+          "order": 6
+        },
+        {
+          "id": "pal.cooldown",
+          "label": "伙伴或主动技能冷却",
+          "order": 7
+        }
+      ]
+    },
+    {
+      "id": "survival",
+      "label": "防御、生存与恢复",
+      "order": 5,
+      "children": [
+        {
+          "id": "survival.defense",
+          "label": "玩家防御力",
+          "order": 1
+        },
+        {
+          "id": "survival.shield",
+          "label": "护盾与屏障",
+          "order": 2
+        },
+        {
+          "id": "survival.damage_reduction",
+          "label": "伤害减免与异常免疫",
+          "order": 3
+        },
+        {
+          "id": "survival.temperature",
+          "label": "耐寒与耐暑",
+          "order": 4
+        },
+        {
+          "id": "survival.heal",
+          "label": "治疗与持续恢复",
+          "order": 5
+        },
+        {
+          "id": "survival.revive",
+          "label": "复活",
+          "order": 6
+        },
+        {
+          "id": "survival.lifesteal",
+          "label": "生命窃取",
+          "order": 7
+        },
+        {
+          "id": "survival.hunger",
+          "label": "饱腹度支援",
+          "order": 8
+        },
+        {
+          "id": "survival.dodge",
+          "label": "闪避与无敌时间",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "capture",
+      "label": "捕捉、获取与培养",
+      "order": 6,
+      "children": [
+        {
+          "id": "capture.rate",
+          "label": "捕获概率",
+          "order": 1
+        },
+        {
+          "id": "capture.sphere",
+          "label": "帕鲁球追踪与节省",
+          "order": 2
+        },
+        {
+          "id": "capture.encounter",
+          "label": "遭遇指定被动或高潜力帕鲁",
+          "order": 3
+        },
+        {
+          "id": "capture.egg",
+          "label": "帕鲁蛋数量与头目蛋",
+          "order": 4
+        },
+        {
+          "id": "capture.xp",
+          "label": "经验值获取",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "resource",
+      "label": "资源、掉落与背包",
+      "order": 7,
+      "children": [
+        {
+          "id": "resource.drops",
+          "label": "击倒敌人掉落增加",
+          "order": 1
+        },
+        {
+          "id": "resource.special",
+          "label": "特殊材料、金币与解体收益",
+          "order": 2
+        },
+        {
+          "id": "resource.gather",
+          "label": "采矿与伐木效率",
+          "order": 3
+        },
+        {
+          "id": "resource.fishing",
+          "label": "垂钓与打捞收益",
+          "order": 4
+        },
+        {
+          "id": "resource.pickup",
+          "label": "自动拾取",
+          "order": 5
+        },
+        {
+          "id": "resource.capacity",
+          "label": "负重上限",
+          "order": 6
+        },
+        {
+          "id": "resource.weight",
+          "label": "指定物品减重",
+          "order": 7
+        },
+        {
+          "id": "resource.preserve",
+          "label": "食物保鲜",
+          "order": 8
+        },
+        {
+          "id": "resource.durability",
+          "label": "装备耐久",
+          "order": 9
+        }
+      ]
+    },
+    {
+      "id": "base",
+      "label": "放牧与据点经营",
+      "order": 8,
+      "children": [
+        {
+          "id": "base.ranch",
+          "label": "放牧产物与挖掘",
+          "order": 1
+        },
+        {
+          "id": "base.work_level",
+          "label": "据点工作适应性 +1",
+          "order": 2
+        },
+        {
+          "id": "base.work_speed",
+          "label": "工作速度与效率",
+          "order": 3
+        },
+        {
+          "id": "base.crops",
+          "label": "作物生长与收获",
+          "order": 4
+        },
+        {
+          "id": "base.breeding",
+          "label": "配种产蛋速度",
+          "order": 5
+        },
+        {
+          "id": "base.incubation",
+          "label": "孵化速度",
+          "order": 6
+        },
+        {
+          "id": "base.needs",
+          "label": "据点饱腹度与 SAN",
+          "order": 7
+        },
+        {
+          "id": "base.defense",
+          "label": "据点防御",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "id": "utility",
+      "label": "探索与便利功能",
+      "order": 9,
+      "children": [
+        {
+          "id": "utility.statue",
+          "label": "帕鲁雕像探测",
+          "order": 1
+        },
+        {
+          "id": "utility.locations",
+          "label": "地下城、宝箱与废品探测",
+          "order": 2
+        },
+        {
+          "id": "utility.ore",
+          "label": "矿物探测",
+          "order": 3
+        },
+        {
+          "id": "utility.vision",
+          "label": "夜视与隐蔽",
+          "order": 4
+        },
+        {
+          "id": "utility.unlock",
+          "label": "无钥匙开宝箱",
+          "order": 5
+        }
+      ]
+    }
+  ],
+  "facets": [
+    {
+      "id": "move.mode",
+      "groupId": "move",
+      "label": "移动方式",
+      "order": 1
+    },
+    {
+      "id": "move.jump_type",
+      "groupId": "move",
+      "label": "骑乘跳跃",
+      "order": 2
+    },
+    {
+      "id": "move.other",
+      "groupId": "move",
+      "label": "其他移动",
+      "order": 3
+    }
+  ],
+  "detailTags": [
+    {
+      "id": "mount.ground",
+      "label": "地面骑乘",
+      "subcategoryId": "move.mount",
+      "kind": "precise",
+      "facetId": "move.mode",
+      "order": 1
+    },
+    {
+      "id": "mount.flying",
+      "label": "飞行骑乘",
+      "subcategoryId": "move.mount",
+      "kind": "precise",
+      "facetId": "move.mode",
+      "order": 2
+    },
+    {
+      "id": "mount.water",
+      "label": "水上骑乘",
+      "subcategoryId": "move.mount",
+      "kind": "precise",
+      "facetId": "move.mode",
+      "order": 3
+    },
+    {
+      "id": "jump.double",
+      "label": "骑乘二段跳",
+      "subcategoryId": "move.riding_jump",
+      "kind": "precise",
+      "facetId": "move.jump_type",
+      "order": 4
+    },
+    {
+      "id": "jump.triple",
+      "label": "骑乘三段跳",
+      "subcategoryId": "move.riding_jump",
+      "kind": "precise",
+      "facetId": "move.jump_type",
+      "order": 5
+    },
+    {
+      "id": "jump.high",
+      "label": "骑乘高跳",
+      "subcategoryId": "move.riding_jump",
+      "kind": "precise",
+      "facetId": "move.jump_type",
+      "order": 6
+    }
+  ],
+  "assignments": {
+    "SheepBall": {
+      "subcategoryIds": [
+        "survival.shield",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "PinkCat": {
+      "subcategoryIds": [
+        "resource.capacity"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ChickenPal": {
+      "subcategoryIds": [
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Carbunclo": {
+      "subcategoryIds": [
+        "combat.active_attack",
+        "combat.follow_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "BluePlatypus": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CuteFox": {
+      "subcategoryIds": [
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FlyingManta": {
+      "subcategoryIds": [
+        "move.glider"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WoolFox": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+  "KendoFrog": {
+    "subcategoryIds": [
+      "move.special",
+      "player.attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "LeafMomonga": {
+      "subcategoryIds": [
+        "survival.revive"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Ganesha": {
+      "subcategoryIds": [
+        "survival.heal"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "PlantSlime": {
+      "subcategoryIds": [
+        "resource.gather",
+        "resource.weight"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SamuraiDog": {
+      "subcategoryIds": [
+        "player.weapon_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CloverFairy": {
+      "subcategoryIds": [
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Hedgehog": {
+      "subcategoryIds": [
+        "combat.projectile_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "NegativeKoala": {
+      "subcategoryIds": [
+        "base.ranch",
+        "base.work_speed",
+        "pal.self_burst"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Penguin": {
+      "subcategoryIds": [
+        "combat.projectile_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CaptainPenguin": {
+      "subcategoryIds": [
+        "resource.drops"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WizardOwl": {
+      "subcategoryIds": [
+        "pal.element_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Alpaca": {
+      "subcategoryIds": [
+        "move.mount",
+        "base.ranch",
+        "pal.named_synergy"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "KingAlpaca": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.named_synergy",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "DreamDemon": {
+      "subcategoryIds": [
+        "combat.follow_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Monkey": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "NightFox": {
+      "subcategoryIds": [
+        "utility.statue"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "LavaGirl": {
+      "subcategoryIds": [
+        "survival.heal",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FlameBambi": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Bastet": {
+      "subcategoryIds": [
+        "resource.special",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Boar": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.gather"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Kitsunebi": {
+      "subcategoryIds": [
+        "combat.weapon_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "NegativeOctopus": {
+      "subcategoryIds": [
+        "move.glider"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CuteMole": {
+      "subcategoryIds": [
+        "resource.gather",
+        "resource.weight"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+  "Deer": {
+    "subcategoryIds": [
+      "move.mount",
+      "move.riding_jump",
+      "resource.gather"
+    ],
+    "tagIds": [
+      "mount.ground",
+      "jump.double"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Garm": {
+      "subcategoryIds": [
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BerryGoat": {
+      "subcategoryIds": [
+        "survival.hunger",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MopBaby": {
+      "subcategoryIds": [
+        "pal.named_synergy"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MopKing": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.named_synergy",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "TentacleTurtle": {
+      "subcategoryIds": [
+        "resource.weight"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WindChimes": {
+      "subcategoryIds": [
+        "move.glider"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SweetsSheep": {
+      "subcategoryIds": [
+        "base.ranch",
+        "base.needs"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CowPal": {
+      "subcategoryIds": [
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "BlueDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "ElecCat": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Kelpie": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "PinkRabbit": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "JellyfishFairy": {
+      "subcategoryIds": [
+        "resource.fishing",
+        "base.work_speed",
+        "pal.named_synergy"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "JellyfishGhost": {
+      "subcategoryIds": [
+        "resource.fishing",
+        "base.work_speed",
+        "pal.named_synergy"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ClioneTwins": {
+      "subcategoryIds": [
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "OctopusGirl": {
+      "subcategoryIds": [
+        "resource.fishing"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Eagle": {
+      "subcategoryIds": [
+        "move.glider"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GhostBlackCat": {
+      "subcategoryIds": [
+        "capture.rate"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "HawkBird": {
+      "subcategoryIds": [
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "CatBat": {
+      "subcategoryIds": [
+        "utility.locations"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ColorfulBird": {
+      "subcategoryIds": [
+        "combat.weapon_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Kirin": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.weakspot",
+        "pal.active_stats"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SharkKid": {
+      "subcategoryIds": [
+        "player.attack",
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Werewolf": {
+      "subcategoryIds": [
+        "player.weapon_operation",
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "DarkCrow": {
+      "subcategoryIds": [
+        "utility.vision",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FlameBuffalo": {
+      "subcategoryIds": [
+        "survival.temperature",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "FluffyBird": {
+      "subcategoryIds": [
+        "capture.rate"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "LittleBriarRose": {
+      "subcategoryIds": [
+        "pal.element_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CuteButterfly": {
+      "subcategoryIds": [
+        "combat.active_attack",
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ElecPomeranian": {
+      "subcategoryIds": [
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FairyDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.drops"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BirdDragon": {
+      "subcategoryIds": [
+        "player.weakspot",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "CatVampire": {
+      "subcategoryIds": [
+        "survival.lifesteal"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "VioletFairy": {
+      "subcategoryIds": [
+        "resource.drops",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SoldierBee": {
+      "subcategoryIds": [
+        "base.ranch",
+        "pal.named_synergy"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "QueenBee": {
+      "subcategoryIds": [
+        "pal.named_synergy",
+        "pal.party_scaling"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "PinkLizard": {
+      "subcategoryIds": [
+        "survival.lifesteal"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "NaughtyCat": {
+      "subcategoryIds": [
+        "capture.egg",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "PurpleSpider": {
+      "subcategoryIds": [
+        "move.special",
+        "move.mount",
+      "move.riding_jump"
+      ],
+      "tagIds": [
+      "mount.ground",
+      "jump.double"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "IceSeal": {
+      "subcategoryIds": [
+        "move.conditional_speed",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LizardMan": {
+      "subcategoryIds": [
+        "utility.vision"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Gorilla": {
+      "subcategoryIds": [
+        "pal.self_burst"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Serpent": {
+      "subcategoryIds": [
+        "move.mount",
+        "base.ranch"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "RobinHood": {
+      "subcategoryIds": [
+        "player.weapon_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FlowerRabbit": {
+      "subcategoryIds": [
+        "resource.pickup"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FoxMage": {
+      "subcategoryIds": [
+        "player.element_convert"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CatMage": {
+      "subcategoryIds": [
+        "capture.sphere",
+        "resource.drops"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "HadesBird": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GrassMinotaur": {
+      "subcategoryIds": [
+        "player.element_convert"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Mutant": {
+      "subcategoryIds": [
+        "capture.sphere",
+        "resource.capacity"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+  "FengyunDeeper": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump"
+      ],
+      "tagIds": [
+      "mount.ground",
+      "jump.double"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "FlowerDinosaur": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.element_stats"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Ronin": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "IceCrocodile": {
+      "subcategoryIds": [
+        "resource.preserve"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GrassMammoth": {
+      "subcategoryIds": [
+        "resource.gather",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "StuffedShark": {
+      "subcategoryIds": [
+        "player.element_convert"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FlowerDoll": {
+      "subcategoryIds": [
+        "survival.heal",
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "PandaGirl": {
+      "subcategoryIds": [
+        "pal.party_scaling"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Baphomet": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "RaijinDaughter": {
+      "subcategoryIds": [
+        "combat.follow_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FireKirin": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LazyDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.mounted_weapon"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "IceFox": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ThunderBird": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GhostAnglerfish": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "ThunderDog": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+      "mount.flying",
+      "jump.double"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "DarkScorpion": {
+      "subcategoryIds": [
+        "survival.defense",
+        "resource.drops"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CactusDoll": {
+      "subcategoryIds": [
+        "player.conditional_damage",
+        "pal.active_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "IceDeer": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.temperature"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GrassPanda": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.mounted_weapon"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "WeaselDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "RedArmorBird": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "VolcanoDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "TropicalOstrich": {
+      "subcategoryIds": [
+        "move.mount",
+        "move.conditional_speed"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "DrillGame": {
+      "subcategoryIds": [
+        "resource.gather"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SakuraSaurus": {
+      "subcategoryIds": [
+        "move.mount",
+        "capture.egg"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LazyCatfish": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Plesiosaur": {
+      "subcategoryIds": [
+        "move.mount",
+        "base.breeding"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "AmaterasuWolf": {
+      "subcategoryIds": [
+        "survival.damage_reduction",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Manticore": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.drops"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "HerculesBeetle": {
+      "subcategoryIds": [
+        "survival.shield"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SnowPeafowl": {
+      "subcategoryIds": [
+        "player.weapon_operation"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "DarkFlameFox": {
+      "subcategoryIds": [
+        "player.conditional_damage",
+        "player.extra_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WhiteMoth": {
+      "subcategoryIds": [
+        "combat.active_attack",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GhostBeast": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.cooldown"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "MushroomDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "base.ranch"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "IceWitch": {
+      "subcategoryIds": [
+        "player.element_convert"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MummyPal": {
+      "subcategoryIds": [
+        "survival.revive"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Umihebi": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.conditional_damage",
+        "pal.active_stats"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Suzaku": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "FeatherOstrich": {
+      "subcategoryIds": [
+        "move.mount",
+        "move.conditional_speed"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SkyDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.element_stats"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LeafPrincess": {
+      "subcategoryIds": [
+        "base.crops"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SmallArmadillo": {
+      "subcategoryIds": [
+        "pal.element_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GuardianDog": {
+      "subcategoryIds": [
+        "capture.encounter",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SwordCutlassfish": {
+      "subcategoryIds": [
+        "combat.weapon_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "VolcanicMonster": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.weight"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "NightBlueHorse": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "move.conditional_speed"
+      ],
+    "tagIds": [
+      "mount.ground",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "RockBeast": {
+      "subcategoryIds": [
+        "player.conditional_damage",
+        "pal.active_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WhiteTiger": {
+      "subcategoryIds": [
+        "resource.drops"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SmallYeti": {
+      "subcategoryIds": [
+        "utility.vision"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Yeti": {
+      "subcategoryIds": [
+        "move.mount",
+        "base.work_level"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "CandleGhost": {
+      "subcategoryIds": [
+        "survival.damage_reduction",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "VenusFlytrap": {
+      "subcategoryIds": [
+        "combat.reaction_summon"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "KingBahamut": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.active_stats"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GrassGolem": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.active_attack"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Anubis": {
+      "subcategoryIds": [
+        "player.element_convert"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Sekhmet": {
+      "subcategoryIds": [
+        "base.work_speed",
+        "pal.named_synergy"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ScorpionMan": {
+      "subcategoryIds": [
+        "player.conditional_damage",
+        "pal.active_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CubeTurtle": {
+      "subcategoryIds": [
+        "move.mount",
+        "base.work_level"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BadCatgirl": {
+      "subcategoryIds": [
+        "combat.active_attack",
+        "player.weapon_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MimicDog": {
+      "subcategoryIds": [
+        "utility.unlock"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "DarkAlien": {
+      "subcategoryIds": [
+        "player.weapon_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WhiteAlienDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.weapon_damage"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BlueberryFairy": {
+      "subcategoryIds": [
+        "base.crops"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GhostRabbit": {
+      "subcategoryIds": [
+        "resource.special"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "BlackPuppy": {
+      "subcategoryIds": [
+        "utility.ore",
+        "resource.gather"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MysteryMask": {
+      "subcategoryIds": [
+        "capture.xp"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "IceNarwhal": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.fishing"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "GrassRabbitMan": {
+    "subcategoryIds": [
+      "move.player_mobility"
+    ],
+    "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GrimGirl": {
+      "subcategoryIds": [
+        "resource.special"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GoldenHorse": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SifuDog": {
+      "subcategoryIds": [
+        "move.teleport"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SumoDog": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.damage_reduction"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "WhiteDeer": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.heal",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BlackMetalDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.gather"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "WingGolem": {
+      "subcategoryIds": [
+        "pal.self_burst"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WhiteShieldDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.shield",
+        "survival.damage_reduction"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BlueThunderHorse": {
+      "subcategoryIds": [
+        "move.mount",
+        "move.special"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "LongCat": {
+    "subcategoryIds": [
+      "move.player_mobility"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ElecSnail": {
+      "subcategoryIds": [
+        "player.status_buildup"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "DandelionGirl": {
+      "subcategoryIds": [
+        "capture.rate"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "BrownRabbit": {
+      "subcategoryIds": [
+        "survival.defense"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "HoodGhost": {
+      "subcategoryIds": [
+        "player.conditional_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ElecLizard": {
+      "subcategoryIds": [
+        "player.conditional_damage",
+        "player.extra_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "OniGhostGirl": {
+      "subcategoryIds": [
+        "combat.enemy_debuff"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "KingSunfish": {
+      "subcategoryIds": [
+        "move.mount",
+        "capture.encounter"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SleeveRabbit": {
+      "subcategoryIds": [
+        "pal.cooldown"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GhostDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "ThunderFluffyBird": {
+      "subcategoryIds": [
+        "move.mount",
+        "base.incubation"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "RedFlowerBird": {
+      "subcategoryIds": [
+        "survival.dodge"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FoxExorcist": {
+      "subcategoryIds": [
+        "player.extra_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "LotusDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.status_buildup"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "ClownRabbit": {
+      "subcategoryIds": [
+        "player.attack",
+        "combat.reaction_summon"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ThiefBird": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.conditional_damage",
+        "pal.active_stats"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SnakeGirl": {
+      "subcategoryIds": [
+        "player.status_buildup"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MushroomLady": {
+      "subcategoryIds": [
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "LanternButler": {
+      "subcategoryIds": [
+        "player.weapon_damage",
+        "player.extra_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MoonChild": {
+      "subcategoryIds": [
+        "pal.element_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MonochromeQueen": {
+      "subcategoryIds": [
+        "player.attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "KabukiMan": {
+      "subcategoryIds": [
+        "player.status_buildup"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "DomeArmorDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.damage_reduction"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "ElecPanda": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.mounted_weapon"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LilyQueen": {
+      "subcategoryIds": [
+        "survival.heal"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ThunderDragonMan": {
+      "subcategoryIds": [
+        "pal.active_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Horus": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.drops"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BlackGriffon": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.partner_damage"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "MoonQueen": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.partner_damage"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SnowTigerBeastman": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.mounted_weapon"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BlueSkyDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Mothman": {
+      "subcategoryIds": [
+        "player.conditional_damage",
+        "player.extra_damage",
+        "survival.damage_reduction"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FlowerPrince": {
+      "subcategoryIds": [
+        "player.status_buildup",
+        "survival.damage_reduction"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "NightLady": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "DarkMechaDragon": {
+      "subcategoryIds": [
+        "pal.partner_damage",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "LegendDeer": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "survival.shield"
+      ],
+      "tagIds": [
+      "mount.ground",
+      "jump.triple"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "SaintCentaur": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "combat.reaction_summon"
+      ],
+      "tagIds": [
+      "mount.ground",
+      "jump.triple"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "BlackCentaur": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "combat.reaction_summon"
+      ],
+      "tagIds": [
+      "mount.ground",
+      "jump.double"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "IceHorse": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert",
+        "player.status_buildup"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "PoseidonOrca": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "combat.follow_attack"
+      ],
+    "tagIds": [
+      "mount.water",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "JetDragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.mounted_weapon"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "KingWhale": {
+      "subcategoryIds": [
+        "base.defense",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "WorldTreeDragon": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "insufficient-facts"
+    },
+    "Monkey_Ice": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "BluePlatypus_Fire": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FlyingManta_Thunder": {
+      "subcategoryIds": [
+        "move.glider"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+  "KendoFrog_Dark": {
+    "subcategoryIds": [
+      "move.special",
+        "player.weakspot",
+        "pal.active_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Hedgehog_Ice": {
+      "subcategoryIds": [
+        "combat.projectile_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Penguin_Electric": {
+      "subcategoryIds": [
+        "combat.projectile_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CaptainPenguin_Black": {
+      "subcategoryIds": [
+        "player.weakspot",
+        "pal.active_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "KingAlpaca_Ice": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.named_synergy",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Monkey_Fire": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Bastet_Ice": {
+      "subcategoryIds": [
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Kitsunebi_Ice": {
+      "subcategoryIds": [
+        "combat.weapon_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "NegativeOctopus_Neutral": {
+      "subcategoryIds": [
+        "move.glider"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+  "Deer_Ground": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "base.work_level"
+      ],
+      "tagIds": [
+      "mount.ground",
+      "jump.double"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BerryGoat_Dark": {
+      "subcategoryIds": [
+        "survival.hunger",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "TentacleTurtle_Ground": {
+      "subcategoryIds": [
+        "resource.weight",
+        "player.weakspot",
+        "pal.active_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WindChimes_Ice": {
+      "subcategoryIds": [
+        "move.glider"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "SweetsSheep_Ground": {
+      "subcategoryIds": [
+        "base.ranch",
+        "base.needs"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "BlueDragon_Ice": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Kelpie_Fire": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "PinkRabbit_Grass": {
+      "subcategoryIds": [
+        "player.weakspot",
+        "pal.active_stats",
+        "base.work_speed"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "OctopusGirl_Neutral": {
+      "subcategoryIds": [
+        "pal.element_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Kirin_Ice": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SharkKid_Fire": {
+      "subcategoryIds": [
+        "player.attack",
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Werewolf_Ice": {
+      "subcategoryIds": [
+        "combat.active_attack",
+        "player.weapon_operation"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FairyDragon_Water": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.damage_reduction"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "BirdDragon_Ice": {
+      "subcategoryIds": [
+        "player.weakspot",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "IceSeal_Ground": {
+      "subcategoryIds": [
+        "move.mount",
+        "move.conditional_speed"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LizardMan_Fire": {
+      "subcategoryIds": [
+        "utility.vision"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Gorilla_Ground": {
+      "subcategoryIds": [
+        "move.special"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Serpent_Ground": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.status_buildup"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "RobinHood_Ground": {
+      "subcategoryIds": [
+        "player.weapon_operation"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FoxMage_Dark": {
+      "subcategoryIds": [
+        "player.element_convert"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CatMage_Fire": {
+      "subcategoryIds": [
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "HadesBird_Electric": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GrassMinotaur_Ice": {
+      "subcategoryIds": [
+        "player.status_buildup"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+  "FengyunDeeper_Electric": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "resource.drops"
+      ],
+      "tagIds": [
+      "mount.ground",
+      "jump.double"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "FlowerDinosaur_Electric": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.element_stats"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Ronin_Dark": {
+      "subcategoryIds": [
+        "combat.active_attack",
+        "player.weapon_damage"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GrassMammoth_Ice": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.gather"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "StuffedShark_Fire": {
+      "subcategoryIds": [
+        "resource.weight",
+        "player.weakspot",
+        "pal.active_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FlowerDoll_Fire": {
+      "subcategoryIds": [
+        "survival.damage_reduction",
+        "survival.heal"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Baphomet_Dark": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "RaijinDaughter_Water": {
+      "subcategoryIds": [
+        "combat.follow_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "FireKirin_Dark": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LazyDragon_Electric": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.mounted_weapon"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "ThunderBird_Ice": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GhostAnglerfish_Fire": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "ThunderDog_Ice": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "pal.element_stats"
+      ],
+      "tagIds": [
+      "mount.ground",
+      "jump.double"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "DarkScorpion_Ground": {
+      "subcategoryIds": [
+        "survival.defense",
+        "resource.drops"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CactusDoll_Dark": {
+      "subcategoryIds": [
+        "player.status_buildup"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "GrassPanda_Electric": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.mounted_weapon"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "WeaselDragon_Fire": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "VolcanoDragon_Ice": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.weakspot",
+        "pal.active_stats"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SakuraSaurus_Water": {
+      "subcategoryIds": [
+        "move.mount",
+        "capture.egg"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LazyCatfish_Gold": {
+      "subcategoryIds": [
+        "resource.special",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "AmaterasuWolf_Dark": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.damage_reduction"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Manticore_Dark": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.drops"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "HerculesBeetle_Ground": {
+      "subcategoryIds": [
+        "survival.shield"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WhiteMoth_Neutral": {
+      "subcategoryIds": [
+        "pal.element_stats",
+        "base.ranch"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "MushroomDragon_Dark": {
+      "subcategoryIds": [
+        "move.mount",
+        "base.needs"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Umihebi_Fire": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.damage_reduction",
+        "player.conditional_damage",
+        "pal.active_stats"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "Suzaku_Water": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SkyDragon_Grass": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "SwordCutlassfish_Fire": {
+      "subcategoryIds": [
+        "combat.weapon_form"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "VolcanicMonster_Ice": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.weight"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "NightBlueHorse_Neutral": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump",
+        "pal.party_scaling"
+      ],
+    "tagIds": [
+      "mount.ground",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "RockBeast_Ice": {
+      "subcategoryIds": [
+        "survival.damage_reduction"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "WhiteTiger_Ground": {
+      "subcategoryIds": [
+        "player.weakspot"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Yeti_Grass": {
+      "subcategoryIds": [
+        "move.mount",
+        "survival.damage_reduction"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "KingBahamut_Dragon": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.weakspot",
+        "pal.active_stats"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GrassGolem_Dark": {
+      "subcategoryIds": [
+        "move.mount",
+        "combat.active_attack"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "ScorpionMan_Electric": {
+      "subcategoryIds": [
+        "player.element_convert"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "CubeTurtle_Neutral": {
+      "subcategoryIds": [
+        "resource.durability",
+        "move.mount"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GhostRabbit_Grass": {
+      "subcategoryIds": [
+        "pal.element_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "BlackPuppy_Ice": {
+      "subcategoryIds": [
+        "base.work_level"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "IceNarwhal_Fire": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.fishing"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "WhiteDeer_Dark": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.active_stats"
+      ],
+      "tagIds": [
+        "mount.ground"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "WingGolem_Fire": {
+      "subcategoryIds": [
+        "pal.self_burst"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "ElecSnail_Ground": {
+      "subcategoryIds": [
+        "survival.damage_reduction"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "KingSunfish_Thunder": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert",
+        "capture.encounter"
+      ],
+      "tagIds": [
+        "mount.water"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "GhostDragon_Fire": {
+      "subcategoryIds": [
+        "move.mount",
+        "pal.party_scaling"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "LilyQueen_Dark": {
+      "subcategoryIds": [
+        "survival.heal"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "Horus_Water": {
+      "subcategoryIds": [
+        "move.mount",
+        "resource.drops"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "NightLady_Dark": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "IceHorse_Dark": {
+      "subcategoryIds": [
+        "move.mount",
+        "player.element_convert",
+        "player.status_buildup"
+      ],
+      "tagIds": [
+        "mount.flying"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "YakushimaMonster001": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump"
+      ],
+    "tagIds": [
+      "mount.ground",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "YakushimaMonster001_Blue": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump"
+      ],
+    "tagIds": [
+      "mount.ground",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "YakushimaMonster001_Red": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump"
+      ],
+    "tagIds": [
+      "mount.ground",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "YakushimaMonster001_Purple": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump"
+      ],
+    "tagIds": [
+      "mount.ground",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "YakushimaMonster001_Pink": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump"
+      ],
+    "tagIds": [
+      "mount.ground",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+  "YakushimaMonster001_Rainbow": {
+      "subcategoryIds": [
+        "move.mount",
+      "move.riding_jump"
+      ],
+    "tagIds": [
+      "mount.ground",
+      "jump.high"
+      ],
+      "reviewStatus": "reviewed"
+    },
+    "YakushimaMonster002": {
+      "subcategoryIds": [
+        "resource.drops"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "YakushimaMonster003": {
+      "subcategoryIds": [
+        "resource.pickup"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "YakushimaMonster003_Purple": {
+      "subcategoryIds": [
+        "resource.pickup"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "YakushimaBoss001": {
+      "subcategoryIds": [
+        "combat.active_attack"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "YakushimaBoss001_Small": {
+      "subcategoryIds": [
+        "pal.element_stats"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "RAID_DarkMechaDragon": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "RAID_YakushimaBoss001_Green": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "RAID_YakushimaBoss002": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "RAID_YakushimaBoss002_Hand_Left": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "RAID_YakushimaBoss002_Hand_Right": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "RAID_YakushimaBoss002_Head": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "GYM_Horus": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "BOSS_BlackFurDragon": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "BOSS_DarkMutant": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "BOSS_ElecLion": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "BOSS_ElecSnail_Fire": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "BOSS_Sekhmet": {
+      "subcategoryIds": [
+        "base.work_speed",
+        "pal.named_synergy"
+      ],
+      "tagIds": [],
+      "reviewStatus": "reviewed"
+    },
+    "PREDATOR_AmaterasuWolf": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_GhostBeast": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_Horus_Water": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_Manticore_Dark": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_MushroomDragon": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_MysteryMask": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_ScorpionMan": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_ThunderDog": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_Umihebi_Fire": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_Werewolf_Ice": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_WhiteTiger_Ground": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_Yeti": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_HadesBird_Electric": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PREDATOR_CandleGhost": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "Quest_Farmer03_PinkCat": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "ElecLion": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "PinkKangaroo": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "BeardedDragon": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "WaterLizard": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "GrassDragon": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "BlackFurDragon": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "DarkMutant": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    },
+    "ElecSnail_Fire": {
+      "subcategoryIds": [],
+      "tagIds": [],
+      "reviewStatus": "no-partner-skill"
+    }
+  }
+}

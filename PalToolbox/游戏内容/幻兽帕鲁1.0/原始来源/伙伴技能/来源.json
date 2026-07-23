@@ -2,7 +2,7 @@
   "source": "PalDB 简体中文站",
   "retrievedAt": "2026-07-22",
   "gameVersion": "v1.0.0",
-  "transformVersion": "1.0.0",
+  "transformVersion": "1.3.0",
   "ordinary": {
     "url": "https://paldb.cc/cn/Partner_Skill",
     "file": "paldb-partner-skill.html",
@@ -11,6 +11,1204 @@
   "localUnpackedParameters": {
     "file": "本地解包伙伴技能-2026-07-06.json",
     "retrievedAt": "2026-07-06"
+  },
+  "ordinaryDetails": {
+    "FlyingManta": {
+      "url": "https://paldb.cc/cn/Celaray",
+      "file": "详情/普通/Celaray.html"
+    },
+    "FlyingManta_Thunder": {
+      "url": "https://paldb.cc/cn/Celaray_Lux",
+      "file": "详情/普通/Celaray_Lux.html"
+    },
+    "PinkCat": {
+      "url": "https://paldb.cc/cn/Cattiva",
+      "file": "详情/普通/Cattiva.html"
+    },
+    "SheepBall": {
+      "url": "https://paldb.cc/cn/Lamball",
+      "file": "详情/普通/Lamball.html"
+    },
+    "Carbunclo": {
+      "url": "https://paldb.cc/cn/Lifmunk",
+      "file": "详情/普通/Lifmunk.html"
+    },
+    "BluePlatypus_Fire": {
+      "url": "https://paldb.cc/cn/Fuack_Ignis",
+      "file": "详情/普通/Fuack_Ignis.html"
+    },
+    "CuteFox": {
+      "url": "https://paldb.cc/cn/Vixy",
+      "file": "详情/普通/Vixy.html"
+    },
+    "KendoFrog": {
+      "url": "https://paldb.cc/cn/Croajiro",
+      "file": "详情/普通/Croajiro.html"
+    },
+    "WoolFox": {
+      "url": "https://paldb.cc/cn/Cremis",
+      "file": "详情/普通/Cremis.html"
+    },
+    "LeafMomonga": {
+      "url": "https://paldb.cc/cn/Herbil",
+      "file": "详情/普通/Herbil.html"
+    },
+    "KendoFrog_Dark": {
+      "url": "https://paldb.cc/cn/Croajiro_Noct",
+      "file": "详情/普通/Croajiro_Noct.html"
+    },
+    "SamuraiDog": {
+      "url": "https://paldb.cc/cn/Pupperai",
+      "file": "详情/普通/Pupperai.html"
+    },
+    "CloverFairy": {
+      "url": "https://paldb.cc/cn/Clovee",
+      "file": "详情/普通/Clovee.html"
+    },
+    "Ganesha": {
+      "url": "https://paldb.cc/cn/Teafant",
+      "file": "详情/普通/Teafant.html"
+    },
+    "Hedgehog": {
+      "url": "https://paldb.cc/cn/Jolthog",
+      "file": "详情/普通/Jolthog.html"
+    },
+    "NegativeKoala": {
+      "url": "https://paldb.cc/cn/Depresso",
+      "file": "详情/普通/Depresso.html"
+    },
+    "Penguin": {
+      "url": "https://paldb.cc/cn/Pengullet",
+      "file": "详情/普通/Pengullet.html"
+    },
+    "Hedgehog_Ice": {
+      "url": "https://paldb.cc/cn/Jolthog_Cryst",
+      "file": "详情/普通/Jolthog_Cryst.html"
+    },
+    "CaptainPenguin": {
+      "url": "https://paldb.cc/cn/Penking",
+      "file": "详情/普通/Penking.html"
+    },
+    "BluePlatypus": {
+      "url": "https://paldb.cc/cn/Fuack",
+      "file": "详情/普通/Fuack.html"
+    },
+    "CaptainPenguin_Black": {
+      "url": "https://paldb.cc/cn/Penking_Lux",
+      "file": "详情/普通/Penking_Lux.html"
+    },
+    "ChickenPal": {
+      "url": "https://paldb.cc/cn/Chikipi",
+      "file": "详情/普通/Chikipi.html"
+    },
+    "Penguin_Electric": {
+      "url": "https://paldb.cc/cn/Pengullet_Lux",
+      "file": "详情/普通/Pengullet_Lux.html"
+    },
+    "PlantSlime": {
+      "url": "https://paldb.cc/cn/Gumoss",
+      "file": "详情/普通/Gumoss.html"
+    },
+    "WizardOwl": {
+      "url": "https://paldb.cc/cn/Hoocrates",
+      "file": "详情/普通/Hoocrates.html"
+    },
+    "KingAlpaca": {
+      "url": "https://paldb.cc/cn/Kingpaca",
+      "file": "详情/普通/Kingpaca.html"
+    },
+    "KingAlpaca_Ice": {
+      "url": "https://paldb.cc/cn/Kingpaca_Cryst",
+      "file": "详情/普通/Kingpaca_Cryst.html"
+    },
+    "Alpaca": {
+      "url": "https://paldb.cc/cn/Melpaca",
+      "file": "详情/普通/Melpaca.html"
+    },
+    "DreamDemon": {
+      "url": "https://paldb.cc/cn/Daedream",
+      "file": "详情/普通/Daedream.html"
+    },
+    "LavaGirl": {
+      "url": "https://paldb.cc/cn/Flambelle",
+      "file": "详情/普通/Flambelle.html"
+    },
+    "Monkey": {
+      "url": "https://paldb.cc/cn/Tanzee",
+      "file": "详情/普通/Tanzee.html"
+    },
+    "FlameBambi": {
+      "url": "https://paldb.cc/cn/Rooby",
+      "file": "详情/普通/Rooby.html"
+    },
+    "Monkey_Fire": {
+      "url": "https://paldb.cc/cn/Tanzee_Ignis",
+      "file": "详情/普通/Tanzee_Ignis.html"
+    },
+    "Boar": {
+      "url": "https://paldb.cc/cn/Rushoar",
+      "file": "详情/普通/Rushoar.html"
+    },
+    "NightFox": {
+      "url": "https://paldb.cc/cn/Nox",
+      "file": "详情/普通/Nox.html"
+    },
+    "Kitsunebi_Ice": {
+      "url": "https://paldb.cc/cn/Foxparks_Cryst",
+      "file": "详情/普通/Foxparks_Cryst.html"
+    },
+    "Bastet": {
+      "url": "https://paldb.cc/cn/Mau",
+      "file": "详情/普通/Mau.html"
+    },
+    "Kitsunebi": {
+      "url": "https://paldb.cc/cn/Foxparks",
+      "file": "详情/普通/Foxparks.html"
+    },
+    "NegativeOctopus": {
+      "url": "https://paldb.cc/cn/Killamari",
+      "file": "详情/普通/Killamari.html"
+    },
+    "CuteMole": {
+      "url": "https://paldb.cc/cn/Fuddler",
+      "file": "详情/普通/Fuddler.html"
+    },
+    "Bastet_Ice": {
+      "url": "https://paldb.cc/cn/Mau_Cryst",
+      "file": "详情/普通/Mau_Cryst.html"
+    },
+    "Garm": {
+      "url": "https://paldb.cc/cn/Direhowl",
+      "file": "详情/普通/Direhowl.html"
+    },
+    "NegativeOctopus_Neutral": {
+      "url": "https://paldb.cc/cn/Killamari_Primo",
+      "file": "详情/普通/Killamari_Primo.html"
+    },
+    "BerryGoat": {
+      "url": "https://paldb.cc/cn/Caprity",
+      "file": "详情/普通/Caprity.html"
+    },
+    "MopBaby": {
+      "url": "https://paldb.cc/cn/Swee",
+      "file": "详情/普通/Swee.html"
+    },
+    "Deer": {
+      "url": "https://paldb.cc/cn/Eikthyrdeer",
+      "file": "详情/普通/Eikthyrdeer.html"
+    },
+    "BerryGoat_Dark": {
+      "url": "https://paldb.cc/cn/Caprity_Noct",
+      "file": "详情/普通/Caprity_Noct.html"
+    },
+    "Deer_Ground": {
+      "url": "https://paldb.cc/cn/Eikthyrdeer_Terra",
+      "file": "详情/普通/Eikthyrdeer_Terra.html"
+    },
+    "WindChimes": {
+      "url": "https://paldb.cc/cn/Hangyu",
+      "file": "详情/普通/Hangyu.html"
+    },
+    "WindChimes_Ice": {
+      "url": "https://paldb.cc/cn/Hangyu_Cryst",
+      "file": "详情/普通/Hangyu_Cryst.html"
+    },
+    "SweetsSheep_Ground": {
+      "url": "https://paldb.cc/cn/Woolipop_Terra",
+      "file": "详情/普通/Woolipop_Terra.html"
+    },
+    "BlueDragon_Ice": {
+      "url": "https://paldb.cc/cn/Azurobe_Cryst",
+      "file": "详情/普通/Azurobe_Cryst.html"
+    },
+    "BlueDragon": {
+      "url": "https://paldb.cc/cn/Azurobe",
+      "file": "详情/普通/Azurobe.html"
+    },
+    "ElecCat": {
+      "url": "https://paldb.cc/cn/Sparkit",
+      "file": "详情/普通/Sparkit.html"
+    },
+    "Kelpie": {
+      "url": "https://paldb.cc/cn/Kelpsea",
+      "file": "详情/普通/Kelpsea.html"
+    },
+    "MopKing": {
+      "url": "https://paldb.cc/cn/Sweepa",
+      "file": "详情/普通/Sweepa.html"
+    },
+    "CowPal": {
+      "url": "https://paldb.cc/cn/Mozzarina",
+      "file": "详情/普通/Mozzarina.html"
+    },
+    "TentacleTurtle_Ground": {
+      "url": "https://paldb.cc/cn/Turtacle_Terra",
+      "file": "详情/普通/Turtacle_Terra.html"
+    },
+    "Kelpie_Fire": {
+      "url": "https://paldb.cc/cn/Kelpsea_Ignis",
+      "file": "详情/普通/Kelpsea_Ignis.html"
+    },
+    "PinkRabbit": {
+      "url": "https://paldb.cc/cn/Ribbuny",
+      "file": "详情/普通/Ribbuny.html"
+    },
+    "SweetsSheep": {
+      "url": "https://paldb.cc/cn/Woolipop",
+      "file": "详情/普通/Woolipop.html"
+    },
+    "PinkRabbit_Grass": {
+      "url": "https://paldb.cc/cn/Ribbuny_Botan",
+      "file": "详情/普通/Ribbuny_Botan.html"
+    },
+    "OctopusGirl": {
+      "url": "https://paldb.cc/cn/Gloopie",
+      "file": "详情/普通/Gloopie.html"
+    },
+    "JellyfishGhost": {
+      "url": "https://paldb.cc/cn/Jellroy",
+      "file": "详情/普通/Jellroy.html"
+    },
+    "ClioneTwins": {
+      "url": "https://paldb.cc/cn/Amione",
+      "file": "详情/普通/Amione.html"
+    },
+    "OctopusGirl_Neutral": {
+      "url": "https://paldb.cc/cn/Gloopie_Primo",
+      "file": "详情/普通/Gloopie_Primo.html"
+    },
+    "GhostBlackCat": {
+      "url": "https://paldb.cc/cn/Wispaw",
+      "file": "详情/普通/Wispaw.html"
+    },
+    "TentacleTurtle": {
+      "url": "https://paldb.cc/cn/Turtacle",
+      "file": "详情/普通/Turtacle.html"
+    },
+    "JellyfishFairy": {
+      "url": "https://paldb.cc/cn/Jelliette",
+      "file": "详情/普通/Jelliette.html"
+    },
+    "HawkBird": {
+      "url": "https://paldb.cc/cn/Nitewing",
+      "file": "详情/普通/Nitewing.html"
+    },
+    "Eagle": {
+      "url": "https://paldb.cc/cn/Galeclaw",
+      "file": "详情/普通/Galeclaw.html"
+    },
+    "Kirin": {
+      "url": "https://paldb.cc/cn/Univolt",
+      "file": "详情/普通/Univolt.html"
+    },
+    "Kirin_Ice": {
+      "url": "https://paldb.cc/cn/Univolt_Cryst",
+      "file": "详情/普通/Univolt_Cryst.html"
+    },
+    "CatBat": {
+      "url": "https://paldb.cc/cn/Tombat",
+      "file": "详情/普通/Tombat.html"
+    },
+    "ColorfulBird": {
+      "url": "https://paldb.cc/cn/Tocotoco",
+      "file": "详情/普通/Tocotoco.html"
+    },
+    "Werewolf": {
+      "url": "https://paldb.cc/cn/Loupmoon",
+      "file": "详情/普通/Loupmoon.html"
+    },
+    "DarkCrow": {
+      "url": "https://paldb.cc/cn/Cawgnito",
+      "file": "详情/普通/Cawgnito.html"
+    },
+    "FlameBuffalo": {
+      "url": "https://paldb.cc/cn/Arsox",
+      "file": "详情/普通/Arsox.html"
+    },
+    "CuteButterfly": {
+      "url": "https://paldb.cc/cn/Cinnamoth",
+      "file": "详情/普通/Cinnamoth.html"
+    },
+    "FluffyBird": {
+      "url": "https://paldb.cc/cn/Muffly",
+      "file": "详情/普通/Muffly.html"
+    },
+    "LittleBriarRose": {
+      "url": "https://paldb.cc/cn/Bristla",
+      "file": "详情/普通/Bristla.html"
+    },
+    "FairyDragon": {
+      "url": "https://paldb.cc/cn/Elphidran",
+      "file": "详情/普通/Elphidran.html"
+    },
+    "ElecPomeranian": {
+      "url": "https://paldb.cc/cn/Puffolt",
+      "file": "详情/普通/Puffolt.html"
+    },
+    "SharkKid": {
+      "url": "https://paldb.cc/cn/Gobfin",
+      "file": "详情/普通/Gobfin.html"
+    },
+    "Werewolf_Ice": {
+      "url": "https://paldb.cc/cn/Loupmoon_Cryst",
+      "file": "详情/普通/Loupmoon_Cryst.html"
+    },
+    "FairyDragon_Water": {
+      "url": "https://paldb.cc/cn/Elphidran_Aqua",
+      "file": "详情/普通/Elphidran_Aqua.html"
+    },
+    "CatVampire": {
+      "url": "https://paldb.cc/cn/Felbat",
+      "file": "详情/普通/Felbat.html"
+    },
+    "SharkKid_Fire": {
+      "url": "https://paldb.cc/cn/Gobfin_Ignis",
+      "file": "详情/普通/Gobfin_Ignis.html"
+    },
+    "VioletFairy": {
+      "url": "https://paldb.cc/cn/Vaelet",
+      "file": "详情/普通/Vaelet.html"
+    },
+    "NaughtyCat": {
+      "url": "https://paldb.cc/cn/Grintale",
+      "file": "详情/普通/Grintale.html"
+    },
+    "PinkLizard": {
+      "url": "https://paldb.cc/cn/Lovander",
+      "file": "详情/普通/Lovander.html"
+    },
+    "IceSeal": {
+      "url": "https://paldb.cc/cn/Polapup",
+      "file": "详情/普通/Polapup.html"
+    },
+    "QueenBee": {
+      "url": "https://paldb.cc/cn/Elizabee",
+      "file": "详情/普通/Elizabee.html"
+    },
+    "IceSeal_Ground": {
+      "url": "https://paldb.cc/cn/Polapup_Terra",
+      "file": "详情/普通/Polapup_Terra.html"
+    },
+    "LizardMan": {
+      "url": "https://paldb.cc/cn/Leezpunk",
+      "file": "详情/普通/Leezpunk.html"
+    },
+    "PurpleSpider": {
+      "url": "https://paldb.cc/cn/Tarantriss",
+      "file": "详情/普通/Tarantriss.html"
+    },
+    "LizardMan_Fire": {
+      "url": "https://paldb.cc/cn/Leezpunk_Ignis",
+      "file": "详情/普通/Leezpunk_Ignis.html"
+    },
+    "BirdDragon_Ice": {
+      "url": "https://paldb.cc/cn/Vanwyrm_Cryst",
+      "file": "详情/普通/Vanwyrm_Cryst.html"
+    },
+    "SoldierBee": {
+      "url": "https://paldb.cc/cn/Beegarde",
+      "file": "详情/普通/Beegarde.html"
+    },
+    "Gorilla_Ground": {
+      "url": "https://paldb.cc/cn/Gorirat_Terra",
+      "file": "详情/普通/Gorirat_Terra.html"
+    },
+    "Serpent": {
+      "url": "https://paldb.cc/cn/Surfent",
+      "file": "详情/普通/Surfent.html"
+    },
+    "RobinHood": {
+      "url": "https://paldb.cc/cn/Robinquill",
+      "file": "详情/普通/Robinquill.html"
+    },
+    "FoxMage": {
+      "url": "https://paldb.cc/cn/Wixen",
+      "file": "详情/普通/Wixen.html"
+    },
+    "BirdDragon": {
+      "url": "https://paldb.cc/cn/Vanwyrm",
+      "file": "详情/普通/Vanwyrm.html"
+    },
+    "Serpent_Ground": {
+      "url": "https://paldb.cc/cn/Surfent_Terra",
+      "file": "详情/普通/Surfent_Terra.html"
+    },
+    "FoxMage_Dark": {
+      "url": "https://paldb.cc/cn/Wixen_Noct",
+      "file": "详情/普通/Wixen_Noct.html"
+    },
+    "CatMage": {
+      "url": "https://paldb.cc/cn/Katress",
+      "file": "详情/普通/Katress.html"
+    },
+    "RobinHood_Ground": {
+      "url": "https://paldb.cc/cn/Robinquill_Terra",
+      "file": "详情/普通/Robinquill_Terra.html"
+    },
+    "CatMage_Fire": {
+      "url": "https://paldb.cc/cn/Katress_Ignis",
+      "file": "详情/普通/Katress_Ignis.html"
+    },
+    "Gorilla": {
+      "url": "https://paldb.cc/cn/Gorirat",
+      "file": "详情/普通/Gorirat.html"
+    },
+    "GrassMinotaur": {
+      "url": "https://paldb.cc/cn/Elgrove",
+      "file": "详情/普通/Elgrove.html"
+    },
+    "GrassMinotaur_Ice": {
+      "url": "https://paldb.cc/cn/Elgrove_Cryst",
+      "file": "详情/普通/Elgrove_Cryst.html"
+    },
+    "FengyunDeeper": {
+      "url": "https://paldb.cc/cn/Fenglope",
+      "file": "详情/普通/Fenglope.html"
+    },
+    "HadesBird": {
+      "url": "https://paldb.cc/cn/Helzephyr",
+      "file": "详情/普通/Helzephyr.html"
+    },
+    "HadesBird_Electric": {
+      "url": "https://paldb.cc/cn/Helzephyr_Lux",
+      "file": "详情/普通/Helzephyr_Lux.html"
+    },
+    "Mutant": {
+      "url": "https://paldb.cc/cn/Lunaris",
+      "file": "详情/普通/Lunaris.html"
+    },
+    "FlowerDinosaur": {
+      "url": "https://paldb.cc/cn/Dinossom",
+      "file": "详情/普通/Dinossom.html"
+    },
+    "FlowerDinosaur_Electric": {
+      "url": "https://paldb.cc/cn/Dinossom_Lux",
+      "file": "详情/普通/Dinossom_Lux.html"
+    },
+    "Ronin": {
+      "url": "https://paldb.cc/cn/Bushi",
+      "file": "详情/普通/Bushi.html"
+    },
+    "FlowerRabbit": {
+      "url": "https://paldb.cc/cn/Flopie",
+      "file": "详情/普通/Flopie.html"
+    },
+    "GrassMammoth_Ice": {
+      "url": "https://paldb.cc/cn/Mammorest_Cryst",
+      "file": "详情/普通/Mammorest_Cryst.html"
+    },
+    "StuffedShark": {
+      "url": "https://paldb.cc/cn/Finsider",
+      "file": "详情/普通/Finsider.html"
+    },
+    "StuffedShark_Fire": {
+      "url": "https://paldb.cc/cn/Finsider_Ignis",
+      "file": "详情/普通/Finsider_Ignis.html"
+    },
+    "GrassMammoth": {
+      "url": "https://paldb.cc/cn/Mammorest",
+      "file": "详情/普通/Mammorest.html"
+    },
+    "FengyunDeeper_Electric": {
+      "url": "https://paldb.cc/cn/Fenglope_Lux",
+      "file": "详情/普通/Fenglope_Lux.html"
+    },
+    "FlowerDoll_Fire": {
+      "url": "https://paldb.cc/cn/Petallia_Ignis",
+      "file": "详情/普通/Petallia_Ignis.html"
+    },
+    "Baphomet": {
+      "url": "https://paldb.cc/cn/Incineram",
+      "file": "详情/普通/Incineram.html"
+    },
+    "PandaGirl": {
+      "url": "https://paldb.cc/cn/Leafan",
+      "file": "详情/普通/Leafan.html"
+    },
+    "Ronin_Dark": {
+      "url": "https://paldb.cc/cn/Bushi_Noct",
+      "file": "详情/普通/Bushi_Noct.html"
+    },
+    "FireKirin": {
+      "url": "https://paldb.cc/cn/Pyrin",
+      "file": "详情/普通/Pyrin.html"
+    },
+    "RaijinDaughter": {
+      "url": "https://paldb.cc/cn/Dazzi",
+      "file": "详情/普通/Dazzi.html"
+    },
+    "RaijinDaughter_Water": {
+      "url": "https://paldb.cc/cn/Dazzi_Noct",
+      "file": "详情/普通/Dazzi_Noct.html"
+    },
+    "FireKirin_Dark": {
+      "url": "https://paldb.cc/cn/Pyrin_Noct",
+      "file": "详情/普通/Pyrin_Noct.html"
+    },
+    "FlowerDoll": {
+      "url": "https://paldb.cc/cn/Petallia",
+      "file": "详情/普通/Petallia.html"
+    },
+    "LazyDragon_Electric": {
+      "url": "https://paldb.cc/cn/Relaxaurus_Lux",
+      "file": "详情/普通/Relaxaurus_Lux.html"
+    },
+    "IceCrocodile": {
+      "url": "https://paldb.cc/cn/Munchill",
+      "file": "详情/普通/Munchill.html"
+    },
+    "ThunderBird": {
+      "url": "https://paldb.cc/cn/Beakon",
+      "file": "详情/普通/Beakon.html"
+    },
+    "Baphomet_Dark": {
+      "url": "https://paldb.cc/cn/Incineram_Noct",
+      "file": "详情/普通/Incineram_Noct.html"
+    },
+    "ThunderBird_Ice": {
+      "url": "https://paldb.cc/cn/Beakon_Cryst",
+      "file": "详情/普通/Beakon_Cryst.html"
+    },
+    "LazyDragon": {
+      "url": "https://paldb.cc/cn/Relaxaurus",
+      "file": "详情/普通/Relaxaurus.html"
+    },
+    "GhostAnglerfish_Fire": {
+      "url": "https://paldb.cc/cn/Ghangler_Ignis",
+      "file": "详情/普通/Ghangler_Ignis.html"
+    },
+    "IceFox": {
+      "url": "https://paldb.cc/cn/Foxcicle",
+      "file": "详情/普通/Foxcicle.html"
+    },
+    "ThunderDog_Ice": {
+      "url": "https://paldb.cc/cn/Rayhound_Cryst",
+      "file": "详情/普通/Rayhound_Cryst.html"
+    },
+    "DarkScorpion_Ground": {
+      "url": "https://paldb.cc/cn/Menasting_Terra",
+      "file": "详情/普通/Menasting_Terra.html"
+    },
+    "CactusDoll_Dark": {
+      "url": "https://paldb.cc/cn/Needoll_Noct",
+      "file": "详情/普通/Needoll_Noct.html"
+    },
+    "CactusDoll": {
+      "url": "https://paldb.cc/cn/Needoll",
+      "file": "详情/普通/Needoll.html"
+    },
+    "GrassPanda": {
+      "url": "https://paldb.cc/cn/Mossanda",
+      "file": "详情/普通/Mossanda.html"
+    },
+    "GrassPanda_Electric": {
+      "url": "https://paldb.cc/cn/Mossanda_Lux",
+      "file": "详情/普通/Mossanda_Lux.html"
+    },
+    "WeaselDragon": {
+      "url": "https://paldb.cc/cn/Chillet",
+      "file": "详情/普通/Chillet.html"
+    },
+    "ThunderDog": {
+      "url": "https://paldb.cc/cn/Rayhound",
+      "file": "详情/普通/Rayhound.html"
+    },
+    "RedArmorBird": {
+      "url": "https://paldb.cc/cn/Ragnahawk",
+      "file": "详情/普通/Ragnahawk.html"
+    },
+    "VolcanoDragon": {
+      "url": "https://paldb.cc/cn/Moldron",
+      "file": "详情/普通/Moldron.html"
+    },
+    "DarkScorpion": {
+      "url": "https://paldb.cc/cn/Menasting",
+      "file": "详情/普通/Menasting.html"
+    },
+    "VolcanoDragon_Ice": {
+      "url": "https://paldb.cc/cn/Moldron_Cryst",
+      "file": "详情/普通/Moldron_Cryst.html"
+    },
+    "GhostAnglerfish": {
+      "url": "https://paldb.cc/cn/Ghangler",
+      "file": "详情/普通/Ghangler.html"
+    },
+    "DrillGame": {
+      "url": "https://paldb.cc/cn/Digtoise",
+      "file": "详情/普通/Digtoise.html"
+    },
+    "SakuraSaurus": {
+      "url": "https://paldb.cc/cn/Broncherry",
+      "file": "详情/普通/Broncherry.html"
+    },
+    "LazyCatfish": {
+      "url": "https://paldb.cc/cn/Dumud",
+      "file": "详情/普通/Dumud.html"
+    },
+    "TropicalOstrich": {
+      "url": "https://paldb.cc/cn/Palumba",
+      "file": "详情/普通/Palumba.html"
+    },
+    "WeaselDragon_Fire": {
+      "url": "https://paldb.cc/cn/Chillet_Ignis",
+      "file": "详情/普通/Chillet_Ignis.html"
+    },
+    "SakuraSaurus_Water": {
+      "url": "https://paldb.cc/cn/Broncherry_Aqua",
+      "file": "详情/普通/Broncherry_Aqua.html"
+    },
+    "Plesiosaur": {
+      "url": "https://paldb.cc/cn/Braloha",
+      "file": "详情/普通/Braloha.html"
+    },
+    "AmaterasuWolf_Dark": {
+      "url": "https://paldb.cc/cn/Kitsun_Noct",
+      "file": "详情/普通/Kitsun_Noct.html"
+    },
+    "AmaterasuWolf": {
+      "url": "https://paldb.cc/cn/Kitsun",
+      "file": "详情/普通/Kitsun.html"
+    },
+    "SnowPeafowl": {
+      "url": "https://paldb.cc/cn/Frostplume",
+      "file": "详情/普通/Frostplume.html"
+    },
+    "HerculesBeetle_Ground": {
+      "url": "https://paldb.cc/cn/Warsect_Terra",
+      "file": "详情/普通/Warsect_Terra.html"
+    },
+    "DarkFlameFox": {
+      "url": "https://paldb.cc/cn/Majex",
+      "file": "详情/普通/Majex.html"
+    },
+    "Manticore": {
+      "url": "https://paldb.cc/cn/Blazehowl",
+      "file": "详情/普通/Blazehowl.html"
+    },
+    "HerculesBeetle": {
+      "url": "https://paldb.cc/cn/Warsect",
+      "file": "详情/普通/Warsect.html"
+    },
+    "WhiteMoth": {
+      "url": "https://paldb.cc/cn/Sibelyx",
+      "file": "详情/普通/Sibelyx.html"
+    },
+    "WhiteMoth_Neutral": {
+      "url": "https://paldb.cc/cn/Sibelyx_Primo",
+      "file": "详情/普通/Sibelyx_Primo.html"
+    },
+    "Manticore_Dark": {
+      "url": "https://paldb.cc/cn/Blazehowl_Noct",
+      "file": "详情/普通/Blazehowl_Noct.html"
+    },
+    "IceWitch": {
+      "url": "https://paldb.cc/cn/Icelyn",
+      "file": "详情/普通/Icelyn.html"
+    },
+    "LazyCatfish_Gold": {
+      "url": "https://paldb.cc/cn/Dumud_Gild",
+      "file": "详情/普通/Dumud_Gild.html"
+    },
+    "MummyPal": {
+      "url": "https://paldb.cc/cn/Gildra",
+      "file": "详情/普通/Gildra.html"
+    },
+    "MushroomDragon": {
+      "url": "https://paldb.cc/cn/Shroomer",
+      "file": "详情/普通/Shroomer.html"
+    },
+    "GhostBeast": {
+      "url": "https://paldb.cc/cn/Maraith",
+      "file": "详情/普通/Maraith.html"
+    },
+    "Umihebi_Fire": {
+      "url": "https://paldb.cc/cn/Jormuntide_Ignis",
+      "file": "详情/普通/Jormuntide_Ignis.html"
+    },
+    "Suzaku_Water": {
+      "url": "https://paldb.cc/cn/Suzaku_Aqua",
+      "file": "详情/普通/Suzaku_Aqua.html"
+    },
+    "SkyDragon": {
+      "url": "https://paldb.cc/cn/Quivern",
+      "file": "详情/普通/Quivern.html"
+    },
+    "SkyDragon_Grass": {
+      "url": "https://paldb.cc/cn/Quivern_Botan",
+      "file": "详情/普通/Quivern_Botan.html"
+    },
+    "Umihebi": {
+      "url": "https://paldb.cc/cn/Jormuntide",
+      "file": "详情/普通/Jormuntide.html"
+    },
+    "MushroomDragon_Dark": {
+      "url": "https://paldb.cc/cn/Shroomer_Noct",
+      "file": "详情/普通/Shroomer_Noct.html"
+    },
+    "LeafPrincess": {
+      "url": "https://paldb.cc/cn/Lullu",
+      "file": "详情/普通/Lullu.html"
+    },
+    "FeatherOstrich": {
+      "url": "https://paldb.cc/cn/Dazemu",
+      "file": "详情/普通/Dazemu.html"
+    },
+    "SmallArmadillo": {
+      "url": "https://paldb.cc/cn/Kikit",
+      "file": "详情/普通/Kikit.html"
+    },
+    "GuardianDog": {
+      "url": "https://paldb.cc/cn/Yakumo",
+      "file": "详情/普通/Yakumo.html"
+    },
+    "VolcanicMonster": {
+      "url": "https://paldb.cc/cn/Reptyro",
+      "file": "详情/普通/Reptyro.html"
+    },
+    "NightBlueHorse": {
+      "url": "https://paldb.cc/cn/Starryon",
+      "file": "详情/普通/Starryon.html"
+    },
+    "SwordCutlassfish_Fire": {
+      "url": "https://paldb.cc/cn/Skutlass_Ignis",
+      "file": "详情/普通/Skutlass_Ignis.html"
+    },
+    "NightBlueHorse_Neutral": {
+      "url": "https://paldb.cc/cn/Starryon_Primo",
+      "file": "详情/普通/Starryon_Primo.html"
+    },
+    "Suzaku": {
+      "url": "https://paldb.cc/cn/Suzaku",
+      "file": "详情/普通/Suzaku.html"
+    },
+    "SwordCutlassfish": {
+      "url": "https://paldb.cc/cn/Skutlass",
+      "file": "详情/普通/Skutlass.html"
+    },
+    "RockBeast": {
+      "url": "https://paldb.cc/cn/Pierdon",
+      "file": "详情/普通/Pierdon.html"
+    },
+    "VolcanicMonster_Ice": {
+      "url": "https://paldb.cc/cn/Reptyro_Cryst",
+      "file": "详情/普通/Reptyro_Cryst.html"
+    },
+    "RockBeast_Ice": {
+      "url": "https://paldb.cc/cn/Pierdon_Cryst",
+      "file": "详情/普通/Pierdon_Cryst.html"
+    },
+    "WhiteTiger_Ground": {
+      "url": "https://paldb.cc/cn/Cryolinx_Terra",
+      "file": "详情/普通/Cryolinx_Terra.html"
+    },
+    "Yeti_Grass": {
+      "url": "https://paldb.cc/cn/Wumpo_Botan",
+      "file": "详情/普通/Wumpo_Botan.html"
+    },
+    "VenusFlytrap": {
+      "url": "https://paldb.cc/cn/Carnibora",
+      "file": "详情/普通/Carnibora.html"
+    },
+    "KingBahamut": {
+      "url": "https://paldb.cc/cn/Blazamut",
+      "file": "详情/普通/Blazamut.html"
+    },
+    "KingBahamut_Dragon": {
+      "url": "https://paldb.cc/cn/Blazamut_Ryu",
+      "file": "详情/普通/Blazamut_Ryu.html"
+    },
+    "CandleGhost": {
+      "url": "https://paldb.cc/cn/Sootseer",
+      "file": "详情/普通/Sootseer.html"
+    },
+    "GrassGolem": {
+      "url": "https://paldb.cc/cn/Dualith",
+      "file": "详情/普通/Dualith.html"
+    },
+    "GrassGolem_Dark": {
+      "url": "https://paldb.cc/cn/Dualith_Noct",
+      "file": "详情/普通/Dualith_Noct.html"
+    },
+    "WhiteTiger": {
+      "url": "https://paldb.cc/cn/Cryolinx",
+      "file": "详情/普通/Cryolinx.html"
+    },
+    "SmallYeti": {
+      "url": "https://paldb.cc/cn/Snugloo",
+      "file": "详情/普通/Snugloo.html"
+    },
+    "Anubis": {
+      "url": "https://paldb.cc/cn/Anubis",
+      "file": "详情/普通/Anubis.html"
+    },
+    "Yeti": {
+      "url": "https://paldb.cc/cn/Wumpo",
+      "file": "详情/普通/Wumpo.html"
+    },
+    "ScorpionMan_Electric": {
+      "url": "https://paldb.cc/cn/Prixter_Lux",
+      "file": "详情/普通/Prixter_Lux.html"
+    },
+    "ScorpionMan": {
+      "url": "https://paldb.cc/cn/Prixter",
+      "file": "详情/普通/Prixter.html"
+    },
+    "BadCatgirl": {
+      "url": "https://paldb.cc/cn/Nyafia",
+      "file": "详情/普通/Nyafia.html"
+    },
+    "DarkAlien": {
+      "url": "https://paldb.cc/cn/Xenovader",
+      "file": "详情/普通/Xenovader.html"
+    },
+    "WhiteAlienDragon": {
+      "url": "https://paldb.cc/cn/Xenogard",
+      "file": "详情/普通/Xenogard.html"
+    },
+    "CubeTurtle": {
+      "url": "https://paldb.cc/cn/Tetroise",
+      "file": "详情/普通/Tetroise.html"
+    },
+    "BlueberryFairy": {
+      "url": "https://paldb.cc/cn/Prunelia",
+      "file": "详情/普通/Prunelia.html"
+    },
+    "GhostRabbit": {
+      "url": "https://paldb.cc/cn/Nitemary",
+      "file": "详情/普通/Nitemary.html"
+    },
+    "GhostRabbit_Grass": {
+      "url": "https://paldb.cc/cn/Nitemary_Botan",
+      "file": "详情/普通/Nitemary_Botan.html"
+    },
+    "MysteryMask": {
+      "url": "https://paldb.cc/cn/Omascul",
+      "file": "详情/普通/Omascul.html"
+    },
+    "BlackPuppy_Ice": {
+      "url": "https://paldb.cc/cn/Smokie_Cryst",
+      "file": "详情/普通/Smokie_Cryst.html"
+    },
+    "IceNarwhal": {
+      "url": "https://paldb.cc/cn/Whalaska",
+      "file": "详情/普通/Whalaska.html"
+    },
+    "CubeTurtle_Neutral": {
+      "url": "https://paldb.cc/cn/Tetroise_Primo",
+      "file": "详情/普通/Tetroise_Primo.html"
+    },
+    "IceNarwhal_Fire": {
+      "url": "https://paldb.cc/cn/Whalaska_Ignis",
+      "file": "详情/普通/Whalaska_Ignis.html"
+    },
+    "GrassRabbitMan": {
+      "url": "https://paldb.cc/cn/Verdash",
+      "file": "详情/普通/Verdash.html"
+    },
+    "GrimGirl": {
+      "url": "https://paldb.cc/cn/Splatterina",
+      "file": "详情/普通/Splatterina.html"
+    },
+    "SifuDog": {
+      "url": "https://paldb.cc/cn/Dogen",
+      "file": "详情/普通/Dogen.html"
+    },
+    "Sekhmet": {
+      "url": "https://paldb.cc/cn/Sekhmet",
+      "file": "详情/普通/Sekhmet.html"
+    },
+    "SumoDog": {
+      "url": "https://paldb.cc/cn/Bulldosu",
+      "file": "详情/普通/Bulldosu.html"
+    },
+    "WhiteDeer": {
+      "url": "https://paldb.cc/cn/Celesdir",
+      "file": "详情/普通/Celesdir.html"
+    },
+    "WhiteDeer_Dark": {
+      "url": "https://paldb.cc/cn/Celesdir_Noct",
+      "file": "详情/普通/Celesdir_Noct.html"
+    },
+    "WingGolem": {
+      "url": "https://paldb.cc/cn/Knocklem",
+      "file": "详情/普通/Knocklem.html"
+    },
+    "MimicDog": {
+      "url": "https://paldb.cc/cn/Mimog",
+      "file": "详情/普通/Mimog.html"
+    },
+    "WingGolem_Fire": {
+      "url": "https://paldb.cc/cn/Knocklem_Ignis",
+      "file": "详情/普通/Knocklem_Ignis.html"
+    },
+    "WhiteShieldDragon": {
+      "url": "https://paldb.cc/cn/Silvegis",
+      "file": "详情/普通/Silvegis.html"
+    },
+    "BlackMetalDragon": {
+      "url": "https://paldb.cc/cn/Astegon",
+      "file": "详情/普通/Astegon.html"
+    },
+    "BlackPuppy": {
+      "url": "https://paldb.cc/cn/Smokie",
+      "file": "详情/普通/Smokie.html"
+    },
+    "BlueThunderHorse": {
+      "url": "https://paldb.cc/cn/Azurmane",
+      "file": "详情/普通/Azurmane.html"
+    },
+    "ElecSnail": {
+      "url": "https://paldb.cc/cn/Snock",
+      "file": "详情/普通/Snock.html"
+    },
+    "ElecSnail_Ground": {
+      "url": "https://paldb.cc/cn/Snock_Lux",
+      "file": "详情/普通/Snock_Lux.html"
+    },
+    "HoodGhost": {
+      "url": "https://paldb.cc/cn/Hoodle",
+      "file": "详情/普通/Hoodle.html"
+    },
+    "GoldenHorse": {
+      "url": "https://paldb.cc/cn/Gildane",
+      "file": "详情/普通/Gildane.html"
+    },
+    "OniGhostGirl": {
+      "url": "https://paldb.cc/cn/Bakemi",
+      "file": "详情/普通/Bakemi.html"
+    },
+    "DandelionGirl": {
+      "url": "https://paldb.cc/cn/Souffline",
+      "file": "详情/普通/Souffline.html"
+    },
+    "ElecLizard": {
+      "url": "https://paldb.cc/cn/Slowatt",
+      "file": "详情/普通/Slowatt.html"
+    },
+    "LongCat": {
+      "url": "https://paldb.cc/cn/Valentail",
+      "file": "详情/普通/Valentail.html"
+    },
+    "KingSunfish": {
+      "url": "https://paldb.cc/cn/Solmora",
+      "file": "详情/普通/Solmora.html"
+    },
+    "SleeveRabbit": {
+      "url": "https://paldb.cc/cn/Lapure",
+      "file": "详情/普通/Lapure.html"
+    },
+    "GhostDragon_Fire": {
+      "url": "https://paldb.cc/cn/Eidrolon_Ignis",
+      "file": "详情/普通/Eidrolon_Ignis.html"
+    },
+    "BrownRabbit": {
+      "url": "https://paldb.cc/cn/Lapiron",
+      "file": "详情/普通/Lapiron.html"
+    },
+    "RedFlowerBird": {
+      "url": "https://paldb.cc/cn/Tropicaw",
+      "file": "详情/普通/Tropicaw.html"
+    },
+    "FoxExorcist": {
+      "url": "https://paldb.cc/cn/Flaracle",
+      "file": "详情/普通/Flaracle.html"
+    },
+    "LotusDragon": {
+      "url": "https://paldb.cc/cn/Ophydia",
+      "file": "详情/普通/Ophydia.html"
+    },
+    "ThunderFluffyBird": {
+      "url": "https://paldb.cc/cn/Dynamoff",
+      "file": "详情/普通/Dynamoff.html"
+    },
+    "SnakeGirl": {
+      "url": "https://paldb.cc/cn/Venusa",
+      "file": "详情/普通/Venusa.html"
+    },
+    "ThiefBird": {
+      "url": "https://paldb.cc/cn/Roujay",
+      "file": "详情/普通/Roujay.html"
+    },
+    "KingSunfish_Thunder": {
+      "url": "https://paldb.cc/cn/Solmora_Lux",
+      "file": "详情/普通/Solmora_Lux.html"
+    },
+    "MushroomLady": {
+      "url": "https://paldb.cc/cn/Mycora",
+      "file": "详情/普通/Mycora.html"
+    },
+    "GhostDragon": {
+      "url": "https://paldb.cc/cn/Eidrolon",
+      "file": "详情/普通/Eidrolon.html"
+    },
+    "MoonChild": {
+      "url": "https://paldb.cc/cn/Wistella",
+      "file": "详情/普通/Wistella.html"
+    },
+    "ClownRabbit": {
+      "url": "https://paldb.cc/cn/Dupin",
+      "file": "详情/普通/Dupin.html"
+    },
+    "MonochromeQueen": {
+      "url": "https://paldb.cc/cn/Solenne",
+      "file": "详情/普通/Solenne.html"
+    },
+    "DomeArmorDragon": {
+      "url": "https://paldb.cc/cn/Aegidron",
+      "file": "详情/普通/Aegidron.html"
+    },
+    "LilyQueen": {
+      "url": "https://paldb.cc/cn/Lyleen",
+      "file": "详情/普通/Lyleen.html"
+    },
+    "LanternButler": {
+      "url": "https://paldb.cc/cn/Loomen",
+      "file": "详情/普通/Loomen.html"
+    },
+    "ThunderDragonMan": {
+      "url": "https://paldb.cc/cn/Orserk",
+      "file": "详情/普通/Orserk.html"
+    },
+    "Horus": {
+      "url": "https://paldb.cc/cn/Faleris",
+      "file": "详情/普通/Faleris.html"
+    },
+    "Horus_Water": {
+      "url": "https://paldb.cc/cn/Faleris_Aqua",
+      "file": "详情/普通/Faleris_Aqua.html"
+    },
+    "ElecPanda": {
+      "url": "https://paldb.cc/cn/Grizzbolt",
+      "file": "详情/普通/Grizzbolt.html"
+    },
+    "MoonQueen": {
+      "url": "https://paldb.cc/cn/Selyne",
+      "file": "详情/普通/Selyne.html"
+    },
+    "KabukiMan": {
+      "url": "https://paldb.cc/cn/Renjishi",
+      "file": "详情/普通/Renjishi.html"
+    },
+    "LilyQueen_Dark": {
+      "url": "https://paldb.cc/cn/Lyleen_Noct",
+      "file": "详情/普通/Lyleen_Noct.html"
+    },
+    "SnowTigerBeastman": {
+      "url": "https://paldb.cc/cn/Bastigor",
+      "file": "详情/普通/Bastigor.html"
+    },
+    "BlueSkyDragon": {
+      "url": "https://paldb.cc/cn/Shaolong",
+      "file": "详情/普通/Shaolong.html"
+    },
+    "BlackGriffon": {
+      "url": "https://paldb.cc/cn/Shadowbeak",
+      "file": "详情/普通/Shadowbeak.html"
+    },
+    "FlowerPrince": {
+      "url": "https://paldb.cc/cn/Dandilord",
+      "file": "详情/普通/Dandilord.html"
+    },
+    "DarkMechaDragon": {
+      "url": "https://paldb.cc/cn/Xenolord",
+      "file": "详情/普通/Xenolord.html"
+    },
+    "LegendDeer": {
+      "url": "https://paldb.cc/cn/Hartalis",
+      "file": "详情/普通/Hartalis.html"
+    },
+    "IceDeer": {
+      "url": "https://paldb.cc/cn/Reindrix",
+      "file": "详情/普通/Reindrix.html"
+    },
+    "BlackCentaur": {
+      "url": "https://paldb.cc/cn/Necromus",
+      "file": "详情/普通/Necromus.html"
+    },
+    "NightLady_Dark": {
+      "url": "https://paldb.cc/cn/Bellanoir_Libero",
+      "file": "详情/普通/Bellanoir_Libero.html"
+    },
+    "IceHorse": {
+      "url": "https://paldb.cc/cn/Frostallion",
+      "file": "详情/普通/Frostallion.html"
+    },
+    "IceHorse_Dark": {
+      "url": "https://paldb.cc/cn/Frostallion_Noct",
+      "file": "详情/普通/Frostallion_Noct.html"
+    },
+    "SaintCentaur": {
+      "url": "https://paldb.cc/cn/Paladius",
+      "file": "详情/普通/Paladius.html"
+    },
+    "JetDragon": {
+      "url": "https://paldb.cc/cn/Jetragon",
+      "file": "详情/普通/Jetragon.html"
+    },
+    "NightLady": {
+      "url": "https://paldb.cc/cn/Bellanoir",
+      "file": "详情/普通/Bellanoir.html"
+    },
+    "YakushimaMonster001": {
+      "url": "https://paldb.cc/cn/Green_Slime",
+      "file": "详情/普通/Green_Slime.html"
+    },
+    "WorldTreeDragon": {
+      "url": "https://paldb.cc/cn/Astralym",
+      "file": "详情/普通/Astralym.html"
+    },
+    "YakushimaMonster001_Red": {
+      "url": "https://paldb.cc/cn/Red_Slime",
+      "file": "详情/普通/Red_Slime.html"
+    },
+    "YakushimaMonster001_Pink": {
+      "url": "https://paldb.cc/cn/Illuminant_Slime",
+      "file": "详情/普通/Illuminant_Slime.html"
+    },
+    "YakushimaMonster001_Rainbow": {
+      "url": "https://paldb.cc/cn/Rainbow_Slime",
+      "file": "详情/普通/Rainbow_Slime.html"
+    },
+    "KingWhale": {
+      "url": "https://paldb.cc/cn/Panthalus",
+      "file": "详情/普通/Panthalus.html"
+    },
+    "PoseidonOrca": {
+      "url": "https://paldb.cc/cn/Neptilius",
+      "file": "详情/普通/Neptilius.html"
+    },
+    "YakushimaMonster001_Blue": {
+      "url": "https://paldb.cc/cn/Blue_Slime",
+      "file": "详情/普通/Blue_Slime.html"
+    },
+    "Mothman": {
+      "url": "https://paldb.cc/cn/Silvance",
+      "file": "详情/普通/Silvance.html"
+    },
+    "YakushimaMonster003": {
+      "url": "https://paldb.cc/cn/Cave_Bat",
+      "file": "详情/普通/Cave_Bat.html"
+    },
+    "YakushimaMonster002": {
+      "url": "https://paldb.cc/cn/Enchanted_Sword",
+      "file": "详情/普通/Enchanted_Sword.html"
+    },
+    "YakushimaMonster003_Purple": {
+      "url": "https://paldb.cc/cn/Illuminant_Bat",
+      "file": "详情/普通/Illuminant_Bat.html"
+    },
+    "YakushimaBoss001": {
+      "url": "https://paldb.cc/cn/Eye_of_Cthulhu",
+      "file": "详情/普通/Eye_of_Cthulhu.html"
+    },
+    "YakushimaBoss001_Small": {
+      "url": "https://paldb.cc/cn/Demon_Eye",
+      "file": "详情/普通/Demon_Eye.html"
+    },
+    "YakushimaMonster001_Purple": {
+      "url": "https://paldb.cc/cn/Purple_Slime",
+      "file": "详情/普通/Purple_Slime.html"
+    }
   },
   "details": {
     "Quest_Farmer03_PinkCat": {
