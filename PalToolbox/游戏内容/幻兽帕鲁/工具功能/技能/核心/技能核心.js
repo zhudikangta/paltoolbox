@@ -26,6 +26,28 @@ var PT_SKILL_CORE = (function() {
         return ELEMENT_NAME[value] || value || '';
     }
 
+    function normalizePartnerCapabilityIds(value) {
+        if (!Array.isArray(value)) return [];
+        return value.filter(function(id) {
+            return typeof id === 'string' && id;
+        });
+    }
+
+    function normalizePartnerEffectBlocks(value) {
+        if (!Array.isArray(value)) return [];
+        return value.reduce(function(blocks, block) {
+            if (!block || typeof block !== 'object' || Array.isArray(block)) return blocks;
+            var text = typeof block.text === 'string' ? block.text : '';
+            if (!text.trim()) return blocks;
+            blocks.push({
+                text: text,
+                subcategoryIds: normalizePartnerCapabilityIds(block.subcategoryIds),
+                tagIds: normalizePartnerCapabilityIds(block.tagIds)
+            });
+            return blocks;
+        }, []);
+    }
+
     function setActiveSkillData(raw) {
         var map = {};
         var palMap = raw && raw.palLearnSkills ? raw.palLearnSkills : {};
@@ -105,13 +127,7 @@ var PT_SKILL_CORE = (function() {
                 trigger: parameters.trigger || '',
                 cooldown: parameters.coolDown,
                 description: item.description || '',
-                effectBlocks: (item.effectBlocks || []).map(function(block) {
-                    return {
-                        text: block.text || '',
-                        subcategoryIds: (block.subcategoryIds || []).slice(),
-                        tagIds: (block.tagIds || []).slice()
-                    };
-                }),
+                effectBlocks: normalizePartnerEffectBlocks(item.effectBlocks),
                 values: parameters.values || []
             };
         });
@@ -246,37 +262,56 @@ var PT_SKILL_CORE = (function() {
         }, []);
     }
 
+    function selectedPartnerCapabilityIds(facetSelections) {
+        return selectedPartnerOptionIds(facetSelections).reduce(function(ids, optionId) {
+            var option = partnerFacetOptionById[optionId];
+            var capabilityIds = option ? option.capabilityIds : [optionId];
+            capabilityIds.forEach(function(id) {
+                if (ids.indexOf(id) < 0) ids.push(id);
+            });
+            return ids;
+        }, []);
+    }
+
     function getPartnerEffectBlockModels(item, facetSelections) {
-        var selectedIds = selectedPartnerOptionIds(facetSelections);
-        return (item && item.effectBlocks || []).map(function(block) {
-            var capabilityIds = (block.subcategoryIds || []).concat(block.tagIds || []);
+        var selectedCapabilityIds = selectedPartnerCapabilityIds(facetSelections);
+        return normalizePartnerEffectBlocks(item && item.effectBlocks).map(function(block) {
+            var capabilityIds = block.subcategoryIds.concat(block.tagIds);
             var labels = [];
+            var seenLabelIds = {};
+            var visiblePreciseTags = block.tagIds.map(function(id) {
+                return partnerDetailTagById[id];
+            }).filter(function(definition) {
+                return definition && definition.filterable !== false && definition.kind === 'precise';
+            });
+            var hiddenSubcategoryIds = {};
+            visiblePreciseTags.forEach(function(definition) {
+                if (definition.subcategoryId) hiddenSubcategoryIds[definition.subcategoryId] = true;
+            });
 
-            (block.subcategoryIds || []).forEach(function(id) {
+            block.subcategoryIds.forEach(function(id) {
                 var definition = partnerSubcategoryById[id];
-                if (!definition || definition.filterable === false) return;
+                if (!definition || definition.filterable === false || hiddenSubcategoryIds[id] || seenLabelIds[id]) return;
+                seenLabelIds[id] = true;
                 labels.push({
                     id: id,
                     label: definition.label || id,
-                    selected: selectedIds.indexOf(id) > -1
+                    selected: selectedCapabilityIds.indexOf(id) > -1
                 });
             });
-            (block.tagIds || []).forEach(function(id) {
+            block.tagIds.forEach(function(id) {
                 var definition = partnerDetailTagById[id];
-                if (!definition || definition.kind !== 'precise') return;
+                if (!definition || definition.filterable === false || definition.kind !== 'precise' || seenLabelIds[id]) return;
+                seenLabelIds[id] = true;
                 labels.push({
                     id: id,
                     label: definition.label || id,
-                    selected: selectedIds.indexOf(id) > -1
+                    selected: selectedCapabilityIds.indexOf(id) > -1
                 });
             });
 
-            var highlighted = selectedIds.some(function(optionId) {
-                var option = partnerFacetOptionById[optionId];
-                var requiredIds = option ? option.capabilityIds : [optionId];
-                return requiredIds.some(function(id) {
-                    return capabilityIds.indexOf(id) > -1;
-                });
+            var highlighted = selectedCapabilityIds.some(function(id) {
+                return capabilityIds.indexOf(id) > -1;
             });
 
             return {

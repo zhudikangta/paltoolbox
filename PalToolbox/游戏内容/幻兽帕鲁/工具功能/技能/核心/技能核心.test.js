@@ -91,7 +91,9 @@ core.setPartnerSkillData({
             { id: 'mount.flying', label: '飞行骑乘', subcategoryId: 'move.mount', facetId: 'move.mode', kind: 'precise' },
             { id: 'jump.double', label: '骑乘二段跳', subcategoryId: 'move.riding_jump', facetId: 'move.jump_type', kind: 'precise' },
             { id: 'jump.triple', label: '骑乘三段跳', subcategoryId: 'move.riding_jump', facetId: 'move.jump_type', kind: 'precise' },
-            { id: 'mount.semantic', label: '骑乘概念', subcategoryId: 'move.mount', kind: 'semantic', filterable: false }
+            { id: 'mount.semantic', label: '骑乘概念', subcategoryId: 'move.mount', kind: 'semantic', filterable: false },
+            { id: 'mount.hidden', label: '隐藏骑乘标签', subcategoryId: 'move.mount', kind: 'precise', filterable: false },
+            { id: 'combat.command_ranged', label: '指令远程攻击', subcategoryId: 'combat.active_attack', facetId: 'combat', kind: 'precise' }
         ]
     },
     partnerSkills: {
@@ -109,12 +111,12 @@ core.setPartnerSkillData({
                 {
                     text: '可骑乘移动。',
                     subcategoryIds: ['move.mount'],
-                    tagIds: ['mount.ground', 'mount.semantic']
+                    tagIds: ['mount.ground', 'mount.ground', 'mount.semantic', 'mount.hidden']
                 },
                 {
                     text: '可指令发动攻击。',
                     subcategoryIds: ['combat.active_attack'],
-                    tagIds: []
+                    tagIds: ['combat.command_ranged']
                 }
             ]
         },
@@ -126,7 +128,7 @@ core.setPartnerSkillData({
         { palId: 'GroundTriple', category: '普通帕鲁', usageCategoryIds: ['move'], usageSubcategoryIds: ['move.mount', 'move.riding_jump'], usageTagIds: ['mount.ground', 'jump.triple'] },
         { palId: 'FlyingDouble', category: '普通帕鲁', usageCategoryIds: ['move'], usageSubcategoryIds: ['move.mount', 'move.riding_jump'], usageTagIds: ['mount.flying', 'jump.double'] },
         { palId: 'PlayerMobility', category: '普通帕鲁', usageCategoryIds: ['move'], usageSubcategoryIds: ['move.player_mobility'], usageTagIds: [] },
-        { palId: 'GroundCombat', category: '普通帕鲁', usageCategoryIds: ['move', 'combat'], usageSubcategoryIds: ['move.mount', 'combat.active_attack'], usageTagIds: ['mount.ground', 'mount.semantic'] },
+        { palId: 'GroundCombat', category: '普通帕鲁', usageCategoryIds: ['move', 'combat'], usageSubcategoryIds: ['move.mount', 'combat.active_attack'], usageTagIds: ['mount.ground', 'mount.semantic', 'mount.hidden', 'combat.command_ranged'] },
         { palId: 'GroundFlyingJumper', category: '普通帕鲁', usageCategoryIds: ['move'], usageSubcategoryIds: ['move.mount', 'move.riding_jump'], usageTagIds: ['mount.ground', 'mount.flying', 'jump.double', 'jump.triple'] }
     ]
 });
@@ -229,19 +231,19 @@ assert.deepStrictEqual(
         {
             text: '可骑乘移动。',
             subcategoryIds: ['move.mount'],
-            tagIds: ['mount.ground', 'mount.semantic']
+            tagIds: ['mount.ground', 'mount.ground', 'mount.semantic', 'mount.hidden']
         },
         {
             text: '可指令发动攻击。',
             subcategoryIds: ['combat.active_attack'],
-            tagIds: []
+            tagIds: ['combat.command_ranged']
         }
     ],
     '核心层必须完整保留正式数据中的效果块'
 );
 const blocks = core.getPartnerEffectBlockModels(effectItem, {
     'move.mode': ['mount.ground'],
-    combat: ['combat.active_attack']
+    combat: ['combat.command_ranged']
 });
 assert.deepStrictEqual(
     JSON.parse(JSON.stringify(blocks)),
@@ -253,7 +255,7 @@ assert.deepStrictEqual(
         },
         {
             text: '可指令发动攻击。',
-            labels: [{ id: 'combat.active_attack', label: '指令发动攻击', selected: true }],
+            labels: [{ id: 'combat.command_ranged', label: '指令远程攻击', selected: true }],
             highlighted: true
         }
     ],
@@ -274,6 +276,96 @@ assert.strictEqual(
     }),
     false,
     '没有选择筛选条件时任何效果块都不应高亮'
+);
+
+core.setPartnerSkillData({
+    taxonomy: {
+        groups: [{ id: 'combo_group', label: '组合筛选', children: [] }],
+        facets: [{ id: 'combo', groupId: 'combo_group', label: '组合筛选' }],
+        detailTags: [
+            { id: 'mount.ground', label: '地面骑乘', kind: 'precise' },
+            { id: 'combat.command_ranged', label: '指令远程攻击', kind: 'precise' },
+            {
+                id: 'combo.ground_attack',
+                label: '地面突击组合',
+                facetId: 'combo',
+                kind: 'precise',
+                capabilityIds: ['mount.ground', 'combat.command_ranged']
+            }
+        ]
+    },
+    partnerSkills: {
+        ComboPal: {
+            id: 'ComboPal',
+            effectBlocks: [
+                { text: '可骑乘移动。', subcategoryIds: [], tagIds: ['mount.ground'] },
+                { text: '可指令发动攻击。', subcategoryIds: [], tagIds: ['combat.command_ranged'] }
+            ]
+        }
+    },
+    catalog: [{
+        palId: 'ComboPal',
+        usageCategoryIds: [],
+        usageSubcategoryIds: [],
+        usageTagIds: ['mount.ground', 'combat.command_ranged']
+    }]
+});
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerEffectBlockModels(core.getPartnerSkills()[0], {
+        combo: ['combo.ground_attack']
+    }))),
+    [
+        {
+            text: '可骑乘移动。',
+            labels: [{ id: 'mount.ground', label: '地面骑乘', selected: true }],
+            highlighted: true
+        },
+        {
+            text: '可指令发动攻击。',
+            labels: [{ id: 'combat.command_ranged', label: '指令远程攻击', selected: true }],
+            highlighted: true
+        }
+    ],
+    '组合选项必须用 capabilityIds 同时驱动具体标签选中态和效果块高亮'
+);
+
+core.setPartnerSkillData({
+    partnerSkills: {
+        BrokenList: { id: 'BrokenList', effectBlocks: '不是数组' },
+        BrokenMembers: {
+            id: 'BrokenMembers',
+            effectBlocks: [
+                null,
+                {},
+                { text: '安全效果块。', subcategoryIds: '不是数组', tagIds: { bad: true } }
+            ]
+        }
+    },
+    catalog: [{ palId: 'BrokenList' }, { palId: 'BrokenMembers' }]
+});
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerSkills().find(function(item) {
+        return item.id === 'BrokenList';
+    }).effectBlocks)),
+    [],
+    'effectBlocks 不是数组时必须降级为空数组'
+);
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerSkills().find(function(item) {
+        return item.id === 'BrokenMembers';
+    }).effectBlocks)),
+    [{ text: '安全效果块。', subcategoryIds: [], tagIds: [] }],
+    '空块和无效块必须被忽略，错误类型的标签字段必须规范为空数组'
+);
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerEffectBlockModels({
+        effectBlocks: [
+            null,
+            { text: '直接调用也安全。', subcategoryIds: '不是数组', tagIds: null }
+        ]
+    }, {}))),
+    [{ text: '直接调用也安全。', labels: [], highlighted: false }],
+    '显示模型接口直接收到脏效果块时也不能抛出 TypeError'
 );
 
 assert.strictEqual(typeof core.calculatePartnerMasonryLayout, 'undefined', '恢复同行等高后核心不应残留最短列布局算法');
