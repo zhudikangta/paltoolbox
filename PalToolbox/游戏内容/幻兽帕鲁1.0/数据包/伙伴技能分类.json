@@ -1171,6 +1171,7 @@
     },
     "IceCrocodile": {
       "subcategoryIds": [
+        "resource.weight",
         "resource.preserve"
       ],
       "tagIds": [],
@@ -2440,7 +2441,8 @@
     },
     "Gorilla_Ground": {
       "subcategoryIds": [
-        "move.special"
+        "pal.self_burst",
+        "move.player_mobility"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"

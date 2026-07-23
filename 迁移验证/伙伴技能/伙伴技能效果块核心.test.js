@@ -180,8 +180,10 @@ assert.throws(function() {
 });
 
 const formalPath = path.join(__dirname, '..', '..', 'PalToolbox', '游戏内容', '幻兽帕鲁1.0', '数据包', '伙伴技能.json');
+const classificationPath = path.join(__dirname, '..', '..', 'PalToolbox', '游戏内容', '幻兽帕鲁1.0', '数据包', '伙伴技能分类.json');
 const definitionsPath = path.join(__dirname, '伙伴技能效果块.json');
 const formal = JSON.parse(fs.readFileSync(formalPath, 'utf8'));
+const classification = JSON.parse(fs.readFileSync(classificationPath, 'utf8'));
 assert.strictEqual(formal.catalog.length, 301, '正式 catalog 应有 301 条记录');
 
 const fullDefinitions = JSON.parse(fs.readFileSync(definitionsPath, 'utf8'));
@@ -227,6 +229,39 @@ const expectedDarkKendoFrogBlocks = [{
 }];
 assert.deepStrictEqual(fullResult.partnerSkills.KendoFrog.effectBlocks, expectedKendoFrogBlocks);
 assert.deepStrictEqual(fullResult.partnerSkills.KendoFrog_Dark.effectBlocks, expectedDarkKendoFrogBlocks);
+assert.deepStrictEqual(
+    classification.assignments.Gorilla_Ground.subcategoryIds,
+    ['pal.self_burst', 'move.player_mobility'],
+    '石掌猿的分类标准输入必须同时标记自身爆发和玩家攀爬机动'
+);
+assert.deepStrictEqual(
+    classification.assignments.IceCrocodile.subcategoryIds,
+    ['resource.weight', 'resource.preserve'],
+    '肚肚鳄的分类标准输入必须同时标记食材料理减重和保鲜'
+);
+assert.deepStrictEqual(fullResult.partnerSkills.Gorilla_Ground.effectBlocks, [{
+    text: '发动后会解放野性之力，并在一定时间内石掌猿的攻击力将提升(75~300)%。',
+    subcategoryIds: ['pal.self_burst'],
+    tagIds: []
+}, {
+    text: '若它在队伍中，玩家的攀爬速度提升(50~100)%。（不可叠加）',
+    subcategoryIds: ['move.player_mobility'],
+    tagIds: []
+}], '石掌猿两个效果块必须分别对应自身爆发和玩家机动');
+assert.deepStrictEqual(fullResult.partnerSkills.IceCrocodile.effectBlocks, [{
+    text: '若它在队伍中，食材和料理的重量会减轻(30~60)%。并在冰属性帕鲁原有的防腐效果基础上，让腐败速度进一步(-30~-80)%。（不可叠加）',
+    subcategoryIds: ['resource.weight', 'resource.preserve'],
+    tagIds: []
+}], '肚肚鳄的同一前提效果块必须同时保留减重和保鲜分类');
+assert.deepStrictEqual(fullResult.partnerSkills.BlackGriffon.effectBlocks, [{
+    text: '可骑在它的背上在空中飞行。\n且飞行时移动速度会提升。',
+    subcategoryIds: ['move.mount'],
+    tagIds: ['mount.flying']
+}, {
+    text: '骑乘期间的暗属性攻击将提升(15~30)%。\n科技47',
+    subcategoryIds: ['pal.partner_damage'],
+    tagIds: []
+}], '异构格里芬的飞行速度必须承接飞行骑乘块，不能保留无标签独立块');
 assert.deepStrictEqual(fullResult.partnerSkills.Deer.effectBlocks, [{
     text: '可骑在它的背上移动。',
     subcategoryIds: ['move.mount'],
@@ -288,7 +323,7 @@ const continuousEffectExpectations = [{
     blockIndex: 0,
     block: {
         text: '若它在队伍中，食材和料理的重量会减轻(30~60)%。并在冰属性帕鲁原有的防腐效果基础上，让腐败速度进一步(-30~-80)%。（不可叠加）',
-        subcategoryIds: ['resource.preserve'],
+        subcategoryIds: ['resource.weight', 'resource.preserve'],
         tagIds: []
     }
 }, {

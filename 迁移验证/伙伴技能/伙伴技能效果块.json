@@ -1324,13 +1324,15 @@
     "Gorilla_Ground": [
       {
         "text": "发动后会解放野性之力，并在一定时间内石掌猿的攻击力将提升(75~300)%。",
-        "subcategoryIds": [],
+        "subcategoryIds": [
+          "pal.self_burst"
+        ],
         "tagIds": []
       },
       {
         "text": "若它在队伍中，玩家的攀爬速度提升(50~100)%。（不可叠加）",
         "subcategoryIds": [
-          "move.special"
+          "move.player_mobility"
         ],
         "tagIds": []
       }
@@ -1617,6 +1619,7 @@
       {
         "text": "若它在队伍中，食材和料理的重量会减轻(30~60)%。并在冰属性帕鲁原有的防腐效果基础上，让腐败速度进一步(-30~-80)%。（不可叠加）",
         "subcategoryIds": [
+          "resource.weight",
           "resource.preserve"
         ],
         "tagIds": []
@@ -3767,7 +3770,7 @@
     ],
     "BlackGriffon": [
       {
-        "text": "可骑在它的背上在空中飞行。",
+        "text": "可骑在它的背上在空中飞行。\n且飞行时移动速度会提升。",
         "subcategoryIds": [
           "move.mount"
         ],
@@ -3776,15 +3779,10 @@
         ]
       },
       {
-        "text": "骑乘期间的暗属性攻击将提升(15~30)%。",
+        "text": "骑乘期间的暗属性攻击将提升(15~30)%。\n科技47",
         "subcategoryIds": [
           "pal.partner_damage"
         ],
-        "tagIds": []
-      },
-      {
-        "text": "且飞行时移动速度会提升。\n科技47",
-        "subcategoryIds": [],
         "tagIds": []
       }
     ],

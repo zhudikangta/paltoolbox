@@ -64,6 +64,34 @@ assert.strictEqual(data.partnerSkills.BOSS_Gorilla_Ground.description, goriratTe
 assert.ok(goriratTerra.source.correction, '石掌猿必须保留研究修正证据');
 assert.strictEqual(data.partnerSkills.BOSS_Gorilla_Ground.source.correction.id, goriratTerra.source.correction.id);
 assert.ok(!Object.prototype.hasOwnProperty.call(data.partnerSkills.SheepBall.source, 'correction'), '没有研究修正的帕鲁不应携带空修正字段');
+assert.deepStrictEqual(goriratTerra.effectBlocks.map(function(block) {
+    return block.subcategoryIds;
+}), [['pal.self_burst'], ['move.player_mobility']], '石掌猿正式效果块必须分别标记自身爆发和玩家机动');
+assert.deepStrictEqual(
+    data.catalog.find(function(item) { return item.palId === 'Gorilla_Ground'; }).usageSubcategoryIds,
+    ['pal.self_burst', 'move.player_mobility'],
+    '石掌猿正式分类索引必须来自修正后的分类标准输入'
+);
+
+assert.deepStrictEqual(data.partnerSkills.IceCrocodile.effectBlocks[0].subcategoryIds, [
+    'resource.weight',
+    'resource.preserve'
+], '肚肚鳄正式效果块必须同时保留减重和保鲜分类');
+assert.deepStrictEqual(
+    data.catalog.find(function(item) { return item.palId === 'IceCrocodile'; }).usageSubcategoryIds,
+    ['resource.weight', 'resource.preserve'],
+    '肚肚鳄正式分类索引必须来自修正后的分类标准输入'
+);
+
+assert.deepStrictEqual(data.partnerSkills.BlackGriffon.effectBlocks, [{
+    text: '可骑在它的背上在空中飞行。\n且飞行时移动速度会提升。',
+    subcategoryIds: ['move.mount'],
+    tagIds: ['mount.flying']
+}, {
+    text: '骑乘期间的暗属性攻击将提升(15~30)%。\n科技47',
+    subcategoryIds: ['pal.partner_damage'],
+    tagIds: []
+}], '异构格里芬正式效果块不能留下无标签的飞行速度块');
 
 const grassRabbitMan = data.partnerSkills.GrassRabbitMan;
 assert.deepStrictEqual(
