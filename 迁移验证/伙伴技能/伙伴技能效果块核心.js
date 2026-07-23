@@ -129,7 +129,7 @@ function applyEffectBlocks(options) {
 
         partnerSkills[palId].effectBlocks = deepClone(blocks);
         partnerSkills[palId].description = blocks.map(function(block) {
-            return typeof block.text === 'string' ? block.text.trim() : '';
+            return block && typeof block.text === 'string' ? block.text.trim() : '';
         }).join('\n');
     });
 

@@ -132,6 +132,15 @@ assertValidationError(function(data) {
 }, /第 1 个效果块必须是普通对象/);
 
 assertValidationError(function(data) {
+    data.definitions.partnerSkills.KendoFrog[0] = null;
+}, function(error) {
+    assert.notStrictEqual(error.name, 'TypeError');
+    assert.match(error.message, /第 1 个效果块必须是普通对象/);
+    assert.match(error.message, /效果块下级分类与目录不一致/);
+    return true;
+});
+
+assertValidationError(function(data) {
     delete data.definitions.partnerSkills.KendoFrog[0].subcategoryIds;
 }, /下级分类必须是数组/);
 
