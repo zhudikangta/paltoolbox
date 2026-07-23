@@ -11,6 +11,9 @@ const {
 const fixture = function(name) {
     return fs.readFileSync(path.join(__dirname, '测试资料', name), 'utf8');
 };
+const formalFile = path.join(
+    __dirname, '..', '..', 'PalToolbox', '游戏内容', '幻兽帕鲁1.0', '数据包', '伙伴技能.json'
+);
 
 const normal = parsePartnerSkillList(fixture('普通列表片段.html'), 'https://paldb.cc/cn/Partner_Skill');
 assert.strictEqual(normal.length, 2, '应该按卡片提取普通帕鲁');
@@ -24,6 +27,19 @@ assert.deepStrictEqual(normal[0], {
     rankTable: null,
     sourceUrl: 'https://paldb.cc/cn/Partner_Skill'
 });
+
+const inlineTechnology = parsePartnerSkillList(
+    fixture('普通列表片段.html').replace(
+        '发动后，它会化身为装备在玩家身上的盾牌。<br>\n    将它分派到<a href="Ranch">家畜牧场</a>，它就有机会掉落<span>羊毛</span>。',
+        '可骑在它的背上移动。<br>\n    骑乘期间可以进行2段跳跃，破坏树木的效率也会提升<span>(220~500)%</span>。 科技12'
+    ),
+    'https://paldb.cc/cn/Partner_Skill'
+);
+assert.strictEqual(
+    inlineTechnology[0].description,
+    '可骑在它的背上移动。\n骑乘期间可以进行2段跳跃，破坏树木的效率也会提升(220~500)%。\n科技12',
+    '描述末尾的科技编号必须独立成段，供卡片绘制分割线'
+);
 
 const boss = parseDetailPartnerSkill(
     fixture('Boss详情片段.html'),
@@ -95,6 +111,47 @@ const jump = parseDetailPartnerSkill(
     'https://paldb.cc/cn/Croajiro'
 );
 assert.strictEqual(jump.rankTable.columns[0].label, '起跳力度', '跳跃技能的 MainValue 不能误标成攻击力提升');
+
+const grassRabbitMan = parseDetailPartnerSkill(
+    fixture('透明化等级表片段.html')
+        .replace(/LizardMan/g, 'GrassRabbitMan')
+        .replace(/透明化/g, '草原特技之星')
+        .replace('发动后<span>(10~20)</span>秒内变得透明。', '若它在队伍中，可以额外进行+1次跳跃和+1次空中冲刺。（不可叠加）')
+        .replace(/OverWriteCoolTime \d+/g, 'GrassRabbitMan_PartnerSkill 1, 1')
+        .replace(/<div>OverWriteEffectTime [^<]+<\/div>/g, ''),
+    'GrassRabbitMan',
+    'https://paldb.cc/cn/Verdash'
+);
+assert.deepStrictEqual(
+    grassRabbitMan.rankTable.columns,
+    [
+        { key: 'GrassRabbitMan_PartnerSkill_JumpCount', label: '额外跳跃次数', unit: '次' },
+        { key: 'GrassRabbitMan_PartnerSkill_AirDash', label: '额外空中冲刺次数', unit: '次' }
+    ],
+    '踏春兔原始表中的两个 1 必须分别解释为额外跳跃和额外空中冲刺'
+);
+assert.deepStrictEqual(
+    grassRabbitMan.rankTable.rows.map(function(row) { return row.values; }),
+    [[1, 1], [1, 1], [1, 1], [1, 1], [1, 1]],
+    '踏春兔的两个固定次数必须在 0~4 星完整保留'
+);
+
+const longCat = parseDetailPartnerSkill(
+    fixture('透明化等级表片段.html')
+        .replace(/LizardMan/g, 'LongCat')
+        .replace(/透明化/g, '伸展喵咪')
+        .replace('发动后<span>(10~20)</span>秒内变得透明。', '若它在队伍中，玩家承受的重力减弱，跳跃或坠落时会漂浮落地。（不可叠加）')
+        .replace(/OverWriteCoolTime \d+/g, 'LowGravity_PartnerSkill 1')
+        .replace(/<div>OverWriteEffectTime [^<]+<\/div>/g, '')
+        .replace(/<tr><td>[2-5][\s\S]*?(?=<tr><td>1)/, ''),
+    'LongCat',
+    'https://paldb.cc/cn/Valentail'
+);
+assert.strictEqual(
+    longCat.rankTable,
+    null,
+    '喵璐璐的 LowGravity=1 是固定开关，不能伪装成 1% 的重力减轻表'
+);
 
 const sekhmet = parseDetailPartnerSkill(
     fixture('沙漠女帝等级表片段.html'),
@@ -196,7 +253,7 @@ assert.deepStrictEqual(mixedTables.rankTables[1].rows[0], { rank: 0, values: [1]
 assert.deepStrictEqual(mixedTables.rankTables[2].rows[9], { rank: 10, values: ['毒腺', '3–10', '100%'] });
 
 const pals = [
-    { id: 'Base', 种族: 'Base', 分类: '基础', 实装状态: '正常', 中文名: '原型', 伙伴技能: '原型技能', 头像文件: 'T_Base_icon_normal.png' },
+    { id: 'Base', 种族: 'Base', 图鉴编号: 10, 图鉴后缀: 'B', 分类: '基础', 实装状态: '正常', 中文名: '原型', 伙伴技能: '原型技能', 头像文件: 'T_Base_icon_normal.png' },
     { id: 'BOSS_Base', 种族: 'Base', 分类: 'Boss变体', 实装状态: '正常', 中文名: '原型(Boss)' },
     { id: 'GYM_Base', 种族: 'Base', 分类: '塔主Boss', 实装状态: '正常', 中文名: '原型(塔主)' },
     { id: 'GYM_Base_2', 种族: 'Base', 分类: '塔主Boss', 实装状态: '正常', 中文名: '原型(塔主)' },
@@ -255,6 +312,8 @@ assert.deepStrictEqual(
 assert.ok(built.internalParameters.GYM_Base, '解包参数必须放在独立区块');
 assert.ok(Array.isArray(built.conflicts), '冲突必须有独立记录区块');
 assert.strictEqual(built.catalog[0].iconFile, 'T_Base_icon_normal.png', '伙伴技能目录必须复用帕鲁头像文件');
+assert.strictEqual(built.catalog[0].displayId, '10B', '伙伴技能目录必须复用帕鲁图鉴的完整显示编号');
+assert.strictEqual(built.catalog.find(function(item) { return item.palId === 'Terra'; }).displayId, '', '没有图鉴编号的帕鲁显示编号必须为空');
 assert.deepStrictEqual(built.catalog[0].usageCategoryIds, ['move'], '目录必须保存用途大类索引');
 assert.deepStrictEqual(built.catalog[0].usageSubcategoryIds, ['move.mount'], '目录必须保存下级分类索引');
 assert.deepStrictEqual(built.catalog[0].usageTagIds, ['mount.ground'], '目录必须保存精确标签索引');
@@ -281,5 +340,13 @@ const moonLordData = buildPartnerSkillData({
 assert.strictEqual(moonLordData.partnerSkills.RAID_YakushimaBoss002.hasPartnerSkill, false);
 assert.strictEqual(moonLordData.partnerSkills.RAID_YakushimaBoss002.descriptionStatus, '无伙伴技能');
 assert.strictEqual(moonLordData.partnerSkills.RAID_YakushimaBoss002.rankTable, null, '无伙伴技能的条目不能挂着无意义的等级表');
+assert.deepStrictEqual(moonLordData.catalog, [], '特殊帕鲁没有伙伴技能时不能进入伙伴技能目录');
+
+const formal = JSON.parse(fs.readFileSync(formalFile, 'utf8'));
+assert.ok(formal.meta.effectBlocks, '正式数据必须记录效果块生成元数据');
+assert.strictEqual(formal.meta.effectBlocks.records, 301);
+assert.strictEqual(formal.meta.effectBlocks.transformVersion, '1.6.0');
+assert.strictEqual(formal.partnerSkills.KendoFrog.effectBlocks.length, 2);
+assert.strictEqual(formal.partnerSkills.KendoFrog_Dark.effectBlocks.length, 2);
 
 console.log('伙伴技能数据测试通过');

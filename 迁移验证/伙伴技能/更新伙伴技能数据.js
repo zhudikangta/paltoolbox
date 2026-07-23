@@ -7,6 +7,7 @@ const {
     technicalSignature,
     buildPartnerSkillData
 } = require('./伙伴技能数据核心');
+const { applyEffectBlocks } = require('./伙伴技能效果块核心.js');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const DATA_ROOT = path.join(PROJECT_ROOT, 'PalToolbox', '游戏内容', '幻兽帕鲁1.0');
@@ -19,12 +20,13 @@ const SOURCE_MANIFEST_FILE = path.join(SOURCE_ROOT, '来源.json');
 const INTERNAL_SOURCE_FILE = path.join(SOURCE_ROOT, '本地解包伙伴技能-2026-07-06.json');
 const SUPPLEMENTAL_RANK_TABLE_FILE = path.join(SOURCE_ROOT, '补充等级表.json');
 const FACT_CORRECTION_FILE = path.join(__dirname, '伙伴技能事实修正.json');
+const EFFECT_BLOCKS_FILE = path.join(__dirname, '伙伴技能效果块.json');
 const DETAIL_ROOT = path.join(SOURCE_ROOT, '详情');
 const ORDINARY_DETAIL_ROOT = path.join(DETAIL_ROOT, '普通');
 const MAIN_URL = 'https://paldb.cc/cn/Partner_Skill';
 const RETRIEVED_AT = '2026-07-22';
 const GAME_VERSION = 'v1.0.0';
-const TRANSFORM_VERSION = '1.4.0';
+const TRANSFORM_VERSION = '1.6.0';
 const ORDINARY_CATEGORIES = new Set(['基础', '亚种', '泰拉瑞亚']);
 const FIXED_SPECIAL_PAGES = {
     RAID_YakushimaBoss001_Green: 'True_Eye_of_Cthulhu',
@@ -288,6 +290,7 @@ function generateData() {
     const internalParameters = loadInternalParameters();
     const specialRecords = loadSpecialRecords(manifest);
     const classification = readJson(CLASSIFICATION_FILE);
+    const effectBlocks = readJson(EFFECT_BLOCKS_FILE);
     const output = buildPartnerSkillData({
         pals: pals,
         normalRecords: normalRecords,
@@ -297,9 +300,23 @@ function generateData() {
         metadata: {
             retrievedAt: manifest.retrievedAt,
             gameVersion: manifest.gameVersion,
-            transformVersion: manifest.transformVersion
+            transformVersion: TRANSFORM_VERSION
         }
     });
+    const applied = applyEffectBlocks({
+        partnerSkills: output.partnerSkills,
+        catalog: output.catalog,
+        taxonomy: output.taxonomy,
+        definitions: effectBlocks
+    });
+    output.partnerSkills = applied.partnerSkills;
+    output.meta.effectBlocks = {
+        file: path.basename(EFFECT_BLOCKS_FILE),
+        records: Object.keys(effectBlocks.partnerSkills || {}).length,
+        verifiedAt: effectBlocks.meta && effectBlocks.meta.verifiedAt || '',
+        gameVersion: effectBlocks.meta && effectBlocks.meta.gameVersion || '',
+        transformVersion: effectBlocks.meta && effectBlocks.meta.transformVersion || ''
+    };
     output.meta.statistics.palDbOrdinaryRecords = normalRecords.length;
     output.meta.statistics.palDbOrdinaryDetailRecords = Object.keys(manifest.ordinaryDetails || {}).length;
     output.meta.statistics.palDbSpecialRecords = Object.keys(specialRecords).length;
@@ -336,6 +353,9 @@ function validateData(output) {
     if (Object.keys(output.partnerSkills).length !== pals.length) errors.push('标准事实未覆盖所有帕鲁');
     if (ordinaryCatalog.length !== ordinary.length) errors.push('目录中普通帕鲁不完整');
     if (directOrdinaryFacts.length !== 299) errors.push('PalDB 299 个普通记录未与本站一一对应');
+    if (!output.meta.effectBlocks || output.meta.effectBlocks.records !== output.catalog.length) {
+        errors.push('效果块未完整覆盖伙伴技能目录');
+    }
     const missingFacts = pals.filter(function(pal) { return !output.partnerSkills[pal.id]; }).map(function(pal) { return pal.id; });
     if (missingFacts.length) errors.push('缺少事实: ' + missingFacts.join(', '));
     const duplicateCatalog = output.catalog.filter(function(item) { return /_2$/.test(item.palId); });
@@ -343,8 +363,13 @@ function validateData(output) {
     if (!output.taxonomy || output.taxonomy.groups.length !== 9) errors.push('生成数据缺少九大伙伴技能用途分类');
     output.catalog.forEach(function(item) {
         if (!Object.prototype.hasOwnProperty.call(item, 'iconFile')) errors.push(item.palId + ' 缺少头像字段');
+        if (!Object.prototype.hasOwnProperty.call(item, 'displayId')) errors.push(item.palId + ' 缺少帕鲁图鉴显示编号字段');
         if (!Array.isArray(item.usageCategoryIds) || !Array.isArray(item.usageSubcategoryIds) || !Array.isArray(item.usageTagIds)) {
             errors.push(item.palId + ' 缺少伙伴技能分类索引');
+        }
+        const fact = output.partnerSkills[item.palId];
+        if (!fact || !Array.isArray(fact.effectBlocks) || !fact.effectBlocks.length) {
+            errors.push(item.palId + ' 缺少正式效果块');
         }
     });
     Object.keys(output.partnerSkills).forEach(function(palId) {

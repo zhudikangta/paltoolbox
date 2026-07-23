@@ -1,6 +1,20 @@
 const assert = require('assert');
 const data = require('../../PalToolbox/游戏内容/幻兽帕鲁1.0/数据包/伙伴技能.json');
 
+assert.ok(data.meta.effectBlocks, '正式数据必须记录效果块生成元数据');
+assert.strictEqual(data.meta.effectBlocks.records, 301);
+assert.strictEqual(data.meta.effectBlocks.transformVersion, '1.6.0');
+assert.strictEqual(data.partnerSkills.KendoFrog.effectBlocks.length, 2);
+assert.strictEqual(data.partnerSkills.KendoFrog_Dark.effectBlocks.length, 2);
+assert.ok(
+    data.partnerSkills.KendoFrog.effectBlocks[0].text.includes('玩家在踩上去后能高高跳起'),
+    '武道蛙跳板动作必须保留在同一效果块'
+);
+assert.ok(
+    data.partnerSkills.KendoFrog_Dark.effectBlocks[0].text.includes('玩家在踩上去后能高高跳起'),
+    '极道蛙跳板动作必须保留在同一效果块'
+);
+
 const stealth = data.partnerSkills.LizardMan.rankTable;
 assert.deepStrictEqual(stealth.rows.map(function(row) { return row.rank; }), [0, 1, 2, 3, 4]);
 assert.deepStrictEqual(stealth.columns.map(function(column) { return column.label; }), ['冷却时间', '持续时间']);
@@ -51,12 +65,45 @@ assert.ok(goriratTerra.source.correction, '石掌猿必须保留研究修正证�
 assert.strictEqual(data.partnerSkills.BOSS_Gorilla_Ground.source.correction.id, goriratTerra.source.correction.id);
 assert.ok(!Object.prototype.hasOwnProperty.call(data.partnerSkills.SheepBall.source, 'correction'), '没有研究修正的帕鲁不应携带空修正字段');
 
+const grassRabbitMan = data.partnerSkills.GrassRabbitMan;
+assert.deepStrictEqual(
+    grassRabbitMan.rankTable.columns,
+    [
+        { key: 'GrassRabbitMan_PartnerSkill_JumpCount', label: '额外跳跃次数', unit: '次' },
+        { key: 'GrassRabbitMan_PartnerSkill_AirDash', label: '额外空中冲刺次数', unit: '次' }
+    ],
+    '踏春兔不能把两个固定次数误标成起跳力度'
+);
+assert.deepStrictEqual(
+    grassRabbitMan.rankTable.rows.map(function(row) { return row.values; }),
+    [[1, 1], [1, 1], [1, 1], [1, 1], [1, 1]],
+    '踏春兔 0~4 星必须完整保留额外跳跃和额外空中冲刺'
+);
+assert.strictEqual(data.partnerSkills.LongCat.rankTable, null, '喵璐璐的低重力开关不能显示成 1%');
+
+const deer = data.partnerSkills.Deer;
+const deerGround = data.partnerSkills.Deer_Ground;
+assert.deepStrictEqual(deer.description.split('\n'), [
+    '可骑在它的背上移动。',
+    '骑乘期间可以进行2段跳跃，破坏树木的效率也会提升(220~500)%。',
+    '科技12'
+], '紫霞鹿的同一骑乘条件效果不能被拆开');
+assert.deepStrictEqual(deerGround.description.split('\n'), [
+    '可骑在它的背上移动。',
+    '骑乘期间可以进行2段跳跃。',
+    '若它在据点里，其他据点帕鲁的伐木工作适应性等级+1。（不可叠加）',
+    '科技21'
+], '祇岳鹿的基础骑乘、骑乘二段跳和据点效果应分别成段');
+assert.ok(deerGround.source.correction, '祇岳鹿的描述分段修正必须保留证据');
+assert.strictEqual(deerGround.source.correction.id, 'deer-ground-description-blocks');
+
 const ordinaryWithoutRankTable = data.catalog.filter(function(item) {
     if (item.category !== '普通帕鲁') return false;
     const fact = data.partnerSkills[item.palId];
     return fact.hasPartnerSkill !== false && !fact.rankTable && !(fact.rankTables && fact.rankTables.length);
 }).map(function(item) { return item.palId; }).sort();
 assert.deepStrictEqual(ordinaryWithoutRankTable, [
+    'LongCat',
     'WorldTreeDragon',
     'YakushimaMonster001',
     'YakushimaMonster001_Blue',
@@ -64,7 +111,7 @@ assert.deepStrictEqual(ordinaryWithoutRankTable, [
     'YakushimaMonster001_Purple',
     'YakushimaMonster001_Rainbow',
     'YakushimaMonster001_Red'
-].sort(), '除未完成条目和不随星级改变的泰拉瑞亚史莱姆外，普通帕鲁都必须有等级表');
+].sort(), '除固定开关效果、未完成条目和不随星级改变的泰拉瑞亚史莱姆外，普通帕鲁都必须有等级表');
 
 assert.ok(
     data.partnerSkills.BlueDragon.rankTable.columns.some(function(column) { return column.label === '骑乘攻击转为水属性'; }),
@@ -73,6 +120,11 @@ assert.ok(
 
 assert.strictEqual(data.partnerSkills.RAID_YakushimaBoss002.hasPartnerSkill, false);
 assert.strictEqual(data.partnerSkills.RAID_YakushimaBoss002.descriptionStatus, '无伙伴技能');
+assert.deepStrictEqual(
+    data.catalog.filter(function(item) { return item.category !== '普通帕鲁'; }).map(function(item) { return item.palId; }),
+    ['BOSS_Sekhmet'],
+    '特殊来源目录只能保留确实拥有伙伴技能的塞赫麦特'
+);
 
 Object.keys(data.partnerSkills).forEach(function(palId) {
     const fact = data.partnerSkills[palId];
