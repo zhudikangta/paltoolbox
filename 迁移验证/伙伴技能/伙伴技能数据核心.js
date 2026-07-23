@@ -43,6 +43,10 @@ function textFromHtml(value) {
         .trim();
 }
 
+function normalizeDescription(value) {
+    return String(value || '').replace(/[ \t]+(科技\d+)[ \t]*$/, '\n$1').trim();
+}
+
 function splitCards(html, token) {
     const source = String(html || '');
     const starts = [];
@@ -59,7 +63,7 @@ function splitCards(html, token) {
 function findDescription(card, afterIndex) {
     const source = card.slice(Math.max(0, afterIndex));
     const match = source.match(/<div\s+class=["']flex-grow-1 ms-2["'][^>]*>([\s\S]*?)<\/div>/i);
-    return match ? textFromHtml(match[1]) : '';
+    return match ? normalizeDescription(textFromHtml(match[1])) : '';
 }
 
 const PARTNER_PARAMETER_LABELS = {
@@ -134,6 +138,8 @@ function parameterPresentation(key, context) {
     if (/^CraftSpeed_PartnerSkill/i.test(key) && /Sekhmet/i.test(String(context && context.palId || ''))) {
         return { label: '塞赫麦特作业效率提升', unit: '%' };
     }
+    if (key === 'GrassRabbitMan_PartnerSkill_JumpCount') return { label: '额外跳跃次数', unit: '次' };
+    if (key === 'GrassRabbitMan_PartnerSkill_AirDash') return { label: '额外空中冲刺次数', unit: '次' };
     if (/^Element(?:Normal|Fire|Water|Leaf|Grass|Electricity|Electric|Ice|Earth|Ground|Dark|Dragon)$/i.test(key)) {
         const element = key.replace(/^Element/i, '');
         return { label: '玩家攻击转为' + (ELEMENT_LABELS[element] || '对应') + '属性', unit: '' };
@@ -210,7 +216,7 @@ function parameterPresentation(key, context) {
     if (/SwimSpeed/i.test(key)) return { label: '水上移动速度提升', unit: '%' };
     if (/JumpPower/i.test(key)) return { label: '跳跃高度提升', unit: '%' };
     if (/AvoidDuration/i.test(key)) return { label: '闪避无敌时间延长', unit: '%' };
-    if (/LowGravity/i.test(key)) return { label: '重力影响减轻', unit: '%' };
+    if (/LowGravity/i.test(key)) return { label: '低重力', unit: '' };
     if (/EnemySightDetectionRate/i.test(key)) return { label: '被敌人发现概率降低', unit: '%' };
     if (/CaptureLevel/i.test(key)) return { label: '捕获力提升', unit: '%' };
     if (/SyncroPassiveWhenCapture/i.test(key)) return { label: '捕获时继承被动概率', unit: '%' };
@@ -274,9 +280,20 @@ function parseNumericRankTable(tableHtml, context) {
         const values = {};
         for (const valueMatch of rowHtml.matchAll(/<div\b[^>]*>([\s\S]*?)<\/div>/gi)) {
             const text = textFromHtml(valueMatch[1]);
-            const pair = text.match(/^([A-Za-z][A-Za-z0-9_.]*)\s+([+-]?\d+(?:\.\d+)?)(?:\s*,\s*[+-]?\d+(?:\.\d+)?)?\s*%?(?:\s*\([^)]*\))?$/);
+            const pair = text.match(/^([A-Za-z][A-Za-z0-9_.]*)\s+([+-]?\d+(?:\.\d+)?)(?:\s*,\s*([+-]?\d+(?:\.\d+)?))?\s*%?(?:\s*\([^)]*\))?$/);
             const localized = text.match(/^(攻击|防御|工作速度)\s*\+?(-?\d+(?:\.\d+)?)\s*%?(?:\s*\([^)]*\))?$/);
             if (!pair && !localized) continue;
+            if (pair && pair[1] === 'GrassRabbitMan_PartnerSkill' && pair[3] != null) {
+                const splitValues = [
+                    ['GrassRabbitMan_PartnerSkill_JumpCount', pair[2]],
+                    ['GrassRabbitMan_PartnerSkill_AirDash', pair[3]]
+                ];
+                splitValues.forEach(function(entry) {
+                    if (!keys.includes(entry[0])) keys.push(entry[0]);
+                    values[entry[0]] = Number(entry[1]);
+                });
+                continue;
+            }
             const key = pair ? pair[1] : ({ '攻击': 'localized_attack', '防御': 'localized_defense', '工作速度': 'localized_work_speed' }[localized[1]]);
             if (!keys.includes(key)) keys.push(key);
             values[key] = Number(pair ? pair[2] : localized[2]);
@@ -284,6 +301,9 @@ function parseNumericRankTable(tableHtml, context) {
         rawRows.push({ rawRank: Number(rankMatch[1]), values: values });
     });
     if (!rawRows.length || !keys.length) return null;
+    if (keys.length === 1 && keys[0] === 'LowGravity_PartnerSkill' && rawRows.every(function(row) {
+        return row.values.LowGravity_PartnerSkill === 1;
+    })) return null;
     const isStarTable = rawRows.length === 5 && rawRows.every(function(row) {
         return row.rawRank >= 1 && row.rawRank <= 5;
     });
@@ -476,8 +496,34 @@ function cloneJson(value) {
     return JSON.parse(JSON.stringify(value));
 }
 
+function stableJsonValue(value) {
+    if (Array.isArray(value)) return value.map(stableJsonValue);
+    if (!value || typeof value !== 'object') return value;
+    return Object.keys(value).sort().reduce(function(result, key) {
+        result[key] = stableJsonValue(value[key]);
+        return result;
+    }, {});
+}
+
+function assertFreshOutput(generated, persisted) {
+    const generatedJson = JSON.stringify(stableJsonValue(generated));
+    const persistedJson = JSON.stringify(stableJsonValue(persisted));
+    if (generatedJson !== persistedJson) {
+        throw new Error('正式伙伴技能数据已陈旧，请运行更新伙伴技能数据.js 重新生成');
+    }
+}
+
 function normalizeName(value) {
     return String(value || '').trim();
+}
+
+function palDisplayId(pal) {
+    if (!pal || !pal.图鉴编号 || Number(pal.图鉴编号) <= 0) return '';
+    return String(pal.图鉴编号) + String(pal.图鉴后缀 || '');
+}
+
+function palDisplayNumber(pal) {
+    return Number(pal && pal.图鉴编号) || 0;
 }
 
 function catalogCategory(pal) {
@@ -588,7 +634,10 @@ function buildPartnerSkillData(options) {
         const fact = partnerSkills[pal.id];
         const isOrdinary = ORDINARY_CATEGORIES.has(pal.分类);
         const hasOwnPartnerSkill = !!rawInternal[pal.id] || !!specialRecords[pal.id] || !!normalizeName(pal.伙伴技能);
-        const include = isOrdinary || fact.differsFromBase || (!fact.basePalId && hasOwnPartnerSkill);
+        const include = isOrdinary || (
+            fact.hasPartnerSkill !== false &&
+            (fact.differsFromBase || (!fact.basePalId && hasOwnPartnerSkill))
+        );
         if (!include) return;
 
         if (/_2$/.test(pal.id)) {
@@ -603,18 +652,23 @@ function buildPartnerSkillData(options) {
             basePalId: fact.basePalId,
             reason: isOrdinary ? '普通帕鲁' : (fact.differsFromBase ? '与原型不同' : '无普通原型'),
             sortIndex: sourceIndex,
-            terraria: pal.分类 === '泰拉瑞亚'
+            displayId: palDisplayId(pal),
+            displayNumber: palDisplayNumber(pal)
         });
     });
     catalog.sort(function(a, b) {
         const categoryDiff = CATEGORY_ORDER[a.category] - CATEGORY_ORDER[b.category];
         if (categoryDiff) return categoryDiff;
-        if (a.category === '普通帕鲁' && a.terraria !== b.terraria) return a.terraria ? 1 : -1;
+        const aNumber = a.displayNumber > 0 ? a.displayNumber : Number.MAX_SAFE_INTEGER;
+        const bNumber = b.displayNumber > 0 ? b.displayNumber : Number.MAX_SAFE_INTEGER;
+        if (aNumber !== bNumber) return aNumber - bNumber;
+        const suffix = String(a.displayId || '').replace(/^\d+/, '').localeCompare(String(b.displayId || '').replace(/^\d+/, ''));
+        if (suffix !== 0) return suffix;
         return a.sortIndex - b.sortIndex;
     });
     catalog.forEach(function(item) {
         delete item.sortIndex;
-        delete item.terraria;
+        delete item.displayNumber;
     });
 
     const decoratedCatalog = options.classification
@@ -658,5 +712,6 @@ module.exports = {
     parseDetailPartnerSkill,
     extractTribeLinks,
     technicalSignature,
-    buildPartnerSkillData
+    buildPartnerSkillData,
+    assertFreshOutput
 };

@@ -14,6 +14,15 @@
         "sourceUrl": "https://paldb.cc/cn/Gorirat_Terra",
         "evidence": "PalDB 中文正文仅列攀爬速度；同页伙伴技能等级表明确列出 ToSelf 攻击 +75%、+115%、+165%、+225%、+300%。"
       }
+    },
+    "Deer_Ground": {
+      "description": "可骑在它的背上移动。\n骑乘期间可以进行2段跳跃。\n若它在据点里，其他据点帕鲁的伐木工作适应性等级+1。（不可叠加）\n科技21",
+      "correction": {
+        "id": "deer-ground-description-blocks",
+        "status": "verified-from-parallel-description-structure",
+        "sourceUrl": "https://paldb.cc/cn/Eikthyrdeer_Terra",
+        "evidence": "保留祇岳鹿的全部原有文字和数值；按本站伙伴技能展示规则，将基础骑乘、骑乘期间二段跳和据点伐木适应性拆为三个独立描述块，避免把不同条件的效果连在同一段。"
+      }
     }
   }
 }

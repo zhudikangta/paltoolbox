@@ -6,7 +6,8 @@
     "classificationVersion": "2.0.0",
     "transformVersion": "1.4.0",
     "classificationMethod": "manual-entry-by-entry-review",
-    "reviewedCatalogCount": 335
+    "reviewedCatalogCount": 301,
+    "reviewedAssignmentCount": 335
   },
   "groups": [
     {

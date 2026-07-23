@@ -100,6 +100,11 @@ assert.throws(
     '目录中的每个帕鲁都必须有分类或明确状态'
 );
 
+assert.doesNotThrow(
+    function() { validateClassification(classification, ['Base']); },
+    '已经核实为无伙伴技能的历史审核记录可以保留在分类资料中，但不进入伙伴技能目录'
+);
+
 const duplicate = makeClassification();
 duplicate.detailTags.push({ id: 'jump.double', label: '重复', subcategoryId: 'move.riding_jump', kind: 'precise', facetId: 'move.jump_type' });
 assert.throws(

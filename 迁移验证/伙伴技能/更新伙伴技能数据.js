@@ -5,7 +5,8 @@ const {
     parseDetailPartnerSkill,
     extractTribeLinks,
     technicalSignature,
-    buildPartnerSkillData
+    buildPartnerSkillData,
+    assertFreshOutput
 } = require('./伙伴技能数据核心');
 const { applyEffectBlocks } = require('./伙伴技能效果块核心.js');
 
@@ -403,7 +404,8 @@ async function main() {
     if (args.has('--fetch')) await fetchSources();
     const output = generateData();
     const summary = validateData(output);
-    if (!args.has('--check')) writeJson(OUTPUT_FILE, output);
+    if (args.has('--check')) assertFreshOutput(output, readJson(OUTPUT_FILE));
+    else writeJson(OUTPUT_FILE, output);
     process.stdout.write('伙伴技能数据校验通过：帕鲁 ' + summary.pals + '，普通 ' + summary.ordinary + '，目录 ' + summary.catalog + '，冲突 ' + summary.conflicts + '。\n');
 }
 

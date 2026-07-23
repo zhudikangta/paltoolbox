@@ -82,7 +82,13 @@ function validateClassification(data, catalogIds) {
     });
     Object.keys(assignments).forEach(function(palId) {
         const assignment = assignments[palId] || {};
-        if (requestedIds.length && !catalogIdSet.has(palId)) errors.push('分类包含目录外帕鲁: ' + palId);
+        if (
+            requestedIds.length &&
+            !catalogIdSet.has(palId) &&
+            assignment.reviewStatus !== 'no-partner-skill'
+        ) {
+            errors.push('分类包含目录外帕鲁: ' + palId);
+        }
         if (!allowedStatuses.has(assignment.reviewStatus)) {
             errors.push(palId + ' 的审核状态无效: ' + (assignment.reviewStatus || '空'));
         }

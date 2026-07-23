@@ -20,7 +20,17 @@ const summary = validateClassification(classification, catalogIds);
 
 assert.strictEqual(summary.groups, 9, '伙伴技能必须有九个用途大类');
 assert.strictEqual(summary.subcategories, 65, '伙伴技能必须有六十五个下级分类');
-assert.strictEqual(summary.assignments, catalogIds.length, '正式分类必须覆盖整个伙伴技能目录');
+assert.ok(summary.assignments >= catalogIds.length, '正式分类必须覆盖整个伙伴技能目录');
+const catalogIdSet = new Set(catalogIds);
+const retainedNoSkillAssignments = Object.keys(classification.assignments).filter(function(palId) {
+    return !catalogIdSet.has(palId);
+});
+assert.ok(
+    retainedNoSkillAssignments.every(function(palId) {
+        return classification.assignments[palId].reviewStatus === 'no-partner-skill';
+    }),
+    '目录外只能保留已经核实为无伙伴技能的历史审核记录'
+);
 assert.strictEqual(classification.meta.classificationMethod, 'manual-entry-by-entry-review', '正式分类必须明确记录为逐条人工复核');
 assert.strictEqual(classification.meta.reviewedCatalogCount, catalogIds.length, '逐条人工复核数量必须覆盖完整目录');
 assert.ok(!fs.existsSync(path.join(__dirname, '\u751f\u6210\u4f19\u4f34\u6280\u80fd\u5206\u7c7b.js')), '不得保留根据描述自动推断分类的生成器');

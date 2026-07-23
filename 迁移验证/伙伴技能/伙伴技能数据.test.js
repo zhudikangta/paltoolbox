@@ -5,7 +5,8 @@ const {
     parsePartnerSkillList,
     parseDetailPartnerSkill,
     extractTribeLinks,
-    buildPartnerSkillData
+    buildPartnerSkillData,
+    assertFreshOutput
 } = require('./伙伴技能数据核心');
 
 const fixture = function(name) {
@@ -14,6 +15,19 @@ const fixture = function(name) {
 const formalFile = path.join(
     __dirname, '..', '..', 'PalToolbox', '游戏内容', '幻兽帕鲁1.0', '数据包', '伙伴技能.json'
 );
+
+assert.doesNotThrow(function() {
+    assertFreshOutput(
+        { meta: { transformVersion: '1.6.0', records: 301 }, catalog: [{ palId: 'SheepBall' }] },
+        { catalog: [{ palId: 'SheepBall' }], meta: { records: 301, transformVersion: '1.6.0' } }
+    );
+}, '稳定比较不应受对象字段顺序影响');
+assert.throws(function() {
+    assertFreshOutput(
+        { meta: { transformVersion: '1.6.0', records: 301 }, catalog: [{ palId: 'SheepBall' }] },
+        { meta: { transformVersion: '1.6.0', records: 300 }, catalog: [{ palId: 'SheepBall' }] }
+    );
+}, /正式伙伴技能数据已陈旧/, '完整重生成结果变化时 --check 必须报告正式文件陈旧');
 
 const normal = parsePartnerSkillList(fixture('普通列表片段.html'), 'https://paldb.cc/cn/Partner_Skill');
 assert.strictEqual(normal.length, 2, '应该按卡片提取普通帕鲁');
@@ -30,7 +44,7 @@ assert.deepStrictEqual(normal[0], {
 
 const inlineTechnology = parsePartnerSkillList(
     fixture('普通列表片段.html').replace(
-        '发动后，它会化身为装备在玩家身上的盾牌。<br>\n    将它分派到<a href="Ranch">家畜牧场</a>，它就有机会掉落<span>羊毛</span>。',
+        /发动后，它会化身为装备在玩家身上的盾牌。<br>\r?\n\s*将它分派到<a href="Ranch">家畜牧场<\/a>，它就有机会掉落<span>羊毛<\/span>。/,
         '可骑在它的背上移动。<br>\n    骑乘期间可以进行2段跳跃，破坏树木的效率也会提升<span>(220~500)%</span>。 科技12'
     ),
     'https://paldb.cc/cn/Partner_Skill'
