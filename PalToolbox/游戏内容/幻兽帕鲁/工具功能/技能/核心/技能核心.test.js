@@ -43,7 +43,7 @@ core.setPartnerSkillData({
     internalParameters: {
         SheepBall: { typeLabel: '主动技能', trigger: '玩家使用', coolDown: 30, values: [1, 2, 3] }
     },
-    catalog: [{ palId: 'SheepBall', category: '普通帕鲁', reason: '普通帕鲁' }]
+    catalog: [{ palId: 'SheepBall', category: '普通帕鲁', reason: '普通帕鲁', displayId: '1' }]
 });
 
 const active = core.search('active', '空气弹');
@@ -57,6 +57,7 @@ assert.strictEqual(partner[0].type, '主动技能', '伙伴技能应该保留类
 assert.strictEqual(partner[0].cooldown, 30, '伙伴技能应该保留冷却时间');
 assert.strictEqual(partner[0].palName, '棉悠悠', '目录条目应保留帕鲁名');
 assert.strictEqual(partner[0].category, '普通帕鲁', '目录条目应保留六大分类字段');
+assert.strictEqual(partner[0].displayId, '1', '核心层应保留帕鲁图鉴的显示编号');
 assert.deepStrictEqual(core.getPartnerSkills().map(function(item) { return item.id; }), ['SheepBall'], '伙伴技能工具只能读取 catalog，不能遍历图鉴全量事实');
 
 core.setPartnerSkillData({
@@ -86,10 +87,11 @@ core.setPartnerSkillData({
             { id: 'move.other', groupId: 'move', label: '其他移动', order: 3 }
         ],
         detailTags: [
-            { id: 'mount.ground', label: '地面骑乘', subcategoryId: 'move.mount', facetId: 'move.mode' },
-            { id: 'mount.flying', label: '飞行骑乘', subcategoryId: 'move.mount', facetId: 'move.mode' },
-            { id: 'jump.double', label: '骑乘二段跳', subcategoryId: 'move.riding_jump', facetId: 'move.jump_type' },
-            { id: 'jump.triple', label: '骑乘三段跳', subcategoryId: 'move.riding_jump', facetId: 'move.jump_type' }
+            { id: 'mount.ground', label: '地面骑乘', subcategoryId: 'move.mount', facetId: 'move.mode', kind: 'precise' },
+            { id: 'mount.flying', label: '飞行骑乘', subcategoryId: 'move.mount', facetId: 'move.mode', kind: 'precise' },
+            { id: 'jump.double', label: '骑乘二段跳', subcategoryId: 'move.riding_jump', facetId: 'move.jump_type', kind: 'precise' },
+            { id: 'jump.triple', label: '骑乘三段跳', subcategoryId: 'move.riding_jump', facetId: 'move.jump_type', kind: 'precise' },
+            { id: 'mount.semantic', label: '骑乘概念', subcategoryId: 'move.mount', kind: 'semantic', filterable: false }
         ]
     },
     partnerSkills: {
@@ -98,7 +100,24 @@ core.setPartnerSkillData({
         GroundTriple: { id: 'GroundTriple', palName: '地面三段', skillName: '三段跳', description: '骑乘三段跳' },
         FlyingDouble: { id: 'FlyingDouble', palName: '飞行二段', skillName: '飞行二段跳', description: '飞行骑乘二段跳' },
         PlayerMobility: { id: 'PlayerMobility', palName: '玩家机动', skillName: '额外跳跃', description: '赋予玩家额外跳跃' },
-        GroundCombat: { id: 'GroundCombat', palName: '地面战斗', skillName: '骑乘攻击', description: '地面骑乘并指令攻击' },
+        GroundCombat: {
+            id: 'GroundCombat',
+            palName: '地面战斗',
+            skillName: '骑乘攻击',
+            description: '地面骑乘并指令攻击',
+            effectBlocks: [
+                {
+                    text: '可骑乘移动。',
+                    subcategoryIds: ['move.mount'],
+                    tagIds: ['mount.ground', 'mount.semantic']
+                },
+                {
+                    text: '可指令发动攻击。',
+                    subcategoryIds: ['combat.active_attack'],
+                    tagIds: []
+                }
+            ]
+        },
         GroundFlyingJumper: { id: 'GroundFlyingJumper', palName: '全能坐骑', skillName: '全能骑乘', description: '同时具备地面、飞行、二段跳和三段跳' }
     },
     catalog: [
@@ -107,7 +126,7 @@ core.setPartnerSkillData({
         { palId: 'GroundTriple', category: '普通帕鲁', usageCategoryIds: ['move'], usageSubcategoryIds: ['move.mount', 'move.riding_jump'], usageTagIds: ['mount.ground', 'jump.triple'] },
         { palId: 'FlyingDouble', category: '普通帕鲁', usageCategoryIds: ['move'], usageSubcategoryIds: ['move.mount', 'move.riding_jump'], usageTagIds: ['mount.flying', 'jump.double'] },
         { palId: 'PlayerMobility', category: '普通帕鲁', usageCategoryIds: ['move'], usageSubcategoryIds: ['move.player_mobility'], usageTagIds: [] },
-        { palId: 'GroundCombat', category: '普通帕鲁', usageCategoryIds: ['move', 'combat'], usageSubcategoryIds: ['move.mount', 'combat.active_attack'], usageTagIds: ['mount.ground'] },
+        { palId: 'GroundCombat', category: '普通帕鲁', usageCategoryIds: ['move', 'combat'], usageSubcategoryIds: ['move.mount', 'combat.active_attack'], usageTagIds: ['mount.ground', 'mount.semantic'] },
         { palId: 'GroundFlyingJumper', category: '普通帕鲁', usageCategoryIds: ['move'], usageSubcategoryIds: ['move.mount', 'move.riding_jump'], usageTagIds: ['mount.ground', 'mount.flying', 'jump.double', 'jump.triple'] }
     ]
 });
@@ -166,9 +185,95 @@ const narrowedCounts = JSON.parse(JSON.stringify(core.getPartnerFacetCounts({
 })));
 assert.strictEqual(narrowedCounts['move.mode']['mount.flying'], 1, '同一筛面追加飞行骑乘时，计数必须继续保留已选地面骑乘条件');
 assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerFacetGroupCounts({
+        sourceCategory: '普通帕鲁',
+        facetSelections: {}
+    }))),
+    { move: 6, combat: 1, base: 1 },
+    '用途大类总数必须按帕鲁去重，同一只帕鲁命中多个子选项时只能计算一次'
+);
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerFacetGroupCounts({
+        sourceCategory: '普通帕鲁',
+        facetSelections: { 'move.mode': ['mount.ground'] }
+    }))),
+    { move: 4, combat: 1, base: 0 },
+    '用途大类总数必须跟随当前已经选择的全部筛选条件'
+);
+assert.deepStrictEqual(
     JSON.parse(JSON.stringify(core.getPartnerSelectedFilters({ 'move.other': ['move.player_mobility'] }))),
     [{ facetId: 'move.other', facetLabel: '其他移动', optionId: 'move.player_mobility', label: '玩家机动' }],
     '顶部已选条件必须从完整筛面状态读取，不能随着筛选项搜索被隐藏'
+);
+assert.strictEqual(typeof core.getPartnerVisibleTagLabels, 'function', '核心必须统一提供卡片可见标签');
+const groundDouble = core.getPartnerSkills().find(function(item) { return item.id === 'GroundDouble'; });
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerVisibleTagLabels(groundDouble))),
+    ['地面骑乘', '骑乘二段跳'],
+    '卡片显示精确子标签时不能再显示“骑乘”和“骑乘跳跃”父级标签'
+);
+assert.strictEqual(typeof core.getPartnerSourceCategories, 'function', '核心必须提供有实际目录内容的来源分类');
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerSourceCategories(['普通帕鲁', '石板Boss', '塔主Boss', 'Boss', '狂暴化', '其他']))),
+    ['普通帕鲁'],
+    '来源筛选只能显示当前目录中实际存在的分类'
+);
+
+const effectItem = core.getPartnerSkills().find(function(item) {
+    return item.id === 'GroundCombat';
+});
+assert.ok(Array.isArray(effectItem.effectBlocks), '核心层必须保留正式数据中的效果块数组');
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(effectItem.effectBlocks)),
+    [
+        {
+            text: '可骑乘移动。',
+            subcategoryIds: ['move.mount'],
+            tagIds: ['mount.ground', 'mount.semantic']
+        },
+        {
+            text: '可指令发动攻击。',
+            subcategoryIds: ['combat.active_attack'],
+            tagIds: []
+        }
+    ],
+    '核心层必须完整保留正式数据中的效果块'
+);
+const blocks = core.getPartnerEffectBlockModels(effectItem, {
+    'move.mode': ['mount.ground'],
+    combat: ['combat.active_attack']
+});
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(blocks)),
+    [
+        {
+            text: '可骑乘移动。',
+            labels: [{ id: 'mount.ground', label: '地面骑乘', selected: true }],
+            highlighted: true
+        },
+        {
+            text: '可指令发动攻击。',
+            labels: [{ id: 'combat.active_attack', label: '指令发动攻击', selected: true }],
+            highlighted: true
+        }
+    ],
+    '效果块只能显示最具体的可筛选标签，并按当前筛选命中对应标签和描述'
+);
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerEffectBlockModels(effectItem, {
+        'move.mode': ['mount.ground']
+    }).map(function(block) {
+        return block.highlighted;
+    }))),
+    [true, false],
+    '只选择一个条件时只能高亮真正命中的效果块'
+);
+assert.strictEqual(
+    core.getPartnerEffectBlockModels(effectItem, {}).some(function(block) {
+        return block.highlighted;
+    }),
+    false,
+    '没有选择筛选条件时任何效果块都不应高亮'
 );
 
 assert.strictEqual(typeof core.calculatePartnerMasonryLayout, 'undefined', '恢复同行等高后核心不应残留最短列布局算法');

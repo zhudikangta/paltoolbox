@@ -4,6 +4,8 @@ var PT_SKILL_CORE = (function() {
     var partnerTaxonomy = { groups: [], facets: [], detailTags: [] };
     var partnerFacetGroups = [];
     var partnerFacetOptionById = {};
+    var partnerSubcategoryById = {};
+    var partnerDetailTagById = {};
 
     var ELEMENT_NAME = {
         Normal: '无属性',
@@ -66,11 +68,19 @@ var PT_SKILL_CORE = (function() {
         var catalog = raw && Array.isArray(raw.catalog) ? raw.catalog : Object.keys(source).map(function(id) { return { palId: id }; });
         partnerTaxonomy = raw && raw.taxonomy ? raw.taxonomy : { groups: [], facets: [], detailTags: [] };
         var taxonomyLabels = {};
+        partnerSubcategoryById = {};
+        partnerDetailTagById = {};
         (partnerTaxonomy.groups || []).forEach(function(group) {
             taxonomyLabels[group.id] = group.label || group.id;
-            (group.children || []).forEach(function(child) { taxonomyLabels[child.id] = child.label || child.id; });
+            (group.children || []).forEach(function(child) {
+                taxonomyLabels[child.id] = child.label || child.id;
+                partnerSubcategoryById[child.id] = child;
+            });
         });
-        (partnerTaxonomy.detailTags || []).forEach(function(tag) { taxonomyLabels[tag.id] = tag.label || tag.id; });
+        (partnerTaxonomy.detailTags || []).forEach(function(tag) {
+            taxonomyLabels[tag.id] = tag.label || tag.id;
+            partnerDetailTagById[tag.id] = tag;
+        });
         buildPartnerFacetGroups();
         partnerSkills = catalog.map(function(catalogItem) {
             var id = typeof catalogItem === 'string' ? catalogItem : catalogItem.palId;
@@ -82,6 +92,7 @@ var PT_SKILL_CORE = (function() {
                 palName: item.palName || item.nameCN || id,
                 category: catalogItem.category || item.category || '',
                 reason: catalogItem.reason || '',
+                displayId: catalogItem.displayId || '',
                 iconFile: catalogItem.iconFile || '',
                 usageCategoryIds: (catalogItem.usageCategoryIds || []).slice(),
                 usageSubcategoryIds: (catalogItem.usageSubcategoryIds || []).slice(),
@@ -94,6 +105,13 @@ var PT_SKILL_CORE = (function() {
                 trigger: parameters.trigger || '',
                 cooldown: parameters.coolDown,
                 description: item.description || '',
+                effectBlocks: (item.effectBlocks || []).map(function(block) {
+                    return {
+                        text: block.text || '',
+                        subcategoryIds: (block.subcategoryIds || []).slice(),
+                        tagIds: (block.tagIds || []).slice()
+                    };
+                }),
                 values: parameters.values || []
             };
         });
@@ -190,15 +208,100 @@ var PT_SKILL_CORE = (function() {
         return selected;
     }
 
-    function matchesPartnerFacetSelections(item, facetSelections) {
+    function getPartnerVisibleTagLabels(item) {
+        var labels = [];
+        (item && item.usageSubcategoryIds || []).forEach(function(subcategoryId) {
+            var subcategory = partnerSubcategoryById[subcategoryId];
+            if (!subcategory || subcategory.filterable === false) return;
+            labels.push(subcategory.label || subcategory.id);
+        });
+        (item && item.usageTagIds || []).forEach(function(tagId) {
+            var tag = partnerDetailTagById[tagId];
+            if (!tag || tag.kind !== 'precise') return;
+            labels.push(tag.label || tag.id);
+        });
+        return labels.filter(function(label, index, all) {
+            return all.indexOf(label) === index;
+        });
+    }
+
+    function getPartnerSourceCategories(preferredOrder) {
+        var seen = {};
+        partnerSkills.forEach(function(item) {
+            if (item.category) seen[item.category] = true;
+        });
+        var order = Array.isArray(preferredOrder) ? preferredOrder : [];
+        return Object.keys(seen).sort(function(a, b) {
+            var aIndex = order.indexOf(a);
+            var bIndex = order.indexOf(b);
+            aIndex = aIndex < 0 ? Number.MAX_SAFE_INTEGER : aIndex;
+            bIndex = bIndex < 0 ? Number.MAX_SAFE_INTEGER : bIndex;
+            return aIndex - bIndex || String(a).localeCompare(String(b));
+        });
+    }
+
+    function selectedPartnerOptionIds(facetSelections) {
+        return Object.keys(facetSelections || {}).reduce(function(ids, facetId) {
+            return ids.concat(Array.isArray(facetSelections[facetId]) ? facetSelections[facetId] : []);
+        }, []);
+    }
+
+    function getPartnerEffectBlockModels(item, facetSelections) {
+        var selectedIds = selectedPartnerOptionIds(facetSelections);
+        return (item && item.effectBlocks || []).map(function(block) {
+            var capabilityIds = (block.subcategoryIds || []).concat(block.tagIds || []);
+            var labels = [];
+
+            (block.subcategoryIds || []).forEach(function(id) {
+                var definition = partnerSubcategoryById[id];
+                if (!definition || definition.filterable === false) return;
+                labels.push({
+                    id: id,
+                    label: definition.label || id,
+                    selected: selectedIds.indexOf(id) > -1
+                });
+            });
+            (block.tagIds || []).forEach(function(id) {
+                var definition = partnerDetailTagById[id];
+                if (!definition || definition.kind !== 'precise') return;
+                labels.push({
+                    id: id,
+                    label: definition.label || id,
+                    selected: selectedIds.indexOf(id) > -1
+                });
+            });
+
+            var highlighted = selectedIds.some(function(optionId) {
+                var option = partnerFacetOptionById[optionId];
+                var requiredIds = option ? option.capabilityIds : [optionId];
+                return requiredIds.some(function(id) {
+                    return capabilityIds.indexOf(id) > -1;
+                });
+            });
+
+            return {
+                text: block.text || '',
+                labels: labels,
+                highlighted: highlighted
+            };
+        });
+    }
+
+    function matchesPartnerFacetOption(item, option) {
         var capabilityIds = item.usageSubcategoryIds.concat(item.usageTagIds);
+        var requiredIds = option ? option.capabilityIds : [];
+        return requiredIds.some(function(id) { return capabilityIds.indexOf(id) > -1; });
+    }
+
+    function matchesPartnerFacetSelections(item, facetSelections) {
         return Object.keys(facetSelections || {}).every(function(facetId) {
             var selectedOptionIds = Array.isArray(facetSelections[facetId]) ? facetSelections[facetId] : [];
             if (!selectedOptionIds.length) return true;
             return selectedOptionIds.every(function(optionId) {
                 var option = partnerFacetOptionById[optionId];
-                var requiredIds = option ? option.capabilityIds : [optionId];
-                return requiredIds.some(function(id) { return capabilityIds.indexOf(id) > -1; });
+                return option
+                    ? matchesPartnerFacetOption(item, option)
+                    : item.usageSubcategoryIds.concat(item.usageTagIds).indexOf(optionId) > -1;
             });
         });
     }
@@ -245,6 +348,21 @@ var PT_SKILL_CORE = (function() {
         return counts;
     }
 
+    function getPartnerFacetGroupCounts(filters) {
+        var filtered = filterPartnerSkills(filters || {});
+        var counts = {};
+        partnerFacetGroups.forEach(function(group) {
+            counts[group.id] = filtered.filter(function(item) {
+                return group.facets.some(function(facet) {
+                    return facet.options.some(function(option) {
+                        return matchesPartnerFacetOption(item, option);
+                    });
+                });
+            }).length;
+        });
+        return counts;
+    }
+
     function search(kind, query) {
         var list = kind === 'partner' ? partnerSkills : activeSkills;
         var q = String(query || '').toLowerCase();
@@ -267,7 +385,11 @@ var PT_SKILL_CORE = (function() {
         getPartnerTaxonomy: getPartnerTaxonomy,
         getPartnerFacetGroups: getPartnerFacetGroups,
         getPartnerSelectedFilters: getPartnerSelectedFilters,
+        getPartnerVisibleTagLabels: getPartnerVisibleTagLabels,
+        getPartnerEffectBlockModels: getPartnerEffectBlockModels,
+        getPartnerSourceCategories: getPartnerSourceCategories,
         getPartnerFacetCounts: getPartnerFacetCounts,
+        getPartnerFacetGroupCounts: getPartnerFacetGroupCounts,
         filterPartnerSkills: filterPartnerSkills,
         search: search
     };
