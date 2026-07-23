@@ -165,15 +165,9 @@
     ],
     "PlantSlime": [
       {
-        "text": "若它在队伍中，玩家伐木时造成的伤害将提升(30~50)%。（不可叠加）",
+        "text": "若它在队伍中，玩家伐木时造成的伤害将提升(30~50)%，所有木材种类的重量都将减轻(40~60)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.gather"
-        ],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，所有木材种类的重量都将减轻(40~60)%。（不可叠加）",
-        "subcategoryIds": [
+          "resource.gather",
           "resource.weight"
         ],
         "tagIds": []
@@ -484,15 +478,9 @@
     ],
     "CuteMole": [
       {
-        "text": "若它在队伍中，玩家采矿时造成的伤害将提升(30~60)%。（不可叠加）",
+        "text": "若它在队伍中，玩家采矿时造成的伤害将提升(30~60)%，石头的重量将减轻(80~100)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.gather"
-        ],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，石头的重量将减轻(80~100)%。（不可叠加）",
-        "subcategoryIds": [
+          "resource.gather",
           "resource.weight"
         ],
         "tagIds": []
@@ -509,20 +497,14 @@
         ]
       },
       {
-        "text": "骑乘期间可以进行2段跳跃。",
+        "text": "骑乘期间可以进行2段跳跃，破坏树木的效率也会提升(220~500)%。\n科技12",
         "subcategoryIds": [
-          "move.riding_jump"
+          "move.riding_jump",
+          "resource.gather"
         ],
         "tagIds": [
           "jump.double"
         ]
-      },
-      {
-        "text": "骑乘期间破坏树木的效率会提升(220~500)%。\n科技12",
-        "subcategoryIds": [
-          "resource.gather"
-        ],
-        "tagIds": []
       }
     ],
     "Deer_Ground": [
@@ -634,15 +616,9 @@
     ],
     "TentacleTurtle_Ground": [
       {
-        "text": "若它在队伍中，硫磺和石炭的重量将减轻(80~100)%。（不可叠加）",
+        "text": "若它在队伍中，硫磺和石炭的重量将减轻(80~100)%，且玩家和帕鲁以地属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.weight"
-        ],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，玩家和帕鲁以地属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）",
-        "subcategoryIds": [
+          "resource.weight",
           "player.weakspot",
           "pal.active_stats"
         ],
@@ -1272,20 +1248,14 @@
         ]
       },
       {
-        "text": "骑乘期间可以进行2段跳跃。",
+        "text": "骑乘期间可以进行2段跳跃，\n并向射击地点发射蜘蛛丝，牵引身体快速移动。\n科技20",
         "subcategoryIds": [
-          "move.riding_jump"
+          "move.riding_jump",
+          "move.special"
         ],
         "tagIds": [
           "jump.double"
         ]
-      },
-      {
-        "text": "骑乘期间可以向射击地点发射蜘蛛丝，牵引身体快速移动。\n科技20",
-        "subcategoryIds": [
-          "move.special"
-        ],
-        "tagIds": []
       }
     ],
     "IceSeal": [
@@ -1527,15 +1497,9 @@
     ],
     "Mutant": [
       {
-        "text": "若它在队伍中，投掷出去的帕鲁球将会自动追踪帕鲁。（不可叠加）",
+        "text": "若它在队伍中，投掷出去的帕鲁球将会自动追踪帕鲁，且玩家的负重上限提高(300~600)。（不可叠加）",
         "subcategoryIds": [
-          "capture.sphere"
-        ],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，玩家的负重上限提高(300~600)。（不可叠加）",
-        "subcategoryIds": [
+          "capture.sphere",
           "resource.capacity"
         ],
         "tagIds": []
@@ -1651,12 +1615,7 @@
     ],
     "IceCrocodile": [
       {
-        "text": "若它在队伍中，食材和料理的重量会减轻(30~60)%。（不可叠加）",
-        "subcategoryIds": [],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，在冰属性帕鲁原有的防腐效果基础上，让腐败速度进一步(-30~-80)%。（不可叠加）",
+        "text": "若它在队伍中，食材和料理的重量会减轻(30~60)%。并在冰属性帕鲁原有的防腐效果基础上，让腐败速度进一步(-30~-80)%。（不可叠加）",
         "subcategoryIds": [
           "resource.preserve"
         ],
@@ -1710,15 +1669,9 @@
     ],
     "StuffedShark_Fire": [
       {
-        "text": "若它在队伍中，粉粉布偶鲨会帮忙分担负重，背包内武器的重量减轻(60~100)%。（不可叠加）",
+        "text": "若它在队伍中，粉粉布偶鲨会帮忙分担负重，背包内武器的重量减轻(60~100)%，且玩家和帕鲁以火属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.weight"
-        ],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，玩家和帕鲁以火属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）",
-        "subcategoryIds": [
+          "resource.weight",
           "player.weakspot",
           "pal.active_stats"
         ],
@@ -2032,15 +1985,9 @@
     ],
     "DarkScorpion": [
       {
-        "text": "若它在队伍中，玩家的防御力将提升(5~10)%。（不可叠加）",
+        "text": "若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
         "subcategoryIds": [
-          "survival.defense"
-        ],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
-        "subcategoryIds": [
+          "survival.defense",
           "resource.drops"
         ],
         "tagIds": []
@@ -2048,15 +1995,9 @@
     ],
     "DarkScorpion_Ground": [
       {
-        "text": "若它在队伍中，玩家的防御力将提升(5~10)%。（不可叠加）",
+        "text": "若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
         "subcategoryIds": [
-          "survival.defense"
-        ],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
-        "subcategoryIds": [
+          "survival.defense",
           "resource.drops"
         ],
         "tagIds": []
@@ -2583,15 +2524,9 @@
         ]
       },
       {
-        "text": "若它在队伍中，能让熔岩伤害无效化。（不可叠加）",
+        "text": "若它在队伍中，能让熔岩伤害无效化，且玩家和帕鲁对点燃状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技59",
         "subcategoryIds": [
-          "survival.damage_reduction"
-        ],
-        "tagIds": []
-      },
-      {
-        "text": "若它在队伍中，玩家和帕鲁对点燃状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技59",
-        "subcategoryIds": [
+          "survival.damage_reduction",
           "player.conditional_damage",
           "pal.active_stats"
         ],

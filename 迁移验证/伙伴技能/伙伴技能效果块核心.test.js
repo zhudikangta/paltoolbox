@@ -214,6 +214,125 @@ const expectedDarkKendoFrogBlocks = [{
 }];
 assert.deepStrictEqual(fullResult.partnerSkills.KendoFrog.effectBlocks, expectedKendoFrogBlocks);
 assert.deepStrictEqual(fullResult.partnerSkills.KendoFrog_Dark.effectBlocks, expectedDarkKendoFrogBlocks);
+assert.deepStrictEqual(fullResult.partnerSkills.Deer.effectBlocks, [{
+    text: '可骑在它的背上移动。',
+    subcategoryIds: ['move.mount'],
+    tagIds: ['mount.ground']
+}, {
+    text: '骑乘期间可以进行2段跳跃，破坏树木的效率也会提升(220~500)%。\n科技12',
+    subcategoryIds: ['move.riding_jump', 'resource.gather'],
+    tagIds: ['jump.double']
+}], 'Deer 的同一骑乘前提连续效果必须保留在同一个块内');
+
+const continuousEffectExpectations = [{
+    palId: 'PlantSlime',
+    blockCount: 1,
+    blockIndex: 0,
+    block: {
+        text: '若它在队伍中，玩家伐木时造成的伤害将提升(30~50)%，所有木材种类的重量都将减轻(40~60)%。（不可叠加）',
+        subcategoryIds: ['resource.gather', 'resource.weight'],
+        tagIds: []
+    }
+}, {
+    palId: 'CuteMole',
+    blockCount: 1,
+    blockIndex: 0,
+    block: {
+        text: '若它在队伍中，玩家采矿时造成的伤害将提升(30~60)%，石头的重量将减轻(80~100)%。（不可叠加）',
+        subcategoryIds: ['resource.gather', 'resource.weight'],
+        tagIds: []
+    }
+}, {
+    palId: 'TentacleTurtle_Ground',
+    blockCount: 1,
+    blockIndex: 0,
+    block: {
+        text: '若它在队伍中，硫磺和石炭的重量将减轻(80~100)%，且玩家和帕鲁以地属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）',
+        subcategoryIds: ['resource.weight', 'player.weakspot', 'pal.active_stats'],
+        tagIds: []
+    }
+}, {
+    palId: 'PurpleSpider',
+    blockCount: 2,
+    blockIndex: 1,
+    block: {
+        text: '骑乘期间可以进行2段跳跃，\n并向射击地点发射蜘蛛丝，牵引身体快速移动。\n科技20',
+        subcategoryIds: ['move.riding_jump', 'move.special'],
+        tagIds: ['jump.double']
+    }
+}, {
+    palId: 'Mutant',
+    blockCount: 1,
+    blockIndex: 0,
+    block: {
+        text: '若它在队伍中，投掷出去的帕鲁球将会自动追踪帕鲁，且玩家的负重上限提高(300~600)。（不可叠加）',
+        subcategoryIds: ['capture.sphere', 'resource.capacity'],
+        tagIds: []
+    }
+}, {
+    palId: 'IceCrocodile',
+    blockCount: 1,
+    blockIndex: 0,
+    block: {
+        text: '若它在队伍中，食材和料理的重量会减轻(30~60)%。并在冰属性帕鲁原有的防腐效果基础上，让腐败速度进一步(-30~-80)%。（不可叠加）',
+        subcategoryIds: ['resource.preserve'],
+        tagIds: []
+    }
+}, {
+    palId: 'StuffedShark_Fire',
+    blockCount: 1,
+    blockIndex: 0,
+    block: {
+        text: '若它在队伍中，粉粉布偶鲨会帮忙分担负重，背包内武器的重量减轻(60~100)%，且玩家和帕鲁以火属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）',
+        subcategoryIds: ['resource.weight', 'player.weakspot', 'pal.active_stats'],
+        tagIds: []
+    }
+}, {
+    palId: 'DarkScorpion',
+    blockCount: 1,
+    blockIndex: 0,
+    block: {
+        text: '若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）',
+        subcategoryIds: ['survival.defense', 'resource.drops'],
+        tagIds: []
+    }
+}, {
+    palId: 'DarkScorpion_Ground',
+    blockCount: 1,
+    blockIndex: 0,
+    block: {
+        text: '若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）',
+        subcategoryIds: ['survival.defense', 'resource.drops'],
+        tagIds: []
+    }
+}, {
+    palId: 'Umihebi_Fire',
+    blockCount: 2,
+    blockIndex: 1,
+    block: {
+        text: '若它在队伍中，能让熔岩伤害无效化，且玩家和帕鲁对点燃状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技59',
+        subcategoryIds: ['survival.damage_reduction', 'player.conditional_damage', 'pal.active_stats'],
+        tagIds: []
+    }
+}];
+continuousEffectExpectations.forEach(function(expectation) {
+    const blocks = fullResult.partnerSkills[expectation.palId].effectBlocks;
+    assert.strictEqual(
+        blocks.length,
+        expectation.blockCount,
+        expectation.palId + ' 的同一前提连续效果块数量不正确'
+    );
+    assert.deepStrictEqual(
+        blocks[expectation.blockIndex],
+        expectation.block,
+        expectation.palId + ' 的同一前提连续效果必须保留在同一个块内'
+    );
+});
+assert.strictEqual(
+    fullResult.partnerSkills.CatMage.effectBlocks.length,
+    2,
+    'CatMage 的掉落与省球具有独立触发条件，不能机械合并'
+);
 
 formal.catalog.forEach(function(item) {
     const blocks = fullDefinitions.partnerSkills[item.palId];
