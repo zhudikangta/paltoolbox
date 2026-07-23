@@ -99,6 +99,19 @@ assert.throws(
     /目录中的 palId 在伙伴技能事实中不存在: MissingPal/
 );
 
+const invalidFactAndUnknownSubcategory = createFixture();
+invalidFactAndUnknownSubcategory.partnerSkills.KendoFrog = null;
+invalidFactAndUnknownSubcategory.definitions.partnerSkills.KendoFrog[0].subcategoryIds = ['unknown.subcategory'];
+invalidFactAndUnknownSubcategory.catalog[0].usageSubcategoryIds = ['unknown.subcategory', 'player.attack'];
+assert.throws(function() {
+    applyEffectBlocks(invalidFactAndUnknownSubcategory);
+}, function(error) {
+    assert.notStrictEqual(error.name, 'TypeError');
+    assert.match(error.message, /伙伴技能事实无效: KendoFrog/);
+    assert.match(error.message, /引用未知下级分类: unknown\.subcategory/);
+    return true;
+});
+
 function assertValidationError(change, pattern) {
     const invalid = createFixture();
     change(invalid);

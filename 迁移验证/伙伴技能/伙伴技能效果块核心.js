@@ -75,6 +75,10 @@ function applyEffectBlocks(options) {
             errors.push('目录中的 palId 在伙伴技能事实中不存在: ' + palId);
             return;
         }
+        const factIsValid = isPlainObject(partnerSkills[palId]);
+        if (!factIsValid) {
+            errors.push('伙伴技能事实无效: ' + palId);
+        }
         if (!Object.prototype.hasOwnProperty.call(definitions, palId)) {
             errors.push('效果块未覆盖目录: ' + palId);
             return;
@@ -127,10 +131,12 @@ function applyEffectBlocks(options) {
             errors.push(palId + ' 的效果块精确标签与目录不一致');
         }
 
-        partnerSkills[palId].effectBlocks = deepClone(blocks);
-        partnerSkills[palId].description = blocks.map(function(block) {
-            return block && typeof block.text === 'string' ? block.text.trim() : '';
-        }).join('\n');
+        if (factIsValid) {
+            partnerSkills[palId].effectBlocks = deepClone(blocks);
+            partnerSkills[palId].description = blocks.map(function(block) {
+                return block && typeof block.text === 'string' ? block.text.trim() : '';
+            }).join('\n');
+        }
     });
 
     if (errors.length) throw new Error(errors.join('\n'));
