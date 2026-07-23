@@ -46,6 +46,8 @@ assert.ok(!source.includes('clipped ? 0 : 7'), '孔洞圆角不能在视口边�
 assert.ok(source.includes('getPartnerEffectBlockModels'), '卡片必须读取效果块显示模型');
 assert.ok(source.includes('renderPartnerEffectBlocks'), '卡片必须按效果块渲染标签和完整描述');
 assert.ok(source.includes('sk-partner-effect-block'), '卡片必须为每个独立效果渲染效果块');
+assert.ok(source.includes("return '<div class=\"sk-partner-effect-block'"), '无标题效果块必须使用语义中性的 div');
+assert.ok(!source.includes("return '<section class=\"sk-partner-effect-block'"), '效果块不是命名章节，不能使用无标题 section');
 assert.ok(source.includes('sk-partner-effect-block--highlighted'), '筛选命中必须落在对应效果块');
 assert.ok(source.includes('sk-tag--partner-selected'), '命中的具体标签必须高亮');
 assert.ok(!source.includes('renderPartnerDescription(desc)'), '卡片不能继续按描述换行机械分段');

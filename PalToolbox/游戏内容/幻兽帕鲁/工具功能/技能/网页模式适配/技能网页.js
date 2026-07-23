@@ -298,9 +298,9 @@ var PT_SKILL_WEB = (function() {
                         '">' + label.label + '</span>';
                 }).join('') + '</div>'
                 : '';
-            return '<section class="sk-partner-effect-block' +
+            return '<div class="sk-partner-effect-block' +
                 (block.highlighted ? ' sk-partner-effect-block--highlighted' : '') +
-                '">' + tags + '<p class="sk-desc sk-partner-desc">' + block.text + '</p></section>';
+                '">' + tags + '<p class="sk-desc sk-partner-desc">' + block.text + '</p></div>';
         }).join('');
     }
 
