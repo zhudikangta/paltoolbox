@@ -1,0 +1,4358 @@
+{
+  "meta": {
+    "dataRole": "standard-effect-blocks",
+    "verifiedAt": "2026-07-23",
+    "gameVersion": "v1.0.0",
+    "transformVersion": "1.6.0",
+    "description": "伙伴技能描述分块与分类标签对应关系；逐条人工复核，不供页面直接读取。"
+  },
+  "partnerSkills": {
+    "SheepBall": [
+      {
+        "text": "发动后，它会化身为装备在玩家身上的盾牌。",
+        "subcategoryIds": [
+          "survival.shield"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落羊毛。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "PinkCat": [
+      {
+        "text": "若它在队伍中，捣蛋猫就会帮忙载运行李，玩家的负重上限将提高(100~200)。（不可叠加）",
+        "subcategoryIds": [
+          "resource.capacity"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ChickenPal": [
+      {
+        "text": "将它分派到家畜牧场，它就有机会产下蛋。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Carbunclo": [
+      {
+        "text": "发动后它会坐在玩家的头上，配合玩家的攻击用冲锋枪进行追击。\n科技11",
+        "subcategoryIds": [
+          "combat.active_attack",
+          "combat.follow_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BluePlatypus": [
+      {
+        "text": "发动后，冲浪鸭会乘着浪头冲向敌人。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BluePlatypus_Fire": [
+      {
+        "text": "发动后，热浪鸭会乘着焰浪冲向敌人。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CuteFox": [
+      {
+        "text": "将它分派到家畜牧场，它就有机会从地里挖出道具。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlyingManta": [
+      {
+        "text": "若它在队伍中，会改变滑翔伞的性能，并使玩家免受坠落伤害。\n滑翔期间能够长时间快速移动。",
+        "subcategoryIds": [
+          "move.glider"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlyingManta_Thunder": [
+      {
+        "text": "若它在队伍中，会改变滑翔伞的性能，并使玩家免受坠落伤害。\n滑翔期间能够长时间快速移动。",
+        "subcategoryIds": [
+          "move.glider"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WoolFox": [
+      {
+        "text": "若它在队伍中，无属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落羊毛。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KendoFrog": [
+      {
+        "text": "发动后，武道蛙会靠忠诚心和膨胀的腹部积蓄力量。玩家在踩上去后能高高跳起。",
+        "subcategoryIds": [
+          "move.special"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "在落地前，玩家的攻击力提升(50~86)%。",
+        "subcategoryIds": [
+          "player.attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KendoFrog_Dark": [
+      {
+        "text": "发动后，极道蛙会靠忠诚心和膨胀的腹部积蓄力量。玩家在踩上去后能高高跳起。",
+        "subcategoryIds": [
+          "move.special"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁以暗属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weakspot",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LeafMomonga": [
+      {
+        "text": "若它在队伍中，达鼠泥会在玩家陷入濒死状态时，通过疗愈能力让玩家以最大HP(30~60)%的状态复活。",
+        "subcategoryIds": [
+          "survival.revive"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Ganesha": [
+      {
+        "text": "若它在队伍中，若玩家的生命值低于30%，恢复(20~40)%的生命值。（不可叠加）\n※发动后需120秒冷却方可再次触发",
+        "subcategoryIds": [
+          "survival.heal"
+        ],
+        "tagIds": []
+      }
+    ],
+    "PlantSlime": [
+      {
+        "text": "若它在队伍中，玩家伐木时造成的伤害将提升(30~50)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，所有木材种类的重量都将减轻(40~60)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.weight"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SamuraiDog": [
+      {
+        "text": "若它在队伍中，玩家使用近战武器时的伤害提升(10~35)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CloverFairy": [
+      {
+        "text": "若它在据点里，其他据点帕鲁的采集工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Hedgehog": [
+      {
+        "text": "发动后就能将电棘鼠装备在手上，若将它投向敌人且命中目标，便会引发雷属性爆炸。",
+        "subcategoryIds": [
+          "combat.projectile_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Hedgehog_Ice": [
+      {
+        "text": "发动后就能将冰刺鼠装备在手上，若将它投向敌人且命中目标，便会引发冰属性爆炸。",
+        "subcategoryIds": [
+          "combat.projectile_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NegativeKoala": [
+      {
+        "text": "发动后，瞅什魔会大量饮用能量饮料，瞅什魔的移动速度和工作速度会因此提升(100~900)%。",
+        "subcategoryIds": [
+          "base.work_speed",
+          "pal.self_burst"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落毒腺。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Penguin": [
+      {
+        "text": "发动后玩家将装备火箭发射器，并可将企丸丸当作炮弹射出。\n命中目标后企丸丸会爆炸，并陷入濒死状态。\n科技17",
+        "subcategoryIds": [
+          "combat.projectile_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Penguin_Electric": [
+      {
+        "text": "发动后玩家将装备火箭发射器，并可将闪丸丸当作炮弹射出。\n命中目标后闪丸丸会爆炸，并陷入濒死状态。\n科技18",
+        "subcategoryIds": [
+          "combat.projectile_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CaptainPenguin": [
+      {
+        "text": "若它在队伍中，击倒火属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CaptainPenguin_Black": [
+      {
+        "text": "若它在队伍中，玩家和帕鲁以水属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weakspot",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WizardOwl": [
+      {
+        "text": "若它在队伍中，暗属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Alpaca": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，君王美露帕的防御力和移动速度将会提升。",
+        "subcategoryIds": [
+          "pal.named_synergy"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落羊毛。\n科技7",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KingAlpaca": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "此帕鲁的防御力和移动速度会按照队伍中美露帕的数量提升，每只增加(5~14)%。\n科技23",
+        "subcategoryIds": [
+          "pal.named_synergy",
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KingAlpaca_Ice": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "此帕鲁的防御力和移动速度会按照队伍中美露帕的数量提升，每只增加(5~14)%。\n科技46",
+        "subcategoryIds": [
+          "pal.named_synergy",
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DreamDemon": [
+      {
+        "text": "若它在队伍中，就会出现于玩家身边。\n它会用暗属性的魔弹追击敌对个体。\n且该追击不会使猎物毙命。",
+        "subcategoryIds": [
+          "combat.follow_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Monkey": [
+      {
+        "text": "发动后，新叶猿会在一定时间内用突击步枪猛烈扫射附近的敌人。\n科技12",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Monkey_Fire": [
+      {
+        "text": "发动后，秋叶猿会在一定时间内以火属性突击步枪猛烈扫射附近的敌人。\n科技13",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NightFox": [
+      {
+        "text": "发动后，它会探测附近的帕鲁雕像。",
+        "subcategoryIds": [
+          "utility.statue"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LavaGirl": [
+      {
+        "text": "若它在队伍中，非战斗时每秒令玩家与队伍帕鲁的生命值恢复(0.1~0.5)%。（不可叠加）",
+        "subcategoryIds": [
+          "survival.heal"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落喷火器官。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlameBambi": [
+      {
+        "text": "若它在队伍中，火属性帕鲁的防御力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落喷火器官。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Bastet": [
+      {
+        "text": "将它分派到家畜牧场，它就有机会从地里挖出金币。",
+        "subcategoryIds": [
+          "resource.special",
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Bastet_Ice": [
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落结冰器官。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Boar": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间破坏岩石的效率将提升(500~2000)%。\n科技6",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Kitsunebi": [
+      {
+        "text": "发动后，它会化身为装备在玩家身上的火焰喷射器。\n科技6",
+        "subcategoryIds": [
+          "combat.weapon_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Kitsunebi_Ice": [
+      {
+        "text": "发动后，它会化身为装备在玩家身上的冷冻喷射器。\n科技24",
+        "subcategoryIds": [
+          "combat.weapon_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NegativeOctopus": [
+      {
+        "text": "若它在队伍中，会改变滑翔伞的性能。\n滑翔期间能够长时间漂浮在空中。",
+        "subcategoryIds": [
+          "move.glider"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NegativeOctopus_Neutral": [
+      {
+        "text": "若它在队伍中，会改变滑翔伞的性能。\n滑翔期间能够长时间漂浮在空中。",
+        "subcategoryIds": [
+          "move.glider"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CuteMole": [
+      {
+        "text": "若它在队伍中，玩家采矿时造成的伤害将提升(30~60)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，石头的重量将减轻(80~100)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.weight"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Deer": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行2段跳跃。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.double"
+        ]
+      },
+      {
+        "text": "骑乘期间破坏树木的效率会提升(220~500)%。\n科技12",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Deer_Ground": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行2段跳跃。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.double"
+        ]
+      },
+      {
+        "text": "若它在据点里，其他据点帕鲁的伐木工作适应性等级+1。（不可叠加）\n科技21",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Garm": [
+      {
+        "text": "可骑在它的背上移动。\n骑乘期间的移动速度会稍微变快一点。\n科技9",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      }
+    ],
+    "BerryGoat": [
+      {
+        "text": "将它分派到家畜牧场，就有机会从背上掉落红色野莓。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，每5分钟会让当前饱腹度最低的帕鲁恢复(100~200)点饱腹度。（不可叠加）",
+        "subcategoryIds": [
+          "survival.hunger"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BerryGoat_Dark": [
+      {
+        "text": "将它分派到家畜牧场，有机会从背上掉落毒腺。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，每5分钟会让当前饱腹度最低的帕鲁恢复(100~200)点饱腹度。（不可叠加）",
+        "subcategoryIds": [
+          "survival.hunger"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MopBaby": [
+      {
+        "text": "若它在队伍中，毛老爹的防御力和攻击力会有所提升。",
+        "subcategoryIds": [
+          "pal.named_synergy"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MopKing": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "此帕鲁的防御力和攻击力会按照队伍中毛掸儿的数量提升，每只增加(12~24)%。\n科技20",
+        "subcategoryIds": [
+          "pal.named_synergy",
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "TentacleTurtle": [
+      {
+        "text": "若它在队伍中，金属矿石的重量会减轻(80~100)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.weight"
+        ],
+        "tagIds": []
+      }
+    ],
+    "TentacleTurtle_Ground": [
+      {
+        "text": "若它在队伍中，硫磺和石炭的重量将减轻(80~100)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.weight"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁以地属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weakspot",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WindChimes": [
+      {
+        "text": "若它在队伍中，会改变滑翔伞的性能。\n滑翔期间能够缓缓上升。",
+        "subcategoryIds": [
+          "move.glider"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WindChimes_Ice": [
+      {
+        "text": "若它在队伍中，会改变滑翔伞的性能。\n滑翔期间能够缓缓上升。",
+        "subcategoryIds": [
+          "move.glider"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SweetsSheep": [
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落棉花糖。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在据点里，据点帕鲁的饱腹度的减少幅度将会(-10~-20)%。（不可叠加）",
+        "subcategoryIds": [
+          "base.needs"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SweetsSheep_Ground": [
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落焦糖棉花糖。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在据点里，据点帕鲁的饱腹度的减少幅度将会(-15~-25)%。（不可叠加）",
+        "subcategoryIds": [
+          "base.needs"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CowPal": [
+      {
+        "text": "将它分派到家畜牧场，它就有机会产出牛奶。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlueDragon": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为水属性，且攻击力提升(5~20)%。\n科技24",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlueDragon_Ice": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。\n科技27",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ElecCat": [
+      {
+        "text": "若它在队伍中，雷属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落发电器官。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Kelpie": [
+      {
+        "text": "若它在队伍中，水属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落水栖帕鲁的黏液。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Kelpie_Fire": [
+      {
+        "text": "若它在队伍中，火属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落喷火器官。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "PinkRabbit": [
+      {
+        "text": "若它在队伍中，无属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在据点里，其他据点帕鲁的手工作业工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "PinkRabbit_Grass": [
+      {
+        "text": "若它在队伍中，玩家和帕鲁以草属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weakspot",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "艾小兔在武器制作台或武器工厂等处工作时，工作效率将会提升(200~400)%。",
+        "subcategoryIds": [
+          "base.work_speed"
+        ],
+        "tagIds": []
+      }
+    ],
+    "JellyfishFairy": [
+      {
+        "text": "若它在队伍中，垂钓时获得的道具增加(55~95)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.fishing"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "此外，当海月仙和海月灵同时在据点里时，海月仙浇水的工作速度提升(50~120)%。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_speed",
+          "pal.named_synergy"
+        ],
+        "tagIds": []
+      }
+    ],
+    "JellyfishGhost": [
+      {
+        "text": "若它在队伍中，打捞时获得的道具增加(55~95)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.fishing"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "此外，当海月仙和海月灵同时在据点里时，海月灵浇水的工作速度提升(50~120)%。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_speed",
+          "pal.named_synergy"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ClioneTwins": [
+      {
+        "text": "若它在据点里，其他据点帕鲁的浇水工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "OctopusGirl": [
+      {
+        "text": "若它在队伍中，在垂钓小游戏中的判定条和鱼的图标未重合期间，捕获计量槽的下降量减少(12~35)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.fishing"
+        ],
+        "tagIds": []
+      }
+    ],
+    "OctopusGirl_Neutral": [
+      {
+        "text": "若它在队伍中，水属性帕鲁的防御力提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Eagle": [
+      {
+        "text": "若它在队伍中，会改变滑翔伞的性能。\n能够高速滑翔，且右手能在滑翔期间使用枪械射击。",
+        "subcategoryIds": [
+          "move.glider"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GhostBlackCat": [
+      {
+        "text": "若它在队伍中，触发背面奖励时的捕获概率增加。（不可叠加）",
+        "subcategoryIds": [
+          "capture.rate"
+        ],
+        "tagIds": []
+      }
+    ],
+    "HawkBird": [
+      {
+        "text": "可骑在它的背上在空中飞行。\n科技15",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      }
+    ],
+    "CatBat": [
+      {
+        "text": "发动后能够发出超声波，来探测附近地下城、宝箱以及废品的位置。",
+        "subcategoryIds": [
+          "utility.locations"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ColorfulBird": [
+      {
+        "text": "发动后会化身为装备在玩家身上的发射器，并制造出会爆炸的蛋。\n科技18",
+        "subcategoryIds": [
+          "combat.weapon_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Kirin": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁以雷属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）\n科技14",
+        "subcategoryIds": [
+          "player.weakspot",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Kirin_Ice": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。\n科技64",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SharkKid": [
+      {
+        "text": "发动后会以水枪攻击锁定的目标敌人。\n此帕鲁使用的水枪的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家的攻击力提升(10~20)%。",
+        "subcategoryIds": [
+          "player.attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SharkKid_Fire": [
+      {
+        "text": "发动后会以烈焰溅射攻击锁定的目标敌人。\n此帕鲁使用的烈焰溅射的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家的攻击力提升(10~20)%。",
+        "subcategoryIds": [
+          "player.attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Werewolf": [
+      {
+        "text": "发动后会以飞跃爪击攻击锁定的目标敌人。\n此帕鲁使用的飞跃爪击的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家的近战武器攻击速度提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_operation"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Werewolf_Ice": [
+      {
+        "text": "发动后会以吹雪爪击攻击锁定的目标敌人。\n此帕鲁使用的吹雪爪击的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家的近战武器攻击速度提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_operation"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DarkCrow": [
+      {
+        "text": "发动后可以使用夜视，即使在黑暗中也能看得一清二楚。\n再次发动即可解除该效果。",
+        "subcategoryIds": [
+          "utility.vision"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会从地里挖出骨头。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlameBuffalo": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家的耐寒能力+2。（不可叠加）\n科技15",
+        "subcategoryIds": [
+          "survival.temperature"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FluffyBird": [
+      {
+        "text": "若它在队伍中，提升对陷入冻结状态帕鲁的捕获概率。（不可叠加）",
+        "subcategoryIds": [
+          "capture.rate"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LittleBriarRose": [
+      {
+        "text": "若它在队伍中，草属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CuteButterfly": [
+      {
+        "text": "发动后会以毒雾攻击锁定的目标敌人。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在据点里，其他据点帕鲁的牧场的工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ElecPomeranian": [
+      {
+        "text": "若它在据点里，其他据点帕鲁的发电工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FairyDragon": [
+      {
+        "text": "可骑在它的背上在空中飞行。\n飞行时移动速度会提升。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，击倒暗属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技20",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FairyDragon_Water": [
+      {
+        "text": "可骑在它的背上在空中飞行。\n飞行时移动速度会提升。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的火属性伤害减轻(15~30)%，并且不会陷入点燃状态。（不可叠加）\n科技32",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BirdDragon": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家攻击敌方弱点部位造成的伤害将提升(20~40)%。（不可叠加）\n科技21",
+        "subcategoryIds": [
+          "player.weakspot"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BirdDragon_Ice": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家攻击敌方弱点部位造成的伤害将提升(30~50)%。（不可叠加）\n科技22",
+        "subcategoryIds": [
+          "player.weakspot"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CatVampire": [
+      {
+        "text": "与它并肩作战时，会为玩家和夜幕魔蝠赋予生命窃取效果，攻击造成伤害时将恢复等同于伤害量(5~9)%的HP。",
+        "subcategoryIds": [
+          "survival.lifesteal"
+        ],
+        "tagIds": []
+      }
+    ],
+    "VioletFairy": [
+      {
+        "text": "若它在队伍中，击倒地属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落各种各样的种子。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SoldierBee": [
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落蜂蜜。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，女皇蜂的攻击力会有所提升。",
+        "subcategoryIds": [
+          "pal.named_synergy"
+        ],
+        "tagIds": []
+      }
+    ],
+    "QueenBee": [
+      {
+        "text": "此帕鲁的攻击力会按照队伍中骑士蜂的数量提升，每只增加(12~24)%。",
+        "subcategoryIds": [
+          "pal.named_synergy",
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "PinkLizard": [
+      {
+        "text": "与它并肩作战时，会为玩家和博爱蜥赋予生命窃取效果，攻击造成伤害时将恢复等同于伤害量(5~9)%的HP。",
+        "subcategoryIds": [
+          "survival.lifesteal"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NaughtyCat": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，捡到帕鲁蛋时将有(50~75)%的概率再捡到1颗。（不可叠加）\n科技19",
+        "subcategoryIds": [
+          "capture.egg"
+        ],
+        "tagIds": []
+      }
+    ],
+    "PurpleSpider": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行2段跳跃。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.double"
+        ]
+      },
+      {
+        "text": "骑乘期间可以向射击地点发射蜘蛛丝，牵引身体快速移动。\n科技20",
+        "subcategoryIds": [
+          "move.special"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceSeal": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "在雪地上时，移动速度提升(80~160)%。\n并且可以在斜坡处快速向下滑行。\n科技26",
+        "subcategoryIds": [
+          "move.conditional_speed"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceSeal_Ground": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "在雪地上时，移动速度提升(80~160)%。\n并且可以在斜坡处快速向下滑行。\n滑行时初始速度较慢，但最高速度更快。\n科技55",
+        "subcategoryIds": [
+          "move.conditional_speed"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LizardMan": [
+      {
+        "text": "发动后(10~20)秒内，朋克蜥与玩家将变得透明，在敌方视野中隐去身形。",
+        "subcategoryIds": [
+          "utility.vision"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LizardMan_Fire": [
+      {
+        "text": "发动后(10~20)秒内，热血蜥与玩家将变得透明，在敌方视野中隐去身形。",
+        "subcategoryIds": [
+          "utility.vision"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Gorilla": [
+      {
+        "text": "发动后会解放野性之力，并在一定时间内铁拳猿的攻击力将提升(75~300)%。",
+        "subcategoryIds": [
+          "pal.self_burst"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Gorilla_Ground": [
+      {
+        "text": "发动后会解放野性之力，并在一定时间内石掌猿的攻击力将提升(75~300)%。",
+        "subcategoryIds": [],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家的攀爬速度提升(50~100)%。（不可叠加）",
+        "subcategoryIds": [
+          "move.special"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Serpent": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落皮革。\n科技16",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Serpent_Ground": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，会为玩家的攻击附加(2~6)点泥泞异常状态值。（不可叠加）\n科技25",
+        "subcategoryIds": [
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "RobinHood": [
+      {
+        "text": "若它在队伍中，玩家使用弓箭时的伤害提升(10~35)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "RobinHood_Ground": [
+      {
+        "text": "若它在队伍中，玩家使用弓箭时的蓄力速度提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_operation"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlowerRabbit": [
+      {
+        "text": "若它在队伍中，就会出现在玩家身边。\n它会自动前去拾取附近的道具。",
+        "subcategoryIds": [
+          "resource.pickup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FoxMage": [
+      {
+        "text": "发动后，焰巫狐会将力量分给玩家，让玩家的攻击转变为火属性，且攻击力提升(30~50)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FoxMage_Dark": [
+      {
+        "text": "发动后，幽巫狐会将力量分给玩家，让玩家的攻击转变为暗属性，且攻击力提升(30~50)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CatMage": [
+      {
+        "text": "若它在队伍中，击倒无属性帕鲁时获得的掉落道具增加(40~80)%。",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家投掷帕鲁球时，有(10~50)%的概率不会消耗帕鲁球。（不可叠加）",
+        "subcategoryIds": [
+          "capture.sphere"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CatMage_Fire": [
+      {
+        "text": "若它在据点里，其他据点帕鲁的生火工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "HadesBird": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为暗属性，且攻击力提升(5~20)%。\n科技25",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "HadesBird_Electric": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。\n科技47",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassMinotaur": [
+      {
+        "text": "发动后，密林陶洛斯会将力量分给玩家，让玩家的攻击转变为草属性，且攻击力提升(30~50)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassMinotaur_Ice": [
+      {
+        "text": "若它在队伍中，玩家攻击浸湿状态的敌人时，一击就会让敌人陷入冻结状态。",
+        "subcategoryIds": [
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Mutant": [
+      {
+        "text": "若它在队伍中，投掷出去的帕鲁球将会自动追踪帕鲁。（不可叠加）",
+        "subcategoryIds": [
+          "capture.sphere"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家的负重上限提高(300~600)。（不可叠加）",
+        "subcategoryIds": [
+          "resource.capacity"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FengyunDeeper": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行2段跳跃。\n科技26",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.double"
+        ]
+      }
+    ],
+    "FengyunDeeper_Electric": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行2段跳跃。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.double"
+        ]
+      },
+      {
+        "text": "若它在队伍中，击倒水属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技57",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlowerDinosaur": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，龙属性帕鲁的防御力会提升(15~30)%。（不可叠加）\n科技24",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlowerDinosaur_Electric": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，雷属性帕鲁的防御力会提升(15~30)%。（不可叠加）\n科技34",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Ronin": [
+      {
+        "text": "发动后会以居合斩攻击锁定的目标敌人。\n此帕鲁使用的居合斩的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Ronin_Dark": [
+      {
+        "text": "发动后会以居合斩攻击锁定的目标敌人。\n此帕鲁使用的居合斩的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家的近战武器攻击伤害在非战斗时提升(30~65)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceCrocodile": [
+      {
+        "text": "若它在队伍中，食材和料理的重量会减轻(30~60)%。（不可叠加）",
+        "subcategoryIds": [],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，在冰属性帕鲁原有的防腐效果基础上，让腐败速度进一步(-30~-80)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.preserve"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassMammoth": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间破坏树木的效率会提高(220~500)%，破坏矿石的效率会提高(500~2000)%。\n科技28",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassMammoth_Ice": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间破坏树木的效率会提高(220~500)%，破坏矿石的效率会提高(500~2000)%。\n科技41",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      }
+    ],
+    "StuffedShark": [
+      {
+        "text": "发动后，布偶鲨会将力量分给玩家，让玩家的攻击转变为水属性，且攻击力提升(30~50)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "StuffedShark_Fire": [
+      {
+        "text": "若它在队伍中，粉粉布偶鲨会帮忙分担负重，背包内武器的重量减轻(60~100)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.weight"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁以火属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weakspot",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlowerDoll": [
+      {
+        "text": "发动后可通过花朵的治愈能力，来恢复玩家(75~85)%的生命值。",
+        "subcategoryIds": [
+          "survival.heal"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在据点里，其他据点帕鲁的播种工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlowerDoll_Fire": [
+      {
+        "text": "发动后，它会用花朵的治愈之力让玩家的生命值恢复(80~90)%。",
+        "subcategoryIds": [
+          "survival.heal"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的草属性伤害减轻(15~30)%，并且不会陷入缠绕状态。（不可叠加）",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "PandaGirl": [
+      {
+        "text": "莉芳的攻击力和防御力，会随着队伍中其他草属性帕鲁的数量提升，每只增加(2~6)%。",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Baphomet": [
+      {
+        "text": "发动后会以狱火爪攻击锁定的目标敌人。\n此帕鲁使用的狱火爪的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Baphomet_Dark": [
+      {
+        "text": "发动后会以恶梦爪攻击锁定的目标敌人。\n此帕鲁使用的恶梦爪的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "RaijinDaughter": [
+      {
+        "text": "若它在队伍中，就会出现于玩家身边。\n它会用雷属性的落雷追击敌对个体。\n且该追击不会使猎物毙命。",
+        "subcategoryIds": [
+          "combat.follow_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "RaijinDaughter_Water": [
+      {
+        "text": "若它在队伍中，就会出现于玩家身边。\n它会用暗属性的落雷追击敌对个体。\n且该追击不会使猎物毙命。",
+        "subcategoryIds": [
+          "combat.follow_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FireKirin": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。\n科技29",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FireKirin_Dark": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为暗属性，且攻击力提升(5~20)%。\n科技34",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LazyDragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间它还能用导弹发射器连续攻击。\n科技45",
+        "subcategoryIds": [
+          "combat.mounted_weapon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LazyDragon_Electric": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间它还能用导弹发射器连续攻击。\n科技48",
+        "subcategoryIds": [
+          "combat.mounted_weapon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceFox": [
+      {
+        "text": "若它在队伍中，冰属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落结冰器官。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ThunderBird": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "迅雷鸟的移动速度，会随着队伍中其他雷属性帕鲁的数量提升，每只增加(5~25)%。\n科技29",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ThunderBird_Ice": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "疾霜鸟的移动速度，会随着队伍中其他冰属性帕鲁的数量提升，每只增加(5~25)%。\n科技71",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GhostAnglerfish": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "冥灯鱼的移动速度，会随着队伍中其他暗属性或水属性帕鲁的数量提升，每只增加(5~25)%。\n科技31",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GhostAnglerfish_Fire": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "炙灯鱼的移动速度，会随着队伍中其他火属性或水属性帕鲁的数量提升，每只增加(5~25)%。\n科技42",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ThunderDog": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行2段跳跃。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.double"
+        ]
+      },
+      {
+        "text": "霹雳犬的移动速度，会随着队伍中其他雷属性帕鲁的数量提升，每只增加(5~25)%。\n科技30",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ThunderDog_Ice": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行2段跳跃。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.double"
+        ]
+      },
+      {
+        "text": "若它在队伍中，冰属性帕鲁的防御力会提升(15~30)%。（不可叠加）\n科技32",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DarkScorpion": [
+      {
+        "text": "若它在队伍中，玩家的防御力将提升(5~10)%。（不可叠加）",
+        "subcategoryIds": [
+          "survival.defense"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DarkScorpion_Ground": [
+      {
+        "text": "若它在队伍中，玩家的防御力将提升(5~10)%。（不可叠加）",
+        "subcategoryIds": [
+          "survival.defense"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CactusDoll": [
+      {
+        "text": "若它在队伍中，玩家和帕鲁对缠绕状态的敌人造成的伤害将提升(50~65)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CactusDoll_Dark": [
+      {
+        "text": "若它在队伍中，会为玩家的攻击附加(2~6)点缠绕异常状态值。（不可叠加）",
+        "subcategoryIds": [
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceDeer": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家的耐暑能力+2。（不可叠加）\n科技31",
+        "subcategoryIds": [
+          "survival.temperature"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassPanda": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间它还能用榴弹发射器连续攻击。\n科技32",
+        "subcategoryIds": [
+          "combat.mounted_weapon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassPanda_Electric": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间它还能用榴弹发射器连续攻击。\n科技34",
+        "subcategoryIds": [
+          "combat.mounted_weapon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WeaselDragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为龙属性，且攻击力提升(5~20)%。\n科技11",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WeaselDragon_Fire": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。\n科技40",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "RedArmorBird": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。\n科技33",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "VolcanoDragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "流焰龙的攻击力，会随着队伍中其他火属性或地属性帕鲁的数量提升，每只增加(4~8)%。\n科技36",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "VolcanoDragon_Ice": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁以冰属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）\n科技70",
+        "subcategoryIds": [
+          "player.weakspot",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "TropicalOstrich": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "在草地上移动时，移动速度会提高(155~240)%。\n科技35",
+        "subcategoryIds": [
+          "move.conditional_speed"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DrillGame": [
+      {
+        "text": "发动后会进入甲壳回旋状态。\n它会一边旋转一边跟随玩家，且破坏矿石的效率将提升(800~2000)%。",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SakuraSaurus": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，捡到的帕鲁蛋将有(35~45)%的概率变为头目帕鲁蛋。（不可叠加）\n科技33",
+        "subcategoryIds": [
+          "capture.egg"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SakuraSaurus_Water": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，捡到的帕鲁蛋将有(45~55)%的概率变为头目帕鲁蛋。（不可叠加）\n科技44",
+        "subcategoryIds": [
+          "capture.egg"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LazyCatfish": [
+      {
+        "text": "若它在队伍中，地属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落优质帕鲁油。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LazyCatfish_Gold": [
+      {
+        "text": "若它在队伍中，打倒的敌人掉落的金币提升(100~200)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.special"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就会掉落优质帕鲁油或者小概率掉落金币。",
+        "subcategoryIds": [
+          "base.ranch",
+          "resource.special"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Plesiosaur": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在据点里，分派到配种牧场的帕鲁产蛋速度加快(20~50)%。（不可叠加）\n科技36",
+        "subcategoryIds": [
+          "base.breeding"
+        ],
+        "tagIds": []
+      }
+    ],
+    "AmaterasuWolf": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的冰属性伤害减轻(15~30)%，并且不会陷入冻结状态。（不可叠加）\n科技57",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "AmaterasuWolf_Dark": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的暗属性伤害减轻(15~30)%，并且不会陷入黑暗状态。（不可叠加）\n科技59",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Manticore": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，击倒草属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技33",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Manticore_Dark": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，击倒无属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技35",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "HerculesBeetle": [
+      {
+        "text": "若它在队伍中，当玩家的近战攻击在(5~9)秒内命中5次时，它会在玩家周边生成护盾。（不可叠加）",
+        "subcategoryIds": [
+          "survival.shield"
+        ],
+        "tagIds": []
+      }
+    ],
+    "HerculesBeetle_Ground": [
+      {
+        "text": "若它在队伍中，当玩家的近战攻击在(5~9)秒内命中5次时，它会在玩家周边生成护盾。（不可叠加）",
+        "subcategoryIds": [
+          "survival.shield"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SnowPeafowl": [
+      {
+        "text": "若它在队伍中，受到白真雪雀释放的冷气影响，玩家会更专注，武器重新装弹的速度提升(20~50)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_operation"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DarkFlameFox": [
+      {
+        "text": "若它在队伍中，玩家的攻及击中点燃状态的敌人时，会使敌人周边燃烧，对碰到火焰的敌人持续造成相当于玩家攻击力(15~30)%的伤害。（不可叠加）",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "player.extra_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WhiteMoth": [
+      {
+        "text": "发动后会以钻石星辰攻击锁定的目标敌人。\n此帕鲁使用的钻石星辰的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会制造出优质的布。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WhiteMoth_Neutral": [
+      {
+        "text": "若它在队伍中，无属性帕鲁的防御力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会制作优质的布。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GhostBeast": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，每次打倒敌人时，全体队伍帕鲁的主动技能冷却时间缩短(30~60)%。（不可叠加）\n科技37",
+        "subcategoryIds": [
+          "pal.cooldown"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MushroomDragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会掉落蘑菇或者洞穴蘑菇。\n科技39",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MushroomDragon_Dark": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在据点里，菇波的神奇孢子将会使据点内帕鲁的SAN值下降速度减缓(10~15)%。\n科技39",
+        "subcategoryIds": [
+          "base.needs"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceWitch": [
+      {
+        "text": "发动后，冰姬灵会将力量分给玩家，让玩家的攻击转变为冰属性，且攻击力提升(30~50)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MummyPal": [
+      {
+        "text": "与玩家并肩作战时，若缚乃伊陷入濒死状态，缚乃伊会消耗全部的饱腹度并复活。",
+        "subcategoryIds": [
+          "survival.revive"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Umihebi": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁对浸湿状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技40",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Umihebi_Fire": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，能让熔岩伤害无效化。（不可叠加）",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁对点燃状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技59",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Suzaku": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "朱雀的移动速度，会随着队伍中其他火属性帕鲁的数量提升，每只增加(5~25)%。\n科技43",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Suzaku_Water": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "清雀的移动速度，会随着队伍中其他水属性帕鲁的数量提升，每只增加(5~25)%。\n科技44",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FeatherOstrich": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "在砂地上移动时，移动速度会提高(50~100)%。\n科技28",
+        "subcategoryIds": [
+          "move.conditional_speed"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SkyDragon": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，龙属性帕鲁的攻击力会提升(15~30)%。（不可叠加）\n科技38",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SkyDragon_Grass": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为草属性，且攻击力提升(5~20)%。\n科技45",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LeafPrincess": [
+      {
+        "text": "若它在据点里，春彩娘会为农园注入元气，使作物的生长加速(50~70)%。",
+        "subcategoryIds": [
+          "base.crops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SmallArmadillo": [
+      {
+        "text": "若它在队伍中，地属性帕鲁的防御力提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GuardianDog": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "与它并肩作战时，遇到和它有着相同被动技能的帕鲁的概率将提升(15~30)%。\n※部分被动技能除外\n科技41",
+        "subcategoryIds": [
+          "capture.encounter"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SwordCutlassfish": [
+      {
+        "text": "发动后，鞘刀鱼会化身为玩家的刀（攻击：(2600~3900)）。\n若不及时解除，鞘刀鱼将陷入濒死状态。\n发动居合斩后同样会陷入濒死状态。",
+        "subcategoryIds": [
+          "combat.weapon_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SwordCutlassfish_Fire": [
+      {
+        "text": "发动后，炼刃鱼会化身为玩家的刀（攻击：(2900~4200)）。\n若不及时解除，炼刃鱼将陷入濒死状态。\n发动居合斩后同样会陷入濒死状态。",
+        "subcategoryIds": [
+          "combat.weapon_form"
+        ],
+        "tagIds": []
+      }
+    ],
+    "VolcanicMonster": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，所有矿石种类的重量会减轻(30~60)%。（不可叠加）\n科技42",
+        "subcategoryIds": [
+          "resource.weight"
+        ],
+        "tagIds": []
+      }
+    ],
+    "VolcanicMonster_Ice": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，所有矿石种类的重量会减轻(35~65)%。（不可叠加）\n科技43",
+        "subcategoryIds": [
+          "resource.weight"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NightBlueHorse": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间跳跃能力提升。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      },
+      {
+        "text": "夜晚期间，此帕鲁的移动速度提升(50~100)%。（不可叠加）\n科技57",
+        "subcategoryIds": [
+          "move.conditional_speed"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NightBlueHorse_Neutral": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间跳跃能力提升。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      },
+      {
+        "text": "日耀驹的移动速度，会随着队伍中其他无属性帕鲁的数量提升，每只增加(5~25)%。\n科技77",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "RockBeast": [
+      {
+        "text": "若它在队伍中，玩家和帕鲁对泥泞状态的敌人造成的伤害将提升(50~65)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "RockBeast_Ice": [
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的龙属性伤害减轻(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WhiteTiger": [
+      {
+        "text": "若它在队伍中，击倒龙属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WhiteTiger_Ground": [
+      {
+        "text": "若它在队伍中，攻击击中弱点部位时，下次击中弱点部位的攻击威力提升(30~60)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weakspot"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SmallYeti": [
+      {
+        "text": "若它在队伍中，会使玩家不容易被敌人发现。（不可叠加）",
+        "subcategoryIds": [
+          "utility.vision"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Yeti": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在据点里，其他据点帕鲁的搬运工作适应性等级+1。（不可叠加）\n科技45",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Yeti_Grass": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的地属性伤害减轻(15~30)%，并且不会陷入泥泞状态。（不可叠加）\n科技51",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CandleGhost": [
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的无属性伤害减轻(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "将它分派到家畜牧场，它就有机会从地里挖出骨头。",
+        "subcategoryIds": [
+          "base.ranch"
+        ],
+        "tagIds": []
+      }
+    ],
+    "VenusFlytrap": [
+      {
+        "text": "若它在队伍中，玩家进行翻滚或滑步动作时，颚莉丝会卷起旋风攻击接触到的敌人（草属性 / 威力: (40~80)）。（不可叠加）",
+        "subcategoryIds": [
+          "combat.reaction_summon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KingBahamut": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，打倒敌人时，一同并肩作战的帕鲁的攻击力与防御力会提升(5~10)%。\n该效果最多可累积5层，持续20秒。（不可叠加）\n科技46",
+        "subcategoryIds": [
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KingBahamut_Dragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁以龙属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）\n科技55",
+        "subcategoryIds": [
+          "player.weakspot",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassGolem": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "发动后，双心岩傀的右手处会发射草属性的强力激光。\n科技48",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassGolem_Dark": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "发动后，咒心岩傀的右手处会发射暗属性的强力激光。\n科技69",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Anubis": [
+      {
+        "text": "发动后，阿努比斯会将力量分给玩家，让玩家的攻击转变为地属性，且攻击力提升(30~50)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "战斗时偶尔会以高速移步回避攻击。",
+        "subcategoryIds": [],
+        "tagIds": []
+      }
+    ],
+    "Sekhmet": [
+      {
+        "text": "若它在据点里，据点中的阿努比斯的工作速度提升(20~40)%。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_speed",
+          "pal.named_synergy"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "塞赫麦特在工作台或作业工厂等处工作时，工作效率将会提升(30~60)%。",
+        "subcategoryIds": [
+          "base.work_speed"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ScorpionMan": [
+      {
+        "text": "若它在队伍中，玩家和帕鲁对中毒状态的敌人造成的伤害将提升(50~65)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ScorpionMan_Electric": [
+      {
+        "text": "发动后，电针妖会将力量分给玩家，让玩家的攻击转变为雷属性，且攻击力提升(30~50)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CubeTurtle": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在据点里，其他据点帕鲁的采矿工作适应性等级+1。（不可叠加）\n科技48",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "CubeTurtle_Neutral": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，武器和防具的耐久度损耗减缓(80~100)%。（不可叠加）\n科技75",
+        "subcategoryIds": [
+          "resource.durability"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BadCatgirl": [
+      {
+        "text": "发动后，妮瞅莎会在一段时间内用霰弹枪攻击附近的敌人。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家的霰弹枪攻击伤害提升(10~35)%。（不可叠加）\n科技52",
+        "subcategoryIds": [
+          "player.weapon_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MimicDog": [
+      {
+        "text": "与它并肩作战时，能借助旺财的力量，在不使用钥匙的情况下打开宝箱。",
+        "subcategoryIds": [
+          "utility.unlock"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DarkAlien": [
+      {
+        "text": "若它在队伍中，全自动武器的弹匣中最后一发子弹的伤害提升(100~160)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WhiteAlienDragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家使用能量武器时的伤害提升(10~35)%。（不可叠加）\n科技41",
+        "subcategoryIds": [
+          "player.weapon_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlueberryFairy": [
+      {
+        "text": "若它在据点里，梅莉姆会进行祈祷， 让作物的收获量提升(18~35)%。",
+        "subcategoryIds": [
+          "base.crops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GhostRabbit": [
+      {
+        "text": "若它在队伍中，击倒帕鲁时帕鲁之魂的获得量提升+(100~200)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.special"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GhostRabbit_Grass": [
+      {
+        "text": "若它在队伍中，草属性帕鲁的防御力提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlackPuppy": [
+      {
+        "text": "发动后能够以敏锐的嗅觉，来探测附近铬铁矿的位置。",
+        "subcategoryIds": [
+          "utility.ore"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "与它并肩作战时，铬铁矿的掉落量也会提升(100~200)%。\n科技58",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlackPuppy_Ice": [
+      {
+        "text": "若它在据点里，其他据点帕鲁的冷却工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MysteryMask": [
+      {
+        "text": "若它在队伍中，队伍帕鲁获得的经验值会提升(40~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "capture.xp"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceNarwhal": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "若它在队伍中，垂钓的捕获计量槽在小游戏开始时的初始位置升高(5~14)%，并且在判定条与鱼的图标重合期间，捕获计量槽的上升量增加(5~14)%。（不可叠加）\n科技42",
+        "subcategoryIds": [
+          "resource.fishing"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceNarwhal_Fire": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "若它在队伍中，垂钓的捕获计量槽在小游戏开始时的初始位置升高(7~17)%，并且在判定条与鱼的图标重合期间，捕获计量槽的上升量增加(7~17)%。（不可叠加）\n科技71",
+        "subcategoryIds": [
+          "resource.fishing"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrassRabbitMan": [
+      {
+        "text": "若它在队伍中，可以额外进行+1次跳跃和+1次空中冲刺。（不可叠加）",
+        "subcategoryIds": [
+          "move.player_mobility"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GrimGirl": [
+      {
+        "text": "若它在队伍中， 使用切肉刀进行解体时，获得的掉落道具增加(100~200)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.special"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GoldenHorse": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为地属性，且攻击力提升(5~20)%。\n科技54",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SifuDog": [
+      {
+        "text": "发动后可以移动至最近的据点。\n无法在地下城里使用。",
+        "subcategoryIds": [
+          "move.teleport"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SumoDog": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的雷属性伤害减轻(15~30)%，并且不会陷入感电状态。（不可叠加）\n科技53",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WhiteDeer": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "净世鹿的攻击力和移动速度，会随着队伍中其他无属性帕鲁的数量提升，每只增加(2~6)%。",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，非战斗时每秒令玩家与队伍帕鲁的生命值恢复(0.15~0.75)%。（不可叠加）\n科技54",
+        "subcategoryIds": [
+          "survival.heal"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WhiteDeer_Dark": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，一同并肩作战的帕鲁的生命值会逐渐减少，但攻击力将提升(40~80)%。（不可叠加）\n科技78",
+        "subcategoryIds": [
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlackMetalDragon": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间对矿石造成的伤害将提升(1100~3300)%，且金属矿石的掉落量提升(150~300)%。\n科技39",
+        "subcategoryIds": [
+          "resource.gather"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WingGolem": [
+      {
+        "text": "发动后会以钢铁般的意志，在一定时间内提高泰锋的攻击力(50~200)%，防御力(50~200)%。",
+        "subcategoryIds": [
+          "pal.self_burst"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WingGolem_Fire": [
+      {
+        "text": "发动后会以钢铁般的意志，在一定时间内提高丹烽的攻击力(60~210)%，防御力(60~210)%。",
+        "subcategoryIds": [
+          "pal.self_burst"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WhiteShieldDragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家的护盾开始修复的等候时间缩短(30~60)%，且护盾受到的伤害减少(65~80)%。（不可叠加）\n科技60",
+        "subcategoryIds": [
+          "survival.shield",
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlueThunderHorse": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "此外，可在空中进行冲刺以高速移动。\n科技58",
+        "subcategoryIds": [
+          "move.special"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LongCat": [
+      {
+        "text": "若它在队伍中，玩家承受的重力减弱，跳跃或坠落时会漂浮落地。（不可叠加）",
+        "subcategoryIds": [
+          "move.player_mobility"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ElecSnail": [
+      {
+        "text": "若它在队伍中，会为玩家的攻击附加(2~6)点感电异常状态值。（不可叠加）",
+        "subcategoryIds": [
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ElecSnail_Ground": [
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的水属性伤害减轻(15~30)%，并且不会陷入浸湿状态。（不可叠加）",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DandelionGirl": [
+      {
+        "text": "若它在队伍中，提升对陷入缠绕状态帕鲁的捕获概率。（不可叠加）",
+        "subcategoryIds": [
+          "capture.rate"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BrownRabbit": [
+      {
+        "text": "若它在队伍中，玩家在冲刺期间的防御力提升(50~65)%。（不可叠加）",
+        "subcategoryIds": [
+          "survival.defense"
+        ],
+        "tagIds": []
+      }
+    ],
+    "HoodGhost": [
+      {
+        "text": "若它在队伍中，玩家对非战斗状态的敌人造成的伤害提升(50~100)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.conditional_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ElecLizard": [
+      {
+        "text": "若它在队伍中，玩家的攻击击中感电状态的敌人时，会令敌人放电，对周围的敌人造成相当于玩家攻击力(40~60)%的伤害。（不可叠加）",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "player.extra_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "OniGhostGirl": [
+      {
+        "text": "若它在队伍中，攻击陷入中毒状态的敌人时，会使该敌人的攻击力降低(40~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "combat.enemy_debuff"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KingSunfish": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "若它在队伍中，会更容易钓上高潜力帕鲁。（不可叠加）\n科技65",
+        "subcategoryIds": [
+          "capture.encounter"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KingSunfish_Thunder": [
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。",
+        "subcategoryIds": [
+          "player.element_convert"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "此外，若它在队伍中，会更容易钓上高潜力帕鲁。（不可叠加）\n科技66",
+        "subcategoryIds": [
+          "capture.encounter"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SleeveRabbit": [
+      {
+        "text": "若它在队伍中，其他队伍帕鲁的伙伴技能冷却时间缩短(10~50)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.cooldown"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GhostDragon": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "灵曦龙的攻击力和移动速度，会随着队伍中其他龙属性或暗属性帕鲁的数量提升，每只增加(2~6)%。\n科技68",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "GhostDragon_Fire": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "狱熙龙的攻击力和移动速度，会随着队伍中其他龙属性或火属性帕鲁的数量提升，每只增加(2~6)%。\n科技76",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ThunderFluffyBird": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在据点里，帕鲁蛋的孵化速度加快(20~40)%。（不可叠加）\n科技66",
+        "subcategoryIds": [
+          "base.incubation"
+        ],
+        "tagIds": []
+      }
+    ],
+    "RedFlowerBird": [
+      {
+        "text": "若它在队伍中，玩家进行翻滚或滑步动作时，无敌时间延长(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "survival.dodge"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FoxExorcist": [
+      {
+        "text": "若它在队伍中，玩家的攻击击中点燃状态的敌人时，会使敌人爆炸，额外造成相当于玩家攻击力(40~60)%的伤害。（不可叠加）",
+        "subcategoryIds": [
+          "player.extra_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LotusDragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，会为玩家的攻击附加(2~6)点浸湿异常状态值。（不可叠加）\n科技72",
+        "subcategoryIds": [
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ClownRabbit": [
+      {
+        "text": "若它在队伍中，当玩家的生命值低于50%时，拉比耶尔会在玩家周边掀起爆炸冲击波（火属性 / 威力: (100~200) / 点燃积蓄值: 777）。）。",
+        "subcategoryIds": [
+          "combat.reaction_summon"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "此外，玩家的生命值低于50%期间，玩家的攻击力提升(30~50)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ThiefBird": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁对黑暗状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技72",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SnakeGirl": [
+      {
+        "text": "若它在队伍中，会为玩家的攻击附加(2~6)点黑暗异常状态值。（不可叠加）",
+        "subcategoryIds": [
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MushroomLady": [
+      {
+        "text": "若它在据点里，其他据点帕鲁的制药工作适应性等级+1。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_level"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LanternButler": [
+      {
+        "text": "若它在队伍中，玩家射箭命中目标时会爆炸，额外造成相当于玩家攻击力(15~30)%的伤害。（不可叠加）",
+        "subcategoryIds": [
+          "player.weapon_damage",
+          "player.extra_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MoonChild": [
+      {
+        "text": "若它在队伍中，暗属性帕鲁的防御力提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "MonochromeQueen": [
+      {
+        "text": "若它在队伍中，并且所有队伍帕鲁的种类都不同时，玩家的攻击力会提升(30~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "player.attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KabukiMan": [
+      {
+        "text": "若它在队伍中，会为玩家的攻击附加(2~6)点点燃异常状态值。（不可叠加）",
+        "subcategoryIds": [
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DomeArmorDragon": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁受到的爆炸攻击伤害减轻(60~80)%，并且不会陷入眩晕状态。（不可叠加）\n科技79",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ElecPanda": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间它还能用机关枪连续攻击。\n科技40",
+        "subcategoryIds": [
+          "combat.mounted_weapon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LilyQueen": [
+      {
+        "text": "发动后便能通过女王的疗愈能力，为玩家和队伍内的帕鲁恢复(80~90)%的生命值。",
+        "subcategoryIds": [
+          "survival.heal"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LilyQueen_Dark": [
+      {
+        "text": "发动后便能通过女王的疗愈能力，为玩家和队伍内的帕鲁恢复(85~95)%的生命值。",
+        "subcategoryIds": [
+          "survival.heal"
+        ],
+        "tagIds": []
+      }
+    ],
+    "ThunderDragonMan": [
+      {
+        "text": "若它在队伍中，子弹击中敌人时，一同并肩作战的帕鲁的攻击力与防御力会提升(1~5)%。\n该效果最多可累积30层，持续5秒。（不可叠加）",
+        "subcategoryIds": [
+          "pal.active_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Horus": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，击倒冰属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技60",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Horus_Water": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，击倒火属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技60",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlackGriffon": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间的暗属性攻击将提升(15~30)%。",
+        "subcategoryIds": [
+          "pal.partner_damage"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "且飞行时移动速度会提升。\n科技47",
+        "subcategoryIds": [],
+        "tagIds": []
+      }
+    ],
+    "MoonQueen": [
+      {
+        "text": "可坐在它背后的月亮在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间的无属性和暗属性攻击将强化(15~30)%。\n科技53",
+        "subcategoryIds": [
+          "pal.partner_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "SnowTigerBeastman": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间它还能挥下冰属性的大锤进行攻击。\n科技73",
+        "subcategoryIds": [
+          "combat.mounted_weapon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlueSkyDragon": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "霄龙的攻击力，会随着队伍中其他龙属性帕鲁的数量提升，每只增加(4~8)%。\n科技77",
+        "subcategoryIds": [
+          "pal.party_scaling"
+        ],
+        "tagIds": []
+      }
+    ],
+    "Mothman": [
+      {
+        "text": "若它在队伍中，玩家的攻击击中缠绕状态的敌人时，会使敌人爆炸，额外造成相当于玩家攻击力(40~60)%的伤害。（不可叠加）",
+        "subcategoryIds": [
+          "player.conditional_damage",
+          "player.extra_damage"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "另外，能让玩家与帕鲁不受世界树的爆炸孢子影响。",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "FlowerPrince": [
+      {
+        "text": "发动后，为玩家的攻击附加(2~6)点中毒异常状态值。（不可叠加）",
+        "subcategoryIds": [
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "若它在队伍中，玩家和帕鲁不会陷入中毒状态，并且不受世界树区域的毒气影响。",
+        "subcategoryIds": [
+          "survival.damage_reduction"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NightLady": [
+      {
+        "text": "发动后会以噩梦射线攻击锁定的目标敌人。\n此帕鲁使用的噩梦射线的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "NightLady_Dark": [
+      {
+        "text": "发动后会以噩梦绽放攻击锁定的目标敌人。\n此帕鲁使用的噩梦绽放的威力将提升至(1.1~2.5)倍。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "DarkMechaDragon": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "若它在队伍中，持有武器的帕鲁的伙伴技能伤害将提升(20~50)%。（不可叠加）\n科技66",
+        "subcategoryIds": [
+          "pal.partner_damage"
+        ],
+        "tagIds": []
+      }
+    ],
+    "LegendDeer": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可生成护盾，抵御一切攻击。",
+        "subcategoryIds": [
+          "survival.shield"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "此外，骑乘期间可进行3段跳跃。\n科技70",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.triple"
+        ]
+      }
+    ],
+    "SaintCentaur": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行3段跳跃。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.triple"
+        ]
+      },
+      {
+        "text": "发动闪枪冲锋后，会召唤出1只队伍中的混沌骑士，一起进行攻击。\n科技61",
+        "subcategoryIds": [
+          "combat.reaction_summon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BlackCentaur": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可以进行2段跳跃。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.double"
+        ]
+      },
+      {
+        "text": "发动双枪一闪后，会召唤出1只队伍中的圣光骑士，一起进行攻击。\n科技61",
+        "subcategoryIds": [
+          "combat.reaction_summon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceHorse": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为冰属性，攻击力提升(10~40)%，且攻击会附加(2~6)点冻结异常状态值。\n科技62",
+        "subcategoryIds": [
+          "player.element_convert",
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "IceHorse_Dark": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间玩家的攻击会转变为暗属性，攻击力提升(10~40)%，且攻击会附加(2~6)点黑暗异常状态值。\n科技62",
+        "subcategoryIds": [
+          "player.element_convert",
+          "player.status_buildup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "PoseidonOrca": [
+      {
+        "text": "与玩家并肩作战时，它会配合玩家的攻击用水属性的长枪进行追击。",
+        "subcategoryIds": [
+          "combat.follow_attack"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "可骑在它的背上在水上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.water"
+        ]
+      },
+      {
+        "text": "骑乘期间可在水面高高跃起。\n科技64",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      }
+    ],
+    "JetDragon": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "骑乘期间它还能用导弹发射器连续攻击。\n科技79",
+        "subcategoryIds": [
+          "combat.mounted_weapon"
+        ],
+        "tagIds": []
+      }
+    ],
+    "KingWhale": [
+      {
+        "text": "可骑在它的背上在空中飞行。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.flying"
+        ]
+      },
+      {
+        "text": "在据点最多只能召唤1只。\n若它在据点里，会在据点上空持续盘旋，远程炮轰入侵据点的敌人。",
+        "subcategoryIds": [
+          "base.defense"
+        ],
+        "tagIds": []
+      }
+    ],
+    "WorldTreeDragon": [
+      {
+        "text": "这个帕鲁擅长的事情仍在调查中。",
+        "subcategoryIds": [],
+        "tagIds": []
+      }
+    ],
+    "Monkey_Ice": [
+      {
+        "text": "当前未实装，暂无伙伴技能描述。",
+        "subcategoryIds": [],
+        "tagIds": []
+      }
+    ],
+    "YakushimaMonster001": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可高高跃起。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      }
+    ],
+    "YakushimaMonster001_Blue": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可高高跃起。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      }
+    ],
+    "YakushimaMonster001_Red": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可高高跃起。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      }
+    ],
+    "YakushimaMonster001_Purple": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可高高跃起。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      }
+    ],
+    "YakushimaMonster001_Pink": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可高高跃起。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      }
+    ],
+    "YakushimaMonster001_Rainbow": [
+      {
+        "text": "可骑在它的背上移动。",
+        "subcategoryIds": [
+          "move.mount"
+        ],
+        "tagIds": [
+          "mount.ground"
+        ]
+      },
+      {
+        "text": "骑乘期间可高高跃起。",
+        "subcategoryIds": [
+          "move.riding_jump"
+        ],
+        "tagIds": [
+          "jump.high"
+        ]
+      }
+    ],
+    "YakushimaMonster002": [
+      {
+        "text": "若它在队伍中，击倒暗属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
+        "subcategoryIds": [
+          "resource.drops"
+        ],
+        "tagIds": []
+      }
+    ],
+    "YakushimaMonster003": [
+      {
+        "text": "若它在队伍中，就会出现在玩家身边。\n它会自动前去拾取附近的道具。",
+        "subcategoryIds": [
+          "resource.pickup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "YakushimaMonster003_Purple": [
+      {
+        "text": "若它在队伍中，就会出现在玩家身边。\n它会自动前去拾取附近的道具。",
+        "subcategoryIds": [
+          "resource.pickup"
+        ],
+        "tagIds": []
+      }
+    ],
+    "YakushimaBoss001": [
+      {
+        "text": "发动后，克苏鲁之眼会向前方突进并攻击锁定的敌人。",
+        "subcategoryIds": [
+          "combat.active_attack"
+        ],
+        "tagIds": []
+      }
+    ],
+    "YakushimaBoss001_Small": [
+      {
+        "text": "若它在队伍中，暗属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
+        "subcategoryIds": [
+          "pal.element_stats"
+        ],
+        "tagIds": []
+      }
+    ],
+    "BOSS_Sekhmet": [
+      {
+        "text": "若它在据点里，据点中的阿努比斯的工作速度提升(20~40)%。（不可叠加）",
+        "subcategoryIds": [
+          "base.work_speed",
+          "pal.named_synergy"
+        ],
+        "tagIds": []
+      },
+      {
+        "text": "塞赫麦特在工作台或作业工厂等处工作时，工作效率将会提升(200~400)%。",
+        "subcategoryIds": [
+          "base.work_speed"
+        ],
+        "tagIds": []
+      }
+    ]
+  }
+}

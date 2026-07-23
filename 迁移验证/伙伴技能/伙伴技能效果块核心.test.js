@@ -1,4 +1,6 @@
 const assert = require('assert');
+const fs = require('fs');
+const path = require('path');
 const {
     unique,
     blockCapabilityIds,
@@ -162,6 +164,76 @@ assert.throws(function() {
     assert.match(error.message, /文本不能为空/);
     assert.match(error.message, /引用未知下级分类: unknown\.subcategory/);
     return true;
+});
+
+const formalPath = path.join(__dirname, '..', '..', 'PalToolbox', '游戏内容', '幻兽帕鲁1.0', '数据包', '伙伴技能.json');
+const definitionsPath = path.join(__dirname, '伙伴技能效果块.json');
+const formal = JSON.parse(fs.readFileSync(formalPath, 'utf8'));
+assert.strictEqual(formal.catalog.length, 301, '正式 catalog 应有 301 条记录');
+
+const fullDefinitions = JSON.parse(fs.readFileSync(definitionsPath, 'utf8'));
+assert.deepStrictEqual(
+    Object.keys(fullDefinitions.partnerSkills).sort(),
+    formal.catalog.map(function(item) { return item.palId; }).sort(),
+    '效果块 partnerSkills 键集合必须精确覆盖正式 catalog 的 palId'
+);
+
+assert.deepStrictEqual(fullDefinitions.meta, {
+    dataRole: 'standard-effect-blocks',
+    verifiedAt: '2026-07-23',
+    gameVersion: 'v1.0.0',
+    transformVersion: '1.6.0',
+    description: '伙伴技能描述分块与分类标签对应关系；逐条人工复核，不供页面直接读取。'
+});
+
+const fullResult = applyEffectBlocks({
+    partnerSkills: formal.partnerSkills,
+    catalog: formal.catalog,
+    taxonomy: formal.taxonomy,
+    definitions: fullDefinitions
+});
+assert.strictEqual(fullResult.catalog.length, 301, '全量应用后应保留 301 条 catalog');
+
+const expectedKendoFrogBlocks = [{
+    text: '发动后，武道蛙会靠忠诚心和膨胀的腹部积蓄力量。玩家在踩上去后能高高跳起。',
+    subcategoryIds: ['move.special'],
+    tagIds: []
+}, {
+    text: '在落地前，玩家的攻击力提升(50~86)%。',
+    subcategoryIds: ['player.attack'],
+    tagIds: []
+}];
+const expectedDarkKendoFrogBlocks = [{
+    text: '发动后，极道蛙会靠忠诚心和膨胀的腹部积蓄力量。玩家在踩上去后能高高跳起。',
+    subcategoryIds: ['move.special'],
+    tagIds: []
+}, {
+    text: '若它在队伍中，玩家和帕鲁以暗属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）',
+    subcategoryIds: ['player.weakspot', 'pal.active_stats'],
+    tagIds: []
+}];
+assert.deepStrictEqual(fullResult.partnerSkills.KendoFrog.effectBlocks, expectedKendoFrogBlocks);
+assert.deepStrictEqual(fullResult.partnerSkills.KendoFrog_Dark.effectBlocks, expectedDarkKendoFrogBlocks);
+
+formal.catalog.forEach(function(item) {
+    const blocks = fullDefinitions.partnerSkills[item.palId];
+    const actual = fullResult.partnerSkills[item.palId];
+    assert.ok(Array.isArray(actual.effectBlocks) && actual.effectBlocks.length > 0, item.palId + ' 应有至少一个效果块');
+    assert.strictEqual(
+        actual.description,
+        blocks.map(function(block) { return block.text.trim(); }).join('\n'),
+        item.palId + ' 的 description 应由效果块按顺序合成'
+    );
+    assert.deepStrictEqual(
+        unique(blocks.flatMap(function(block) { return block.subcategoryIds; })).sort(),
+        unique(item.usageSubcategoryIds).sort(),
+        item.palId + ' 的下级分类并集必须与 catalog 一致'
+    );
+    assert.deepStrictEqual(
+        unique(blocks.flatMap(function(block) { return block.tagIds; })).sort(),
+        unique(item.usageTagIds).sort(),
+        item.palId + ' 的精确标签并集必须与 catalog 一致'
+    );
 });
 
 console.log('伙伴技能效果块核心测试通过');
