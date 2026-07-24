@@ -195,9 +195,9 @@ assert.deepStrictEqual(
 
 assert.deepStrictEqual(fullDefinitions.meta, {
     dataRole: 'standard-effect-blocks',
-    verifiedAt: '2026-07-23',
+    verifiedAt: '2026-07-25',
     gameVersion: 'v1.0.0',
-        transformVersion: '1.9.0',
+        transformVersion: '1.9.1',
     description: '伙伴技能描述分块与分类标签对应关系；逐条人工复核，不供页面直接读取。'
 });
 

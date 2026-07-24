@@ -34,7 +34,7 @@ assert.ok(
 assert.strictEqual(classification.meta.classificationMethod, 'manual-entry-by-entry-review', '正式分类必须明确记录为逐条人工复核');
 assert.strictEqual(classification.meta.reviewedCatalogCount, catalogIds.length, '逐条人工复核数量必须覆盖完整目录');
 assert.strictEqual(classification.meta.reviewedAssignmentCount, Object.keys(classification.assignments).length, '人工复核记录数必须与正式分类记录一致');
-assert.strictEqual(classification.meta.classificationVersion, '2.4.0', '骑乘移动速度反查补漏后必须更新正式分类版本');
+assert.strictEqual(classification.meta.classificationVersion, '2.4.1', '瞅什魔移出特殊机动后必须更新正式分类版本');
 assert.ok(!fs.existsSync(path.join(__dirname, '\u751f\u6210\u4f19\u4f34\u6280\u80fd\u5206\u7c7b.js')), '不得保留根据描述自动推断分类的生成器');
 
 const index = buildClassificationIndex(classification);
@@ -206,7 +206,7 @@ assert.ok(hasSubcategory('KingAlpaca', 'pal.party_move_speed'), '君王美露帕
 assert.ok(hasSubcategory('GhostBeast', 'pal.active_skill_cooldown'), '噬魂兽缩短主动技能冷却必须单独分类');
 assert.ok(hasSubcategory('SleeveRabbit', 'pal.partner_skill_cooldown'), '兔绣袖缩短伙伴技能冷却必须单独分类');
 assert.ok(hasSubcategory('NegativeKoala', 'base.work_speed'), '瞅什魔的自身工作速度提升必须进入据点工作速度筛选');
-assert.ok(hasSubcategory('NegativeKoala', 'move.special'), '瞅什魔发动后的自身移速提升必须进入特殊机动筛选');
+assert.ok(!hasSubcategory('NegativeKoala', 'move.special'), '瞅什魔的自身移速提升不作为可筛选的特殊机动标签');
 assert.ok(hasSubcategory('JellyfishFairy', 'base.work_speed'), '海月仙的据点工作速度提升不得留在战斗强化');
 assert.ok(hasSubcategory('Sekhmet', 'base.work_speed'), '塞赫麦特的据点工作速度提升不得留在战斗强化');
 assert.deepStrictEqual(palsInSubcategory('combat.active_attack'), [

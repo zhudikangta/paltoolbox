@@ -1,9 +1,9 @@
 {
   "meta": {
     "source": "本站逐条人工用途分类，依据伙伴技能标准事实整理",
-    "classifiedAt": "2026-07-22",
+    "classifiedAt": "2026-07-25",
     "gameVersion": "v1.0.0",
-    "classificationVersion": "2.4.0",
+    "classificationVersion": "2.4.1",
     "transformVersion": "1.4.0",
     "classificationMethod": "manual-entry-by-entry-review",
     "reviewedCatalogCount": 301,
@@ -1070,8 +1070,7 @@
     "NegativeKoala": {
       "subcategoryIds": [
         "base.ranch",
-        "base.work_speed",
-        "move.special"
+        "base.work_speed"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"

@@ -3,7 +3,7 @@ const data = require('../../PalToolbox/游戏内容/幻兽帕鲁1.0/数据包/�
 
 assert.ok(data.meta.effectBlocks, '正式数据必须记录效果块生成元数据');
 assert.strictEqual(data.meta.effectBlocks.records, 301);
-assert.strictEqual(data.meta.effectBlocks.transformVersion, '1.9.0');
+assert.strictEqual(data.meta.effectBlocks.transformVersion, '1.9.1');
 assert.strictEqual(data.partnerSkills.KendoFrog.effectBlocks.length, 2);
 assert.strictEqual(data.partnerSkills.KendoFrog_Dark.effectBlocks.length, 2);
 assert.ok(

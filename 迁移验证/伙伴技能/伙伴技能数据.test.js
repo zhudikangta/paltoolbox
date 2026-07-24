@@ -418,7 +418,7 @@ assert.deepStrictEqual(moonLordData.catalog, [], '特殊帕鲁没有伙伴技能
 const formal = JSON.parse(fs.readFileSync(formalFile, 'utf8'));
 assert.ok(formal.meta.effectBlocks, '正式数据必须记录效果块生成元数据');
 assert.strictEqual(formal.meta.effectBlocks.records, 301);
-assert.strictEqual(formal.meta.effectBlocks.transformVersion, '1.9.0');
+assert.strictEqual(formal.meta.effectBlocks.transformVersion, '1.9.1');
 assert.strictEqual(formal.partnerSkills.KendoFrog.effectBlocks.length, 2);
 assert.strictEqual(formal.partnerSkills.KendoFrog_Dark.effectBlocks.length, 2);
 assert.ok(

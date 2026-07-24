@@ -1,9 +1,9 @@
 {
   "meta": {
     "dataRole": "standard-effect-blocks",
-    "verifiedAt": "2026-07-23",
+    "verifiedAt": "2026-07-25",
     "gameVersion": "v1.0.0",
-    "transformVersion": "1.9.0",
+    "transformVersion": "1.9.1",
     "description": "伙伴技能描述分块与分类标签对应关系；逐条人工复核，不供页面直接读取。"
   },
   "partnerSkills": {
@@ -212,8 +212,7 @@
       {
         "text": "发动后，瞅什魔会大量饮用能量饮料，瞅什魔的移动速度和工作速度会因此提升(100~900)%。",
         "subcategoryIds": [
-          "base.work_speed",
-          "move.special"
+          "base.work_speed"
         ],
         "tagIds": []
       },
