@@ -2910,7 +2910,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Fire_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒火属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -7724,7 +7724,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Dark_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒暗属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -8005,7 +8005,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Earth_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒地属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -8049,7 +8049,7 @@
           "columns": [
             {
               "key": "ElementAddDrop_Earth_1_PAL",
-              "label": "掉落量提升",
+              "label": "击倒地属性帕鲁掉落道具增加",
               "unit": "%"
             }
           ],
@@ -11001,7 +11001,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Thunder_1_PAL",
-            "label": "防御力提升",
+            "label": "击倒雷属性帕鲁掉落道具增加",
             "unit": "%"
           },
           {
@@ -12114,7 +12114,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Leaf_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒草属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -13827,7 +13827,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Dragon_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒龙属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -18330,7 +18330,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Ice_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒冰属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -24314,7 +24314,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Thunder_1_PAL",
-            "label": "防御力提升",
+            "label": "击倒雷属性帕鲁掉落道具增加",
             "unit": "%"
           },
           {
@@ -25062,7 +25062,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Normal_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒无属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -27285,7 +27285,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Fire_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒火属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -28585,7 +28585,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Ice_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒冰属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -38262,7 +38262,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Dark_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒暗属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -39359,7 +39359,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Fire_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒火属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -43868,7 +43868,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Earth_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒地属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -43912,7 +43912,7 @@
           "columns": [
             {
               "key": "ElementAddDrop_Earth_1_PAL",
-              "label": "掉落量提升",
+              "label": "击倒地属性帕鲁掉落道具增加",
               "unit": "%"
             }
           ],
@@ -44769,7 +44769,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Leaf_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒草属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -45380,7 +45380,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Normal_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒无属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -46380,7 +46380,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Thunder_1_PAL",
-            "label": "防御力提升",
+            "label": "击倒雷属性帕鲁掉落道具增加",
             "unit": "%"
           },
           {
@@ -46916,7 +46916,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Dragon_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒龙属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -49190,7 +49190,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Thunder_1_PAL",
-            "label": "防御力提升",
+            "label": "击倒雷属性帕鲁掉落道具增加",
             "unit": "%"
           },
           {
@@ -50246,7 +50246,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Ice_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒冰属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -50308,7 +50308,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Ice_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒冰属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -50638,7 +50638,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Fire_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒火属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -53739,7 +53739,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Dark_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒暗属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],
@@ -55551,7 +55551,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Thunder_1_PAL",
-            "label": "防御力提升",
+            "label": "击倒雷属性帕鲁掉落道具增加",
             "unit": "%"
           },
           {
@@ -57199,7 +57199,7 @@
         "columns": [
           {
             "key": "ElementAddDrop_Dark_1_PAL",
-            "label": "掉落量提升",
+            "label": "击倒暗属性帕鲁掉落道具增加",
             "unit": "%"
           }
         ],

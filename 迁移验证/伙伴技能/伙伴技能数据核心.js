@@ -75,7 +75,7 @@ const PARTNER_PARAMETER_LABELS = {
 
 const ELEMENT_LABELS = {
     Normal: '无', Fire: '火', Water: '水', Leaf: '草', Grass: '草',
-    Electricity: '雷', Electric: '雷', Ice: '冰', Earth: '地', Ground: '地',
+    Electricity: '雷', Electric: '雷', Thunder: '雷', Ice: '冰', Earth: '地', Ground: '地',
     Dark: '暗', Dragon: '龙'
 };
 
@@ -152,6 +152,10 @@ function parameterPresentation(key, context) {
         return { label: '滑行速度', unit: '' };
     }
     if (key === 'MainValue') return descriptionPresentation(context);
+    if (/^ElementAddDrop_/i.test(key)) {
+        const element = elementFromKey(key);
+        return { label: '击倒' + (element ? ELEMENT_LABELS[element] : '对应') + '属性帕鲁掉落道具增加', unit: '%' };
+    }
     if (/MaxInventoryWeight/i.test(key)) return { label: '负重上限增加', unit: '' };
     if (/FallDamageInvalid/i.test(key)) return { label: '坠落伤害免疫', unit: '' };
     if (/LavaDamageInvalid/i.test(key)) return { label: '熔岩伤害免疫', unit: '' };

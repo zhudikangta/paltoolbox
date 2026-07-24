@@ -210,6 +210,26 @@ assert.deepStrictEqual(
     '同一参数写成两个逗号分隔值时，也必须保留逐星数值'
 );
 
+const thunderDropWithPlayerDefense = parseDetailPartnerSkill(
+    fixture('透明化等级表片段.html')
+        .replace(/LizardMan/g, 'DarkScorpion')
+        .replace(/透明化/g, '钢铁之蝎')
+        .replace('发动后<span>(10~20)</span>秒内变得透明。', '若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。')
+        .replace(/<table class="table">[\s\S]*?<\/table>/, '<table class="table"><thead><tr><th>level<th>value<tbody>' +
+            '<tr><td>1<td><div>ElementAddDrop_Thunder_1_PAL 40</div><div>TrainerDEF_UP_PartnerSkill_Otomo 5</div>' +
+            '<tr><td>2<td><div>ElementAddDrop_Thunder_1_PAL 50</div><div>TrainerDEF_UP_PartnerSkill_Otomo 6</div>' +
+            '<tr><td>3<td><div>ElementAddDrop_Thunder_1_PAL 60</div><div>TrainerDEF_UP_PartnerSkill_Otomo 7</div>' +
+            '<tr><td>4<td><div>ElementAddDrop_Thunder_1_PAL 70</div><div>TrainerDEF_UP_PartnerSkill_Otomo 8</div>' +
+            '<tr><td>5<td><div>ElementAddDrop_Thunder_1_PAL 80</div><div>TrainerDEF_UP_PartnerSkill_Otomo 10</div></table>'),
+    'DarkScorpion',
+    'https://paldb.cc/cn/DarkScorpion'
+);
+assert.deepStrictEqual(
+    thunderDropWithPlayerDefense.rankTable.columns.map(function(column) { return column.label; }),
+    ['击倒雷属性帕鲁掉落道具增加', '玩家防御力提升'],
+    '雷属性掉落字段不能被同段里的玩家防御力描述误判为防御力提升'
+);
+
 const localizedSkillTable = parseDetailPartnerSkill(
     fixture('透明化等级表片段.html')
         .replace(/LizardMan/g, 'WingGolem')
