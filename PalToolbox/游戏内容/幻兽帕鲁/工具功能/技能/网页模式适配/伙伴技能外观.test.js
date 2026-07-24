@@ -24,23 +24,19 @@ assert.ok(!source.includes('partnerExpandedGroups = { move: true }'), '移动与
 assert.ok(source.includes('getPartnerFacetGroupCounts'), '折叠大类必须读取按帕鲁去重的动态总数');
 assert.ok(source.includes('sk-partner-filter-group-count'), '折叠大类标题必须始终渲染总数');
 
-assert.ok(source.includes('applyPartnerFrameMask'), '孔洞必须直接应用到最底层大卡片');
+assert.ok(source.includes('applyPartnerFrameMask'), '唯一大底板必须直接挂在最外层框内');
+assert.ok(source.includes('sk-partner-frame-holes'), '唯一大底板必须使用全框孔洞遮罩');
 assert.ok(source.includes('.sk-partner-card-cell'), '右栏必须逐个读取伙伴技能槽位');
 assert.ok(
-    source.includes('.sk-partner-sidebar-block, .sk-partner-filter-group'),
-    '左栏必须逐个读取搜索块和功能分类'
+    !source.includes('partner-sidebar-clip'),
+    '筛选区移除独立底板后，不能再生成左栏孔洞遮罩'
 );
-assert.ok(source.includes("querySelector('.sk-partner-browser')"), '唯一孔洞遮罩必须挂在最底层大卡片');
+assert.ok(source.includes("querySelector('.sk-partner-results')"), '右侧孔洞必须以右侧滚动区为坐标来源');
 assert.ok(source.includes('sk-partner-frame-mask-svg'), '最底层大卡片必须保存一个持久的内联 SVG 遮罩');
-assert.ok(source.includes('data-sk-partner-mask-scroll-group'), '左右滚动区必须各自拥有可平移的持久孔洞组');
-assert.ok(source.includes("setAttribute('transform'"), '内容滚动时必须只平移现有孔洞组');
-assert.ok(source.includes('schedulePartnerFrameMaskScroll'), '滚动更新必须与布局重建分开调度');
-assert.ok(!source.includes("schedulePartnerFrameMask(targetRoot, false)"), '滚动时不能再调度整张遮罩重建');
-assert.ok(!source.includes("style.setProperty('--sk-partner-frame-mask'"), '滚动期间不能再写入 data URL 遮罩');
-assert.ok(!source.includes("'--sk-partner-sidebar-mask'"), '不能保留左侧中间挖洞板');
-assert.ok(!source.includes("'--sk-partner-results-mask'"), '不能保留右侧中间挖洞板');
-assert.ok(source.includes("addEventListener('scroll'"), '左右内容滚动时必须同步最底层大卡片的孔洞');
-assert.ok(!source.includes('getBoundingClientRect()'), '孔洞不能在滚动时触发布局测量');
+assert.ok(source.includes('data-sk-partner-mask-scroll-group="results"'), '右侧卡片滚动时必须只平移已有的结果孔洞');
+assert.ok(source.includes('schedulePartnerFrameMaskScroll'), '右侧滚动必须单独调度孔洞平移');
+assert.ok(source.includes("results.addEventListener('scroll'"), '只能在右侧展示区滚动时同步结果孔洞');
+assert.ok(!source.includes('getBoundingClientRect()'), '孔洞生成不能触发布局测量');
 assert.ok(!source.includes('clipped ? 0 : 7'), '孔洞圆角不能在视口边缘被强制清零');
 
 assert.ok(source.includes('getPartnerEffectBlockModels'), '卡片必须读取效果块显示模型');
@@ -79,14 +75,16 @@ assert.ok(
     '最外层容器必须透明并建立唯一大卡片的绘制层'
 );
 assert.ok(
-    /\.sk-partner-browser::after\{[^}]*--pd-frame-bg[^}]*mask-image:url\("#sk-partner-frame-holes"\)/.test(css),
-    '唯一的大卡片表面必须直接使用统一孔洞遮罩'
+    /\.sk-partner-browser::before\{[^}]*--pd-frame-bg[^}]*backdrop-filter:blur\(var\(--pd-frame-bug-blur/.test(css),
+    '贯穿全框的大底板必须复用大卡片材质和底层防 bug 模糊度'
 );
 assert.ok(/\.sk-partner-frame-mask-svg\{[^}]*width:0[^}]*height:0/.test(css), '持久 SVG 只能保存遮罩定义，不能占用页面布局');
 assert.ok(!/\.sk-partner-browser\{[^}]*inset 0 -10px 22px/.test(css), '伙伴技能大卡片不能额外叠加固定黑色内阴影');
 assert.ok(!/\.sk-partner-browser\{[^}]*0 12px 34px rgba\(0,0,0/.test(css), '伙伴技能大卡片不能额外叠加固定黑色外阴影');
-assert.ok(!/\.sk-partner-filter-stack::after\{/.test(css), '左栏不能再绘制中间挖洞板');
-assert.ok(!/\.sk-partner-results-stack::after\{/.test(css), '右栏不能再绘制中间挖洞板');
+assert.ok(/\.sk-partner-browser::before\{[^}]*sk-partner-frame-holes/.test(css), '大底板必须在最外层框内挖结果区孔洞');
+assert.ok(/\.sk-partner-browser::before\{[^}]*inset:0/.test(css), '大底板必须贴满最外层框的四边');
+assert.ok(!/\.sk-partner-filter-stack::before\{/.test(css), '筛选区不能保留独立底板');
+assert.ok(!/\.sk-partner-results-stack::before\{/.test(css), '结果区不能再保留会被滚动容器裁掉的底板');
 assert.ok(/\.sk-partner-card-wall\{[^}]*background:transparent/.test(css), '结果网格本体必须透明');
 assert.ok(!/\.sk-partner-card-cell\{[^}]*--pd-frame-bg/.test(css), '单张卡片槽位不能拥有独立外框');
 assert.ok(/\.sk-partner-card\{[^}]*--pd-cube-bg/.test(css), '卡片必须使用图鉴卡片外观变量');
@@ -124,8 +122,12 @@ assert.ok(
 );
 
 assert.ok(
-    /\.sk-partner-filter-sidebar\{[^}]*padding-right:18px[^}]*scrollbar-width:none/.test(css),
-    '筛选栏必须预留自绘滚动条位置并隐藏原生滚动条'
+    /\.sk-partner-filter-sidebar\{[^}]*padding:8px 18px 8px 8px[^}]*scrollbar-width:none/.test(css),
+    '筛选栏必须保留原有内边距和自绘滚动条预留区'
+);
+assert.ok(
+    /\.sk-partner-results\{[^}]*padding:8px 8px 12px/.test(css),
+    '结果区必须保留原有内边距，视觉位置不能变化'
 );
 assert.ok(/\.sk-partner-filter-sidebar::-webkit-scrollbar\{[^}]*width:0/.test(css), '必须隐藏 Chromium 原生滚动条');
 assert.ok(source.includes('PT_initCustomScrollbars'), '必须复用 Dock 自绘滚动条');

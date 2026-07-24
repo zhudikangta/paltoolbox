@@ -76,6 +76,7 @@ var PT_SKILL_WEB = (function() {
             '--pd-frame-before-opacity': frame.beforeOpacity || '0',
             '--pd-frame-glass-glow': frame.glassGlowShadow || 'none',
             '--pd-frame-metal-shadow': frame.metalShadow || 'none',
+            '--pd-frame-bug-blur': frame.bugBlur || '18px',
             '--pd-cube-bg': cube.bg || 'rgba(20,38,58,.42)',
             '--pd-cube-border': cube.border || 'rgba(255,255,255,.14)',
             '--pd-cube-glow': cube.glow || cube.beamGlow || 'rgba(120,210,255,.26)',
@@ -120,11 +121,11 @@ var PT_SKILL_WEB = (function() {
         return { left: left, top: top };
     }
 
-    function buildPartnerFrameMaskRegionLayout(frame, scroller, selector, clipId, key) {
+    function buildPartnerFrameMaskRegionLayout(frame, scroller) {
         if (!frame || !scroller) return null;
         var scrollerOffset = getPartnerOffsetWithin(scroller, frame);
         if (!scrollerOffset) return null;
-        var holes = Array.prototype.map.call(scroller.querySelectorAll(selector), function(element) {
+        var holes = Array.prototype.map.call(scroller.querySelectorAll('.sk-partner-results-meta, .sk-partner-card-cell, .sk-partner-no-results'), function(element) {
             var offset = getPartnerOffsetWithin(element, frame);
             if (!offset || !element.clientWidth || !element.clientHeight) return null;
             return {
@@ -136,8 +137,6 @@ var PT_SKILL_WEB = (function() {
         }).filter(Boolean);
         return {
             scroller: scroller,
-            clipId: clipId,
-            key: key,
             clipX: scrollerOffset.left + scroller.clientLeft,
             clipY: scrollerOffset.top + scroller.clientTop,
             clipWidth: scroller.clientWidth,
@@ -149,29 +148,15 @@ var PT_SKILL_WEB = (function() {
     function buildPartnerFrameMaskLayout(targetRoot) {
         if (!targetRoot) return null;
         var frame = targetRoot.querySelector('.sk-partner-browser');
-        if (!frame || !frame.clientWidth || !frame.clientHeight) return null;
-        var sidebar = frame.querySelector('.sk-partner-filter-sidebar');
-        var results = frame.querySelector('.sk-partner-results');
+        var results = frame ? frame.querySelector('.sk-partner-results') : null;
+        if (!frame || !results || !frame.clientWidth || !frame.clientHeight) return null;
+        var region = buildPartnerFrameMaskRegionLayout(frame, results);
+        if (!region) return null;
         return {
             frame: frame,
             width: frame.clientWidth,
             height: frame.clientHeight,
-            regions: [
-                buildPartnerFrameMaskRegionLayout(
-                    frame,
-                    sidebar,
-                    '.sk-partner-sidebar-block, .sk-partner-filter-group, .sk-partner-filter-empty',
-                    'partner-sidebar-clip',
-                    'sidebar'
-                ),
-                buildPartnerFrameMaskRegionLayout(
-                    frame,
-                    results,
-                    '.sk-partner-results-meta, .sk-partner-card-cell, .sk-partner-no-results',
-                    'partner-results-clip',
-                    'results'
-                )
-            ].filter(Boolean)
+            region: region
         };
     }
 
@@ -182,22 +167,20 @@ var PT_SKILL_WEB = (function() {
                 '" rx="7" ry="7"/>';
         }).join('');
         return {
-            clip: '<clipPath id="' + region.clipId + '"><rect x="' + region.clipX + '" y="' + region.clipY +
+            clip: '<clipPath id="sk-partner-results-clip"><rect x="' + region.clipX + '" y="' + region.clipY +
                 '" width="' + region.clipWidth + '" height="' + region.clipHeight + '"/></clipPath>',
-            holes: '<g clip-path="url(#' + region.clipId + ')"><g fill="black" data-sk-partner-mask-scroll-group="' +
-                region.key + '" transform="translate(' + (-region.scroller.scrollLeft) + ' ' + (-region.scroller.scrollTop) + ')">' +
-                holes + '</g></g>'
+            holes: '<g clip-path="url(#sk-partner-results-clip)"><g fill="black" data-sk-partner-mask-scroll-group="results" transform="translate(' +
+                (-region.scroller.scrollLeft) + ' ' + (-region.scroller.scrollTop) + ')">' + holes + '</g></g>'
         };
     }
 
     function updatePartnerFrameMaskScroll(targetRoot) {
         var frame = targetRoot ? targetRoot.querySelector('.sk-partner-browser') : null;
         if (!frame || !partnerFrameMaskLayout || partnerFrameMaskLayout.frame !== frame) return;
-        partnerFrameMaskLayout.regions.forEach(function(region) {
-            var group = frame.querySelector('[data-sk-partner-mask-scroll-group="' + region.key + '"]');
-            if (!group) return;
-            group.setAttribute('transform', 'translate(' + (-region.scroller.scrollLeft) + ' ' + (-region.scroller.scrollTop) + ')');
-        });
+        var region = partnerFrameMaskLayout.region;
+        var group = frame.querySelector('[data-sk-partner-mask-scroll-group="results"]');
+        if (!region || !group) return;
+        group.setAttribute('transform', 'translate(' + (-region.scroller.scrollLeft) + ' ' + (-region.scroller.scrollTop) + ')');
     }
 
     function applyPartnerFrameMask(targetRoot, rebuildLayout) {
@@ -209,11 +192,10 @@ var PT_SKILL_WEB = (function() {
         var frameLayout = partnerFrameMaskLayout;
         var defs = frame.querySelector('.sk-partner-frame-mask-svg defs');
         if (!defs) return;
-        var regions = frameLayout.regions.map(renderPartnerFrameMaskRegion);
-        defs.innerHTML = regions.map(function(region) { return region.clip; }).join('') +
-            '<mask id="sk-partner-frame-holes" maskUnits="userSpaceOnUse" x="0" y="0" width="' + frameLayout.width + '" height="' + frameLayout.height + '">' +
+        var rendered = renderPartnerFrameMaskRegion(frameLayout.region);
+        defs.innerHTML = rendered.clip + '<mask id="sk-partner-frame-holes" maskUnits="userSpaceOnUse" x="0" y="0" width="' + frameLayout.width + '" height="' + frameLayout.height + '">' +
             '<rect x="0" y="0" width="' + frameLayout.width + '" height="' + frameLayout.height + '" fill="white"/>' +
-            regions.map(function(region) { return region.holes; }).join('') + '</mask>';
+            rendered.holes + '</mask>';
     }
 
     function schedulePartnerFrameMask(targetRoot, rebuildLayout) {
@@ -263,14 +245,12 @@ var PT_SKILL_WEB = (function() {
 
     function initPartnerFrameMaskScroll(targetRoot) {
         if (!targetRoot) return;
-        ['.sk-partner-filter-sidebar', '.sk-partner-results'].forEach(function(selector) {
-            var scroller = targetRoot.querySelector(selector);
-            if (!scroller || scroller.dataset.skPartnerMaskScrollBound === '1') return;
-            scroller.dataset.skPartnerMaskScrollBound = '1';
-            scroller.addEventListener('scroll', function() {
-                schedulePartnerFrameMaskScroll(targetRoot);
-            }, { passive: true });
-        });
+        var results = targetRoot.querySelector('.sk-partner-results');
+        if (!results || results.dataset.skPartnerMaskScrollBound === '1') return;
+        results.dataset.skPartnerMaskScrollBound = '1';
+        results.addEventListener('scroll', function() {
+            schedulePartnerFrameMaskScroll(targetRoot);
+        }, { passive: true });
     }
 
     function initPartnerScrollbars(targetRoot) {
