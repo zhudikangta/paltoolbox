@@ -23,6 +23,9 @@ assert.ok(source.includes('data-sk-partner-clear-filters'), '已选条件必须�
 assert.ok(source.includes('partnerFacetSelections'), '快速浏览与组合查询必须共用一份分面选择状态');
 assert.ok(source.includes('facetSelections: partnerFacetSelections'), '页面必须把按筛面分组的选择交给核心层');
 assert.ok(source.includes('getPartnerFacetCounts'), '每个筛选项必须显示当前其他条件下的动态数量');
+assert.ok(source.includes('var groupEmpty = groupCount === 0 && !hasSelection;'), '总数为 0 且没有已选项的折叠组必须进入空状态');
+assert.ok(source.includes('sk-partner-filter-group--empty'), '空折叠组必须带有专用变暗样式');
+assert.ok(!source.includes("if (partnerGroupToggle.disabled) return;"), '空折叠组仍必须允许用户展开或收起');
 assert.ok(source.includes('getPartnerSelectedFilters'), '顶部已选条件必须独立于筛选项搜索结果');
 assert.ok(!source.includes('sk-partner-filter-summary'), '结果区不应保留冗余的筛选规则提示');
 assert.ok(!source.includes('所选条件必须全部满足'), '结果区不应重复解释交集筛选规则');
@@ -40,6 +43,8 @@ assert.ok(/\.sk-partner-avatar\{[^}]*width:48px[^}]*height:48px/.test(css), '伙
 assert.ok(/\.sk-partner-browser\{[^}]*display:grid/.test(css), '伙伴技能页必须使用固定侧栏与结果区双栏布局');
 assert.ok(/\.sk-partner-filter-sidebar\{[^}]*overflow-y:auto/.test(css), '筛选项很多时只能在固定侧栏内部滚动');
 assert.ok(/\.sk-partner-filter-group\{[^}]*border/.test(css), '每个用途大类必须有清楚的折叠分组边界');
+assert.ok(/\.sk-partner-filter-group--empty\{[^}]*opacity:\.48[^}]*cursor:default/.test(css), '总数为 0 的折叠组必须继续变暗');
+assert.ok(/\.sk-partner-filter-group--empty \.sk-partner-filter-group-toggle\{[^}]*cursor:pointer/.test(css), '总数为 0 的折叠组标题仍必须可点击');
 assert.ok(/\.sk-partner-applied\{[^}]*display:flex/.test(css), '结果区上方必须持续展示已选条件');
 assert.ok(/@media \(max-width:900px\)[^{]*\{[^}]*\.sk-partner-browser\{[^}]*grid-template-columns:1fr/.test(css), '窄屏必须退化为单列布局');
 assert.ok(!css.includes('!important'), '伙伴技能样式不能靠 !important 覆盖旧实现');

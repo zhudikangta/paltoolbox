@@ -197,7 +197,7 @@ assert.deepStrictEqual(fullDefinitions.meta, {
     dataRole: 'standard-effect-blocks',
     verifiedAt: '2026-07-23',
     gameVersion: 'v1.0.0',
-    transformVersion: '1.6.0',
+        transformVersion: '1.9.0',
     description: '伙伴技能描述分块与分类标签对应关系；逐条人工复核，不供页面直接读取。'
 });
 
@@ -215,7 +215,7 @@ const expectedKendoFrogBlocks = [{
     tagIds: []
 }, {
     text: '在落地前，玩家的攻击力提升(50~86)%。',
-    subcategoryIds: ['player.attack'],
+    subcategoryIds: ['player.conditional_attack'],
     tagIds: []
 }];
 const expectedDarkKendoFrogBlocks = [{
@@ -224,14 +224,14 @@ const expectedDarkKendoFrogBlocks = [{
     tagIds: []
 }, {
     text: '若它在队伍中，玩家和帕鲁以暗属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）',
-    subcategoryIds: ['player.weakspot', 'pal.active_stats'],
+    subcategoryIds: ['player.weakspot', 'pal.weakspot_damage'],
     tagIds: []
 }];
 assert.deepStrictEqual(fullResult.partnerSkills.KendoFrog.effectBlocks, expectedKendoFrogBlocks);
 assert.deepStrictEqual(fullResult.partnerSkills.KendoFrog_Dark.effectBlocks, expectedDarkKendoFrogBlocks);
 assert.deepStrictEqual(
     classification.assignments.Gorilla_Ground.subcategoryIds,
-    ['pal.self_burst', 'move.player_mobility'],
+    ['pal.self_attack', 'move.player_mobility'],
     '石掌猿的分类标准输入必须同时标记自身爆发和玩家攀爬机动'
 );
 assert.deepStrictEqual(
@@ -241,7 +241,7 @@ assert.deepStrictEqual(
 );
 assert.deepStrictEqual(fullResult.partnerSkills.Gorilla_Ground.effectBlocks, [{
     text: '发动后会解放野性之力，并在一定时间内石掌猿的攻击力将提升(75~300)%。',
-    subcategoryIds: ['pal.self_burst'],
+    subcategoryIds: ['pal.self_attack'],
     tagIds: []
 }, {
     text: '若它在队伍中，玩家的攀爬速度提升(50~100)%。（不可叠加）',
@@ -255,11 +255,11 @@ assert.deepStrictEqual(fullResult.partnerSkills.IceCrocodile.effectBlocks, [{
 }], '肚肚鳄的同一前提效果块必须同时保留减重和保鲜分类');
 assert.deepStrictEqual(fullResult.partnerSkills.BlackGriffon.effectBlocks, [{
     text: '可骑在它的背上在空中飞行。\n且飞行时移动速度会提升。',
-    subcategoryIds: ['move.mount'],
+    subcategoryIds: ['move.mount', 'move.mounted_speed'],
     tagIds: ['mount.flying']
 }, {
     text: '骑乘期间的暗属性攻击将提升(15~30)%。\n科技47',
-    subcategoryIds: ['pal.partner_damage'],
+    subcategoryIds: ['pal.mounted_element_attack'],
     tagIds: []
 }], '异构格里芬的飞行速度必须承接飞行骑乘块，不能保留无标签独立块');
 assert.deepStrictEqual(fullResult.partnerSkills.Deer.effectBlocks, [{
@@ -268,7 +268,7 @@ assert.deepStrictEqual(fullResult.partnerSkills.Deer.effectBlocks, [{
     tagIds: ['mount.ground']
 }, {
     text: '骑乘期间可以进行2段跳跃，破坏树木的效率也会提升(220~500)%。\n科技12',
-    subcategoryIds: ['move.riding_jump', 'resource.gather'],
+    subcategoryIds: ['move.riding_jump', 'resource.logging_efficiency'],
     tagIds: ['jump.double']
 }], 'Deer 的同一骑乘前提连续效果必须保留在同一个块内');
 
@@ -278,7 +278,7 @@ const continuousEffectExpectations = [{
     blockIndex: 0,
     block: {
         text: '若它在队伍中，玩家伐木时造成的伤害将提升(30~50)%，所有木材种类的重量都将减轻(40~60)%。（不可叠加）',
-        subcategoryIds: ['resource.gather', 'resource.weight'],
+        subcategoryIds: ['resource.logging_efficiency', 'resource.weight'],
         tagIds: []
     }
 }, {
@@ -287,7 +287,7 @@ const continuousEffectExpectations = [{
     blockIndex: 0,
     block: {
         text: '若它在队伍中，玩家采矿时造成的伤害将提升(30~60)%，石头的重量将减轻(80~100)%。（不可叠加）',
-        subcategoryIds: ['resource.gather', 'resource.weight'],
+        subcategoryIds: ['resource.mining_efficiency', 'resource.weight'],
         tagIds: []
     }
 }, {
@@ -296,7 +296,7 @@ const continuousEffectExpectations = [{
     blockIndex: 0,
     block: {
         text: '若它在队伍中，硫磺和石炭的重量将减轻(80~100)%，且玩家和帕鲁以地属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）',
-        subcategoryIds: ['resource.weight', 'player.weakspot', 'pal.active_stats'],
+        subcategoryIds: ['resource.weight', 'player.weakspot', 'pal.weakspot_damage'],
         tagIds: []
     }
 }, {
@@ -314,7 +314,7 @@ const continuousEffectExpectations = [{
     blockIndex: 0,
     block: {
         text: '若它在队伍中，投掷出去的帕鲁球将会自动追踪帕鲁，且玩家的负重上限提高(300~600)。（不可叠加）',
-        subcategoryIds: ['capture.sphere', 'resource.capacity'],
+        subcategoryIds: ['capture.sphere_tracking', 'resource.capacity'],
         tagIds: []
     }
 }, {
@@ -332,7 +332,7 @@ const continuousEffectExpectations = [{
     blockIndex: 0,
     block: {
         text: '若它在队伍中，粉粉布偶鲨会帮忙分担负重，背包内武器的重量减轻(60~100)%，且玩家和帕鲁以火属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）',
-        subcategoryIds: ['resource.weight', 'player.weakspot', 'pal.active_stats'],
+        subcategoryIds: ['resource.weight', 'player.weakspot', 'pal.weakspot_damage'],
         tagIds: []
     }
 }, {
@@ -341,7 +341,7 @@ const continuousEffectExpectations = [{
     blockIndex: 0,
     block: {
         text: '若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）',
-        subcategoryIds: ['survival.defense', 'resource.drops'],
+        subcategoryIds: ['survival.defense', 'resource.elemental_drops'],
         tagIds: []
     }
 }, {
@@ -350,7 +350,7 @@ const continuousEffectExpectations = [{
     blockIndex: 0,
     block: {
         text: '若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）',
-        subcategoryIds: ['survival.defense', 'resource.drops'],
+        subcategoryIds: ['survival.defense', 'resource.elemental_drops'],
         tagIds: []
     }
 }, {
@@ -359,7 +359,7 @@ const continuousEffectExpectations = [{
     blockIndex: 1,
     block: {
         text: '若它在队伍中，能让熔岩伤害无效化，且玩家和帕鲁对点燃状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技59',
-        subcategoryIds: ['survival.damage_reduction', 'player.conditional_damage', 'pal.active_stats'],
+        subcategoryIds: ['survival.environmental_hazard_immunity', 'player.conditional_damage', 'pal.status_damage'],
         tagIds: []
     }
 }];

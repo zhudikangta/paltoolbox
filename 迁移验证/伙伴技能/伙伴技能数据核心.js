@@ -370,16 +370,25 @@ function parseGenericRankTable(tableHtml) {
         const cells = tableCells(rowHtml, 'td');
         const rawRank = Number(cells[0]);
         if (!Number.isFinite(rawRank)) return null;
+        const rawValues = columns.map(function(column, index) {
+            return String(cells[index + 1] || '').trim();
+        });
         return {
             rawRank: rawRank,
+            hasSourceValue: rawValues.some(function(rawValue) { return rawValue !== ''; }),
             values: columns.map(function(column, index) {
-                const rawValue = String(cells[index + 1] || '').trim();
-                if (!rawValue) return column.key === 'speed_multiplier' ? 1 : 0;
+                const rawValue = rawValues[index];
+                if (!rawValue) {
+                    if (column.key === 'speed_multiplier') return 1;
+                    if (/^glider_/.test(column.key)) return null;
+                    return 0;
+                }
                 return /^[-+]?\d+(?:\.\d+)?$/.test(rawValue) ? Number(rawValue) : rawValue;
             })
         };
     }).filter(Boolean);
     if (!rawRows.length) return null;
+    if (!rawRows.some(function(row) { return row.hasSourceValue; })) return null;
     const isStarTable = rawRows.length === 5 && rawRows.every(function(row) { return row.rawRank >= 1 && row.rawRank <= 5; });
     rawRows.sort(function(a, b) { return (a.rawRank || 10) - (b.rawRank || 10); });
     return {
@@ -536,6 +545,12 @@ function cloneInternalParameters(source) {
     Object.keys(source || {}).forEach(function(id) {
         result[id] = stableValue(Object.assign({ id: id }, source[id] || {}));
         result[id].id = id;
+        if (Number(result[id].duration) === 1) {
+            delete result[id].duration;
+            result[id].technicalDescription = String(result[id].technicalDescription || '')
+                .replace(/\s*\|\s*持续:\s*1(?:\.0+)?s/g, '')
+                .trim();
+        }
     });
     return result;
 }
@@ -614,6 +629,7 @@ function buildPartnerSkillData(options) {
             hasPartnerSkill: selected ? selected.hasPartnerSkill !== false : !!(sourceSkillName || (selected && selected.description)),
             rankTable: selected && selected.hasPartnerSkill !== false ? selected.rankTable || null : null,
             rankTables: selected && selected.hasPartnerSkill !== false ? selected.rankTables || null : null,
+            researchTables: selected && selected.hasPartnerSkill !== false ? selected.researchTables || null : null,
             category: catalogCategory(pal),
             implementStatus: pal.实装状态 || '',
             basePalId: base && base.id !== pal.id ? base.id : '',

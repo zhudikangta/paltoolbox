@@ -3,7 +3,7 @@ const data = require('../../PalToolbox/游戏内容/幻兽帕鲁1.0/数据包/�
 
 assert.ok(data.meta.effectBlocks, '正式数据必须记录效果块生成元数据');
 assert.strictEqual(data.meta.effectBlocks.records, 301);
-assert.strictEqual(data.meta.effectBlocks.transformVersion, '1.6.0');
+assert.strictEqual(data.meta.effectBlocks.transformVersion, '1.9.0');
 assert.strictEqual(data.partnerSkills.KendoFrog.effectBlocks.length, 2);
 assert.strictEqual(data.partnerSkills.KendoFrog_Dark.effectBlocks.length, 2);
 assert.ok(
@@ -70,6 +70,49 @@ assert.deepStrictEqual(
     '织夜鹿必须按游戏内核对值显示并肩作战帕鲁的攻击力提升'
 );
 
+assert.deepStrictEqual(
+    data.partnerSkills.MushroomDragon_Dark.rankTable.rows.map(function(row) { return row.values; }),
+    [[10], [11.5], [13], [14], [15]],
+    '菇波的 SAN 值下降减缓应显示减缓幅度，不能显示内部负值'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.SleeveRabbit.rankTable.columns,
+    [{ key: 'PartnerSkillCoolTime_Decrease', label: '伙伴技能冷却时间缩短', unit: '%' }],
+    '兔绣袖必须写明伙伴技能冷却时间缩短，而不是冷却时间秒数'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.SleeveRabbit.rankTable.rows.map(function(row) { return row.values; }),
+    [[10], [15], [20], [30], [50]],
+    '兔绣袖应显示冷却缩短幅度，不能显示内部负值'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.GrassMinotaur_Ice.rankTable.columns.map(function(column) { return column.label; }),
+    ['浸湿目标必定冻结'],
+    '冰峰陶洛斯不能展示与描述无关的攻击转草属性表'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.StuffedShark_Fire.rankTable.columns.map(function(column) { return column.label; }),
+    ['指定物资重量减轻', '火属性弱点伤害提升'],
+    '粉粉布偶鲨不能展示与描述无关的攻击转水属性表'
+);
+
+const genericMountedSpeedWithoutDescription = [
+    'HawkBird', 'FlameBuffalo', 'PurpleSpider', 'Serpent', 'FengyunDeeper',
+    'IceDeer', 'AmaterasuWolf', 'Umihebi', 'SaintCentaur', 'BlackCentaur',
+    'Serpent_Ground', 'FengyunDeeper_Electric', 'ThunderDog_Ice',
+    'AmaterasuWolf_Dark', 'Umihebi_Fire'
+];
+genericMountedSpeedWithoutDescription.forEach(function(palId) {
+    const fact = data.partnerSkills[palId];
+    const tables = fact.rankTables || (fact.rankTable ? [fact.rankTable] : []);
+    assert.ok(
+        !tables.some(function(table) {
+            return table.columns.some(function(column) { return column.key === 'MoveSpeed_up_PartnerSkill_Ride_1'; });
+        }),
+        palId + ' 的正文没有骑乘移速效果，不能展示通用骑乘升星参数表'
+    );
+});
+
 const stealth = data.partnerSkills.LizardMan.rankTable;
 assert.deepStrictEqual(stealth.rows.map(function(row) { return row.rank; }), [0, 1, 2, 3, 4]);
 assert.deepStrictEqual(stealth.columns.map(function(column) { return column.label; }), ['冷却时间', '持续时间']);
@@ -121,10 +164,10 @@ assert.strictEqual(data.partnerSkills.BOSS_Gorilla_Ground.source.correction.id, 
 assert.ok(!Object.prototype.hasOwnProperty.call(data.partnerSkills.SheepBall.source, 'correction'), '没有研究修正的帕鲁不应携带空修正字段');
 assert.deepStrictEqual(goriratTerra.effectBlocks.map(function(block) {
     return block.subcategoryIds;
-}), [['pal.self_burst'], ['move.player_mobility']], '石掌猿正式效果块必须分别标记自身爆发和玩家机动');
+}), [['pal.self_attack'], ['move.player_mobility']], '石掌猿正式效果块必须分别标记自身攻击力提升和玩家机动');
 assert.deepStrictEqual(
     data.catalog.find(function(item) { return item.palId === 'Gorilla_Ground'; }).usageSubcategoryIds,
-    ['pal.self_burst', 'move.player_mobility'],
+    ['pal.self_attack', 'move.player_mobility'],
     '石掌猿正式分类索引必须来自修正后的分类标准输入'
 );
 
@@ -140,13 +183,41 @@ assert.deepStrictEqual(
 
 assert.deepStrictEqual(data.partnerSkills.BlackGriffon.effectBlocks, [{
     text: '可骑在它的背上在空中飞行。\n且飞行时移动速度会提升。',
-    subcategoryIds: ['move.mount'],
+    subcategoryIds: ['move.mount', 'move.mounted_speed'],
     tagIds: ['mount.flying']
 }, {
     text: '骑乘期间的暗属性攻击将提升(15~30)%。\n科技47',
-    subcategoryIds: ['pal.partner_damage'],
+    subcategoryIds: ['pal.mounted_element_attack'],
     tagIds: []
-}], '异构格里芬正式效果块不能留下无标签的飞行速度块');
+}], '异构格里芬的骑乘属性攻击提升必须归入帕鲁战斗能力强化');
+
+assert.deepStrictEqual(
+    data.partnerSkills.BlackGriffon.researchTables,
+    [{
+        type: 'measured', title: '骑乘移动速度', rankLabel: '移动方式', sourceLabel: '实测数据',
+        columns: [{ key: 'moveSpeed', label: '移动速度', unit: '' }, { key: 'sprintSpeed', label: '冲刺速度', unit: '' }, { key: 'increase', label: '提升百分比', unit: '' }],
+        rows: [{ rank: '地面移动', values: [850, 1200, '—'] }, { rank: '飞行移动', values: [1100, 1600, '移动 +29.4%；冲刺 +33.3%'] }]
+    }],
+    '异构格里芬必须显示本人实测的地面与飞行移动速度，不得混入星级表'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.FairyDragon.researchTables,
+    [{
+        type: 'measured', title: '骑乘移动速度', rankLabel: '移动方式', sourceLabel: '实测数据',
+        columns: [{ key: 'moveSpeed', label: '移动速度', unit: '' }, { key: 'sprintSpeed', label: '冲刺速度', unit: '' }, { key: 'increase', label: '提升百分比', unit: '' }],
+        rows: [{ rank: '地面移动', values: [630, 800, '—'] }, { rank: '飞行移动', values: [700, 1000, '移动 +11.1%；冲刺 +25%'] }]
+    }],
+    '精灵龙必须显示本人实测的地面与飞行移动速度，不得混入星级表'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.FairyDragon_Water.researchTables,
+    [{
+        type: 'measured', title: '骑乘移动速度', rankLabel: '移动方式', sourceLabel: '实测数据',
+        columns: [{ key: 'moveSpeed', label: '移动速度', unit: '' }, { key: 'sprintSpeed', label: '冲刺速度', unit: '' }, { key: 'increase', label: '提升百分比', unit: '' }],
+        rows: [{ rank: '地面移动', values: [630, 800, '—'] }, { rank: '飞行移动', values: [700, 1000, '移动 +11.1%；冲刺 +25%'] }]
+    }],
+    '水灵龙应按用户确认与精灵龙相同的实测表显示'
+);
 
 const grassRabbitMan = data.partnerSkills.GrassRabbitMan;
 assert.deepStrictEqual(
@@ -163,6 +234,13 @@ assert.deepStrictEqual(
     '踏春兔 0~4 星必须完整保留额外跳跃和额外空中冲刺'
 );
 assert.strictEqual(data.partnerSkills.LongCat.rankTable, null, '喵璐璐的低重力开关不能显示成 1%');
+
+const celarayLuxGlider = data.partnerSkills.FlyingManta_Thunder.rankTables[1];
+assert.deepStrictEqual(
+    celarayLuxGlider.rows.map(function(row) { return row.values; }),
+    [[700, null, 9.5], [850, 0.013, 8], [null, 0.011, 7], [1150, 0.009, null], [1300, 0.007, 3.5]],
+    '雷米儿滑翔表必须原样保留 PalDB 缺失格，不得写成 0'
+);
 
 const deer = data.partnerSkills.Deer;
 const deerGround = data.partnerSkills.Deer_Ground;
@@ -186,7 +264,21 @@ const ordinaryWithoutRankTable = data.catalog.filter(function(item) {
     return fact.hasPartnerSkill !== false && !fact.rankTable && !(fact.rankTables && fact.rankTables.length);
 }).map(function(item) { return item.palId; }).sort();
 assert.deepStrictEqual(ordinaryWithoutRankTable, [
+    'AmaterasuWolf',
+    'AmaterasuWolf_Dark',
+    'BlackCentaur',
+    'FengyunDeeper',
+    'FengyunDeeper_Electric',
+    'FlameBuffalo',
+    'HawkBird',
+    'IceDeer',
     'LongCat',
+    'PurpleSpider',
+    'SaintCentaur',
+    'Serpent_Ground',
+    'ThunderDog_Ice',
+    'Umihebi',
+    'Umihebi_Fire',
     'WorldTreeDragon',
     'YakushimaMonster001',
     'YakushimaMonster001_Blue',
@@ -194,7 +286,7 @@ assert.deepStrictEqual(ordinaryWithoutRankTable, [
     'YakushimaMonster001_Purple',
     'YakushimaMonster001_Rainbow',
     'YakushimaMonster001_Red'
-].sort(), '除固定开关效果、待游戏内核对的冲突数据、未完成条目和不随星级改变的泰拉瑞亚史莱姆外，普通帕鲁都必须有等级表');
+].sort(), '正文没有对应数值效果的通用骑乘升星参数不能伪装成伙伴技能等级表');
 
 assert.ok(
     data.partnerSkills.BlueDragon.rankTable.columns.some(function(column) { return column.label === '骑乘攻击转为水属性'; }),
@@ -220,7 +312,10 @@ Object.keys(data.partnerSkills).forEach(function(palId) {
             }
         });
         table.rows.forEach(function(row) {
-            assert.ok(row.values.every(function(value) { return value !== null && value !== undefined; }), palId + ' 的等级表不应留空');
+            assert.ok(row.values.every(function(value, index) {
+                if (value !== null && value !== undefined) return true;
+                return /^glider_/.test(String(table.columns[index] && table.columns[index].key || ''));
+            }), palId + ' 的等级表只允许保留 PalDB 滑翔原表的空白格');
         });
     });
 });

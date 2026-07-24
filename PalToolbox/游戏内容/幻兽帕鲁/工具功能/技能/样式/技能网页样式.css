@@ -43,6 +43,8 @@
 .sk-partner-filter-group{overflow:hidden;border:1px solid var(--pd-cube-border,rgba(255,255,255,.11));border-radius:9px;background:var(--pd-cube-bg,rgba(20,38,58,.42));background-image:var(--pd-cube-before-background),var(--pd-cube-metal-texture),var(--pd-cube-wood-texture),var(--pd-cube-bg);box-shadow:var(--pd-cube-glass-glow,none),var(--pd-cube-metal-shadow,none),inset 0 1px 0 rgba(255,255,255,.05);backdrop-filter:blur(var(--pd-cube-blur,14px)) saturate(var(--pd-cube-saturate,1.22)) brightness(var(--pd-cube-brightness,1)) contrast(var(--pd-cube-contrast,1)) hue-rotate(var(--pd-cube-hue-rotate,0deg));-webkit-backdrop-filter:blur(var(--pd-cube-blur,14px)) saturate(var(--pd-cube-saturate,1.22)) brightness(var(--pd-cube-brightness,1)) contrast(var(--pd-cube-contrast,1)) hue-rotate(var(--pd-cube-hue-rotate,0deg))}
 .sk-partner-filter-group--open{border-color:rgba(var(--pt-input-accent),.42);box-shadow:var(--pd-cube-metal-shadow,none),inset 0 1px 0 rgba(255,255,255,.08),0 0 0 1px rgba(var(--pt-input-accent),.08)}
 .sk-partner-filter-group-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;padding:10px 11px;border:0;background:linear-gradient(90deg,rgba(255,255,255,.045),transparent);color:var(--pt-text-main);font-size:12px;font-weight:650;cursor:pointer;text-align:left}
+.sk-partner-filter-group--empty{opacity:.48;cursor:default}
+.sk-partner-filter-group--empty .sk-partner-filter-group-toggle{cursor:pointer}
 .sk-partner-filter-group--open .sk-partner-filter-group-toggle{color:rgb(var(--pt-input-accent));border-bottom:1px solid rgba(255,255,255,.07)}
 .sk-partner-filter-group-heading{display:flex;align-items:center;gap:7px;min-width:0}
 .sk-partner-filter-group-count{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:18px;padding:0 6px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(4,14,24,.26);color:var(--pt-text-sub);font-size:10px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
@@ -59,7 +61,7 @@
 .sk-partner-facet-option{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;padding:7px 9px;border:1px solid transparent;border-radius:7px;background:rgba(0,0,0,.08);color:var(--pt-text-sub);font-size:11px;cursor:pointer;text-align:left;transition:background .14s ease,border-color .14s ease,color .14s ease,transform .14s ease}
 .sk-partner-facet-option:hover{background:rgba(255,255,255,.065);color:var(--pt-text-main);transform:translateX(1px)}
 .sk-partner-facet-option--active{border-color:rgba(var(--pt-input-accent),.58);background:rgba(var(--pt-input-accent),.17);color:var(--pt-text-main);box-shadow:inset 3px 0 0 rgb(var(--pt-input-accent))}
-.sk-partner-facet-option--empty{opacity:.48}
+.sk-partner-facet-option--empty{opacity:.48;background:transparent;cursor:default}
 .sk-partner-facet-count{min-width:22px;color:var(--pt-text-sub);font-variant-numeric:tabular-nums;text-align:right}
 .sk-partner-filter-empty{padding:12px 8px;color:var(--pt-text-sub);font-size:11px;text-align:center}
 .sk-partner-applied{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:7px;padding:8px;border:1px solid rgba(var(--pt-input-accent),.26);border-radius:8px;background:rgba(var(--pt-input-accent),.07)}
@@ -108,8 +110,11 @@
 .sk-chain{margin-top:4px;display:flex;flex-direction:column;gap:2px}
 .sk-chain-item{font-size:10px;color:var(--pt-text-sub);padding:2px 8px;border-radius:3px;background:rgba(255,200,100,.06);line-height:1.4}
 .pt-partner-rank-wrap{margin-top:8px;overflow-x:auto}
+.pt-partner-table-title{padding:4px 6px;color:var(--pt-text-main);font-size:10px;font-weight:600;background:rgba(139,92,246,.12);border:1px solid rgba(255,255,255,.07);border-bottom:0;border-radius:5px 5px 0 0;text-align:center}
 .pt-partner-rank-table{width:100%;border-collapse:collapse;font-size:10px;color:var(--pt-text-sub)}
 .pt-partner-rank-table th,.pt-partner-rank-table td{padding:4px 6px;border:1px solid rgba(255,255,255,.07);text-align:center;white-space:nowrap}
+.pt-partner-rank-table--measured{table-layout:fixed;font-size:9px}
+.pt-partner-rank-table--measured th,.pt-partner-rank-table--measured td{padding:4px 3px;white-space:normal;overflow-wrap:anywhere;word-break:break-word;line-height:1.35}
 .pt-partner-rank-table thead th{color:var(--pt-text-main);background:rgba(139,92,246,.12);font-weight:600}
 .pt-partner-rank-table tbody th{color:#b088ff;background:rgba(139,92,246,.06);font-weight:600}
 .sk-group{margin-bottom:14px}

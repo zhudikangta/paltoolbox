@@ -646,6 +646,7 @@ var PT_SKILL_WEB = (function() {
             var effectBlocksHtml = renderPartnerEffectBlocks(p, skillCore);
             var fixedParameterHtml = partnerShowDetails && common && common.renderPartnerFixedParameters ? common.renderPartnerFixedParameters(p) : '';
             var rankTableHtml = partnerShowDetails && common && common.renderPartnerRankTables ? common.renderPartnerRankTables(p.rankTables, p.rankTable) : '';
+            var researchTableHtml = partnerShowDetails && common && common.renderPartnerResearchTables ? common.renderPartnerResearchTables(p.researchTables) : '';
             var avatar = p.iconFile
                 ? '<img class="sk-partner-avatar" src="../游戏内容/幻兽帕鲁1.0/资源包/帕鲁头像/' + p.iconFile + '" loading="lazy" alt="' + palName + '">'
                 : '<span class="sk-partner-avatar sk-partner-avatar--missing" aria-hidden="true">?</span>';
@@ -655,7 +656,7 @@ var PT_SKILL_WEB = (function() {
                 '<div class="sk-partner-pal-row"><strong class="sk-partner-pal-name">' + palName + '</strong></div>' +
                 '<div class="sk-partner-skill-name">伙伴技能：' + name + '</div></div></div>' +
                 effectBlocksHtml +
-                fixedParameterHtml + rankTableHtml + '</article></div>';
+                fixedParameterHtml + rankTableHtml + researchTableHtml + '</article></div>';
         }).join('');
         var categoryChips = availableCategories.map(function(category) {
             return '<button type="button" class="pt-filter-chip pt-filter-chip--sm' + (category === partnerCategory ? ' pt-filter-chip--active' : '') + '" data-sk-partner-category="' + category + '"><span class="pt-filter-chip__label">' + category + '</span></button>';
@@ -675,14 +676,16 @@ var PT_SKILL_WEB = (function() {
                 var optionsHtml = visibleOptions.map(function(option) {
                     var active = selectedIds.indexOf(option.id) > -1;
                     var count = facetCounts[facet.id] && facetCounts[facet.id][option.id];
-                    return '<button type="button" class="sk-partner-facet-option' + (active ? ' sk-partner-facet-option--active' : '') + (count === 0 ? ' sk-partner-facet-option--empty' : '') + '" data-sk-partner-facet-option="' + option.id + '" data-sk-partner-facet-id="' + facet.id + '" aria-pressed="' + (active ? 'true' : 'false') + '"><span>' + option.label + '</span><span class="sk-partner-facet-count">' + (count || 0) + '</span></button>';
+                    var optionEmpty = count === 0 && !active;
+                    return '<button type="button" class="sk-partner-facet-option' + (active ? ' sk-partner-facet-option--active' : '') + (optionEmpty ? ' sk-partner-facet-option--empty' : '') + '" data-sk-partner-facet-option="' + option.id + '" data-sk-partner-facet-id="' + facet.id + '" aria-pressed="' + (active ? 'true' : 'false') + '"' + (optionEmpty ? ' disabled' : '') + '><span>' + option.label + '</span><span class="sk-partner-facet-count">' + (count || 0) + '</span></button>';
                 }).join('');
                 return '<div class="sk-partner-facet"><div class="sk-partner-facet-title">' + facet.label + '</div><div class="sk-partner-facet-options">' + optionsHtml + '</div></div>';
             }).join('');
             if (!facetHtml) return '';
-            var expanded = !!filterNeedle || hasSelection || partnerExpandedGroups[group.id] === true;
             var groupCount = facetGroupCounts[group.id] || 0;
-            return '<section class="sk-partner-filter-group' + (expanded ? ' sk-partner-filter-group--open' : '') + '">' +
+            var groupEmpty = groupCount === 0 && !hasSelection;
+            var expanded = !!filterNeedle || hasSelection || partnerExpandedGroups[group.id] === true;
+            return '<section class="sk-partner-filter-group' + (expanded ? ' sk-partner-filter-group--open' : '') + (groupEmpty ? ' sk-partner-filter-group--empty' : '') + '">' +
                 '<button type="button" class="sk-partner-filter-group-toggle" data-sk-partner-filter-group="' + group.id + '" aria-expanded="' + (expanded ? 'true' : 'false') + '"><span class="sk-partner-filter-group-heading"><span>' + group.label + '</span><span class="sk-partner-filter-group-count">' + groupCount + '</span></span><span class="sk-partner-filter-group-icon">' + (expanded ? '−' : '+') + '</span></button>' +
                 '<div class="sk-partner-filter-group-collapse" aria-hidden="' + (expanded ? 'false' : 'true') + '"' + (expanded ? '' : ' inert') + '><div class="sk-partner-filter-group-collapse-inner"><div class="sk-partner-filter-group-body">' + facetHtml + '</div></div></div></section>';
         }).join('');
@@ -797,6 +800,7 @@ var PT_SKILL_WEB = (function() {
             }
             var partnerFacetOption = e.target.closest('[data-sk-partner-facet-option]');
             if (partnerFacetOption) {
+                if (partnerFacetOption.disabled) return;
                 var partnerFacetId = partnerFacetOption.getAttribute('data-sk-partner-facet-id');
                 var partnerOptionId = partnerFacetOption.getAttribute('data-sk-partner-facet-option');
                 var selectedFacetOptions = (partnerFacetSelections[partnerFacetId] || []).slice();

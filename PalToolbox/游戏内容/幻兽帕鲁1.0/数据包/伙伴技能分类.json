@@ -3,7 +3,7 @@
     "source": "本站逐条人工用途分类，依据伙伴技能标准事实整理",
     "classifiedAt": "2026-07-22",
     "gameVersion": "v1.0.0",
-    "classificationVersion": "2.0.0",
+    "classificationVersion": "2.4.0",
     "transformVersion": "1.4.0",
     "classificationMethod": "manual-entry-by-entry-review",
     "reviewedCatalogCount": 301,
@@ -39,26 +39,33 @@
           "label": "地形或时段加速",
           "order": 4,
           "facetId": "move.other",
+          "facetOrder": 3
+        },
+        {
+          "id": "move.mounted_speed",
+          "label": "骑乘时移动速度提升",
+          "order": 5,
+          "facetId": "move.other",
           "facetOrder": 2
         },
         {
           "id": "move.special",
           "label": "特殊机动",
-          "order": 5,
-          "facetId": "move.other",
-          "facetOrder": 3
-        },
-        {
-          "id": "move.teleport",
-          "label": "传送与快速返回",
           "order": 6,
           "facetId": "move.other",
           "facetOrder": 4
         },
         {
+          "id": "move.teleport",
+          "label": "传送与快速返回",
+          "order": 7,
+          "facetId": "move.other",
+          "facetOrder": 5
+        },
+        {
           "id": "move.player_mobility",
           "label": "玩家机动",
-          "order": 7,
+          "order": 8,
           "facetId": "move.other",
           "facetOrder": 1
         }
@@ -85,23 +92,23 @@
           "order": 3
         },
         {
+          "id": "combat.pal_weapon_combat",
+          "label": "帕鲁持武器作战",
+          "order": 4
+        },
+        {
           "id": "combat.projectile_form",
           "label": "投掷或炮弹化",
-          "order": 4
+          "order": 5
         },
         {
           "id": "combat.mounted_weapon",
           "label": "骑乘武装",
-          "order": 5
+          "order": 6
         },
         {
           "id": "combat.reaction_summon",
           "label": "动作联动或召唤协战",
-          "order": 6
-        },
-        {
-          "id": "combat.enemy_debuff",
-          "label": "敌人减益",
           "order": 7
         }
       ]
@@ -112,86 +119,214 @@
       "order": 3,
       "children": [
         {
-          "id": "player.attack",
-          "label": "玩家整体攻击力",
-          "order": 1
+          "id": "player.mounted_transform_attack",
+          "label": "骑乘转属攻击力提升",
+          "order": 1,
+          "facetId": "player_damage.attack_boost",
+          "facetOrder": 1
+        },
+        {
+          "id": "player.empowered_transform_attack",
+          "label": "赋能转属攻击力提升",
+          "order": 2,
+          "facetId": "player_damage.attack_boost",
+          "facetOrder": 2
+        },
+        {
+          "id": "player.constant_attack",
+          "label": "常驻攻击力提升",
+          "order": 3,
+          "facetId": "player_damage.attack_boost",
+          "facetOrder": 3
+        },
+        {
+          "id": "player.conditional_attack",
+          "label": "条件攻击力提升",
+          "order": 4,
+          "facetId": "player_damage.attack_boost",
+          "facetOrder": 4
         },
         {
           "id": "player.weapon_damage",
-          "label": "指定武器伤害",
-          "order": 2
+          "label": "指定武器增加伤害",
+          "order": 5,
+          "facetId": "player_damage.weapon",
+          "facetOrder": 1
         },
         {
-          "id": "player.weapon_operation",
-          "label": "攻速、蓄力与装填",
-          "order": 3
-        },
-        {
-          "id": "player.weakspot",
-          "label": "弱点部位伤害",
-          "order": 4
-        },
-        {
-          "id": "player.element_convert",
-          "label": "攻击属性转换",
-          "order": 5
+          "id": "player.weapon_extra_damage",
+          "label": "指定武器追加伤害",
+          "order": 6,
+          "facetId": "player_damage.weapon",
+          "facetOrder": 2
         },
         {
           "id": "player.conditional_damage",
-          "label": "状态或条件增伤",
-          "order": 6
+          "label": "异常状态增加伤害",
+          "order": 7,
+          "facetId": "player_damage.status",
+          "facetOrder": 1
         },
         {
           "id": "player.extra_damage",
-          "label": "追加伤害或爆炸",
-          "order": 7
+          "label": "异常状态追加伤害",
+          "order": 8,
+          "facetId": "player_damage.status",
+          "facetOrder": 2
         },
         {
           "id": "player.status_buildup",
           "label": "异常状态积蓄",
-          "order": 8
+          "order": 9,
+          "facetId": "player_damage.status",
+          "facetOrder": 3
+        },
+        {
+          "id": "player.weakspot",
+          "label": "弱点部位增加伤害",
+          "order": 10,
+          "facetId": "player_damage.other",
+          "facetOrder": 1
+        },
+        {
+          "id": "player.weapon_operation",
+          "label": "攻速、蓄力与装填",
+          "order": 11,
+          "facetId": "player_damage.other",
+          "facetOrder": 2
         }
       ]
     },
     {
       "id": "pal_combat",
-      "label": "帕鲁战斗强化",
+      "label": "帕鲁战斗能力强化",
       "order": 4,
       "children": [
         {
-          "id": "pal.element_stats",
-          "label": "属性帕鲁攻防",
-          "order": 1
+          "id": "pal.element_attack",
+          "label": "特定属性帕鲁攻击力提升",
+          "order": 1,
+          "facetId": "pal_combat.stats",
+          "facetOrder": 1
         },
         {
-          "id": "pal.active_stats",
-          "label": "当前出战帕鲁攻防",
-          "order": 2
+          "id": "pal.element_defense",
+          "label": "特定属性帕鲁防御力提升",
+          "order": 2,
+          "facetId": "pal_combat.stats",
+          "facetOrder": 2
         },
         {
-          "id": "pal.self_burst",
-          "label": "自身爆发强化",
-          "order": 3
+          "id": "pal.deployed_attack",
+          "label": "出战帕鲁攻击力提升",
+          "order": 3,
+          "facetId": "pal_combat.stats",
+          "facetOrder": 3
         },
         {
-          "id": "pal.named_synergy",
-          "label": "指定帕鲁联动",
-          "order": 4
+          "id": "pal.deployed_defense",
+          "label": "出战帕鲁防御力提升",
+          "order": 4,
+          "facetId": "pal_combat.stats",
+          "facetOrder": 4
         },
         {
-          "id": "pal.party_scaling",
-          "label": "队伍构成叠加",
-          "order": 5
+          "id": "pal.self_attack",
+          "label": "自身攻击力提升",
+          "order": 5,
+          "facetId": "pal_combat.stats",
+          "facetOrder": 5
+        },
+        {
+          "id": "pal.self_defense",
+          "label": "自身防御力提升",
+          "order": 6,
+          "facetId": "pal_combat.stats",
+          "facetOrder": 6
+        },
+        {
+          "id": "pal.mounted_element_attack",
+          "label": "骑乘时帕鲁属性攻击力提升",
+          "order": 7,
+          "facetId": "pal_combat.stats",
+          "facetOrder": 7
+        },
+        {
+          "id": "pal.status_damage",
+          "label": "异常状态增加伤害",
+          "order": 8,
+          "facetId": "pal_combat.damage",
+          "facetOrder": 1
+        },
+        {
+          "id": "pal.weakspot_damage",
+          "label": "弱点部位增加伤害",
+          "order": 9,
+          "facetId": "pal_combat.damage",
+          "facetOrder": 2
         },
         {
           "id": "pal.partner_damage",
-          "label": "伙伴技能伤害",
-          "order": 6
+          "label": "伙伴技能伤害提升",
+          "order": 10,
+          "facetId": "pal_combat.damage",
+          "facetOrder": 3
         },
         {
-          "id": "pal.cooldown",
-          "label": "伙伴或主动技能冷却",
-          "order": 7
+          "id": "pal.named_attack",
+          "label": "指定帕鲁攻击力提升",
+          "order": 11,
+          "facetId": "pal_combat.synergy",
+          "facetOrder": 1
+        },
+        {
+          "id": "pal.named_defense",
+          "label": "指定帕鲁防御力提升",
+          "order": 12,
+          "facetId": "pal_combat.synergy",
+          "facetOrder": 2
+        },
+        {
+          "id": "pal.named_move_speed",
+          "label": "指定帕鲁移动速度提升",
+          "order": 13,
+          "facetId": "pal_combat.synergy",
+          "facetOrder": 3
+        },
+        {
+          "id": "pal.party_attack",
+          "label": "队伍构成攻击力提升",
+          "order": 14,
+          "facetId": "pal_combat.synergy",
+          "facetOrder": 4
+        },
+        {
+          "id": "pal.party_defense",
+          "label": "队伍构成防御力提升",
+          "order": 15,
+          "facetId": "pal_combat.synergy",
+          "facetOrder": 5
+        },
+        {
+          "id": "pal.party_move_speed",
+          "label": "队伍构成移动速度提升",
+          "order": 16,
+          "facetId": "pal_combat.synergy",
+          "facetOrder": 6
+        },
+        {
+          "id": "pal.active_skill_cooldown",
+          "label": "主动技能冷却缩短",
+          "order": 17,
+          "facetId": "pal_combat.skill",
+          "facetOrder": 1
+        },
+        {
+          "id": "pal.partner_skill_cooldown",
+          "label": "伙伴技能冷却缩短",
+          "order": 18,
+          "facetId": "pal_combat.skill",
+          "facetOrder": 2
         }
       ]
     },
@@ -202,48 +337,94 @@
       "children": [
         {
           "id": "survival.defense",
-          "label": "玩家防御力",
-          "order": 1
+          "label": "玩家防御力提升",
+          "order": 1,
+          "facetId": "survival.protection",
+          "facetOrder": 1
         },
         {
           "id": "survival.shield",
-          "label": "护盾与屏障",
-          "order": 2
+          "label": "护盾生成与修复",
+          "order": 2,
+          "facetId": "survival.protection",
+          "facetOrder": 2
         },
         {
           "id": "survival.damage_reduction",
-          "label": "伤害减免与异常免疫",
-          "order": 3
+          "label": "受到属性伤害减免",
+          "order": 3,
+          "facetId": "survival.protection",
+          "facetOrder": 3
+        },
+        {
+          "id": "survival.status_immunity",
+          "label": "异常状态免疫",
+          "order": 4,
+          "facetId": "survival.protection",
+          "facetOrder": 4
+        },
+        {
+          "id": "survival.environmental_hazard_immunity",
+          "label": "环境危害免疫",
+          "order": 5,
+          "facetId": "survival.protection",
+          "facetOrder": 5
+        },
+        {
+          "id": "survival.enemy_attack_reduction",
+          "label": "敌人攻击力降低",
+          "order": 6,
+          "facetId": "survival.protection",
+          "facetOrder": 6
         },
         {
           "id": "survival.temperature",
           "label": "耐寒与耐暑",
-          "order": 4
+          "order": 7,
+          "facetId": "survival.adaptation",
+          "facetOrder": 1
         },
         {
-          "id": "survival.heal",
-          "label": "治疗与持续恢复",
-          "order": 5
+          "id": "survival.instant_heal",
+          "label": "生命值恢复",
+          "order": 8,
+          "facetId": "survival.recovery",
+          "facetOrder": 1
+        },
+        {
+          "id": "survival.regeneration",
+          "label": "非战斗持续恢复",
+          "order": 9,
+          "facetId": "survival.recovery",
+          "facetOrder": 2
         },
         {
           "id": "survival.revive",
           "label": "复活",
-          "order": 6
+          "order": 10,
+          "facetId": "survival.recovery",
+          "facetOrder": 3
         },
         {
           "id": "survival.lifesteal",
           "label": "生命窃取",
-          "order": 7
+          "order": 11,
+          "facetId": "survival.recovery",
+          "facetOrder": 4
         },
         {
           "id": "survival.hunger",
           "label": "饱腹度支援",
-          "order": 8
+          "order": 12,
+          "facetId": "survival.recovery",
+          "facetOrder": 5
         },
         {
           "id": "survival.dodge",
           "label": "闪避与无敌时间",
-          "order": 9
+          "order": 13,
+          "facetId": "survival.protection",
+          "facetOrder": 7
         }
       ]
     },
@@ -254,28 +435,59 @@
       "children": [
         {
           "id": "capture.rate",
-          "label": "捕获概率",
-          "order": 1
+          "label": "捕获概率提升",
+          "order": 1,
+          "facetId": "capture.capture_rate",
+          "facetOrder": 1
         },
         {
-          "id": "capture.sphere",
-          "label": "帕鲁球追踪与节省",
-          "order": 2
+          "id": "capture.sphere_tracking",
+          "label": "帕鲁球自动追踪",
+          "order": 2,
+          "facetId": "capture.sphere",
+          "facetOrder": 1
         },
         {
-          "id": "capture.encounter",
-          "label": "遭遇指定被动或高潜力帕鲁",
-          "order": 3
+          "id": "capture.sphere_saving",
+          "label": "帕鲁球节省",
+          "order": 3,
+          "facetId": "capture.sphere",
+          "facetOrder": 2
         },
         {
-          "id": "capture.egg",
-          "label": "帕鲁蛋数量与头目蛋",
-          "order": 4
+          "id": "capture.egg_extra",
+          "label": "额外获得帕鲁蛋",
+          "order": 4,
+          "facetId": "capture.egg",
+          "facetOrder": 1
+        },
+        {
+          "id": "capture.boss_egg",
+          "label": "头目帕鲁蛋",
+          "order": 5,
+          "facetId": "capture.egg",
+          "facetOrder": 2
+        },
+        {
+          "id": "capture.passive_encounter",
+          "label": "相同被动帕鲁遭遇提升",
+          "order": 6,
+          "facetId": "capture.encounter",
+          "facetOrder": 1
+        },
+        {
+          "id": "capture.high_potential_fishing",
+          "label": "高潜力帕鲁钓取提升",
+          "order": 7,
+          "facetId": "capture.encounter",
+          "facetOrder": 2
         },
         {
           "id": "capture.xp",
-          "label": "经验值获取",
-          "order": 5
+          "label": "队伍帕鲁经验值提升",
+          "order": 8,
+          "facetId": "capture.encounter",
+          "facetOrder": 3
         }
       ]
     },
@@ -285,49 +497,109 @@
       "order": 7,
       "children": [
         {
-          "id": "resource.drops",
-          "label": "击倒敌人掉落增加",
-          "order": 1
+          "id": "resource.elemental_drops",
+          "label": "击倒特定属性帕鲁掉落增加",
+          "order": 1,
+          "facetId": "resource.drops",
+          "facetOrder": 1
         },
         {
-          "id": "resource.special",
-          "label": "特殊材料、金币与解体收益",
-          "order": 2
+          "id": "resource.material_drops",
+          "label": "指定材料掉落增加",
+          "order": 2,
+          "facetId": "resource.drops",
+          "facetOrder": 2
         },
         {
-          "id": "resource.gather",
-          "label": "采矿与伐木效率",
-          "order": 3
+          "id": "resource.soul_drops",
+          "label": "帕鲁之魂获得增加",
+          "order": 3,
+          "facetId": "resource.drops",
+          "facetOrder": 3
         },
         {
-          "id": "resource.fishing",
-          "label": "垂钓与打捞收益",
-          "order": 4
+          "id": "resource.gold_drops",
+          "label": "金币掉落增加",
+          "order": 4,
+          "facetId": "resource.drops",
+          "facetOrder": 4
+        },
+        {
+          "id": "resource.butcher_drops",
+          "label": "解体掉落增加",
+          "order": 5,
+          "facetId": "resource.drops",
+          "facetOrder": 5
+        },
+        {
+          "id": "resource.mining_efficiency",
+          "label": "采矿效率提升",
+          "order": 6,
+          "facetId": "resource.collection",
+          "facetOrder": 1
+        },
+        {
+          "id": "resource.logging_efficiency",
+          "label": "伐木效率提升",
+          "order": 7,
+          "facetId": "resource.collection",
+          "facetOrder": 2
+        },
+        {
+          "id": "resource.fishing_yield",
+          "label": "垂钓道具增加",
+          "order": 8,
+          "facetId": "resource.collection",
+          "facetOrder": 3
+        },
+        {
+          "id": "resource.salvage_yield",
+          "label": "打捞道具增加",
+          "order": 9,
+          "facetId": "resource.collection",
+          "facetOrder": 4
+        },
+        {
+          "id": "resource.fishing_gauge_assist",
+          "label": "垂钓捕获计量辅助",
+          "order": 10,
+          "facetId": "resource.collection",
+          "facetOrder": 5
         },
         {
           "id": "resource.pickup",
           "label": "自动拾取",
-          "order": 5
+          "order": 11,
+          "facetId": "resource.inventory",
+          "facetOrder": 1
         },
         {
           "id": "resource.capacity",
-          "label": "负重上限",
-          "order": 6
+          "label": "玩家负重上限提升",
+          "order": 12,
+          "facetId": "resource.inventory",
+          "facetOrder": 2
         },
         {
           "id": "resource.weight",
           "label": "指定物品减重",
-          "order": 7
+          "order": 13,
+          "facetId": "resource.inventory",
+          "facetOrder": 3
         },
         {
           "id": "resource.preserve",
           "label": "食物保鲜",
-          "order": 8
+          "order": 14,
+          "facetId": "resource.inventory",
+          "facetOrder": 4
         },
         {
           "id": "resource.durability",
           "label": "装备耐久",
-          "order": 9
+          "order": 15,
+          "facetId": "resource.inventory",
+          "facetOrder": 5
         }
       ]
     },
@@ -338,43 +610,73 @@
       "children": [
         {
           "id": "base.ranch",
-          "label": "放牧产物与挖掘",
-          "order": 1
+          "label": "放牧",
+          "order": 1,
+          "facetId": "base.ranch_group",
+          "facetOrder": 1
         },
         {
           "id": "base.work_level",
-          "label": "据点工作适应性 +1",
-          "order": 2
+          "label": "据点工作适应性提升",
+          "order": 2,
+          "facetId": "base.work",
+          "facetOrder": 1
         },
         {
           "id": "base.work_speed",
           "label": "工作速度与效率",
-          "order": 3
+          "order": 3,
+          "facetId": "base.work",
+          "facetOrder": 2
         },
         {
-          "id": "base.crops",
-          "label": "作物生长与收获",
-          "order": 4
+          "id": "base.crop_growth",
+          "label": "作物生长加速",
+          "order": 4,
+          "facetId": "base.farming",
+          "facetOrder": 1
+        },
+        {
+          "id": "base.crop_harvest",
+          "label": "作物收获量提升",
+          "order": 5,
+          "facetId": "base.farming",
+          "facetOrder": 2
         },
         {
           "id": "base.breeding",
-          "label": "配种产蛋速度",
-          "order": 5
+          "label": "配种产蛋速度提升",
+          "order": 6,
+          "facetId": "base.farming",
+          "facetOrder": 3
         },
         {
           "id": "base.incubation",
-          "label": "孵化速度",
-          "order": 6
+          "label": "帕鲁蛋孵化速度提升",
+          "order": 7,
+          "facetId": "base.farming",
+          "facetOrder": 4
         },
         {
-          "id": "base.needs",
-          "label": "据点饱腹度与 SAN",
-          "order": 7
+          "id": "base.hunger",
+          "label": "据点饱腹度消耗减缓",
+          "order": 8,
+          "facetId": "base.maintenance",
+          "facetOrder": 1
+        },
+        {
+          "id": "base.san",
+          "label": "据点 SAN 下降减缓",
+          "order": 9,
+          "facetId": "base.maintenance",
+          "facetOrder": 2
         },
         {
           "id": "base.defense",
           "label": "据点防御",
-          "order": 8
+          "order": 10,
+          "facetId": "base.maintenance",
+          "facetOrder": 3
         }
       ]
     },
@@ -386,27 +688,51 @@
         {
           "id": "utility.statue",
           "label": "帕鲁雕像探测",
-          "order": 1
+          "order": 1,
+          "facetId": "utility.detect",
+          "facetOrder": 1
         },
         {
           "id": "utility.locations",
           "label": "地下城、宝箱与废品探测",
-          "order": 2
+          "order": 2,
+          "facetId": "utility.detect",
+          "facetOrder": 2
         },
         {
           "id": "utility.ore",
-          "label": "矿物探测",
-          "order": 3
+          "label": "铬铁矿探测",
+          "order": 3,
+          "facetId": "utility.detect",
+          "facetOrder": 3
         },
         {
-          "id": "utility.vision",
-          "label": "夜视与隐蔽",
-          "order": 4
+          "id": "utility.night_vision",
+          "label": "夜视",
+          "order": 4,
+          "facetId": "utility.visibility",
+          "facetOrder": 1
+        },
+        {
+          "id": "utility.invisibility",
+          "label": "隐身",
+          "order": 5,
+          "facetId": "utility.visibility",
+          "facetOrder": 2
+        },
+        {
+          "id": "utility.stealth",
+          "label": "降低被发现概率",
+          "order": 6,
+          "facetId": "utility.visibility",
+          "facetOrder": 3
         },
         {
           "id": "utility.unlock",
           "label": "无钥匙开宝箱",
-          "order": 5
+          "order": 7,
+          "facetId": "utility.convenience",
+          "facetOrder": 1
         }
       ]
     }
@@ -428,6 +754,156 @@
       "id": "move.other",
       "groupId": "move",
       "label": "其他移动",
+      "order": 3
+    },
+    {
+      "id": "player_damage.attack_boost",
+      "groupId": "player_damage",
+      "label": "攻击力提升方式",
+      "order": 1
+    },
+    {
+      "id": "player_damage.weapon",
+      "groupId": "player_damage",
+      "label": "指定武器伤害",
+      "order": 2
+    },
+    {
+      "id": "player_damage.status",
+      "groupId": "player_damage",
+      "label": "异常状态",
+      "order": 3
+    },
+    {
+      "id": "player_damage.other",
+      "groupId": "player_damage",
+      "label": "其他攻击强化",
+      "order": 4
+    },
+    {
+      "id": "pal_combat.stats",
+      "groupId": "pal_combat",
+      "label": "属性与战斗能力",
+      "order": 1
+    },
+    {
+      "id": "pal_combat.damage",
+      "groupId": "pal_combat",
+      "label": "伤害强化",
+      "order": 2
+    },
+    {
+      "id": "pal_combat.synergy",
+      "groupId": "pal_combat",
+      "label": "指定帕鲁与队伍构成",
+      "order": 3
+    },
+    {
+      "id": "pal_combat.skill",
+      "groupId": "pal_combat",
+      "label": "技能强化",
+      "order": 4
+    },
+    {
+      "id": "survival.protection",
+      "groupId": "survival",
+      "label": "防御与减伤",
+      "order": 1
+    },
+    {
+      "id": "survival.recovery",
+      "groupId": "survival",
+      "label": "恢复与续航",
+      "order": 2
+    },
+    {
+      "id": "survival.adaptation",
+      "groupId": "survival",
+      "label": "环境适应",
+      "order": 3
+    },
+    {
+      "id": "capture.capture_rate",
+      "groupId": "capture",
+      "label": "捕获概率",
+      "order": 1
+    },
+    {
+      "id": "capture.sphere",
+      "groupId": "capture",
+      "label": "帕鲁球",
+      "order": 2
+    },
+    {
+      "id": "capture.egg",
+      "groupId": "capture",
+      "label": "帕鲁蛋",
+      "order": 3
+    },
+    {
+      "id": "capture.encounter",
+      "groupId": "capture",
+      "label": "遭遇与成长",
+      "order": 4
+    },
+    {
+      "id": "resource.drops",
+      "groupId": "resource",
+      "label": "敌人与资源掉落",
+      "order": 1
+    },
+    {
+      "id": "resource.collection",
+      "groupId": "resource",
+      "label": "采集与垂钓",
+      "order": 2
+    },
+    {
+      "id": "resource.inventory",
+      "groupId": "resource",
+      "label": "背包与装备",
+      "order": 3
+    },
+    {
+      "id": "base.ranch_group",
+      "groupId": "base",
+      "label": "家畜牧场",
+      "order": 1
+    },
+    {
+      "id": "base.work",
+      "groupId": "base",
+      "label": "工作适应性与效率",
+      "order": 2
+    },
+    {
+      "id": "base.farming",
+      "groupId": "base",
+      "label": "农作与培育",
+      "order": 3
+    },
+    {
+      "id": "base.maintenance",
+      "groupId": "base",
+      "label": "据点维持与防御",
+      "order": 4
+    },
+    {
+      "id": "utility.detect",
+      "groupId": "utility",
+      "label": "探测",
+      "order": 1
+    },
+    {
+      "id": "utility.visibility",
+      "groupId": "utility",
+      "label": "视觉与隐蔽",
+      "order": 2
+    },
+    {
+      "id": "utility.convenience",
+      "groupId": "utility",
+      "label": "便利功能",
       "order": 3
     }
   ],
@@ -506,8 +982,7 @@
     },
     "Carbunclo": {
       "subcategoryIds": [
-        "combat.active_attack",
-        "combat.follow_attack"
+        "combat.weapon_form"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -535,16 +1010,16 @@
     },
     "WoolFox": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_attack",
         "base.ranch"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
-  "KendoFrog": {
-    "subcategoryIds": [
-      "move.special",
-      "player.attack"
+    "KendoFrog": {
+      "subcategoryIds": [
+        "move.special",
+        "player.conditional_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -558,14 +1033,14 @@
     },
     "Ganesha": {
       "subcategoryIds": [
-        "survival.heal"
+        "survival.instant_heal"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "PlantSlime": {
       "subcategoryIds": [
-        "resource.gather",
+        "resource.logging_efficiency",
         "resource.weight"
       ],
       "tagIds": [],
@@ -596,7 +1071,7 @@
       "subcategoryIds": [
         "base.ranch",
         "base.work_speed",
-        "pal.self_burst"
+        "move.special"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -610,14 +1085,14 @@
     },
     "CaptainPenguin": {
       "subcategoryIds": [
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "WizardOwl": {
       "subcategoryIds": [
-        "pal.element_stats"
+        "pal.element_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -626,7 +1101,8 @@
       "subcategoryIds": [
         "move.mount",
         "base.ranch",
-        "pal.named_synergy"
+        "pal.named_defense",
+        "pal.named_move_speed"
       ],
       "tagIds": [
         "mount.ground"
@@ -636,8 +1112,8 @@
     "KingAlpaca": {
       "subcategoryIds": [
         "move.mount",
-        "pal.named_synergy",
-        "pal.party_scaling"
+        "pal.party_defense",
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.ground"
@@ -653,7 +1129,7 @@
     },
     "Monkey": {
       "subcategoryIds": [
-        "combat.active_attack"
+        "combat.pal_weapon_combat"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -667,7 +1143,7 @@
     },
     "LavaGirl": {
       "subcategoryIds": [
-        "survival.heal",
+        "survival.regeneration",
         "base.ranch"
       ],
       "tagIds": [],
@@ -675,7 +1151,7 @@
     },
     "FlameBambi": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_defense",
         "base.ranch"
       ],
       "tagIds": [],
@@ -683,7 +1159,6 @@
     },
     "Bastet": {
       "subcategoryIds": [
-        "resource.special",
         "base.ranch"
       ],
       "tagIds": [],
@@ -692,7 +1167,7 @@
     "Boar": {
       "subcategoryIds": [
         "move.mount",
-        "resource.gather"
+        "resource.mining_efficiency"
       ],
       "tagIds": [
         "mount.ground"
@@ -715,27 +1190,28 @@
     },
     "CuteMole": {
       "subcategoryIds": [
-        "resource.gather",
+        "resource.mining_efficiency",
         "resource.weight"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
-  "Deer": {
-    "subcategoryIds": [
-      "move.mount",
-      "move.riding_jump",
-      "resource.gather"
-    ],
-    "tagIds": [
-      "mount.ground",
-      "jump.double"
+    "Deer": {
+      "subcategoryIds": [
+        "move.mount",
+        "move.riding_jump",
+        "resource.logging_efficiency"
+      ],
+      "tagIds": [
+        "mount.ground",
+        "jump.double"
       ],
       "reviewStatus": "reviewed"
     },
-    "Garm": {
-      "subcategoryIds": [
-        "move.mount"
+  "Garm": {
+    "subcategoryIds": [
+      "move.mount",
+      "move.mounted_speed"
       ],
       "tagIds": [
         "mount.ground"
@@ -752,7 +1228,8 @@
     },
     "MopBaby": {
       "subcategoryIds": [
-        "pal.named_synergy"
+        "pal.named_attack",
+        "pal.named_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -760,8 +1237,8 @@
     "MopKing": {
       "subcategoryIds": [
         "move.mount",
-        "pal.named_synergy",
-        "pal.party_scaling"
+        "pal.party_attack",
+        "pal.party_defense"
       ],
       "tagIds": [
         "mount.ground"
@@ -785,7 +1262,7 @@
     "SweetsSheep": {
       "subcategoryIds": [
         "base.ranch",
-        "base.needs"
+        "base.hunger"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -800,7 +1277,7 @@
     "BlueDragon": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.water"
@@ -809,7 +1286,7 @@
     },
     "ElecCat": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_attack",
         "base.ranch"
       ],
       "tagIds": [],
@@ -817,7 +1294,7 @@
     },
     "Kelpie": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_attack",
         "base.ranch"
       ],
       "tagIds": [],
@@ -825,7 +1302,7 @@
     },
     "PinkRabbit": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_attack",
         "base.work_level"
       ],
       "tagIds": [],
@@ -833,18 +1310,16 @@
     },
     "JellyfishFairy": {
       "subcategoryIds": [
-        "resource.fishing",
-        "base.work_speed",
-        "pal.named_synergy"
+        "resource.fishing_yield",
+        "base.work_speed"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "JellyfishGhost": {
       "subcategoryIds": [
-        "resource.fishing",
-        "base.work_speed",
-        "pal.named_synergy"
+        "resource.salvage_yield",
+        "base.work_speed"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -858,7 +1333,7 @@
     },
     "OctopusGirl": {
       "subcategoryIds": [
-        "resource.fishing"
+        "resource.fishing_gauge_assist"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -904,7 +1379,7 @@
       "subcategoryIds": [
         "move.mount",
         "player.weakspot",
-        "pal.active_stats"
+        "pal.weakspot_damage"
       ],
       "tagIds": [
         "mount.ground"
@@ -913,7 +1388,7 @@
     },
     "SharkKid": {
       "subcategoryIds": [
-        "player.attack",
+        "player.constant_attack",
         "combat.active_attack"
       ],
       "tagIds": [],
@@ -929,7 +1404,7 @@
     },
     "DarkCrow": {
       "subcategoryIds": [
-        "utility.vision",
+        "utility.night_vision",
         "base.ranch"
       ],
       "tagIds": [],
@@ -954,7 +1429,7 @@
     },
     "LittleBriarRose": {
       "subcategoryIds": [
-        "pal.element_stats"
+        "pal.element_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -977,7 +1452,8 @@
     "FairyDragon": {
       "subcategoryIds": [
         "move.mount",
-        "resource.drops"
+        "move.mounted_speed",
+        "resource.elemental_drops"
       ],
       "tagIds": [
         "mount.flying"
@@ -1003,7 +1479,7 @@
     },
     "VioletFairy": {
       "subcategoryIds": [
-        "resource.drops",
+        "resource.elemental_drops",
         "base.ranch"
       ],
       "tagIds": [],
@@ -1012,15 +1488,14 @@
     "SoldierBee": {
       "subcategoryIds": [
         "base.ranch",
-        "pal.named_synergy"
+        "pal.named_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "QueenBee": {
       "subcategoryIds": [
-        "pal.named_synergy",
-        "pal.party_scaling"
+        "pal.party_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1034,7 +1509,7 @@
     },
     "NaughtyCat": {
       "subcategoryIds": [
-        "capture.egg",
+        "capture.egg_extra",
         "move.mount"
       ],
       "tagIds": [
@@ -1042,15 +1517,15 @@
       ],
       "reviewStatus": "reviewed"
     },
-  "PurpleSpider": {
+    "PurpleSpider": {
       "subcategoryIds": [
         "move.special",
         "move.mount",
-      "move.riding_jump"
+        "move.riding_jump"
       ],
       "tagIds": [
-      "mount.ground",
-      "jump.double"
+        "mount.ground",
+        "jump.double"
       ],
       "reviewStatus": "reviewed"
     },
@@ -1066,14 +1541,14 @@
     },
     "LizardMan": {
       "subcategoryIds": [
-        "utility.vision"
+        "utility.invisibility"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "Gorilla": {
       "subcategoryIds": [
-        "pal.self_burst"
+        "pal.self_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1104,15 +1579,15 @@
     },
     "FoxMage": {
       "subcategoryIds": [
-        "player.element_convert"
+        "player.empowered_transform_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "CatMage": {
       "subcategoryIds": [
-        "capture.sphere",
-        "resource.drops"
+        "capture.sphere_saving",
+        "resource.elemental_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1120,7 +1595,7 @@
     "HadesBird": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -1129,34 +1604,34 @@
     },
     "GrassMinotaur": {
       "subcategoryIds": [
-        "player.element_convert"
+        "player.empowered_transform_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "Mutant": {
       "subcategoryIds": [
-        "capture.sphere",
+        "capture.sphere_tracking",
         "resource.capacity"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
-  "FengyunDeeper": {
+    "FengyunDeeper": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump"
+        "move.riding_jump"
       ],
       "tagIds": [
-      "mount.ground",
-      "jump.double"
+        "mount.ground",
+        "jump.double"
       ],
       "reviewStatus": "reviewed"
     },
     "FlowerDinosaur": {
       "subcategoryIds": [
         "move.mount",
-        "pal.element_stats"
+        "pal.element_defense"
       ],
       "tagIds": [
         "mount.ground"
@@ -1180,7 +1655,8 @@
     },
     "GrassMammoth": {
       "subcategoryIds": [
-        "resource.gather",
+        "resource.logging_efficiency",
+        "resource.mining_efficiency",
         "move.mount"
       ],
       "tagIds": [
@@ -1190,14 +1666,14 @@
     },
     "StuffedShark": {
       "subcategoryIds": [
-        "player.element_convert"
+        "player.empowered_transform_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "FlowerDoll": {
       "subcategoryIds": [
-        "survival.heal",
+        "survival.instant_heal",
         "base.work_level"
       ],
       "tagIds": [],
@@ -1205,7 +1681,8 @@
     },
     "PandaGirl": {
       "subcategoryIds": [
-        "pal.party_scaling"
+        "pal.party_attack",
+        "pal.party_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1227,7 +1704,7 @@
     "FireKirin": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -1246,7 +1723,7 @@
     },
     "IceFox": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_attack",
         "base.ranch"
       ],
       "tagIds": [],
@@ -1255,8 +1732,8 @@
     "ThunderBird": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert",
-        "pal.party_scaling"
+        "player.mounted_transform_attack",
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.flying"
@@ -1266,29 +1743,29 @@
     "GhostAnglerfish": {
       "subcategoryIds": [
         "move.mount",
-        "pal.party_scaling"
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.water"
       ],
       "reviewStatus": "reviewed"
     },
-  "ThunderDog": {
+    "ThunderDog": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
-        "pal.party_scaling"
+        "move.riding_jump",
+        "pal.party_move_speed"
       ],
       "tagIds": [
-      "mount.flying",
-      "jump.double"
+        "mount.flying",
+        "jump.double"
       ],
       "reviewStatus": "reviewed"
     },
     "DarkScorpion": {
       "subcategoryIds": [
         "survival.defense",
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1296,7 +1773,7 @@
     "CactusDoll": {
       "subcategoryIds": [
         "player.conditional_damage",
-        "pal.active_stats"
+        "pal.status_damage"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1324,7 +1801,7 @@
     "WeaselDragon": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.ground"
@@ -1334,7 +1811,7 @@
     "RedArmorBird": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -1344,7 +1821,7 @@
     "VolcanoDragon": {
       "subcategoryIds": [
         "move.mount",
-        "pal.party_scaling"
+        "pal.party_attack"
       ],
       "tagIds": [
         "mount.ground"
@@ -1363,7 +1840,7 @@
     },
     "DrillGame": {
       "subcategoryIds": [
-        "resource.gather"
+        "resource.mining_efficiency"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1371,7 +1848,7 @@
     "SakuraSaurus": {
       "subcategoryIds": [
         "move.mount",
-        "capture.egg"
+        "capture.boss_egg"
       ],
       "tagIds": [
         "mount.ground"
@@ -1380,7 +1857,7 @@
     },
     "LazyCatfish": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_attack",
         "base.ranch"
       ],
       "tagIds": [],
@@ -1399,6 +1876,7 @@
     "AmaterasuWolf": {
       "subcategoryIds": [
         "survival.damage_reduction",
+        "survival.status_immunity",
         "move.mount"
       ],
       "tagIds": [
@@ -1409,7 +1887,7 @@
     "Manticore": {
       "subcategoryIds": [
         "move.mount",
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [
         "mount.ground"
@@ -1432,7 +1910,6 @@
     },
     "DarkFlameFox": {
       "subcategoryIds": [
-        "player.conditional_damage",
         "player.extra_damage"
       ],
       "tagIds": [],
@@ -1449,7 +1926,7 @@
     "GhostBeast": {
       "subcategoryIds": [
         "move.mount",
-        "pal.cooldown"
+        "pal.active_skill_cooldown"
       ],
       "tagIds": [
         "mount.ground"
@@ -1468,7 +1945,7 @@
     },
     "IceWitch": {
       "subcategoryIds": [
-        "player.element_convert"
+        "player.empowered_transform_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1484,7 +1961,7 @@
       "subcategoryIds": [
         "move.mount",
         "player.conditional_damage",
-        "pal.active_stats"
+        "pal.status_damage"
       ],
       "tagIds": [
         "mount.water"
@@ -1494,7 +1971,7 @@
     "Suzaku": {
       "subcategoryIds": [
         "move.mount",
-        "pal.party_scaling"
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.flying"
@@ -1514,7 +1991,7 @@
     "SkyDragon": {
       "subcategoryIds": [
         "move.mount",
-        "pal.element_stats"
+        "pal.element_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -1523,21 +2000,21 @@
     },
     "LeafPrincess": {
       "subcategoryIds": [
-        "base.crops"
+        "base.crop_growth"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "SmallArmadillo": {
       "subcategoryIds": [
-        "pal.element_stats"
+        "pal.element_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "GuardianDog": {
       "subcategoryIds": [
-        "capture.encounter",
+        "capture.passive_encounter",
         "move.mount"
       ],
       "tagIds": [
@@ -1562,36 +2039,36 @@
       ],
       "reviewStatus": "reviewed"
     },
-  "NightBlueHorse": {
+    "NightBlueHorse": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
+        "move.riding_jump",
         "move.conditional_speed"
       ],
-    "tagIds": [
-      "mount.ground",
-      "jump.high"
+      "tagIds": [
+        "mount.ground",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
     "RockBeast": {
       "subcategoryIds": [
         "player.conditional_damage",
-        "pal.active_stats"
+        "pal.status_damage"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "WhiteTiger": {
       "subcategoryIds": [
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "SmallYeti": {
       "subcategoryIds": [
-        "utility.vision"
+        "utility.stealth"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1624,7 +2101,8 @@
     "KingBahamut": {
       "subcategoryIds": [
         "move.mount",
-        "pal.active_stats"
+        "pal.deployed_attack",
+        "pal.deployed_defense"
       ],
       "tagIds": [
         "mount.ground"
@@ -1634,7 +2112,7 @@
     "GrassGolem": {
       "subcategoryIds": [
         "move.mount",
-        "combat.active_attack"
+        "combat.mounted_weapon"
       ],
       "tagIds": [
         "mount.ground"
@@ -1643,15 +2121,14 @@
     },
     "Anubis": {
       "subcategoryIds": [
-        "player.element_convert"
+        "player.empowered_transform_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "Sekhmet": {
       "subcategoryIds": [
-        "base.work_speed",
-        "pal.named_synergy"
+        "base.work_speed"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1659,7 +2136,7 @@
     "ScorpionMan": {
       "subcategoryIds": [
         "player.conditional_damage",
-        "pal.active_stats"
+        "pal.status_damage"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1676,7 +2153,7 @@
     },
     "BadCatgirl": {
       "subcategoryIds": [
-        "combat.active_attack",
+        "combat.pal_weapon_combat",
         "player.weapon_damage"
       ],
       "tagIds": [],
@@ -1708,14 +2185,14 @@
     },
     "BlueberryFairy": {
       "subcategoryIds": [
-        "base.crops"
+        "base.crop_harvest"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "GhostRabbit": {
       "subcategoryIds": [
-        "resource.special"
+        "resource.soul_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1723,7 +2200,7 @@
     "BlackPuppy": {
       "subcategoryIds": [
         "utility.ore",
-        "resource.gather"
+        "resource.material_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1738,23 +2215,23 @@
     "IceNarwhal": {
       "subcategoryIds": [
         "move.mount",
-        "resource.fishing"
+        "resource.fishing_gauge_assist"
       ],
       "tagIds": [
         "mount.water"
       ],
       "reviewStatus": "reviewed"
     },
-  "GrassRabbitMan": {
-    "subcategoryIds": [
-      "move.player_mobility"
-    ],
-    "tagIds": [],
+    "GrassRabbitMan": {
+      "subcategoryIds": [
+        "move.player_mobility"
+      ],
+      "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "GrimGirl": {
       "subcategoryIds": [
-        "resource.special"
+        "resource.butcher_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1762,7 +2239,7 @@
     "GoldenHorse": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.ground"
@@ -1779,7 +2256,8 @@
     "SumoDog": {
       "subcategoryIds": [
         "move.mount",
-        "survival.damage_reduction"
+        "survival.damage_reduction",
+        "survival.status_immunity"
       ],
       "tagIds": [
         "mount.ground"
@@ -1789,8 +2267,9 @@
     "WhiteDeer": {
       "subcategoryIds": [
         "move.mount",
-        "survival.heal",
-        "pal.party_scaling"
+        "survival.regeneration",
+        "pal.party_attack",
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.ground"
@@ -1800,7 +2279,8 @@
     "BlackMetalDragon": {
       "subcategoryIds": [
         "move.mount",
-        "resource.gather"
+        "resource.mining_efficiency",
+        "resource.material_drops"
       ],
       "tagIds": [
         "mount.flying"
@@ -1809,7 +2289,8 @@
     },
     "WingGolem": {
       "subcategoryIds": [
-        "pal.self_burst"
+        "pal.self_attack",
+        "pal.self_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1835,9 +2316,9 @@
       ],
       "reviewStatus": "reviewed"
     },
-  "LongCat": {
-    "subcategoryIds": [
-      "move.player_mobility"
+    "LongCat": {
+      "subcategoryIds": [
+        "move.player_mobility"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1872,7 +2353,6 @@
     },
     "ElecLizard": {
       "subcategoryIds": [
-        "player.conditional_damage",
         "player.extra_damage"
       ],
       "tagIds": [],
@@ -1880,7 +2360,7 @@
     },
     "OniGhostGirl": {
       "subcategoryIds": [
-        "combat.enemy_debuff"
+        "survival.enemy_attack_reduction"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1888,7 +2368,7 @@
     "KingSunfish": {
       "subcategoryIds": [
         "move.mount",
-        "capture.encounter"
+        "capture.high_potential_fishing"
       ],
       "tagIds": [
         "mount.water"
@@ -1897,7 +2377,7 @@
     },
     "SleeveRabbit": {
       "subcategoryIds": [
-        "pal.cooldown"
+        "pal.partner_skill_cooldown"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -1905,7 +2385,8 @@
     "GhostDragon": {
       "subcategoryIds": [
         "move.mount",
-        "pal.party_scaling"
+        "pal.party_attack",
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.flying"
@@ -1948,7 +2429,7 @@
     },
     "ClownRabbit": {
       "subcategoryIds": [
-        "player.attack",
+        "player.conditional_attack",
         "combat.reaction_summon"
       ],
       "tagIds": [],
@@ -1958,7 +2439,7 @@
       "subcategoryIds": [
         "move.mount",
         "player.conditional_damage",
-        "pal.active_stats"
+        "pal.status_damage"
       ],
       "tagIds": [
         "mount.flying"
@@ -1981,22 +2462,21 @@
     },
     "LanternButler": {
       "subcategoryIds": [
-        "player.weapon_damage",
-        "player.extra_damage"
+        "player.weapon_extra_damage"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "MoonChild": {
       "subcategoryIds": [
-        "pal.element_stats"
+        "pal.element_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "MonochromeQueen": {
       "subcategoryIds": [
-        "player.attack"
+        "player.conditional_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2011,7 +2491,8 @@
     "DomeArmorDragon": {
       "subcategoryIds": [
         "move.mount",
-        "survival.damage_reduction"
+        "survival.damage_reduction",
+        "survival.status_immunity"
       ],
       "tagIds": [
         "mount.ground"
@@ -2030,14 +2511,15 @@
     },
     "LilyQueen": {
       "subcategoryIds": [
-        "survival.heal"
+        "survival.instant_heal"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "ThunderDragonMan": {
       "subcategoryIds": [
-        "pal.active_stats"
+        "pal.deployed_attack",
+        "pal.deployed_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2045,7 +2527,7 @@
     "Horus": {
       "subcategoryIds": [
         "move.mount",
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [
         "mount.flying"
@@ -2055,7 +2537,8 @@
     "BlackGriffon": {
       "subcategoryIds": [
         "move.mount",
-        "pal.partner_damage"
+        "move.mounted_speed",
+        "pal.mounted_element_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -2065,7 +2548,7 @@
     "MoonQueen": {
       "subcategoryIds": [
         "move.mount",
-        "pal.partner_damage"
+        "pal.mounted_element_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -2085,7 +2568,7 @@
     "BlueSkyDragon": {
       "subcategoryIds": [
         "move.mount",
-        "pal.party_scaling"
+        "pal.party_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -2094,9 +2577,8 @@
     },
     "Mothman": {
       "subcategoryIds": [
-        "player.conditional_damage",
         "player.extra_damage",
-        "survival.damage_reduction"
+        "survival.environmental_hazard_immunity"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2104,7 +2586,8 @@
     "FlowerPrince": {
       "subcategoryIds": [
         "player.status_buildup",
-        "survival.damage_reduction"
+        "survival.status_immunity",
+        "survival.environmental_hazard_immunity"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2116,56 +2599,57 @@
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
-    "DarkMechaDragon": {
-      "subcategoryIds": [
-        "pal.partner_damage",
-        "move.mount"
+  "DarkMechaDragon": {
+    "subcategoryIds": [
+      "pal.partner_damage",
+      "move.mount",
+      "move.mounted_speed"
       ],
       "tagIds": [
         "mount.flying"
       ],
       "reviewStatus": "reviewed"
     },
-  "LegendDeer": {
+    "LegendDeer": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
+        "move.riding_jump",
         "survival.shield"
       ],
       "tagIds": [
-      "mount.ground",
-      "jump.triple"
+        "mount.ground",
+        "jump.triple"
       ],
       "reviewStatus": "reviewed"
     },
-  "SaintCentaur": {
+    "SaintCentaur": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
+        "move.riding_jump",
         "combat.reaction_summon"
       ],
       "tagIds": [
-      "mount.ground",
-      "jump.triple"
+        "mount.ground",
+        "jump.triple"
       ],
       "reviewStatus": "reviewed"
     },
-  "BlackCentaur": {
+    "BlackCentaur": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
+        "move.riding_jump",
         "combat.reaction_summon"
       ],
       "tagIds": [
-      "mount.ground",
-      "jump.double"
+        "mount.ground",
+        "jump.double"
       ],
       "reviewStatus": "reviewed"
     },
     "IceHorse": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert",
+        "player.mounted_transform_attack",
         "player.status_buildup"
       ],
       "tagIds": [
@@ -2173,15 +2657,15 @@
       ],
       "reviewStatus": "reviewed"
     },
-  "PoseidonOrca": {
+    "PoseidonOrca": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
-        "combat.follow_attack"
+        "move.riding_jump",
+        "combat.pal_weapon_combat"
       ],
-    "tagIds": [
-      "mount.water",
-      "jump.high"
+      "tagIds": [
+        "mount.water",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
@@ -2229,11 +2713,11 @@
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
-  "KendoFrog_Dark": {
-    "subcategoryIds": [
-      "move.special",
+    "KendoFrog_Dark": {
+      "subcategoryIds": [
+        "move.special",
         "player.weakspot",
-        "pal.active_stats"
+        "pal.weakspot_damage"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2255,7 +2739,7 @@
     "CaptainPenguin_Black": {
       "subcategoryIds": [
         "player.weakspot",
-        "pal.active_stats"
+        "pal.weakspot_damage"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2263,8 +2747,8 @@
     "KingAlpaca_Ice": {
       "subcategoryIds": [
         "move.mount",
-        "pal.named_synergy",
-        "pal.party_scaling"
+        "pal.party_defense",
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.ground"
@@ -2273,7 +2757,7 @@
     },
     "Monkey_Fire": {
       "subcategoryIds": [
-        "combat.active_attack"
+        "combat.pal_weapon_combat"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2299,15 +2783,15 @@
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
-  "Deer_Ground": {
+    "Deer_Ground": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
+        "move.riding_jump",
         "base.work_level"
       ],
       "tagIds": [
-      "mount.ground",
-      "jump.double"
+        "mount.ground",
+        "jump.double"
       ],
       "reviewStatus": "reviewed"
     },
@@ -2323,7 +2807,7 @@
       "subcategoryIds": [
         "resource.weight",
         "player.weakspot",
-        "pal.active_stats"
+        "pal.weakspot_damage"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2338,7 +2822,7 @@
     "SweetsSheep_Ground": {
       "subcategoryIds": [
         "base.ranch",
-        "base.needs"
+        "base.hunger"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2346,7 +2830,7 @@
     "BlueDragon_Ice": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.water"
@@ -2355,7 +2839,7 @@
     },
     "Kelpie_Fire": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_attack",
         "base.ranch"
       ],
       "tagIds": [],
@@ -2364,7 +2848,7 @@
     "PinkRabbit_Grass": {
       "subcategoryIds": [
         "player.weakspot",
-        "pal.active_stats",
+        "pal.weakspot_damage",
         "base.work_speed"
       ],
       "tagIds": [],
@@ -2372,7 +2856,7 @@
     },
     "OctopusGirl_Neutral": {
       "subcategoryIds": [
-        "pal.element_stats"
+        "pal.element_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2380,7 +2864,7 @@
     "Kirin_Ice": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.ground"
@@ -2389,7 +2873,7 @@
     },
     "SharkKid_Fire": {
       "subcategoryIds": [
-        "player.attack",
+        "player.constant_attack",
         "combat.active_attack"
       ],
       "tagIds": [],
@@ -2406,7 +2890,9 @@
     "FairyDragon_Water": {
       "subcategoryIds": [
         "move.mount",
-        "survival.damage_reduction"
+        "move.mounted_speed",
+        "survival.damage_reduction",
+        "survival.status_immunity"
       ],
       "tagIds": [
         "mount.flying"
@@ -2435,14 +2921,14 @@
     },
     "LizardMan_Fire": {
       "subcategoryIds": [
-        "utility.vision"
+        "utility.invisibility"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "Gorilla_Ground": {
       "subcategoryIds": [
-        "pal.self_burst",
+        "pal.self_attack",
         "move.player_mobility"
       ],
       "tagIds": [],
@@ -2467,7 +2953,7 @@
     },
     "FoxMage_Dark": {
       "subcategoryIds": [
-        "player.element_convert"
+        "player.empowered_transform_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2482,7 +2968,7 @@
     "HadesBird_Electric": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -2496,22 +2982,22 @@
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
-  "FengyunDeeper_Electric": {
+    "FengyunDeeper_Electric": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
-        "resource.drops"
+        "move.riding_jump",
+        "resource.elemental_drops"
       ],
       "tagIds": [
-      "mount.ground",
-      "jump.double"
+        "mount.ground",
+        "jump.double"
       ],
       "reviewStatus": "reviewed"
     },
     "FlowerDinosaur_Electric": {
       "subcategoryIds": [
         "move.mount",
-        "pal.element_stats"
+        "pal.element_defense"
       ],
       "tagIds": [
         "mount.ground"
@@ -2529,7 +3015,8 @@
     "GrassMammoth_Ice": {
       "subcategoryIds": [
         "move.mount",
-        "resource.gather"
+        "resource.logging_efficiency",
+        "resource.mining_efficiency"
       ],
       "tagIds": [
         "mount.ground"
@@ -2540,7 +3027,7 @@
       "subcategoryIds": [
         "resource.weight",
         "player.weakspot",
-        "pal.active_stats"
+        "pal.weakspot_damage"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2548,7 +3035,8 @@
     "FlowerDoll_Fire": {
       "subcategoryIds": [
         "survival.damage_reduction",
-        "survival.heal"
+        "survival.status_immunity",
+        "survival.instant_heal"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2570,7 +3058,7 @@
     "FireKirin_Dark": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -2590,8 +3078,8 @@
     "ThunderBird_Ice": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert",
-        "pal.party_scaling"
+        "player.mounted_transform_attack",
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.flying"
@@ -2601,29 +3089,29 @@
     "GhostAnglerfish_Fire": {
       "subcategoryIds": [
         "move.mount",
-        "pal.party_scaling"
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.water"
       ],
       "reviewStatus": "reviewed"
     },
-  "ThunderDog_Ice": {
+    "ThunderDog_Ice": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
-        "pal.element_stats"
+        "move.riding_jump",
+        "pal.element_defense"
       ],
       "tagIds": [
-      "mount.ground",
-      "jump.double"
+        "mount.ground",
+        "jump.double"
       ],
       "reviewStatus": "reviewed"
     },
     "DarkScorpion_Ground": {
       "subcategoryIds": [
         "survival.defense",
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2648,7 +3136,7 @@
     "WeaselDragon_Fire": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.ground"
@@ -2659,7 +3147,7 @@
       "subcategoryIds": [
         "move.mount",
         "player.weakspot",
-        "pal.active_stats"
+        "pal.weakspot_damage"
       ],
       "tagIds": [
         "mount.ground"
@@ -2669,7 +3157,7 @@
     "SakuraSaurus_Water": {
       "subcategoryIds": [
         "move.mount",
-        "capture.egg"
+        "capture.boss_egg"
       ],
       "tagIds": [
         "mount.ground"
@@ -2678,7 +3166,7 @@
     },
     "LazyCatfish_Gold": {
       "subcategoryIds": [
-        "resource.special",
+        "resource.gold_drops",
         "base.ranch"
       ],
       "tagIds": [],
@@ -2687,7 +3175,8 @@
     "AmaterasuWolf_Dark": {
       "subcategoryIds": [
         "move.mount",
-        "survival.damage_reduction"
+        "survival.damage_reduction",
+        "survival.status_immunity"
       ],
       "tagIds": [
         "mount.ground"
@@ -2697,7 +3186,7 @@
     "Manticore_Dark": {
       "subcategoryIds": [
         "move.mount",
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [
         "mount.ground"
@@ -2713,7 +3202,7 @@
     },
     "WhiteMoth_Neutral": {
       "subcategoryIds": [
-        "pal.element_stats",
+        "pal.element_defense",
         "base.ranch"
       ],
       "tagIds": [],
@@ -2722,7 +3211,7 @@
     "MushroomDragon_Dark": {
       "subcategoryIds": [
         "move.mount",
-        "base.needs"
+        "base.san"
       ],
       "tagIds": [
         "mount.ground"
@@ -2732,9 +3221,9 @@
     "Umihebi_Fire": {
       "subcategoryIds": [
         "move.mount",
-        "survival.damage_reduction",
+        "survival.environmental_hazard_immunity",
         "player.conditional_damage",
-        "pal.active_stats"
+        "pal.status_damage"
       ],
       "tagIds": [
         "mount.ground"
@@ -2744,7 +3233,7 @@
     "Suzaku_Water": {
       "subcategoryIds": [
         "move.mount",
-        "pal.party_scaling"
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.flying"
@@ -2754,7 +3243,7 @@
     "SkyDragon_Grass": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert"
+        "player.mounted_transform_attack"
       ],
       "tagIds": [
         "mount.flying"
@@ -2778,15 +3267,15 @@
       ],
       "reviewStatus": "reviewed"
     },
-  "NightBlueHorse_Neutral": {
+    "NightBlueHorse_Neutral": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump",
-        "pal.party_scaling"
+        "move.riding_jump",
+        "pal.party_move_speed"
       ],
-    "tagIds": [
-      "mount.ground",
-      "jump.high"
+      "tagIds": [
+        "mount.ground",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
@@ -2807,7 +3296,8 @@
     "Yeti_Grass": {
       "subcategoryIds": [
         "move.mount",
-        "survival.damage_reduction"
+        "survival.damage_reduction",
+        "survival.status_immunity"
       ],
       "tagIds": [
         "mount.ground"
@@ -2818,7 +3308,7 @@
       "subcategoryIds": [
         "move.mount",
         "player.weakspot",
-        "pal.active_stats"
+        "pal.weakspot_damage"
       ],
       "tagIds": [
         "mount.ground"
@@ -2828,7 +3318,7 @@
     "GrassGolem_Dark": {
       "subcategoryIds": [
         "move.mount",
-        "combat.active_attack"
+        "combat.mounted_weapon"
       ],
       "tagIds": [
         "mount.ground"
@@ -2837,7 +3327,7 @@
     },
     "ScorpionMan_Electric": {
       "subcategoryIds": [
-        "player.element_convert"
+        "player.empowered_transform_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2854,7 +3344,7 @@
     },
     "GhostRabbit_Grass": {
       "subcategoryIds": [
-        "pal.element_stats"
+        "pal.element_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2869,7 +3359,7 @@
     "IceNarwhal_Fire": {
       "subcategoryIds": [
         "move.mount",
-        "resource.fishing"
+        "resource.fishing_gauge_assist"
       ],
       "tagIds": [
         "mount.water"
@@ -2879,7 +3369,7 @@
     "WhiteDeer_Dark": {
       "subcategoryIds": [
         "move.mount",
-        "pal.active_stats"
+        "pal.deployed_attack"
       ],
       "tagIds": [
         "mount.ground"
@@ -2888,14 +3378,16 @@
     },
     "WingGolem_Fire": {
       "subcategoryIds": [
-        "pal.self_burst"
+        "pal.self_attack",
+        "pal.self_defense"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
     },
     "ElecSnail_Ground": {
       "subcategoryIds": [
-        "survival.damage_reduction"
+        "survival.damage_reduction",
+        "survival.status_immunity"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2903,8 +3395,8 @@
     "KingSunfish_Thunder": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert",
-        "capture.encounter"
+        "player.mounted_transform_attack",
+        "capture.high_potential_fishing"
       ],
       "tagIds": [
         "mount.water"
@@ -2914,7 +3406,8 @@
     "GhostDragon_Fire": {
       "subcategoryIds": [
         "move.mount",
-        "pal.party_scaling"
+        "pal.party_attack",
+        "pal.party_move_speed"
       ],
       "tagIds": [
         "mount.flying"
@@ -2923,7 +3416,7 @@
     },
     "LilyQueen_Dark": {
       "subcategoryIds": [
-        "survival.heal"
+        "survival.instant_heal"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -2931,7 +3424,7 @@
     "Horus_Water": {
       "subcategoryIds": [
         "move.mount",
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [
         "mount.flying"
@@ -2948,7 +3441,7 @@
     "IceHorse_Dark": {
       "subcategoryIds": [
         "move.mount",
-        "player.element_convert",
+        "player.mounted_transform_attack",
         "player.status_buildup"
       ],
       "tagIds": [
@@ -2956,75 +3449,75 @@
       ],
       "reviewStatus": "reviewed"
     },
-  "YakushimaMonster001": {
+    "YakushimaMonster001": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump"
+        "move.riding_jump"
       ],
-    "tagIds": [
-      "mount.ground",
-      "jump.high"
+      "tagIds": [
+        "mount.ground",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
-  "YakushimaMonster001_Blue": {
+    "YakushimaMonster001_Blue": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump"
+        "move.riding_jump"
       ],
-    "tagIds": [
-      "mount.ground",
-      "jump.high"
+      "tagIds": [
+        "mount.ground",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
-  "YakushimaMonster001_Red": {
+    "YakushimaMonster001_Red": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump"
+        "move.riding_jump"
       ],
-    "tagIds": [
-      "mount.ground",
-      "jump.high"
+      "tagIds": [
+        "mount.ground",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
-  "YakushimaMonster001_Purple": {
+    "YakushimaMonster001_Purple": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump"
+        "move.riding_jump"
       ],
-    "tagIds": [
-      "mount.ground",
-      "jump.high"
+      "tagIds": [
+        "mount.ground",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
-  "YakushimaMonster001_Pink": {
+    "YakushimaMonster001_Pink": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump"
+        "move.riding_jump"
       ],
-    "tagIds": [
-      "mount.ground",
-      "jump.high"
+      "tagIds": [
+        "mount.ground",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
-  "YakushimaMonster001_Rainbow": {
+    "YakushimaMonster001_Rainbow": {
       "subcategoryIds": [
         "move.mount",
-      "move.riding_jump"
+        "move.riding_jump"
       ],
-    "tagIds": [
-      "mount.ground",
-      "jump.high"
+      "tagIds": [
+        "mount.ground",
+        "jump.high"
       ],
       "reviewStatus": "reviewed"
     },
     "YakushimaMonster002": {
       "subcategoryIds": [
-        "resource.drops"
+        "resource.elemental_drops"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -3052,7 +3545,7 @@
     },
     "YakushimaBoss001_Small": {
       "subcategoryIds": [
-        "pal.element_stats"
+        "pal.element_attack"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"
@@ -3114,8 +3607,7 @@
     },
     "BOSS_Sekhmet": {
       "subcategoryIds": [
-        "base.work_speed",
-        "pal.named_synergy"
+        "base.work_speed"
       ],
       "tagIds": [],
       "reviewStatus": "reviewed"

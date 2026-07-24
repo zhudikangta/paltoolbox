@@ -5,6 +5,7 @@ var PT_SKILL_CORE = (function() {
     var partnerFacetGroups = [];
     var partnerFacetOptionById = {};
     var partnerSubcategoryById = {};
+    var partnerSubcategoryGroupById = {};
     var partnerDetailTagById = {};
 
     var ELEMENT_NAME = {
@@ -91,12 +92,14 @@ var PT_SKILL_CORE = (function() {
         partnerTaxonomy = raw && raw.taxonomy ? raw.taxonomy : { groups: [], facets: [], detailTags: [] };
         var taxonomyLabels = {};
         partnerSubcategoryById = {};
+        partnerSubcategoryGroupById = {};
         partnerDetailTagById = {};
         (partnerTaxonomy.groups || []).forEach(function(group) {
             taxonomyLabels[group.id] = group.label || group.id;
             (group.children || []).forEach(function(child) {
                 taxonomyLabels[child.id] = child.label || child.id;
                 partnerSubcategoryById[child.id] = child;
+                partnerSubcategoryGroupById[child.id] = group;
             });
         });
         (partnerTaxonomy.detailTags || []).forEach(function(tag) {
@@ -283,12 +286,21 @@ var PT_SKILL_CORE = (function() {
         };
     }
 
+    function getPartnerDuplicateLabelScope(subcategoryId) {
+        var group = partnerSubcategoryGroupById[subcategoryId];
+        if (!group) return '';
+        if (group.id === 'player_damage') return '玩家';
+        if (group.id === 'pal_combat') return '帕鲁';
+        return group.label || group.id || '';
+    }
+
     function getPartnerEffectBlockModels(item, facetSelections) {
         var selectedCapabilityIds = selectedPartnerCapabilityIds(facetSelections);
         return normalizePartnerEffectBlocks(item && item.effectBlocks).map(function(block) {
             var presentation = splitPartnerTechnologyText(block.text);
             var capabilityIds = block.subcategoryIds.concat(block.tagIds);
             var labels = [];
+            var labelCounts = {};
             var seenLabelIds = {};
             var visiblePreciseTags = block.tagIds.map(function(id) {
                 return partnerDetailTagById[id];
@@ -307,6 +319,7 @@ var PT_SKILL_CORE = (function() {
                 labels.push({
                     id: id,
                     label: definition.label || id,
+                    scope: getPartnerDuplicateLabelScope(id),
                     selected: selectedCapabilityIds.indexOf(id) > -1
                 });
             });
@@ -317,8 +330,16 @@ var PT_SKILL_CORE = (function() {
                 labels.push({
                     id: id,
                     label: definition.label || id,
+                    scope: getPartnerDuplicateLabelScope(definition.subcategoryId),
                     selected: selectedCapabilityIds.indexOf(id) > -1
                 });
+            });
+            labels.forEach(function(entry) {
+                labelCounts[entry.label] = (labelCounts[entry.label] || 0) + 1;
+            });
+            labels.forEach(function(entry) {
+                if (labelCounts[entry.label] > 1 && entry.scope) entry.label += '（' + entry.scope + '）';
+                delete entry.scope;
             });
 
             var highlighted = selectedCapabilityIds.some(function(id) {

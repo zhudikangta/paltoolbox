@@ -27,7 +27,7 @@ const ORDINARY_DETAIL_ROOT = path.join(DETAIL_ROOT, '普通');
 const MAIN_URL = 'https://paldb.cc/cn/Partner_Skill';
 const RETRIEVED_AT = '2026-07-22';
 const GAME_VERSION = 'v1.0.0';
-const TRANSFORM_VERSION = '1.6.0';
+const TRANSFORM_VERSION = '1.7.0';
 const ORDINARY_CATEGORIES = new Set(['基础', '亚种', '泰拉瑞亚']);
 const FIXED_SPECIAL_PAGES = {
     RAID_YakushimaBoss001_Green: 'True_Eye_of_Cthulhu',
@@ -262,22 +262,91 @@ function applySupplementalRankTables(records, supplemental) {
     });
 }
 
+function getRankTables(record) {
+    if (Array.isArray(record.rankTables)) return record.rankTables;
+    return record.rankTable ? [record.rankTable] : [];
+}
+
+function withRankTables(record, tables) {
+    const updated = Object.assign({}, record, { rankTable: tables[0] || null });
+    if (tables.length > 1) updated.rankTables = tables;
+    else delete updated.rankTables;
+    return updated;
+}
+
+function applyRankTableTransforms(record, transforms) {
+    const tables = getRankTables(record);
+    if (!tables.length || !Array.isArray(transforms) || !transforms.length) return record;
+    let changed = false;
+    const transformed = tables.map(function(table) {
+        const applicable = (table.columns || []).map(function(column) {
+            return transforms.find(function(transform) { return transform.key === column.key; }) || null;
+        });
+        if (!applicable.some(Boolean)) return table;
+        changed = true;
+        return Object.assign({}, table, {
+            columns: table.columns.map(function(column, index) {
+                const transform = applicable[index];
+                return transform ? Object.assign({}, column, {
+                    label: transform.label || column.label,
+                    unit: Object.prototype.hasOwnProperty.call(transform, 'unit') ? transform.unit : column.unit
+                }) : column;
+            }),
+            rows: table.rows.map(function(row) {
+                return Object.assign({}, row, {
+                    values: row.values.map(function(value, index) {
+                        const transform = applicable[index];
+                        return transform && transform.absoluteValue && typeof value === 'number' ? Math.abs(value) : value;
+                    })
+                });
+            })
+        });
+    });
+    return changed ? withRankTables(record, transformed) : record;
+}
+
+function applyRankTableFilters(record, filters) {
+    const tables = getRankTables(record);
+    if (!tables.length || !Array.isArray(filters) || !filters.length) return record;
+    const description = String(record.description || '');
+    const kept = tables.filter(function(table) {
+        return !filters.some(function(filter) {
+            const keys = (table.columns || []).map(function(column) { return column.key; });
+            const matches = (filter.matchAllKeys || []).every(function(key) { return keys.includes(key); });
+            const descriptionSupportsTable = (filter.descriptionIncludes || []).every(function(text) {
+                return description.includes(text);
+            });
+            return matches && !descriptionSupportsTable;
+        });
+    });
+    return kept.length === tables.length ? record : withRankTables(record, kept);
+}
+
 function applyFactCorrections(records, corrections) {
     const facts = corrections && corrections.partnerSkills || {};
-    return records.map(function(record) {
+    const transforms = corrections && corrections.rankTableTransforms || [];
+    const filters = corrections && corrections.rankTableFilters || [];
+    const applyOne = function(record) {
         const correction = facts[record.palId];
-        if (!correction) return record;
-        if (!correction.correction || (!correction.correction.sourceUrl && !correction.correction.sourceType)) {
-            throw new Error('伙伴技能事实修正缺少证据: ' + record.palId);
+        let updated = record;
+        if (correction) {
+            if (!correction.correction || (!correction.correction.sourceUrl && !correction.correction.sourceType)) {
+                throw new Error('伙伴技能事实修正缺少证据: ' + record.palId);
+            }
+            updated = Object.assign({}, record, {
+                factCorrection: correction.correction
+            });
+            if (correction.description) updated.description = correction.description;
+            if (Object.prototype.hasOwnProperty.call(correction, 'rankTable')) updated.rankTable = correction.rankTable;
+            if (Object.prototype.hasOwnProperty.call(correction, 'rankTables')) updated.rankTables = correction.rankTables;
+            if (Object.prototype.hasOwnProperty.call(correction, 'researchTables')) updated.researchTables = correction.researchTables;
         }
-        const updated = Object.assign({}, record, {
-            factCorrection: correction.correction
-        });
-        if (correction.description) updated.description = correction.description;
-        if (Object.prototype.hasOwnProperty.call(correction, 'rankTable')) updated.rankTable = correction.rankTable;
-        if (Object.prototype.hasOwnProperty.call(correction, 'rankTables')) updated.rankTables = correction.rankTables;
-        return updated;
-    });
+        return applyRankTableFilters(applyRankTableTransforms(updated, transforms), filters);
+    };
+    if (Array.isArray(records)) return records.map(applyOne);
+    return Object.fromEntries(Object.keys(records || {}).map(function(palId) {
+        return [palId, applyOne(records[palId])];
+    }));
 }
 
 function generateData() {
@@ -292,7 +361,7 @@ function generateData() {
     );
     const pals = readJson(PAL_FILE);
     const internalParameters = loadInternalParameters();
-    const specialRecords = loadSpecialRecords(manifest);
+    const specialRecords = applyFactCorrections(loadSpecialRecords(manifest), corrections);
     const classification = readJson(CLASSIFICATION_FILE);
     const effectBlocks = readJson(EFFECT_BLOCKS_FILE);
     const output = buildPartnerSkillData({
@@ -382,8 +451,13 @@ function validateData(output) {
         tables.forEach(function(table) {
             const rawLabels = table.columns.filter(function(column) { return !column.label || column.label === column.key; });
             if (rawLabels.length) errors.push(palId + ' 仍有未翻译的伙伴技能参数列: ' + rawLabels.map(function(column) { return column.key; }).join(', '));
-            const missingValues = table.rows.some(function(row) { return row.values.some(function(value) { return value === null || value === undefined; }); });
-            if (missingValues) errors.push(palId + ' 的伙伴技能等级表仍有空值');
+            const unexpectedMissingValues = table.rows.some(function(row) {
+                return row.values.some(function(value, index) {
+                    if (value !== null && value !== undefined) return false;
+                    return !/^glider_/.test(String(table.columns[index] && table.columns[index].key || ''));
+                });
+            });
+            if (unexpectedMissingValues) errors.push(palId + ' 的伙伴技能等级表仍有非滑翔来源空值');
             if (table.type === 'stars' && table.rows.map(function(row) { return row.rank; }).join(',') !== '0,1,2,3,4') {
                 errors.push(palId + ' 的伙伴技能星级不是 0~4 星');
             }

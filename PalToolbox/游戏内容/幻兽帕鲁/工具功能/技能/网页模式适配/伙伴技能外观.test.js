@@ -23,6 +23,24 @@ assert.ok(source.includes('var partnerExpandedGroups = {}'), '伙伴技能首次
 assert.ok(!source.includes('partnerExpandedGroups = { move: true }'), '移动与骑乘不能再被代码强制默认展开');
 assert.ok(source.includes('getPartnerFacetGroupCounts'), '折叠大类必须读取按帕鲁去重的动态总数');
 assert.ok(source.includes('sk-partner-filter-group-count'), '折叠大类标题必须始终渲染总数');
+assert.ok(
+    source.includes("var expanded = !!filterNeedle || hasSelection || partnerExpandedGroups[group.id] === true;"),
+    '筛选后数量为 0 不能覆盖用户已经展开的大类状态'
+);
+assert.ok(
+    !source.includes('var expanded = !groupEmpty &&'),
+    '大类展开状态不能被当前结果数量强制收起'
+);
+assert.ok(
+    !source.includes("aria-disabled=\"' + (groupEmpty ? 'true' : 'false')"),
+    '数量为 0 的大类仍必须允许点击加减号展开或收起'
+);
+assert.ok(
+    !source.includes('if (partnerGroupToggle.disabled) return;'),
+    '大类标题不能因当前数量为 0 而跳过折叠操作'
+);
+assert.ok(source.includes('var optionEmpty = count === 0 && !active;'), '零条子项必须具有明确的不可选状态');
+assert.ok(source.includes("(optionEmpty ? ' disabled' : '')"), '零条子项必须使用原生禁用状态阻止点击');
 
 assert.ok(source.includes('applyPartnerFrameMask'), '唯一大底板必须直接挂在最外层框内');
 assert.ok(source.includes('sk-partner-frame-holes'), '唯一大底板必须使用全框孔洞遮罩');
@@ -69,6 +87,7 @@ assert.ok(
     source.indexOf('effectBlocksHtml +') < source.indexOf('fixedParameterHtml + rankTableHtml'),
     '详情表格必须继续位于所有效果块之后'
 );
+assert.ok(source.includes('renderPartnerResearchTables(p.researchTables)'), '本人实测的固定表必须在展示详情打开时一并渲染');
 
 assert.ok(
     /\.sk-partner-browser\{[^}]*background:transparent[^}]*isolation:isolate/.test(css),
@@ -96,6 +115,8 @@ assert.ok(/\.sk-partner-filter-group\{[^}]*--pd-cube-blur/.test(css), '筛选分
 assert.ok(/\.sk-partner-filter-group-collapse\{[^}]*grid-template-rows:0fr[^}]*transition:/.test(css), '折叠内容必须使用可动画的收起状态');
 assert.ok(/\.sk-partner-filter-group--open \.sk-partner-filter-group-collapse\{[^}]*grid-template-rows:1fr/.test(css), '展开状态必须平滑打开完整内容');
 assert.ok(/\.sk-partner-filter-group-count\{[^}]*font-variant-numeric:tabular-nums/.test(css), '折叠大类总数必须使用稳定宽度的数字样式');
+assert.ok(/\.sk-partner-filter-group--empty \.sk-partner-filter-group-toggle\{[^}]*cursor:pointer/.test(css), '零条大类的加减号必须保持可点击');
+assert.ok(/\.sk-partner-facet-option--empty\{[^}]*background:transparent[^}]*cursor:default/.test(css), '零条子项必须半透明且不可点击，而不是保留深色按钮底');
 assert.ok(/\.sk-partner-results-actions\{[^}]*display:flex/.test(css), '展示详情必须作为清楚可见的顶部操作');
 
 assert.ok(/\.sk-partner-card-grid\{[^}]*display:grid[^}]*align-items:stretch/.test(css), '卡片必须同行等高');
@@ -145,5 +166,8 @@ assert.ok(!css.includes('.sk-partner-filter-summary'), '冗余提示删除后必
 assert.ok(!source.includes('holeHeight'), '孔洞高度必须与卡片完全一致');
 assert.ok(!css.includes('sk-partner-card--dragging'), '外观对齐不能复制图鉴抽拉动画');
 assert.ok(!css.includes('!important'), '样式不能依靠 !important 覆盖旧实现');
+
+assert.ok(/\.pt-partner-rank-table--measured\{[^}]*table-layout:fixed/.test(css), '实测数据表必须固定列宽，不能撑破伙伴技能卡片');
+assert.ok(/\.pt-partner-rank-table--measured th,\.pt-partner-rank-table--measured td\{[^}]*white-space:normal/.test(css), '实测数据表的提升百分比必须允许在单元格内换行');
 
 console.log('伙伴技能外观测试通过');

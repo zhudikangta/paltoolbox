@@ -3,8 +3,56 @@
     "dataRole": "research-correction",
     "verifiedAt": "2026-07-23",
     "gameVersion": "v1.0.0",
-    "transformVersion": "1.8.0"
+    "transformVersion": "2.1.0"
   },
+  "rankTableTransforms": [
+    {
+      "id": "mushroomdragon-dark-san-decrease-display",
+      "key": "BaseCampPal_SAN_Down",
+      "label": "据点帕鲁SAN值下降减缓",
+      "unit": "%",
+      "absoluteValue": true,
+      "status": "verified-from-description-and-source-values",
+      "sourceUrl": "https://paldb.cc/cn/Shroomer_Noct",
+      "evidence": "正文明确写为 SAN 值下降速度减缓(10~15)%；PalDB 等级表保存的是内部负向修正值，本站展示减缓幅度时应显示正数。"
+    },
+    {
+      "id": "sleeve-rabbit-partner-cooldown-display",
+      "key": "PartnerSkillCoolTime_Decrease",
+      "label": "伙伴技能冷却时间缩短",
+      "unit": "%",
+      "absoluteValue": true,
+      "status": "verified-from-description-and-source-values",
+      "sourceUrl": "https://paldb.cc/cn/Lapure",
+      "evidence": "正文明确写为其他队伍帕鲁的伙伴技能冷却时间缩短(10~50)%；PalDB 等级表保存的是内部负向修正值，不能标成秒数或显示负数。"
+    }
+  ],
+  "rankTableFilters": [
+    {
+      "id": "remove-unexplained-mounted-speed-table",
+      "matchAllKeys": ["MoveSpeed_up_PartnerSkill_Ride_1"],
+      "descriptionIncludes": ["移动速度"],
+      "status": "verified-from-description-and-source-values",
+      "sourceUrl": "https://paldb.cc/cn/Partner_Skill",
+      "evidence": "同一套 0/10/12/15/20 的骑乘升星参数不能在正文未说明骑乘移速提升时，作为该帕鲁独有伙伴技能效果展示；正文写明移动速度的记录保留。"
+    },
+    {
+      "id": "remove-unexplained-leaf-attack-conversion-table",
+      "matchAllKeys": ["localized_attack", "ElementLeaf"],
+      "descriptionIncludes": ["攻击转变为草属性", "攻击力提升"],
+      "status": "verified-from-description-and-source-values",
+      "sourceUrl": "https://paldb.cc/cn/Elgrove_Cryst",
+      "evidence": "冰峰陶洛斯正文只有浸湿目标必定冻结；攻击提升与转草属性并非其伙伴技能效果，PalDB 页面中该表属于误入数据。"
+    },
+    {
+      "id": "remove-unexplained-water-attack-conversion-table",
+      "matchAllKeys": ["localized_attack", "ElementWater"],
+      "descriptionIncludes": ["攻击转变为水属性", "攻击力提升"],
+      "status": "verified-from-description-and-source-values",
+      "sourceUrl": "https://paldb.cc/cn/Finsider_Ignis",
+      "evidence": "粉粉布偶鲨正文只有武器减重和火属性弱点伤害提升；攻击提升与转水属性并非其伙伴技能效果，PalDB 页面中该表属于误入数据。"
+    }
+  ],
   "partnerSkills": {
     "Gorilla_Ground": {
       "description": "发动后会解放野性之力，并在一定时间内石掌猿的攻击力将提升(75~300)%。\n若它在队伍中，玩家的攀爬速度提升(50~100)%。（不可叠加）",
@@ -261,6 +309,94 @@
         "sourceType": "in-game-verification",
         "verifiedAt": "2026-07-24",
         "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的并肩作战帕鲁攻击力提升依次为 40%、50%、60%、70%、80%。公开等级表五档为 0，不能采用。"
+      }
+    },
+    "BlackGriffon": {
+      "researchTables": [
+        {
+          "type": "measured",
+          "title": "骑乘移动速度",
+          "rankLabel": "移动方式",
+          "sourceLabel": "实测数据",
+          "columns": [
+            { "key": "moveSpeed", "label": "移动速度", "unit": "" },
+            { "key": "sprintSpeed", "label": "冲刺速度", "unit": "" },
+            { "key": "increase", "label": "提升百分比", "unit": "" }
+          ],
+          "rows": [
+            { "rank": "地面移动", "values": [850, 1200, "—"] },
+            { "rank": "飞行移动", "values": [1100, 1600, "移动 +29.4%；冲刺 +33.3%"] }
+          ]
+        }
+      ],
+      "correction": {
+        "id": "blackgriffon-in-game-mounted-movement-speeds",
+        "status": "verified-in-game",
+        "sourceType": "in-game-verification",
+        "verifiedAt": "2026-07-24",
+        "evidence": "用户在 v1.0.0 游戏内实测：异构格里芬地面移动速度/冲刺速度为 850/1200，飞行移动速度/冲刺速度为 1100/1600；各星级不变。"
+      }
+    },
+    "FairyDragon": {
+      "researchTables": [
+        {
+          "type": "measured",
+          "title": "骑乘移动速度",
+          "rankLabel": "移动方式",
+          "sourceLabel": "实测数据",
+          "columns": [
+            { "key": "moveSpeed", "label": "移动速度", "unit": "" },
+            { "key": "sprintSpeed", "label": "冲刺速度", "unit": "" },
+            { "key": "increase", "label": "提升百分比", "unit": "" }
+          ],
+          "rows": [
+            { "rank": "地面移动", "values": [630, 800, "—"] },
+            { "rank": "飞行移动", "values": [700, 1000, "移动 +11.1%；冲刺 +25%"] }
+          ]
+        }
+      ],
+      "correction": {
+        "id": "fairydragon-in-game-mounted-movement-speeds",
+        "status": "verified-in-game",
+        "sourceType": "in-game-verification",
+        "verifiedAt": "2026-07-24",
+        "evidence": "用户在 v1.0.0 游戏内实测：精灵龙地面移动速度/冲刺速度为 630/800，飞行移动速度/冲刺速度为 700/1000；各星级不变。"
+      }
+    },
+    "FairyDragon_Water": {
+      "researchTables": [
+        {
+          "type": "measured",
+          "title": "骑乘移动速度",
+          "rankLabel": "移动方式",
+          "sourceLabel": "实测数据",
+          "columns": [
+            { "key": "moveSpeed", "label": "移动速度", "unit": "" },
+            { "key": "sprintSpeed", "label": "冲刺速度", "unit": "" },
+            { "key": "increase", "label": "提升百分比", "unit": "" }
+          ],
+          "rows": [
+            { "rank": "地面移动", "values": [630, 800, "—"] },
+            { "rank": "飞行移动", "values": [700, 1000, "移动 +11.1%；冲刺 +25%"] }
+          ]
+        }
+      ],
+      "correction": {
+        "id": "fairydragon-water-mounted-movement-speeds",
+        "status": "verified-from-user-confirmation",
+        "sourceType": "user-confirmed-in-game-value",
+        "verifiedAt": "2026-07-24",
+        "evidence": "用户确认水灵龙的骑乘速度数据与精灵龙相同：地面移动速度/冲刺速度为 630/800，飞行移动速度/冲刺速度为 700/1000；各星级不变。"
+      }
+    },
+    "DarkMechaDragon": {
+      "description": "可骑在它的背上在空中飞行。\n骑乘时移动速度提升(0~20)%。\n若它在队伍中，持有武器的帕鲁的伙伴技能伤害将提升(20~50)%。（不可叠加）\n科技66",
+      "correction": {
+        "id": "darkmechadragon-in-game-mounted-speed-description",
+        "status": "verified-in-game",
+        "sourceType": "in-game-verification",
+        "verifiedAt": "2026-07-24",
+        "evidence": "用户提供的 v1.0.0 游戏内伙伴技能界面显示：杰诺多兰骑乘时移动速度提升为 0★至4★依次 0%、10%、12%、15%、20%。PalDB 正文遗漏此句，但本地解包的 MoveSpeed 参数与游戏内显示一致。"
       }
     }
   }

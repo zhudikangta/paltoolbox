@@ -333,19 +333,29 @@ var PT_SKILL_COMMON = (function() {
                 return '<th>' + partnerTableText(column.label, false) + partnerTableText(unit, false) + '</th>';
             }).join('');
         var body = rankTable.rows.map(function(row) {
-            var rank = partnerTableText(row.rank, false) + (rankTable.type === 'stars' ? '★' : '级');
+            var suffix = rankTable.type === 'stars' ? '★' : (rankTable.type === 'levels' ? '级' : '');
+            var rank = partnerTableText(row.rank, false) + suffix;
             return '<tr><th>' + rank + '</th>' + columns.map(function(column, index) {
                 var value = row.values && row.values[index];
-                return '<td>' + partnerTableText(value, true) + '</td>';
+                var sourceBlankGliderValue = (value === null || value === undefined) && /^glider_/.test(String(column.key || ''));
+                return '<td>' + (sourceBlankGliderValue ? '' : partnerTableText(value, true)) + '</td>';
             }).join('') + '</tr>';
         }).join('');
-        return '<div class="pt-partner-rank-wrap"><table class="pt-partner-rank-table"><thead><tr>' + heading +
+        var tableTitle = rankTable.title ? '<div class="pt-partner-table-title">' + partnerTableText(rankTable.title, false) +
+            (rankTable.sourceLabel ? '（' + partnerTableText(rankTable.sourceLabel, false) + '）' : '') + '</div>' :
+            (rankTable.sourceLabel ? '<div class="pt-partner-table-title">' + partnerTableText(rankTable.sourceLabel, false) + '</div>' : '');
+        var tableClass = 'pt-partner-rank-table' + (rankTable.type === 'measured' ? ' pt-partner-rank-table--measured' : '');
+        return '<div class="pt-partner-rank-wrap">' + tableTitle + '<table class="' + tableClass + '"><thead><tr>' + heading +
             '</tr></thead><tbody>' + body + '</tbody></table></div>';
     }
 
     function renderPartnerRankTables(rankTables, fallbackTable) {
         var tables = Array.isArray(rankTables) && rankTables.length ? rankTables : (fallbackTable ? [fallbackTable] : []);
         return tables.map(renderPartnerRankTable).join('');
+    }
+
+    function renderPartnerResearchTables(researchTables) {
+        return (Array.isArray(researchTables) ? researchTables : []).map(renderPartnerRankTable).join('');
     }
 
     function renderPartnerFixedParameters(detail) {
@@ -361,7 +371,7 @@ var PT_SKILL_COMMON = (function() {
         if (coolDown > 0 && labels.indexOf('冷却时间') < 0) {
             parameters.push({ label: '冷却时间', unit: '秒', value: coolDown });
         }
-        if (duration > 0 && labels.indexOf('持续时间') < 0) {
+        if (duration > 1 && labels.indexOf('持续时间') < 0) {
             parameters.push({ label: '持续时间', unit: '秒', value: duration });
         }
         if (!parameters.length) return '';
@@ -387,6 +397,7 @@ var PT_SKILL_COMMON = (function() {
         getSourcesForCategory: getSourcesForCategory,
         renderPartnerRankTable: renderPartnerRankTable,
         renderPartnerRankTables: renderPartnerRankTables,
+        renderPartnerResearchTables: renderPartnerResearchTables,
         renderPartnerFixedParameters: renderPartnerFixedParameters,
         CATEGORY_LABEL: CATEGORY_LABEL, CATEGORY_ORDER: CATEGORY_ORDER,
         CATEGORY_MAP: CATEGORY_MAP,

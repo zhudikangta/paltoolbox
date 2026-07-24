@@ -3,7 +3,7 @@
     "dataRole": "standard-effect-blocks",
     "verifiedAt": "2026-07-23",
     "gameVersion": "v1.0.0",
-    "transformVersion": "1.6.0",
+    "transformVersion": "1.9.0",
     "description": "伙伴技能描述分块与分类标签对应关系；逐条人工复核，不供页面直接读取。"
   },
   "partnerSkills": {
@@ -45,8 +45,7 @@
       {
         "text": "发动后它会坐在玩家的头上，配合玩家的攻击用冲锋枪进行追击。\n科技11",
         "subcategoryIds": [
-          "combat.active_attack",
-          "combat.follow_attack"
+          "combat.weapon_form"
         ],
         "tagIds": []
       }
@@ -100,7 +99,7 @@
       {
         "text": "若它在队伍中，无属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       },
@@ -123,7 +122,7 @@
       {
         "text": "在落地前，玩家的攻击力提升(50~86)%。",
         "subcategoryIds": [
-          "player.attack"
+          "player.conditional_attack"
         ],
         "tagIds": []
       }
@@ -140,7 +139,7 @@
         "text": "若它在队伍中，玩家和帕鲁以暗属性攻击命中敌方弱点时的伤害提升(25~40)%。（不可叠加）",
         "subcategoryIds": [
           "player.weakspot",
-          "pal.active_stats"
+          "pal.weakspot_damage"
         ],
         "tagIds": []
       }
@@ -158,7 +157,7 @@
       {
         "text": "若它在队伍中，若玩家的生命值低于30%，恢复(20~40)%的生命值。（不可叠加）\n※发动后需120秒冷却方可再次触发",
         "subcategoryIds": [
-          "survival.heal"
+          "survival.instant_heal"
         ],
         "tagIds": []
       }
@@ -167,7 +166,7 @@
       {
         "text": "若它在队伍中，玩家伐木时造成的伤害将提升(30~50)%，所有木材种类的重量都将减轻(40~60)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.gather",
+          "resource.logging_efficiency",
           "resource.weight"
         ],
         "tagIds": []
@@ -214,7 +213,7 @@
         "text": "发动后，瞅什魔会大量饮用能量饮料，瞅什魔的移动速度和工作速度会因此提升(100~900)%。",
         "subcategoryIds": [
           "base.work_speed",
-          "pal.self_burst"
+          "move.special"
         ],
         "tagIds": []
       },
@@ -248,7 +247,7 @@
       {
         "text": "若它在队伍中，击倒火属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -258,7 +257,7 @@
         "text": "若它在队伍中，玩家和帕鲁以水属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）",
         "subcategoryIds": [
           "player.weakspot",
-          "pal.active_stats"
+          "pal.weakspot_damage"
         ],
         "tagIds": []
       }
@@ -267,7 +266,7 @@
       {
         "text": "若它在队伍中，暗属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       }
@@ -285,7 +284,8 @@
       {
         "text": "若它在队伍中，君王美露帕的防御力和移动速度将会提升。",
         "subcategoryIds": [
-          "pal.named_synergy"
+          "pal.named_defense",
+          "pal.named_move_speed"
         ],
         "tagIds": []
       },
@@ -310,8 +310,8 @@
       {
         "text": "此帕鲁的防御力和移动速度会按照队伍中美露帕的数量提升，每只增加(5~14)%。\n科技23",
         "subcategoryIds": [
-          "pal.named_synergy",
-          "pal.party_scaling"
+          "pal.party_defense",
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -329,8 +329,8 @@
       {
         "text": "此帕鲁的防御力和移动速度会按照队伍中美露帕的数量提升，每只增加(5~14)%。\n科技46",
         "subcategoryIds": [
-          "pal.named_synergy",
-          "pal.party_scaling"
+          "pal.party_defense",
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -348,7 +348,7 @@
       {
         "text": "发动后，新叶猿会在一定时间内用突击步枪猛烈扫射附近的敌人。\n科技12",
         "subcategoryIds": [
-          "combat.active_attack"
+          "combat.pal_weapon_combat"
         ],
         "tagIds": []
       }
@@ -357,7 +357,7 @@
       {
         "text": "发动后，秋叶猿会在一定时间内以火属性突击步枪猛烈扫射附近的敌人。\n科技13",
         "subcategoryIds": [
-          "combat.active_attack"
+          "combat.pal_weapon_combat"
         ],
         "tagIds": []
       }
@@ -375,7 +375,7 @@
       {
         "text": "若它在队伍中，非战斗时每秒令玩家与队伍帕鲁的生命值恢复(0.1~0.5)%。（不可叠加）",
         "subcategoryIds": [
-          "survival.heal"
+          "survival.regeneration"
         ],
         "tagIds": []
       },
@@ -391,7 +391,7 @@
       {
         "text": "若它在队伍中，火属性帕鲁的防御力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       },
@@ -407,7 +407,6 @@
       {
         "text": "将它分派到家畜牧场，它就有机会从地里挖出金币。",
         "subcategoryIds": [
-          "resource.special",
           "base.ranch"
         ],
         "tagIds": []
@@ -435,7 +434,7 @@
       {
         "text": "骑乘期间破坏岩石的效率将提升(500~2000)%。\n科技6",
         "subcategoryIds": [
-          "resource.gather"
+          "resource.mining_efficiency"
         ],
         "tagIds": []
       }
@@ -480,7 +479,7 @@
       {
         "text": "若它在队伍中，玩家采矿时造成的伤害将提升(30~60)%，石头的重量将减轻(80~100)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.gather",
+          "resource.mining_efficiency",
           "resource.weight"
         ],
         "tagIds": []
@@ -500,7 +499,7 @@
         "text": "骑乘期间可以进行2段跳跃，破坏树木的效率也会提升(220~500)%。\n科技12",
         "subcategoryIds": [
           "move.riding_jump",
-          "resource.gather"
+          "resource.logging_efficiency"
         ],
         "tagIds": [
           "jump.double"
@@ -538,7 +537,8 @@
       {
         "text": "可骑在它的背上移动。\n骑乘期间的移动速度会稍微变快一点。\n科技9",
         "subcategoryIds": [
-          "move.mount"
+          "move.mount",
+          "move.mounted_speed"
         ],
         "tagIds": [
           "mount.ground"
@@ -581,7 +581,8 @@
       {
         "text": "若它在队伍中，毛老爹的防御力和攻击力会有所提升。",
         "subcategoryIds": [
-          "pal.named_synergy"
+          "pal.named_attack",
+          "pal.named_defense"
         ],
         "tagIds": []
       }
@@ -599,8 +600,8 @@
       {
         "text": "此帕鲁的防御力和攻击力会按照队伍中毛掸儿的数量提升，每只增加(12~24)%。\n科技20",
         "subcategoryIds": [
-          "pal.named_synergy",
-          "pal.party_scaling"
+          "pal.party_attack",
+          "pal.party_defense"
         ],
         "tagIds": []
       }
@@ -620,7 +621,7 @@
         "subcategoryIds": [
           "resource.weight",
           "player.weakspot",
-          "pal.active_stats"
+          "pal.weakspot_damage"
         ],
         "tagIds": []
       }
@@ -654,7 +655,7 @@
       {
         "text": "若它在据点里，据点帕鲁的饱腹度的减少幅度将会(-10~-20)%。（不可叠加）",
         "subcategoryIds": [
-          "base.needs"
+          "base.hunger"
         ],
         "tagIds": []
       }
@@ -670,7 +671,7 @@
       {
         "text": "若它在据点里，据点帕鲁的饱腹度的减少幅度将会(-15~-25)%。（不可叠加）",
         "subcategoryIds": [
-          "base.needs"
+          "base.hunger"
         ],
         "tagIds": []
       }
@@ -697,7 +698,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为水属性，且攻击力提升(5~20)%。\n科技24",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -715,7 +716,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。\n科技27",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -724,7 +725,7 @@
       {
         "text": "若它在队伍中，雷属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       },
@@ -740,7 +741,7 @@
       {
         "text": "若它在队伍中，水属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       },
@@ -756,7 +757,7 @@
       {
         "text": "若它在队伍中，火属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       },
@@ -772,7 +773,7 @@
       {
         "text": "若它在队伍中，无属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       },
@@ -789,7 +790,7 @@
         "text": "若它在队伍中，玩家和帕鲁以草属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）",
         "subcategoryIds": [
           "player.weakspot",
-          "pal.active_stats"
+          "pal.weakspot_damage"
         ],
         "tagIds": []
       },
@@ -805,15 +806,14 @@
       {
         "text": "若它在队伍中，垂钓时获得的道具增加(55~95)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.fishing"
+          "resource.fishing_yield"
         ],
         "tagIds": []
       },
       {
         "text": "此外，当海月仙和海月灵同时在据点里时，海月仙浇水的工作速度提升(50~120)%。（不可叠加）",
         "subcategoryIds": [
-          "base.work_speed",
-          "pal.named_synergy"
+          "base.work_speed"
         ],
         "tagIds": []
       }
@@ -822,15 +822,14 @@
       {
         "text": "若它在队伍中，打捞时获得的道具增加(55~95)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.fishing"
+          "resource.salvage_yield"
         ],
         "tagIds": []
       },
       {
         "text": "此外，当海月仙和海月灵同时在据点里时，海月灵浇水的工作速度提升(50~120)%。（不可叠加）",
         "subcategoryIds": [
-          "base.work_speed",
-          "pal.named_synergy"
+          "base.work_speed"
         ],
         "tagIds": []
       }
@@ -848,7 +847,7 @@
       {
         "text": "若它在队伍中，在垂钓小游戏中的判定条和鱼的图标未重合期间，捕获计量槽的下降量减少(12~35)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.fishing"
+          "resource.fishing_gauge_assist"
         ],
         "tagIds": []
       }
@@ -857,7 +856,7 @@
       {
         "text": "若它在队伍中，水属性帕鲁的防御力提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       }
@@ -923,7 +922,7 @@
         "text": "若它在队伍中，玩家和帕鲁以雷属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）\n科技14",
         "subcategoryIds": [
           "player.weakspot",
-          "pal.active_stats"
+          "pal.weakspot_damage"
         ],
         "tagIds": []
       }
@@ -941,7 +940,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。\n科技64",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -957,7 +956,7 @@
       {
         "text": "若它在队伍中，玩家的攻击力提升(10~20)%。",
         "subcategoryIds": [
-          "player.attack"
+          "player.constant_attack"
         ],
         "tagIds": []
       }
@@ -973,7 +972,7 @@
       {
         "text": "若它在队伍中，玩家的攻击力提升(10~20)%。",
         "subcategoryIds": [
-          "player.attack"
+          "player.constant_attack"
         ],
         "tagIds": []
       }
@@ -1014,7 +1013,7 @@
       {
         "text": "发动后可以使用夜视，即使在黑暗中也能看得一清二楚。\n再次发动即可解除该效果。",
         "subcategoryIds": [
-          "utility.vision"
+          "utility.night_vision"
         ],
         "tagIds": []
       },
@@ -1057,7 +1056,7 @@
       {
         "text": "若它在队伍中，草属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       }
@@ -1091,7 +1090,8 @@
       {
         "text": "可骑在它的背上在空中飞行。\n飞行时移动速度会提升。",
         "subcategoryIds": [
-          "move.mount"
+          "move.mount",
+          "move.mounted_speed"
         ],
         "tagIds": [
           "mount.flying"
@@ -1100,7 +1100,7 @@
       {
         "text": "若它在队伍中，击倒暗属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技20",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -1109,7 +1109,8 @@
       {
         "text": "可骑在它的背上在空中飞行。\n飞行时移动速度会提升。",
         "subcategoryIds": [
-          "move.mount"
+          "move.mount",
+          "move.mounted_speed"
         ],
         "tagIds": [
           "mount.flying"
@@ -1118,7 +1119,8 @@
       {
         "text": "若它在队伍中，玩家和帕鲁受到的火属性伤害减轻(15~30)%，并且不会陷入点燃状态。（不可叠加）\n科技32",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.damage_reduction",
+          "survival.status_immunity"
         ],
         "tagIds": []
       }
@@ -1172,7 +1174,7 @@
       {
         "text": "若它在队伍中，击倒地属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       },
@@ -1195,7 +1197,7 @@
       {
         "text": "若它在队伍中，女皇蜂的攻击力会有所提升。",
         "subcategoryIds": [
-          "pal.named_synergy"
+          "pal.named_attack"
         ],
         "tagIds": []
       }
@@ -1204,8 +1206,7 @@
       {
         "text": "此帕鲁的攻击力会按照队伍中骑士蜂的数量提升，每只增加(12~24)%。",
         "subcategoryIds": [
-          "pal.named_synergy",
-          "pal.party_scaling"
+          "pal.party_attack"
         ],
         "tagIds": []
       }
@@ -1232,7 +1233,7 @@
       {
         "text": "若它在队伍中，捡到帕鲁蛋时将有(50~75)%的概率再捡到1颗。（不可叠加）\n科技19",
         "subcategoryIds": [
-          "capture.egg"
+          "capture.egg_extra"
         ],
         "tagIds": []
       }
@@ -1298,7 +1299,7 @@
       {
         "text": "发动后(10~20)秒内，朋克蜥与玩家将变得透明，在敌方视野中隐去身形。",
         "subcategoryIds": [
-          "utility.vision"
+          "utility.invisibility"
         ],
         "tagIds": []
       }
@@ -1307,7 +1308,7 @@
       {
         "text": "发动后(10~20)秒内，热血蜥与玩家将变得透明，在敌方视野中隐去身形。",
         "subcategoryIds": [
-          "utility.vision"
+          "utility.invisibility"
         ],
         "tagIds": []
       }
@@ -1316,7 +1317,7 @@
       {
         "text": "发动后会解放野性之力，并在一定时间内铁拳猿的攻击力将提升(75~300)%。",
         "subcategoryIds": [
-          "pal.self_burst"
+          "pal.self_attack"
         ],
         "tagIds": []
       }
@@ -1325,7 +1326,7 @@
       {
         "text": "发动后会解放野性之力，并在一定时间内石掌猿的攻击力将提升(75~300)%。",
         "subcategoryIds": [
-          "pal.self_burst"
+          "pal.self_attack"
         ],
         "tagIds": []
       },
@@ -1404,7 +1405,7 @@
       {
         "text": "发动后，焰巫狐会将力量分给玩家，让玩家的攻击转变为火属性，且攻击力提升(30~50)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.empowered_transform_attack"
         ],
         "tagIds": []
       }
@@ -1413,7 +1414,7 @@
       {
         "text": "发动后，幽巫狐会将力量分给玩家，让玩家的攻击转变为暗属性，且攻击力提升(30~50)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.empowered_transform_attack"
         ],
         "tagIds": []
       }
@@ -1422,14 +1423,14 @@
       {
         "text": "若它在队伍中，击倒无属性帕鲁时获得的掉落道具增加(40~80)%。",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       },
       {
         "text": "若它在队伍中，玩家投掷帕鲁球时，有(10~50)%的概率不会消耗帕鲁球。（不可叠加）",
         "subcategoryIds": [
-          "capture.sphere"
+          "capture.sphere_saving"
         ],
         "tagIds": []
       }
@@ -1456,7 +1457,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为暗属性，且攻击力提升(5~20)%。\n科技25",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -1474,7 +1475,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。\n科技47",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -1483,7 +1484,7 @@
       {
         "text": "发动后，密林陶洛斯会将力量分给玩家，让玩家的攻击转变为草属性，且攻击力提升(30~50)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.empowered_transform_attack"
         ],
         "tagIds": []
       }
@@ -1501,7 +1502,7 @@
       {
         "text": "若它在队伍中，投掷出去的帕鲁球将会自动追踪帕鲁，且玩家的负重上限提高(300~600)。（不可叠加）",
         "subcategoryIds": [
-          "capture.sphere",
+          "capture.sphere_tracking",
           "resource.capacity"
         ],
         "tagIds": []
@@ -1549,7 +1550,7 @@
       {
         "text": "若它在队伍中，击倒水属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技57",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -1567,7 +1568,7 @@
       {
         "text": "若它在队伍中，龙属性帕鲁的防御力会提升(15~30)%。（不可叠加）\n科技24",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       }
@@ -1585,7 +1586,7 @@
       {
         "text": "若它在队伍中，雷属性帕鲁的防御力会提升(15~30)%。（不可叠加）\n科技34",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       }
@@ -1638,7 +1639,8 @@
       {
         "text": "骑乘期间破坏树木的效率会提高(220~500)%，破坏矿石的效率会提高(500~2000)%。\n科技28",
         "subcategoryIds": [
-          "resource.gather"
+          "resource.logging_efficiency",
+          "resource.mining_efficiency"
         ],
         "tagIds": []
       }
@@ -1656,7 +1658,8 @@
       {
         "text": "骑乘期间破坏树木的效率会提高(220~500)%，破坏矿石的效率会提高(500~2000)%。\n科技41",
         "subcategoryIds": [
-          "resource.gather"
+          "resource.logging_efficiency",
+          "resource.mining_efficiency"
         ],
         "tagIds": []
       }
@@ -1665,7 +1668,7 @@
       {
         "text": "发动后，布偶鲨会将力量分给玩家，让玩家的攻击转变为水属性，且攻击力提升(30~50)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.empowered_transform_attack"
         ],
         "tagIds": []
       }
@@ -1676,7 +1679,7 @@
         "subcategoryIds": [
           "resource.weight",
           "player.weakspot",
-          "pal.active_stats"
+          "pal.weakspot_damage"
         ],
         "tagIds": []
       }
@@ -1685,7 +1688,7 @@
       {
         "text": "发动后可通过花朵的治愈能力，来恢复玩家(75~85)%的生命值。",
         "subcategoryIds": [
-          "survival.heal"
+          "survival.instant_heal"
         ],
         "tagIds": []
       },
@@ -1701,14 +1704,15 @@
       {
         "text": "发动后，它会用花朵的治愈之力让玩家的生命值恢复(80~90)%。",
         "subcategoryIds": [
-          "survival.heal"
+          "survival.instant_heal"
         ],
         "tagIds": []
       },
       {
         "text": "若它在队伍中，玩家和帕鲁受到的草属性伤害减轻(15~30)%，并且不会陷入缠绕状态。（不可叠加）",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.damage_reduction",
+          "survival.status_immunity"
         ],
         "tagIds": []
       }
@@ -1717,7 +1721,8 @@
       {
         "text": "莉芳的攻击力和防御力，会随着队伍中其他草属性帕鲁的数量提升，每只增加(2~6)%。",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_attack",
+          "pal.party_defense"
         ],
         "tagIds": []
       }
@@ -1771,7 +1776,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。\n科技29",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -1789,7 +1794,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为暗属性，且攻击力提升(5~20)%。\n科技34",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -1834,7 +1839,7 @@
       {
         "text": "若它在队伍中，冰属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       },
@@ -1859,14 +1864,14 @@
       {
         "text": "骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       },
       {
         "text": "迅雷鸟的移动速度，会随着队伍中其他雷属性帕鲁的数量提升，每只增加(5~25)%。\n科技29",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -1884,14 +1889,14 @@
       {
         "text": "骑乘期间玩家的攻击会转变为冰属性，且攻击力提升(5~20)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       },
       {
         "text": "疾霜鸟的移动速度，会随着队伍中其他冰属性帕鲁的数量提升，每只增加(5~25)%。\n科技71",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -1909,7 +1914,7 @@
       {
         "text": "冥灯鱼的移动速度，会随着队伍中其他暗属性或水属性帕鲁的数量提升，每只增加(5~25)%。\n科技31",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -1927,7 +1932,7 @@
       {
         "text": "炙灯鱼的移动速度，会随着队伍中其他火属性或水属性帕鲁的数量提升，每只增加(5~25)%。\n科技42",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -1954,7 +1959,7 @@
       {
         "text": "霹雳犬的移动速度，会随着队伍中其他雷属性帕鲁的数量提升，每只增加(5~25)%。\n科技30",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -1981,7 +1986,7 @@
       {
         "text": "若它在队伍中，冰属性帕鲁的防御力会提升(15~30)%。（不可叠加）\n科技32",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       }
@@ -1991,7 +1996,7 @@
         "text": "若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
         "subcategoryIds": [
           "survival.defense",
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -2001,7 +2006,7 @@
         "text": "若它在队伍中，玩家的防御力将提升(5~10)%，且击倒雷属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
         "subcategoryIds": [
           "survival.defense",
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -2011,7 +2016,7 @@
         "text": "若它在队伍中，玩家和帕鲁对缠绕状态的敌人造成的伤害将提升(50~65)%。（不可叠加）",
         "subcategoryIds": [
           "player.conditional_damage",
-          "pal.active_stats"
+          "pal.status_damage"
         ],
         "tagIds": []
       }
@@ -2092,7 +2097,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为龙属性，且攻击力提升(5~20)%。\n科技11",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -2110,7 +2115,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。\n科技40",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -2128,7 +2133,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为火属性，且攻击力提升(5~20)%。\n科技33",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -2146,7 +2151,7 @@
       {
         "text": "流焰龙的攻击力，会随着队伍中其他火属性或地属性帕鲁的数量提升，每只增加(4~8)%。\n科技36",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_attack"
         ],
         "tagIds": []
       }
@@ -2165,7 +2170,7 @@
         "text": "若它在队伍中，玩家和帕鲁以冰属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）\n科技70",
         "subcategoryIds": [
           "player.weakspot",
-          "pal.active_stats"
+          "pal.weakspot_damage"
         ],
         "tagIds": []
       }
@@ -2192,7 +2197,7 @@
       {
         "text": "发动后会进入甲壳回旋状态。\n它会一边旋转一边跟随玩家，且破坏矿石的效率将提升(800~2000)%。",
         "subcategoryIds": [
-          "resource.gather"
+          "resource.mining_efficiency"
         ],
         "tagIds": []
       }
@@ -2210,7 +2215,7 @@
       {
         "text": "若它在队伍中，捡到的帕鲁蛋将有(35~45)%的概率变为头目帕鲁蛋。（不可叠加）\n科技33",
         "subcategoryIds": [
-          "capture.egg"
+          "capture.boss_egg"
         ],
         "tagIds": []
       }
@@ -2228,7 +2233,7 @@
       {
         "text": "若它在队伍中，捡到的帕鲁蛋将有(45~55)%的概率变为头目帕鲁蛋。（不可叠加）\n科技44",
         "subcategoryIds": [
-          "capture.egg"
+          "capture.boss_egg"
         ],
         "tagIds": []
       }
@@ -2237,7 +2242,7 @@
       {
         "text": "若它在队伍中，地属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       },
@@ -2253,15 +2258,14 @@
       {
         "text": "若它在队伍中，打倒的敌人掉落的金币提升(100~200)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.special"
+          "resource.gold_drops"
         ],
         "tagIds": []
       },
       {
         "text": "将它分派到家畜牧场，它就会掉落优质帕鲁油或者小概率掉落金币。",
         "subcategoryIds": [
-          "base.ranch",
-          "resource.special"
+          "base.ranch"
         ],
         "tagIds": []
       }
@@ -2297,7 +2301,8 @@
       {
         "text": "若它在队伍中，玩家和帕鲁受到的冰属性伤害减轻(15~30)%，并且不会陷入冻结状态。（不可叠加）\n科技57",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.damage_reduction",
+          "survival.status_immunity"
         ],
         "tagIds": []
       }
@@ -2315,7 +2320,8 @@
       {
         "text": "若它在队伍中，玩家和帕鲁受到的暗属性伤害减轻(15~30)%，并且不会陷入黑暗状态。（不可叠加）\n科技59",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.damage_reduction",
+          "survival.status_immunity"
         ],
         "tagIds": []
       }
@@ -2333,7 +2339,7 @@
       {
         "text": "若它在队伍中，击倒草属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技33",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -2351,7 +2357,7 @@
       {
         "text": "若它在队伍中，击倒无属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技35",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -2387,7 +2393,6 @@
       {
         "text": "若它在队伍中，玩家的攻及击中点燃状态的敌人时，会使敌人周边燃烧，对碰到火焰的敌人持续造成相当于玩家攻击力(15~30)%的伤害。（不可叠加）",
         "subcategoryIds": [
-          "player.conditional_damage",
           "player.extra_damage"
         ],
         "tagIds": []
@@ -2413,7 +2418,7 @@
       {
         "text": "若它在队伍中，无属性帕鲁的防御力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       },
@@ -2438,7 +2443,7 @@
       {
         "text": "若它在队伍中，每次打倒敌人时，全体队伍帕鲁的主动技能冷却时间缩短(30~60)%。（不可叠加）\n科技37",
         "subcategoryIds": [
-          "pal.cooldown"
+          "pal.active_skill_cooldown"
         ],
         "tagIds": []
       }
@@ -2474,7 +2479,7 @@
       {
         "text": "若它在据点里，菇波的神奇孢子将会使据点内帕鲁的SAN值下降速度减缓(10~15)%。\n科技39",
         "subcategoryIds": [
-          "base.needs"
+          "base.san"
         ],
         "tagIds": []
       }
@@ -2483,7 +2488,7 @@
       {
         "text": "发动后，冰姬灵会将力量分给玩家，让玩家的攻击转变为冰属性，且攻击力提升(30~50)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.empowered_transform_attack"
         ],
         "tagIds": []
       }
@@ -2511,7 +2516,7 @@
         "text": "若它在队伍中，玩家和帕鲁对浸湿状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技40",
         "subcategoryIds": [
           "player.conditional_damage",
-          "pal.active_stats"
+          "pal.status_damage"
         ],
         "tagIds": []
       }
@@ -2529,9 +2534,9 @@
       {
         "text": "若它在队伍中，能让熔岩伤害无效化，且玩家和帕鲁对点燃状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技59",
         "subcategoryIds": [
-          "survival.damage_reduction",
+          "survival.environmental_hazard_immunity",
           "player.conditional_damage",
-          "pal.active_stats"
+          "pal.status_damage"
         ],
         "tagIds": []
       }
@@ -2549,7 +2554,7 @@
       {
         "text": "朱雀的移动速度，会随着队伍中其他火属性帕鲁的数量提升，每只增加(5~25)%。\n科技43",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -2567,7 +2572,7 @@
       {
         "text": "清雀的移动速度，会随着队伍中其他水属性帕鲁的数量提升，每只增加(5~25)%。\n科技44",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -2603,7 +2608,7 @@
       {
         "text": "若它在队伍中，龙属性帕鲁的攻击力会提升(15~30)%。（不可叠加）\n科技38",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       }
@@ -2621,7 +2626,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为草属性，且攻击力提升(5~20)%。\n科技45",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -2630,7 +2635,7 @@
       {
         "text": "若它在据点里，春彩娘会为农园注入元气，使作物的生长加速(50~70)%。",
         "subcategoryIds": [
-          "base.crops"
+          "base.crop_growth"
         ],
         "tagIds": []
       }
@@ -2639,7 +2644,7 @@
       {
         "text": "若它在队伍中，地属性帕鲁的防御力提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       }
@@ -2657,7 +2662,7 @@
       {
         "text": "与它并肩作战时，遇到和它有着相同被动技能的帕鲁的概率将提升(15~30)%。\n※部分被动技能除外\n科技41",
         "subcategoryIds": [
-          "capture.encounter"
+          "capture.passive_encounter"
         ],
         "tagIds": []
       }
@@ -2765,7 +2770,7 @@
       {
         "text": "日耀驹的移动速度，会随着队伍中其他无属性帕鲁的数量提升，每只增加(5~25)%。\n科技77",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -2775,7 +2780,7 @@
         "text": "若它在队伍中，玩家和帕鲁对泥泞状态的敌人造成的伤害将提升(50~65)%。（不可叠加）",
         "subcategoryIds": [
           "player.conditional_damage",
-          "pal.active_stats"
+          "pal.status_damage"
         ],
         "tagIds": []
       }
@@ -2793,7 +2798,7 @@
       {
         "text": "若它在队伍中，击倒龙属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -2811,7 +2816,7 @@
       {
         "text": "若它在队伍中，会使玩家不容易被敌人发现。（不可叠加）",
         "subcategoryIds": [
-          "utility.vision"
+          "utility.stealth"
         ],
         "tagIds": []
       }
@@ -2847,7 +2852,8 @@
       {
         "text": "若它在队伍中，玩家和帕鲁受到的地属性伤害减轻(15~30)%，并且不会陷入泥泞状态。（不可叠加）\n科技51",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.damage_reduction",
+          "survival.status_immunity"
         ],
         "tagIds": []
       }
@@ -2890,7 +2896,8 @@
       {
         "text": "若它在队伍中，打倒敌人时，一同并肩作战的帕鲁的攻击力与防御力会提升(5~10)%。\n该效果最多可累积5层，持续20秒。（不可叠加）\n科技46",
         "subcategoryIds": [
-          "pal.active_stats"
+          "pal.deployed_attack",
+          "pal.deployed_defense"
         ],
         "tagIds": []
       }
@@ -2909,7 +2916,7 @@
         "text": "若它在队伍中，玩家和帕鲁以龙属性攻击命中敌方弱点时的伤害将提升(25~40)%。（不可叠加）\n科技55",
         "subcategoryIds": [
           "player.weakspot",
-          "pal.active_stats"
+          "pal.weakspot_damage"
         ],
         "tagIds": []
       }
@@ -2927,7 +2934,7 @@
       {
         "text": "发动后，双心岩傀的右手处会发射草属性的强力激光。\n科技48",
         "subcategoryIds": [
-          "combat.active_attack"
+          "combat.mounted_weapon"
         ],
         "tagIds": []
       }
@@ -2945,7 +2952,7 @@
       {
         "text": "发动后，咒心岩傀的右手处会发射暗属性的强力激光。\n科技69",
         "subcategoryIds": [
-          "combat.active_attack"
+          "combat.mounted_weapon"
         ],
         "tagIds": []
       }
@@ -2954,7 +2961,7 @@
       {
         "text": "发动后，阿努比斯会将力量分给玩家，让玩家的攻击转变为地属性，且攻击力提升(30~50)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.empowered_transform_attack"
         ],
         "tagIds": []
       },
@@ -2968,8 +2975,7 @@
       {
         "text": "若它在据点里，据点中的阿努比斯的工作速度提升(20~40)%。（不可叠加）",
         "subcategoryIds": [
-          "base.work_speed",
-          "pal.named_synergy"
+          "base.work_speed"
         ],
         "tagIds": []
       },
@@ -2986,7 +2992,7 @@
         "text": "若它在队伍中，玩家和帕鲁对中毒状态的敌人造成的伤害将提升(50~65)%。（不可叠加）",
         "subcategoryIds": [
           "player.conditional_damage",
-          "pal.active_stats"
+          "pal.status_damage"
         ],
         "tagIds": []
       }
@@ -2995,7 +3001,7 @@
       {
         "text": "发动后，电针妖会将力量分给玩家，让玩家的攻击转变为雷属性，且攻击力提升(30~50)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.empowered_transform_attack"
         ],
         "tagIds": []
       }
@@ -3040,7 +3046,7 @@
       {
         "text": "发动后，妮瞅莎会在一段时间内用霰弹枪攻击附近的敌人。",
         "subcategoryIds": [
-          "combat.active_attack"
+          "combat.pal_weapon_combat"
         ],
         "tagIds": []
       },
@@ -3092,7 +3098,7 @@
       {
         "text": "若它在据点里，梅莉姆会进行祈祷， 让作物的收获量提升(18~35)%。",
         "subcategoryIds": [
-          "base.crops"
+          "base.crop_harvest"
         ],
         "tagIds": []
       }
@@ -3101,7 +3107,7 @@
       {
         "text": "若它在队伍中，击倒帕鲁时帕鲁之魂的获得量提升+(100~200)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.special"
+          "resource.soul_drops"
         ],
         "tagIds": []
       }
@@ -3110,7 +3116,7 @@
       {
         "text": "若它在队伍中，草属性帕鲁的防御力提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       }
@@ -3126,7 +3132,7 @@
       {
         "text": "与它并肩作战时，铬铁矿的掉落量也会提升(100~200)%。\n科技58",
         "subcategoryIds": [
-          "resource.gather"
+          "resource.material_drops"
         ],
         "tagIds": []
       }
@@ -3162,7 +3168,7 @@
       {
         "text": "若它在队伍中，垂钓的捕获计量槽在小游戏开始时的初始位置升高(5~14)%，并且在判定条与鱼的图标重合期间，捕获计量槽的上升量增加(5~14)%。（不可叠加）\n科技42",
         "subcategoryIds": [
-          "resource.fishing"
+          "resource.fishing_gauge_assist"
         ],
         "tagIds": []
       }
@@ -3180,7 +3186,7 @@
       {
         "text": "若它在队伍中，垂钓的捕获计量槽在小游戏开始时的初始位置升高(7~17)%，并且在判定条与鱼的图标重合期间，捕获计量槽的上升量增加(7~17)%。（不可叠加）\n科技71",
         "subcategoryIds": [
-          "resource.fishing"
+          "resource.fishing_gauge_assist"
         ],
         "tagIds": []
       }
@@ -3198,7 +3204,7 @@
       {
         "text": "若它在队伍中， 使用切肉刀进行解体时，获得的掉落道具增加(100~200)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.special"
+          "resource.butcher_drops"
         ],
         "tagIds": []
       }
@@ -3216,7 +3222,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为地属性，且攻击力提升(5~20)%。\n科技54",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       }
@@ -3243,7 +3249,8 @@
       {
         "text": "若它在队伍中，玩家和帕鲁受到的雷属性伤害减轻(15~30)%，并且不会陷入感电状态。（不可叠加）\n科技53",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.damage_reduction",
+          "survival.status_immunity"
         ],
         "tagIds": []
       }
@@ -3261,14 +3268,15 @@
       {
         "text": "净世鹿的攻击力和移动速度，会随着队伍中其他无属性帕鲁的数量提升，每只增加(2~6)%。",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_attack",
+          "pal.party_move_speed"
         ],
         "tagIds": []
       },
       {
         "text": "若它在队伍中，非战斗时每秒令玩家与队伍帕鲁的生命值恢复(0.15~0.75)%。（不可叠加）\n科技54",
         "subcategoryIds": [
-          "survival.heal"
+          "survival.regeneration"
         ],
         "tagIds": []
       }
@@ -3286,7 +3294,7 @@
       {
         "text": "若它在队伍中，一同并肩作战的帕鲁的生命值会逐渐减少，但攻击力将提升(40~80)%。（不可叠加）\n科技78",
         "subcategoryIds": [
-          "pal.active_stats"
+          "pal.deployed_attack"
         ],
         "tagIds": []
       }
@@ -3304,7 +3312,8 @@
       {
         "text": "骑乘期间对矿石造成的伤害将提升(1100~3300)%，且金属矿石的掉落量提升(150~300)%。\n科技39",
         "subcategoryIds": [
-          "resource.gather"
+          "resource.mining_efficiency",
+          "resource.material_drops"
         ],
         "tagIds": []
       }
@@ -3313,7 +3322,8 @@
       {
         "text": "发动后会以钢铁般的意志，在一定时间内提高泰锋的攻击力(50~200)%，防御力(50~200)%。",
         "subcategoryIds": [
-          "pal.self_burst"
+          "pal.self_attack",
+          "pal.self_defense"
         ],
         "tagIds": []
       }
@@ -3322,7 +3332,8 @@
       {
         "text": "发动后会以钢铁般的意志，在一定时间内提高丹烽的攻击力(60~210)%，防御力(60~210)%。",
         "subcategoryIds": [
-          "pal.self_burst"
+          "pal.self_attack",
+          "pal.self_defense"
         ],
         "tagIds": []
       }
@@ -3386,7 +3397,8 @@
       {
         "text": "若它在队伍中，玩家和帕鲁受到的水属性伤害减轻(15~30)%，并且不会陷入浸湿状态。（不可叠加）",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.damage_reduction",
+          "survival.status_immunity"
         ],
         "tagIds": []
       }
@@ -3422,7 +3434,6 @@
       {
         "text": "若它在队伍中，玩家的攻击击中感电状态的敌人时，会令敌人放电，对周围的敌人造成相当于玩家攻击力(40~60)%的伤害。（不可叠加）",
         "subcategoryIds": [
-          "player.conditional_damage",
           "player.extra_damage"
         ],
         "tagIds": []
@@ -3432,7 +3443,7 @@
       {
         "text": "若它在队伍中，攻击陷入中毒状态的敌人时，会使该敌人的攻击力降低(40~80)%。（不可叠加）",
         "subcategoryIds": [
-          "combat.enemy_debuff"
+          "survival.enemy_attack_reduction"
         ],
         "tagIds": []
       }
@@ -3450,7 +3461,7 @@
       {
         "text": "若它在队伍中，会更容易钓上高潜力帕鲁。（不可叠加）\n科技65",
         "subcategoryIds": [
-          "capture.encounter"
+          "capture.high_potential_fishing"
         ],
         "tagIds": []
       }
@@ -3468,14 +3479,14 @@
       {
         "text": "骑乘期间玩家的攻击会转变为雷属性，且攻击力提升(5~20)%。",
         "subcategoryIds": [
-          "player.element_convert"
+          "player.mounted_transform_attack"
         ],
         "tagIds": []
       },
       {
         "text": "此外，若它在队伍中，会更容易钓上高潜力帕鲁。（不可叠加）\n科技66",
         "subcategoryIds": [
-          "capture.encounter"
+          "capture.high_potential_fishing"
         ],
         "tagIds": []
       }
@@ -3484,7 +3495,7 @@
       {
         "text": "若它在队伍中，其他队伍帕鲁的伙伴技能冷却时间缩短(10~50)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.cooldown"
+          "pal.partner_skill_cooldown"
         ],
         "tagIds": []
       }
@@ -3502,7 +3513,8 @@
       {
         "text": "灵曦龙的攻击力和移动速度，会随着队伍中其他龙属性或暗属性帕鲁的数量提升，每只增加(2~6)%。\n科技68",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_attack",
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -3520,7 +3532,8 @@
       {
         "text": "狱熙龙的攻击力和移动速度，会随着队伍中其他龙属性或火属性帕鲁的数量提升，每只增加(2~6)%。\n科技76",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_attack",
+          "pal.party_move_speed"
         ],
         "tagIds": []
       }
@@ -3590,7 +3603,7 @@
       {
         "text": "此外，玩家的生命值低于50%期间，玩家的攻击力提升(30~50)%。（不可叠加）",
         "subcategoryIds": [
-          "player.attack"
+          "player.conditional_attack"
         ],
         "tagIds": []
       }
@@ -3609,7 +3622,7 @@
         "text": "若它在队伍中，玩家和帕鲁对黑暗状态的敌人造成的伤害将提升(50~65)%。（不可叠加）\n科技72",
         "subcategoryIds": [
           "player.conditional_damage",
-          "pal.active_stats"
+          "pal.status_damage"
         ],
         "tagIds": []
       }
@@ -3636,8 +3649,7 @@
       {
         "text": "若它在队伍中，玩家射箭命中目标时会爆炸，额外造成相当于玩家攻击力(15~30)%的伤害。（不可叠加）",
         "subcategoryIds": [
-          "player.weapon_damage",
-          "player.extra_damage"
+          "player.weapon_extra_damage"
         ],
         "tagIds": []
       }
@@ -3646,7 +3658,7 @@
       {
         "text": "若它在队伍中，暗属性帕鲁的防御力提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_defense"
         ],
         "tagIds": []
       }
@@ -3655,7 +3667,7 @@
       {
         "text": "若它在队伍中，并且所有队伍帕鲁的种类都不同时，玩家的攻击力会提升(30~80)%。（不可叠加）",
         "subcategoryIds": [
-          "player.attack"
+          "player.conditional_attack"
         ],
         "tagIds": []
       }
@@ -3682,7 +3694,8 @@
       {
         "text": "若它在队伍中，玩家和帕鲁受到的爆炸攻击伤害减轻(60~80)%，并且不会陷入眩晕状态。（不可叠加）\n科技79",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.damage_reduction",
+          "survival.status_immunity"
         ],
         "tagIds": []
       }
@@ -3709,7 +3722,7 @@
       {
         "text": "发动后便能通过女王的疗愈能力，为玩家和队伍内的帕鲁恢复(80~90)%的生命值。",
         "subcategoryIds": [
-          "survival.heal"
+          "survival.instant_heal"
         ],
         "tagIds": []
       }
@@ -3718,7 +3731,7 @@
       {
         "text": "发动后便能通过女王的疗愈能力，为玩家和队伍内的帕鲁恢复(85~95)%的生命值。",
         "subcategoryIds": [
-          "survival.heal"
+          "survival.instant_heal"
         ],
         "tagIds": []
       }
@@ -3727,7 +3740,8 @@
       {
         "text": "若它在队伍中，子弹击中敌人时，一同并肩作战的帕鲁的攻击力与防御力会提升(1~5)%。\n该效果最多可累积30层，持续5秒。（不可叠加）",
         "subcategoryIds": [
-          "pal.active_stats"
+          "pal.deployed_attack",
+          "pal.deployed_defense"
         ],
         "tagIds": []
       }
@@ -3745,7 +3759,7 @@
       {
         "text": "若它在队伍中，击倒冰属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技60",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -3763,7 +3777,7 @@
       {
         "text": "若它在队伍中，击倒火属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）\n科技60",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -3772,7 +3786,8 @@
       {
         "text": "可骑在它的背上在空中飞行。\n且飞行时移动速度会提升。",
         "subcategoryIds": [
-          "move.mount"
+          "move.mount",
+          "move.mounted_speed"
         ],
         "tagIds": [
           "mount.flying"
@@ -3781,7 +3796,7 @@
       {
         "text": "骑乘期间的暗属性攻击将提升(15~30)%。\n科技47",
         "subcategoryIds": [
-          "pal.partner_damage"
+          "pal.mounted_element_attack"
         ],
         "tagIds": []
       }
@@ -3799,7 +3814,7 @@
       {
         "text": "骑乘期间的无属性和暗属性攻击将强化(15~30)%。\n科技53",
         "subcategoryIds": [
-          "pal.partner_damage"
+          "pal.mounted_element_attack"
         ],
         "tagIds": []
       }
@@ -3835,7 +3850,7 @@
       {
         "text": "霄龙的攻击力，会随着队伍中其他龙属性帕鲁的数量提升，每只增加(4~8)%。\n科技77",
         "subcategoryIds": [
-          "pal.party_scaling"
+          "pal.party_attack"
         ],
         "tagIds": []
       }
@@ -3844,7 +3859,6 @@
       {
         "text": "若它在队伍中，玩家的攻击击中缠绕状态的敌人时，会使敌人爆炸，额外造成相当于玩家攻击力(40~60)%的伤害。（不可叠加）",
         "subcategoryIds": [
-          "player.conditional_damage",
           "player.extra_damage"
         ],
         "tagIds": []
@@ -3852,7 +3866,7 @@
       {
         "text": "另外，能让玩家与帕鲁不受世界树的爆炸孢子影响。",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.environmental_hazard_immunity"
         ],
         "tagIds": []
       }
@@ -3868,7 +3882,8 @@
       {
         "text": "若它在队伍中，玩家和帕鲁不会陷入中毒状态，并且不受世界树区域的毒气影响。",
         "subcategoryIds": [
-          "survival.damage_reduction"
+          "survival.status_immunity",
+          "survival.environmental_hazard_immunity"
         ],
         "tagIds": []
       }
@@ -3893,9 +3908,10 @@
     ],
     "DarkMechaDragon": [
       {
-        "text": "可骑在它的背上在空中飞行。",
+        "text": "可骑在它的背上在空中飞行。\n骑乘时移动速度提升(0~20)%。",
         "subcategoryIds": [
-          "move.mount"
+          "move.mount",
+          "move.mounted_speed"
         ],
         "tagIds": [
           "mount.flying"
@@ -4003,7 +4019,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为冰属性，攻击力提升(10~40)%，且攻击会附加(2~6)点冻结异常状态值。\n科技62",
         "subcategoryIds": [
-          "player.element_convert",
+          "player.mounted_transform_attack",
           "player.status_buildup"
         ],
         "tagIds": []
@@ -4022,7 +4038,7 @@
       {
         "text": "骑乘期间玩家的攻击会转变为暗属性，攻击力提升(10~40)%，且攻击会附加(2~6)点黑暗异常状态值。\n科技62",
         "subcategoryIds": [
-          "player.element_convert",
+          "player.mounted_transform_attack",
           "player.status_buildup"
         ],
         "tagIds": []
@@ -4032,7 +4048,7 @@
       {
         "text": "与玩家并肩作战时，它会配合玩家的攻击用水属性的长枪进行追击。",
         "subcategoryIds": [
-          "combat.follow_attack"
+          "combat.pal_weapon_combat"
         ],
         "tagIds": []
       },
@@ -4229,7 +4245,7 @@
       {
         "text": "若它在队伍中，击倒暗属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加）",
         "subcategoryIds": [
-          "resource.drops"
+          "resource.elemental_drops"
         ],
         "tagIds": []
       }
@@ -4265,7 +4281,7 @@
       {
         "text": "若它在队伍中，暗属性帕鲁的攻击力会提升(15~30)%。（不可叠加）",
         "subcategoryIds": [
-          "pal.element_stats"
+          "pal.element_attack"
         ],
         "tagIds": []
       }
@@ -4274,8 +4290,7 @@
       {
         "text": "若它在据点里，据点中的阿努比斯的工作速度提升(20~40)%。（不可叠加）",
         "subcategoryIds": [
-          "base.work_speed",
-          "pal.named_synergy"
+          "base.work_speed"
         ],
         "tagIds": []
       },

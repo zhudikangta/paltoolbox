@@ -29,6 +29,16 @@ assert.throws(function() {
     );
 }, /正式伙伴技能数据已陈旧/, '完整重生成结果变化时 --check 必须报告正式文件陈旧');
 
+const oneSecondInternal = buildPartnerSkillData({
+    internalParameters: {
+        ActionWindow: { duration: 1, coolDown: 30, description: '类型: 主动技能 | 冷却: 30s | 持续: 1s | 数值: 1星=20' },
+        ActualDuration: { duration: 10, coolDown: 30 }
+    }
+});
+assert.strictEqual(oneSecondInternal.internalParameters.ActionWindow.duration, undefined, '动作窗口 duration=1 不能进入正式数据');
+assert.ok(!oneSecondInternal.internalParameters.ActionWindow.technicalDescription.includes('持续: 1s'), '动作窗口不能在正式技术说明中伪装成持续时间');
+assert.strictEqual(oneSecondInternal.internalParameters.ActualDuration.duration, 10, '明确的非 1 秒持续时间必须保留');
+
 const normal = parsePartnerSkillList(fixture('普通列表片段.html'), 'https://paldb.cc/cn/Partner_Skill');
 assert.strictEqual(normal.length, 2, '应该按卡片提取普通帕鲁');
 assert.deepStrictEqual(normal[0], {
@@ -214,6 +224,39 @@ const localizedSkillTable = parseDetailPartnerSkill(
     'WingGolem',
     'https://paldb.cc/cn/Knocklem'
 );
+
+const gliderMissingCells = parseDetailPartnerSkill(
+    fixture('透明化等级表片段.html')
+        .replace(/LizardMan/g, 'FlyingManta_Thunder')
+        .replace(/透明化/g, '电风滑翔')
+        .replace('发动后<span>(10~20)</span>秒内变得透明。', '若它在队伍中，会改变滑翔伞的性能。')
+        .replace(/<table class="table">[\s\S]*?<\/table>/, '<table class="table table-striped table-hover"><thead><tr><th>Lv.<th>GliderMaxSpeed<th>GliderGravityScale<th>GliderSP<tbody>' +
+            '<tr><td>1<td>700<td><td>9.5<tr><td>2<td>850<td>0.013<td>8<tr><td>3<td><td>0.011<td>7</table>'),
+    'FlyingManta_Thunder',
+    'https://paldb.cc/cn/Celaray_Lux'
+);
+assert.deepStrictEqual(
+    gliderMissingCells.rankTable.rows.map(function(row) { return row.values; }),
+    [[700, null, 9.5], [850, 0.013, 8], [null, 0.011, 7]],
+    'PalDB 滑翔表的空白格必须保留为空，不能伪造成数值 0'
+);
+
+const entirelyBlankGenericTable = parseDetailPartnerSkill(
+    fixture('透明化等级表片段.html')
+        .replace(/LizardMan/g, 'DreamDemon')
+        .replace(/透明化/g, '逐梦者')
+        .replace('发动后<span>(10~20)</span>秒内变得透明。', '若它在队伍中，就会出现于玩家身边。')
+        .replace(/<table class="table">[\s\S]*?<\/table>/, '<table class="table"><thead><tr><th>Lv.<th>Range<tbody>' +
+            '<tr><td>1<td><tr><td>2<td><tr><td>3<td><tr><td>4<td><tr><td>5<td></table>'),
+    'DreamDemon',
+    'https://paldb.cc/cn/Daedream'
+);
+assert.strictEqual(
+    entirelyBlankGenericTable.rankTable,
+    null,
+    '等级表的所有数据格均为空时，不能生成伪造的 0 数值表'
+);
+
 assert.deepStrictEqual(
     localizedSkillTable.rankTable,
     {
@@ -301,7 +344,14 @@ const fixtureClassification = {
 const built = buildPartnerSkillData({
     pals: pals,
     normalRecords: [
-        { palName: '原型', skillName: '原型技能', description: '原型说明', sourceUrl: 'normal' },
+        {
+            palName: '原型', skillName: '原型技能', description: '原型说明', sourceUrl: 'normal',
+            researchTables: [{
+                type: 'measured', rankLabel: '移动方式', sourceLabel: '实测数据',
+                columns: [{ key: 'moveSpeed', label: '移动速度', unit: '' }, { key: 'sprintSpeed', label: '冲刺速度', unit: '' }, { key: 'increase', label: '提升百分比', unit: '' }],
+                rows: [{ rank: '地面移动', values: [850, 1200, '—'] }, { rank: '飞行移动', values: [1100, 1600, '移动 +29.4%；冲刺 +33.3%'] }]
+            }]
+        },
         { palName: '史莱姆', skillName: '黏液', description: '史莱姆说明', sourceUrl: 'normal' }
     ],
     specialRecords: {
@@ -327,6 +377,15 @@ assert.ok(built.internalParameters.GYM_Base, '解包参数必须放在独立区�
 assert.ok(Array.isArray(built.conflicts), '冲突必须有独立记录区块');
 assert.strictEqual(built.catalog[0].iconFile, 'T_Base_icon_normal.png', '伙伴技能目录必须复用帕鲁头像文件');
 assert.strictEqual(built.catalog[0].displayId, '10B', '伙伴技能目录必须复用帕鲁图鉴的完整显示编号');
+assert.deepStrictEqual(
+    built.partnerSkills.Base.researchTables,
+    [{
+        type: 'measured', rankLabel: '移动方式', sourceLabel: '实测数据',
+        columns: [{ key: 'moveSpeed', label: '移动速度', unit: '' }, { key: 'sprintSpeed', label: '冲刺速度', unit: '' }, { key: 'increase', label: '提升百分比', unit: '' }],
+        rows: [{ rank: '地面移动', values: [850, 1200, '—'] }, { rank: '飞行移动', values: [1100, 1600, '移动 +29.4%；冲刺 +33.3%'] }]
+    }],
+    '本人实测的固定表必须作为正式研究数据传入页面，不能混进星级表'
+);
 assert.strictEqual(built.catalog.find(function(item) { return item.palId === 'Terra'; }).displayId, '', '没有图鉴编号的帕鲁显示编号必须为空');
 assert.deepStrictEqual(built.catalog[0].usageCategoryIds, ['move'], '目录必须保存用途大类索引');
 assert.deepStrictEqual(built.catalog[0].usageSubcategoryIds, ['move.mount'], '目录必须保存下级分类索引');
@@ -359,8 +418,20 @@ assert.deepStrictEqual(moonLordData.catalog, [], '特殊帕鲁没有伙伴技能
 const formal = JSON.parse(fs.readFileSync(formalFile, 'utf8'));
 assert.ok(formal.meta.effectBlocks, '正式数据必须记录效果块生成元数据');
 assert.strictEqual(formal.meta.effectBlocks.records, 301);
-assert.strictEqual(formal.meta.effectBlocks.transformVersion, '1.6.0');
+assert.strictEqual(formal.meta.effectBlocks.transformVersion, '1.9.0');
 assert.strictEqual(formal.partnerSkills.KendoFrog.effectBlocks.length, 2);
 assert.strictEqual(formal.partnerSkills.KendoFrog_Dark.effectBlocks.length, 2);
+assert.ok(
+    formal.partnerSkills.DarkMechaDragon.description.includes('骑乘时移动速度提升(0~20)%。'),
+    '杰诺多兰必须以游戏内真实描述写明骑乘时移动速度提升'
+);
+assert.ok(
+    formal.partnerSkills.DarkMechaDragon.effectBlocks[0].text.includes('骑乘时移动速度提升(0~20)%。'),
+    '杰诺多兰的骑乘移动速度必须归在骑乘描述块中'
+);
+assert.ok(
+    !formal.partnerSkills.BirdDragon.description.includes('骑乘时移动速度提升(0~20)%。'),
+    '杰诺多兰的游戏内修正不得误写入同样可飞行的烽歌龙'
+);
 
 console.log('伙伴技能数据测试通过');

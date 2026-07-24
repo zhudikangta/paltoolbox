@@ -387,6 +387,53 @@ assert.deepStrictEqual(
     '效果块末尾的科技等级必须从描述正文中独立出来'
 );
 
+core.setPartnerSkillData({
+    taxonomy: {
+        groups: [
+            {
+                id: 'player_damage',
+                label: '玩家伤害强化',
+                children: [{ id: 'player.conditional_damage', label: '异常状态增加伤害' }]
+            },
+            {
+                id: 'pal_combat',
+                label: '帕鲁战斗能力强化',
+                children: [{ id: 'pal.status_damage', label: '异常状态增加伤害' }]
+            }
+        ],
+        facets: [],
+        detailTags: []
+    },
+    partnerSkills: {
+        SharedStatusDamage: {
+            id: 'SharedStatusDamage',
+            effectBlocks: [{
+                text: '玩家和帕鲁对异常状态敌人造成的伤害提升。',
+                subcategoryIds: ['player.conditional_damage', 'pal.status_damage'],
+                tagIds: []
+            }]
+        }
+    },
+    catalog: [{
+        palId: 'SharedStatusDamage',
+        usageCategoryIds: ['player_damage', 'pal_combat'],
+        usageSubcategoryIds: ['player.conditional_damage', 'pal.status_damage'],
+        usageTagIds: []
+    }]
+});
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerEffectBlockModels(core.getPartnerSkills()[0], {}))),
+    [{
+        text: '玩家和帕鲁对异常状态敌人造成的伤害提升。',
+        labels: [
+            { id: 'player.conditional_damage', label: '异常状态增加伤害（玩家）', selected: false },
+            { id: 'pal.status_damage', label: '异常状态增加伤害（帕鲁）', selected: false }
+        ],
+        highlighted: false
+    }],
+    '不同折叠框里的同名用途必须在卡片上标出玩家或帕鲁，不能显示两个无区别的同名标签'
+);
+
 assert.strictEqual(typeof core.calculatePartnerMasonryLayout, 'undefined', '恢复同行等高后核心不应残留最短列布局算法');
 
 console.log('技能核心测试通过');
