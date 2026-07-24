@@ -1,6 +1,19 @@
 // ═══════════════ 视觉总调度.js — 主题 + 材质 统一应用入口 ═══════════════
 // 读设置 → 解析主题和材质 → 写 CSS 变量 → 所有材质走同一条路（无 metal 分支）
 
+window.PT_getLayeredCardAppearanceSettings = function PT_getLayeredCardAppearanceSettings(settings) {
+    var next = settings || {};
+    var frameTheme = next.cardBackgroundTheme || 'theme:oceanic';
+    var frameMaterial = next.cardMaterial || next.glassMode || 'gradient';
+    var useSmallCardAppearance = next.smallCardAppearanceEnabled === true;
+    return {
+        frameTheme: frameTheme,
+        frameMaterial: frameMaterial,
+        cubeTheme: useSmallCardAppearance ? (next.smallCardTheme || 'theme:oceanic') : frameTheme,
+        cubeMaterial: useSmallCardAppearance ? (next.smallCardMaterial || 'smallTranslucent') : frameMaterial
+    };
+};
+
 // ── 磁吸/吸附辅助函数（保留，其他模块依赖） ──
 window.PT_getCardSnapMode = function PT_getCardSnapMode(settings) {
     return window.PT_getScreenSnapMode(settings);

@@ -14,6 +14,61 @@ assert.ok(
     data.partnerSkills.KendoFrog_Dark.effectBlocks[0].text.includes('玩家在踩上去后能高高跳起'),
     '极道蛙跳板动作必须保留在同一效果块'
 );
+assert.deepStrictEqual(
+    data.partnerSkills.KendoFrog.rankTable.columns.map(function(column) { return column.label; }),
+    ['起跳力度', '落地前玩家攻击力提升'],
+    '武道蛙的起跳力度和落地前攻击力必须同时显示'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.KendoFrog.rankTable.rows.map(function(row) { return row.values; }),
+    [[2500, 50], [3000, 56], [3500, 64], [4500, 74], [5500, 86]],
+    '武道蛙的落地前攻击力必须按游戏内核对值显示 0~4 星'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.KendoFrog_Dark.rankTable.columns.map(function(column) { return column.label; }),
+    ['起跳力度', '暗属性弱点伤害提升'],
+    '极道蛙必须先显示与武道蛙相同的起跳力度，再显示自身附加效果'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.Werewolf.rankTable.rows.map(function(row) { return row.values; }),
+    [[1.1, 15], [1.3, 17], [1.6, 20], [2, 24], [2.5, 30]],
+    '月镰魔必须同时显示飞跃爪击威力倍数与近战攻速'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.Werewolf_Ice.rankTable.rows.map(function(row) { return row.values; }),
+    [[1.1, 15], [1.3, 17], [1.6, 20], [2, 24], [2.5, 30]],
+    '霜镰魔必须同时显示吹雪爪击威力倍数与近战攻速'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.CatMage.rankTable.rows.map(function(row) { return row.values; }),
+    [[40, 10], [50, 15], [60, 20], [70, 30], [80, 50]],
+    '暗巫猫不能把两套星级数值合并成一列'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.DrillGame.rankTable.rows.map(function(row) { return row.values; }),
+    [[800], [960], [1200], [1440], [2000]],
+    '碎岩龟必须显示由基础采矿值和倍率换算后的实际矿石破坏效率'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.DomeArmorDragon.rankTable.rows.map(function(row) { return row.values; }),
+    [[60, 100], [65, 100], [70, 100], [75, 100], [80, 100]],
+    '磐甲龙必须同时显示爆炸伤害减轻和眩晕免疫'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.FlowerDoll_Fire.rankTable.rows.map(function(row) { return row.values; }),
+    [[80, 15, 100], [82, 17, 100], [84, 20, 100], [86, 24, 100], [90, 30, 100]],
+    '樱丽娜必须同时显示治疗、草属性减伤和缠绕免疫'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.RedFlowerBird.rankTable.rows.map(function(row) { return row.values; }),
+    [[15], [20], [23], [27], [30]],
+    '大红呱必须按游戏内核对值显示无敌时间延长'
+);
+assert.deepStrictEqual(
+    data.partnerSkills.WhiteDeer_Dark.rankTable.rows.map(function(row) { return row.values; }),
+    [[40], [50], [60], [70], [80]],
+    '织夜鹿必须按游戏内核对值显示并肩作战帕鲁的攻击力提升'
+);
 
 const stealth = data.partnerSkills.LizardMan.rankTable;
 assert.deepStrictEqual(stealth.rows.map(function(row) { return row.rank; }), [0, 1, 2, 3, 4]);
@@ -139,7 +194,7 @@ assert.deepStrictEqual(ordinaryWithoutRankTable, [
     'YakushimaMonster001_Purple',
     'YakushimaMonster001_Rainbow',
     'YakushimaMonster001_Red'
-].sort(), '除固定开关效果、未完成条目和不随星级改变的泰拉瑞亚史莱姆外，普通帕鲁都必须有等级表');
+].sort(), '除固定开关效果、待游戏内核对的冲突数据、未完成条目和不随星级改变的泰拉瑞亚史莱姆外，普通帕鲁都必须有等级表');
 
 assert.ok(
     data.partnerSkills.BlueDragon.rankTable.columns.some(function(column) { return column.label === '骑乘攻击转为水属性'; }),

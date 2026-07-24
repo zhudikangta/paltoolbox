@@ -50,6 +50,7 @@ assert.ok(source.includes("return '<div class=\"sk-partner-effect-block'"), '无
 assert.ok(!source.includes("return '<section class=\"sk-partner-effect-block'"), '效果块不是命名章节，不能使用无标题 section');
 assert.ok(source.includes('sk-partner-effect-block--highlighted'), '筛选命中必须落在对应效果块');
 assert.ok(source.includes('sk-tag--partner-selected'), '命中的具体标签必须高亮');
+assert.ok(source.includes('sk-partner-technology'), '科技等级必须使用独立于描述正文的显示区域');
 assert.ok(!source.includes('renderPartnerDescription(desc)'), '卡片不能继续按描述换行机械分段');
 assert.ok(!source.includes('classificationTags +'), '卡片顶部不能继续统一堆放分类标签');
 assert.ok(source.includes('sk-partner-card-wall'), '伙伴技能结果必须使用连续外框');
@@ -108,6 +109,10 @@ assert.ok(/\.sk-partner-no-results\{[^}]*background-color:var\(--pd-cube-bg/.tes
 assert.ok(
     /\.sk-partner-effect-block\+\.sk-partner-effect-block\{[^}]*border-top/.test(css),
     '分割线只能位于两个独立效果块之间'
+);
+assert.ok(
+    /\.sk-partner-technology\{[^}]*border-top/.test(css),
+    '科技等级上方必须恢复独立分割线'
 );
 assert.ok(
     /\.sk-partner-effect-block--highlighted\{[^}]*--pt-input-accent/.test(css),

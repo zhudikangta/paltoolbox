@@ -368,6 +368,25 @@ assert.deepStrictEqual(
     '显示模型接口直接收到脏效果块时也不能抛出 TypeError'
 );
 
+assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(core.getPartnerEffectBlockModels({
+        effectBlocks: [
+            {
+                text: '发动后它会坐在玩家的头上，配合玩家的攻击用冲锋枪进行追击。\n科技11',
+                subcategoryIds: [],
+                tagIds: []
+            }
+        ]
+    }, {}))),
+    [{
+        text: '发动后它会坐在玩家的头上，配合玩家的攻击用冲锋枪进行追击。',
+        technologyText: '科技11',
+        labels: [],
+        highlighted: false
+    }],
+    '效果块末尾的科技等级必须从描述正文中独立出来'
+);
+
 assert.strictEqual(typeof core.calculatePartnerMasonryLayout, 'undefined', '恢复同行等高后核心不应残留最短列布局算法');
 
 console.log('技能核心测试通过');

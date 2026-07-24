@@ -298,9 +298,13 @@ var PT_SKILL_WEB = (function() {
                         '">' + label.label + '</span>';
                 }).join('') + '</div>'
                 : '';
+            var technology = block.technologyText
+                ? '<div class="sk-partner-technology">' + block.technologyText + '</div>'
+                : '';
             return '<div class="sk-partner-effect-block' +
                 (block.highlighted ? ' sk-partner-effect-block--highlighted' : '') +
-                '">' + tags + '<p class="sk-desc sk-partner-desc">' + block.text + '</p></div>';
+                '">' + tags + '<p class="sk-desc sk-partner-desc">' + block.text + '</p>' +
+                technology + '</div>';
         }).join('');
     }
 

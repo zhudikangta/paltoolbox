@@ -16,7 +16,7 @@ function findFile(startDir, fileName) {
     return null;
 }
 
-function createBaseWindow(store) {
+function createBaseWindow(store, settings) {
     return {
         PT_THEME_PRESETS: {
             oceanic: { label: '默认', cardBgGlass: 'rgba(12,24,38,1)', panelBg: 'rgba(12,24,38,.72)' },
@@ -29,7 +29,15 @@ function createBaseWindow(store) {
         },
         PT_PICKER_PANEL: {},
         readPTSettings: function() {
-            return { cardThemePresets: {}, cardMaterialPresets: {} };
+            return Object.assign({
+                cardThemePresets: {},
+                cardMaterialPresets: {},
+                cardBackgroundTheme: 'theme:oceanic',
+                cardMaterial: 'gradient',
+                smallCardAppearanceEnabled: false,
+                smallCardTheme: 'theme:oceanic',
+                smallCardMaterial: 'smallTranslucent'
+            }, settings || {});
         },
         localStorage: {
             getItem: function(key) { return Object.prototype.hasOwnProperty.call(store, key) ? store[key] : null; },
@@ -39,9 +47,9 @@ function createBaseWindow(store) {
     };
 }
 
-function createContext() {
+function createContext(settings) {
     const store = {};
-    const context = { window: createBaseWindow(store) };
+    const context = { window: createBaseWindow(store, settings) };
     context.global = context;
     vm.createContext(context);
     return context;
@@ -51,14 +59,16 @@ function runFile(context, file) {
     vm.runInContext(fs.readFileSync(file, 'utf8'), context, { filename: file });
 }
 
-function loadCommon() {
-    const context = createContext();
+function loadCommon(settings) {
+    const context = createContext(settings);
+    runFile(context, findFile(path.resolve(__dirname, '../../../../../'), '视觉总调度.js'));
     runFile(context, path.join(__dirname, '帕鲁图鉴通用.js'));
     return context.window.PT_PALDEX_COMMON;
 }
 
 function loadPaldexWeb() {
     const context = createContext();
+    runFile(context, findFile(path.resolve(__dirname, '../../../../../'), '视觉总调度.js'));
     runFile(context, findFile(path.resolve(__dirname, '..'), '帕鲁图鉴通用.js'));
     context.window.PT_PALDEX_CORE = {
         ELEMENTS: ['火属性'],
@@ -87,6 +97,7 @@ function loadPaldexWeb() {
 
 function loadVisualSettingsCard() {
     const context = createContext();
+    runFile(context, findFile(path.resolve(__dirname, '../../../../../'), '视觉总调度.js'));
     runFile(context, findFile(path.resolve(__dirname, '..'), '帕鲁图鉴通用.js'));
     runFile(context, findFile(path.resolve(__dirname, '../../../../../'), '视觉设置卡片.js'));
     return context.window.PT_VISUAL_SETTINGS_CARD;
@@ -99,6 +110,7 @@ function plain(value) {
 const common = loadCommon();
 const paldexHtml = loadPaldexWeb().render();
 const paldexWebJs = fs.readFileSync(findFile(path.resolve(__dirname, '..'), '帕鲁图鉴网页.js'), 'utf8');
+const paldexCommonJs = fs.readFileSync(path.join(__dirname, '帕鲁图鉴通用.js'), 'utf8');
 const paldexCss = fs.readFileSync(path.resolve(__dirname, '../样式/帕鲁图鉴网页样式.css'), 'utf8') +
     fs.readFileSync(path.resolve(__dirname, '../../../../../共享/视觉系统/主题样式.css'), 'utf8');
 const appearanceSubpage = loadVisualSettingsCard().renderAppearanceSubpage({});
@@ -147,6 +159,8 @@ assert.ok(/\.pd-work-icon\{[^}]*width:11px[^}]*height:11px/.test(paldexCss), '�
 assert.ok(/\.pd-card-stats\{[^}]*grid-template-columns:1fr/.test(paldexCss), '帕鲁图鉴一级卡片显示字段应该单列排列');
 assert.ok(/\.pd-card-stats\{[^}]*margin-top:4px/.test(paldexCss), '帕鲁图鉴一级卡片显示字段应该贴近工作适性，不应该被推到卡片底部');
 assert.ok(paldexWebJs.includes('PT_buildCardVisualVars'), '图鉴材质应该复用桌面模式的视觉解析入口');
+assert.ok(paldexCommonJs.includes('PT_getLayeredCardAppearanceSettings'), '图鉴必须复用统一的大卡片/小卡片分层解析');
+assert.ok(paldexWebJs.includes("'--pd-frame-glass-glow'"), '图鉴大卡片必须使用材质自身的玻璃辉光');
 assert.ok(!paldexWebJs.includes('function applyOpacityToColor'), '图鉴不应该保留自己的透明度算法');
 assert.ok(!paldexWebJs.includes("if (!root || root.dataset.pdBd === '1') return"), '再次进入图鉴时不应该被旧绑定标记拦截');
 assert.ok(paldexWebJs.includes("var hasBoundEvents = root.dataset.pdBd === '1'"), '图鉴应该只复用事件绑定，不跳过外观刷新');
@@ -195,6 +209,8 @@ assert.ok(paldexWebJs.includes('function getCardPullVector'), '正式图鉴应�
 assert.ok(paldexWebJs.includes('function getDragDepthDelta'), '正式图鉴拖拽深度应该按抽出方向投影计算');
 assert.ok(/\.pd-grid\{[^}]*background:transparent/.test(paldexCss), '孔洞下方必须透明，不能铺框架底色');
 assert.ok(/\.pd-grid::after\{[^}]*z-index:3[^}]*--pd-frame-metal-texture[^}]*--pd-frame-wood-texture[^}]*--pd-frame-mask/.test(paldexCss), '整张钢板应该作为上盖遮挡层承接材质并使用统一孔洞遮罩');
+assert.ok(!/\.pd-grid::after\{[^}]*inset 0 -10px 22px/.test(paldexCss), '图鉴大卡片不能额外叠加固定黑色内阴影');
+assert.ok(!/\.pd-grid::after\{[^}]*0 12px 34px rgba\(0,0,0/.test(paldexCss), '图鉴大卡片不能额外叠加固定黑色外阴影');
 assert.ok(!/\.pd-grid::before\{[^}]*--pd-frame-mask/.test(paldexCss), '整张钢板不应该只画在卡片下面，否则下压时框架盖不住卡片');
 assert.ok(!/\.pd-cell::before\{[^}]*inset:0/.test(paldexCss), '不应该给每个方格单独画一圈假框架');
 assert.ok(/\.pd-grid\{[^}]*gap:var\(--pd-frame-width/.test(paldexCss), '相邻立方体之间应该只共享一条框架窄条');
@@ -243,10 +259,12 @@ assert.ok(!paldexCss.includes('--pd-cube-side-fill'), '正式图鉴不应该残�
 assert.ok(paldexWebJs.includes('function clearHoveredCards'), '拖拽前应该能统一清掉其他悬停卡片');
 assert.ok(paldexWebJs.includes('if (pressedCard) return;'), '拖拽期间不应该触发其他卡片悬停动画');
 assert.ok(!paldexCss.includes('.pd-card::before{top:0;left:calc(100% - 1px)'), '不应该继续用CSS右侧斜片冒充侧壁');
-assert.ok(appearanceSubpage.includes('data-paldex-appearance-field="frameTheme"'), '设置页应该包含图鉴边框主题');
-assert.ok(appearanceSubpage.includes('data-paldex-appearance-field="frameMaterial"'), '设置页应该包含图鉴边框材质');
-assert.ok(appearanceSubpage.includes('data-paldex-appearance-field="cubeTheme"'), '设置页应该包含图鉴立方体主题');
-assert.ok(appearanceSubpage.includes('data-paldex-appearance-field="cubeMaterial"'), '设置页应该包含图鉴立方体材质');
+assert.ok(!appearanceSubpage.includes('data-paldex-appearance-field'), '设置页不应该再维护一套独立的图鉴外观字段');
+assert.ok(!appearanceSubpage.includes('帕鲁图鉴外观'), '设置页不应该再显示重复的帕鲁图鉴外观卡片');
+assert.ok(appearanceSubpage.includes('大卡片背景主题'), '图鉴外框应该统一由大卡片主题控制');
+assert.ok(appearanceSubpage.includes('大卡片材质'), '图鉴外框应该统一由大卡片材质控制');
+assert.ok(appearanceSubpage.includes('小卡片主题'), '图鉴立方体应该统一由小卡片主题控制');
+assert.ok(appearanceSubpage.includes('小卡片材质'), '图鉴立方体应该统一由小卡片材质控制');
 assert.ok(appearanceSubpage.includes('pt-appearance-editor-actions'), '外观设置页顶部应该有高级面板大键区域');
 assert.ok(appearanceSubpage.includes('<span>主题高级面板</span>'), '主题高级面板入口应该改成外观设置顶部的大键');
 assert.ok(appearanceSubpage.includes('<span>材质高级面板</span>'), '材质高级面板入口应该改成外观设置顶部的大键');
@@ -306,40 +324,35 @@ assert.ok(/function drawFrontFace\(front\)[\s\S]*ctx\.fill\(face\);[\s\S]*drawFa
 assert.ok(!wallPrototypeHtml.includes('function drawSampledSideWall'), '侧壁原型不应该继续使用采样连接侧壁');
 assert.ok(!wallPrototypeHtml.includes("wall.globalCompositeOperation = 'destination-out'"), '侧壁原型不应该再用错位轮廓相减来画侧壁');
 
-assert.deepStrictEqual(plain(common.getAppearanceSettings()), {
-    frameTheme: 'theme:oceanic',
+const inheritedAppearanceCommon = loadCommon({
+    frameTheme: 'theme:skyVault',
+    cardBackgroundTheme: 'theme:skyVault',
+    cardMaterial: 'metalGlass',
+    smallCardAppearanceEnabled: false,
+    smallCardTheme: 'theme:oceanic',
+    smallCardMaterial: 'smokedGlass'
+});
+assert.deepStrictEqual(plain(inheritedAppearanceCommon.getAppearanceSettings()), {
+    frameTheme: 'theme:skyVault',
     frameMaterial: 'metalGlass',
     cubeTheme: 'theme:skyVault',
-    cubeMaterial: 'smokedGlass'
+    cubeMaterial: 'metalGlass'
 });
 
-common.setAppearanceSettings({
+const independentSmallCardCommon = loadCommon({
+    cardBackgroundTheme: 'theme:skyVault',
+    cardMaterial: 'gradient',
+    smallCardAppearanceEnabled: true,
+    smallCardTheme: 'theme:oceanic',
+    smallCardMaterial: 'metalGlass'
+});
+assert.deepStrictEqual(plain(independentSmallCardCommon.getAppearanceSettings()), {
     frameTheme: 'theme:skyVault',
     frameMaterial: 'gradient',
     cubeTheme: 'theme:oceanic',
     cubeMaterial: 'metalGlass'
 });
-
-assert.deepStrictEqual(plain(common.getAppearanceSettings()), {
-    frameTheme: 'theme:skyVault',
-    frameMaterial: 'gradient',
-    cubeTheme: 'theme:oceanic',
-    cubeMaterial: 'metalGlass'
-});
-
-common.setAppearanceSettings({
-    frameTheme: 'theme:missing',
-    frameMaterial: 'missing',
-    cubeTheme: 'custom:unknown',
-    cubeMaterial: 'bad'
-});
-
-assert.deepStrictEqual(plain(common.getAppearanceSettings()), {
-    frameTheme: 'theme:oceanic',
-    frameMaterial: 'metalGlass',
-    cubeTheme: 'theme:skyVault',
-    cubeMaterial: 'smokedGlass'
-});
+assert.strictEqual(independentSmallCardCommon.setAppearanceSettings, undefined, '图鉴不应该再暴露独立外观写入口');
 
 assert.ok(!/function drawFrontFace\(front\)[\s\S]*shadowBlur\s*=\s*16[\s\S]*function drawPrototype/.test(wallGeometryPrototypeHtml), '几何原型正面不应该用大范围外投影把自己和侧壁割裂开');
 assert.ok(wallGeometryPrototypeHtml.includes('function drawFrontFlatCore'), '几何原型正面中间应该单独作为平面核心绘制，边缘留给曲面带');

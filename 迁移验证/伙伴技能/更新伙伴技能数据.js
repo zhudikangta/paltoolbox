@@ -267,13 +267,16 @@ function applyFactCorrections(records, corrections) {
     return records.map(function(record) {
         const correction = facts[record.palId];
         if (!correction) return record;
-        if (!correction.description || !correction.correction || !correction.correction.sourceUrl) {
-            throw new Error('伙伴技能事实修正缺少正文或证据: ' + record.palId);
+        if (!correction.correction || (!correction.correction.sourceUrl && !correction.correction.sourceType)) {
+            throw new Error('伙伴技能事实修正缺少证据: ' + record.palId);
         }
-        return Object.assign({}, record, {
-            description: correction.description,
+        const updated = Object.assign({}, record, {
             factCorrection: correction.correction
         });
+        if (correction.description) updated.description = correction.description;
+        if (Object.prototype.hasOwnProperty.call(correction, 'rankTable')) updated.rankTable = correction.rankTable;
+        if (Object.prototype.hasOwnProperty.call(correction, 'rankTables')) updated.rankTables = correction.rankTables;
+        return updated;
     });
 }
 

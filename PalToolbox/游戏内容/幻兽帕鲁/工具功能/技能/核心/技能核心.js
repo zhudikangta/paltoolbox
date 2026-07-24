@@ -273,9 +273,20 @@ var PT_SKILL_CORE = (function() {
         }, []);
     }
 
+    function splitPartnerTechnologyText(value) {
+        var text = String(value || '').replace(/\r/g, '').trim();
+        var match = text.match(/(?:^|\n)[ \t]*(科技\d+)[ \t]*$/);
+        if (!match) return { text: text, technologyText: '' };
+        return {
+            text: text.slice(0, match.index).trim(),
+            technologyText: match[1]
+        };
+    }
+
     function getPartnerEffectBlockModels(item, facetSelections) {
         var selectedCapabilityIds = selectedPartnerCapabilityIds(facetSelections);
         return normalizePartnerEffectBlocks(item && item.effectBlocks).map(function(block) {
+            var presentation = splitPartnerTechnologyText(block.text);
             var capabilityIds = block.subcategoryIds.concat(block.tagIds);
             var labels = [];
             var seenLabelIds = {};
@@ -314,11 +325,13 @@ var PT_SKILL_CORE = (function() {
                 return capabilityIds.indexOf(id) > -1;
             });
 
-            return {
-                text: block.text || '',
+            var model = {
+                text: presentation.text,
                 labels: labels,
                 highlighted: highlighted
             };
+            if (presentation.technologyText) model.technologyText = presentation.technologyText;
+            return model;
         });
     }
 

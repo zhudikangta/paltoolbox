@@ -97,6 +97,7 @@ var PT_PALDEX_WEB = (function() {
         root.style.setProperty('--pd-frame-hue-rotate', frame.hueRotate || '0deg');
         root.style.setProperty('--pd-frame-before-background', frame.beforeBackground || 'none');
         root.style.setProperty('--pd-frame-before-opacity', frame.beforeOpacity || '0');
+        root.style.setProperty('--pd-frame-glass-glow', frame.glassGlowShadow || 'none');
         root.style.setProperty('--pd-frame-metal-shadow', frame.metalShadow || 'none');
 
         root.style.setProperty('--pd-cube-bg', cube.bg || 'rgba(20,38,58,.42)');
@@ -119,7 +120,7 @@ var PT_PALDEX_WEB = (function() {
         root.style.setProperty('--pd-active-cube-material-id', settings.cubeMaterial || 'gradient');
         root.style.setProperty('--pd-cube-material-id', settings.cubeMaterial || 'gradient');
         if (typeof document !== 'undefined' && document.documentElement) {
-            ['--pd-frame-bg','--pd-frame-border','--pd-frame-glow','--pd-frame-metal-texture','--pd-frame-wood-texture','--pd-frame-blur','--pd-frame-saturate','--pd-frame-brightness','--pd-frame-contrast','--pd-frame-hue-rotate','--pd-frame-before-background','--pd-frame-before-opacity','--pd-frame-metal-shadow','--pd-cube-bg','--pd-cube-border','--pd-cube-glow','--pd-cube-beam','--pd-cube-metal-texture','--pd-cube-wood-texture','--pd-cube-blur','--pd-cube-saturate','--pd-cube-brightness','--pd-cube-contrast','--pd-cube-hue-rotate','--pd-cube-sheen-opacity','--pd-cube-sheen-angle','--pd-cube-before-background','--pd-cube-before-opacity','--pd-cube-glass-glow','--pd-cube-metal-shadow','--pd-active-cube-material-id','--pd-cube-material-id'].forEach(function(name) {
+            ['--pd-frame-bg','--pd-frame-border','--pd-frame-glow','--pd-frame-metal-texture','--pd-frame-wood-texture','--pd-frame-blur','--pd-frame-saturate','--pd-frame-brightness','--pd-frame-contrast','--pd-frame-hue-rotate','--pd-frame-before-background','--pd-frame-before-opacity','--pd-frame-glass-glow','--pd-frame-metal-shadow','--pd-cube-bg','--pd-cube-border','--pd-cube-glow','--pd-cube-beam','--pd-cube-metal-texture','--pd-cube-wood-texture','--pd-cube-blur','--pd-cube-saturate','--pd-cube-brightness','--pd-cube-contrast','--pd-cube-hue-rotate','--pd-cube-sheen-opacity','--pd-cube-sheen-angle','--pd-cube-before-background','--pd-cube-before-opacity','--pd-cube-glass-glow','--pd-cube-metal-shadow','--pd-active-cube-material-id','--pd-cube-material-id'].forEach(function(name) {
                 document.documentElement.style.setProperty(name, root.style.getPropertyValue(name));
             });
         }

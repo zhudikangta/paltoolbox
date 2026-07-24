@@ -237,36 +237,6 @@ window.PT_VISUAL_SETTINGS_CARD = (function() {
         return html;
     }
 
-    function getPaldexCommon() {
-        return (typeof window !== 'undefined' && window.PT_PALDEX_COMMON) ? window.PT_PALDEX_COMMON : null;
-    }
-
-    function getPaldexAppearanceSettings() {
-        var common = getPaldexCommon();
-        if (common && typeof common.getAppearanceSettings === 'function') return common.getAppearanceSettings();
-        return {
-            frameTheme: 'theme:oceanic',
-            frameMaterial: 'metalGlass',
-            cubeTheme: 'theme:skyVault',
-            cubeMaterial: 'smokedGlass'
-        };
-    }
-
-    function markPaldexAppearanceField(html, field) {
-        return html.replace('class="pt-select pt-theme-grid-native"', 'class="pt-select pt-theme-grid-native" data-paldex-appearance-field="' + field + '"');
-    }
-
-    function renderPaldexAppearanceCard(settings) {
-        var paldex = getPaldexAppearanceSettings();
-        return '<section class="pt-card">' +
-            '<div class="pt-card__head"><h4 class="pt-card__title">帕鲁图鉴外观</h4></div>' +
-            '<div class="pt-field"><span>边框主题</span>' + markPaldexAppearanceField(renderThemeGridPanel('paldexFrameTheme', paldex.frameTheme, settings, false), 'frameTheme') + '</div>' +
-            '<div class="pt-field"><span>边框材质</span>' + markPaldexAppearanceField(renderMaterialGridPanel('paldexFrameMaterial', paldex.frameMaterial, settings, false), 'frameMaterial') + '</div>' +
-            '<div class="pt-field"><span>立方体主题</span>' + markPaldexAppearanceField(renderThemeGridPanel('paldexCubeTheme', paldex.cubeTheme, settings, false), 'cubeTheme') + '</div>' +
-            '<div class="pt-field"><span>立方体材质</span>' + markPaldexAppearanceField(renderMaterialGridPanel('paldexCubeMaterial', paldex.cubeMaterial, settings, false), 'cubeMaterial') + '</div>' +
-            '</section>';
-    }
-
     function hydrateThemeGrid(wrapper) {
         if (!wrapper) return;
         var panel = wrapper.querySelector('.pt-theme-grid-panel');
@@ -530,7 +500,6 @@ window.PT_VISUAL_SETTINGS_CARD = (function() {
             settingToggleRow('启用小卡片外观', 'smallCardAppearanceEnabled', smallCardEnabled) +
             smallCardControls +
             '</section>';
-        var paldexAppearanceCard = renderPaldexAppearanceCard(settings);
         var btnStyle = settings.buttonStyle || 'modern';
         function btnStyleOpt(value, label) {
             return '<button type="button" class="pt-seg__opt' + (value === btnStyle ? ' pt-seg__opt--active' : '') + '" data-seg-value="' + value + '">' + label + '</button>';
@@ -545,7 +514,7 @@ window.PT_VISUAL_SETTINGS_CARD = (function() {
             '</section>';
         return '<section id="pt-appearance-subpage-wrap" class="pt-subpage pt-subpage--appearance" style="display:none">' +
             '<div class="pt-subpage__head"><button type="button" class="pt-btn pt-btn--ghost pt-subpage__back" id="pt-appearance-back">← 返回</button><h4 class="pt-subpage__title">外观设置</h4></div>' +
-            '<div class="pt-subpage__body">' + editorActions + themeCard + materialCard + smallCard + paldexAppearanceCard + btnStyleCard + '</div>' +
+            '<div class="pt-subpage__body">' + editorActions + themeCard + materialCard + smallCard + btnStyleCard + '</div>' +
             '</section>';
     }
 
@@ -714,7 +683,6 @@ window.PT_VISUAL_SETTINGS_CARD = (function() {
         pageRoot.insertAdjacentHTML('beforeend', html);
         page = root.querySelector(selector);
         bindSettingFields(page, root);
-        bindPaldexAppearanceFields(page);
         return page;
     }
 
@@ -1508,21 +1476,6 @@ window.PT_VISUAL_SETTINGS_CARD = (function() {
         });
     }
 
-    function bindPaldexAppearanceFields(scope) {
-        if (!scope) return;
-        scope.querySelectorAll('[data-paldex-appearance-field]').forEach(function(field) {
-            if (field.dataset.ptPaldexAppearanceBound === '1') return;
-            field.dataset.ptPaldexAppearanceBound = '1';
-            field.addEventListener('change', function() {
-                var common = getPaldexCommon();
-                if (!common || typeof common.setAppearanceSettings !== 'function') return;
-                var next = {};
-                next[field.dataset.paldexAppearanceField] = field.value;
-                common.setAppearanceSettings(next);
-            });
-        });
-    }
-
     function bindWallpaperFileInput(scope, root) {
         var fileInput = scope && scope.querySelector('#pt-wallpaper-file');
         if (!fileInput || fileInput.dataset.ptFileBound === '1') return;
@@ -1564,7 +1517,6 @@ window.PT_VISUAL_SETTINGS_CARD = (function() {
         }
 
         bindSettingFields(root, root);
-        bindPaldexAppearanceFields(root);
 
         root.addEventListener('click', function(e) {
             if (e.target.closest('#pt-wallpaper-open-library')) {

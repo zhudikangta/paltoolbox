@@ -33,10 +33,10 @@
     },
     "factCorrections": {
       "file": "伙伴技能事实修正.json",
-      "records": 2,
+      "records": 12,
       "verifiedAt": "2026-07-23",
       "gameVersion": "v1.0.0",
-      "transformVersion": "1.5.0"
+      "transformVersion": "1.8.0"
     }
   },
   "taxonomy": {
@@ -1548,37 +1548,47 @@
             "key": "MainValue",
             "label": "起跳力度",
             "unit": ""
+          },
+          {
+            "key": "KendoFrog_PlayerAttackBonus",
+            "label": "落地前玩家攻击力提升",
+            "unit": "%"
           }
         ],
         "rows": [
           {
             "rank": 0,
             "values": [
-              2500
+              2500,
+              50
             ]
           },
           {
             "rank": 1,
             "values": [
-              3000
+              3000,
+              56
             ]
           },
           {
             "rank": 2,
             "values": [
-              3500
+              3500,
+              64
             ]
           },
           {
             "rank": 3,
             "values": [
-              4500
+              4500,
+              74
             ]
           },
           {
             "rank": 4,
             "values": [
-              5500
+              5500,
+              86
             ]
           }
         ]
@@ -1591,7 +1601,14 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Croajiro",
-        "sourcePalId": "KendoFrog"
+        "sourcePalId": "KendoFrog",
+        "correction": {
+          "id": "kendofrog-in-game-attack-ranks",
+          "status": "verified-in-game",
+          "sourceType": "in-game-verification",
+          "verifiedAt": "2026-07-23",
+          "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的落地前玩家攻击力提升依次为 50%、56%、64%、74%、86%。PalDB 仅公开起跳力度表，未公开该攻击力分星。"
+        }
       },
       "effectBlocks": [
         {
@@ -6735,8 +6752,13 @@
         "rankLabel": "星级",
         "columns": [
           {
+            "key": "MainValue",
+            "label": "飞跃爪击威力倍数",
+            "unit": "倍"
+          },
+          {
             "key": "AttackSpeedUp_PartnerSkill_Werewolf",
-            "label": "攻击速度提升",
+            "label": "近战武器攻击速度提升",
             "unit": "%"
           }
         ],
@@ -6744,30 +6766,35 @@
           {
             "rank": 0,
             "values": [
+              1.1,
               15
             ]
           },
           {
             "rank": 1,
             "values": [
+              1.3,
               17
             ]
           },
           {
             "rank": 2,
             "values": [
+              1.6,
               20
             ]
           },
           {
             "rank": 3,
             "values": [
+              2,
               24
             ]
           },
           {
             "rank": 4,
             "values": [
+              2.5,
               30
             ]
           }
@@ -6781,7 +6808,13 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Loupmoon",
-        "sourcePalId": "Werewolf"
+        "sourcePalId": "Werewolf",
+        "correction": {
+          "id": "werewolf-missing-active-damage-multiplier",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Loupmoon",
+          "evidence": "公开等级表同时列出飞跃爪击 MainValue 倍数与近战武器攻击速度。"
+        }
       },
       "effectBlocks": [
         {
@@ -8921,8 +8954,13 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "ElementAddDrop_Normal_1_PAL",
-            "label": "掉落量提升",
+            "key": "ElementAddDrop_Normal",
+            "label": "无属性帕鲁掉落道具增加",
+            "unit": "%"
+          },
+          {
+            "key": "SphereRecovery",
+            "label": "投掷帕鲁球不消耗概率",
             "unit": "%"
           }
         ],
@@ -8930,30 +8968,35 @@
           {
             "rank": 0,
             "values": [
-              40
+              40,
+              10
             ]
           },
           {
             "rank": 1,
             "values": [
+              50,
               15
             ]
           },
           {
             "rank": 2,
             "values": [
+              60,
               20
             ]
           },
           {
             "rank": 3,
             "values": [
+              70,
               30
             ]
           },
           {
             "rank": 4,
             "values": [
+              80,
               50
             ]
           }
@@ -8967,7 +9010,13 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Katress",
-        "sourcePalId": "CatMage"
+        "sourcePalId": "CatMage",
+        "correction": {
+          "id": "catmage-merged-rank-columns",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Katress",
+          "evidence": "公开等级表每星同时列出无属性掉落增加与帕鲁球不消耗概率，原表误将两列合并。"
+        }
       },
       "effectBlocks": [
         {
@@ -11433,12 +11482,7 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "Mining_up_PartnerSkill_DrillGame",
-            "label": "采矿效率提升",
-            "unit": "%"
-          },
-          {
-            "key": "MainValue",
+            "key": "OreMiningEfficiency",
             "label": "矿石破坏效率提升",
             "unit": "%"
           }
@@ -11447,36 +11491,31 @@
           {
             "rank": 0,
             "values": [
-              640,
-              1.25
+              800
             ]
           },
           {
             "rank": 1,
             "values": [
-              640,
-              1.5
+              960
             ]
           },
           {
             "rank": 2,
             "values": [
-              640,
-              1.875
+              1200
             ]
           },
           {
             "rank": 3,
             "values": [
-              640,
-              2.25
+              1440
             ]
           },
           {
             "rank": 4,
             "values": [
-              640,
-              3.125
+              2000
             ]
           }
         ]
@@ -11489,7 +11528,13 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Digtoise",
-        "sourcePalId": "DrillGame"
+        "sourcePalId": "DrillGame",
+        "correction": {
+          "id": "drillgame-display-efficiency-formula",
+          "status": "derived-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Digtoise",
+          "evidence": "正文给出 800%~2000%；等级表给出固定基础值 640 和倍率 1.25、1.5、1.875、2.25、3.125。显示值按 640×倍率换算，依次为 800、960、1200、1440、2000。"
+        }
       },
       "effectBlocks": [
         {
@@ -17053,31 +17098,31 @@
           {
             "rank": 0,
             "values": [
-              5
+              15
             ]
           },
           {
             "rank": 1,
             "values": [
-              6
+              20
             ]
           },
           {
             "rank": 2,
             "values": [
-              7
+              23
             ]
           },
           {
             "rank": 3,
             "values": [
-              8
+              27
             ]
           },
           {
             "rank": 4,
             "values": [
-              9
+              30
             ]
           }
         ]
@@ -17090,7 +17135,14 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Tropicaw",
-        "sourcePalId": "RedFlowerBird"
+        "sourcePalId": "RedFlowerBird",
+        "correction": {
+          "id": "redflowerbird-in-game-invulnerability-ranks",
+          "status": "verified-in-game",
+          "sourceType": "in-game-verification",
+          "verifiedAt": "2026-07-24",
+          "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的闪避无敌时间延长依次为 15%、20%、23%、27%、30%。公开原始值 5、6、7、8、9 并非游戏显示百分比。"
+        }
       },
       "effectBlocks": [
         {
@@ -17851,8 +17903,13 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "DomeArmorDragon_PartnerSkill",
+            "key": "ExplosionDamageReduction",
             "label": "爆炸伤害减轻",
+            "unit": "%"
+          },
+          {
+            "key": "ResistAdditionalEffect_Stun",
+            "label": "眩晕免疫",
             "unit": "%"
           }
         ],
@@ -17860,30 +17917,35 @@
           {
             "rank": 0,
             "values": [
+              60,
               100
             ]
           },
           {
             "rank": 1,
             "values": [
+              65,
               100
             ]
           },
           {
             "rank": 2,
             "values": [
+              70,
               100
             ]
           },
           {
             "rank": 3,
             "values": [
+              75,
               100
             ]
           },
           {
             "rank": 4,
             "values": [
+              80,
               100
             ]
           }
@@ -17897,7 +17959,13 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Aegidron",
-        "sourcePalId": "DomeArmorDragon"
+        "sourcePalId": "DomeArmorDragon",
+        "correction": {
+          "id": "domearmordragon-missing-explosion-reduction",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Aegidron",
+          "evidence": "公开等级表每星包含两个值：眩晕免疫恒为 100，爆炸伤害减轻依次为 60、65、70、75、80。"
+        }
       },
       "effectBlocks": [
         {
@@ -19884,50 +19952,50 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "ElementBoostWeakness_Dark_PartnerSkill",
-            "label": "暗属性弱点伤害提升",
-            "unit": "%"
-          },
-          {
             "key": "MainValue",
             "label": "起跳力度",
             "unit": ""
+          },
+          {
+            "key": "ElementBoostWeakness_Dark_PartnerSkill",
+            "label": "暗属性弱点伤害提升",
+            "unit": "%"
           }
         ],
         "rows": [
           {
             "rank": 0,
             "values": [
-              25,
-              2500
+              2500,
+              25
             ]
           },
           {
             "rank": 1,
             "values": [
-              27,
-              3000
+              3000,
+              27
             ]
           },
           {
             "rank": 2,
             "values": [
-              30,
-              3500
+              3500,
+              30
             ]
           },
           {
             "rank": 3,
             "values": [
-              34,
-              4500
+              4500,
+              34
             ]
           },
           {
             "rank": 4,
             "values": [
-              40,
-              5500
+              5500,
+              40
             ]
           }
         ]
@@ -19940,7 +20008,13 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Croajiro_Noct",
-        "sourcePalId": "KendoFrog_Dark"
+        "sourcePalId": "KendoFrog_Dark",
+        "correction": {
+          "id": "kendofrog-dark-effect-order",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Croajiro_Noct",
+          "evidence": "起跳力度属于第一段跳板效果，暗属性弱点伤害属于第二段队伍增益；表格列必须按正文效果顺序显示。"
+        }
       },
       "effectBlocks": [
         {
@@ -22004,8 +22078,13 @@
         "rankLabel": "星级",
         "columns": [
           {
+            "key": "MainValue",
+            "label": "吹雪爪击威力倍数",
+            "unit": "倍"
+          },
+          {
             "key": "AttackSpeedUp_PartnerSkill_Werewolf",
-            "label": "攻击速度提升",
+            "label": "近战武器攻击速度提升",
             "unit": "%"
           }
         ],
@@ -22013,30 +22092,35 @@
           {
             "rank": 0,
             "values": [
+              1.1,
               15
             ]
           },
           {
             "rank": 1,
             "values": [
+              1.3,
               17
             ]
           },
           {
             "rank": 2,
             "values": [
+              1.6,
               20
             ]
           },
           {
             "rank": 3,
             "values": [
+              2,
               24
             ]
           },
           {
             "rank": 4,
             "values": [
+              2.5,
               30
             ]
           }
@@ -22050,7 +22134,13 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Loupmoon_Cryst",
-        "sourcePalId": "Werewolf_Ice"
+        "sourcePalId": "Werewolf_Ice",
+        "correction": {
+          "id": "werewolf-ice-missing-active-damage-multiplier",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Loupmoon_Cryst",
+          "evidence": "公开等级表同时列出吹雪爪击 MainValue 倍数与近战武器攻击速度。"
+        }
       },
       "effectBlocks": [
         {
@@ -23695,8 +23785,18 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "FlowerDoll_Fire_PartnerSkill",
+            "key": "MainValue",
+            "label": "生命值恢复",
+            "unit": "%"
+          },
+          {
+            "key": "ElementResist_Leaf",
             "label": "草属性伤害减轻",
+            "unit": "%"
+          },
+          {
+            "key": "ResistAdditionalEffect_Entangle",
+            "label": "缠绕免疫",
             "unit": "%"
           }
         ],
@@ -23704,31 +23804,41 @@
           {
             "rank": 0,
             "values": [
-              15
+              80,
+              15,
+              100
             ]
           },
           {
             "rank": 1,
             "values": [
-              17
+              82,
+              17,
+              100
             ]
           },
           {
             "rank": 2,
             "values": [
-              20
+              84,
+              20,
+              100
             ]
           },
           {
             "rank": 3,
             "values": [
-              24
+              86,
+              24,
+              100
             ]
           },
           {
             "rank": 4,
             "values": [
-              30
+              90,
+              30,
+              100
             ]
           }
         ]
@@ -23741,7 +23851,13 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Petallia_Ignis",
-        "sourcePalId": "FlowerDoll_Fire"
+        "sourcePalId": "FlowerDoll_Fire",
+        "correction": {
+          "id": "flowerdoll-fire-missing-heal-and-immunity",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Petallia_Ignis",
+          "evidence": "公开等级表同时列出治疗 MainValue、草属性减伤和缠绕免疫 100%。"
+        }
       },
       "effectBlocks": [
         {
@@ -26996,8 +27112,8 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "SnakeGirl_PartnerSkill",
-            "label": "攻击力提升",
+            "key": "LifeDrainPower_AttackUp",
+            "label": "并肩作战帕鲁攻击力提升",
             "unit": "%"
           }
         ],
@@ -27005,31 +27121,31 @@
           {
             "rank": 0,
             "values": [
-              0
+              40
             ]
           },
           {
             "rank": 1,
             "values": [
-              0
+              50
             ]
           },
           {
             "rank": 2,
             "values": [
-              0
+              60
             ]
           },
           {
             "rank": 3,
             "values": [
-              0
+              70
             ]
           },
           {
             "rank": 4,
             "values": [
-              0
+              80
             ]
           }
         ]
@@ -27042,7 +27158,14 @@
       "source": {
         "mode": "direct",
         "url": "https://paldb.cc/cn/Celesdir_Noct",
-        "sourcePalId": "WhiteDeer_Dark"
+        "sourcePalId": "WhiteDeer_Dark",
+        "correction": {
+          "id": "whitedeer-dark-in-game-attack-ranks",
+          "status": "verified-in-game",
+          "sourceType": "in-game-verification",
+          "verifiedAt": "2026-07-24",
+          "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的并肩作战帕鲁攻击力提升依次为 40%、50%、60%、70%、80%。公开等级表五档为 0，不能采用。"
+        }
       },
       "effectBlocks": [
         {
@@ -35708,37 +35831,47 @@
             "key": "MainValue",
             "label": "起跳力度",
             "unit": ""
+          },
+          {
+            "key": "KendoFrog_PlayerAttackBonus",
+            "label": "落地前玩家攻击力提升",
+            "unit": "%"
           }
         ],
         "rows": [
           {
             "rank": 0,
             "values": [
-              2500
+              2500,
+              50
             ]
           },
           {
             "rank": 1,
             "values": [
-              3000
+              3000,
+              56
             ]
           },
           {
             "rank": 2,
             "values": [
-              3500
+              3500,
+              64
             ]
           },
           {
             "rank": 3,
             "values": [
-              4500
+              4500,
+              74
             ]
           },
           {
             "rank": 4,
             "values": [
-              5500
+              5500,
+              86
             ]
           }
         ]
@@ -35751,7 +35884,14 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Croajiro",
-        "sourcePalId": "KendoFrog"
+        "sourcePalId": "KendoFrog",
+        "correction": {
+          "id": "kendofrog-in-game-attack-ranks",
+          "status": "verified-in-game",
+          "sourceType": "in-game-verification",
+          "verifiedAt": "2026-07-23",
+          "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的落地前玩家攻击力提升依次为 50%、56%、64%、74%、86%。PalDB 仅公开起跳力度表，未公开该攻击力分星。"
+        }
       }
     },
     "BOSS_JellyfishGhost": {
@@ -39524,8 +39664,13 @@
         "rankLabel": "星级",
         "columns": [
           {
+            "key": "MainValue",
+            "label": "飞跃爪击威力倍数",
+            "unit": "倍"
+          },
+          {
             "key": "AttackSpeedUp_PartnerSkill_Werewolf",
-            "label": "攻击速度提升",
+            "label": "近战武器攻击速度提升",
             "unit": "%"
           }
         ],
@@ -39533,30 +39678,35 @@
           {
             "rank": 0,
             "values": [
+              1.1,
               15
             ]
           },
           {
             "rank": 1,
             "values": [
+              1.3,
               17
             ]
           },
           {
             "rank": 2,
             "values": [
+              1.6,
               20
             ]
           },
           {
             "rank": 3,
             "values": [
+              2,
               24
             ]
           },
           {
             "rank": 4,
             "values": [
+              2.5,
               30
             ]
           }
@@ -39570,7 +39720,13 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Loupmoon",
-        "sourcePalId": "Werewolf"
+        "sourcePalId": "Werewolf",
+        "correction": {
+          "id": "werewolf-missing-active-damage-multiplier",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Loupmoon",
+          "evidence": "公开等级表同时列出飞跃爪击 MainValue 倍数与近战武器攻击速度。"
+        }
       }
     },
     "BOSS_FlowerDinosaur": {
@@ -39961,8 +40117,13 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "ElementAddDrop_Normal_1_PAL",
-            "label": "掉落量提升",
+            "key": "ElementAddDrop_Normal",
+            "label": "无属性帕鲁掉落道具增加",
+            "unit": "%"
+          },
+          {
+            "key": "SphereRecovery",
+            "label": "投掷帕鲁球不消耗概率",
             "unit": "%"
           }
         ],
@@ -39970,30 +40131,35 @@
           {
             "rank": 0,
             "values": [
-              40
+              40,
+              10
             ]
           },
           {
             "rank": 1,
             "values": [
+              50,
               15
             ]
           },
           {
             "rank": 2,
             "values": [
+              60,
               20
             ]
           },
           {
             "rank": 3,
             "values": [
+              70,
               30
             ]
           },
           {
             "rank": 4,
             "values": [
+              80,
               50
             ]
           }
@@ -40007,7 +40173,13 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Katress",
-        "sourcePalId": "CatMage"
+        "sourcePalId": "CatMage",
+        "correction": {
+          "id": "catmage-merged-rank-columns",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Katress",
+          "evidence": "公开等级表每星同时列出无属性掉落增加与帕鲁球不消耗概率，原表误将两列合并。"
+        }
       }
     },
     "BOSS_SweetsSheep_Ground": {
@@ -41698,50 +41870,50 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "ElementBoostWeakness_Dark_PartnerSkill",
-            "label": "暗属性弱点伤害提升",
-            "unit": "%"
-          },
-          {
             "key": "MainValue",
             "label": "起跳力度",
             "unit": ""
+          },
+          {
+            "key": "ElementBoostWeakness_Dark_PartnerSkill",
+            "label": "暗属性弱点伤害提升",
+            "unit": "%"
           }
         ],
         "rows": [
           {
             "rank": 0,
             "values": [
-              25,
-              2500
+              2500,
+              25
             ]
           },
           {
             "rank": 1,
             "values": [
-              27,
-              3000
+              3000,
+              27
             ]
           },
           {
             "rank": 2,
             "values": [
-              30,
-              3500
+              3500,
+              30
             ]
           },
           {
             "rank": 3,
             "values": [
-              34,
-              4500
+              4500,
+              34
             ]
           },
           {
             "rank": 4,
             "values": [
-              40,
-              5500
+              5500,
+              40
             ]
           }
         ]
@@ -41754,7 +41926,13 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Croajiro_Noct",
-        "sourcePalId": "KendoFrog_Dark"
+        "sourcePalId": "KendoFrog_Dark",
+        "correction": {
+          "id": "kendofrog-dark-effect-order",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Croajiro_Noct",
+          "evidence": "起跳力度属于第一段跳板效果，暗属性弱点伤害属于第二段队伍增益；表格列必须按正文效果顺序显示。"
+        }
       }
     },
     "BOSS_CaptainPenguin_Black": {
@@ -44023,12 +44201,7 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "Mining_up_PartnerSkill_DrillGame",
-            "label": "采矿效率提升",
-            "unit": "%"
-          },
-          {
-            "key": "MainValue",
+            "key": "OreMiningEfficiency",
             "label": "矿石破坏效率提升",
             "unit": "%"
           }
@@ -44037,36 +44210,31 @@
           {
             "rank": 0,
             "values": [
-              640,
-              1.25
+              800
             ]
           },
           {
             "rank": 1,
             "values": [
-              640,
-              1.5
+              960
             ]
           },
           {
             "rank": 2,
             "values": [
-              640,
-              1.875
+              1200
             ]
           },
           {
             "rank": 3,
             "values": [
-              640,
-              2.25
+              1440
             ]
           },
           {
             "rank": 4,
             "values": [
-              640,
-              3.125
+              2000
             ]
           }
         ]
@@ -44079,7 +44247,13 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Digtoise",
-        "sourcePalId": "DrillGame"
+        "sourcePalId": "DrillGame",
+        "correction": {
+          "id": "drillgame-display-efficiency-formula",
+          "status": "derived-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Digtoise",
+          "evidence": "正文给出 800%~2000%；等级表给出固定基础值 640 和倍率 1.25、1.5、1.875、2.25、3.125。显示值按 640×倍率换算，依次为 800、960、1200、1440、2000。"
+        }
       }
     },
     "BOSS_OniGhostGirl": {
@@ -45509,31 +45683,31 @@
           {
             "rank": 0,
             "values": [
-              5
+              15
             ]
           },
           {
             "rank": 1,
             "values": [
-              6
+              20
             ]
           },
           {
             "rank": 2,
             "values": [
-              7
+              23
             ]
           },
           {
             "rank": 3,
             "values": [
-              8
+              27
             ]
           },
           {
             "rank": 4,
             "values": [
-              9
+              30
             ]
           }
         ]
@@ -45546,7 +45720,14 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Tropicaw",
-        "sourcePalId": "RedFlowerBird"
+        "sourcePalId": "RedFlowerBird",
+        "correction": {
+          "id": "redflowerbird-in-game-invulnerability-ranks",
+          "status": "verified-in-game",
+          "sourceType": "in-game-verification",
+          "verifiedAt": "2026-07-24",
+          "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的闪避无敌时间延长依次为 15%、20%、23%、27%、30%。公开原始值 5、6、7、8、9 并非游戏显示百分比。"
+        }
       }
     },
     "BOSS_GrassMammoth": {
@@ -45896,8 +46077,13 @@
         "rankLabel": "星级",
         "columns": [
           {
+            "key": "MainValue",
+            "label": "吹雪爪击威力倍数",
+            "unit": "倍"
+          },
+          {
             "key": "AttackSpeedUp_PartnerSkill_Werewolf",
-            "label": "攻击速度提升",
+            "label": "近战武器攻击速度提升",
             "unit": "%"
           }
         ],
@@ -45905,30 +46091,35 @@
           {
             "rank": 0,
             "values": [
+              1.1,
               15
             ]
           },
           {
             "rank": 1,
             "values": [
+              1.3,
               17
             ]
           },
           {
             "rank": 2,
             "values": [
+              1.6,
               20
             ]
           },
           {
             "rank": 3,
             "values": [
+              2,
               24
             ]
           },
           {
             "rank": 4,
             "values": [
+              2.5,
               30
             ]
           }
@@ -45942,7 +46133,13 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Loupmoon_Cryst",
-        "sourcePalId": "Werewolf_Ice"
+        "sourcePalId": "Werewolf_Ice",
+        "correction": {
+          "id": "werewolf-ice-missing-active-damage-multiplier",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Loupmoon_Cryst",
+          "evidence": "公开等级表同时列出吹雪爪击 MainValue 倍数与近战武器攻击速度。"
+        }
       }
     },
     "BOSS_HerculesBeetle": {
@@ -48873,8 +49070,18 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "FlowerDoll_Fire_PartnerSkill",
+            "key": "MainValue",
+            "label": "生命值恢复",
+            "unit": "%"
+          },
+          {
+            "key": "ElementResist_Leaf",
             "label": "草属性伤害减轻",
+            "unit": "%"
+          },
+          {
+            "key": "ResistAdditionalEffect_Entangle",
+            "label": "缠绕免疫",
             "unit": "%"
           }
         ],
@@ -48882,31 +49089,41 @@
           {
             "rank": 0,
             "values": [
-              15
+              80,
+              15,
+              100
             ]
           },
           {
             "rank": 1,
             "values": [
-              17
+              82,
+              17,
+              100
             ]
           },
           {
             "rank": 2,
             "values": [
-              20
+              84,
+              20,
+              100
             ]
           },
           {
             "rank": 3,
             "values": [
-              24
+              86,
+              24,
+              100
             ]
           },
           {
             "rank": 4,
             "values": [
-              30
+              90,
+              30,
+              100
             ]
           }
         ]
@@ -48919,7 +49136,13 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Petallia_Ignis",
-        "sourcePalId": "FlowerDoll_Fire"
+        "sourcePalId": "FlowerDoll_Fire",
+        "correction": {
+          "id": "flowerdoll-fire-missing-heal-and-immunity",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Petallia_Ignis",
+          "evidence": "公开等级表同时列出治疗 MainValue、草属性减伤和缠绕免疫 100%。"
+        }
       }
     },
     "BOSS_SleeveRabbit": {
@@ -52265,8 +52488,8 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "SnakeGirl_PartnerSkill",
-            "label": "攻击力提升",
+            "key": "LifeDrainPower_AttackUp",
+            "label": "并肩作战帕鲁攻击力提升",
             "unit": "%"
           }
         ],
@@ -52274,31 +52497,31 @@
           {
             "rank": 0,
             "values": [
-              0
+              40
             ]
           },
           {
             "rank": 1,
             "values": [
-              0
+              50
             ]
           },
           {
             "rank": 2,
             "values": [
-              0
+              60
             ]
           },
           {
             "rank": 3,
             "values": [
-              0
+              70
             ]
           },
           {
             "rank": 4,
             "values": [
-              0
+              80
             ]
           }
         ]
@@ -52311,7 +52534,14 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Celesdir_Noct",
-        "sourcePalId": "WhiteDeer_Dark"
+        "sourcePalId": "WhiteDeer_Dark",
+        "correction": {
+          "id": "whitedeer-dark-in-game-attack-ranks",
+          "status": "verified-in-game",
+          "sourceType": "in-game-verification",
+          "verifiedAt": "2026-07-24",
+          "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的并肩作战帕鲁攻击力提升依次为 40%、50%、60%、70%、80%。公开等级表五档为 0，不能采用。"
+        }
       }
     },
     "BOSS_WingGolem": {
@@ -54160,8 +54390,13 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "DomeArmorDragon_PartnerSkill",
+            "key": "ExplosionDamageReduction",
             "label": "爆炸伤害减轻",
+            "unit": "%"
+          },
+          {
+            "key": "ResistAdditionalEffect_Stun",
+            "label": "眩晕免疫",
             "unit": "%"
           }
         ],
@@ -54169,30 +54404,35 @@
           {
             "rank": 0,
             "values": [
+              60,
               100
             ]
           },
           {
             "rank": 1,
             "values": [
+              65,
               100
             ]
           },
           {
             "rank": 2,
             "values": [
+              70,
               100
             ]
           },
           {
             "rank": 3,
             "values": [
+              75,
               100
             ]
           },
           {
             "rank": 4,
             "values": [
+              80,
               100
             ]
           }
@@ -54206,7 +54446,13 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Aegidron",
-        "sourcePalId": "DomeArmorDragon"
+        "sourcePalId": "DomeArmorDragon",
+        "correction": {
+          "id": "domearmordragon-missing-explosion-reduction",
+          "status": "verified-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Aegidron",
+          "evidence": "公开等级表每星包含两个值：眩晕免疫恒为 100，爆炸伤害减轻依次为 60、65、70、75、80。"
+        }
       }
     },
     "BOSS_KingWhale": {
@@ -54442,12 +54688,7 @@
         "rankLabel": "星级",
         "columns": [
           {
-            "key": "Mining_up_PartnerSkill_DrillGame",
-            "label": "采矿效率提升",
-            "unit": "%"
-          },
-          {
-            "key": "MainValue",
+            "key": "OreMiningEfficiency",
             "label": "矿石破坏效率提升",
             "unit": "%"
           }
@@ -54456,36 +54697,31 @@
           {
             "rank": 0,
             "values": [
-              640,
-              1.25
+              800
             ]
           },
           {
             "rank": 1,
             "values": [
-              640,
-              1.5
+              960
             ]
           },
           {
             "rank": 2,
             "values": [
-              640,
-              1.875
+              1200
             ]
           },
           {
             "rank": 3,
             "values": [
-              640,
-              2.25
+              1440
             ]
           },
           {
             "rank": 4,
             "values": [
-              640,
-              3.125
+              2000
             ]
           }
         ]
@@ -54498,7 +54734,13 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Digtoise",
-        "sourcePalId": "DrillGame"
+        "sourcePalId": "DrillGame",
+        "correction": {
+          "id": "drillgame-display-efficiency-formula",
+          "status": "derived-from-source-values",
+          "sourceUrl": "https://paldb.cc/cn/Digtoise",
+          "evidence": "正文给出 800%~2000%；等级表给出固定基础值 640 和倍率 1.25、1.5、1.875、2.25、3.125。显示值按 640×倍率换算，依次为 800、960、1200、1440、2000。"
+        }
       }
     },
     "PREDATOR_FairyDragon": {
@@ -56110,31 +56352,31 @@
           {
             "rank": 0,
             "values": [
-              5
+              15
             ]
           },
           {
             "rank": 1,
             "values": [
-              6
+              20
             ]
           },
           {
             "rank": 2,
             "values": [
-              7
+              23
             ]
           },
           {
             "rank": 3,
             "values": [
-              8
+              27
             ]
           },
           {
             "rank": 4,
             "values": [
-              9
+              30
             ]
           }
         ]
@@ -56147,7 +56389,14 @@
       "source": {
         "mode": "inherited",
         "url": "https://paldb.cc/cn/Tropicaw",
-        "sourcePalId": "RedFlowerBird"
+        "sourcePalId": "RedFlowerBird",
+        "correction": {
+          "id": "redflowerbird-in-game-invulnerability-ranks",
+          "status": "verified-in-game",
+          "sourceType": "in-game-verification",
+          "verifiedAt": "2026-07-24",
+          "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的闪避无敌时间延长依次为 15%、20%、23%、27%、30%。公开原始值 5、6、7、8、9 并非游戏显示百分比。"
+        }
       }
     },
     "PREDATOR_GrassMinotaur_Ice": {

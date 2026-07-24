@@ -40,12 +40,11 @@ var PT_PALDEX_COMMON = (function() {
         map[key] = true;
         return map;
     }, {});
-    var APPEARANCE_KEY = 'pt-paldex-appearance-v1';
     var DEFAULT_APPEARANCE = {
         frameTheme: 'theme:oceanic',
-        frameMaterial: 'metalGlass',
-        cubeTheme: 'theme:skyVault',
-        cubeMaterial: 'smokedGlass'
+        frameMaterial: 'gradient',
+        cubeTheme: 'theme:oceanic',
+        cubeMaterial: 'gradient'
     };
 
     function getCore() {
@@ -209,27 +208,18 @@ var PT_PALDEX_COMMON = (function() {
     }
 
     function getAppearanceSettings() {
-        var parsed = null;
+        var settings = {};
         try {
-            if (typeof window !== 'undefined' && window.localStorage) {
-                var raw = window.localStorage.getItem(APPEARANCE_KEY);
-                parsed = raw ? JSON.parse(raw) : null;
+            if (typeof window !== 'undefined' && typeof window.readPTSettings === 'function') {
+                settings = window.readPTSettings('web') || {};
             }
         } catch (error) {
-            parsed = null;
+            settings = {};
         }
-        return normalizeAppearanceSettings(parsed || DEFAULT_APPEARANCE);
-    }
-
-    function setAppearanceSettings(nextSettings) {
-        var next = normalizeAppearanceSettings(Object.assign({}, getAppearanceSettings(), nextSettings || {}));
-        try {
-            if (typeof window !== 'undefined' && window.localStorage) {
-                window.localStorage.setItem(APPEARANCE_KEY, JSON.stringify(next));
-            }
-        } catch (error) {}
-        notify();
-        return next;
+        if (typeof window === 'undefined' || typeof window.PT_getLayeredCardAppearanceSettings !== 'function') {
+            return normalizeAppearanceSettings(DEFAULT_APPEARANCE);
+        }
+        return normalizeAppearanceSettings(window.PT_getLayeredCardAppearanceSettings(settings));
     }
 
     function setFilter(type, value) {
@@ -366,7 +356,6 @@ var PT_PALDEX_COMMON = (function() {
         getFilteredPals: getFilteredPals,
         onStateChange: onStateChange,
         getAppearanceSettings: getAppearanceSettings,
-        setAppearanceSettings: setAppearanceSettings,
         normalizeAppearanceSettings: normalizeAppearanceSettings,
         destroy: destroy
     };

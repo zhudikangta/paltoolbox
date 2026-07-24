@@ -3,7 +3,7 @@
     "dataRole": "research-correction",
     "verifiedAt": "2026-07-23",
     "gameVersion": "v1.0.0",
-    "transformVersion": "1.5.0"
+    "transformVersion": "1.8.0"
   },
   "partnerSkills": {
     "Gorilla_Ground": {
@@ -22,6 +22,245 @@
         "status": "verified-from-parallel-description-structure",
         "sourceUrl": "https://paldb.cc/cn/Eikthyrdeer_Terra",
         "evidence": "保留祇岳鹿的全部原有文字和数值；按本站伙伴技能展示规则，将基础骑乘、骑乘期间二段跳和据点伐木适应性拆为三个独立描述块，避免把不同条件的效果连在同一段。"
+        }
+    },
+    "KendoFrog": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          {
+            "key": "MainValue",
+            "label": "起跳力度",
+            "unit": ""
+          },
+          {
+            "key": "KendoFrog_PlayerAttackBonus",
+            "label": "落地前玩家攻击力提升",
+            "unit": "%"
+          }
+        ],
+        "rows": [
+          { "rank": 0, "values": [2500, 50] },
+          { "rank": 1, "values": [3000, 56] },
+          { "rank": 2, "values": [3500, 64] },
+          { "rank": 3, "values": [4500, 74] },
+          { "rank": 4, "values": [5500, 86] }
+        ]
+      },
+      "correction": {
+        "id": "kendofrog-in-game-attack-ranks",
+        "status": "verified-in-game",
+        "sourceType": "in-game-verification",
+        "verifiedAt": "2026-07-23",
+        "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的落地前玩家攻击力提升依次为 50%、56%、64%、74%、86%。PalDB 仅公开起跳力度表，未公开该攻击力分星。"
+      }
+    },
+    "KendoFrog_Dark": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "MainValue", "label": "起跳力度", "unit": "" },
+          { "key": "ElementBoostWeakness_Dark_PartnerSkill", "label": "暗属性弱点伤害提升", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [2500, 25] },
+          { "rank": 1, "values": [3000, 27] },
+          { "rank": 2, "values": [3500, 30] },
+          { "rank": 3, "values": [4500, 34] },
+          { "rank": 4, "values": [5500, 40] }
+        ]
+      },
+      "correction": {
+        "id": "kendofrog-dark-effect-order",
+        "status": "verified-from-source-values",
+        "sourceUrl": "https://paldb.cc/cn/Croajiro_Noct",
+        "evidence": "起跳力度属于第一段跳板效果，暗属性弱点伤害属于第二段队伍增益；表格列必须按正文效果顺序显示。"
+      }
+    },
+    "Werewolf": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "MainValue", "label": "飞跃爪击威力倍数", "unit": "倍" },
+          { "key": "AttackSpeedUp_PartnerSkill_Werewolf", "label": "近战武器攻击速度提升", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [1.1, 15] },
+          { "rank": 1, "values": [1.3, 17] },
+          { "rank": 2, "values": [1.6, 20] },
+          { "rank": 3, "values": [2, 24] },
+          { "rank": 4, "values": [2.5, 30] }
+        ]
+      },
+      "correction": {
+        "id": "werewolf-missing-active-damage-multiplier",
+        "status": "verified-from-source-values",
+        "sourceUrl": "https://paldb.cc/cn/Loupmoon",
+        "evidence": "公开等级表同时列出飞跃爪击 MainValue 倍数与近战武器攻击速度。"
+      }
+    },
+    "Werewolf_Ice": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "MainValue", "label": "吹雪爪击威力倍数", "unit": "倍" },
+          { "key": "AttackSpeedUp_PartnerSkill_Werewolf", "label": "近战武器攻击速度提升", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [1.1, 15] },
+          { "rank": 1, "values": [1.3, 17] },
+          { "rank": 2, "values": [1.6, 20] },
+          { "rank": 3, "values": [2, 24] },
+          { "rank": 4, "values": [2.5, 30] }
+        ]
+      },
+      "correction": {
+        "id": "werewolf-ice-missing-active-damage-multiplier",
+        "status": "verified-from-source-values",
+        "sourceUrl": "https://paldb.cc/cn/Loupmoon_Cryst",
+        "evidence": "公开等级表同时列出吹雪爪击 MainValue 倍数与近战武器攻击速度。"
+      }
+    },
+    "CatMage": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "ElementAddDrop_Normal", "label": "无属性帕鲁掉落道具增加", "unit": "%" },
+          { "key": "SphereRecovery", "label": "投掷帕鲁球不消耗概率", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [40, 10] },
+          { "rank": 1, "values": [50, 15] },
+          { "rank": 2, "values": [60, 20] },
+          { "rank": 3, "values": [70, 30] },
+          { "rank": 4, "values": [80, 50] }
+        ]
+      },
+      "correction": {
+        "id": "catmage-merged-rank-columns",
+        "status": "verified-from-source-values",
+        "sourceUrl": "https://paldb.cc/cn/Katress",
+        "evidence": "公开等级表每星同时列出无属性掉落增加与帕鲁球不消耗概率，原表误将两列合并。"
+      }
+    },
+    "DrillGame": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "OreMiningEfficiency", "label": "矿石破坏效率提升", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [800] },
+          { "rank": 1, "values": [960] },
+          { "rank": 2, "values": [1200] },
+          { "rank": 3, "values": [1440] },
+          { "rank": 4, "values": [2000] }
+        ]
+      },
+      "correction": {
+        "id": "drillgame-display-efficiency-formula",
+        "status": "derived-from-source-values",
+        "sourceUrl": "https://paldb.cc/cn/Digtoise",
+        "evidence": "正文给出 800%~2000%；等级表给出固定基础值 640 和倍率 1.25、1.5、1.875、2.25、3.125。显示值按 640×倍率换算，依次为 800、960、1200、1440、2000。"
+      }
+    },
+    "DomeArmorDragon": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "ExplosionDamageReduction", "label": "爆炸伤害减轻", "unit": "%" },
+          { "key": "ResistAdditionalEffect_Stun", "label": "眩晕免疫", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [60, 100] },
+          { "rank": 1, "values": [65, 100] },
+          { "rank": 2, "values": [70, 100] },
+          { "rank": 3, "values": [75, 100] },
+          { "rank": 4, "values": [80, 100] }
+        ]
+      },
+      "correction": {
+        "id": "domearmordragon-missing-explosion-reduction",
+        "status": "verified-from-source-values",
+        "sourceUrl": "https://paldb.cc/cn/Aegidron",
+        "evidence": "公开等级表每星包含两个值：眩晕免疫恒为 100，爆炸伤害减轻依次为 60、65、70、75、80。"
+      }
+    },
+    "FlowerDoll_Fire": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "MainValue", "label": "生命值恢复", "unit": "%" },
+          { "key": "ElementResist_Leaf", "label": "草属性伤害减轻", "unit": "%" },
+          { "key": "ResistAdditionalEffect_Entangle", "label": "缠绕免疫", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [80, 15, 100] },
+          { "rank": 1, "values": [82, 17, 100] },
+          { "rank": 2, "values": [84, 20, 100] },
+          { "rank": 3, "values": [86, 24, 100] },
+          { "rank": 4, "values": [90, 30, 100] }
+        ]
+      },
+      "correction": {
+        "id": "flowerdoll-fire-missing-heal-and-immunity",
+        "status": "verified-from-source-values",
+        "sourceUrl": "https://paldb.cc/cn/Petallia_Ignis",
+        "evidence": "公开等级表同时列出治疗 MainValue、草属性减伤和缠绕免疫 100%。"
+      }
+    },
+    "RedFlowerBird": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "AvoidDurationUp_PartnerSkill_RedFlowerBird", "label": "闪避无敌时间延长", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [15] },
+          { "rank": 1, "values": [20] },
+          { "rank": 2, "values": [23] },
+          { "rank": 3, "values": [27] },
+          { "rank": 4, "values": [30] }
+        ]
+      },
+      "correction": {
+        "id": "redflowerbird-in-game-invulnerability-ranks",
+        "status": "verified-in-game",
+        "sourceType": "in-game-verification",
+        "verifiedAt": "2026-07-24",
+        "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的闪避无敌时间延长依次为 15%、20%、23%、27%、30%。公开原始值 5、6、7、8、9 并非游戏显示百分比。"
+      }
+    },
+    "WhiteDeer_Dark": {
+      "rankTable": {
+        "type": "stars",
+        "rankLabel": "星级",
+        "columns": [
+          { "key": "LifeDrainPower_AttackUp", "label": "并肩作战帕鲁攻击力提升", "unit": "%" }
+        ],
+        "rows": [
+          { "rank": 0, "values": [40] },
+          { "rank": 1, "values": [50] },
+          { "rank": 2, "values": [60] },
+          { "rank": 3, "values": [70] },
+          { "rank": 4, "values": [80] }
+        ]
+      },
+      "correction": {
+        "id": "whitedeer-dark-in-game-attack-ranks",
+        "status": "verified-in-game",
+        "sourceType": "in-game-verification",
+        "verifiedAt": "2026-07-24",
+        "evidence": "用户在 v1.0.0 游戏内直接核对：0★至4★的并肩作战帕鲁攻击力提升依次为 40%、50%、60%、70%、80%。公开等级表五档为 0，不能采用。"
       }
     }
   }
